@@ -22,32 +22,23 @@ const { cityData } = Astro.props as { cityData: any };
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
-		<title>{cityData.City} Tree Removal & Trimming | Emergency Services FL</title>
+		<title>Expert Tree Removal in {cityData.City}, FL | Emergency Trimming</title>
 		<meta name="description" content={cityData.Description} />
 		<style is:global>
 			* { font-family: 'Inter', -apple-system, sans-serif !important; box-sizing: border-box; }
 			body { margin: 0; background-color: #fcfcfc; color: #1a1a1a; line-height: 1.5; }
-			
-            .sticky-btn-wrap { 
-                position: fixed; 
-                bottom: 0; 
-                left: 0; 
-                right: 0; 
-                background: linear-gradient(to top, rgba(252,252,252,1) 0%, rgba(252,252,252,0.8) 50%, rgba(252,252,252,0) 100%);
-                padding: 15px 15px calc(15px + env(safe-area-inset-bottom)); 
-                z-index: 1000; 
-                display: flex; 
-                justify-content: center; 
-            }
-			.sticky-btn { background: #ea580c; color: white !important; width: 100%; max-width: 480px; padding: 16px; text-decoration: none !important; border-radius: 12px; font-weight: 800; text-align: center; font-size: 1.25rem; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.4); display: block; }
-			.bottom-spacer { height: 120px; }
+            footer { background: #064e3b; color: #d1fae5 !important; padding: 3rem 1.5rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+			.footer-note { margin-top: 12px; font-size: 0.75rem; opacity: 0.9; font-style: italic; color: #d1fae5 !important; }
+            .footer-note a { color: #d1fae5 !important; text-decoration: underline; }
+            .bottom-spacer { height: 110px; background: #fcfcfc; }
+			.sticky-btn-wrap { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 15px; z-index: 1000; display: flex; justify-content: center; border-top: 1px solid #eee; }
+			.sticky-btn { background: #ea580c; color: white !important; width: 100%; max-width: 480px; padding: 16px; text-decoration: none !important; border-radius: 12px; font-weight: 800; text-align: center; font-size: 1.25rem; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4); display: block; }
 		</style>
 	</head>
 	<body>
-		<div style="background: #0d2818; color: #d8f3dc; padding: 12px; text-align: center; font-size: 0.85rem; font-weight: 600;">
+		<div style="background: #0d2818; color: #d8f3dc; padding: 12px; text-align: center; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px;">
 			✓ FULLY LICENSED & INSURED IN {cityData.County.toUpperCase()} COUNTY • 24/7 RESPONSE
 		</div>
-
 		<header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 5px solid #f97316;">
 			<div style="max-width: 850px; margin: 0 auto;">
 				<div style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #ffb703;">⭐⭐⭐⭐⭐ Top-Rated Local Experts</div>
@@ -55,25 +46,22 @@ const { cityData } = Astro.props as { cityData: any };
 				<p style="font-size: 1.4rem; margin-top: 1.5rem; color: #95d5b2; font-weight: 300;">Florida's Trusted Certified Arborists Since 2008</p>
 			</div>
 		</header>
-
 		<main style="max-width: 1000px; margin: -3rem auto 4rem; padding: 0 1.5rem; position: relative; z-index: 10;">
 			<div style="background: white; padding: 3rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e5e7eb;">
 				<h3 style="margin-top: 0; color: #064e3b; font-size: 1.8rem; font-weight: 800;">Need a Fast Estimate?</h3>
 				<p style="color: #4b5563; margin-bottom: 2rem; font-size: 1.1rem;">Call our local {cityData.City} team for a no-obligation quote.</p>
 				<a href="tel:+18001234567" style="background: #ea580c; color: white !important; padding: 1.4rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: clamp(1.4rem, 6vw, 2.2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); border: 2px solid #fdba74; white-space: nowrap;">(800) 123-4567</a>
 			</div>
-
 			<section style="margin-top: 4.5rem;">
                 <h2 style="color: #064e3b; font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center; font-weight: 800;">Reliable Tree Care for {cityData.City} Residents</h2>
-				<div style="background: white; border-radius: 20px; padding: 2.5rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); line-height: 1.9;">
+				<div style="background: white; border-radius: 20px; padding: 2.5rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); line-height: 1.8;">
 					<p style="font-size: 1.25rem; color: #374151; margin: 0; white-space: pre-line;">"{cityData.Description}"</p>
 				</div>
 			</section>
-
             <section style="margin-top: 4rem;">
                 <img src="/team.jpg" alt={`Licensed tree experts in ${cityData.City}`} style="width: 100%; height: auto; max-height: 500px; object-fit: cover; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);" />
+                <p style="text-align: center; font-size: 0.95rem; color: #666; margin-top: 15px; font-style: italic;">Licensed arborists serving homeowners in {cityData.City} and throughout {cityData.County} County.</p>
             </section>
-
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 5rem;">
 				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🛡️</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Fully Insured</h4><p style="font-size: 0.85rem; color: #666;">Full protection.</p></div>
 				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🌪️</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Storm Prep</h4><p style="font-size: 0.85rem; color: #666;">24/7 Response.</p></div>
@@ -81,18 +69,17 @@ const { cityData } = Astro.props as { cityData: any };
 				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🏗️</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Stumps</h4><p style="font-size: 0.85rem; color: #666;">Land clearing.</p></div>
 			</div>
 		</main>
-
-		<footer style="background: #064e3b; color: #d1fae5; padding: 3rem 1.5rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+		<footer>
 			<p style="margin: 0; font-size: 0.85rem; font-weight: 500; opacity: 0.9;">© 2026 ProTreeTrim™ Florida • Licensed, Bonded & Insured Specialists</p>
-            <p style="margin-top: 12px; font-size: 0.75rem; opacity: 0.7; font-style: italic;">Partnerships: <a href="mailto:gorkemcan@aol.com" style="color: #d1fae5;">gorkemcan@aol.com</a></p>
-			<p style="margin-top: 12px; font-size: 0.75rem; opacity: 0.7;">
-    <a href="/about" style="color: #d1fae5; margin-right: 15px;">About Us</a> 
-	<a href="/privacy" style="margin-right: 15px;">Privacy Policy</a> 
-    Business inquiries: <a href="mailto:gorkemcan@aol.com" style="color: #d1fae5;">gorkemcan@aol.com</a>
-</p>
+            <p class="footer-note">
+                <a href="/about" style="margin-right: 15px;">About Us</a> 
+                <a href="/privacy" style="margin-right: 15px;">Privacy Policy</a> 
+                Business inquiries: <a href="mailto:gorkemcan@aol.com">gorkemcan@aol.com</a>
+            </p>
 		</footer>
-
-		<div class="bottom-spacer"></div>
-		<div class="sticky-btn-wrap"><a href="tel:+18001234567" class="sticky-btn">CALL FOR FREE QUOTE</a></div>
+		<div style="height: 110px; background: #fcfcfc;"></div>
+		<div style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 12px; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); z-index: 1000; display: flex; justify-content: center; border-top: 1px solid #eee;">
+			<a href="tel:+18001234567" style="background: #ea580c; color: white !important; width: 100%; max-width: 480px; padding: 16px; text-decoration: none !important; border-radius: 12px; font-weight: 800; text-align: center; font-size: 1.25rem; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4); display: block;">CALL FOR FREE QUOTE</a>
+		</div>
 	</body>
 </html>
