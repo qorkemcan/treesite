@@ -20,10 +20,14 @@ const { cityData } = Astro.props as { cityData: any };
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
+		
+		<!-- FONTU GERİ GETİREN BAĞLANTI -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+		
 		<title>Expert Tree Removal in {cityData.City}, FL | Emergency Trimming</title>
 		<meta name="description" content={cityData.Description} />
 	</head>
-	<body style="font-family: 'Inter', system-ui, sans-serif; margin: 0; background-color: #fcfcfc; color: #1a1a1a; line-height: 1.5; padding-bottom: 80px;">
+	<body style="font-family: 'Inter', sans-serif; margin: 0; background-color: #fcfcfc; color: #1a1a1a; line-height: 1.5; padding-bottom: 80px;">
 		
 		<div style="background: #0d2818; color: #d8f3dc; padding: 12px; text-align: center; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px;">
 			✓ FULLY LICENSED & INSURED IN {cityData.County.toUpperCase()} COUNTY • 24/7 EMERGENCY RESPONSE
@@ -32,8 +36,7 @@ const { cityData } = Astro.props as { cityData: any };
 		<header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 5px solid #f97316;">
 			<div style="max-width: 850px; margin: 0 auto;">
 				<div style="font-size: 1.3rem; margin-bottom: 1.5rem; color: #ffb703;">⭐⭐⭐⭐⭐ <span style="color: white; font-weight: 600; margin-left: 10px;">Top-Rated Experts</span></div>
-				<!-- H1 GÜNCELLENDİ: DAHA ÇEKİCİ VE SEO UYUMLU -->
-				<h1 style="margin: 0; font-size: clamp(2rem, 8vw, 3.5rem); letter-spacing: -1.5px; line-height: 1.1;">
+				<h1 style="margin: 0; font-size: clamp(2rem, 8vw, 3.5rem); letter-spacing: -1.5px; line-height: 1.1; font-weight: 900;">
 					Expert Tree Removal & Services in {cityData.City}
 				</h1>
 				<p style="font-size: 1.4rem; margin-top: 1.5rem; color: #95d5b2; font-weight: 300;">ProTreeTrim™: Florida's Trusted Arborists Since 2008</p>
@@ -43,21 +46,21 @@ const { cityData } = Astro.props as { cityData: any };
 		<main style="max-width: 1000px; margin: -3rem auto 4rem; padding: 0 1.5rem; position: relative; z-index: 10;">
 			
 			<div style="background: white; padding: 3rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e5e7eb;">
-				<h3 style="margin-top: 0; color: #064e3b; font-size: 1.8rem; margin-bottom: 0.5rem;">Need a Fast Estimate?</h3>
-				<p style="color: #4b5563; margin-bottom: 2.5rem; font-size: 1.1rem;">Call our local {cityData.City} team for a no-obligation quote.</p>
-				<a href="tel:+18001234567" style="background: #ea580c; color: white; padding: 1.5rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: clamp(1.2rem, 6vw, 2.2rem); display: block; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3); border: 2px solid #fdba74; white-space: nowrap;">
+				<h3 style="margin-top: 0; color: #064e3b; font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 800;">Need a Fast Estimate?</h3>
+				<p style="color: #4b5563; margin-bottom: 2rem; font-size: 1.1rem;">Call our local {cityData.City} team for a no-obligation quote.</p>
+				<a href="tel:+18001234567" style="background: #ea580c; color: white; padding: 1.5rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: clamp(1.5rem, 6vw, 2.2rem); display: block; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3); border: 2px solid #fdba74; white-space: nowrap;">
 					(800) 123-4567
 				</a>
 			</div>
 
 			<section style="margin-top: 4.5rem;">
-                <h2 style="color: #064e3b; font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center;">Reliable Tree Care for {cityData.City} Residents</h2>
+                <h2 style="color: #064e3b; font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center; font-weight: 800;">Reliable Tree Care for {cityData.City} Residents</h2>
 				<div style="background: white; border-radius: 20px; padding: 2.5rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); line-height: 1.8;">
 					<p style="font-size: 1.25rem; color: #374151; margin: 0; white-space: pre-line;">"{cityData.Description}"</p>
 				</div>
 			</section>
 
-            <!-- AI ÜRETİMİ EKİP GÖRSELİ (team.jpg) -->
+            <!-- EKİP GÖRSELİ BURADA -->
             <section style="margin-top: 4rem;">
                 <img 
                     src="/team.jpg" 
@@ -67,56 +70,22 @@ const { cityData } = Astro.props as { cityData: any };
                 <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 15px; font-style: italic;">Licensed arborists serving homeowners in {cityData.City} and throughout {cityData.County} County.</p>
             </section>
 
-            <section style="margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div style="background: #f8fafc; padding: 2rem; border-radius: 15px; border: 1px solid #f1f5f9;">
-                    <h4 style="color: #064e3b; margin-top: 0;">Service Area Details</h4>
-                    <p style="font-size: 0.95rem; color: #64748b; margin: 0;">Rapid response for <strong>{cityData.City}</strong>. We serve the local population of {cityData.Population} with certified tree care standards.</p>
-                </div>
-                <div style="background: #f8fafc; padding: 2rem; border-radius: 15px; border: 1px solid #f1f5f9;">
-                    <h4 style="color: #064e3b; margin-top: 0;">Florida Safety Standards</h4>
-                    <p style="font-size: 0.95rem; color: #64748b; margin: 0;">Specialized in {cityData.County}'s native ecosystem. We ensure your Oaks and Palms are handled with professional-grade safety protocols.</p>
-                </div>
-            </section>
-
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 5rem;">
-				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center;">
-					<div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
-					<h4 style="color: #064e3b; margin: 0 0 0.5rem;">Fully Insured</h4>
-					<p style="color: #4b5563; font-size: 0.85rem; margin: 0;">Liability & Workers Comp.</p>
-				</div>
-				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center;">
-					<div style="font-size: 2.5rem; margin-bottom: 1rem;">🌪️</div>
-					<h4 style="color: #064e3b; margin: 0 0 0.5rem;">Storm Prep</h4>
-					<p style="color: #4b5563; font-size: 0.85rem; margin: 0;">Emergency Response.</p>
-				</div>
-				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center;">
-					<div style="font-size: 2.5rem; margin-bottom: 1rem;">🌳</div>
-					<h4 style="color: #064e3b; margin: 0 0 0.5rem;">Trimming</h4>
-					<p style="color: #4b5563; font-size: 0.85rem; margin: 0;">Certified Pruning.</p>
-				</div>
-				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center;">
-					<div style="font-size: 2.5rem; margin-bottom: 1rem;">🏗️</div>
-					<h4 style="color: #064e3b; margin: 0 0 0.5rem;">Stumps</h4>
-					<p style="color: #4b5563; font-size: 0.85rem; margin: 0;">Land Clearing.</p>
-				</div>
+				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center;"><div style="font-size: 2.5rem;">🛡️</div><h4 style="color: #064e3b; font-weight:800;">Fully Insured</h4><p style="font-size: 0.85rem;">Property protection.</p></div>
+				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center;"><div style="font-size: 2.5rem;">🌪️</div><h4 style="color: #064e3b; font-weight:800;">Storm Prep</h4><p style="font-size: 0.85rem;">24/7 Response.</p></div>
+				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center;"><div style="font-size: 2.5rem;">🌳</div><h4 style="color: #064e3b; font-weight:800;">Trimming</h4><p style="font-size: 0.85rem;">Certified Pruning.</p></div>
+				<div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center;"><div style="font-size: 2.5rem;">🏗️</div><h4 style="color: #064e3b; font-weight:800;">Stumps</h4><p style="font-size: 0.85rem;">Land Clearing.</p></div>
 			</div>
 		</main>
 
 		<footer style="background: #064e3b; color: #d1fae5; padding: 2.5rem 1.5rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
-			<p style="margin: 0; font-size: 0.85rem; font-weight: 500; opacity: 0.9; letter-spacing: 0.3px;">
-				© 2026 ProTreeTrim™ Florida • Licensed, Bonded & Insured Specialists
-			</p>
-            <p style="margin-top: 15px; font-size: 0.75rem; opacity: 0.7; font-style: italic;">
-                Business inquiries or lead partnership: <a href="mailto:gorkemcan@aol.com" style="color: #d1fae5; text-decoration: underline;">gorkemcan@aol.com</a>
-            </p>
+			<p style="margin: 0; font-size: 0.85rem; font-weight: 500; opacity: 0.9;">© 2026 ProTreeTrim™ Florida • Licensed, Bonded & Insured Specialists</p>
+            <p style="margin-top: 15px; font-size: 0.75rem; opacity: 0.7; font-style: italic;">Business inquiries or lead partnership: <a href="mailto:gorkemcan@aol.com" style="color: #d1fae5;">gorkemcan@aol.com</a></p>
 		</footer>
 
 		<div style="height: 90px; background: #fcfcfc;"></div>
-
 		<div style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 12px; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); z-index: 1000; display: flex; justify-content: center; border-top: 1px solid #eee;">
-			<a href="tel:+18001234567" style="background: #ea580c; color: white; width: 100%; max-width: 450px; padding: 14px; text-decoration: none; border-radius: 10px; font-weight: 900; text-align: center; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4); display: flex; align-items: center; justify-content: center; gap: 10px;">
-				CALL FOR FREE QUOTE
-			</a>
+			<a href="tel:+18001234567" style="background: #ea580c; color: white; width: 100%; max-width: 450px; padding: 14px; text-decoration: none; border-radius: 10px; font-weight: 900; text-align: center; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);">CALL FOR FREE QUOTE</a>
 		</div>
 	</body>
 </html>
