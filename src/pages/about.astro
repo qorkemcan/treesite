@@ -14,11 +14,8 @@
     <meta name="description" content="Learn more about ProTreeTrim, Florida's trusted network connecting homeowners with licensed tree care professionals." />
     
     <style is:global>
-      /* TÜM SAYFADA AYNI FONT VE KUTU MODELİ */
       * { font-family: 'Inter', -apple-system, sans-serif !important; box-sizing: border-box; }
       body { margin: 0; background: #fcfcfc; color: #1a1a1a; line-height: 1.6; }
-      
-      /* ÜST KISIMLAR */
       header { background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 5px solid #f97316; }
       .container { max-width: 850px; margin: 0 auto; padding: 4rem 1.5rem; }
       h1 { font-size: clamp(2.2rem, 7vw, 3.5rem); margin: 0; letter-spacing: -1px; font-weight: 800; }
@@ -26,11 +23,12 @@
       p { font-size: 1.15rem; color: #374151; margin-bottom: 1.8rem; }
       .highlight-card { background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 3rem 0; }
       
-      /* FOOTER - RENKLERİ VE HİZALAMAYI SABİTLEDİK */
+      /* FOOTER - DİĞER SAYFALARLA AYNI SOFT RENK VE ORTALAMA */
       footer { 
-        background: #064e3b !important; 
-        padding: 3.5rem 1.5rem !important; 
-        text-align: center !important; 
+        background: #064e3b; 
+        color: #d1fae5; 
+        padding: 2.5rem 1.5rem; 
+        text-align: center; 
         border-top: 1px solid rgba(255,255,255,0.1); 
         display: flex; 
         flex-direction: column; 
@@ -38,27 +36,26 @@
         justify-content: center; 
       }
       .footer-text { 
-        margin: 0 !important; 
-        font-size: 0.9rem !important; 
-        font-weight: 600 !important; 
-        color: #ffffff !important; /* TAM BEYAZ YAPTIK */
-        opacity: 1 !important;
+        margin: 0; 
+        font-size: 0.85rem; 
+        font-weight: 500; 
+        color: #d1fae5; /* SOFT BEYAZ/YEŞİL TONU */
+        opacity: 0.9;   /* DİĞER SAYFALARDAKİ GİBİ HAFİF SOLUK */
         letter-spacing: 0.3px;
       }
       .footer-note { 
-        margin-top: 15px !important; 
-        font-size: 0.8rem !important; 
-        color: #d1fae5 !important; /* HAFİF AÇIK YEŞİL */
-        opacity: 1 !important;
-        font-style: italic;
+        margin-top: 12px; 
+        font-size: 0.75rem; 
+        color: #d1fae5; 
+        opacity: 0.7; 
+        font-style: italic; 
       }
       .footer-note a { 
-        color: #ffffff !important; 
-        text-decoration: underline !important; 
-        font-weight: 700;
+        color: #d1fae5 !important; 
+        text-decoration: underline; 
       }
 
-      /* STICKY BUTTON - HİZALAMA HATASI GİDERİLDİ */
+      /* STICKY BUTTON - TAM HİZALI */
       .sticky-btn-wrap { 
         position: fixed; 
         bottom: 0; 
@@ -66,32 +63,31 @@
         right: 0; 
         background: rgba(255,255,255,0.95); 
         backdrop-filter: blur(10px); 
-        padding: 12px 15px calc(12px + env(safe-area-inset-bottom)); /* iPhone alt bar uyumu */
+        padding: 12px; 
         box-shadow: 0 -5px 20px rgba(0,0,0,0.1); 
-        z-index: 10000; 
+        z-index: 1000; 
         display: flex; 
         justify-content: center; 
-        border-top: 1px solid #eee;
+        border-top: 1px solid #eee; 
       }
       .sticky-btn { 
-        background: #ea580c !important; 
+        background: #ea580c; 
         color: white !important; 
         width: 100%; 
         max-width: 450px; 
-        padding: 16px !important; 
+        padding: 14px; 
         text-decoration: none !important; 
-        border-radius: 12px; 
+        border-radius: 10px; 
         font-weight: 900; 
         text-align: center; 
-        font-size: 1.25rem; 
+        font-size: 1.2rem; 
         box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4); 
-        display: block;
       }
-      .bottom-spacer { height: 120px; background: #fcfcfc; }
+      .bottom-spacer { height: 100px; background: #fcfcfc; }
     </style>
   </head>
   <body>
-    <!-- Üst Bilgi Barı -->
+    <!-- Üst Bar -->
     <div style="background: #0d2818; color: #d8f3dc; padding: 12px; text-align: center; font-size: 0.85rem; font-weight: 600;">✓ LICENSED, INSURED & BONDED • STATEWIDE FLORIDA SERVICE • 2026 OFFICIAL DIRECTORY</div>
     
     <header>
@@ -123,19 +119,18 @@
       </div>
     </div>
 
-    <!-- DÜZELTİLMİŞ VE PARLATILMIŞ FOOTER -->
+    <!-- DÜZELTİLMİŞ SOFT FOOTER -->
     <footer>
       <p class="footer-text">© 2026 ProTreeTrim™ Florida • Licensed, Bonded & Insured Specialists</p>
       <p class="footer-note">
-        <a href="/" style="margin-right: 15px;">View Service Locations</a> 
+        <a href="/">View Service Locations</a> 
+        &nbsp;&nbsp;•&nbsp;&nbsp;
         Business inquiries: <a href="mailto:gorkemcan@aol.com">gorkemcan@aol.com</a>
       </p>
     </footer>
 
-    <!-- Buton için beyaz boşluk -->
     <div class="bottom-spacer"></div>
 
-    <!-- Sticky Button - Tam Hizalı -->
     <div class="sticky-btn-wrap">
       <a href="tel:+18001234567" class="sticky-btn">CALL FOR FREE QUOTE</a>
     </div>
