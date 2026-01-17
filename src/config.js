@@ -5,5 +5,6 @@ export const SITE_CONFIG = {
   phoneHref: "tel:+18001234567",
   email: "gorkemcan@aol.com",
   year: "2026",
-  siteUrl: "https://www.protreetrim.com"
+  siteUrl: "https://www.protreetrim.com",
+  defaultOGImage: "/team.jpg" // Paylaşımlarda görünecek görsel (public içindeki dosya yolu)
 };
