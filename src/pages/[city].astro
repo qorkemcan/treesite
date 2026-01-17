@@ -66,7 +66,8 @@ const schemaData = {
     </div>
   </header>
 
-  <main class="container" style="margin-top: -3rem; position: relative; z-index: 10;">
+  <main class="container" style="max-width: 1000px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 10;">
+    
     <!-- 1. CTA KARTI -->
     <div style="background: white; padding: 3rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e5e7eb;">
       <h3 style="margin-top: 0; color: #064e3b; font-size: 1.8rem; font-weight: 800;">Need a Fast Estimate?</h3>
@@ -146,14 +147,15 @@ const schemaData = {
       </div>
     </section>
 
-    <!-- 8. AI AÇIKLAMA -->
-    <section style="margin-top: 6rem; border-top: 1px solid #eee; padding-top: 4rem;">
-      <h2 style="color: #064e3b; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; font-weight: 800;">Tree Care for {cityData.City} Residents</h2>
-      <div style="background: #f9fafb; border-radius: 20px; padding: 2.5rem; border: 1px solid #e5e7eb; line-height: 1.9;">
+    <!-- 8. AI AÇIKLAMA (DÜZELTİLEN BÖLÜM) -->
+    <section style="margin-top: 6rem; margin-bottom: 8rem;">
+      <h2 style="color: #064e3b; font-size: 2.1rem; margin-bottom: 2rem; text-align: center; font-weight: 800;">Tree Care for {cityData.City} Residents</h2>
+      <div style="background: white; border-radius: 24px; padding: 2.5rem; border: 1px solid #e5e7eb; line-height: 1.9; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
         <p style="font-size: 1.15rem; color: #4b5563; margin: 0; white-space: pre-line;">
           In <strong>{cityData.City}</strong>, maintaining healthy <strong>{treeType}</strong> is essential for property value and storm safety. {cityData.Description}
         </p>
       </div>
     </section>
+
   </main>
 </MainLayout>
