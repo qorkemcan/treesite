@@ -14,41 +14,38 @@ const records = parse(fileContent, { columns: true, skip_empty_lines: true, bom:
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
     <title>ProTreeTrim Florida | #1 Rated Tree Removal & Trimming Network</title>
-    <meta name="description" content="Professional tree services across Florida. Licensed, insured, and available 24/7 for emergency tree removal, trimming, and stump grinding." />
     
     <style is:global>
-      * { font-family: 'Inter', -apple-system, sans-serif !important; }
+      * { font-family: 'Inter', -apple-system, sans-serif !important; box-sizing: border-box; }
       body { margin: 0; background: #fcfcfc; color: #1a1a1a; line-height: 1.5; }
       header { background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 5px solid #f97316; }
+      .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
       .hero-cta { background: white; padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; margin: -3rem auto 4rem; max-width: 600px; position: relative; z-index: 10; }
-      .phone-link { background: #ea580c; color: white; padding: 1.2rem 2rem; text-decoration: none; border-radius: 14px; font-weight: 800; font-size: clamp(1.3rem, 5vw, 2rem); display: inline-block; margin: 1rem 0; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4); border: 2px solid #fdba74; white-space: nowrap; }
-      .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto 5rem; padding: 0 1.5rem; }
+      .phone-link { background: #ea580c; color: white !important; padding: 1.2rem 2rem; text-decoration: none; border-radius: 14px; font-weight: 800; font-size: clamp(1.3rem, 5vw, 2rem); display: inline-block; margin: 1rem 0; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4); border: 2px solid #fdba74; white-space: nowrap; }
+      .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin-bottom: 5rem; }
       .city-card { background: white; padding: 22px; border: 1px solid #f3f4f6; border-radius: 14px; text-decoration: none; color: #064e3b; font-weight: 700; text-align: center; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
       .city-card:hover { background: #d8f3dc; border-color: #16a34a; transform: translateY(-5px); }
       
-      /* TAM ORTALANMIŞ FOOTER */
-      footer { background: #064e3b; color: #d1fae5; padding: 3rem 1.5rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+      /* FOOTER & STICKY BUTTON STYLES */
+      footer { background: #064e3b; color: #d1fae5; padding: 3rem 1.5rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; }
       .footer-text { margin: 0; font-size: 0.85rem; font-weight: 500; opacity: 0.9; }
       .footer-note { margin-top: 12px; font-size: 0.75rem; opacity: 0.7; font-style: italic; }
-      .footer-note a { color: #d1fae5; }
+      .footer-note a { color: #d1fae5 !important; }
       
-      /* BUTON İÇİN BEYAZ BOŞLUK ALANI */
-      .bottom-spacer { height: 100px; background: #fcfcfc; }
-      .sticky-btn-wrap { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 12px; z-index: 1000; display: flex; justify-content: center; border-top: 1px solid #eee; }
-      .sticky-btn { background: #ea580c; color: white; width: 100%; max-width: 480px; padding: 16px; text-decoration: none; border-radius: 12px; font-weight: 800; text-align: center; font-size: 1.25rem; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4); }
+      .bottom-spacer { height: 110px; background: #fcfcfc; }
+      .sticky-btn-wrap { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 15px; z-index: 9999; display: flex; justify-content: center; border-top: 1px solid #eee; }
+      .sticky-btn { background: #ea580c; color: white !important; width: 100%; max-width: 480px; padding: 16px; text-decoration: none !important; border-radius: 12px; font-weight: 800; text-align: center; font-size: 1.25rem; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4); display: block; }
     </style>
   </head>
   <body>
     <div style="background: #0d2818; color: #d8f3dc; padding: 12px; text-align: center; font-size: 0.85rem; font-weight: 600;">✓ LICENSED, INSURED & BONDED • STATEWIDE FLORIDA SERVICE • 2026 OFFICIAL DIRECTORY</div>
     <header>
       <h1 style="font-size: clamp(2.2rem, 7vw, 3.8rem); margin: 0; letter-spacing: -2px; font-weight: 800;">ProTreeTrim™ Florida</h1>
-      <p style="font-size: 1.3rem; color: #95d5b2; margin-top: 1rem; font-weight: 400;">Florida's Leading Network of Certified Tree Care Experts</p>
+      <p style="font-size: 1.3rem; color: #95d5b2; margin-top: 1rem; font-weight: 400;">Florida's Premier Network of Certified Tree Care Experts</p>
     </header>
     <div class="container">
       <div style="margin-top: -1.5rem; margin-bottom: 2.5rem; text-align: center;">
