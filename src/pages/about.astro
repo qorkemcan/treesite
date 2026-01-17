@@ -21,22 +21,22 @@
       h1 { font-size: clamp(2.2rem, 7vw, 3.5rem); margin: 0; letter-spacing: -1px; font-weight: 800; }
       h2 { color: #064e3b; font-size: 2.2rem; margin-top: 3rem; font-weight: 800; }
       p { font-size: 1.15rem; color: #374151; margin-bottom: 1.8rem; }
-      
       .highlight-card { background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 3rem 0; }
       
-      /* FOOTER STYLES */
+      /* FOOTER STYLES (Diğer sayfalarla birebir aynı) */
       footer { background: #064e3b; color: #d1fae5; padding: 3rem 1.5rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; }
       .footer-text { margin: 0; font-size: 0.85rem; font-weight: 500; opacity: 0.9; }
       .footer-note { margin-top: 12px; font-size: 0.75rem; opacity: 0.7; font-style: italic; }
-      .footer-note a { color: #d1fae5 !important; }
+      .footer-note a { color: #d1fae5 !important; text-decoration: underline; }
 
-      /* STICKY BUTTON STYLES */
+      /* STICKY BUTTON STYLES (Kusursuz Hizalama) */
       .bottom-spacer { height: 110px; background: #fcfcfc; }
       .sticky-btn-wrap { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 12px; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); z-index: 1000; display: flex; justify-content: center; border-top: 1px solid #eee; }
-      .sticky-btn { background: #ea580c; color: white !important; width: 100%; max-width: 480px; padding: 16px; text-decoration: none !important; border-radius: 12px; font-weight: 800; text-align: center; font-size: 1.25rem; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4); display: block; }
+      .sticky-btn { background: #ea580c; color: white !important; width: 100%; max-width: 450px; padding: 14px; text-decoration: none !important; border-radius: 10px; font-weight: 900; text-align: center; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4); }
     </style>
   </head>
   <body>
+    <!-- En Üst Bar -->
     <div style="background: #0d2818; color: #d8f3dc; padding: 12px; text-align: center; font-size: 0.85rem; font-weight: 600;">✓ LICENSED, INSURED & BONDED • STATEWIDE FLORIDA SERVICE • 2026 OFFICIAL DIRECTORY</div>
     
     <header>
@@ -62,15 +62,15 @@
       <p>Every professional in our network is properly licensed and carefully vetted, ensuring your property is handled with care, professionalism, and attention to detail at every stage of the project—whether it's a large-scale tree removal or precise pruning.</p>
 
       <p>If you’d like to learn more or get started, feel free to contact us at <a href="mailto:gorkemcan@aol.com" style="color: #ea580c; font-weight: 700; text-decoration: none;">gorkemcan@aol.com</a>. At ProTreeTrim, we’re here to help you protect, maintain, and enhance your outdoor spaces with confidence.</p>
-
-      <div style="margin-top: 4rem; text-align: center;">
-          <a href="/" style="color: #666; text-decoration: underline; font-size: 0.9rem;">← Return to Service Locations</a>
-      </div>
     </div>
 
+    <!-- BİREBİR AYNI VE SİMETRİK FOOTER -->
     <footer>
       <p class="footer-text">© 2026 ProTreeTrim™ Florida • Licensed, Bonded & Insured Specialists</p>
-      <p class="footer-note">Business inquiries: <a href="mailto:gorkemcan@aol.com">gorkemcan@aol.com</a></p>
+      <p class="footer-note">
+        <a href="/" style="margin-right: 15px;">View Service Locations</a> 
+        Business inquiries: <a href="mailto:gorkemcan@aol.com">gorkemcan@aol.com</a>
+      </p>
     </footer>
 
     <div class="bottom-spacer"></div>
