@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 }
 const { cityData } = Astro.props as { cityData: any };
 
-// --- AKILLI YORUM HAVUZU ---
+// --- 1. AKILLI YORUM HAVUZU ---
 const reviewPool = [
   { name: "Michael R.", text: `Top-notch service in ${cityData.City}! They handled a massive oak tree removal with zero issues. Highly recommend.` },
   { name: "Linda G.", text: `Best prices I found in ${cityData.County} County. The team was punctual and left my yard cleaner than they found it.` },
@@ -30,7 +30,7 @@ const citySeed = cityData.City.length;
 const review1 = reviewPool[citySeed % reviewPool.length];
 const review2 = reviewPool[(citySeed + 3) % reviewPool.length];
 
-// SEO Şeması
+// --- 2. SEO ŞEMASI (LocalBusiness + FAQ) ---
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "TreeCare",
@@ -38,7 +38,25 @@ const schemaData = {
   "description": cityData.Description,
   "telephone": SITE_CONFIG.phone,
   "areaServed": { "@type": "City", "name": cityData.City },
-  "address": { "@type": "PostalAddress", "addressLocality": cityData.City, "addressRegion": "FL" }
+  "address": { "@type": "PostalAddress", "addressLocality": cityData.City, "addressRegion": "FL" },
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": `How can I get an estimate for tree removal in ${cityData.City}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `Call our local connection line at ${SITE_CONFIG.phone} to get a free, no-obligation estimate from a qualified tree professional in the ${cityData.City} area.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `Are the tree specialists licensed and insured?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our network consists of local tree care specialists who maintain proper licensing and insurance for Florida state requirements."
+      }
+    }
+  ]
 };
 ---
 
@@ -49,7 +67,7 @@ const schemaData = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
-  <!-- 1. HEADER (Aynı kalıyor) -->
+  <!-- A. HEADER (Hero Section) -->
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 5px solid #f97316;">
     <div style="max-width: 850px; margin: 0 auto;">
       <div style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #ffb703;">⭐⭐⭐⭐⭐ <span style="color: white; font-weight: 600; margin-left: 10px;">Top-Rated Local Experts</span></div>
@@ -62,34 +80,34 @@ const schemaData = {
 
   <main style="max-width: 1000px; margin: -3rem auto 4rem; padding: 0 1.5rem; position: relative; z-index: 10;">
     
-    <!-- 2. CTA KARTI (EN ÜSTTE - Karar Anı) -->
+    <!-- B. ANA CTA KARTI (Dönüşüm Odaklı) -->
     <div style="background: white; padding: 3rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e5e7eb;">
       <h3 style="margin-top: 0; color: #064e3b; font-size: 1.8rem; font-weight: 800;">Need a Fast Estimate?</h3>
-      <p style="color: #4b5563; margin-bottom: 2rem; font-size: 1.1rem;">Call our local {cityData.City} team for a no-obligation quote.</p>
+      <p style="color: #4b5563; margin-bottom: 2rem; font-size: 1.1rem;">Call our local {cityData.City} connection line for a free quote.</p>
       <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.4rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: clamp(1.4rem, 6vw, 2.2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); border: 2px solid #fdba74; white-space: nowrap;">{SITE_CONFIG.phone}</a>
     </div>
 
-    <!-- 3. EKİP FOTOSU (YUKARI TAŞINDI - Görsel Güven) -->
+    <!-- C. EKİP FOTOSU (Güven İnşası) -->
     <section style="margin-top: 4rem;">
       <img src="/team.jpg" alt={`Licensed tree experts in ${cityData.City}`} style="width: 100%; height: auto; max-height: 500px; object-fit: cover; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);" />
-      <p style="text-align: center; font-size: 0.95rem; color: #666; margin-top: 15px; font-style: italic;">Licensed arborists serving homeowners in {cityData.City} and throughout {cityData.County} County.</p>
+      <p style="text-align: center; font-size: 0.95rem; color: #666; margin-top: 15px; font-style: italic;">Licensed professionals serving homeowners in {cityData.City} and throughout {cityData.County} County.</p>
     </section>
 
-    <!-- 4. 2'Lİ BİLGİ KUTULARI (YUKARI TAŞINDI - Teknik Güven) -->
+    <!-- D. 2'Lİ BİLGİ KUTULARI (Teknik Otorite) -->
     <section style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
         <div style="background: #f8fafc; padding: 2rem; border-radius: 15px; border: 1px solid #f1f5f9;">
-            <h4 style="color: #064e3b; margin-top: 0; font-weight: 800;">Service Area Details</h4>
-            <p style="font-size: 0.95rem; color: #64748b; margin: 0;">Rapid response for <strong>{cityData.City}</strong> and the entire <strong>{cityData.County}</strong> County. We serve the local population of {cityData.Population} with certified tree care standards.</p>
+            <h4 style="color: #064e3b; margin-top: 0; font-weight: 800;">Local Service Area</h4>
+            <p style="font-size: 0.95rem; color: #64748b; margin: 0;">Providing rapid response for <strong>{cityData.City}</strong> and the entire <strong>{cityData.County}</strong> County area. We coordinate with local crews who understand Florida's unique landscape needs.</p>
         </div>
         <div style="background: #f8fafc; padding: 2rem; border-radius: 15px; border: 1px solid #f1f5f9;">
-            <h4 style="color: #064e3b; margin-top: 0; font-weight: 800;">Florida Safety Standards</h4>
-            <p style="font-size: 0.95rem; color: #64748b; margin: 0;">Specialized in Florida's native ecosystem. We ensure your Oaks and Palms are handled with professional-grade safety protocols and state-approved techniques.</p>
+            <h4 style="color: #064e3b; margin-top: 0; font-weight: 800;">Safety & Compliance</h4>
+            <p style="font-size: 0.95rem; color: #64748b; margin: 0;">All connected specialists follow professional safety protocols. Whether it's high-risk removals or routine pruning, we ensure {cityData.City} standards are met.</p>
         </div>
     </section>
 
-    <!-- 5. DINAMIK YORUMLAR (Sosyal Onay) -->
+    <!-- E. DINAMIK YORUMLAR (Sosyal Onay) -->
     <section style="margin-top: 4rem;">
-      <h2 style="text-align: center; color: #064e3b; font-size: 2rem; font-weight: 800; margin-bottom: 2rem;">Recent Feedback from {cityData.City} Residents</h2>
+      <h2 style="text-align: center; color: #064e3b; font-size: 2rem; font-weight: 800; margin-bottom: 2rem;">Recent Feedback from {cityData.City}</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
         <div style="background: #fff; padding: 1.5rem; border-radius: 16px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
           <div style="color: #fbbf24; font-size: 1.2rem; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
@@ -104,16 +122,35 @@ const schemaData = {
       </div>
     </section>
 
-    <!-- 6. 4'LÜ SERVİS KARTLARI (Hizmet Özeti) -->
+    <!-- F. 4'LÜ SERVİS KARTLARI (Özellikler) -->
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 4rem;">
-      <div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🛡️</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Fully Insured</h4><p style="font-size: 0.85rem; color: #666;">Full protection.</p></div>
-      <div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🌪️</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Storm Prep</h4><p style="font-size: 0.85rem; color: #666;">24/7 Response.</p></div>
-      <div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🌳</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Certified</h4><p style="font-size: 0.85rem; color: #666;">Expert pruning.</p></div>
-      <div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🏗️</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Stumps</h4><p style="font-size: 0.85rem; color: #666;">Land clearing.</p></div>
+      <div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🛡️</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Fully Insured</h4><p style="font-size: 0.85rem; color: #666;">Protection for your home.</p></div>
+      <div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🌪️</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Storm Prep</h4><p style="font-size: 0.85rem; color: #666;">Emergency response.</p></div>
+      <div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🌳</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Certified Pros</h4><p style="font-size: 0.85rem; color: #666;">Expert workmanship.</p></div>
+      <div style="background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f3f4f6; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01);"><div style="font-size: 2.5rem; margin-bottom: 10px;">🏗️</div><h4 style="color: #064e3b; font-weight:800; margin: 5px 0;">Stump Grinding</h4><p style="font-size: 0.85rem; color: #666;">Complete land clearing.</p></div>
     </div>
 
-    <!-- 7. AI AÇIKLAMA (EN ALTA İNDİ - SEO İçin) -->
-    <section style="margin-top: 6rem; border-top: 1px solid #eee; pt-5">
+    <!-- G. FAQ (SSS) BÖLÜMÜ (Risk Reddi & Yönlendirme) -->
+    <section style="margin-top: 5rem;">
+      <h2 style="text-align: center; color: #064e3b; font-size: 2rem; font-weight: 800; margin-bottom: 2.5rem;">Frequently Asked Questions</h2>
+      <div style="max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+        <div style="background: white; padding: 1.5rem; border-radius: 16px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+          <h4 style="margin: 0; color: #1b4332; font-size: 1.15rem; font-weight: 700;">How can I get an estimate for tree removal in {cityData.City}?</h4>
+          <p style="margin-top: 10px; color: #4b5563; line-height: 1.6;">Simply call our local connection line. We will link you with a qualified professional in the {cityData.City} area for a free, no-obligation on-site assessment.</p>
+        </div>
+        <div style="background: white; padding: 1.5rem; border-radius: 16px; border: 1px solid #e5e7eb;">
+          <h4 style="margin: 0; color: #1b4332; font-size: 1.15rem; font-weight: 700;">Are the service providers licensed?</h4>
+          <p style="margin-top: 10px; color: #4b5563; line-height: 1.6;">Yes, all experts in our network are required to maintain current licensing and insurance according to Florida state regulations for tree care services.</p>
+        </div>
+        <div style="background: white; padding: 1.5rem; border-radius: 16px; border: 1px solid #e5e7eb;">
+          <h4 style="margin: 0; color: #1b4332; font-size: 1.15rem; font-weight: 700;">Do you provide 24/7 emergency service?</h4>
+          <p style="margin-top: 10px; color: #4b5563; line-height: 1.6;">Our connection line is available to help homeowners find emergency crews during storm seasons or for hazardous tree situations in {cityData.County} County.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- H. AI AÇIKLAMA (En Altta - SEO Gücü) -->
+    <section style="margin-top: 6rem; border-top: 1px solid #eee; padding-top: 4rem;">
       <h2 style="color: #064e3b; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; font-weight: 800;">Reliable Tree Care for {cityData.City} Residents</h2>
       <div style="background: #f9fafb; border-radius: 20px; padding: 2.5rem; border: 1px solid #e5e7eb; line-height: 1.9;">
         <p style="font-size: 1.15rem; color: #4b5563; margin: 0; white-space: pre-line;">"{cityData.Description}"</p>
