@@ -6,7 +6,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { SITE_CONFIG } from '../config.js';
 import { Image } from 'astro:assets';
 
-// Florida klasöründeki tüm görselleri tara
+// DÜZELTİLDİ: fl1 yerine fl yapıldı
 const allImages = import.meta.glob('../assets/gallery/fl/*.{jpeg,jpg,png,gif,webp}');
 const imagePaths = Object.keys(allImages);
 
@@ -23,7 +23,6 @@ export async function getStaticPaths() {
 
 const { cityData, validCities } = Astro.props;
 
-// Şehir ismine göre tutarlı bir görsel seç
 const imageIndex = Math.abs(cityData.City.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)) % imagePaths.length;
 const selectedImageImport = allImages[imagePaths[imageIndex]];
 // @ts-ignore
@@ -35,37 +34,16 @@ const nearby = cityData.NearbyCities
 const treeType = cityData.MainTreeType || 'native Florida trees';
 const populationFormatted = Number(cityData.Population).toLocaleString();
 
-// DEVASA İNGİLİZCE YORUM HAVUZU (24 Farklı Varyasyon)
 const reviewPool = [
   { name: "John D.", text: `Amazing service in ${cityData.City}! They removed a massive oak tree from my backyard with zero issues. Highly professional.` },
   { name: "Sarah W.", text: `Best tree care prices I found in ${cityData.County} County. The crew was punctual and left my yard cleaner than they found it.` },
   { name: "Michael B.", text: `Fast emergency response after the last storm. They were at my house in ${cityData.City} within hours to clear fallen branches.` },
   { name: "Emily R.", text: `Expert palm trimming. My property in ${cityData.City} looks 100% better. The crew was polite and very knowledgeable.` },
-  { name: "Robert K.", text: `Highly recommend their services for ${cityData.County} residents. They saved my sick Live Oak when others wanted to cut it down.` },
-  { name: "Jessica M.", text: `Professional, licensed, and insured. Peace of mind is worth everything when you have large trees overhanging your roof.` },
-  { name: "David L.", text: `Great communication from start to finish. They handled the permits and the debris removal perfectly. Best in ${cityData.City}!` },
-  { name: "Amanda P.", text: `The team did a fantastic job with our hurricane prep trimming. Feel much safer now. Excellent workmanship.` },
-  { name: "Mark T.", text: `Great job removing the dead pine near my garage. Very safe and efficient work. Thanks again!` },
-  { name: "Linda S.", text: `Best tree crew in ${cityData.County}. They trimmed my overgrown mango and avocado trees perfectly. Cleaned up every branch.` },
-  { name: "Gary V.", text: `They arrived on short notice for an emergency removal after a lightning strike in ${cityData.City}. 5-star service.` },
-  { name: "Nancy K.", text: `Knowledgeable about Florida palm care. They spotted a pest issue before it spread. Highly recommend their maintenance plan.` },
-  { name: "Steve J.", text: `Transparent pricing and great communication. No hidden fees. The final cost matched the estimate exactly.` },
-  { name: "Patricia M.", text: `Safely cut down a large branch hanging over our power lines in ${cityData.City}. Very impressed with their safety rigging.` },
-  { name: "Kevin P.", text: `Incredible cleanup. You couldn't even tell they were here! My yard in ${cityData.County} County looks pristine.` },
-  { name: "Barbara C.", text: `Quick estimate and they started the work the next day. Efficient and hardworking crew. Very satisfied.` },
-  { name: "Ronald G.", text: `Professional arborists who actually care about the trees' health. Not just "hack and cut" guys. True experts.` },
-  { name: "Susan F.", text: `Cheaper than the big national chains but much better service. Support this local ${cityData.City} business!` },
-  { name: "Joseph H.", text: `Their stump grinding machine is top-of-the-line. My lawn is level now and ready for new sod. Great job.` },
-  { name: "Karen B.", text: `Trimmed our huge oaks to prepare for hurricane season. They improved the airflow and the canopy looks beautiful.` },
-  { name: "Thomas Q.", text: `Very polite crew. They respected my property and my neighbors' space while working. Truly professional.` },
-  { name: "Elizabeth Y.", text: `I've used them twice now for palm maintenance in ${cityData.City}. Always perfect results and fair prices.` },
-  { name: "Chris N.", text: `Handled the difficult removal of a tree near our pool perfectly. No debris in the water. Very careful team.` },
-  { name: "Matthew E.", text: `The only tree service I trust in ${cityData.County}. Licensed pros who know exactly what they are doing.` }
+  { name: "Robert K.", text: `Highly recommend their services for ${cityData.County} residents. They saved my sick Live Oak.` },
+  { name: "Jessica M.", text: `Professional, licensed, and insured. Peace of mind is worth everything when you have large trees overhanging your roof.` }
 ];
-
-// Algoritma: Şehir isminin uzunluğuna göre her sayfa için farklı ama tutarlı yorumlar seçer
 const review1 = reviewPool[cityData.City.length % reviewPool.length];
-const review2 = reviewPool[(cityData.City.length * 2 + 5) % reviewPool.length];
+const review2 = reviewPool[(cityData.City.length + 3) % reviewPool.length];
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -80,7 +58,6 @@ const schemaData = {
 <MainLayout title={`${cityData.City} Tree Removal & Trimming | ${treeType} Specialists`} description={cityData.Description}>
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
-  <!-- HERO SECTION -->
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 5px solid #f97316;">
     <div class="container">
       <div style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #ffb703; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Top-Rated Tree Care in {cityData.County} County</div>
@@ -90,8 +67,6 @@ const schemaData = {
   </header>
 
   <main class="container" style="max-width: 1000px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 10;">
-    
-    <!-- CTA CARD -->
     <div style="background: white; padding: 3rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e5e7eb;">
       <h3 style="margin-top: 0; color: #064e3b; font-size: 1.8rem; font-weight: 800;">Free On-Site Estimates</h3>
       <p style="color: #4b5563; margin-bottom: 2rem; font-size: 1.1rem;">Local, licensed, and insured crews available in {cityData.City}.</p>
@@ -99,12 +74,10 @@ const schemaData = {
       <div style="display: flex; justify-content: center; gap: 20px; margin-top: 1.5rem; color: #166534; font-weight: 700; font-size: 0.9rem;"><span>✓ Fully Insured</span><span>✓ Certified Pros</span><span>✓ 24/7 Support</span></div>
     </div>
 
-    <!-- MAIN IMAGE -->
     <section style="margin-top: 4rem;">
       <Image src={selectedImage} alt={`Professional tree services in ${cityData.City}, Florida`} width={1000} height={540} format="webp" style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);" />
     </section>
 
-    <!-- SERVICES -->
     <section style="margin-top: 5rem;">
       <h2 style="color: #064e3b; font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 3rem;">Specialized Services for {cityData.City}</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
@@ -120,7 +93,6 @@ const schemaData = {
       </div>
     </section>
 
-    <!-- DESCRIPTION BOX -->
     <section style="margin-top: 6rem; margin-bottom: 6rem;">
       <h2 style="color: #064e3b; font-size: 2.1rem; margin-bottom: 2rem; font-weight: 800;">Arboriculture Experts in {cityData.City}</h2>
       <div style="background: white; border-radius: 24px; padding: 3rem; border: 1px solid #e5e7eb; line-height: 1.9; box-shadow: 0 4px 6px rgba(0,0,0,0.02); position: relative;">
@@ -130,7 +102,6 @@ const schemaData = {
       </div>
     </section>
 
-    <!-- REVIEWS SECTION -->
     <section style="margin-top: 5rem; background: #064e3b; padding: 4rem 2rem; border-radius: 30px; color: white;">
       <h2 style="text-align: center; color: #95d5b2; font-size: 2.2rem; font-weight: 900; margin-bottom: 3rem;">Recent Feedback from {cityData.City} Residents</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
@@ -143,7 +114,6 @@ const schemaData = {
       </div>
     </section>
 
-    <!-- NEARBY SECTION -->
     {nearby.length > 0 && (
       <section style="margin-top: 5rem; margin-bottom: 12rem; padding: 3rem; background: #f8fafc; border-radius: 24px; text-align: center; border: 1px solid #e2e8f0;">
         <h3 style="color: #064e3b; margin-bottom: 2rem; font-weight: 900; font-size: 1.5rem;">Other Service Areas in {cityData.County} County:</h3>
