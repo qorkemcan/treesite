@@ -1,5 +1,5 @@
 ---
-// src/layouts/MainLayout.astro
+// src/layouts/MainLayout.astro - Sadece Navigasyon ve Footer güncellendi
 import { SITE_CONFIG } from '../config.js';
 
 const { 
@@ -46,6 +46,7 @@ const ogTitle = title ? `${title} | ${SITE_CONFIG.brandName}` : SITE_CONFIG.bran
         <div style="display: flex; gap: 15px; align-items: center;">
           <a href="/gallery" class="nav-link" style="color: #4b5563; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.2s;">Our Work</a>
           <a href="/about" class="nav-link" style="color: #4b5563; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.2s;">About</a>
+          <a href="/contact" class="nav-link" style="color: #4b5563; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.2s;">Contact</a>
           <a href={SITE_CONFIG.phoneHref} style="background: #1b4332; color: white !important; padding: 10px 16px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 0.8rem; border: 1px solid #2d6a4f;">CALL NOW</a>
         </div>
       </div>
@@ -60,6 +61,7 @@ const ogTitle = title ? `${title} | ${SITE_CONFIG.brandName}` : SITE_CONFIG.bran
         <a href="/" style="color: #d1fae5; text-decoration: none; font-weight: 600;">Home</a> • 
         <a href="/gallery" style="color: #d1fae5; text-decoration: none; font-weight: 600;">Our Work</a> • 
         <a href="/about" style="color: #d1fae5; text-decoration: none; font-weight: 600;">About Us</a> • 
+        <a href="/contact" style="color: #d1fae5; text-decoration: none; font-weight: 600;">Contact</a> • 
         <a href="/privacy" style="color: #d1fae5; text-decoration: none; font-weight: 600;">Privacy Policy</a>
       </p>
     </footer>
