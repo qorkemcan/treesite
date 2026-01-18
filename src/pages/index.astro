@@ -9,12 +9,14 @@ const filePath = path.resolve('./src/data/cities.csv');
 const fileContent = fs.readFileSync(filePath, 'utf-8');
 const records = parse(fileContent, { columns: true, skip_empty_lines: true, bom: true });
 
-// Mükerrerleri temizle ve İlçelere göre grupla
+// Mükerrerleri temizle ve İlçelere (County) göre grupla
 const seenCities = new Set();
 const groupedCities = records.reduce((acc: any, city: any) => {
-  const cityName = city.City.toLowerCase().trim();
-  if (!seenCities.has(cityName)) {
-    seenCities.add(cityName);
+  const cityName = city.City.trim();
+  const lowerCity = cityName.toLowerCase();
+  
+  if (!seenCities.has(lowerCity)) {
+    seenCities.add(lowerCity);
     const county = city.County || 'Florida Areas';
     if (!acc[county]) acc[county] = [];
     acc[county].push(city);
@@ -22,48 +24,73 @@ const groupedCities = records.reduce((acc: any, city: any) => {
   return acc;
 }, {});
 
+// İlçeleri alfabetik sırala
 const counties = Object.keys(groupedCities).sort();
 ---
 
 <MainLayout 
-  title="Florida's Premier Tree Care Service Network" 
-  description="The 2026 Directory for Florida Tree Removal. Connecting you with certified, licensed professionals across all 67 counties for storm prep and trimming."
+  title="Florida's #1 Certified Tree Service Directory | 800+ Locations" 
+  description="The official 2026 directory for Florida tree care. Connecting homeowners with certified arborists in 67 counties for removal, trimming, and storm prep."
 >
+  <!-- HERO & SEARCH SECTION -->
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 6rem 1.5rem; text-align: center; border-bottom: 6px solid #ea580c;">
-    <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; letter-spacing: -2px; font-weight: 900; line-height: 0.95;">FLORIDA TREE <br/><span style="color: #ffb703;">SERVICE NETWORK</span></h1>
-    <p style="font-size: 1.4rem; color: #95d5b2; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">The Official 2026 Directory for Certified Arborists & Emergency Response across the Sunshine State.</p>
-    
-    <!-- ÇALIŞAN ARAMA ÇUBUĞU -->
-    <div style="margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; background: white; padding: 5px; border-radius: 50px; display: flex; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 2px solid #ea580c;">
-        <div style="padding-left: 20px; font-size: 1.2rem;">🔍</div>
-        <input 
-            type="text" 
-            id="citySearch" 
-            placeholder="Search by city or county name..." 
-            style="width: 100%; border: none; padding: 15px 10px; font-size: 1.1rem; border-radius: 50px; outline: none; color: #1b4332; font-weight: 600;"
-        />
+    <div class="container">
+        <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; letter-spacing: -2px; font-weight: 900; line-height: 0.95;">FLORIDA TREE <br/><span style="color: #ffb703;">SERVICE NETWORK</span></h1>
+        <p style="font-size: 1.4rem; color: #95d5b2; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; font-weight: 400;">Expert Arborists & Emergency Removal Across 67 Counties and 800+ Communities.</p>
+        
+        <!-- LIVE SEARCH BOX -->
+        <div style="margin-top: 3.5rem; max-width: 650px; margin-left: auto; margin-right: auto; background: white; padding: 6px; border-radius: 50px; display: flex; align-items: center; box-shadow: 0 15px 35px rgba(0,0,0,0.4); border: 2px solid #ea580c;">
+            <div style="padding-left: 20px; font-size: 1.4rem;">🔍</div>
+            <input 
+                type="text" 
+                id="citySearch" 
+                placeholder="Enter your city or county..." 
+                style="width: 100%; border: none; padding: 15px 12px; font-size: 1.15rem; border-radius: 50px; outline: none; color: #1b4332; font-weight: 600;"
+            />
+        </div>
+        <p id="searchStatus" style="margin-top: 20px; font-size: 1rem; color: #ffb703; font-weight: 700; display: none;">No service areas found matching your search.</p>
     </div>
-    <p id="searchStatus" style="margin-top: 15px; font-size: 0.9rem; color: #ffb703; font-weight: 700; display: none;">No locations found matching your search.</p>
   </header>
 
   <div class="container">
-    <section id="directory" style="margin-top: 6rem; margin-bottom: 10rem;">
-      <h2 style="text-align: center; color: #064e3b; font-size: 2.5rem; margin-bottom: 4rem; font-weight: 900;">Service Directory by County</h2>
+    
+    <!-- QUICK STATS / TRUST SECTION -->
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: -3rem; position: relative; z-index: 20;">
+        <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🌪️</div>
+            <h3 style="color: #064e3b; margin: 0; font-weight: 900;">Storm Response</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">Immediate dispatch for post-storm tree emergencies across Florida.</p>
+        </div>
+        <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🛡️</div>
+            <h3 style="color: #064e3b; margin: 0; font-weight: 900;">Fully Vetted</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">All connected specialists are licensed and insured per state regulations.</p>
+        </div>
+        <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💰</div>
+            <h3 style="color: #064e3b; margin: 0; font-weight: 900;">Free Quotes</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">Call {SITE_CONFIG.phone} for a zero-obligation on-site assessment.</p>
+        </div>
+    </section>
+
+    <!-- DIRECTORY SECTION -->
+    <section id="directory" style="margin-top: 6rem; margin-bottom: 12rem;">
+      <h2 style="text-align: center; color: #064e3b; font-size: 2.5rem; margin-bottom: 4rem; font-weight: 900;">Browse Service Areas by County</h2>
       
       <div id="countyGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2.5rem;">
         {counties.map((county) => (
-          <div class="county-card" data-county={county.toLowerCase()} style="background: white; padding: 2rem; border-radius: 24px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: 0.3s;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #f3f4f6; padding-bottom: 15px;">
-                <!-- YENİ FLORIDA İKONU: 🌴 -->
-                <div style="background: #f0fdf4; width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; border: 1px solid #dcfce7;">🌴</div>
-                <h3 style="color: #064e3b; font-size: 1.4rem; margin: 0; font-weight: 800;">{county} County</h3>
+          <div class="county-card" data-county={county.toLowerCase()} style="background: white; padding: 2rem; border-radius: 28px; border: 1px solid #e5e7eb; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); transition: 0.3s;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 25px; border-bottom: 2px solid #f8fafc; padding-bottom: 15px;">
+                <div style="background: #f0fdf4; width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; border: 1px solid #dcfce7;">🌴</div>
+                <h3 style="color: #064e3b; font-size: 1.5rem; margin: 0; font-weight: 800;">{county}</h3>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
               {groupedCities[county].map((city: any) => (
                 <a 
                   href={`/tree-removal-${city.City.toLowerCase().replace(/\s+/g, '-')}`}
                   data-city={city.City.toLowerCase()}
-                  style="text-decoration: none; color: #4b5563; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; transition: 0.2s;"
+                  style="text-decoration: none; color: #4b5563; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; transition: 0.2s;"
                   class="city-link"
                 >
                   <span style="color: #ea580c; font-size: 0.8rem;">▶</span> {city.City}
@@ -79,11 +106,10 @@ const counties = Object.keys(groupedCities).sort();
 
 <style>
   .city-link:hover { color: #ea580c !important; transform: translateX(3px); }
-  .county-card.hidden { display: none; }
-  .city-link.hidden { display: none; }
-  .county-card:hover { border-color: #95d5b2; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+  .county-card:hover { border-color: #95d5b2; transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
 </style>
 
+<!-- SEARCH LOGIC -->
 <script is:inline>
     const searchInput = document.getElementById('citySearch');
     const statusText = document.getElementById('searchStatus');
