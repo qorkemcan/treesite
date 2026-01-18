@@ -1,103 +1,234 @@
 ---
+// src/layouts/MainLayout.astro
 import { SITE_CONFIG } from '../config.js';
+
+interface Props {
+  title: string;
+  description: string;
+  badgeText?: string;
+  ogImage?: string;
+}
 
 const { 
   title, 
   description, 
-  badgeText = "✓ LICENSED, INSURED & BONDED • 2026 OFFICIAL DIRECTORY",
+  badgeText = "✓ 2026 OFFICIAL DIRECTORY • LICENSED & INSURED SPECIALISTS",
   ogImage = SITE_CONFIG.defaultOGImage 
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl);
-const ogTitle = title ? `${title} | ${SITE_CONFIG.brandName}` : SITE_CONFIG.brandName;
+const fullTitle = `${title} | ${SITE_CONFIG.brandName}`;
 ---
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} | {SITE_CONFIG.brandName}</title>
-    <meta name="title" content={`${title} | ${SITE_CONFIG.brandName}`} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Meta Tags -->
+    <title>{fullTitle}</title>
+    <meta name="title" content={fullTitle} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-    <meta property="og:type" content="website" /><meta property="og:url" content={canonicalURL} /><meta property="og:title" content={ogTitle} /><meta property="og:description" content={description} /><meta property="og:image" content={new URL(ogImage, SITE_CONFIG.siteUrl)} />
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, SITE_CONFIG.siteUrl)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={fullTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(ogImage, SITE_CONFIG.siteUrl)} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Veri Dosyalarından Gelen Özel Schema Slot'u -->
     <slot name="head" />
+
     <style is:global>
-      * { font-family: 'Inter', -apple-system, sans-serif !important; box-sizing: border-box; scroll-behavior: smooth; }
-      body { margin: 0; background: #fcfcfc; color: #1a1a1a; line-height: 1.5; -webkit-font-smoothing: antialiased; }
-      .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-      .nav-links { display: flex; gap: 20px; align-items: center; }
-      .nav-link { color: #4b5563; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
-      .nav-link:hover { color: #ea580c !important; }
-      #mobile-menu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); z-index: 10002; padding: 2rem; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+      :root {
+        --primary: #1b4332;
+        --primary-dark: #081c15;
+        --secondary: #ea580c;
+        --accent: #ffb703;
+        --text-main: #1a1a1a;
+        --text-muted: #4b5563;
+        --bg-light: #fcfcfc;
+      }
+
+      * { 
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important; 
+        box-sizing: border-box; 
+        scroll-behavior: smooth; 
+      }
+
+      body { 
+        margin: 0; 
+        background: var(--bg-light); 
+        color: var(--text-main); 
+        line-height: 1.5; 
+        -webkit-font-smoothing: antialiased; 
+      }
+
+      .container { 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 0 1.5rem; 
+      }
+
+      /* Navbar Styles */
+      .nav-link { 
+        color: var(--text-muted); 
+        text-decoration: none; 
+        font-weight: 700; 
+        font-size: 0.85rem; 
+        transition: 0.2s; 
+        text-transform: uppercase; 
+        letter-spacing: 0.5px; 
+      }
+      .nav-link:hover { color: var(--secondary) !important; }
+
+      /* Mobile Menu Overlay */
+      #mobile-menu { 
+        display: none; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(255, 255, 255, 0.98); 
+        backdrop-filter: blur(10px); 
+        z-index: 10002; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 2rem; 
+      }
       #mobile-menu.active { display: flex; }
-      .menu-toggle { display: none; background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #064e3b; padding: 5px; }
-      .close-menu { position: absolute; top: 20px; right: 20px; font-size: 3rem; background: none; border: none; cursor: pointer; color: #4b5563; line-height: 1; }
-      @media (max-width: 1024px) { .nav-links { display: none; } .menu-toggle { display: block; } .mobile-quick-call { display: flex !important; } }
+
+      .menu-toggle { 
+        background: none; 
+        border: none; 
+        font-size: 1.8rem; 
+        cursor: pointer; 
+        color: var(--primary); 
+        display: none;
+      }
+
+      @media (max-width: 1024px) {
+        .desktop-links { display: none; }
+        .menu-toggle { display: block; }
+      }
+
+      /* Transitions */
+      .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      .hover-lift:hover { transform: translateY(-3px); }
     </style>
   </head>
   <body>
-    <div style="background: #0d2818; color: #d8f3dc; padding: 10px; text-align: center; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; position: relative; z-index: 10001; text-transform: uppercase;">
+    <!-- Top Trust Bar -->
+    <div style="background: var(--primary-dark); color: #d8f3dc; padding: 10px; text-align: center; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; position: relative; z-index: 10001;">
       {badgeText}
     </div>
-    <nav style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #eee; padding: 0.7rem 0; position: sticky; top: 0; z-index: 10000; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+
+    <!-- Main Navigation -->
+    <nav style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #eee; padding: 0.8rem 0; position: sticky; top: 0; z-index: 10000;">
       <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
-          <div style="background: #1b4332; width: 34px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🌳</div>
-          <span style="font-weight: 900; color: #064e3b; font-size: 1.2rem; letter-spacing: -0.5px; text-transform: uppercase;">Pro<span style="color: #ea580c;">Tree</span>Trim</span>
+        <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+          <div style="background: var(--primary); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(27, 67, 50, 0.2);">🌳</div>
+          <span style="font-weight: 900; color: var(--primary); font-size: 1.3rem; letter-spacing: -0.5px; text-transform: uppercase;">Pro<span style="color: var(--secondary);">Tree</span>Trim</span>
         </a>
-        <div class="nav-links">
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-links" style="display: flex; gap: 25px; align-items: center;">
           <a href="/services" class="nav-link">Services</a>
           <a href="/gallery" class="nav-link">Our Work</a>
           <a href="/about" class="nav-link">About</a>
           <a href="/contact" class="nav-link">Contact</a>
-          <a href={SITE_CONFIG.phoneHref} style="background: #1b4332; color: white !important; padding: 10px 18px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 0.8rem; border: 1px solid #2d6a4f;">CALL NOW</a>
+          <a href={SITE_CONFIG.phoneHref} style="background: var(--primary); color: white !important; padding: 12px 22px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 0.85rem; border: 1px solid var(--primary-dark);" class="hover-lift">CALL DISPATCH</a>
         </div>
-        <div style="display: flex; align-items: center; gap: 12px;">
-            <a href={SITE_CONFIG.phoneHref} class="mobile-quick-call" style="display: none; background: #ea580c; color: white; width: 38px; height: 38px; border-radius: 50%; align-items: center; justify-content: center; text-decoration: none; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3);">📞</a>
-            <button class="menu-toggle" id="openBtn">☰</button>
+
+        <!-- Mobile Menu Controls -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <a href={SITE_CONFIG.phoneHref} style="background: var(--secondary); color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.3rem; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);" class="menu-toggle">📞</a>
+            <button class="menu-toggle" id="openBtn" aria-label="Open Menu">☰</button>
         </div>
       </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu">
-        <button class="close-menu" id="closeBtn">&times;</button>
-        <a href="/" class="nav-link" style="font-size: 1.8rem; font-weight: 900;">Home</a>
-        <a href="/services" class="nav-link" style="font-size: 1.8rem; font-weight: 900;">Services</a>
-        <a href="/gallery" class="nav-link" style="font-size: 1.8rem; font-weight: 900;">Our Work</a>
-        <a href="/about" class="nav-link" style="font-size: 1.8rem; font-weight: 900;">About</a>
-        <a href="/contact" class="nav-link" style="font-size: 1.8rem; font-weight: 900;">Contact</a>
-        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem 2.5rem; border-radius: 16px; text-decoration: none; font-weight: 900; font-size: 1.4rem; display: block; margin-top: 2rem;">{SITE_CONFIG.phone}</a>
+        <button id="closeBtn" style="position: absolute; top: 20px; right: 20px; font-size: 3.5rem; background: none; border: none; cursor: pointer; color: var(--text-muted);">&times;</button>
+        <a href="/" class="nav-link" style="font-size: 2rem; font-weight: 900;">Home</a>
+        <a href="/services" class="nav-link" style="font-size: 2rem; font-weight: 900;">Services</a>
+        <a href="/gallery" class="nav-link" style="font-size: 2rem; font-weight: 900;">Gallery</a>
+        <a href="/about" class="nav-link" style="font-size: 2rem; font-weight: 900;">About Us</a>
+        <a href="/contact" class="nav-link" style="font-size: 2rem; font-weight: 900;">Contact</a>
+        <a href={SITE_CONFIG.phoneHref} style="background: var(--secondary); color: white !important; padding: 1.5rem 3rem; border-radius: 20px; text-decoration: none; font-weight: 900; font-size: 1.6rem; display: block; margin-top: 2rem; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.2); text-align: center;">{SITE_CONFIG.phone}</a>
     </div>
 
+    <!-- Page Content -->
     <slot /> 
 
-    <footer style="background: #064e3b; color: #d1fae5 !important; padding: 5rem 1.5rem 12rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+    <!-- Footer with Compliance Text -->
+    <footer style="background: var(--primary-dark); color: #d1fae5; padding: 6rem 1.5rem 12rem; text-align: center; border-top: 4px solid var(--secondary);">
       <div class="container">
-          <p style="font-weight: 900; font-size: 1.3rem; margin-bottom: 10px;">ProTreeTrim™ Florida</p>
-          <p style="font-size: 0.95rem; opacity: 0.9;">© {SITE_CONFIG.year} • The State's #1 Certified Tree Care Network</p>
-          <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <a href="/" style="color: #d1fae5; text-decoration: none;">Home</a> • 
-            <a href="/services" style="color: #d1fae5; text-decoration: none;">Services</a> • 
-            <a href="/gallery" style="color: #d1fae5; text-decoration: none;">Our Work</a> • 
-            <a href="/about" style="color: #d1fae5; text-decoration: none;">About</a> • 
-            <a href="/contact" style="color: #d1fae5; text-decoration: none;">Contact</a> • 
-            <a href="/privacy" style="color: #d1fae5; text-decoration: none;">Privacy</a>
+          <p style="font-weight: 900; font-size: 1.5rem; margin-bottom: 15px; color: white;">ProTreeTrim™ Florida</p>
+          
+          <!-- Marketcall/Ringba Denetimi İçin Kritik Yasal Metin -->
+          <p style="font-size: 0.85rem; opacity: 0.7; max-width: 800px; margin: 0 auto 40px; line-height: 1.7;">
+            ProTreeTrim™ is a free connection service that helps homeowners find local tree care specialists. We are a referral network; all contractors are independent and ProTreeTrim™ does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that any contractor they hire provides the necessary license and insurance for the specific scope of work. Images used are for illustrative purposes only.
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">
+            <a href="/" style="color: white; text-decoration: none;">Directory</a>
+            <a href="/services" style="color: white; text-decoration: none;">Services</a>
+            <a href="/about" style="color: white; text-decoration: none;">About</a>
+            <a href="/privacy" style="color: white; text-decoration: none;">Privacy Policy</a>
+            <a href="/contact" style="color: white; text-decoration: none;">Contact</a>
           </div>
+
+          <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.5;">
+            © {SITE_CONFIG.year} {SITE_CONFIG.brandName}. All rights reserved.
+          </p>
       </div>
     </footer>
 
-    <div style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(15px); padding: 12px 15px calc(12px + env(safe-area-inset-bottom)); z-index: 10000; display: flex; justify-content: center; border-top: 1px solid #eee; box-shadow: 0 -5px 30px rgba(0,0,0,0.08);">
-        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; width: 100%; max-width: 500px; padding: 18px; text-decoration: none !important; border-radius: 16px; font-weight: 900; text-align: center; font-size: 1.3rem; display: block;">CALL FOR FREE QUOTE</a>
+    <!-- Mobil Yapışkan CTA (Bottom Sticky) -->
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(15px); padding: 15px 20px calc(15px + env(safe-area-inset-bottom)); z-index: 10001; border-top: 1px solid #ddd; display: flex; justify-content: center; box-shadow: 0 -10px 30px rgba(0,0,0,0.1);">
+        <a href={SITE_CONFIG.phoneHref} style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 18px; text-decoration: none !important; border-radius: 18px; font-weight: 900; text-align: center; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; gap: 12px; box-shadow: 0 8px 20px rgba(234, 88, 12, 0.4);" class="hover-lift">
+           <span style="font-size: 1.8rem;">📞</span> CALL FOR FREE QUOTE
+        </a>
     </div>
 
+    <!-- Mobil Menü Scripti -->
     <script is:inline>
         const openBtn = document.getElementById('openBtn');
         const closeBtn = document.getElementById('closeBtn');
         const mobileMenu = document.getElementById('mobile-menu');
-        openBtn?.addEventListener('click', () => { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; });
-        closeBtn?.addEventListener('click', () => { mobileMenu.classList.remove('active'); document.body.style.overflow = 'auto'; });
+
+        const toggleMenu = (show) => {
+            mobileMenu.classList.toggle('active', show);
+            document.body.style.overflow = show ? 'hidden' : 'auto';
+        };
+
+        openBtn?.addEventListener('click', () => toggleMenu(true));
+        closeBtn?.addEventListener('click', () => toggleMenu(false));
+        
+        // Menü linklerine tıklandığında menüyü kapat
+        mobileMenu?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
     </script>
   </body>
 </html>
