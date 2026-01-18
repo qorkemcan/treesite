@@ -1,0 +1,69 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { SITE_CONFIG } from '../config.js';
+import { Image } from 'astro:assets';
+
+// Florida klasöründeki tüm görselleri çek
+const allImages = import.meta.glob('../assets/gallery/fl/*.{jpeg,jpg,png,gif,webp}');
+const imagePaths = Object.keys(allImages);
+
+// Görselleri asenkron olarak yükle
+const images = await Promise.all(
+  imagePaths.map(async (path) => {
+    const img: any = await allImages[path]();
+    return img.default;
+  })
+);
+---
+
+<MainLayout 
+  title="Our Work Gallery | Florida Tree Care Projects" 
+  description="Explore our gallery of professional tree removal, trimming, and storm cleanup projects across Florida."
+>
+  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center; border-bottom: 5px solid #f97316;">
+    <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900; line-height: 1.1;">Our Professional Gallery</h1>
+    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+        Visual proof of our commitment to safety, precision, and excellence in Florida arboriculture.
+    </p>
+  </header>
+
+  <main class="container" style="padding-top: 4rem; padding-bottom: 8rem;">
+    
+    <!-- Filtreleme Notu (Gelecekte buraya eyalet butonları gelecek) -->
+    <div style="text-align: center; margin-bottom: 3rem;">
+        <span style="background: #064e3b; color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">📍 Currently Viewing: Florida Projects</span>
+    </div>
+
+    <!-- Fotoğraf Izgarası -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+      {images.map((img, index) => (
+        <div style="overflow: hidden; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #eee; aspect-ratio: 4/3;">
+          <Image 
+            src={img} 
+            alt={`ProTreeTrim Florida Tree Service Project ${index + 1}`} 
+            width={600} 
+            height={450} 
+            format="webp"
+            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;"
+            class="gallery-img"
+          />
+        </div>
+      ))}
+    </div>
+
+    <!-- Alt CTA -->
+    <div style="margin-top: 6rem; background: #f8fafc; padding: 4rem 2rem; border-radius: 30px; text-align: center; border: 1px solid #e2e8f0;">
+        <h2 style="color: #064e3b; font-size: 2rem; font-weight: 800; margin-top: 0;">Ready to Start Your Project?</h2>
+        <p style="color: #4b5563; font-size: 1.2rem; margin-bottom: 2rem;">Get the same professional results for your property today.</p>
+        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem 2.5rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: 1.4rem; display: inline-block; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.2);">
+            CALL FOR A FREE ESTIMATE
+        </a>
+    </div>
+  </main>
+</MainLayout>
+
+<style>
+  .gallery-img:hover {
+    transform: scale(1.05);
+  }
+</style>
