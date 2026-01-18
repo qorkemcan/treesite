@@ -63,7 +63,23 @@ const images = await Promise.all(
 </MainLayout>
 
 <style>
+  .gallery-img {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.95); /* Normalde hafif karanlık */
+  }
+  
   .gallery-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08); /* Hafif büyüme */
+    filter: brightness(1.1); /* Üzerine gelince parlaması */
+    cursor: default; /* Tıklama imgesi yerine normal ok kalsın ki beklenti oluşmasın */
+  }
+
+  /* Kartın kendisine de hafif bir gölge efekti */
+  div[style*="aspect-ratio"] {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  div[style*="aspect-ratio"]:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   }
 </style>
