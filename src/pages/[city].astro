@@ -14,7 +14,6 @@ export async function getStaticPaths() {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const records = parse(fileContent, { columns: true, skip_empty_lines: true, bom: true });
   
-  // Mükerrer şehirleri engellemek için isimleri takip et
   const seenCities = new Set();
   const uniqueRecords = records.filter(row => {
     const cityName = row.City.toLowerCase().trim();
@@ -36,7 +35,6 @@ export async function getStaticPaths() {
 
 const { cityData, validCities } = Astro.props;
 
-// Rastgele ama tutarlı görsel seçimi
 const imageIndex = Math.abs(cityData.City.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)) % imagePaths.length;
 const selectedImageImport = allImages[imagePaths[imageIndex]];
 // @ts-ignore
@@ -50,7 +48,6 @@ const populationFormatted = Number(cityData.Population).toLocaleString();
 const focusService = cityData.FocusService || "Tree Removal & Trimming";
 const landmark = cityData.Landmark || "the local community";
 
-// Yorum Havuzu
 const reviewPool = [
   { name: "John D.", text: `Amazing ${focusService} in ${cityData.City}! They handled everything near ${landmark} perfectly.` },
   { name: "Sarah W.", text: `Best prices in ${cityData.County} County. The crew was professional and punctual.` },
@@ -73,12 +70,40 @@ const review2 = reviewPool[(cityData.City.length * 2) % reviewPool.length];
 
   <main class="container" style="max-width: 1000px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 10;">
     
+    <!-- CTA CARD -->
     <div style="background: white; padding: 3rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e5e7eb;">
       <h3 style="margin-top: 0; color: #064e3b; font-size: 1.8rem; font-weight: 800;">Get Your Free Estimate for {cityData.City}</h3>
       <p style="color: #4b5563; margin-bottom: 2rem; font-size: 1.1rem;">Professional arborists available for <strong>{focusService}</strong> and emergency care.</p>
-      <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.4rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: clamp(1.4rem, 6vw, 2.2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); border: 2px solid #fdba74;">{SITE_CONFIG.phone}</a>
+      <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.4rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: clamp(1.4rem, 6vw, 2.2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); border: 2px solid #fdba74; white-space: nowrap;">{SITE_CONFIG.phone}</a>
     </div>
 
+    <!-- NEW: WEATHER & SAFETY TRACKER SECTION -->
+    <section style="margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <!-- Weather Widget Card -->
+        <div style="background: #064e3b; padding: 1.5rem; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); color: white;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <span style="font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #95d5b2;">Local Weather Station</span>
+                <span style="background: #ea580c; padding: 4px 10px; border-radius: 50px; font-size: 0.7rem; font-weight: 900;">LIVE</span>
+            </div>
+            
+            <a class="weatherwidget-io" href={`https://forecast7.com/en/27d66n81d52/florida/?unit=us`} data-label_1={cityData.City} data-label_2="SAFETY FORECAST" data-font="Inter" data-icons="Climacons Animated" data-theme="pure" data-basecolor="#064e3b" data-accent="" data-textcolor="#ffffff" data-highcolor="#ffb703" data-lowcolor="#95d5b2" data-suncolor="#ffb703" data-mooncolor="#95d5b2" data-cloudcolor="#95d5b2" data-cloudfill="#064e3b" data-raincolor="#95d5b2" data-snowcolor="#ffffff" >{cityData.City} WEATHER</a>
+            <script is:inline>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+        </div>
+
+        <!-- Safety Warning Card -->
+        <div style="background: #fdf2f2; border: 1px solid #fee2e2; padding: 2rem; border-radius: 24px; display: flex; flex-direction: column; justify-content: center;">
+            <div style="font-size: 2rem; margin-bottom: 10px;">⚠️</div>
+            <h4 style="color: #991b1b; margin: 0; font-weight: 800; font-size: 1.3rem;">Storm Readiness Alert</h4>
+            <p style="color: #7f1d1d; font-size: 1rem; line-height: 1.5; margin-top: 10px;">
+                High winds in <strong>{cityData.County} County</strong> can turn unstable limbs into projectiles. If the forecast shows 20mph+ gusts, your properties' <strong>{treeType}</strong> should be inspected for structural integrity.
+            </p>
+            <a href={SITE_CONFIG.phoneHref} style="margin-top: 15px; color: #ea580c; text-decoration: none; font-weight: 800; font-size: 0.95rem;">SCHEDULE RISK ASSESSMENT →</a>
+        </div>
+    </section>
+
+    <!-- IMAGE -->
     <section style="margin-top: 4rem;">
       <Image src={selectedImage} alt={`Tree service operation in ${cityData.City}, Florida`} width={1000} height={540} format="webp" style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);" />
     </section>
@@ -89,12 +114,12 @@ const review2 = reviewPool[(cityData.City.length * 2) % reviewPool.length];
         <div style="position: absolute; top: -15px; left: 30px; background: #ea580c; color: white; padding: 5px 20px; border-radius: 50px; font-weight: 800; font-size: 0.8rem;">SERVICE FOCUS: {focusService.toUpperCase()}</div>
         <p style="font-size: 1.25rem; color: #1b4332; font-weight: 700; margin-bottom: 1.5rem;">{cityData.Description}</p>
         <p style="font-size: 1.1rem; color: #4b5563;">
-            In <strong>{cityData.City}</strong>, maintaining the health of your <strong>{treeType}</strong> is critical for storm safety and property value. Our network specializes in {focusService} across the {cityData.County} County area, ensuring every project near <strong>{landmark}</strong> is completed with the highest safety standards and local expertise.
+            In <strong>{cityData.City}</strong>, maintaining the health of your <strong>{treeType}</strong> is critical for storm safety. Whether you are near <strong>{landmark}</strong> or in the surrounding area, our network specialized in {focusService} ensures your property remains safe during Florida's unpredictable weather patterns.
         </p>
       </div>
     </section>
 
-    <!-- FEEDBACK SECTION -->
+    <!-- FEEDBACK -->
     <section style="margin-top: 5rem; background: #064e3b; padding: 4rem 2rem; border-radius: 30px; color: white;">
       <h2 style="text-align: center; color: #95d5b2; font-size: 2.2rem; font-weight: 900; margin-bottom: 3rem;">Recent Feedback from {cityData.City}</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
@@ -123,3 +148,7 @@ const review2 = reviewPool[(cityData.City.length * 2) % reviewPool.length];
     )}
   </main>
 </MainLayout>
+
+<style>
+  a:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.2s ease; }
+</style>
