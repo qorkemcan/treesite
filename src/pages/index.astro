@@ -9,55 +9,76 @@ import teamImg from '../assets/team.jpg';
 
 const filePath = path.resolve('./src/data/cities.csv');
 const fileContent = fs.readFileSync(filePath, 'utf-8');
-// @ts-ignore
 const records = parse(fileContent, { columns: true, skip_empty_lines: true, bom: true });
+
+// İlçelere göre şehirleri grupla
+const groupedCities = records.reduce((acc: any, city: any) => {
+  const county = city.County || 'Other Areas';
+  if (!acc[county]) acc[county] = [];
+  acc[county].push(city);
+  return acc;
+}, {});
+
+const counties = Object.keys(groupedCities).sort();
 ---
 
 <MainLayout 
-  title="#1 Rated Tree Services in Florida" 
-  description="Professional tree services throughout Florida. Licensed, insured, and available 24/7 for emergency tree removal, trimming, and stump grinding."
+  title="ProTreeTrim™ | Florida's Expert Tree Care Network" 
+  description="Connecting Florida homeowners with certified, licensed, and insured tree removal and trimming specialists. 24/7 emergency services across all major counties."
 >
-  <!-- HERO SECTION -->
-  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4rem 1.5rem; text-align: center;">
-    <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; letter-spacing: -1.5px; font-weight: 900; line-height: 1.1;">#1 Rated Tree Services in Florida</h1>
-    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1.5rem; font-weight: 400; max-width: 700px; margin-left: auto; margin-right: auto;">Connect with Florida's Premier Network of Certified Tree Care Experts for removal, trimming, and emergency care.</p>
+  <!-- HERO -->
+  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 6rem 1.5rem; text-align: center;">
+    <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; letter-spacing: -2px; font-weight: 900; line-height: 1;">Expert Tree Services <br/><span style="color: #ffb703;">Across Florida</span></h1>
+    <p style="font-size: 1.3rem; color: #95d5b2; margin-top: 2rem; max-width: 750px; margin-left: auto; margin-right: auto; font-weight: 400;">The fastest way to connect with certified arborists for removal, pruning, and emergency storm cleanup in your county.</p>
+    
+    <div style="margin-top: 3rem;">
+        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem 2.5rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: 1.5rem; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4); border: 2px solid #fdba74;">
+            📞 CALL {SITE_CONFIG.phone}
+        </a>
+    </div>
   </header>
 
-  <div class="container" style="max-width: 1000px;">
+  <div class="container" style="max-width: 1100px;">
     
-    <!-- RESPONSIVE IMAGE SECTION -->
-    <div style="margin-top: 2rem; margin-bottom: 2rem; padding: 0 0.5rem;">
-        <Image 
-          src={teamImg} 
-          alt="ProTreeTrim Expert Team" 
-          width={1000} 
-          height={540}
-          format="webp"
-          style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: block;"
-        />
+    <!-- STATS -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: -2rem; position: relative; z-index: 20;">
+        <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; min-width: 200px;">
+            <div style="color: #064e3b; font-size: 1.8rem; font-weight: 900;">100%</div>
+            <div style="color: #64748b; font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">Licensed & Insured</div>
+        </div>
+        <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; min-width: 200px;">
+            <div style="color: #064e3b; font-size: 1.8rem; font-weight: 900;">24/7</div>
+            <div style="color: #64748b; font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">Storm Response</div>
+        </div>
+        <div style="background: white; padding: 1.5rem 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; min-width: 200px;">
+            <div style="color: #064e3b; font-size: 1.8rem; font-weight: 900;">FREE</div>
+            <div style="color: #64748b; font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">On-Site Estimates</div>
+        </div>
     </div>
 
-    <!-- CTA CARD -->
-    <div style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.06); border: 1px solid #eee; margin-bottom: 4rem;">
-      <h2 style="color: #064e3b; margin-top: 0; font-weight: 800; font-size: 1.6rem;">Need Help Right Now?</h2>
-      <p style="color: #64748b; margin-bottom: 1.5rem;">Our local specialists are standing by for your free estimate.</p>
-      <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem 2rem; text-decoration: none; border-radius: 14px; font-weight: 800; font-size: clamp(1.2rem, 5vw, 1.8rem); display: inline-block; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.2); border: 1px solid #fdba74;">
-        📞 {SITE_CONFIG.phone}
-      </a>
-    </div>
+    <!-- DIRECTORY SECTION -->
+    <section style="margin-top: 5rem; margin-bottom: 8rem;">
+      <h2 style="text-align: center; color: #064e3b; font-size: 2.2rem; margin-bottom: 1rem; font-weight: 900;">Service Locations by County</h2>
+      <p style="text-align: center; color: #64748b; margin-bottom: 4rem;">Select your local area to find certified specialists near you.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 3rem;">
+        {counties.map((county) => (
+          <div style="background: #f8fafc; padding: 2rem; border-radius: 20px; border: 1px solid #e2e8f0;">
+            <h3 style="color: #064e3b; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #cbd5e1; padding-bottom: 10px; margin-bottom: 15px;">{county} County</h3>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              {groupedCities[county].map((city: any) => (
+                <a 
+                  href={`/tree-removal-${city.City.toLowerCase().replace(/\s+/g, '-')}`}
+                  style="text-decoration: none; color: #166534; font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 8px;"
+                >
+                  <span style="color: #ea580c;">•</span> {city.City}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
 
-    <!-- CITIES LIST -->
-    <h2 style="text-align: center; color: #064e3b; font-size: 1.8rem; margin-bottom: 2rem; font-weight: 800;">Our Local Service Centers</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px; margin-bottom: 5rem;">
-      {records.map((city: any) => (
-        <a 
-          href={`/tree-removal-${city.City.toLowerCase().replace(/\s+/g, '-')}`}
-          style="background: white; padding: 18px; border: 1px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #064e3b; font-weight: 700; text-align: center; transition: all 0.2s ease; font-size: 0.95rem; box-shadow: 0 2px 4px rgba(0,0,0,0.02);"
-        >
-          {city.City}, FL
-        </a>
-      ))}
-    </div>
   </div>
 </MainLayout>
