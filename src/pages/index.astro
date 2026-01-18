@@ -31,7 +31,7 @@ const counties = Object.keys(groupedCities).sort();
 >
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 6rem 1.5rem; text-align: center; border-bottom: 6px solid #ea580c;">
     <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; letter-spacing: -2px; font-weight: 900; line-height: 0.95;">FLORIDA TREE <br/><span style="color: #ffb703;">SERVICE NETWORK</span></h1>
-    <p style="font-size: 1.4rem; color: #95d5b2; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; font-weight: 400;">The Official 2026 Directory for Certified Arborists & Emergency Response across the Sunshine State.</p>
+    <p style="font-size: 1.4rem; color: #95d5b2; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">The Official 2026 Directory for Certified Arborists & Emergency Response across the Sunshine State.</p>
     
     <!-- ÇALIŞAN ARAMA ÇUBUĞU -->
     <div style="margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; background: white; padding: 5px; border-radius: 50px; display: flex; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 2px solid #ea580c;">
@@ -54,7 +54,8 @@ const counties = Object.keys(groupedCities).sort();
         {counties.map((county) => (
           <div class="county-card" data-county={county.toLowerCase()} style="background: white; padding: 2rem; border-radius: 24px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: 0.3s;">
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #f3f4f6; padding-bottom: 15px;">
-                <span style="font-size: 1.5rem;">📍</span>
+                <!-- YENİ FLORIDA İKONU: 🌴 -->
+                <div style="background: #f0fdf4; width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; border: 1px solid #dcfce7;">🌴</div>
                 <h3 style="color: #064e3b; font-size: 1.4rem; margin: 0; font-weight: 800;">{county} County</h3>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
@@ -80,9 +81,9 @@ const counties = Object.keys(groupedCities).sort();
   .city-link:hover { color: #ea580c !important; transform: translateX(3px); }
   .county-card.hidden { display: none; }
   .city-link.hidden { display: none; }
+  .county-card:hover { border-color: #95d5b2; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 </style>
 
-<!-- ARAMA MANTIĞI (JAVASCRIPT) -->
 <script is:inline>
     const searchInput = document.getElementById('citySearch');
     const statusText = document.getElementById('searchStatus');
@@ -99,7 +100,6 @@ const counties = Object.keys(groupedCities).sort();
 
             cityLinks.forEach(link => {
                 const cityName = link.getAttribute('data-city');
-                // Eğer arama terimi şehir adında VEYA ilçe adında geçiyorsa göster
                 if (cityName.includes(term) || countyName.includes(term)) {
                     link.style.display = 'flex';
                     hasVisibleCity = true;
@@ -108,12 +108,9 @@ const counties = Object.keys(groupedCities).sort();
                 }
             });
 
-            // Eğer ilçede eşleşen şehir varsa VEYA ilçe adının kendisi eşleşiyorsa kartı göster
             if (hasVisibleCity || countyName.includes(term)) {
                 card.style.display = 'block';
                 anyVisible = true;
-                
-                // İlçe adı eşleşiyorsa ama şehirler henüz filtrelenmemişse, tüm şehirleri tekrar görünür yap
                 if (countyName.includes(term) && !hasVisibleCity) {
                     cityLinks.forEach(l => l.style.display = 'flex');
                 }
@@ -121,8 +118,6 @@ const counties = Object.keys(groupedCities).sort();
                 card.style.display = 'none';
             }
         });
-
-        // "Sonuç bulunamadı" yazısını kontrol et
         statusText.style.display = anyVisible ? 'none' : 'block';
     });
 </script>
