@@ -1,0 +1,138 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { parse } from 'csv-parse/sync';
+import MainLayout from '../layouts/MainLayout.astro';
+import { SITE_CONFIG } from '../config.js';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const filePath = path.resolve('./src/data/cities.csv');
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const records = parse(fileContent, { columns: true, skip_empty_lines: true, bom: true });
+
+  const services = [
+    { prefix: 'tree-removal', name: 'Tree Removal', icon: '🌳' },
+    { prefix: 'stump-grinding', name: 'Stump Grinding', icon: '🏗️' },
+    { prefix: 'emergency-service', name: 'Emergency Tree Service', icon: '🌪️' }
+  ];
+
+  const paths = [];
+  // Vercel 2048 limitini aşmamak için şehir sayısını 650'de sabitliyoruz
+  // 650 şehir * 3 hizmet = 1950 sayfa (Güvenli Bölge)
+  const limitedRecords = records.slice(0, 650);
+
+  limitedRecords.forEach((row) => {
+    const citySlug = row.City.toLowerCase().trim().replace(/\s+/g, '-');
+    
+    services.forEach((service) => {
+      paths.push({
+        params: { 
+          // URL artık tek parça: tree-removal-miami gibi
+          slug: `${service.prefix}-${citySlug}` 
+        },
+        props: { 
+          cityData: row, 
+          serviceInfo: service 
+        },
+      });
+    });
+  });
+
+  return paths;
+}
+
+const { cityData, serviceInfo } = Astro.props;
+
+// Görsel sistemi
+const allImages = import.meta.glob('../assets/gallery/fl/*.{jpeg,jpg,png,gif,webp}');
+const imagePaths = Object.keys(allImages);
+const imageIndex = Math.abs((cityData.City + serviceInfo.prefix).split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)) % imagePaths.length;
+const selectedImageImport = allImages[imagePaths[imageIndex]];
+// @ts-ignore
+const selectedImage = (await selectedImageImport()).default;
+
+const treeType = cityData.MainTreeType || 'native Florida trees';
+const landmark = cityData.Landmark || "the local area";
+const population = cityData.Population ? Number(cityData.Population).toLocaleString() : null;
+
+const optimizedTitle = `#1 ${serviceInfo.name} in ${cityData.City}, FL | Licensed & Insured`;
+---
+
+<MainLayout title={optimizedTitle} description={cityData.Description}>
+  
+  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 5px solid #f97316;">
+    <div class="container">
+      <div style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #ffb703; font-weight: 700; text-transform: uppercase;">Top-Rated Experts in {cityData.County} County</div>
+      <h1 style="margin: 0; font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 900; line-height: 1.1;">{cityData.City} {serviceInfo.name}</h1>
+      <p style="font-size: 1.3rem; margin-top: 1.5rem; color: #95d5b2; max-width: 800px; margin-left: auto; margin-right: auto;">
+          {population ? `Serving the ${population} residents of ${cityData.City} near ${landmark}.` : `Expert tree solutions for the ${cityData.City} area.`}
+      </p>
+    </div>
+  </header>
+
+  <main class="container" style="max-width: 1000px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 10;">
+    
+    <!-- CALL CARD -->
+    <div style="background: white; padding: 3rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e5e7eb;">
+      <h3 style="margin-top: 0; color: #064e3b; font-size: 1.8rem; font-weight: 800;">Get Your Free Estimate</h3>
+      <p style="color: #4b5563; margin-bottom: 2rem;">Professional arborists available for <strong>{serviceInfo.name}</strong> and storm prep in {cityData.City}.</p>
+      <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.4rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: clamp(1.4rem, 6vw, 2.2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); border: 2px solid #fdba74;">{SITE_CONFIG.phone}</a>
+    </div>
+
+    <!-- WEATHER WIDGET -->
+    <section style="margin-top: 4rem;">
+        <div style="background: #064e3b; padding: 1.5rem; border-radius: 24px; color: white;">
+            <a class="weatherwidget-io" href={`https://forecast7.com/en/27d66n81d52/florida/?unit=us`} data-label_1={cityData.City} data-label_2="WEATHER REPORT" data-font="Inter" data-icons="Climacons Animated" data-theme="pure" data-basecolor="#064e3b" data-textcolor="#ffffff" data-highcolor="#ffb703" data-lowcolor="#95d5b2" >{cityData.City} WEATHER</a>
+            <script is:inline src="https://weatherwidget.io/js/widget.min.js"></script>
+        </div>
+    </section>
+
+    <!-- IMAGE -->
+    <section style="margin-top: 5rem;">
+      <Image src={selectedImage} alt={`${serviceInfo.name} in ${cityData.City}, Florida`} width={1000} height={540} format="webp" style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);" />
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section style="margin-top: 5rem; text-align: center;">
+        <h2 style="color: #064e3b; font-size: 2.2rem; font-weight: 900; margin-bottom: 3rem;">How Our Service Works</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            <div style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; border: 1px solid #e5e7eb; position: relative;">
+                <div style="background: #ea580c; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; position: absolute; top: -17px; left: 50%; transform: translateX(-50%); border: 4px solid #fcfcfc;">1</div>
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">📞</div>
+                <h4 style="color: #064e3b; font-weight: 800;">Contact Us</h4>
+                <p style="color: #64748b;">Call our Florida dispatch to describe your project in {cityData.City}.</p>
+            </div>
+            <div style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; border: 1px solid #e5e7eb; position: relative;">
+                <div style="background: #ea580c; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; position: absolute; top: -17px; left: 50%; transform: translateX(-50%); border: 4px solid #fcfcfc;">2</div>
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">👨‍🔧</div>
+                <h4 style="color: #064e3b; font-weight: 800;">Local Match</h4>
+                <p style="color: #64748b;">We link you with the top-rated {serviceInfo.name} crew near {landmark}.</p>
+            </div>
+            <div style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; border: 1px solid #e5e7eb; position: relative;">
+                <div style="background: #ea580c; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; position: absolute; top: -17px; left: 50%; transform: translateX(-50%); border: 4px solid #fcfcfc;">3</div>
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">✅</div>
+                <h4 style="color: #064e3b; font-weight: 800;">Job Done</h4>
+                <p style="color: #64748b;">Project completed safely with a full site cleanup included.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTHORITY SECTION -->
+    <section style="margin-top: 6rem; margin-bottom: 10rem;">
+      <h2 style="color: #064e3b; font-size: 2.1rem; margin-bottom: 2rem; font-weight: 800;">Specialized {serviceInfo.name} for {cityData.City}</h2>
+      <div style="background: white; border-radius: 24px; padding: 3rem; border: 1px solid #e5e7eb; line-height: 1.9; box-shadow: 0 4px 6px rgba(0,0,0,0.02); position: relative;">
+        <div style="position: absolute; top: -15px; left: 30px; background: #ea580c; color: white; padding: 5px 20px; border-radius: 50px; font-weight: 800; font-size: 0.8rem;">LOCAL SERVICE</div>
+        <p style="font-size: 1.25rem; color: #1b4332; font-weight: 700; margin-bottom: 1.5rem;">{cityData.Description}</p>
+        <p style="font-size: 1.1rem; color: #4b5563;">
+            In <strong>{cityData.City}</strong>, maintaining the integrity of <strong>{treeType}</strong> is vital for property safety and value. Our connected specialists are experts in {serviceInfo.name} and understand the unique environmental factors near {landmark}. Every job is performed to Florida's highest safety standards.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</MainLayout>
+
+<style>
+  a:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.2s ease; }
+</style>
