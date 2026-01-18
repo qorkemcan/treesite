@@ -1,0 +1,51 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { SITE_CONFIG } from '../config.js';
+---
+
+<MainLayout 
+  title="Page Not Found | ProTreeTrim™ Florida" 
+  description="The page you are looking for might have been pruned. Return to our Florida tree service directory or call for immediate assistance."
+>
+  <main class="container" style="padding: 8rem 1.5rem; text-align: center; min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    
+    <!-- 404 ICON / IMAGE -->
+    <div style="font-size: 6rem; margin-bottom: 2rem;">🌲🪚</div>
+    
+    <h1 style="color: #064e3b; font-size: clamp(2.5rem, 10vw, 5rem); margin: 0; font-weight: 900; line-height: 1;">404</h1>
+    <h2 style="color: #1b4332; font-size: 1.8rem; margin-top: 1rem; font-weight: 800;">This branch has been pruned!</h2>
+    
+    <p style="color: #64748b; font-size: 1.2rem; max-width: 500px; margin: 1.5rem auto 3rem; line-height: 1.6;">
+        Sorry, the page you're looking for doesn't exist or has been moved. Let's get your tree project back on track.
+    </p>
+
+    <!-- ACTION BUTTONS -->
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+        <a href="/" style="background: #1b4332; color: white !important; padding: 1.2rem 2.5rem; text-decoration: none; border-radius: 14px; font-weight: 800; font-size: 1rem; box-shadow: 0 4px 12px rgba(27, 67, 50, 0.2);">
+            ← BACK TO DIRECTORY
+        </a>
+        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem 2.5rem; text-decoration: none; border-radius: 14px; font-weight: 800; font-size: 1rem; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.2); border: 2px solid #fdba74;">
+            📞 CALL FOR ASSISTANCE
+        </a>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div style="margin-top: 5rem; border-top: 1px solid #eee; padding-top: 3rem; width: 100%; max-width: 600px;">
+        <p style="font-weight: 800; color: #064e3b; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Popular Services</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+            <a href="/services/tree-removal" style="color: #4b5563; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 50px;">Tree Removal</a>
+            <a href="/services/tree-trimming" style="color: #4b5563; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 50px;">Trimming</a>
+            <a href="/services/emergency-response" style="color: #4b5563; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 50px;">Emergency Care</a>
+            <a href="/gallery" style="color: #4b5563; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 50px;">Our Work</a>
+        </div>
+    </div>
+
+  </main>
+</MainLayout>
+
+<style>
+    a:hover {
+        transform: translateY(-2px);
+        transition: 0.2s ease;
+    }
+</style>
