@@ -4,8 +4,6 @@ import path from 'node:path';
 import { parse } from 'csv-parse/sync';
 import MainLayout from '../layouts/MainLayout.astro';
 import { SITE_CONFIG } from '../config.js';
-
-// 1. Astro Image ve Resmi Import Et
 import { Image } from 'astro:assets';
 import teamImg from '../assets/team.jpg';
 
@@ -18,46 +16,44 @@ const records = parse(fileContent, { columns: true, skip_empty_lines: true, bom:
 <MainLayout 
   title="#1 Rated Tree Services in Florida" 
   description="Professional tree services throughout Florida. Licensed, insured, and available 24/7 for emergency tree removal, trimming, and stump grinding."
-  badgeText="✓ LICENSED, INSURED & BONDED • STATEWIDE FLORIDA SERVICE • 2026 OFFICIAL DIRECTORY"
 >
-  <!-- HEADER (Hero Section) -->
-  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 5px solid #f97316;">
-    <h1 style="font-size: clamp(2.2rem, 7vw, 3.8rem); margin: 0; letter-spacing: -2px; font-weight: 800;">#1 Rated Tree Services in Florida</h1>
-    <p style="font-size: 1.3rem; color: #95d5b2; margin-top: 1rem; font-weight: 400;">Florida's Premier Network of Certified Tree Care Experts</p>
+  <!-- HERO SECTION -->
+  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4rem 1.5rem; text-align: center;">
+    <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; letter-spacing: -1.5px; font-weight: 900; line-height: 1.1;">#1 Rated Tree Services in Florida</h1>
+    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1.5rem; font-weight: 400; max-width: 700px; margin-left: auto; margin-right: auto;">Connect with Florida's Premier Network of Certified Tree Care Experts for removal, trimming, and emergency care.</p>
   </header>
 
-  <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;">
+  <div class="container" style="max-width: 1000px;">
     
-    <!-- DÜZELTİLEN RESİM ALANI -->
-    <div style="margin-top: -1.5rem; margin-bottom: 2.5rem; text-align: center;">
+    <!-- RESPONSIVE IMAGE SECTION -->
+    <div style="margin-top: 2rem; margin-bottom: 2rem; padding: 0 0.5rem;">
         <Image 
           src={teamImg} 
           alt="ProTreeTrim Expert Team" 
-          width={850} 
-          height={450}
+          width={1000} 
+          height={540}
           format="webp"
-          style="width: 100%; max-width: 850px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.12);"
+          style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: block;"
         />
     </div>
 
-    <!-- CTA KARTI -->
-    <div style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; margin: -3rem auto 4rem; max-width: 600px; position: relative; z-index: 10;">
-      <h2 style="color: #064e3b; margin-top: 0; font-weight: 800;">Need Emergency Help?</h2>
-      <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem 2rem; text-decoration: none; border-radius: 14px; font-weight: 800; font-size: clamp(1.3rem, 5vw, 2rem); display: inline-block; margin: 1rem 0; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4); border: 2px solid #fdba74; white-space: nowrap;">
+    <!-- CTA CARD -->
+    <div style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.06); border: 1px solid #eee; margin-bottom: 4rem;">
+      <h2 style="color: #064e3b; margin-top: 0; font-weight: 800; font-size: 1.6rem;">Need Help Right Now?</h2>
+      <p style="color: #64748b; margin-bottom: 1.5rem;">Our local specialists are standing by for your free estimate.</p>
+      <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem 2rem; text-decoration: none; border-radius: 14px; font-weight: 800; font-size: clamp(1.2rem, 5vw, 1.8rem); display: inline-block; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.2); border: 1px solid #fdba74;">
         📞 {SITE_CONFIG.phone}
       </a>
     </div>
 
-    <!-- ŞEHİR LİSTESİ -->
-    <h2 style="text-align: center; color: #064e3b; font-size: 2.2rem; margin-bottom: 2.5rem; font-weight: 800;">Our Local Service Centers</h2>
+    <!-- CITIES LIST -->
+    <h2 style="text-align: center; color: #064e3b; font-size: 1.8rem; margin-bottom: 2rem; font-weight: 800;">Our Local Service Centers</h2>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin-bottom: 5rem;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px; margin-bottom: 5rem;">
       {records.map((city: any) => (
         <a 
           href={`/tree-removal-${city.City.toLowerCase().replace(/\s+/g, '-')}`}
-          style="background: white; padding: 22px; border: 1px solid #f3f4f6; border-radius: 14px; text-decoration: none; color: #064e3b; font-weight: 700; text-align: center; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.02);"
-          onmouseover="this.style.backgroundColor='#d8f3dc'; this.style.transform='translateY(-5px)'"
-          onmouseout="this.style.backgroundColor='white'; this.style.transform='translateY(0)'"
+          style="background: white; padding: 18px; border: 1px solid #f0f0f0; border-radius: 12px; text-decoration: none; color: #064e3b; font-weight: 700; text-align: center; transition: all 0.2s ease; font-size: 0.95rem; box-shadow: 0 2px 4px rgba(0,0,0,0.02);"
         >
           {city.City}, FL
         </a>
