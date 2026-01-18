@@ -18,9 +18,12 @@ export async function getStaticPaths() {
   ];
 
   const paths = [];
-  const limitedRecords = records.slice(0, 650);
+  
+  // 404 HATASI ÇÖZÜMÜ: Slicing (dilimleme) kaldırıldı. 
+  // Artık CSV'deki tüm şehirler için (Margaretta dahil) sayfa üretilecek.
+  const allRecords = records; 
 
-  limitedRecords.forEach((row) => {
+  allRecords.forEach((row) => {
     if (!row.City) return;
     const citySlug = row.City.toLowerCase().trim().replace(/\s+/g, '-');
     
@@ -30,7 +33,8 @@ export async function getStaticPaths() {
         props: { 
           cityData: row, 
           serviceInfo: service,
-          nearby: limitedRecords.filter(r => r.County === row.County && r.City !== row.City).slice(0, 5)
+          // İç linkleme için aynı ilçeden rastgele 5 şehir
+          nearby: allRecords.filter(r => r.County === row.County && r.City !== row.City).slice(0, 5)
         },
       });
     });
@@ -40,7 +44,7 @@ export async function getStaticPaths() {
 
 const { cityData, serviceInfo, nearby } = Astro.props;
 
-// Görsel Sistemi
+// Görsel Sistemi (Deterministik Seçim)
 const allImages = import.meta.glob('../assets/gallery/fl/*.{jpeg,jpg,png,gif,webp}');
 const imagePaths = Object.keys(allImages);
 let selectedImage = null;
@@ -97,7 +101,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityData.City}, FL | License
 
   <main class="container" style="max-width: 1100px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 10;">
     
-    <!-- ANA CTA KUTUSU -->
+    <!-- CTA BOX -->
     <div style="background: white; padding: 3rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e5e7eb;">
       <h3 style="margin-top: 0; color: #064e3b; font-size: 1.8rem; font-weight: 800;">Free Estimate for {cityData.City}</h3>
       <p style="color: #4b5563; margin-bottom: 2rem;">Local, licensed, and insured crews for <strong>{serviceInfo.name}</strong>.</p>
@@ -113,12 +117,12 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityData.City}, FL | License
         <div style="flex: 1; min-width: 300px; background: #fdf2f2; border: 1px solid #fee2e2; padding: 2rem; border-radius: 24px; display: flex; flex-direction: column; justify-content: center;">
             <h4 style="color: #991b1b; margin: 0; font-weight: 800; font-size: 1.2rem;">⚡ Storm Surge Warning</h4>
             <p style="color: #7f1d1d; font-size: 0.95rem; margin-top: 10px; line-height: 1.5;">
-                Property owners near <strong>{landmark}</strong> should inspect weak canopies. High winds in <strong>{cityData.County} County</strong> can turn dead limbs into hazards.
+                Property owners near <strong>{landmark}</strong> should inspect weak canopies. High winds in <strong>{cityData.County} County</strong> can turn limbs into hazards.
             </p>
         </div>
     </section>
 
-    <!-- OTORİTE BİLGİ KUTUSU (Geri Gelen Modern Bölüm 🛡️) -->
+    <!-- BİLGİ KÜNYESİ (Yeni Eklenen Modern Kutular 🛡️) -->
     <section style="margin-top: 2rem; background: #064e3b; color: white; padding: 2rem; border-radius: 24px; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; align-items: center; border: 1px solid #1b4332;">
         <div style="text-align: center;">
             <p style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Service Area</p>
@@ -134,14 +138,14 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityData.City}, FL | License
         </div>
     </section>
 
-    <!-- HİZMET DETAYI VE OTOMATİK GÖRSEL -->
+    <!-- HİZMET DETAYI VE GÖRSEL -->
     <section style="margin-top: 5rem;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
             <div>
                 <h2 style="color: #064e3b; font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;">Professional {serviceInfo.name} in {cityData.City}</h2>
                 <p style="font-size: 1.15rem; color: #374151; line-height: 1.8; margin-bottom: 1.5rem;">{cityData.Description}</p>
                 <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.7;">
-                    Our network of certified arborists understands the unique needs of <strong>{cityData.MainTreeType || 'native trees'}</strong> in the {cityData.City} area. We prioritize safety and property protection above all else.
+                    Our network of certified arborists understands the unique needs of <strong>{cityData.MainTreeType || 'native Florida trees'}</strong> in the {cityData.City} area. We prioritize safety and property protection above all else.
                 </p>
             </div>
             {selectedImage && (
