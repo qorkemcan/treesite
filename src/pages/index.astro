@@ -29,7 +29,7 @@ const counties = Object.keys(groupedCities).sort();
 ---
 
 <MainLayout 
-  title="Florida's #1 Certified Tree Service Directory | 800+ Locations" 
+  title="Florida's #1 Certified Tree Service Directory | 2000+ Service Points" 
   description="The official 2026 directory for Florida tree care. Connecting homeowners with certified arborists in 67 counties for removal, trimming, and storm prep."
 >
   <!-- HERO & SEARCH SECTION -->
@@ -85,16 +85,23 @@ const counties = Object.keys(groupedCities).sort();
                 <h3 style="color: #064e3b; font-size: 1.5rem; margin: 0; font-weight: 800;">{county}</h3>
             </div>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
               {groupedCities[county].map((city: any) => (
-                <a 
-                  href={`/tree-removal-${city.City.toLowerCase().replace(/\s+/g, '-')}`}
-                  data-city={city.City.toLowerCase()}
-                  style="text-decoration: none; color: #4b5563; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; transition: 0.2s;"
-                  class="city-link"
-                >
-                  <span style="color: #ea580c; font-size: 0.8rem;">▶</span> {city.City}
-                </a>
+                <div class="city-item" data-city={city.City.toLowerCase()} style="display: flex; flex-direction: column; gap: 4px;">
+                    <a 
+                      href={`/tree-removal-${city.City.toLowerCase().trim().replace(/\s+/g, '-')}`}
+                      style="text-decoration: none; color: #166534; font-weight: 700; font-size: 0.9rem; transition: 0.2s;"
+                      class="service-link"
+                    >
+                      {city.City}
+                    </a>
+                    <a 
+                      href={`/emergency-service-${city.City.toLowerCase().trim().replace(/\s+/g, '-')}`}
+                      style="text-decoration: none; color: #ea580c; font-weight: 600; font-size: 0.75rem; opacity: 0.8; display: flex; align-items: center; gap: 3px;"
+                    >
+                      ⚡ Emergency
+                    </a>
+                </div>
               ))}
             </div>
           </div>
@@ -105,8 +112,9 @@ const counties = Object.keys(groupedCities).sort();
 </MainLayout>
 
 <style>
-  .city-link:hover { color: #ea580c !important; transform: translateX(3px); }
+  .service-link:hover { color: #ea580c !important; transform: translateX(2px); }
   .county-card:hover { border-color: #95d5b2; transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+  .city-item { transition: 0.2s; }
 </style>
 
 <!-- SEARCH LOGIC -->
@@ -121,16 +129,16 @@ const counties = Object.keys(groupedCities).sort();
 
         countyCards.forEach(card => {
             const countyName = card.getAttribute('data-county');
-            const cityLinks = card.querySelectorAll('.city-link');
+            const cityItems = card.querySelectorAll('.city-item');
             let hasVisibleCity = false;
 
-            cityLinks.forEach(link => {
-                const cityName = link.getAttribute('data-city');
+            cityItems.forEach(item => {
+                const cityName = item.getAttribute('data-city');
                 if (cityName.includes(term) || countyName.includes(term)) {
-                    link.style.display = 'flex';
+                    item.style.display = 'flex';
                     hasVisibleCity = true;
                 } else {
-                    link.style.display = 'none';
+                    item.style.display = 'none';
                 }
             });
 
@@ -138,7 +146,7 @@ const counties = Object.keys(groupedCities).sort();
                 card.style.display = 'block';
                 anyVisible = true;
                 if (countyName.includes(term) && !hasVisibleCity) {
-                    cityLinks.forEach(l => l.style.display = 'flex');
+                    cityItems.forEach(l => l.style.display = 'flex');
                 }
             } else {
                 card.style.display = 'none';
