@@ -30,7 +30,6 @@ export async function getStaticPaths() {
         props: { 
           cityData: row, 
           serviceInfo: service,
-          // SEO için aynı ilçedeki diğer 5 şehri çekiyoruz
           nearby: limitedRecords.filter(r => r.County === row.County && r.City !== row.City).slice(0, 5)
         },
       });
@@ -105,7 +104,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityData.City}, FL | License
       <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.4rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: clamp(1.4rem, 6vw, 2.2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); border: 2px solid #fdba74;">{SITE_CONFIG.phone}</a>
     </div>
 
-    <!-- HAVA DURUMU & FIRTINA UYARISI (GERİ GELDİ ⚡) -->
+    <!-- HAVA DURUMU & FIRTINA UYARISI ⚡ -->
     <section style="margin-top: 4rem; display: flex; flex-wrap: wrap; gap: 20px;">
         <div style="flex: 1; min-width: 300px; background: #064e3b; padding: 1.5rem; border-radius: 24px; color: white; display: flex; align-items: center; justify-content: center;">
             <a class="weatherwidget-io" href={`https://forecast7.com/en/27d66n81d52/florida/?unit=us`} data-label_1={cityData.City.toUpperCase()} data-label_2="LOCAL WEATHER" data-font="Inter" data-icons="Climacons Animated" data-theme="pure" data-basecolor="#064e3b" data-textcolor="#ffffff" data-highcolor="#ffb703" data-lowcolor="#95d5b2" style="width: 100%;">{cityData.City} WEATHER</a>
@@ -119,6 +118,22 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityData.City}, FL | License
         </div>
     </section>
 
+    <!-- OTORİTE BİLGİ KUTUSU (Geri Gelen Modern Bölüm 🛡️) -->
+    <section style="margin-top: 2rem; background: #064e3b; color: white; padding: 2rem; border-radius: 24px; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; align-items: center; border: 1px solid #1b4332;">
+        <div style="text-align: center;">
+            <p style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Service Area</p>
+            <p style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem;">{cityData.County} County</p>
+        </div>
+        <div style="text-align: center; border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1); padding: 0 2rem;">
+            <p style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Local Landmark</p>
+            <p style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem;">{landmark}</p>
+        </div>
+        <div style="text-align: center;">
+            <p style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Dispatch Status</p>
+            <p style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #4ade80;">● Active in {cityData.City}</p>
+        </div>
+    </section>
+
     <!-- HİZMET DETAYI VE OTOMATİK GÖRSEL -->
     <section style="margin-top: 5rem;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
@@ -126,7 +141,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityData.City}, FL | License
                 <h2 style="color: #064e3b; font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;">Professional {serviceInfo.name} in {cityData.City}</h2>
                 <p style="font-size: 1.15rem; color: #374151; line-height: 1.8; margin-bottom: 1.5rem;">{cityData.Description}</p>
                 <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.7;">
-                    Our network of certified arborists understands the unique needs of <strong>{cityData.MainTreeType}</strong> in the {cityData.City} area. We prioritize safety and property protection above all else.
+                    Our network of certified arborists understands the unique needs of <strong>{cityData.MainTreeType || 'native trees'}</strong> in the {cityData.City} area. We prioritize safety and property protection above all else.
                 </p>
             </div>
             {selectedImage && (
@@ -151,7 +166,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityData.City}, FL | License
         </div>
     </section>
 
-    <!-- ÇEVRE ŞEHİRLER (İÇ LİNKLEME - SEO MOAT 🛡️) -->
+    <!-- ÇEVRE ŞEHİRLER (İÇ LİNKLEME🛡️) -->
     <section style="margin-top: 6rem; margin-bottom: 12rem; border-top: 1px solid #eee; padding-top: 4rem;">
         <h3 style="color: #064e3b; font-size: 1.3rem; font-weight: 800; margin-bottom: 2rem; text-align: center;">Other Local Dispatch Areas in {cityData.County} County:</h3>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
