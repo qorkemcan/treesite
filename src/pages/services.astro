@@ -3,12 +3,12 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { SITE_CONFIG } from '../config.js';
 
 const services = [
-  { title: "Tree Removal", desc: "Safe removal of hazardous or unwanted trees.", icon: "🌳", link: "/services/tree-removal" },
-  { title: "Trimming & Pruning", desc: "Structural pruning for health and beauty.", icon: "✂️", link: "/services/tree-trimming" },
-  { title: "Emergency Service", desc: "24/7 rapid response for storm damage.", icon: "🌪️", link: "/services/emergency-response" },
-  { title: "Stump Grinding", desc: "Complete stump removal to reclaim your lawn.", icon: "🏗️", link: "/services/stump-grinding" },
-  { title: "Land Clearing", desc: "Full site preparation for development.", icon: "🚜", link: "/services/land-clearing" },
-  { title: "Commercial Care", desc: "Professional management for HOAs and businesses.", icon: "🏢", link: "/services/commercial-services" }
+  { title: "Tree Removal", desc: "Safe removal of hazardous, dead, or unwanted trees using advanced rigging.", icon: "🌳", link: "/services/tree-removal" },
+  { title: "Trimming & Pruning", desc: "Structural pruning for health, sunlight, and storm resistance.", icon: "✂️", link: "/services/tree-trimming" },
+  { title: "Emergency Service", desc: "24/7 rapid response for storm damage across Florida.", icon: "🌪️", link: "/services/emergency-response" },
+  { title: "Stump Grinding", desc: "Complete stump removal to reclaim your lawn's beauty.", icon: "🏗️", link: "/services/stump-grinding" },
+  { title: "Land Clearing", desc: "Site preparation and brush removal for construction.", icon: "🚜", link: "/services/land-clearing" },
+  { title: "Commercial Care", desc: "Professional management for HOAs and business properties.", icon: "🏢", link: "/services/commercial-services" }
 ];
 ---
 
@@ -23,13 +23,11 @@ const services = [
   <main class="container" style="padding: 5rem 1.5rem 12rem;">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
       {services.map(s => (
-        <div style="background: white; border: 1px solid #eee; border-radius: 28px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-          <div style="font-size: 3.5rem; margin-bottom: 1.5rem;">{s.icon}</div>
-          <h2 style="color: #064e3b; font-size: 1.8rem; margin: 0 0 15px; font-weight: 800;">{s.title}</h2>
-          <p style="color: #4b5563; line-height: 1.7; font-size: 1.1rem; margin-bottom: 2rem;">{s.desc}</p>
-          <a href={s.link} style="color: #ea580c; text-decoration: none; font-weight: 800; font-size: 1rem; display: flex; align-items: center; gap: 8px;">
-            LEARN MORE <span>→</span>
-          </a>
+        <div style="background: white; border: 1px solid #eee; border-radius: 28px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); padding: 2rem;">
+              <div style="font-size: 3rem; margin-bottom: 1rem;">{s.icon}</div>
+              <h2 style="color: #064e3b; font-size: 1.8rem; margin: 0 0 15px; font-weight: 800;">{s.title}</h2>
+              <p style="color: #4b5563; line-height: 1.7; margin-bottom: 2rem; font-size: 1.1rem;">{s.desc}</p>
+              <a href={s.link} style="color: #ea580c; text-decoration: none; font-weight: 800; font-size: 1rem;">LEARN MORE →</a>
         </div>
       ))}
     </div>
