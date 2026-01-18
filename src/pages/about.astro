@@ -7,22 +7,22 @@ import teamImg from '../assets/team.jpg';
 ---
 
 <MainLayout 
-  title="About Us" 
-  description="Learn about ProTreeTrim Florida, our mission to connect homeowners with the best licensed tree care professionals in the state."
+  title="About Our Florida Tree Care Network" 
+  description="Discover how ProTreeTrim™ connects Florida homeowners with elite, certified tree care specialists for safer properties and healthier landscapes."
 >
   <!-- HERO SECTION -->
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4rem 1.5rem; text-align: center;">
-    <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; letter-spacing: -1.5px; font-weight: 900; line-height: 1.1;">About ProTreeTrim™</h1>
-    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem; font-weight: 400;">Your Trusted Florida Tree Care Connection</p>
+    <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; letter-spacing: -1.5px; font-weight: 900; line-height: 1.1;">The ProTreeTrim™ Mission</h1>
+    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem; font-weight: 400; max-width: 800px; margin-left: auto; margin-right: auto;">Connecting Florida with excellence in arboriculture, one property at a time.</p>
   </header>
 
   <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem;">
     
-    <!-- RESPONSIVE IMAGE SECTION -->
+    <!-- IMAGE SECTION -->
     <div style="margin-top: 2rem; margin-bottom: 3rem; text-align: center; padding: 0 0.5rem;">
         <Image 
           src={teamImg} 
-          alt="ProTreeTrim Expert Team" 
+          alt="ProTreeTrim Certified Arborist Network" 
           width={1000} 
           height={540} 
           format="webp"
@@ -30,25 +30,43 @@ import teamImg from '../assets/team.jpg';
         />
     </div>
     
-    <!-- MISSION CONTENT -->
-    <div style="background: white; border: 1px solid #eee; border-radius: 24px; padding: 2.5rem 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); margin-bottom: 3rem;">
-      <h2 style="color: #064e3b; font-size: 1.8rem; margin-top: 0; font-weight: 800; margin-bottom: 1.5rem;">Our Mission</h2>
+    <!-- PROFESSIONAL CONTENT -->
+    <div style="background: white; border: 1px solid #eee; border-radius: 24px; padding: 3rem 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); margin-bottom: 3rem;">
+      <h2 style="color: #064e3b; font-size: 1.8rem; margin-top: 0; font-weight: 800; margin-bottom: 1.5rem;">Florida’s Trusted Arboreal Authority</h2>
+      
       <p style="font-size: 1.1rem; color: #374151; margin-bottom: 1.5rem; line-height: 1.8;">
-        At <strong>ProTreeTrim</strong>, we connect homeowners across Florida with licensed, experienced tree care professionals they can trust. Our goal is to make finding reliable, high-quality tree services simple and stress-free—from routine trimming to emergency storm cleanup.
+        Florida's unique climate demands more than just standard yard work. From the towering Live Oaks of Central Florida to the iconic palms of the coast, maintaining a safe and beautiful property requires specialized knowledge and high-performance equipment.
       </p>
-      <p style="font-size: 1.1rem; color: #374151; margin-bottom: 0; line-height: 1.8;">
-        We work with skilled professionals who understand Florida's unique local conditions and are committed to safety, precision, and long-lasting results for every property.
+
+      <p style="font-size: 1.1rem; color: #374151; margin-bottom: 1.5rem; line-height: 1.8;">
+        <strong>ProTreeTrim™</strong> was founded to bridge the gap between Florida homeowners and elite, licensed tree care professionals. We understand that whether it's routine canopy thinning to prepare for hurricane season or emergency tree removal after a storm, timing and safety are everything.
       </p>
+
+      <div style="background: #f0fdf4; border-left: 5px solid #166534; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #064e3b; font-size: 1.2rem; font-weight: 800;">Our Commitment to Compliance</h3>
+        <p style="margin-bottom: 0; font-size: 1rem; color: #166534; line-height: 1.6;">
+          Every specialist in our connection network is vetted for active licensing and insurance according to Florida state regulations, ensuring your home is protected and the work meets ANSI A300 standards.
+        </p>
+      </div>
+
+      <h3 style="color: #064e3b; font-size: 1.5rem; font-weight: 800; margin-top: 2rem;">Why Choose ProTreeTrim™?</h3>
+      <ul style="color: #4b5563; font-size: 1.1rem; line-height: 2; margin-top: 1rem;">
+        <li><strong>Local Expertise:</strong> Solutions tailored to Florida species and weather patterns.</li>
+        <li><strong>Rapid Response:</strong> Direct connection to crews in your specific county.</li>
+        <li><strong>Safety First:</strong> Rigorous adherence to industry safety protocols.</li>
+      </ul>
     </div>
 
-    <!-- CONTACT / FOOTER INFO -->
-    <div style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 2.5rem 1.5rem; border-radius: 20px; text-align: center; margin-bottom: 6rem;">
+    <!-- CONTACT BOX -->
+    <div style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin-bottom: 6rem;">
       <p style="margin: 0; font-size: 1.1rem; color: #4b5563; line-height: 1.6;">
-        Questions or partnership inquiries? Reach out to us at <br/>
-        <a href={`mailto:${SITE_CONFIG.email}`} style="color: #ea580c; font-weight: 800; text-decoration: none; font-size: 1.2rem; display: inline-block; margin-top: 10px;">{SITE_CONFIG.email}</a>
+        For professional inquiries, partnership opportunities, or feedback on our service network, please reach out via our official channel:
       </p>
-      <div style="margin-top: 2.5rem;">
-          <a href="/" style="color: #64748b; text-decoration: underline; font-size: 0.95rem; font-weight: 600;">← Return to Service Locations</a>
+      <a href={`mailto:${SITE_CONFIG.email}`} style="color: #ea580c; font-weight: 800; text-decoration: none; font-size: 1.4rem; display: inline-block; margin-top: 15px; letter-spacing: -0.5px;">
+        {SITE_CONFIG.email}
+      </a>
+      <div style="margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem;">
+          <a href="/" style="color: #64748b; text-decoration: none; font-size: 0.95rem; font-weight: 700;">← Back to Service Locations</a>
       </div>
     </div>
   </div>
