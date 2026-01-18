@@ -1,0 +1,87 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { SITE_CONFIG } from '../config.js';
+import { Image } from 'astro:assets';
+import teamImg from '../assets/team.jpg';
+
+const services = [
+  {
+    title: "Tree Removal",
+    desc: "Complete removal of hazardous, dead, or unwanted trees using advanced safety rigging.",
+    icon: "🌳",
+    link: "/services/tree-removal"
+  },
+  {
+    title: "Tree Trimming & Pruning",
+    desc: "Structural pruning to enhance tree health, sunlight, and storm resistance.",
+    icon: "✂️",
+    link: "/services/tree-trimming"
+  },
+  {
+    title: "Stump Grinding & Removal",
+    desc: "Eliminating unsightly stumps and surface roots to reclaim your lawn's beauty.",
+    icon: "🏗️",
+    link: "/services/stump-grinding"
+  },
+  {
+    title: "Emergency Storm Service",
+    desc: "24/7 rapid response for fallen trees and hazardous limbs after Florida storms.",
+    icon: "🌪️",
+    link: "/services/emergency-response"
+  },
+  {
+    title: "Land Clearing",
+    desc: "Full site preparation and brush removal for new construction or lot expansion.",
+    icon: "🚜",
+    link: "/services/land-clearing"
+  },
+  {
+    title: "Commercial Tree Care",
+    desc: "Dedicated service contracts for HOAs, golf courses, and corporate properties.",
+    icon: "🏢",
+    link: "/services/commercial-services"
+  }
+];
+---
+
+<MainLayout 
+  title="Professional Tree Services Across Florida" 
+  description="Explore our wide range of tree care solutions including removal, trimming, stump grinding, and emergency response for residential and commercial properties."
+>
+  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 6rem 1.5rem; text-align: center; border-bottom: 5px solid #f97316;">
+    <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; font-weight: 900;">Expert Tree Solutions</h1>
+    <p style="font-size: 1.3rem; color: #95d5b2; margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+        From residential pruning to large-scale commercial land clearing, our network delivers Florida's highest standards.
+    </p>
+  </header>
+
+  <main class="container" style="padding-top: 5rem; padding-bottom: 10rem;">
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+      {services.map(service => (
+        <div style="background: white; border: 1px solid #eee; border-radius: 24px; padding: 3rem 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.02); transition: 0.3s;" class="service-card">
+          <div style="font-size: 3.5rem; margin-bottom: 1.5rem;">{service.icon}</div>
+          <h2 style="color: #064e3b; font-size: 1.8rem; margin: 0 0 15px; font-weight: 800;">{service.title}</h2>
+          <p style="color: #4b5563; line-height: 1.7; font-size: 1.1rem; margin-bottom: 2rem;">{service.desc}</p>
+          <a href={service.link} style="color: #ea580c; text-decoration: none; font-weight: 800; font-size: 1rem; display: flex; align-items: center; gap: 8px;">
+            LEARN MORE <span>→</span>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- CALL TO ACTION -->
+    <div style="margin-top: 6rem; background: #f0fdf4; border: 2px dashed #166534; padding: 4rem 2rem; border-radius: 30px; text-align: center;">
+        <h2 style="color: #064e3b; font-size: 2.2rem; font-weight: 800; margin-top: 0;">Need a Specialized Assessment?</h2>
+        <p style="color: #166534; font-size: 1.2rem; margin-bottom: 2.5rem;">Our certified arborists are ready to evaluate your property's unique needs.</p>
+        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem 3rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: 1.4rem; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.2);">
+            CALL FOR A FREE QUOTE
+        </a>
+    </div>
+
+  </main>
+</MainLayout>
+
+<style>
+  .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); border-color: #95d5b2; }
+</style>

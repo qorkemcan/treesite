@@ -1,0 +1,44 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { SITE_CONFIG } from '../../config.js';
+import { Image } from 'astro:assets';
+import heroImg from '../../assets/gallery/fl/florida-tree-service-1.jpg'; // Klasöründeki uygun bir resimle değiştir
+---
+
+<MainLayout 
+  title="Professional Tree Removal Florida | Safe & Certified" 
+  description="Expert tree removal services in Florida. We handle hazardous, dead, and storm-damaged trees with precision rigging and full insurance coverage."
+>
+  <header style="background: linear-gradient(135deg, #064e3b 0%, #022c22 100%); color: white; padding: 6rem 1rem; text-align: center;">
+    <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; font-weight: 900;">Tree Removal Services</h1>
+    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">Safe, surgical removal of hazardous trees across the Sunshine State.</p>
+  </header>
+
+  <main class="container" style="max-width: 900px; padding-top: 4rem; padding-bottom: 12rem;">
+    <Image src={heroImg} alt="Large tree removal operation in Florida" style="width: 100%; border-radius: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); margin-bottom: 4rem;" />
+
+    <div style="line-height: 1.9; color: #374151; font-size: 1.15rem;">
+        <h2 style="color: #064e3b; font-size: 2.2rem; font-weight: 800;">When Removal is the Only Option</h2>
+        <p>In Florida’s dynamic climate, trees can quickly become liabilities. While preservation is our goal, removal is often necessary for safety. Our network specializes in <strong>High-Risk Removals</strong>—those involving power lines, tight property boundaries, or structures.</p>
+
+        <h3 style="color: #064e3b; margin-top: 3rem;">Our Removal Specializations:</h3>
+        <ul style="margin-bottom: 3rem;">
+            <li><strong>Crane-Assisted Removal:</strong> For massive oaks or pines that cannot be safely dropped.</li>
+            <li><strong>Hazardous Tree Evaluation:</strong> Identifying rot, leaning trunks, and split limbs before they fall.</li>
+            <li><strong>Tight-Space Precision:</strong> Using advanced rigging to lower sections piece-by-piece in small yards.</li>
+            <li><strong>Dead & Diseased Trees:</strong> Eliminating pest-infested trees to prevent spread to your landscape.</li>
+        </ul>
+
+        <div style="background: #f0fdf4; border-left: 6px solid #166534; padding: 2.5rem; border-radius: 12px; margin: 4rem 0;">
+            <h4 style="margin-top: 0; color: #064e3b;">Fully Licensed & Insured Protection</h4>
+            <p style="margin-bottom: 0;">Don't risk your property with "uninsured bucket truck" operators. Every specialist we connect you with carries comprehensive general liability and workers' comp insurance specifically for Florida tree work.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 5rem;">
+        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.5rem 3rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: 1.5rem; display: inline-block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3);">
+            CALL FOR A REMOVAL ESTIMATE
+        </a>
+    </div>
+  </main>
+</MainLayout>

@@ -1,0 +1,42 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { SITE_CONFIG } from '../../.../config.js';
+import { Image } from 'astro:assets';
+import stumpImg from '../../assets/gallery/fl/florida-tree-service-5.jpg';
+---
+
+<MainLayout 
+  title="Stump Grinding & Removal Florida | Clear Your Landscape" 
+  description="Eliminate unsightly tree stumps and underground roots. Professional stump grinding services for a smooth, safe, and beautiful lawn."
+>
+  <header style="background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%); color: white; padding: 6rem 1rem; text-align: center;">
+    <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; font-weight: 900;">Stump Grinding</h1>
+    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">Complete removal of underground hazards and eyesores.</p>
+  </header>
+
+  <main class="container" style="max-width: 900px; padding-top: 4rem; padding-bottom: 12rem;">
+    <Image src={stumpImg} alt="Modern stump grinding machine in action" style="width: 100%; border-radius: 24px; margin-bottom: 4rem;" />
+
+    <div style="line-height: 1.9; color: #374151; font-size: 1.15rem;">
+        <h2 style="color: #064e3b; font-size: 2.2rem; font-weight: 800;">Don't Leave the Stump Behind</h2>
+        <p>A cut tree is only half the job. Leftover stumps are trip hazards, lawnmower killers, and—most importantly in Florida—<strong>magnets for termites</strong> and wood-boring pests. Stump grinding allows you to reclaim your yard and plant new life.</p>
+
+        <h3 style="color: #064e3b; margin-top: 3rem;">Why Choose Professional Grinding?</h3>
+        <ul style="margin-bottom: 3rem;">
+            <li><strong>Precision Depth:</strong> We grind 6 to 12 inches below the surface, allowing for sod or new plantings.</li>
+            <li><strong>Pest Mitigation:</strong> Decomposing stumps attract subterranean termites; grinding them removes the food source.</li>
+            <li><strong>Surface Root Removal:</strong> We don't just hit the stump; we track and grind the major surface roots that crack driveways.</li>
+        </ul>
+
+        <div style="background: #fffbeb; border: 1px solid #fef3c7; padding: 2rem; border-radius: 12px;">
+            <p style="margin: 0; color: #92400e; font-weight: 600;">ProTip: The resulting wood chips make excellent mulch for your other garden beds! Ask our crews about chip removal or recycling on-site.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 5rem;">
+        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.5rem 3rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: 1.5rem; display: inline-block;">
+            GET A FREE STUMP QUOTE
+        </a>
+    </div>
+  </main>
+</MainLayout>

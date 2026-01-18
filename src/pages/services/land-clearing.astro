@@ -1,0 +1,39 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { SITE_CONFIG } from '../../config.js';
+import { Image } from 'astro:assets';
+import clearingImg from '../../assets/gallery/fl/florida-tree-service-3.jpg';
+---
+
+<MainLayout 
+  title="Professional Land Clearing Florida | Site Prep & Brush Removal" 
+  description="Full-scale land clearing for new construction and lot expansion. Brush removal, undergrowth clearing, and site preparation across Florida."
+>
+  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 6rem 1rem; text-align: center;">
+    <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; font-weight: 900;">Land Clearing</h1>
+    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">Preparing the ground for Florida's next big project.</p>
+  </header>
+
+  <main class="container" style="max-width: 900px; padding-top: 4rem; padding-bottom: 12rem;">
+    <Image src={clearingImg} alt="Land clearing machinery in Florida" style="width: 100%; border-radius: 24px; margin-bottom: 4rem;" />
+
+    <div style="line-height: 1.9; color: #374151; font-size: 1.15rem;">
+        <h2 style="color: #064e3b; font-size: 2.2rem; font-weight: 800;">From Overgrowth to Builder-Ready</h2>
+        <p>Expanding your backyard? Starting a new home build? Or clearing a commercial lot? ProTreeTrim™ connects you with heavy-duty clearing crews that handle everything from thick brush to dense pine forests.</p>
+
+        <h3 style="color: #064e3b; margin-top: 3rem;">Comprehensive Site Prep:</h3>
+        <ul style="margin-bottom: 3rem;">
+            <li><strong>Underbrush Removal:</strong> Clearing the "jungle" to reveal your property's potential.</li>
+            <li><strong>Lot Expansion:</strong> Reclaiming your property lines from invasive species.</li>
+            <li><strong>Debris Hauling:</strong> Complete removal of all organic waste, leaving you with a clean slate.</li>
+            <li><strong>Forestry Mulching:</strong> An eco-friendly way to clear land and return nutrients to the soil.</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 5rem;">
+        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.5rem 3rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: 1.5rem; display: inline-block;">
+            REQUEST A CLEARING QUOTE
+        </a>
+    </div>
+  </main>
+</MainLayout>
