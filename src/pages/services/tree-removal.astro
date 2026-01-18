@@ -1,8 +1,8 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import { SITE_CONFIG } from '../../config.js';
-import { Image } from 'astro:assets';
-import heroImg from '../../assets/gallery/fl/florida-tree-service-1.jpg'; // Klasöründeki uygun bir resimle değiştir
+
+// NOT: Resim importlarını build hatasını çözmek için geçici olarak kaldırdık.
 ---
 
 <MainLayout 
@@ -15,8 +15,7 @@ import heroImg from '../../assets/gallery/fl/florida-tree-service-1.jpg'; // Kla
   </header>
 
   <main class="container" style="max-width: 900px; padding-top: 4rem; padding-bottom: 12rem;">
-    <Image src={heroImg} alt="Large tree removal operation in Florida" style="width: 100%; border-radius: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); margin-bottom: 4rem;" />
-
+    
     <div style="line-height: 1.9; color: #374151; font-size: 1.15rem;">
         <h2 style="color: #064e3b; font-size: 2.2rem; font-weight: 800;">When Removal is the Only Option</h2>
         <p>In Florida’s dynamic climate, trees can quickly become liabilities. While preservation is our goal, removal is often necessary for safety. Our network specializes in <strong>High-Risk Removals</strong>—those involving power lines, tight property boundaries, or structures.</p>
