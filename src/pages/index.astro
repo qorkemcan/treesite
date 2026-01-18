@@ -24,12 +24,11 @@ const groupedCities = records.reduce((acc: any, city: any) => {
   return acc;
 }, {});
 
-// İlçeleri alfabetik sırala
 const counties = Object.keys(groupedCities).sort();
 ---
 
 <MainLayout 
-  title="Florida's #1 Certified Tree Service Directory | 2000+ Service Points" 
+  title="Florida's #1 Certified Tree Service Directory | 2000+ Locations" 
   description="The official 2026 directory for Florida tree care. Connecting homeowners with certified arborists in 67 counties for removal, trimming, and storm prep."
 >
   <!-- HERO & SEARCH SECTION -->
@@ -54,22 +53,22 @@ const counties = Object.keys(groupedCities).sort();
 
   <div class="container">
     
-    <!-- QUICK STATS / TRUST SECTION -->
+    <!-- QUICK STATS -->
     <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: -3rem; position: relative; z-index: 20;">
         <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🌪️</div>
-            <h3 style="color: #064e3b; margin: 0; font-weight: 900;">Storm Response</h3>
-            <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">Immediate dispatch for post-storm tree emergencies across Florida.</p>
+            <h3 style="color: #064e3b; margin: 0; font-weight: 900;">Emergency</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">Immediate storm response dispatch across Florida.</p>
         </div>
         <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🛡️</div>
-            <h3 style="color: #064e3b; margin: 0; font-weight: 900;">Fully Vetted</h3>
-            <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">All connected specialists are licensed and insured per state regulations.</p>
+            <h3 style="color: #064e3b; margin: 0; font-weight: 900;">Vetted Pros</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">Licensed & insured specialists in every county.</p>
         </div>
         <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
-            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💰</div>
-            <h3 style="color: #064e3b; margin: 0; font-weight: 900;">Free Quotes</h3>
-            <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">Call {SITE_CONFIG.phone} for a zero-obligation on-site assessment.</p>
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🏗️</div>
+            <h3 style="color: #064e3b; margin: 0; font-weight: 900;">Full Service</h3>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">From large removals to stump grinding & pruning.</p>
         </div>
     </section>
 
@@ -85,24 +84,28 @@ const counties = Object.keys(groupedCities).sort();
                 <h3 style="color: #064e3b; font-size: 1.5rem; margin: 0; font-weight: 800;">{county}</h3>
             </div>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-              {groupedCities[county].map((city: any) => (
-                <div class="city-item" data-city={city.City.toLowerCase()} style="display: flex; flex-direction: column; gap: 4px;">
-                    <a 
-                      href={`/tree-removal-${city.City.toLowerCase().trim().replace(/\s+/g, '-')}`}
-                      style="text-decoration: none; color: #166534; font-weight: 700; font-size: 0.9rem; transition: 0.2s;"
-                      class="service-link"
-                    >
-                      {city.City}
-                    </a>
-                    <a 
-                      href={`/emergency-service-${city.City.toLowerCase().trim().replace(/\s+/g, '-')}`}
-                      style="text-decoration: none; color: #ea580c; font-weight: 600; font-size: 0.75rem; opacity: 0.8; display: flex; align-items: center; gap: 3px;"
-                    >
-                      ⚡ Emergency
-                    </a>
-                </div>
-              ))}
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              {groupedCities[county].map((city: any) => {
+                const citySlug = city.City.toLowerCase().trim().replace(/\s+/g, '-');
+                return (
+                  <div class="city-item" data-city={city.City.toLowerCase()} style="display: flex; flex-direction: column; gap: 6px;">
+                      <!-- Link 1: Removal (Ana) -->
+                      <a href={`/tree-removal-${citySlug}`} style="text-decoration: none; color: #166534; font-weight: 800; font-size: 0.95rem;" class="service-link">
+                        {city.City}
+                      </a>
+                      
+                      <!-- Link 2: Stump Grinding -->
+                      <a href={`/stump-grinding-${citySlug}`} style="text-decoration: none; color: #4b5563; font-weight: 600; font-size: 0.7rem; display: flex; align-items: center; gap: 3px; opacity: 0.8;">
+                        🏗️ Stump Grinding
+                      </a>
+
+                      <!-- Link 3: Emergency -->
+                      <a href={`/emergency-service-${citySlug}`} style="text-decoration: none; color: #ea580c; font-weight: 700; font-size: 0.7rem; display: flex; align-items: center; gap: 3px;">
+                        ⚡ Emergency Help
+                      </a>
+                  </div>
+                )
+              })}
             </div>
           </div>
         ))}
@@ -112,12 +115,10 @@ const counties = Object.keys(groupedCities).sort();
 </MainLayout>
 
 <style>
-  .service-link:hover { color: #ea580c !important; transform: translateX(2px); }
+  .service-link:hover { color: #ea580c !important; text-decoration: underline; }
   .county-card:hover { border-color: #95d5b2; transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
-  .city-item { transition: 0.2s; }
 </style>
 
-<!-- SEARCH LOGIC -->
 <script is:inline>
     const searchInput = document.getElementById('citySearch');
     const statusText = document.getElementById('searchStatus');
