@@ -1,36 +1,60 @@
 ---
-// src/pages/privacy.astro
 import MainLayout from '../layouts/MainLayout.astro';
 import { SITE_CONFIG } from '../config.js';
 ---
 
 <MainLayout 
-  title="Privacy Policy" 
-  description="Learn how ProTreeTrim Florida handles and protects your data."
+  title="Privacy Policy | ProTreeTrim™ Florida" 
+  description="Our commitment to your privacy. Learn how ProTreeTrim handles and protects user data across our Florida network."
 >
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 5px solid #f97316;">
     <h1 style="font-size: clamp(2.2rem, 7vw, 3.8rem); margin: 0; font-weight: 800;">Privacy Policy</h1>
-    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">Effective Date: January 2026</p>
+    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">Last Updated: January 18, 2026</p>
   </header>
 
   <div class="container" style="max-width: 850px; margin: 0 auto; padding: 4rem 1.5rem;">
     <div style="line-height: 1.8; color: #374151; font-size: 1.1rem;">
-      <p>At <strong>ProTreeTrim</strong>, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you visit our website or use our connection services.</p>
+      
+      <section style="margin-bottom: 2.5rem;">
+        <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 800; border-bottom: 2px solid #eee; padding-bottom: 10px;">1. Introduction</h2>
+        <p>ProTreeTrim™ ("we," "us," or "our") operates as a professional connection service. This Privacy Policy describes how we collect, use, and disclose your information when you visit our website and use our tree care referral services in Florida.</p>
+      </section>
 
-      <h2 style="color: #064e3b; font-size: 1.8rem; margin-top: 3rem; font-weight: 800; border-bottom: 2px solid #eee; padding-bottom: 10px;">Information We Collect</h2>
-      <p>We may collect personal information such as your name, email address, or phone number when you submit inquiries. We also automatically collect browser data and IP addresses to improve our user experience.</p>
+      <section style="margin-bottom: 2.5rem;">
+        <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 800; border-bottom: 2px solid #eee; padding-bottom: 10px;">2. Information We Collect</h2>
+        <p>We collect information that identifies, relates to, or could reasonably be linked with you. This includes:</p>
+        <ul>
+          <li><strong>Direct Communications:</strong> Information provided when you call our service lines or contact us via email.</li>
+          <li><strong>Usage Data:</strong> IP addresses, browser types, and device identifiers collected automatically via cookies to improve site performance.</li>
+        </ul>
+      </section>
 
-      <h2 style="color: #064e3b; font-size: 1.8rem; margin-top: 3rem; font-weight: 800; border-bottom: 2px solid #eee; padding-bottom: 10px;">How We Use Your Data</h2>
-      <ul style="margin-bottom: 1.5rem;">
-        <li>To connect you with local tree care professionals.</li>
-        <li>To improve our website performance and services.</li>
-        <li>To maintain site security and prevent misuse.</li>
-      </ul>
+      <section style="margin-bottom: 2.5rem;">
+        <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 800; border-bottom: 2px solid #eee; padding-bottom: 10px;">3. How We Use Your Information</h2>
+        <p>Your information is used primarily to facilitate connections between homeowners and licensed tree care professionals. We also use data to:</p>
+        <ul>
+          <li>Verify service availability in your specific Florida county.</li>
+          <li>Monitor call quality and service performance.</li>
+          <li>Comply with state and federal legal obligations.</li>
+        </ul>
+      </section>
 
-      <h2 style="color: #064e3b; font-size: 1.8rem; margin-top: 3rem; font-weight: 800; border-bottom: 2px solid #eee; padding-bottom: 10px;">Contact Us</h2>
-      <p>If you have any questions about this policy, please contact us at: <br/>
-      <a href={`mailto:${SITE_CONFIG.email}`} style="color: #ea580c; font-weight: 700; text-decoration: none;">{SITE_CONFIG.email}</a></p>
-Verification: This site is owned and operated by Görkem CAN - Verified on January 17, 2026
+      <section style="margin-bottom: 2.5rem;">
+        <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 800; border-bottom: 2px solid #eee; padding-bottom: 10px;">4. Third-Party Disclosure</h2>
+        <p>We do not sell your personal data to third parties for marketing purposes. We only share information with certified tree care specialists in our network to fulfill your service requests.</p>
+      </section>
+
+      <section style="margin-bottom: 2.5rem;">
+        <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 800; border-bottom: 2px solid #eee; padding-bottom: 10px;">5. Your Rights & Choices</h2>
+        <p>Depending on your location, you may have the right to access, correct, or delete your personal information. To exercise these rights, please contact our privacy coordinator at the email below.</p>
+      </section>
+
+      <div style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 2rem; border-radius: 15px; margin-top: 3rem;">
+        <h3 style="color: #064e3b; margin-top: 0;">Contact Information</h3>
+        <p>For any privacy-related inquiries, please contact:</p>
+        <a href={`mailto:${SITE_CONFIG.email}`} style="color: #ea580c; font-weight: 800; text-decoration: none; font-size: 1.2rem;">{SITE_CONFIG.email}</a>
+      </div>
+
       <div style="margin-top: 4rem; text-align: center;">
           <a href="/" style="color: #64748b; text-decoration: underline; font-size: 0.95rem;">← Return to Service Locations</a>
       </div>
