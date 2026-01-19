@@ -18,9 +18,6 @@ export async function getStaticPaths() {
   ];
 
   const paths = [];
-  
-  // 404 HATASI ÇÖZÜMÜ: Slicing (dilimleme) kaldırıldı. 
-  // Artık CSV'deki tüm şehirler için (Margaretta dahil) sayfa üretilecek.
   const allRecords = records; 
 
   allRecords.forEach((row) => {
@@ -33,7 +30,6 @@ export async function getStaticPaths() {
         props: { 
           cityData: row, 
           serviceInfo: service,
-          // İç linkleme için aynı ilçeden rastgele 5 şehir
           nearby: allRecords.filter(r => r.County === row.County && r.City !== row.City).slice(0, 5)
         },
       });
@@ -44,17 +40,27 @@ export async function getStaticPaths() {
 
 const { cityData, serviceInfo, nearby } = Astro.props;
 
-// Görsel Sistemi (Deterministik Seçim)
-const allImages = import.meta.glob('../assets/gallery/fl/*.{jpeg,jpg,png,gif,webp}');
-const imagePaths = Object.keys(allImages);
+// --- GÜNCELLENMİŞ KLASÖR BAZLI GÖRSEL SİSTEMİ ---
+// 1. Hizmet tipine göre klasör adını belirliyoruz
+const serviceFolder = serviceInfo.prefix.includes('removal') ? 'removal' : 
+                     serviceInfo.prefix.includes('stump') ? 'stump' : 'emergency';
+
+// 2. Alt klasörleri taramak için /**/*.{...} formatını kullanıyoruz
+const allImages = import.meta.glob('../assets/gallery/fl/**/*.{jpeg,jpg,png,gif,webp}');
+
+// 3. Sadece ilgili hizmetin klasöründeki resimleri filtreliyoruz
+const imagePaths = Object.keys(allImages).filter(path => path.includes(`/${serviceFolder}/`));
+
 let selectedImage = null;
 if (imagePaths.length > 0) {
+  // Deterministic seçim (Aynı şehir her zaman aynı resmi görür)
   const imageIndex = Math.abs((cityData.City + serviceInfo.prefix).split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)) % imagePaths.length;
   const selectedImageImport = allImages[imagePaths[imageIndex]];
   // @ts-ignore
-  const imgModule = await selectedImageImport();
+  const imgModule: any = await selectedImageImport();
   selectedImage = imgModule.default;
 }
+// ----------------------------------------------
 
 const landmark = cityData.Landmark || "the local area";
 
@@ -122,7 +128,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityData.City}, FL | License
         </div>
     </section>
 
-    <!-- BİLGİ KÜNYESİ (Yeni Eklenen Modern Kutular 🛡️) -->
+    <!-- BİLGİ KÜNYESİ 🛡️ -->
     <section style="margin-top: 2rem; background: #064e3b; color: white; padding: 2rem; border-radius: 24px; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; align-items: center; border: 1px solid #1b4332;">
         <div style="text-align: center;">
             <p style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Service Area</p>
