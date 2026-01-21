@@ -20,44 +20,15 @@ const canonicalURL = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl);
 const fullTitle = `${title} | ${SITE_CONFIG.brandName}`;
 const GTM_ID = "GTM-PW924QGW";
 
-// SEO İçin LocalBusiness Şeması (JSON-LD)
-const schemaData = {
-  "@context": "https://schema.org",
-  "@type": "TreeCare",
-  name: "ProTreeTrim™ Florida",
-  url: SITE_CONFIG.siteUrl,
-  logo: `${SITE_CONFIG.siteUrl}/favicon.svg`,
-  image: `${SITE_CONFIG.siteUrl}/team.jpg`,
-  description:
-    "Professional tree removal, stump grinding, and 24/7 emergency services across Florida.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Orlando",
-    addressRegion: "FL",
-    postalCode: "32801",
-    addressCountry: "US",
-  },
-  telephone: "+18554982578",
-  areaServed: {
-    "@type": "State",
-    name: "Florida",
-  },
-  priceRange: "$$",
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
-    ],
-    opens: "00:00",
-    closes: "23:59",
-  },
-};
+// Yardımcı Fonksiyon (Şema ve Footer için)
+const toTitleCase = (str) =>
+  str
+    ? str
+        .toLowerCase()
+        .split(" ")
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(" ")
+    : "";
 ---
 
 <!doctype html>
@@ -76,9 +47,6 @@ const schemaData = {
       })(window, document, "script", "dataLayer", GTM_ID);
     </script>
 
-    <!-- Google Şema Kaydı -->
-    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
-
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -88,7 +56,6 @@ const schemaData = {
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-    <meta property="og:image" content={new URL(ogImage, SITE_CONFIG.siteUrl)} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -104,9 +71,6 @@ const schemaData = {
         --primary: #1b4332;
         --primary-dark: #081c15;
         --secondary: #ea580c;
-        --accent: #ffb703;
-        --text-main: #1a1a1a;
-        --text-muted: #4b5563;
         --bg-light: #fcfcfc;
       }
       * {
@@ -117,7 +81,7 @@ const schemaData = {
       body {
         margin: 0;
         background: var(--bg-light);
-        color: var(--text-main);
+        color: #1a1a1a;
         line-height: 1.5;
       }
       .container {
@@ -125,16 +89,60 @@ const schemaData = {
         margin: 0 auto;
         padding: 0 1.2rem;
       }
+
+      /* Desktop Navigation */
+      .desktop-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
       .nav-link {
-        color: var(--text-muted);
+        color: #4b5563;
         text-decoration: none;
         font-weight: 700;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         transition: 0.2s;
         text-transform: uppercase;
       }
       .nav-link:hover {
-        color: var(--secondary) !important;
+        color: var(--secondary);
+      }
+
+      /* Mobile Toggle */
+      .menu-toggle {
+        display: none;
+      }
+
+      @media (max-width: 1024px) {
+        .desktop-links {
+          display: none !important;
+        }
+        .menu-toggle {
+          display: flex !important;
+          align-items: center;
+          gap: 10px;
+        }
+        .logo-text {
+          font-size: 1.05rem !important;
+        }
+      }
+
+      #mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 10002;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      #mobile-menu.active {
+        display: flex;
       }
       .trust-badge-footer {
         background: rgba(255, 255, 255, 0.05);
@@ -147,26 +155,21 @@ const schemaData = {
         font-size: 0.8rem;
         font-weight: 600;
         text-align: left;
+        color: white;
       }
     </style>
   </head>
   <body>
-    <noscript
-      ><iframe
-        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"></iframe></noscript
-    >
-
+    <!-- Top Bar -->
     <div
-      style="background: var(--primary-dark); color: #ffb703; padding: 10px; text-align: center; font-size: 0.65rem; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid rgba(255,183,3,0.2);"
+      style="background: var(--primary-dark); color: #ffb703; padding: 8px; text-align: center; font-size: 0.6rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;"
     >
       {badgeText}
     </div>
 
+    <!-- Navigation -->
     <nav
-      style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #eee; padding: 0.7rem 0; position: sticky; top: 0; z-index: 10000;"
+      style="background: rgba(255, 255, 255, 0.98); border-bottom: 1px solid #eee; padding: 0.6rem 0; position: sticky; top: 0; z-index: 10000;"
     >
       <div
         class="container"
@@ -174,123 +177,150 @@ const schemaData = {
       >
         <a
           href="/"
-          style="text-decoration: none; display: flex; align-items: center; gap: 8px;"
+          style="text-decoration: none; display: flex; align-items: center; gap: 6px;"
         >
           <div
-            style="background: var(--primary); width: 34px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"
+            style="background: var(--primary); width: 30px; height: 30px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1rem;"
           >
             🌳
           </div>
           <span
-            style="font-weight: 900; color: var(--primary); font-size: 1.25rem; letter-spacing: -0.5px; text-transform: uppercase;"
+            class="logo-text"
+            style="font-weight: 900; color: var(--primary); font-size: 1.2rem; letter-spacing: -0.5px; text-transform: uppercase;"
             >Pro<span style="color: var(--secondary);">Tree</span>Trim</span
           >
         </a>
-        <div
-          style="display: flex; gap: 20px; align-items: center;"
-          class="desktop-links"
-        >
+
+        <div class="desktop-links">
           <a href="/services" class="nav-link">Services</a>
           <a href="/gallery" class="nav-link">Gallery</a>
           <a href="/contact" class="nav-link">Contact</a>
           <a
             href={SITE_CONFIG.phoneHref}
-            style="background: var(--primary); color: white !important; padding: 10px 18px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 0.8rem;"
+            style="background: var(--primary); color: white !important; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.75rem;"
             >CALL US NOW</a
+          >
+        </div>
+
+        <div class="menu-toggle">
+          <a
+            href={SITE_CONFIG.phoneHref}
+            style="background: var(--secondary); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1rem;"
+            >📞</a
+          >
+          <button
+            id="openBtn"
+            style="background: #f3f4f6; border: none; font-size: 1.4rem; color: var(--primary); padding: 4px 8px; border-radius: 6px;"
+            >☰</button
           >
         </div>
       </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu">
+      <button
+        id="closeBtn"
+        style="position: absolute; top: 20px; right: 20px; font-size: 3rem; background: none; border: none; color: #94a3b8;"
+        >&times;</button
+      >
+      <a href="/" class="nav-link" style="font-size: 1.5rem;">HOME</a>
+      <a href="/services" class="nav-link" style="font-size: 1.5rem;"
+        >SERVICES</a
+      >
+      <a href="/gallery" class="nav-link" style="font-size: 1.5rem;">GALLERY</a>
+      <a href="/contact" class="nav-link" style="font-size: 1.5rem;">CONTACT</a>
+      <a
+        href={SITE_CONFIG.phoneHref}
+        style="background: var(--secondary); color: white !important; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 900; font-size: 1.2rem; margin-top: 1rem;"
+        >{SITE_CONFIG.phone}</a
+      >
+    </div>
+
     <slot />
 
+    <!-- Footer -->
     <footer
-      style="background: var(--primary-dark); color: #d1fae5; padding: 5rem 1.5rem 12rem; text-align: center; border-top: 5px solid var(--secondary);"
+      style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 10rem; text-align: center; border-top: 5px solid var(--secondary);"
     >
       <div class="container">
-        <!-- Trust Badges Grid -->
         <div
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-bottom: 50px;"
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-bottom: 40px;"
         >
           <div class="trust-badge-footer">
-            <span style="font-size: 1.5rem;">🛡️</span>
+            <span>🛡️</span>
             <span
               >LICENSED & INSURED<br /><small style="opacity: 0.7;"
-                >Verified Florida Contractors</small
-              ></span
-            >
+                >Verified Florida Network</small
+              ></span>
           </div>
           <div class="trust-badge-footer">
-            <span style="font-size: 1.5rem;">⚡</span>
+            <span>⚡</span>
             <span
-              >24/7 EMERGENCY RESPONSE<br /><small style="opacity: 0.7;"
-                >Dispatched Within Hours</small
-              ></span
-            >
+              >24/7 RESPONSE<br /><small style="opacity: 0.7;"
+                >Emergency Dispatch</small
+              ></span>
           </div>
           <div class="trust-badge-footer">
-            <span style="font-size: 1.5rem;">💰</span>
+            <span>💰</span>
             <span
-              >FREE ON-SITE ESTIMATES<br /><small style="opacity: 0.7;"
+              >FREE ESTIMATES<br /><small style="opacity: 0.7;"
                 >No-Obligation Quotes</small
-              ></span
-            >
-          </div>
-          <div class="trust-badge-footer">
-            <span style="font-size: 1.5rem;">⭐</span>
-            <span
-              >5-STAR LOCAL SERVICE<br /><small style="opacity: 0.7;"
-                >Top Rated in {SITE_CONFIG.brandName}</small
-              ></span
-            >
+              ></span>
           </div>
         </div>
-
         <p
-          style="font-weight: 900; font-size: 1.5rem; margin-bottom: 20px; color: white;"
+          style="font-weight: 900; font-size: 1.3rem; margin-bottom: 15px; color: white;"
         >
           ProTreeTrim™ Florida
         </p>
         <p
-          style="font-size: 0.8rem; opacity: 0.6; max-width: 900px; margin: 0 auto 40px; line-height: 1.8;"
+          style="font-size: 0.75rem; opacity: 0.5; max-width: 800px; margin: 0 auto 30px; line-height: 1.6;"
         >
-          <strong>Legal Disclaimer:</strong> ProTreeTrim™ is a free referral service.
-          All contractors are independent. ProTreeTrim™ does not warrant or guarantee
-          work performed. Homeowners are responsible for verifying license and insurance
-          before hiring.
+          ProTreeTrim™ is a free referral service. All contractors are
+          independent. Homeowners must verify license and insurance.
         </p>
-
         <div
-          style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;"
+          style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-weight: 700; font-size: 0.75rem; text-transform: uppercase;"
         >
-          <a href="/" style="color: white; text-decoration: none;"
-            >Florida Directory</a
-          >
-          <a href="/services" style="color: white; text-decoration: none;"
-            >All Services</a
-          >
+          <a href="/" style="color: white; text-decoration: none;">Directory</a>
           <a href="/privacy" style="color: white; text-decoration: none;"
-            >Privacy Policy</a
+            >Privacy</a
           >
           <a href="/contact" style="color: white; text-decoration: none;"
-            >Contact Us</a
+            >Contact</a
           >
         </div>
       </div>
     </footer>
 
-    <!-- Sticky Mobile Call Bar -->
+    <!-- Bottom Sticky Call -->
     <div
-      style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px 20px calc(12px + env(safe-area-inset-bottom)); z-index: 10001; border-top: 2px solid #eee; display: flex; justify-content: center; box-shadow: 0 -10px 30px rgba(0,0,0,0.1);"
+      style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px; z-index: 10001; border-top: 1px solid #eee; display: flex; justify-content: center; box-shadow: 0 -5px 15px rgba(0,0,0,0.05);"
     >
       <a
         href={SITE_CONFIG.phoneHref}
-        style="background: var(--secondary); color: white !important; width: 100%; max-width: 600px; padding: 16px; text-decoration: none !important; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 12px; box-shadow: 0 8px 20px rgba(234, 88, 12, 0.4);"
+        style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 15px; text-decoration: none !important; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px;"
       >
-        <span style="font-size: 1.4rem;">📞</span> CALL FOR FREE ESTIMATE
+        📞 CALL FOR FREE ESTIMATE
       </a>
     </div>
 
-    <!-- Mobil Menü Script'in aynı kalabilir -->
+    <script is:inline>
+      const openBtn = document.getElementById("openBtn");
+      const closeBtn = document.getElementById("closeBtn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const toggleMenu = (s) => {
+        if (mobileMenu) {
+          mobileMenu.classList.toggle("active", s);
+          document.body.style.overflow = s ? "hidden" : "auto";
+        }
+      };
+      openBtn?.addEventListener("click", () => toggleMenu(true));
+      closeBtn?.addEventListener("click", () => toggleMenu(false));
+      mobileMenu
+        ?.querySelectorAll("a")
+        .forEach((l) => l.addEventListener("click", () => toggleMenu(false)));
+    </script>
   </body>
 </html>
