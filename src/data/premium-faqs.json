@@ -1,442 +1,376 @@
-{
-  "miami": [
+
+  "fort-myers": [
     {
-      "q": "What hurricane-season tree work should homeowners in Miami schedule before the first big storm?",
-      "a": "In Miami (Miami-Dade County), the best pre-season move is a professional risk prune on wind-sail trees like Live Oak and Slash Pine—removing deadwood, weak unions, and over-extended limbs without topping. Coastal gusts off Biscayne Bay can turn small defects into major failures, so we focus on structure, not “thin it out” guesswork. If you’re near Brickell or Coconut Grove, access and traffic logistics also matter for safe crew setup."
+      "q": "In Fort Myers, what’s the right approach to post-hurricane tree cleanup versus emergency tree removal?",
+      "a": "Fort Myers (Lee County) often needs two phases: emergency stabilization first (trees on roofs, hanging limbs), then cleanup and restoration. Near the Edison & Ford Winter Estates area, mature trees can have hidden failures after wind events. We document defects and work scopes so your insurance file separates emergency mitigation from non-urgent debris work."
     },
     {
-      "q": "Can I remove a dangerous leaning tree in Miami without a permit?",
-      "a": "In Miami (Miami-Dade County), Florida Statute 163.045 generally allows a homeowner on a residential property to remove a tree without local permitting when a qualified professional documents it as a danger. We typically provide a written arborist assessment you can keep for your records. It doesn’t override HOA rules or protected vegetation rules (mangroves are a separate category), so we help you verify what applies to your address."
+      "q": "How do you decide whether to save a large shade tree in Fort Myers or remove it?",
+      "a": "In Fort Myers (Lee County), we look at root plate stability, trunk integrity, and canopy structure. A Royal Poinciana with major root loss may not be a safe “save,” while a Live Oak with limited limb failure can often be pruned and stabilized. Proximity to the Caloosahatchee River corridor can also increase wind exposure."
     },
     {
-      "q": "How deep should stump grinding be if I want to replant a Sabal Palm in Miami?",
-      "a": "For Miami (Miami-Dade County) yards with shallow limestone and fill, we usually grind 10–12 inches below grade for basic sod, and 14–18 inches if you’re replanting a palm or small ornamental right on that spot. We’ll also remove grindings or blend them with clean soil so new roots aren’t sitting in a high-wood-mulch pocket. If you’re planting close to a driveway or seawall, we can add a root barrier plan to reduce future heaving."
+      "q": "What should homeowners know about mangroves around Fort Myers waterways before trimming or removal?",
+      "a": "In Fort Myers (Lee County), mangroves are protected and trimming/removal is regulated differently than typical yard trees. If your property borders tidal areas, don’t assume standard tree rules apply. We’ll help identify whether you’re dealing with protected species and guide you toward the correct process before any cutting happens."
     },
     {
-      "q": "Will homeowners insurance pay for emergency tree removal after a storm in Miami?",
-      "a": "In Miami (Miami-Dade County), insurance often pays when a tree damages a covered structure (roof, fence, pool enclosure), and may cover limited debris removal—policy language varies. The best claim-friendly approach is to photograph the tree on the structure, save receipts, and document any emergency mitigation we perform to prevent further damage. If the tree is simply down in the yard with no property damage, that’s commonly out-of-pocket."
+      "q": "Is stump grinding recommended in Fort Myers if I’m replanting after storm losses?",
+      "a": "Yes. In Fort Myers (Lee County), stump grinding clears space for replanting and reduces pest harborage in old wood. We grind below grade and backfill with soil so you don’t get settling. If you’re replanting a Sabal Palm, we’ll advise spacing and soil prep so the new planting establishes before summer heat."
     },
     {
-      "q": "My neighbor’s tree roots are lifting my driveway in Miami—what’s the practical next step?",
-      "a": "In Miami (Miami-Dade County), start by documenting the damage with photos and locating the property line before any cutting. We can evaluate whether selective root pruning is feasible without destabilizing the tree, or if a root barrier and hardscape repair is the safer long-term fix. When disputes heat up, an arborist report gives you an objective basis for a calm conversation or HOA review."
+      "q": "If I remove a hazardous tree in Fort Myers, how does Florida Statute 163.045 affect local permits?",
+      "a": "On residential property, Florida Statute 163.045 can limit local permitting if a licensed arborist or landscape architect certifies the tree as hazardous. In Fort Myers (Lee County), keep that signed certification and photos. It’s also helpful for insurance if the removal was tied to hurricane-season risk reduction."
     }
   ],
-  "tampa": [
+  "kissimmee": [
     {
-      "q": "What drives the cost to remove a large Live Oak in Tampa?",
-      "a": "In Tampa (Hillsborough County), price is mostly about size, access, and rigging complexity—big Live Oaks over homes often require advanced lowering techniques or a crane, plus traffic control in areas like Bayshore Boulevard. Haul-away volume and disposal fees also add up, especially after storm events. A professional quote should spell out removal, cleanup, stump options, and whether a permit or utility coordination is needed."
+      "q": "I run a short-term rental in Kissimmee—how do I schedule tree work without disrupting guests?",
+      "a": "In Kissimmee (Osceola County), we often coordinate around turnover windows and quiet hours, especially near the Old Town corridor. We can stage equipment to minimize driveway blockage and complete cleanup the same day. If hurricane season is approaching, a pre-stay risk inspection can prevent emergency calls when guests are on-site."
     },
     {
-      "q": "How do you handle trimming trees near TECO power lines in Tampa?",
-      "a": "In Tampa (Hillsborough County), clearance near energized lines is a specialized job—our crew plans the cut sequence for safe drop zones and, when needed, coordinates with the utility for line safety. We don’t “reach in and hope” around service drops. If you’re in South Tampa or near Dale Mabry, we also plan for tight setbacks and pedestrian traffic."
+      "q": "Why do pines around Kissimmee neighborhoods fail so suddenly in high winds?",
+      "a": "Kissimmee (Osceola County) can have saturated soils after heavy rains, and pines with shallow root systems can uproot fast when gusts hit. A leaning Slash Pine or one with soil heaving is a red flag. We assess root plate movement and canopy load and recommend mitigation before peak storm months."
     },
     {
-      "q": "Can you grind a stump close to my pavers or pool deck in Tampa without cracking anything?",
-      "a": "Yes—on Tampa (Hillsborough County) properties we use controlled stump grinders and protective matting to keep chips and vibration where they belong. We’ll mark irrigation and low-voltage lines, then grind in passes rather than forcing the head into hard roots. If the stump sits right against pavers, we can edge-grind and recommend a clean backfill so the area doesn’t sink later."
+      "q": "What should I expect from a hazardous-tree removal process in Kissimmee under Florida Statute 163.045?",
+      "a": "In Kissimmee (Osceola County), the key is a written hazard certification from a licensed arborist or landscape architect. Florida Statute 163.045 is documentation-driven for residential properties. Keep the signed statement, photos, and invoice—those records protect you if the city asks questions or your insurer requests justification."
     },
     {
-      "q": "If a storm splits my oak, do I still need a permit to remove it in Tampa?",
-      "a": "In Tampa (Hillsborough County), local rules can require permits for removal, but Florida Statute 163.045 generally limits permitting when a dangerous tree on a residential property is documented by a qualified professional. We can assess the failure (crack, root plate lift, trunk separation) and provide written documentation if it meets the danger threshold. When the tree is near the right-of-way or a protected area, we’ll help you confirm the correct pathway."
+      "q": "Stump grinding in Kissimmee—will the area sink later, and how do you prevent that?",
+      "a": "In Kissimmee (Osceola County), settling happens when the hole is filled only with wood chips. We grind below grade, remove excess chips, and backfill with soil so the surface stays level. If you’re planning a new patio or pavers, we’ll grind wider and prep the base to avoid future dips."
     },
     {
-      "q": "After a squall line, how quickly can you respond for emergency tree work in Tampa?",
-      "a": "In Tampa (Hillsborough County), emergency response is triaged: trees on homes, blocking access, or tangled with lines come first. We’ll often secure hazards the same day by removing hangers and relieving weight, then schedule full removal once conditions and disposal capacity stabilize. If you need insurance documentation, we photograph the situation before and after stabilization."
+      "q": "My neighbor says my tree is damaging their fence in Kissimmee—how do you handle that situation professionally?",
+      "a": "In Kissimmee (Osceola County), we start with an onsite assessment: species, trunk location, and whether the tree is actually pushing the fence or if soil movement is involved. We avoid cutting across property lines and provide a written plan both neighbors can review. Clear documentation keeps disputes from escalating—especially before hurricane season stress."
     }
   ],
-  "orlando": [
+  "homestead": [
     {
-      "q": "Do I need permission to remove a tree in Orlando if I live near downtown or Lake Eola?",
-      "a": "In Orlando (Orange County), tree removal rules can vary by location and tree type, and HOAs often add their own requirements. If the tree is healthy and protected, you may need approval; if it’s hazardous, Florida Statute 163.045 generally allows removal on residential property when documented by a qualified professional. We can inspect, identify the species, and explain the cleanest compliance route for your neighborhood."
+      "q": "In Homestead, can you remove large trees on rural lots without tearing up farm roads and gates?",
+      "a": "Yes. Homestead (Miami-Dade County) properties often need careful equipment routing to protect gates, gravel drives, and agricultural access. Near the Homestead-Miami Speedway area, lots can be wide but soft after rains. We plan load paths, use mats when needed, and stage debris so you still have passable access during the job."
     },
     {
-      "q": "My Slash Pine is leaning toward my roof after a thunderstorm in Orlando—what should I do first?",
-      "a": "In Orlando (Orange County), the first step is safety: keep people away, don’t start cutting from a ladder, and call for an on-site risk assessment. Pines can fail suddenly once the root plate loosens in saturated soil, especially after repeated summer storms. We’ll evaluate whether it can be stabilized temporarily or needs immediate removal, then document the condition for your records."
+      "q": "How should I prioritize tree work in Homestead before hurricane season?",
+      "a": "In Homestead (Miami-Dade County), start with trees that can hit structures: canopy over roofs, limbs over power lines, and any tree with visible root lift. Live Oaks get structural pruning; palms get conservative cleaning, not over-trimming. If your property is near Everglades access routes, wind and saturation can be stronger than inland areas."
     },
     {
-      "q": "Can stump grinding in Orlando damage irrigation lines or my shallow utilities?",
-      "a": "It can if no one locates lines—so in Orlando (Orange County) we flag irrigation, landscape lighting, and any known shallow runs before grinding. We also grind in controlled passes to avoid kicking debris into beds and hardscape. If you’re planning sod replacement, we’ll recommend a grind depth and backfill approach that keeps the grade stable."
+      "q": "Does Florida Statute 163.045 apply in Homestead if an arborist says my tree is hazardous?",
+      "a": "Yes—Florida Statute 163.045 is statewide. In Homestead (Miami-Dade County), you’ll want a signed hazard certification from a licensed arborist or landscape architect, plus photos and invoices. That file protects you if permitting questions come up and helps with insurance if the removal was preventative storm mitigation."
     },
     {
-      "q": "How do you reduce wind risk on Live Oaks in Orlando without weakening them?",
-      "a": "In Orlando (Orange County), proper structural pruning targets lever arms and weak attachments while preserving healthy interior growth—no topping and no aggressive “lion-tailing.” Live Oaks respond best to thoughtful, staged pruning over time. If your home is along the I-4 corridor where storms can hit hard, that long-term structure work pays off."
+      "q": "Is stump grinding enough in Homestead if I’m converting the space back to planting or agriculture?",
+      "a": "In Homestead (Miami-Dade County), stump grinding is usually sufficient for regrading and planting, especially if you’re preparing rows or orchard spacing. If you need heavy equipment access later, we can grind wider and remove major surface roots. Proper backfill with soil—not just chips—keeps the ground stable for tractors and irrigation."
     },
     {
-      "q": "I’m listing my home in Orlando—should I remove a questionable tree now or wait?",
-      "a": "In Orlando (Orange County), a visibly risky tree can stall inspections and negotiations, especially if it overhangs the roof or driveway. A professional arborist assessment helps you decide whether pruning, cabling, or removal is the smartest move for both safety and resale value. If removal is necessary, we can coordinate stump grinding so the yard presents cleanly for showings."
+      "q": "If a storm drops a tree on my home in Homestead, what helps the insurance process move faster?",
+      "a": "In Homestead (Miami-Dade County), clear documentation is key: photos, a simple timeline of the event, and receipts for mitigation work. Insurers generally want proof the event caused the damage and that you acted to prevent it from worsening. If the tree showed pre-existing defects, an arborist note can help explain why it failed and support the claim narrative."
     }
   ],
-  "jacksonville": [
+  "tamarac": [
     {
-      "q": "If my neighbor’s tree falls into my yard in Jacksonville, who is usually responsible?",
-      "a": "In Jacksonville (Duval County), responsibility often depends on whether there was proven negligence—healthy trees can fail in storms, but documented hazards that were ignored can shift liability. Practically, you should photograph the scene, notify your insurer if a structure is hit, and keep any prior written notices if you had warned the neighbor. We can provide an arborist condition report that helps clarify whether the failure looks storm-driven or preventable."
+      "q": "Canal-side trees in Tamarac worry me—what signs suggest the roots are failing?",
+      "a": "In Tamarac (Broward County), saturated soil near canals can reduce root grip quickly. Watch for cracking soil, turf lifting on the canal side, or a sudden lean. We also look for thinning canopies on Slash Pines. If you’re near the Tamarac Sports Complex corridors, utility easements can affect access and removal planning."
     },
     {
-      "q": "Which trees tend to fail most often in Jacksonville during hurricanes and tropical storms?",
-      "a": "In Jacksonville (Duval County), fast-growing, short-lived oaks and stressed pines are common culprits—especially where soil stays saturated near the St. Johns River and root systems lose holding power. We frequently see failures from included bark unions, decay pockets, and past topping cuts that created weak regrowth. A pre-season inspection and targeted structural pruning is usually cheaper than an emergency removal."
+      "q": "What’s the right way to trim palms in Tamarac before hurricane season?",
+      "a": "In Tamarac (Broward County), the safest approach is conservative pruning: remove dead fronds and damaged material, avoid “hurricane cuts,” and keep clean cut angles. Over-trimming can weaken palms and increase storm debris later. We also check for loose crowns and pest issues so the palm isn’t stressed going into peak winds."
     },
     {
-      "q": "Do you offer emergency removal when trees block driveways in Jacksonville neighborhoods like Mandarin or Arlington?",
-      "a": "Yes—In Jacksonville (Duval County) we prioritize access-blocking trees, trees on homes, and hanging limbs that could drop without warning. After securing the hazard, we schedule full cleanup and stump options as disposal capacity opens up. We’ll also provide photos and itemized invoices that are useful if you’re filing an insurance claim."
+      "q": "My neighbor and I are arguing about a boundary tree in Tamarac—how do you keep it factual?",
+      "a": "In Tamarac (Broward County), we start by identifying trunk location and defect risks, then provide a written arborist-style summary: what’s unsafe, what can be pruned, and what should be removed. We avoid crossing property lines and recommend shared scope agreements when appropriate. Clear documentation usually cools disputes fast."
     },
     {
-      "q": "Is stump grinding enough to stop pest issues after a tree is removed in Jacksonville?",
-      "a": "In Jacksonville (Duval County), grinding removes the stump and major surface roots, but it doesn’t “sterilize” the soil—ants and termites are environmental and can still be present. What stump grinding does do is eliminate a moisture-holding wood mass that attracts activity and creates trip hazards. If you’re concerned about pests near the foundation, we’ll recommend combining grind-and-cleanout with proper moisture management and, if needed, pest-control follow-up."
+      "q": "If my arborist certifies a dangerous tree in Tamarac, what does Florida Statute 163.045 mean for permits?",
+      "a": "For residential property, Florida Statute 163.045 can limit local permitting when a licensed arborist or landscape architect certifies the tree is hazardous. In Tamarac (Broward County), keep the signed certification, photos, and invoice. That documentation is your protection if questions come up from the city or your insurer."
     },
     {
-      "q": "Can Florida Statute 163.045 help if I’m told I need a permit for a dangerous tree in Jacksonville?",
-      "a": "In Jacksonville (Duval County), Florida Statute 163.045 generally limits local permitting for removing a dangerous tree on a residential property when a qualified professional documents the hazard. We can inspect and provide written documentation that describes the risk indicators (cracks, root plate lift, decay). If the tree is in a protected area or the public right-of-way, we’ll help you confirm the correct process before work starts."
+      "q": "Do I really need stump grinding in Tamarac if the stump is ‘out of the way’?",
+      "a": "In Tamarac (Broward County), hidden stumps still create problems: trip hazards, mower damage, and insect activity. Grinding below grade makes the yard easier to maintain and lets you re-sod cleanly. If you’re near pool cages or tight side yards, grinding is often the least disruptive way to finish the job properly."
     }
   ],
-  "fort-lauderdale": [
+  "north-miami": [
     {
-      "q": "What’s the right way to prep palms and coastal trees for hurricane season in Fort Lauderdale?",
-      "a": "In Fort Lauderdale (Broward County), hurricane prep is about reducing failure points—not giving palms a “hurricane cut,” which can weaken them. We remove dead fronds, seed pods where appropriate, and prune broad-canopy trees for structure so ocean gusts off the Intracoastal don’t catch long, weak limbs. If you’re near Las Olas or barrier-island properties, salt stress and wind exposure shape the pruning plan."
+      "q": "In North Miami, how do flood-prone yards affect tree stability during hurricane season?",
+      "a": "North Miami (Miami-Dade County) yards that stay saturated can reduce root anchoring, especially for trees already leaning or with compromised roots. Near Oleta River State Park areas, soil moisture and wind exposure can combine. We look for soil heaving, root flare damage, and canopy imbalance and recommend pruning or removal before peak storms."
     },
     {
-      "q": "Is stump grinding different near the Intracoastal in Fort Lauderdale?",
-      "a": "Yes—In Fort Lauderdale (Broward County), sandy soils and higher water influence how deep we grind and how we backfill to prevent settling. We often recommend removing excess grindings and replacing with clean fill if you’re replanting, especially near seawalls and high-traffic landscaping. The goal is stable grade and healthy regrowth, not a soft spot that sinks after the next rainy season."
+      "q": "What’s the right way to maintain palms in North Miami without weakening them?",
+      "a": "In North Miami (Miami-Dade County), we avoid over-trimming. For Sabal Palms, remove only dead or broken fronds and keep cuts clean. Over-pruning can stress palms and increase storm debris. If you’re near FIU Biscayne Bay Campus corridors, salt air and wind exposure can also affect frond health and maintenance timing."
     },
     {
-      "q": "Do I need approval to remove a large Gumbo Limbo in Fort Lauderdale?",
-      "a": "In Fort Lauderdale (Broward County), some species and sizes can trigger municipal protections, so a standard removal may require approvals. If the tree is hazardous, Florida Statute 163.045 generally allows removal on residential property when documented by a qualified professional. We’ll identify the tree, assess risk, and help you understand whether you’re in a straightforward safety removal situation or a regulated removal scenario."
+      "q": "A city street tree dropped a limb in North Miami—am I responsible for the removal?",
+      "a": "In North Miami (Miami-Dade County), responsibility depends on right-of-way and ownership, but safety comes first. If a limb is blocking access or threatening your home, document it and arrange safe mitigation. Keep receipts and photos for your insurance file. Reporting promptly also helps the city address the remaining hazard."
     },
     {
-      "q": "How should I document storm-related tree damage for an insurance claim in Fort Lauderdale?",
-      "a": "In Fort Lauderdale (Broward County), take wide and close photos before anything is moved—show the tree, the point of impact, and any roof or fence damage. Keep receipts for emergency mitigation (like removing a limb off a roof to stop active leaks) and retain the work order and invoice. If adjusters ask for proof of urgency, an arborist hazard note is often helpful."
+      "q": "How does Florida Statute 163.045 apply in North Miami if my tree is dangerous?",
+      "a": "Florida Statute 163.045 can limit local permitting for hazardous-tree removal on residential property when a licensed arborist or landscape architect provides written certification. In North Miami (Miami-Dade County), keep that signed statement, photos, and your invoice. It supports both compliance and insurance documentation."
     },
     {
-      "q": "Our HOA is ordering a tree removal in Fort Lauderdale—who should be listed as the responsible party?",
-      "a": "In Fort Lauderdale (Broward County), the responsible party is typically the property owner or the HOA/condo association depending on where the tree sits—common area vs. private lot. That matters for permits, insurance, and access authorization. We’ll confirm ownership boundaries, document the scope, and make sure the right entity is signing off before equipment shows up."
+      "q": "If a tree damages my roof in North Miami, what’s the best way to document it for insurance without delaying repairs?",
+      "a": "In North Miami (Miami-Dade County), take wide and close photos, then mitigate further damage—tarping and safe removal if necessary. Insurers typically expect immediate steps to prevent worsening after hurricane winds. Keep receipts and note the date/time. Don’t discard major wood sections until you’ve documented condition and point of failure."
     }
   ],
-  "st-petersburg": [
+  "wellington": [
     {
-      "q": "My tree roots are lifting the sidewalk near downtown St. Petersburg—can you just cut the roots?",
-      "a": "In St. Petersburg (Pinellas County), root cutting is a last resort because it can destabilize the tree and increase failure risk in storms. We evaluate the species, trunk-to-sidewalk distance, and root architecture, then recommend safer options like selective root pruning with mitigation, sidewalk re-grade, or rerouting. If you’re near the St. Pete Pier, foot traffic and public right-of-way rules also affect what can be done."
+      "q": "I have horses in Wellington—what tree hazards do you prioritize around paddocks and barns?",
+      "a": "In Wellington (Palm Beach County), near the International Polo Club Palm Beach corridor, we prioritize dead limbs over turnout areas, unstable trees near fences, and species prone to sudden limb drop. We also look for canopy weight over barns and shade structures. Pre-hurricane season pruning reduces risk without stripping essential shade for animals."
     },
     {
-      "q": "What’s the process for removing a tree that’s close to the street in St. Petersburg?",
-      "a": "In St. Petersburg (Pinellas County), street-adjacent trees may be in the city right-of-way even if they look like they’re on your lawn. That can mean city approval or coordination before removal or heavy pruning. We’ll help verify placement, document the condition, and guide you through the cleanest path so you don’t end up with a violation or replant requirement surprise."
+      "q": "How do you prune big Live Oaks in Wellington without creating sun stress or weak regrowth?",
+      "a": "Wellington (Palm Beach County) Live Oaks need structural pruning, not heavy thinning. We reduce end-weight on long limbs, clean deadwood, and correct weak unions while preserving interior foliage. Over-thinning can trigger stress and brittle regrowth. If your property borders equestrian facilities, we also manage clearance for trailers and barn access."
     },
     {
-      "q": "After a storm, how do you prioritize emergency tree calls in St. Petersburg?",
-      "a": "In St. Petersburg (Pinellas County), we prioritize life-safety hazards: trees on homes, blocking driveways, hanging limbs over walkways, and anything interacting with power lines. Once the immediate risk is controlled, we schedule full removals and stump grinding as disposal sites and access stabilize. We also photograph the scene for homeowners who need documentation for insurance."
+      "q": "My neighbor says my tree crosses the fence line in Wellington—what’s the safest way to handle it?",
+      "a": "In Wellington (Palm Beach County), avoid cutting across property lines and avoid cuts that compromise tree stability. We recommend an onsite assessment, then a written scope both parties can review. If the trunk is near the boundary, shared solutions often make sense. Clear documentation helps prevent disputes from escalating during storm season."
     },
     {
-      "q": "Can I remove a cracked pine on my St. Petersburg property without a permit if it’s dangerous?",
-      "a": "In St. Petersburg (Pinellas County), Florida Statute 163.045 generally allows removal of a dangerous tree on a residential property without local permitting when a qualified professional documents the hazard. We look for indicators like trunk cracks, root plate lift, and failed leaders, then provide a written assessment you can keep. If the tree is in the right-of-way or a protected zone, we’ll confirm the applicable rules first."
+      "q": "Is stump grinding enough in Wellington for pasture areas, or do I need full removal?",
+      "a": "In Wellington (Palm Beach County), stump grinding is usually best for pastures: it reduces trip hazards for horses and equipment without major excavation. We grind below grade and backfill so the area can be regraded and seeded. Full stump removal is typically reserved for new construction pads or major drainage work."
     },
     {
-      "q": "Is stump grinding safe near seawalls on neighborhoods like Snell Isle in St. Petersburg?",
-      "a": "In St. Petersburg (Pinellas County), yes—when we plan for access and load distribution. Near seawalls, we use lighter equipment where needed, protective mats, and controlled grinding to avoid undermining the wall edge. We’ll also recommend backfill that resists washout and keeps the grade stable after heavy rains."
+      "q": "If an arborist certifies a dangerous tree in Wellington, what does Florida Statute 163.045 require from me?",
+      "a": "Florida Statute 163.045 is documentation-based. In Wellington (Palm Beach County), keep the signed hazard certification from a licensed arborist or landscape architect, plus photos and invoices. That file supports removal decisions, helps with HOA questions, and strengthens your insurance narrative if the work is tied to hurricane-risk mitigation."
     }
   ],
-  "hialeah": [
+  "north-port": [
     {
-      "q": "Can you remove a backyard mango tree in Hialeah without wrecking the patio or fence?",
-      "a": "Yes—In Hialeah (Miami-Dade County), we typically dismantle fruit trees in small sections using controlled rigging so nothing swings into patios, screen enclosures, or neighbor fences. We protect hardscape with mats and plan drop zones before the first cut. If you’re near Hialeah Park, we also consider street access and parking constraints for chipper and haul vehicles."
+      "q": "North Port has lots of pines—what makes them fail during storms, and what can be done early?",
+      "a": "North Port (Sarasota County) pines often fail when soil is saturated and roots are shallow or compromised. We look for lean changes, soil cracking, and canopy imbalance—common around neighborhoods near Warm Mineral Springs Park. Mitigation can include targeted pruning or removal before hurricane-season winds make the decision for you."
     },
     {
-      "q": "My neighbor says I can’t trim branches crossing into my yard in Hialeah—what’s realistic?",
-      "a": "In Hialeah (Miami-Dade County), homeowners generally have the practical right to trim encroaching branches back to the property line as long as it’s done reasonably and doesn’t seriously harm the tree. The smart move is to document the line, avoid over-cutting, and use proper pruning cuts so the tree stays stable. If the situation is tense, an arborist assessment can keep the conversation fact-based."
+      "q": "Does stump grinding in North Port cause sinkholes or ground collapse?",
+      "a": "In North Port (Sarasota County), stump grinding itself doesn’t create sinkholes—it removes wood below grade. The real issue is backfill: if you leave a pocket of chips, it settles and creates a dip. We backfill with soil and compact properly so the surface stays stable, especially if you plan to re-sod or install pavers."
     },
     {
-      "q": "Do I need a permit to remove a large shade tree in Hialeah?",
-      "a": "In Hialeah (Miami-Dade County), permitting can depend on tree type, size, and whether it’s considered protected by local rules. If the tree is a documented hazard on a residential property, Florida Statute 163.045 generally limits local permitting when a qualified professional confirms the danger. We can inspect, identify the tree, and tell you what documentation to keep before removal."
+      "q": "What should I do if a tree falls on my home in North Port and I need emergency service?",
+      "a": "In North Port (Sarasota County), document damage first, then address safety hazards: trees on roofs, blocked exits, or limbs ready to drop. Emergency mitigation is typically expected by insurers after hurricane winds. Keep receipts, note the event timing, and don’t discard major limb sections until you’ve documented the failure point."
     },
     {
-      "q": "What should I do if a tree splits after a sudden windburst in Hialeah?",
-      "a": "In Hialeah (Miami-Dade County), treat a split trunk like a loaded spring—keep people away and don’t try to “relieve pressure” with random cuts. We’ll secure hanging limbs first, then decide whether cabling/bracing is viable or if removal is the safer option. Photos before stabilization are helpful if you need to show storm-related damage to an insurer."
+      "q": "How does Florida Statute 163.045 help North Port homeowners with dangerous trees?",
+      "a": "Florida Statute 163.045 can limit local permitting for hazardous-tree removal on residential property when a licensed arborist or landscape architect certifies the tree is dangerous. In North Port (Sarasota County), keep that signed certification, photos, and invoices. It supports compliance and helps if insurance questions arise."
     },
     {
-      "q": "Is stump grinding messy in Hialeah’s rocky soil, and how do you keep the yard clean?",
-      "a": "In Hialeah (Miami-Dade County), rocky limestone can slow grinding and throw heavier chips, so we use shields, matting, and careful pass depth. We can haul grindings away or leave a measured amount if you’re regrading. If you plan to replant, we often recommend replacing a portion with clean soil because heavy grindings can tie up nitrogen."
+      "q": "What’s the best way to replant after tree removal in North Port without repeating the same wind problems?",
+      "a": "In North Port (Sarasota County), choose species appropriate for your site and avoid planting too close to the home. We often recommend spacing and structural training early so the tree develops strong branch architecture before hurricane seasons. If you’re replacing a tall pine, consider a lower-profile canopy that’s easier to maintain safely."
     }
   ],
-  "tallahassee": [
+  "jupiter": [
     {
-      "q": "Why do tall pines fail so often around Tallahassee’s canopy roads?",
-      "a": "In Tallahassee (Leon County), towering pines can become high-risk when root systems are compromised by saturated soils, hidden decay, or construction impacts—common issues along the canopy road corridors. Wind loads don’t need to be hurricane-force if the root plate is weakened. A risk assessment looks at lean, root flare movement, crown condition, and decay indicators to decide if pruning, monitoring, or removal is the right call."
+      "q": "Living near the Jupiter Inlet, what should I do about wind exposure on my trees before hurricane season?",
+      "a": "Jupiter (Palm Beach County) properties near the Jupiter Inlet Lighthouse area get strong coastal gusts. We focus on structural pruning: reduce end-weight, remove deadwood, and correct weak unions—especially on Live Oaks. For palms, we keep pruning conservative. The goal is a healthier canopy that sheds wind, not a stripped tree."
     },
     {
-      "q": "How often should I schedule a tree risk inspection in Tallahassee?",
-      "a": "In Tallahassee (Leon County), an annual inspection is a solid baseline, with an extra check after major storm events or if you notice sudden canopy thinning. North Florida storms can combine saturated ground with strong gusts, which is a common failure recipe for pines. If you’re near FSU or older neighborhoods with mature trees, proactive inspections reduce emergency surprises."
+      "q": "Why do palm trimming standards matter so much in Jupiter’s coastal conditions?",
+      "a": "In Jupiter (Palm Beach County), salt air and wind already stress palms. Over-trimming can weaken them and increase storm debris. We remove only dead or broken fronds and keep clean cuts. If you’re near DuBois Park or waterfront neighborhoods, we also consider wind funnels and the risk of loose fronds becoming projectiles."
     },
     {
-      "q": "Does Florida Statute 163.045 apply for hazardous tree removals in Tallahassee city limits?",
-      "a": "In Tallahassee (Leon County), Florida Statute 163.045 generally limits local permitting for removing a dangerous tree on a residential property when a qualified professional documents the hazard. We can provide that written documentation after inspecting the tree for structural failure risks. If the tree is in the public right-of-way or subject to special protections, we’ll help you verify what still applies."
+      "q": "What factors make a tree removal in Jupiter require a crane, and how does that affect cost?",
+      "a": "In Jupiter (Palm Beach County), cranes are common when a tree is boxed in by roofs, pool cages, seawalls, or tight setbacks. Waterfront properties near the Intracoastal often have limited drop zones. A crane adds cost, but it reduces risk to structures and speeds safe removal—especially when hurricane-season deadlines are tight."
     },
     {
-      "q": "How do you remove a tree safely in Tallahassee when access is tight?",
-      "a": "In Tallahassee (Leon County), tight-access removals are typically done as controlled dismantles—climbing or using compact lifts, then lowering sections with rigging to keep limbs off roofs, cars, and landscaping. We set up landing zones and protect lawns and walkways with mats. This approach is common in established neighborhoods near downtown and campus areas."
+      "q": "If my arborist says a tree is dangerous in Jupiter, how should I document it under Florida Statute 163.045?",
+      "a": "In Jupiter (Palm Beach County), keep the signed hazard certification from a licensed arborist or landscape architect, plus date-stamped photos and your invoice. Florida Statute 163.045 relies on that documentation for residential hazardous-tree removal. Those records also help with HOA questions and insurance claims tied to storm mitigation."
     },
     {
-      "q": "Can you grind stumps near septic systems in the Tallahassee area?",
-      "a": "In Tallahassee (Leon County), we can often grind stumps near septic components, but we’re cautious with drainfields and shallow lines. We’ll ask where the tank and field are located, limit depth and equipment weight, and recommend the safest grind boundary. If you’re unsure where the system runs, locating it first prevents expensive surprises."
+      "q": "My neighbor’s tree is over my seawall in Jupiter—what’s the safest way to address it without creating liability?",
+      "a": "In Jupiter (Palm Beach County), avoid cutting across property lines and avoid cuts that destabilize the tree, especially near seawalls where root support matters. Start with an arborist assessment and a shared plan. If the trunk is on their side, written notice and documentation protect both parties—particularly before hurricane season."
     }
   ],
-  "port-st-lucie": [
+  "ocala": [
     {
-      "q": "In Port St. Lucie communities with HOAs, can a dangerous tree still be removed quickly?",
-      "a": "In Port St. Lucie (St. Lucie County), Florida Statute 163.045 generally limits local permitting for hazardous trees on residential property when properly documented, but HOAs can still enforce community rules and approvals. The practical path is to document the hazard with a qualified professional, notify the HOA with the report, and proceed with safety as the priority. We help homeowners in areas like Tradition package the documentation so it’s clear and defensible."
+      "q": "On rural property near Ocala, what’s the safest way to thin trees without creating a wind tunnel problem?",
+      "a": "Ocala (Marion County) acreage often benefits from selective thinning rather than aggressive clearing. We remove weak or crowded trees, prioritize hazardous leaners, and keep a stable canopy edge to avoid sudden wind exposure. Near the Ocala National Forest and open pasture areas, edge trees can become high-risk in storms if neighboring stands are removed improperly."
     },
     {
-      "q": "What are the warning signs that a Sabal Palm in Port St. Lucie is structurally failing?",
-      "a": "In Port St. Lucie (St. Lucie County), palms can look fine until they aren’t—watch for a soft, collapsing trunk base, mushroom-like conks at the bottom (often linked to internal decay), and a crown that suddenly droops or thins. If the palm is near a driveway or roofline, removal is typically the safest choice once structural decay is suspected. We’ll confirm stability and explain urgency in plain terms."
+      "q": "How do you protect barns and equestrian facilities in Ocala from tree failures?",
+      "a": "In Ocala (Marion County), especially near World Equestrian Center corridors, we focus on clearance over roofs, deadwood removal, and correcting weak branch unions on large shade trees. We also flag trees with root plate movement or trunk defects. Pre-hurricane season mitigation is cheaper and safer than emergency removals around livestock."
     },
     {
-      "q": "How should Slash Pines be pruned in Port St. Lucie to reduce hurricane failure?",
-      "a": "In Port St. Lucie (St. Lucie County), the goal is to remove defects—dead tops, weak forks, and excessive end weight—without stripping the canopy. Over-thinning a pine can backfire by changing how the tree flexes in wind. Because Treasure Coast storm bands can bring repeated gust cycles, staged, structural pruning is usually the most reliable approach."
+      "q": "Does Florida Statute 163.045 apply in Ocala if a tree is certified hazardous?",
+      "a": "Yes—Florida Statute 163.045 is statewide. In Ocala (Marion County), a licensed arborist or landscape architect can provide written hazard certification for a residential dangerous tree. Keep the signed statement, photos, and invoices. It helps with local compliance questions and supports insurance documentation if storms later cause related damage."
     },
     {
-      "q": "How soon can I lay sod after stump grinding in Port St. Lucie?",
-      "a": "In Port St. Lucie (St. Lucie County), you can often lay sod the same week if we grind to the right depth and you remove or level the grindings properly. For best results, we recommend mixing in clean soil to prevent settling and nutrient tie-up. If you’re replanting a tree instead of sodding, we’ll suggest a deeper grind and soil replacement."
+      "q": "What should I know about stump grinding in Ocala if I’m planning new fencing or a driveway?",
+      "a": "Ocala (Marion County) stump grinding is usually sufficient, but depth and width depend on what you’re building. For fence lines, we grind below grade and remove major surface roots so posts don’t hit wood. For driveways, we grind wider and recommend soil backfill—not chips—so you don’t get settling under the base."
     },
     {
-      "q": "What should I do right after a tree damages my roof during a storm in Port St. Lucie?",
-      "a": "In Port St. Lucie (St. Lucie County), prioritize safety and preventing more water intrusion—document the damage with photos, then have the hazard stabilized so repairs can start. Keep receipts for emergency mitigation and don’t discard damaged materials until your insurer advises. We provide before-and-after documentation and itemized invoices that typically help during the claims process."
+      "q": "If a tree falls on my home in Ocala, what’s the best insurance-ready documentation?",
+      "a": "In Ocala (Marion County), take wide shots showing the tree’s position relative to the home, close-ups of failure points, and photos of any visible defects like decay or cracks. Mitigate further damage quickly and keep receipts. If you had a prior arborist note, include it—especially for hurricane-season wind events."
     }
   ],
-  "cape-coral": [
+  "port-orange": [
     {
-      "q": "Can you remove a tree on a canal-front lot in Cape Coral without damaging my seawall?",
-      "a": "In Cape Coral (Lee County), canal-front removals are all about load control and access. We use protective mats, staged rigging, and—when needed—lighter equipment to avoid stressing the seawall edge. If the tree leans toward the canal, we’ll plan a controlled dismantle so sections don’t impact the wall or end up in the water."
+      "q": "Port Orange sits near the Halifax River—does that affect tree stability during storms?",
+      "a": "Port Orange (Volusia County) properties near the Halifax River can see saturated soil and strong gusts during hurricane season. Saturation reduces root grip, especially for tall pines. We look for soil cracking, root lift, and canopy imbalance. Near Dunlawton Sugar Mill Gardens, mature trees often need careful structural pruning rather than heavy thinning."
     },
     {
-      "q": "Do mangroves in Cape Coral require special rules for trimming or removal?",
-      "a": "Yes—In Cape Coral (Lee County), mangroves are protected under state-level regulations, and trimming or removal can require specific authorization. Florida Statute 163.045 is focused on local permitting for hazardous trees on residential property and doesn’t function as a blanket pass for protected mangroves. If mangroves are involved, we’ll point you to the correct compliance steps before any cutting happens."
+      "q": "What’s the cleanest way to handle a hazardous tree removal in Port Orange without permit delays?",
+      "a": "In Port Orange (Volusia County), Florida Statute 163.045 can limit local permitting for residential hazardous-tree removal when a licensed arborist or landscape architect certifies the danger. Keep the signed certification, photos, and invoice. That documentation also supports insurance narratives if you’re mitigating risk ahead of hurricane season."
     },
     {
-      "q": "After a hurricane, how do you handle emergency tree work in Cape Coral when streets are blocked?",
-      "a": "In Cape Coral (Lee County), we triage based on safety and access: trees on homes, blocking driveways, and dangerous hangers come first. We often start with stabilization—clearing paths and removing immediate hazards—then schedule full removals and stump grinding as disposal routes reopen. Keeping a simple photo log helps homeowners with insurance and contractor coordination."
+      "q": "How do you estimate removal costs in Port Orange when the tree is near a screened patio or pool cage?",
+      "a": "In Port Orange (Volusia County), tight clearances and fragile structures like pool cages increase rigging and labor. A fair quote accounts for controlled lowering of sections, protection of enclosures, haul-off, and whether a crane is needed. If you’re near busy corridors toward Daytona International Speedway, traffic access can also affect logistics."
     },
     {
-      "q": "Does stump grinding work well in Cape Coral’s sandy soil and high water conditions?",
-      "a": "In Cape Coral (Lee County), stump grinding works well, but backfilling matters because sand can settle after heavy rains. We’ll recommend how deep to grind based on whether you’re replanting or installing sod, and whether the water table is high in your specific neighborhood. For clean landscaping results, we often remove excess grindings and replace with stable fill."
+      "q": "Should I grind the stump in Port Orange if I’m planning to widen my driveway later?",
+      "a": "Yes. In Port Orange (Volusia County), stump grinding below grade helps you avoid hitting old wood when you excavate later. We recommend grinding wider than the stump footprint and backfilling with soil so the area stays level. That prevents dips and future base failures when you expand the driveway."
     },
     {
-      "q": "Are Australian Pines a removal priority in Cape Coral?",
-      "a": "In Cape Coral (Lee County), Australian Pines are widely considered problematic because they’re brittle in storms and can create heavy debris loads near canals and roofs. When they’re close to structures or lines, proactive removal is often safer than waiting for hurricane winds to do it for you. We can also recommend replacement options better suited to local wind and soil conditions."
+      "q": "My neighbor wants me to cut branches in Port Orange—what’s the safest approach before we argue about it?",
+      "a": "In Port Orange (Volusia County), start with an arborist assessment so decisions are based on structure, not opinions. Avoid cutting across property lines and avoid cuts that destabilize the tree ahead of hurricane winds. A written scope helps both sides agree on what’s reasonable and reduces the chance of damage-related liability."
     }
   ],
-  "pembroke-pines": [
+  "margate": [
     {
-      "q": "We have a tree that straddles two yards in Pembroke Pines—can one neighbor remove it?",
-      "a": "In Pembroke Pines (Broward County), a true boundary tree is typically treated as shared, so unilateral removal can create conflict fast. The practical solution is a written agreement between neighbors that covers scope, cost split, and replacement expectations. We can document the trunk location and provide an arborist assessment so decisions are based on risk and condition, not guesswork."
+      "q": "In Margate, what’s the most common reason homeowners call for emergency tree service?",
+      "a": "Margate (Broward County) emergency calls are usually storm-driven: trees or limbs on roofs, blocking driveways, or hanging overhead ready to fall. In neighborhoods near Calypso Cove, we also see saturated soil contributing to uproots. We secure the hazard first, then document conditions so you can support an insurance claim."
     },
     {
-      "q": "How does Florida Statute 163.045 affect hazardous tree removals in Pembroke Pines?",
-      "a": "In Pembroke Pines (Broward County), Florida Statute 163.045 generally limits local permitting for removing a dangerous tree on a residential property when documented by a qualified professional. We inspect for failure indicators and provide written documentation you can keep on file. If an HOA has separate requirements, we’ll help you present the safety documentation clearly to speed approvals."
+      "q": "My sidewalk is lifting in Margate—how do you confirm it’s tree roots and not soil movement?",
+      "a": "In Margate (Broward County), we look for root flare proximity, visible surface roots, and the pattern of lifting. Some movement is drainage-related, but roots are often the culprit with mature shade trees. We recommend a plan that protects tree stability—aggressive root cutting can increase hurricane-season failure risk."
     },
     {
-      "q": "Can cabling or bracing save a leaning tree in Pembroke Pines instead of removing it?",
-      "a": "In Pembroke Pines (Broward County), cabling and bracing can help when the tree has a manageable structural defect and a healthy root system. If the lean is from root plate movement or soil heaving, support hardware won’t fix the underlying problem and removal may be safer—especially near pool enclosures. We’ll explain what’s realistic after inspecting the trunk unions and root stability."
+      "q": "If my arborist says a tree is hazardous in Margate, what should I keep under Florida Statute 163.045?",
+      "a": "In Margate (Broward County), keep the signed hazard certification from a licensed arborist or landscape architect, plus date-stamped photos and invoices. Florida Statute 163.045 is documentation-based for residential hazardous-tree removal. Those records also help if your insurer asks whether the removal was preventative storm mitigation."
     },
     {
-      "q": "A broken limb is hanging over my driveway in Pembroke Pines—what’s the safest move?",
-      "a": "In Pembroke Pines (Broward County), treat hanging limbs as an emergency hazard—keep people and cars away and don’t pull on it from the ground. We can remove the hanger safely, then evaluate the remaining canopy for hidden cracks. If you’re near C.B. Smith Park or high-traffic streets, we also plan for safe work zones and debris control."
+      "q": "What makes stump grinding in Margate more than just ‘grind and go’?",
+      "a": "Margate (Broward County) yards often have irrigation, shallow utilities, and tight landscaping. We locate hazards, control grind depth, remove excess chips, and backfill with soil to prevent settling. If you plan to re-sod, proper backfill matters—chips alone compress and leave a low spot that holds water."
     },
     {
-      "q": "Do you offer stump grinding in Pembroke Pines that won’t wreck sprinklers?",
-      "a": "Yes—In Pembroke Pines (Broward County), we mark irrigation lines, keep grinding passes controlled, and use barriers to direct chips away from valves and heads. If you’re re-sodding, we can grind to a depth that prevents future sink spots. You’ll also get guidance on backfill so the area finishes flat and stable."
+      "q": "How do you handle a neighbor dispute in Margate over overhanging branches without escalating it?",
+      "a": "In Margate (Broward County), we recommend a written arborist-style assessment: what can be safely pruned, what risks exist, and how to avoid harming the tree. Avoid cutting beyond the property line. Clear photos and a neutral, professional scope usually keep the issue from turning into a bigger conflict—especially before hurricane season."
     }
   ],
-  "hollywood": [
+  "coconut-creek": [
     {
-      "q": "How do coastal winds near Hollywood Beach change tree trimming recommendations?",
-      "a": "In Hollywood (Broward County), salt air and steady ocean winds reward species that flex and recover—Sabal Palms and Sea Grape tend to handle conditions better than weakly structured, overgrown broad-canopy trees. Near the Hollywood Beach Broadwalk, we focus on removing deadwood and correcting weak attachments without stripping the canopy. Over-pruning can actually increase breakage by shifting wind load to fewer limbs."
+      "q": "Coconut Creek is known for lush landscaping—how do you reduce storm risk without stripping the canopy?",
+      "a": "In Coconut Creek (Broward County), near Butterfly World and dense residential landscaping, we focus on structural pruning: remove deadwood, reduce end-weight, and correct weak unions. The goal is a stronger canopy that handles hurricane gusts, not a bare tree. Over-thinning can create sun stress and brittle regrowth."
     },
     {
-      "q": "Can you remove a fallen tree in Hollywood and provide what I need for insurance?",
-      "a": "In Hollywood (Broward County), yes—we can clear the hazard, document the damage with photos, and provide an itemized invoice that aligns with common insurance documentation needs. If the tree hit a roof, fence, or carport, keep the scene intact until you’ve photographed it and your insurer has guidance. We also note any emergency mitigation steps that prevented further damage."
+      "q": "Is palm ‘hurricane cutting’ recommended in Coconut Creek?",
+      "a": "In Coconut Creek (Broward County), aggressive palm cuts can weaken the palm and increase disease risk. For Sabal Palms, we remove only dead or broken fronds. Proper pruning reduces storm debris while keeping the palm healthy—important in humid conditions where stressed palms decline quickly."
     },
     {
-      "q": "Is it smart to prune Sea Grape heavily before hurricane season in Hollywood?",
-      "a": "In Hollywood (Broward County), heavy pruning on Sea Grape can weaken the plant and reduce its ability to stabilize dunes and coastal soils. The safer approach is selective pruning—removing dead, broken, or crossing limbs and managing clearance without scalping the canopy. If you’re near Anne Kolb Nature Center or coastal zones, there may be additional environmental considerations to respect."
+      "q": "What documentation do I need in Coconut Creek if I remove a dangerous tree under Florida Statute 163.045?",
+      "a": "In Coconut Creek (Broward County), keep a signed hazard certification from a licensed arborist or landscape architect, plus date-stamped photos and the invoice. Florida Statute 163.045 is documentation-driven for residential hazardous-tree removal. Those records also support insurance claims if the work is tied to hurricane-season risk mitigation."
     },
     {
-      "q": "Do I need a permit to remove a big shade tree in Hollywood?",
-      "a": "In Hollywood (Broward County), it depends on the tree’s size, species, and location—some removals require approval under local rules. If the tree is hazardous on a residential property, Florida Statute 163.045 generally limits local permitting when documented by a qualified professional. We can assess the condition and help you determine whether it’s a straightforward safety removal or a regulated removal."
+      "q": "How soon can I plant a replacement tree in Coconut Creek after stump grinding?",
+      "a": "In Coconut Creek (Broward County), you can replant once the stump area is cleared of excess chips and backfilled with soil. We typically recommend grinding wider than the stump so the new root ball sits in clean soil, not decomposing wood. If you want shade with less storm risk, choose a well-structured, properly spaced species."
     },
     {
-      "q": "What’s the difference between stump grinding and full stump removal in Hollywood’s small lots?",
-      "a": "In Hollywood (Broward County), stump grinding removes the visible stump and major surface roots below grade, allowing you to sod or landscape over it quickly. Full stump removal is more invasive, involves heavier excavation, and is usually reserved for construction or hardscape projects that need the root mass completely gone. For most residential yards, grinding is cleaner, faster, and more cost-effective."
+      "q": "My neighbor wants me to cut a tree back in Coconut Creek—what’s the responsible way to respond?",
+      "a": "In Coconut Creek (Broward County), start with an onsite assessment and a written scope. Avoid cutting across property lines and avoid cuts that destabilize the tree before hurricane season. A professional evaluation clarifies whether pruning solves the issue or whether defects make removal the safer option."
     }
   ],
-  "miramar": [
+  "sanford": [
     {
-      "q": "What’s a realistic pruning schedule for storm-prone trees in Miramar?",
-      "a": "In Miramar (Broward County), most homeowners benefit from structural pruning every 2–3 years on fast growers, with annual checks for deadwood before hurricane season. Pines and large canopy trees near homes should be monitored more closely because repeated summer storms can loosen root plates. A consistent schedule is cheaper than emergency work and keeps wind risk predictable."
+      "q": "Sanford has big historic trees—are there extra considerations for removals in older neighborhoods?",
+      "a": "Sanford (Seminole County), especially near Historic Downtown and the Riverwalk by Lake Monroe, often has mature Live Oaks with large limb spans. Removals may require tighter rigging to protect older homes, sidewalks, and streets. We also check for protected street trees and right-of-way issues, then document the plan so the scope is clear."
     },
     {
-      "q": "Can root barriers help protect driveways and sidewalks in Miramar neighborhoods?",
-      "a": "In Miramar (Broward County), root barriers can be effective when combined with smart pruning and proper spacing—especially for trees planted close to hardscape in newer subdivisions. We evaluate the species, soil, and existing root direction before recommending barriers. Done correctly, it reduces future lifting and cracking without destabilizing the tree."
+      "q": "How do you evaluate a Live Oak in Sanford that drops limbs in summer storms?",
+      "a": "In Sanford (Seminole County), limb drop can be deadwood, included bark unions, or internal decay. We inspect branch attachments, look for cavities, and assess canopy balance. Near Lake Monroe wind corridors, gusts can exploit weak unions. Often, targeted structural pruning reduces risk without removing the entire tree."
     },
     {
-      "q": "A tree is down near Miramar Regional Park after a storm—what should I do if it’s blocking access?",
-      "a": "In Miramar (Broward County), keep people clear, avoid cutting if lines are involved, and call for an emergency assessment. We prioritize blocked driveways and access routes first, then remove hangers and unstable sections before full cleanup. Photos taken before work begins can be helpful if you later need to show storm impact."
+      "q": "If an arborist certifies a hazardous tree in Sanford, how does Florida Statute 163.045 help?",
+      "a": "Florida Statute 163.045 can limit local permitting for residential hazardous-tree removal when a licensed arborist or landscape architect provides written certification. In Sanford (Seminole County), keep the signed statement, photos, and invoices. Those records also help with insurance if removal was part of hurricane-season risk mitigation."
     },
     {
-      "q": "If the city has tree rules, can I still remove a dangerous tree in Miramar quickly?",
-      "a": "In Miramar (Broward County), Florida Statute 163.045 generally limits local permitting for removing a dangerous tree on a residential property when documented by a qualified professional. The key is having clear hazard documentation—cracks, root lift, major decay, or a confirmed structural defect. We provide written findings so you can proceed with safety and keep clean records."
+      "q": "I’m installing brick pavers in Sanford—what should I plan for if there’s an old stump in the way?",
+      "a": "In Sanford (Seminole County), stump grinding is usually the best first step, but pavers require stable base prep. We grind below grade, remove excess chips, and backfill with soil so the area doesn’t settle. If the stump is near utilities in older lots, call 811 and identify private lines before grinding."
     },
     {
-      "q": "How do you estimate stump grinding costs in Miramar?",
-      "a": "In Miramar (Broward County), stump grinding pricing is usually based on stump diameter, root flare spread, access, and whether you want grindings hauled away. Stumps tight to fences or hardscape take more time because we edge-grind carefully. We’ll quote it separately from removal so you can choose the finish level that matches your landscaping plans."
+      "q": "What’s the best way to document roof damage from a tree limb in Sanford for insurance?",
+      "a": "In Sanford (Seminole County), take wide shots showing the limb’s position, close-ups of the failure point, and photos of any visible defects like decay. Mitigate further damage quickly and keep receipts. If the limb came from a tree with prior issues, an arborist note can help explain the failure during hurricane-season winds."
     }
   ],
-  "gainesville": [
+  "sarasota": [
     {
-      "q": "My Live Oak in Gainesville has a cavity—does it automatically need to be removed?",
-      "a": "In Gainesville (Alachua County), a cavity is a concern but not an automatic removal sentence—it depends on depth, location, and how much sound wood remains. We assess the tree’s structure, canopy balance, and targets like roofs, sidewalks, and parked cars near the University of Florida area. If risk can be reduced with pruning or support systems, we’ll explain that option clearly."
+      "q": "In Sarasota, what’s the best way to protect mature trees before hurricane season without ruining their shape?",
+      "a": "Sarasota (Sarasota County), especially near Siesta Key wind corridors, benefits from structural pruning: remove deadwood, reduce end-weight on long limbs, and correct weak unions. Over-thinning can create stress and brittle regrowth. We tailor pruning to species—Live Oaks need balance, and palms should be cleaned conservatively, not over-cut."
     },
     {
-      "q": "What tree health issues should Gainesville homeowners watch for in humid summers?",
-      "a": "In Gainesville (Alachua County), keep an eye out for sudden canopy thinning, mushrooms or conks near the base, and persistent dieback—often signs of decay or root problems. Storm cycles plus humidity can accelerate structural weakness in older trees. A timely inspection lets you decide whether targeted pruning, monitoring, or removal is the safest move."
+      "q": "How do coastal conditions in Sarasota change how you approach palm maintenance?",
+      "a": "In Sarasota (Sarasota County), salt air and wind already stress palms. We avoid “hurricane cuts” and remove only dead or broken fronds, keeping clean cuts to reduce disease entry. If you’re near beach-side neighborhoods, wind funnels can turn loose fronds into hazards—proper maintenance reduces that risk without weakening the palm."
     },
     {
-      "q": "Can you remove storm-damaged limbs in Gainesville while protecting wildlife and nesting sites?",
-      "a": "In Gainesville (Alachua County), yes—we work carefully and plan removals to minimize unnecessary disruption, especially when nesting activity is present. Safety comes first when a limb is hazardous, but we can often adjust timing and technique when it’s a non-emergency prune. If you’re near green spaces like Paynes Prairie, it’s common to have more wildlife activity around mature trees."
+      "q": "What typically makes a Sarasota removal require specialized equipment like a crane?",
+      "a": "In Sarasota (Sarasota County), cranes often come into play when trees are boxed in by tight setbacks, pool cages, or multi-story homes—common near coastal and higher-end neighborhoods. A crane adds cost, but it reduces property risk and can speed safe removal. A solid estimate should explain why the equipment is needed, not just list it."
     },
     {
-      "q": "Do I need a permit to remove a tree in Gainesville, and how does Florida Statute 163.045 fit in?",
-      "a": "In Gainesville (Alachua County), permitting can apply depending on local ordinances and the tree’s size/species. If the tree is a documented hazard on a residential property, Florida Statute 163.045 generally limits local permitting when confirmed by a qualified professional. We can evaluate the tree, provide written hazard documentation when appropriate, and help you keep the process straightforward."
+      "q": "If my arborist certifies a dangerous tree in Sarasota, what does Florida Statute 163.045 mean for permits?",
+      "a": "Florida Statute 163.045 can limit local permitting for hazardous-tree removal on residential property when a licensed arborist or landscape architect certifies the hazard. In Sarasota (Sarasota County), keep the signed certification, photos, and invoices. That file also supports insurance claims if the removal was preventative storm mitigation."
     },
     {
-      "q": "How soon after stump grinding can I plant a new tree in Gainesville?",
-      "a": "In Gainesville (Alachua County), you can usually plant after grinding if the hole is cleaned out and refilled with quality soil rather than mostly wood grindings. For best results, we recommend removing excess grindings and backfilling with a soil mix that holds moisture without staying soggy. This reduces settling and improves root establishment through the first hot season."
+      "q": "After a storm in Sarasota, what insurance-friendly documentation should I gather before cleanup?",
+      "a": "In Sarasota (Sarasota County), take wide and close photos, capture the failure point, and note whether the tree contacted the home or blocked access. Then mitigate further damage—tarp and safe removal as needed—and keep receipts. If the tree showed visible decay, a brief arborist statement helps explain why it failed during hurricane-season winds."
     }
   ],
-  "coral-springs": [
+  "pensacola": [
     {
-      "q": "How can I tell if my tree is protected under Coral Springs rules before I remove it?",
-      "a": "In Coral Springs (Broward County), tree protections can depend on species, size, and location, so a quick identification and measurement step matters before scheduling removal. If it’s hazardous on a residential property, Florida Statute 163.045 generally limits local permitting when documented by a qualified professional. We can inspect, identify the tree, and explain whether you’re dealing with a routine removal or a regulated one."
+      "q": "Pensacola has lots of tall pines—what’s the most effective way to reduce hurricane risk on my property?",
+      "a": "In Pensacola (Escambia County), tall pines are common storm failures, especially when roots are compromised or trees are overcrowded. We assess lean, canopy balance, and root plate stability, then recommend selective removals and structural pruning where appropriate. Near NAS Pensacola corridors, wind exposure can be strong—pre-season risk reviews pay off."
     },
     {
-      "q": "My tree drops limbs near the kids’ area—what pruning actually prevents that in Coral Springs?",
-      "a": "In Coral Springs (Broward County), the most effective approach is targeted structural pruning: removing deadwood, correcting weak branch attachments, and reducing end weight over play zones. Random thinning doesn’t fix weak unions and can make the canopy less stable. If you’re near Mullins Park or other busy areas, we also plan work zones to keep people safe during the job."
+      "q": "What warning signs show a pine in Pensacola is becoming a hazard?",
+      "a": "Pensacola (Escambia County) homeowners should watch for fresh lean changes, soil cracking around the base, thinning crowns, and resin bleeding from trunk wounds. Pines can look “fine” until they fail in a wind event. If you’re near Pensacola Beach routes, salt and wind exposure can accelerate stress on already vulnerable trees."
     },
     {
-      "q": "How do you protect pool decks and screen enclosures during removals in Coral Springs?",
-      "a": "In Coral Springs (Broward County), we use controlled rigging so branches are lowered, not dropped, and we set protective matting over vulnerable surfaces. For tight backyards, we dismantle the tree in smaller pieces and keep debris routed away from screens and lanais. The goal is a clean removal without a second project repairing what the tree service caused."
+      "q": "If I remove a dangerous tree in Pensacola, how does Florida Statute 163.045 affect permitting?",
+      "a": "Florida Statute 163.045 can limit local permitting on residential property if a licensed arborist or landscape architect certifies the tree is hazardous. In Pensacola (Escambia County), keep the signed certification, photos, and invoices. That documentation helps with compliance questions and strengthens insurance records if removal is hurricane-risk mitigation."
     },
     {
-      "q": "If a storm breaks my tree and it’s clearly dangerous, can I remove it quickly in Coral Springs?",
-      "a": "In Coral Springs (Broward County), Florida Statute 163.045 generally limits local permitting for removing a dangerous tree on a residential property when a qualified professional documents the hazard. We’ll assess the failure points—cracks, split leaders, root lift—and provide written documentation when it meets that threshold. Keeping photos of the storm damage also helps if questions come up later."
+      "q": "What should I know about stump grinding in Pensacola’s soil conditions?",
+      "a": "In Pensacola (Escambia County), stump grinding is usually straightforward, but backfill matters. If you leave wood chips only, the area settles and creates dips. We remove excess chips and backfill with soil for a stable finish. If you plan to plant a replacement tree, grind wider so the new root ball sits in clean soil."
     },
     {
-      "q": "When is the best time to prune palms in Coral Springs without stressing them?",
-      "a": "In Coral Springs (Broward County), the safest practice is year-round removal of dead or broken fronds, with more active maintenance before hurricane season to reduce loose material. Avoid over-pruning green fronds, which can stress the palm and invite nutrient issues. If your palms are near roads or walkways, regular dead-frond management also prevents falling debris hazards."
+      "q": "After a hurricane in Pensacola, what steps help an insurance claim move smoothly?",
+      "a": "In Pensacola (Escambia County), document first: wide shots, close-ups, and the exact contact points on the home. Mitigate further damage, keep receipts, and avoid discarding major limb sections until photographed. Insurers generally expect emergency mitigation after storm winds. If you have a prior arborist note, include it to show pre-loss diligence."
     }
   ],
-  "clearwater": [
+  "bradenton": [
     {
-      "q": "Does salt air near Clearwater Beach change how you care for trees and palms?",
-      "a": "In Clearwater (Pinellas County), salt exposure can stress foliage and accelerate decline in sensitive species, so we focus on pruning for structure and removing dead material before it becomes a wind projectile. Palms near the beach often need dead-frond management, not aggressive cutting. If you’re close to Clearwater Beach, consistent maintenance is a big part of storm readiness."
+      "q": "In Bradenton, how do you handle removals near waterfront areas without damaging seawalls or landscaping?",
+      "a": "Bradenton (Manatee County) waterfront properties near the Riverwalk often have tight access and sensitive structures like seawalls and docks. We use controlled rigging, protect surfaces with mats when needed, and plan debris staging carefully. A site walk is essential to confirm whether a crane or specialized lowering is the safest approach."
     },
     {
-      "q": "Our condo in Clearwater needs emergency tree removal—what records should we keep?",
-      "a": "In Clearwater (Pinellas County), keep wide and close photos showing the tree’s position, damage points, and any immediate hazards before work begins. Save the contract, itemized invoice, and notes showing the emergency nature of the work—those details often help during insurance review. We also document stabilization steps if we had to remove limbs to stop ongoing property damage."
+      "q": "What’s a smart hurricane-season pruning strategy for big shade trees in Bradenton?",
+      "a": "In Bradenton (Manatee County), we reduce end-weight on long limbs, remove deadwood, and correct weak unions—especially on Live Oaks. Over-thinning can create stress and brittle regrowth. If your property is near open wind corridors along the river, a balanced canopy is stronger than a stripped tree going into peak storms."
     },
     {
-      "q": "Can you grind stumps in the tight courtyard areas common in Clearwater condos and townhomes?",
-      "a": "Yes—In Clearwater (Pinellas County), we use compact grinders when access is narrow and protect surrounding landscaping and hardscape with matting. We’ll also control chip direction so debris stays contained. If you plan to replant, we can recommend a deeper grind and proper soil replacement so the new planting thrives."
+      "q": "If my arborist certifies a hazardous tree in Bradenton, what does Florida Statute 163.045 mean in practice?",
+      "a": "Florida Statute 163.045 can limit local permitting for residential hazardous-tree removal when a licensed arborist or landscape architect certifies the hazard. In Bradenton (Manatee County), keep the signed certification, photos, and invoices. Those records also support insurance narratives when removal is part of storm-risk mitigation."
     },
     {
-      "q": "Do I need a permit to remove a large oak in Clearwater, and does Florida Statute 163.045 apply?",
-      "a": "In Clearwater (Pinellas County), permitting can apply depending on the tree and location, particularly if it’s near the right-of-way. If the tree is a documented hazard on a residential property, Florida Statute 163.045 generally limits local permitting when confirmed by a qualified professional. We can inspect, document risk indicators, and help you keep the process compliant and straightforward."
+      "q": "What drives the cost of tree removal in Bradenton more than homeowners expect?",
+      "a": "In Bradenton (Manatee County), the biggest cost drivers are access, proximity to structures, and controlled rigging needs—especially with pool cages and tight side yards. Disposal and haul-off also add up for large hardwoods. A good estimate should clearly state what’s included: cleanup, hauling, stump grinding, and any equipment like cranes."
     },
     {
-      "q": "How do you reduce hurricane windthrow risk for pines in Clearwater’s sandy soils?",
-      "a": "In Clearwater (Pinellas County), we look for root plate stability, past construction impacts, and canopy defects rather than trying to “thin the tree into safety.” Selective removal of dead tops and weak forks is more effective than heavy thinning. Because saturated sand reduces anchoring, pre-season inspections matter—especially if the pine is close to the home or driveway."
+      "q": "After a storm in Bradenton, what’s the right way to document damage before cleanup?",
+      "a": "In Bradenton (Manatee County), take wide shots showing the tree’s position, close-ups of the failure point, and photos of roof or fence contact areas. Then mitigate further damage safely and keep receipts. If the tree had visible decay, an arborist note helps explain failure during hurricane-season winds and supports your claim file."
     }
   ],
-  "palm-bay": [
+  "palm-beach-gardens": [
     {
-      "q": "Why do Slash Pines in Palm Bay lean after storms, and can they be corrected?",
-      "a": "In Palm Bay (Brevard County), a sudden lean often means the root plate shifted in saturated soil, not just a crooked trunk. If the root system is compromised, trying to pull it upright can increase failure risk later. We assess root movement, soil conditions, and targets like roofs and driveways before recommending stabilization or removal."
+      "q": "In Palm Beach Gardens, how do HOA requirements typically impact tree removal near golf-course communities?",
+      "a": "Palm Beach Gardens (Palm Beach County), especially around PGA National, often has HOA rules on approvals, aesthetics, and replacement plantings. That’s separate from safety. If a tree is hazardous, Florida Statute 163.045 may allow removal with proper certification, but you still want HOA communication and documentation to avoid compliance issues."
     },
     {
-      "q": "Can you grind a stump near my septic drainfield in Palm Bay?",
-      "a": "In Palm Bay (Brevard County), we can often grind near septic components, but we’re careful with drainfields and shallow lines. We’ll ask for the tank/field location, limit grind depth where necessary, and avoid heavy equipment over sensitive areas. If the system layout is unknown, locating it first is the safest approach."
+      "q": "What’s the best hurricane-season pruning approach for Live Oaks in Palm Beach Gardens?",
+      "a": "In Palm Beach Gardens (Palm Beach County), we prune Live Oaks for structure: reduce end-weight on long limbs, remove deadwood, and correct weak unions—without stripping the interior canopy. A balanced crown handles gusts better than a thinned-out tree. Scheduling ahead of peak storm months also improves crew availability and pricing."
     },
     {
-      "q": "What’s a simple hurricane-prep checklist for trees in Palm Bay?",
-      "a": "In Palm Bay (Brevard County), start with a professional inspection, remove deadwood and hanging limbs, and correct weak branch unions before peak storm months. Keep palms cleaned of dead fronds, and avoid last-minute aggressive pruning that can stress trees. If you’re near areas like Turkey Creek Sanctuary, expect more mature canopy and plan maintenance early."
+      "q": "If an arborist certifies my tree as dangerous in Palm Beach Gardens, what records should I keep under Florida Statute 163.045?",
+      "a": "In Palm Beach Gardens (Palm Beach County), keep the signed hazard certification from a licensed arborist or landscape architect, plus date-stamped photos and invoices. Florida Statute 163.045 is documentation-driven for residential hazardous-tree removal. That file also supports insurance claims if removal is part of storm mitigation planning."
     },
     {
-      "q": "If my tree is dangerous, can I remove it quickly in Palm Bay without waiting on permits?",
-      "a": "In Palm Bay (Brevard County), Florida Statute 163.045 generally limits local permitting for removing a dangerous tree on a residential property when a qualified professional documents the hazard. We can inspect for cracks, decay, and root plate movement and provide written documentation when appropriate. If the tree is in a protected area or right-of-way, we’ll help confirm the correct process first."
+      "q": "Why do removal estimates in Palm Beach Gardens vary so much between companies?",
+      "a": "In Palm Beach Gardens (Palm Beach County), the spread is usually scope and method: rigging versus free-drop, haul-off included or not, stump grinding depth, and whether a crane is needed. Tight setbacks and high-value landscaping also require more protection time. Ask for a line-item scope so you’re comparing equivalent work."
     },
     {
-      "q": "Are Sabal Palms safer than oaks during wind events in Palm Bay?",
-      "a": "In Palm Bay (Brevard County), healthy Sabal Palms often tolerate wind well because they flex, but palms with trunk decay or compromised crowns can fail suddenly. Oaks can also be safe when properly structured and maintained, but poorly attached limbs and decay raise risk. We evaluate condition and targets—not just species—especially near the Indian River Lagoon wind corridor."
-    }
-  ],
-  "pompano-beach": [
-    {
-      "q": "My tree roots are lifting pavers near a canal in Pompano Beach—can you prune the roots safely?",
-      "a": "In Pompano Beach (Broward County), root pruning can be done, but it has to be evaluated carefully because cutting too many roots can destabilize the tree—especially near canal-front soils. We assess how much structural root support would be lost and whether a barrier-and-repair approach is safer long term. If the tree is already leaning or has decay, removal may be the more responsible option."
-    },
-    {
-      "q": "What makes emergency tree removal more expensive during a storm event in Pompano Beach?",
-      "a": "In Pompano Beach (Broward County), surge pricing isn’t the point—hazard conditions are: blocked roads, power line proximity, night work, and the need for specialized rigging all increase labor and safety requirements. Disposal sites can also bottleneck after storms, adding time. A professional invoice should clearly separate emergency stabilization from full removal and cleanup."
-    },
-    {
-      "q": "Can I remove a dangerous tree in Pompano Beach quickly under Florida Statute 163.045?",
-      "a": "In Pompano Beach (Broward County), Florida Statute 163.045 generally limits local permitting for removing a dangerous tree on a residential property when documented by a qualified professional. We inspect, document risk indicators, and provide a written note when the hazard threshold is met. If the tree sits in a protected zone or right-of-way, we’ll help confirm additional requirements."
-    },
-    {
-      "q": "How deep should stump grinding go if I want to expand my driveway in Pompano Beach?",
-      "a": "In Pompano Beach (Broward County), for driveway or hardscape prep we typically recommend a deeper grind plus removal of major surface roots in the construction footprint. That prevents future settling and root push-up under concrete. We’ll coordinate with your contractor so the excavation and base layers are done correctly after grinding."
-    },
-    {
-      "q": "Can you help with insurance documentation after a tree falls near Atlantic Boulevard in Pompano Beach?",
-      "a": "In Pompano Beach (Broward County), yes—we document the scene with photos, keep notes on hazardous conditions, and provide itemized invoices for removal and mitigation. If the tree damaged a roof, fence, or vehicle, take your own photos before any debris is moved. Keeping a simple timeline of storm time, discovery time, and mitigation steps can also help during claim review."
-    }
-  ],
-  "west-palm-beach": [
-    {
-      "q": "Are banyan trees protected in West Palm Beach, and what makes them complicated to remove?",
-      "a": "In West Palm Beach (Palm Beach County), banyans can be heavily regulated and are often massive, with complex aerial and surface root systems that affect nearby structures. Removal typically requires advanced planning, staged dismantling, and careful cleanup to avoid collateral damage. If the banyan is hazardous, we can document the risk and help you understand what approvals may still be necessary."
-    },
-    {
-      "q": "My tree overhangs the roadway near Flagler Drive—who is responsible for trimming in West Palm Beach?",
-      "a": "In West Palm Beach (Palm Beach County), trees that overhang public roads or sidewalks may involve city right-of-way responsibilities, even if the trunk appears to be on private property. We start by verifying placement and clearance needs, then coordinate the safest plan to restore clearance without creating new hazards. This is especially important in high-traffic corridors near the Intracoastal."
-    },
-    {
-      "q": "What’s the right way to prune palms before hurricane season in West Palm Beach?",
-      "a": "In West Palm Beach (Palm Beach County), the goal is to remove dead, broken, or loose material—not to strip green fronds into a severe hurricane cut. Over-pruning can weaken the palm and make it more vulnerable to disease and nutrient stress. We focus on safe canopy management that reduces flying debris while keeping the palm healthy."
-    },
-    {
-      "q": "If my tree is documented as hazardous, can I remove it under Florida Statute 163.045 in West Palm Beach?",
-      "a": "In West Palm Beach (Palm Beach County), Florida Statute 163.045 generally limits local permitting for removing a dangerous tree on a residential property when a qualified professional documents the hazard. We provide written findings when risk indicators are present and help you keep clean records. If an HOA or special district rules apply, we’ll advise how to present the documentation so safety remains the priority."
-    },
-    {
-      "q": "What should I submit to insurance after a fallen tree damages my roof in West Palm Beach?",
-      "a": "In West Palm Beach (Palm Beach County), submit clear photos of the tree on the structure, close-ups of roof/fascia damage, and receipts for emergency mitigation and debris removal. Keep the work order and invoice, and avoid discarding damaged materials until the insurer confirms. We can provide before-and-after photos and notes that support the urgency of the work."
-    }
-  ],
-  "lakeland": [
-    {
-      "q": "Why do trees around Lake Hollingsworth in Lakeland drop limbs after storms, and is that a removal sign?",
-      "a": "In Lakeland (Polk County), limb drop can be tied to lightning injury, internal decay, or weak branch unions that finally fail under wind load. It doesn’t always require removal, but it does warrant a professional risk evaluation—especially if the tree overhangs roofs, sidewalks, or parked cars near the lake loop. We assess structural integrity and can recommend pruning or removal based on real risk, not fear."
-    },
-    {
-      "q": "What’s the typical process after a tree removal in Lakeland if I also want stump grinding?",
-      "a": "In Lakeland (Polk County), we remove the tree, clean debris thoroughly, then grind the stump below grade to match your landscaping plans. If you’re installing sod, we’ll recommend a grind depth and backfill approach to prevent settling. You’ll end up with a clean, level area ready for grass or planting—without the stump turning into a trip hazard."
-    },
-    {
-      "q": "Do I need permits for tree removal in Lakeland, and how does Florida Statute 163.045 apply?",
-      "a": "In Lakeland (Polk County), some removals may require local approval depending on the tree’s size, species, and location, especially near right-of-way areas. If the tree is a documented hazard on a residential property, Florida Statute 163.045 generally limits local permitting when confirmed by a qualified professional. We can inspect, document risk indicators, and help you keep the process compliant."
-    },
-    {
-      "q": "How can I reduce storm damage risk for a mature Live Oak in Lakeland’s older neighborhoods?",
-      "a": "In Lakeland (Polk County), the best protection is structural pruning that reduces long lever arms and corrects weak attachments—without topping or over-thinning. We also check for decay at old pruning wounds and evaluate root flare stability, especially where landscaping or construction changed the grade. A well-structured oak is far more storm-resilient than one that’s been repeatedly “cleaned out” aggressively."
-    },
-    {
-      "q": "If a tree falls on my fence during a summer storm in Lakeland, what should I do for cleanup and insurance?",
-      "a": "In Lakeland (Polk County), photograph the tree and fence damage before moving anything, then prioritize safety—especially if limbs are hung up or near lines. If a structure is damaged, notify your insurer and keep receipts for any emergency mitigation. We can remove the tree safely, document the work, and provide itemized invoices that make the next steps with repairs and claims simpler."
+      "q": "If a tree damages my roof in Palm Beach Gardens, what insurance steps should I take immediately?",
+      "a": "In Palm Beach Gardens (Palm Beach County), document damage first, then mitigate to prevent it from worsening—tarping and safe removal if necessary. Keep receipts and note the storm timing. Insurers typically expect emergency mitigation after hurricane winds. Don’t discard major limb sections until you’ve photographed the failure point and overall scene."
     }
   ]
 }
