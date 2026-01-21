@@ -25,7 +25,6 @@ import { SITE_CONFIG } from "../config.js";
     class="container"
     style="max-width: 1100px; padding: 4rem 1.5rem 12rem;"
   >
-    <!-- ÜST KARTLAR: TELEFON VE EMAIL -->
     <div
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 5rem;"
     >
@@ -71,7 +70,7 @@ import { SITE_CONFIG } from "../config.js";
     <div
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: start;"
     >
-      <!-- SOL: İLETİŞİM FORMU -->
+      <!-- SOL: İLETİŞİM FORMU (Çalışır Hale Getirildi) -->
       <div
         style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 15px 35px rgba(0,0,0,0.05);"
       >
@@ -80,8 +79,10 @@ import { SITE_CONFIG } from "../config.js";
         >
           Request a Quote
         </h2>
+
+        <!-- FORM ACTION: Buradaki XYZ123 yerine Formspree'den alacağın ID gelecek -->
         <form
-          action="#"
+          action="https://formspree.io/f/xyz123"
           method="POST"
           style="display: flex; flex-direction: column; gap: 15px;"
         >
@@ -92,8 +93,9 @@ import { SITE_CONFIG } from "../config.js";
             >
             <input
               type="text"
+              name="name"
               placeholder="John Doe"
-              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; font-family: inherit;"
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;"
               required
             />
           </div>
@@ -107,8 +109,9 @@ import { SITE_CONFIG } from "../config.js";
               >
               <input
                 type="tel"
+                name="phone"
                 placeholder="(555) 000-0000"
-                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; font-family: inherit;"
+                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;"
                 required
               />
             </div>
@@ -119,8 +122,9 @@ import { SITE_CONFIG } from "../config.js";
               >
               <input
                 type="text"
+                name="city"
                 placeholder="e.g. Miami"
-                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; font-family: inherit;"
+                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;"
                 required
               />
             </div>
@@ -131,7 +135,8 @@ import { SITE_CONFIG } from "../config.js";
               >Service Needed</label
             >
             <select
-              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; background: white; outline: none; font-family: inherit;"
+              name="service"
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; background: white;"
             >
               <option>Tree Removal</option>
               <option>Stump Grinding</option>
@@ -142,24 +147,25 @@ import { SITE_CONFIG } from "../config.js";
           <div>
             <label
               style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
-              >Message (Optional)</label
+              >Message</label
             >
             <textarea
+              name="message"
               rows="4"
               placeholder="Tell us about your project..."
-              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; font-family: inherit; resize: vertical;"
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; resize: vertical;"
             ></textarea>
           </div>
           <button
             type="submit"
-            style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 800; font-size: 1rem; cursor: pointer; transition: 0.2s;"
+            style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;"
           >
             SEND REQUEST
           </button>
         </form>
       </div>
 
-      <!-- SAĞ: HARİTA VE BİLGİ -->
+      <!-- SAĞ: HARİTA (KESİN ÇÖZÜM) -->
       <div>
         <h2
           style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0;"
@@ -168,22 +174,20 @@ import { SITE_CONFIG } from "../config.js";
         </h2>
         <p style="color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
           ProTreeTrim™ manages a distributed network of certified experts across
-          all <strong>67 Florida counties</strong>. Our virtual dispatch center
-          ensures that no matter where you are, professional help is always
-          available.
+          all <strong>67 Florida counties</strong>.
         </p>
 
-        <!-- FLORIDA HARİTASI (MERKEZİ FLORIDA'YA ODAKLANDI) -->
+        <!-- GARANTİLİ FLORIDA HARİTASI: pb parametresi yerine direkt search query kullanıyoruz -->
         <div
           style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m2!1s0x88c176a8d540b7b5%3A0x8b37c5c71f21f0a5!2sFlorida!5e0!3m2!1sen!2sus!4v1705852800000!5m2!1sen!2sus&q=Florida&z=6"
             width="100%"
             height="450"
-            style="border:0;"
-            allowfullscreen=""
+            style="border:0"
             loading="lazy"
+            allowfullscreen
+            src="https://maps.google.com/maps?q=Florida&t=&z=6&ie=UTF8&iwloc=&output=embed"
           >
           </iframe>
         </div>
@@ -196,17 +200,3 @@ import { SITE_CONFIG } from "../config.js";
     </div>
   </main>
 </MainLayout>
-
-<style>
-  button:hover {
-    background: #081c15 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  input:focus,
-  textarea:focus,
-  select:focus {
-    border-color: var(--secondary) !important;
-    box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.1);
-  }
-</style>
