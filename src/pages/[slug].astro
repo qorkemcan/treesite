@@ -6,6 +6,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../config.js";
 import { Image } from "astro:assets";
 
+// 1. ADIM: Premium FAQ verisini içeri alıyoruz
+import premiumFaqs from "../data/premium-faqs.json";
+
 export async function getStaticPaths() {
   const filePath = path.resolve("./src/data/cities.csv");
   const fileContent = fs.readFileSync(filePath, "utf-8");
@@ -82,39 +85,46 @@ if (imagePaths.length > 0) {
   selectedImage = imgModule.default;
 }
 
-const faqs =
-  {
-    "tree-removal": [
-      {
-        q: `How much does tree removal cost in ${cityName}?`,
-        a: `Tree removal in ${cityName} is priced based on tree size and proximity to structures like ${landmark}. We provide free on-site estimates.`,
-      },
-      {
-        q: `Are you licensed for hazardous removals in ${countyName} County?`,
-        a: `Yes, our network connects you with fully licensed and insured crews specialized in dangerous Florida tree removals.`,
-      },
-    ],
-    "stump-grinding": [
-      {
-        q: `Do you offer stump grinding in ${cityName}?`,
-        a: `Yes, we provide full stump removal and surface root grinding to restore your property near ${landmark}.`,
-      },
-      {
-        q: `Will stump removal prevent termites?`,
-        a: `Absolutely. Grinding down stumps in ${countyName} County removes the primary food source for subterranean termites.`,
-      },
-    ],
-    "emergency-service": [
-      {
-        q: `How fast is emergency tree response near ${landmark}?`,
-        a: `Our 24/7 dispatch network typically reaches ${cityName} homes within 2-4 hours after a major storm.`,
-      },
-      {
-        q: `Do you work with insurance in ${cityName}?`,
-        a: `Yes, our local crews provide photos and data needed for storm damage insurance mitigation in ${countyName} County.`,
-      },
-    ],
-  }[serviceInfo.prefix] || [];
+// 2. ADIM: AKILLI FAQ MANTIĞI
+const cityKey = cityData.City.toLowerCase().trim().replace(/\s+/g, "-");
+let finalFaqs = premiumFaqs[cityKey] || [];
+
+// Eğer bu şehir için özel FAQ yoksa, standart olanları oluştur
+if (finalFaqs.length === 0) {
+  finalFaqs =
+    {
+      "tree-removal": [
+        {
+          q: `How much does tree removal cost in ${cityName}?`,
+          a: `Tree removal in ${cityName} is priced based on tree size and proximity to structures like ${landmark}. We provide free on-site estimates.`,
+        },
+        {
+          q: `Are you licensed for hazardous removals in ${countyName} County?`,
+          a: `Yes, our network connects you with fully licensed and insured crews specialized in dangerous Florida tree removals.`,
+        },
+      ],
+      "stump-grinding": [
+        {
+          q: `Do you offer stump grinding in ${cityName}?`,
+          a: `Yes, we provide full stump removal and surface root grinding to restore your property near ${landmark}.`,
+        },
+        {
+          q: `Will stump removal prevent termites?`,
+          a: `Absolutely. Grinding down stumps in ${countyName} County removes the primary food source for subterranean termites.`,
+        },
+      ],
+      "emergency-service": [
+        {
+          q: `How fast is emergency tree response near ${landmark}?`,
+          a: `Our 24/7 dispatch network typically reaches ${cityName} homes within 2-4 hours after a major storm.`,
+        },
+        {
+          q: `Do you work with insurance in ${cityName}?`,
+          a: `Yes, our local crews provide photos and data needed for storm damage insurance mitigation in ${countyName} County.`,
+        },
+      ],
+    }[serviceInfo.prefix] || [];
+}
 
 const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & Insured`;
 ---
@@ -166,7 +176,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & I
       >
     </div>
 
-    <!-- HOW IT WORKS (RE-STYLED) -->
+    <!-- HOW IT WORKS -->
     <section style="margin-top: 4rem;">
       <h2
         style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;"
@@ -261,7 +271,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & I
       </div>
     </section>
 
-    <!-- WHY CHOOSE US (MOVED NEAR FAQ) -->
+    <!-- WHY CHOOSE US -->
     <section style="margin-top: 5rem;">
       <h2
         style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;"
@@ -320,7 +330,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & I
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ (Burada finalFaqs kullanılıyor) -->
     <section style="margin-top: 4rem;">
       <h2
         style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;"
@@ -329,7 +339,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & I
       </h2>
       <div style="display: flex; flex-direction: column; gap: 15px;">
         {
-          faqs.map((f) => (
+          finalFaqs.map((f) => (
             <div style="background: white; padding: 1.5rem; border-radius: 16px; border: 1px solid #eee;">
               <h4 style="color: #1b4332; font-weight: 800; margin: 0 0 10px; font-size: 1.1rem;">
                 {f.q}
