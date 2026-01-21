@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "../config.js";
 
 <MainLayout
   title="Contact Us | ProTreeTrim™ Florida Dispatch"
-  description="Get in touch with ProTreeTrim™ for service coordination, partnerships, or administrative support regarding Florida tree care."
+  description="Contact ProTreeTrim™ for service coordination, free estimates, or partnership opportunities across Florida."
 >
   <header
     style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center;"
@@ -14,25 +14,23 @@ import { SITE_CONFIG } from "../config.js";
     <h1
       style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900;"
     >
-      Connect With Us
+      Get In Touch
     </h1>
     <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">
-      Official Dispatch & Administrative Support
+      Professional Tree Care Coordination Across Florida
     </p>
   </header>
 
   <main
     class="container"
-    style="max-width: 1000px; padding: 4rem 1.5rem 12rem;"
+    style="max-width: 1100px; padding: 4rem 1.5rem 12rem;"
   >
-    <!-- Alt boşluk 12rem yapılarak daha da ferahlatıldı -->
-
+    <!-- ÜST KARTLAR: TELEFON VE EMAIL -->
     <div
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 5rem;"
     >
-      <!-- TELEFON KUTUSU -->
       <div
-        style="background: #fff7ed; border: 2px solid #ea580c; padding: 2.5rem; border-radius: 24px; text-align: center; box-shadow: 0 10px 30px rgba(234, 88, 12, 0.05);"
+        style="background: #fff7ed; border: 2px solid #ea580c; padding: 2.5rem; border-radius: 24px; text-align: center;"
       >
         <div style="font-size: 2.5rem; margin-bottom: 15px;">📞</div>
         <h3
@@ -41,7 +39,7 @@ import { SITE_CONFIG } from "../config.js";
           24/7 Dispatch
         </h3>
         <p style="color: #7c2d12; font-size: 0.95rem; margin-bottom: 1.5rem;">
-          For service requests, estimates, and storm emergencies.
+          For estimates and storm emergencies.
         </p>
         <a
           href={SITE_CONFIG.phoneHref}
@@ -50,7 +48,6 @@ import { SITE_CONFIG } from "../config.js";
         >
       </div>
 
-      <!-- EMAIL KUTUSU -->
       <div
         style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 24px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.02);"
       >
@@ -61,7 +58,7 @@ import { SITE_CONFIG } from "../config.js";
           Email Support
         </h3>
         <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1.5rem;">
-          For business inquiries, advertising, and network partnerships.
+          For business and partnership inquiries.
         </p>
         <a
           href={`mailto:${SITE_CONFIG.email}`}
@@ -71,45 +68,145 @@ import { SITE_CONFIG } from "../config.js";
       </div>
     </div>
 
-    <!-- HARİTA VE OPERASYON MERKEZİ -->
     <div
-      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center; border-top: 1px solid #eee; padding-top: 5rem;"
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: start;"
     >
-      <div>
-        <h2 style="color: #1b4332; font-size: 1.8rem; font-weight: 800;">
-          Statewide Coverage
-        </h2>
-        <p style="color: #4b5563; line-height: 1.8;">
-          ProTreeTrim™ operates as a distributed digital hub. We don't believe
-          in a single office; we believe in being <strong>everywhere</strong>.
-        </p>
-        <p style="color: #4b5563; line-height: 1.8;">
-          Our virtual coordination center manages certified crews across all 67
-          Florida counties. Help is just a phone call away.
-        </p>
-        <div
-          style="margin-top: 20px; font-weight: 700; color: #166534; display: flex; align-items: center; gap: 8px;"
+      <!-- SOL: İLETİŞİM FORMU -->
+      <div
+        style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 15px 35px rgba(0,0,0,0.05);"
+      >
+        <h2
+          style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0; margin-bottom: 1.5rem;"
         >
-          <span style="font-size: 1.2rem;">📍</span> Serving All Florida Counties
-          & Cities
-        </div>
+          Request a Quote
+        </h2>
+        <form
+          action="#"
+          method="POST"
+          style="display: flex; flex-direction: column; gap: 15px;"
+        >
+          <div>
+            <label
+              style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
+              >Your Name</label
+            >
+            <input
+              type="text"
+              placeholder="John Doe"
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; font-family: inherit;"
+              required
+            />
+          </div>
+          <div
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;"
+          >
+            <div>
+              <label
+                style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
+                >Phone</label
+              >
+              <input
+                type="tel"
+                placeholder="(555) 000-0000"
+                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; font-family: inherit;"
+                required
+              />
+            </div>
+            <div>
+              <label
+                style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
+                >City</label
+              >
+              <input
+                type="text"
+                placeholder="e.g. Miami"
+                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; font-family: inherit;"
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
+              >Service Needed</label
+            >
+            <select
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; background: white; outline: none; font-family: inherit;"
+            >
+              <option>Tree Removal</option>
+              <option>Stump Grinding</option>
+              <option>Emergency Service</option>
+              <option>General Pruning</option>
+            </select>
+          </div>
+          <div>
+            <label
+              style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
+              >Message (Optional)</label
+            >
+            <textarea
+              rows="4"
+              placeholder="Tell us about your project..."
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; font-family: inherit; resize: vertical;"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 800; font-size: 1rem; cursor: pointer; transition: 0.2s;"
+          >
+            SEND REQUEST
+          </button>
+        </form>
       </div>
 
-      <!-- YENİ VE HATASIZ FLORIDA HARİTASI -->
-      <div
-        style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 15px 35px rgba(0,0,0,0.08);"
-      >
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.6666666666665!2d-81.5157535!3d27.6648274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c176a8d540b7b5%3A0x8b37c5c71f21f0a5!2sFlorida!5e0!3m2!1sen!2sus!4v1737470400000!5m2!1sen!2sus"
-          width="100%"
-          height="400"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+      <!-- SAĞ: HARİTA VE BİLGİ -->
+      <div>
+        <h2
+          style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0;"
         >
-        </iframe>
+          Statewide Coverage
+        </h2>
+        <p style="color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
+          ProTreeTrim™ manages a distributed network of certified experts across
+          all <strong>67 Florida counties</strong>. Our virtual dispatch center
+          ensures that no matter where you are, professional help is always
+          available.
+        </p>
+
+        <!-- FLORIDA HARİTASI (MERKEZİ FLORIDA'YA ODAKLANDI) -->
+        <div
+          style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m2!1s0x88c176a8d540b7b5%3A0x8b37c5c71f21f0a5!2sFlorida!5e0!3m2!1sen!2sus!4v1705852800000!5m2!1sen!2sus&q=Florida&z=6"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+        <div
+          style="margin-top: 20px; font-weight: 700; color: #166534; display: flex; align-items: center; gap: 8px; justify-content: center;"
+        >
+          <span>📍</span> Official Service Network: All Florida Regions
+        </div>
       </div>
     </div>
   </main>
 </MainLayout>
+
+<style>
+  button:hover {
+    background: #081c15 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--secondary) !important;
+    box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.1);
+  }
+</style>
