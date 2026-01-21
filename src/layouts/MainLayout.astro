@@ -42,7 +42,13 @@ const GTM_ID = "GTM-PW924QGW";
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
+
+    <!-- FAVICON AYARLARI (GÜNCELLENDİ) -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Opsiyonel: public klasöründe varsa -->
+
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
@@ -145,6 +151,16 @@ const GTM_ID = "GTM-PW924QGW";
     </style>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+
     <div
       style="background: var(--primary-dark); color: #ffb703; padding: 8px; text-align: center; font-size: 0.6rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;"
     >
@@ -234,21 +250,24 @@ const GTM_ID = "GTM-PW924QGW";
             <span
               >LICENSED & INSURED<br /><small style="opacity: 0.7;"
                 >Verified Florida Network</small
-              ></span>
+              ></span
+            >
           </div>
           <div class="trust-badge-footer">
             <span>⚡</span>
             <span
               >24/7 RESPONSE<br /><small style="opacity: 0.7;"
                 >Emergency Dispatch</small
-              ></span>
+              ></span
+            >
           </div>
           <div class="trust-badge-footer">
             <span>💰</span>
             <span
               >FREE ESTIMATES<br /><small style="opacity: 0.7;"
                 >No-Obligation Quotes</small
-              ></span>
+              ></span
+            >
           </div>
         </div>
         <p
