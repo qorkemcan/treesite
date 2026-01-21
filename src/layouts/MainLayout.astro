@@ -66,9 +66,10 @@ const GTM_ID = "GTM-PW924QGW";
         overflow-x: hidden;
         width: 100%;
         position: relative;
+        margin: 0;
+        padding: 0;
       }
       body {
-        margin: 0;
         background: var(--bg-light);
         color: #1a1a1a;
         line-height: 1.5;
@@ -87,16 +88,17 @@ const GTM_ID = "GTM-PW924QGW";
       /* Navigasyon Masaüstü */
       .nav-links-desktop {
         display: flex;
-        gap: 20px;
+        gap: 15px;
         align-items: center;
       }
       .nav-link {
         color: #4b5563;
         text-decoration: none;
         font-weight: 700;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         text-transform: uppercase;
         transition: 0.2s;
+        white-space: nowrap;
       }
       .nav-link:hover {
         color: var(--secondary);
@@ -106,10 +108,11 @@ const GTM_ID = "GTM-PW924QGW";
       .mobile-toggle-area {
         display: none;
         align-items: center;
-        gap: 15px;
+        gap: 12px;
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: 1150px) {
+        /* 1024'ten 1150'ye çektim ki linkler sığmadığında erkenden hamburger menüye geçsin */
         .nav-links-desktop {
           display: none;
         }
@@ -131,14 +134,16 @@ const GTM_ID = "GTM-PW924QGW";
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 1.5rem;
+        padding: 20px;
+        text-align: center;
       }
       #mobile-menu.active {
         display: flex;
       }
       .mobile-nav-link {
-        font-size: 1.5rem;
-        font-weight: 900;
+        font-size: 1.3rem;
+        font-weight: 800;
         color: var(--primary);
         text-decoration: none;
         text-transform: uppercase;
@@ -156,22 +161,6 @@ const GTM_ID = "GTM-PW924QGW";
         color: white;
         text-align: left;
       }
-
-      /* Animasyon */
-      .loading-pulse {
-        animation: skeleton-pulse 1.5s infinite ease-in-out;
-      }
-      @keyframes skeleton-pulse {
-        0% {
-          opacity: 0.5;
-        }
-        50% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0.5;
-        }
-      }
     </style>
   </head>
   <body>
@@ -183,7 +172,6 @@ const GTM_ID = "GTM-PW924QGW";
         style="display:none;visibility:hidden"></iframe></noscript
     >
 
-    <!-- En Üst Sarı Bant -->
     <div
       style="background: var(--primary-dark); color: #ffb703; padding: 10px 5px; text-align: center; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;"
     >
@@ -200,7 +188,7 @@ const GTM_ID = "GTM-PW924QGW";
       >
         <a
           href="/"
-          style="text-decoration: none; display: flex; align-items: center; gap: 6px;"
+          style="text-decoration: none; display: flex; align-items: center; gap: 6px; flex-shrink: 0;"
         >
           <div
             style="background: var(--primary); width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"
@@ -208,7 +196,7 @@ const GTM_ID = "GTM-PW924QGW";
             🌳
           </div>
           <span
-            style="font-weight: 900; color: var(--primary); font-size: 1.2rem; text-transform: uppercase; letter-spacing: -0.5px;"
+            style="font-weight: 900; color: var(--primary); font-size: 1.1rem; text-transform: uppercase; letter-spacing: -0.5px;"
             >Pro<span style="color: var(--secondary);">Tree</span>Trim</span
           >
         </a>
@@ -223,11 +211,12 @@ const GTM_ID = "GTM-PW924QGW";
             style="color:var(--primary); font-weight:800; border-bottom: 2px solid #ffb703;"
             >Trust & Safety</a
           >
+          <a href="/join-network" class="nav-link">Join Network</a>
           <a href="/about" class="nav-link">About</a>
           <a href="/contact" class="nav-link">Contact</a>
           <a
             href={SITE_CONFIG.phoneHref}
-            style="background: var(--primary); color: white !important; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.75rem;"
+            style="background: var(--primary); color: white !important; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.7rem;"
             >{SITE_CONFIG.phone}</a
           >
         </div>
@@ -236,12 +225,12 @@ const GTM_ID = "GTM-PW924QGW";
         <div class="mobile-toggle-area">
           <a
             href={SITE_CONFIG.phoneHref}
-            style="text-decoration: none; font-size: 1.4rem; background: #f3f4f6; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"
+            style="text-decoration: none; font-size: 1.3rem; background: #f3f4f6; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"
             >📞</a
           >
           <button
             id="mobileMenuBtn"
-            style="background: var(--primary); color: white; border: none; padding: 8px 12px; border-radius: 6px; font-size: 1.2rem; cursor: pointer;"
+            style="background: var(--primary); color: white; border: none; padding: 8px 12px; border-radius: 6px; font-size: 1.1rem; cursor: pointer;"
             >☰</button
           >
         </div>
@@ -252,7 +241,7 @@ const GTM_ID = "GTM-PW924QGW";
     <div id="mobile-menu">
       <button
         id="closeMenuBtn"
-        style="position: absolute; top: 20px; right: 20px; font-size: 3rem; background: none; border: none; color: #94a3b8;"
+        style="position: absolute; top: 20px; right: 20px; font-size: 2.5rem; background: none; border: none; color: #94a3b8;"
         >&times;</button
       >
       <a href="/" class="mobile-nav-link">Home</a>
@@ -261,6 +250,7 @@ const GTM_ID = "GTM-PW924QGW";
       <a href="/trust-safety" class="mobile-nav-link" style="color: #ea580c;"
         >Trust & Safety</a
       >
+      <a href="/join-network" class="mobile-nav-link">Join Our Network</a>
       <a href="/about" class="mobile-nav-link">About Us</a>
       <a href="/contact" class="mobile-nav-link">Contact</a>
       <a
@@ -329,6 +319,9 @@ const GTM_ID = "GTM-PW924QGW";
           <a href="/trust-safety" style="color: #ffb703; text-decoration: none;"
             >Trust & Safety</a
           >
+          <a href="/join-network" style="color: white; text-decoration: none;"
+            >Join Network</a
+          >
           <a href="/about" style="color: white; text-decoration: none;">About</a
           >
           <a href="/privacy" style="color: white; text-decoration: none;"
@@ -353,11 +346,8 @@ const GTM_ID = "GTM-PW924QGW";
           >
             <strong>Disclaimer:</strong> ProTreeTrim™ is a professional referral and
             dispatch network. We connect Florida homeowners with independently owned
-            and operated tree service professionals. ProTreeTrim™ does not directly
-            provide tree removal or arborist services. It is the responsibility of
-            the homeowner to verify that the contractor they are matched with maintains
-            necessary licenses and insurance required by their specific Florida county
-            or municipality.
+            and operated tree service professionals. It is the responsibility of the
+            homeowner to verify contractor licensing and insurance.
           </p>
         </div>
       </div>
@@ -375,7 +365,6 @@ const GTM_ID = "GTM-PW924QGW";
       </a>
     </div>
 
-    <!-- Mobile Menu Script -->
     <script is:inline>
       const menuBtn = document.getElementById("mobileMenuBtn");
       const closeBtn = document.getElementById("closeMenuBtn");
@@ -392,8 +381,6 @@ const GTM_ID = "GTM-PW924QGW";
       };
 
       closeBtn?.addEventListener("click", closeMenu);
-
-      // Linke tıklayınca menüyü kapat
       mobileMenu?.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", closeMenu);
       });
