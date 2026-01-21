@@ -24,7 +24,7 @@ const GTM_ID = "GTM-PW924QGW";
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager (Head Bölümü) -->
     <script is:inline define:vars={{ GTM_ID }}>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -38,32 +38,17 @@ const GTM_ID = "GTM-PW924QGW";
       })(window, document, "script", "dataLayer", GTM_ID);
     </script>
 
-    <!-- ★ MICROSOFT CLARITY ★ -->
-    <script type="text/javascript" is:inline>
-      (function (c, l, a, r, i, t, y) {
-        c[a] =
-          c[a] ||
-          function () {
-            (c[a].q = c[a].q || []).push(arguments);
-          };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "v3rg2oj6sv"); // Buraya Clarity'den aldığın ID'yi yapıştır
-    </script>
-
-    <!-- ★ GLOBAL LOCALBUSINESS SCHEMA ★ -->
-    <script type="application/ld+json" is:inline define:vars={{ SITE_CONFIG }}>
+    <!-- Global LocalBusiness Schema (Dinamik) -->
+    <script type="application/ld+json" is:inline define:vars={{ brandName: SITE_CONFIG.brandName, phone: SITE_CONFIG.phone, siteUrl: SITE_CONFIG.siteUrl }}>
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "ProTreeTrim™ Florida",
+        "name": brandName,
         "image": "https://protreetrim.com/og-image.jpg",
-        "@id": "https://protreetrim.com",
-        "url": "https://protreetrim.com",
-        "telephone": "SITE_CONFIG.phone",
+        "@id": siteUrl,
+        "url": siteUrl,
+        "telephone": phone,
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Statewide",
@@ -74,286 +59,78 @@ const GTM_ID = "GTM-PW924QGW";
           "@type": "GeoCoordinates",
           "latitude": 27.6648,
           "longitude": -81.5158
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "00:00",
-          "closes": "23:59"
         }
       }
     </script>
 
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <slot name="head" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
 
     <style is:global>
-      :root {
-        --primary: #1b4332;
-        --primary-dark: #081c15;
-        --secondary: #ea580c;
-        --bg-light: #fcfcfc;
-      }
-      * {
-        font-family: "Inter", sans-serif !important;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-      }
-      body {
-        margin: 0;
-        background: var(--bg-light);
-        color: #1a1a1a;
-        line-height: 1.5;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1.2rem;
-      }
-      .desktop-links {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-      }
-      .nav-link {
-        color: #4b5563;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 0.8rem;
-        transition: 0.2s;
-        text-transform: uppercase;
-      }
-      .nav-link:hover {
-        color: var(--secondary);
-      }
-      .menu-toggle {
-        display: none;
-      }
-      @media (max-width: 1024px) {
-        .desktop-links {
-          display: none !important;
-        }
-        .menu-toggle {
-          display: flex !important;
-          align-items: center;
-          gap: 10px;
-        }
-      }
-      #mobile-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: white;
-        z-index: 10002;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-      }
-      #mobile-menu.active {
-        display: flex;
-      }
-      .trust-badge-footer {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 15px;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-align: left;
-        color: white;
-      }
+      :root { --primary: #1b4332; --primary-dark: #081c15; --secondary: #ea580c; --bg-light: #fcfcfc; }
+      * { font-family: "Inter", sans-serif !important; box-sizing: border-box; scroll-behavior: smooth; }
+      body { margin: 0; background: var(--bg-light); color: #1a1a1a; line-height: 1.5; padding-bottom: 80px; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 1.2rem; }
+      
+      /* Hava Durumu Skeleton Animasyonu */
+      .loading-pulse { animation: pulse 1.5s infinite ease-in-out; background: #f1f5f9; color: transparent !important; border-radius: 4px; }
+      @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+      
+      .nav-link { color: #4b5563; text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; transition: 0.2s; }
+      .nav-link:hover { color: var(--secondary); }
     </style>
   </head>
   <body>
-    <noscript
-      ><iframe
-        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"></iframe></noscript
-    >
+    <!-- GTM (Noscript Bölümü) -->
+    <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <div
-      style="background: var(--primary-dark); color: #ffb703; padding: 8px; text-align: center; font-size: 0.6rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;"
-    >
+    <div style="background: var(--primary-dark); color: #ffb703; padding: 8px; text-align: center; font-size: 0.65rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">
       {badgeText}
     </div>
 
-    <nav
-      style="background: rgba(255, 255, 255, 0.98); border-bottom: 1px solid #eee; padding: 0.6rem 0; position: sticky; top: 0; z-index: 10000;"
-    >
-      <div
-        class="container"
-        style="display: flex; justify-content: space-between; align-items: center;"
-      >
-        <a
-          href="/"
-          style="text-decoration: none; display: flex; align-items: center; gap: 6px;"
-        >
-          <div
-            style="background: var(--primary); width: 30px; height: 30px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1rem;"
-          >
-            🌳
-          </div>
-          <span
-            style="font-weight: 900; color: var(--primary); font-size: 1.15rem; letter-spacing: -0.5px; text-transform: uppercase;"
-            >Pro<span style="color: var(--secondary);">Tree</span>Trim</span
-          >
+    <nav style="background: rgba(255, 255, 255, 0.98); border-bottom: 1px solid #eee; padding: 0.6rem 0; position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(10px);">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 6px;">
+          <div style="background: var(--primary); width: 30px; height: 30px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1rem;">🌳</div>
+          <span style="font-weight: 900; color: var(--primary); font-size: 1.15rem; letter-spacing: -0.5px; text-transform: uppercase;">Pro<span style="color: var(--secondary);">Tree</span>Trim</span>
         </a>
-
-        <div class="desktop-links">
+        <div style="display: flex; gap: 20px; align-items: center;">
           <a href="/services" class="nav-link">Services</a>
           <a href="/gallery" class="nav-link">Gallery</a>
           <a href="/about" class="nav-link">About</a>
           <a href="/contact" class="nav-link">Contact</a>
-          <a
-            href={SITE_CONFIG.phoneHref}
-            style="background: var(--primary); color: white !important; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.75rem;"
-            >CALL US NOW</a
-          >
-        </div>
-
-        <div class="menu-toggle">
-          <a
-            href={SITE_CONFIG.phoneHref}
-            style="background: var(--secondary); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;"
-            >📞</a
-          >
-          <button
-            id="openBtn"
-            style="background: #f3f4f6; border: none; font-size: 1.4rem; color: var(--primary); padding: 4px 8px; border-radius: 6px;"
-            >☰</button
-          >
         </div>
       </div>
     </nav>
 
-    <div id="mobile-menu">
-      <button
-        id="closeBtn"
-        style="position: absolute; top: 20px; right: 20px; font-size: 3rem; background: none; border: none; color: #94a3b8;"
-        >&times;</button
-      >
-      <a href="/" class="nav-link">HOME</a>
-      <a href="/services" class="nav-link">SERVICES</a>
-      <a href="/gallery" class="nav-link">GALLERY</a>
-      <a href="/about" class="nav-link">ABOUT</a>
-      <a href="/contact" class="nav-link">CONTACT</a>
-      <a
-        href={SITE_CONFIG.phoneHref}
-        style="background: var(--secondary); color: white !important; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 900; font-size: 1.2rem; margin-top: 1rem;"
-        >{SITE_CONFIG.phone}</a
-      >
-    </div>
-
     <slot />
 
-    <footer
-      style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 10rem; text-align: center; border-top: 5px solid var(--secondary);"
-    >
+    <footer style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 8rem; text-align: center; border-top: 5px solid var(--secondary);">
       <div class="container">
-        <div
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-bottom: 40px;"
-        >
-          <div class="trust-badge-footer">
-            <span>🛡️</span><span
-              >LICENSED & INSURED<br /><small style="opacity: 0.7;"
-                >Verified Florida Network</small
-              ></span>
-          </div>
-          <div class="trust-badge-footer">
-            <span>⚡</span><span
-              >24/7 RESPONSE<br /><small style="opacity: 0.7;"
-                >Emergency Dispatch</small
-              ></span>
-          </div>
-          <div class="trust-badge-footer">
-            <span>💰</span><span
-              >FREE ESTIMATES<br /><small style="opacity: 0.7;"
-                >No-Obligation Quotes</small
-              ></span>
-          </div>
-        </div>
-        <p
-          style="font-weight: 900; font-size: 1.3rem; margin-bottom: 15px; color: white;"
-        >
-          ProTreeTrim™ Florida
-        </p>
-        <div
-          style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-weight: 700; font-size: 0.75rem; text-transform: uppercase;"
-        >
+        <p style="font-weight: 900; font-size: 1.3rem; margin-bottom: 20px; color: white;">ProTreeTrim™ Florida</p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">
           <a href="/" style="color: white; text-decoration: none;">Directory</a>
-          <a href="/about" style="color: white; text-decoration: none;">About</a
-          >
-          <a href="/privacy" style="color: white; text-decoration: none;"
-            >Privacy</a
-          >
-          <a href="/contact" style="color: white; text-decoration: none;"
-            >Contact</a
-          >
+          <a href="/about" style="color: white; text-decoration: none;">About</a>
+          <a href="/privacy" style="color: white; text-decoration: none;">Privacy</a>
+          <a href="/contact" style="color: white; text-decoration: none;">Contact</a>
         </div>
+        <p style="margin-top: 30px; font-size: 0.7rem; opacity: 0.5;">© 2026 ProTreeTrim™ Florida. Licensed & Insured Expert Network.</p>
       </div>
     </footer>
 
-    <div
-      style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px; z-index: 10001; border-top: 1px solid #eee; display: flex; justify-content: center; box-shadow: 0 -5px 15px rgba(0,0,0,0.05);"
-    >
-      <a
-        href={SITE_CONFIG.phoneHref}
-        style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 15px; text-decoration: none !important; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px;"
-        >📞 CALL FOR FREE ESTIMATE</a
-      >
+    <!-- Fixed Mobile Button -->
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 12px; z-index: 10001; border-top: 1px solid #eee; display: flex; justify-content: center; box-shadow: 0 -5px 15px rgba(0,0,0,0.05);">
+      <a href={SITE_CONFIG.phoneHref} style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 16px; text-decoration: none; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+        📞 CALL FOR FREE ESTIMATE
+      </a>
     </div>
-
-    <script is:inline>
-      const openBtn = document.getElementById("openBtn");
-      const closeBtn = document.getElementById("closeBtn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const toggleMenu = (s) => {
-        if (mobileMenu) {
-          mobileMenu.classList.toggle("active", s);
-          document.body.style.overflow = s ? "hidden" : "auto";
-        }
-      };
-      openBtn?.addEventListener("click", () => toggleMenu(true));
-      closeBtn?.addEventListener("click", () => toggleMenu(false));
-      mobileMenu
-        ?.querySelectorAll("a")
-        .forEach((l) => l.addEventListener("click", () => toggleMenu(false)));
-    </script>
   </body>
 </html>

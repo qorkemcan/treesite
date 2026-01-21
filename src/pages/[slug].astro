@@ -5,18 +5,12 @@ import { parse } from "csv-parse/sync";
 import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../config.js";
 import { Image } from "astro:assets";
-
-// 1. ADIM: Premium FAQ verisini içeri alıyoruz
 import premiumFaqs from "../data/premium-faqs.json";
 
 export async function getStaticPaths() {
   const filePath = path.resolve("./src/data/cities.csv");
   const fileContent = fs.readFileSync(filePath, "utf-8");
-  const records = parse(fileContent, {
-    columns: true,
-    skip_empty_lines: true,
-    bom: true,
-  });
+  const records = parse(fileContent, { columns: true, skip_empty_lines: true, bom: true });
 
   const services = [
     { prefix: "tree-removal", name: "Tree Removal", icon: "🌳" },
@@ -34,9 +28,8 @@ export async function getStaticPaths() {
         props: {
           cityData: row,
           serviceInfo: service,
-          nearby: records
-            .filter((r) => r.County === row.County && r.City !== row.City)
-            .slice(0, 5),
+          allServices: services, // Şehir içi çapraz linkleme için
+          nearby: records.filter((r) => r.County === row.County && r.City !== row.City).slice(0, 5),
         },
       });
     });
@@ -44,250 +37,168 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { cityData, serviceInfo, nearby } = Astro.props;
+const { cityData, serviceInfo, nearby, allServices } = Astro.props;
 
-// API ve Şema için veriler
-const rawCityName = cityData.City;
-const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
-
-const toTitleCase = (str) => {
-  if (!str) return "";
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-};
-
-const cityName = toTitleCase(cityData.City);
-const landmark = toTitleCase(cityData.Landmark) || "The Local Area";
-const countyName = toTitleCase(cityData.County);
+// Veri Formatlama
+const cityName = cityData.City.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+const landmark = cityData.Landmark || "the local Florida landscape";
+const countyName = cityData.County;
 
 // Dinamik Görsel Seçimi
 const serviceFolder = serviceInfo.prefix.includes("removal") ? "removal" : serviceInfo.prefix.includes("stump") ? "stump" : "emergency";
 const allImages = import.meta.glob("../assets/gallery/fl/**/*.{jpeg,jpg,png,gif,webp}");
-const imagePaths = Object.keys(allImages).filter((path) => path.includes(`/${serviceFolder}/`));
+const imagePaths = Object.keys(allImages).filter((p) => p.includes(`/${serviceFolder}/`));
 
 let selectedImage = null;
 if (imagePaths.length > 0) {
-  const imageIndex = Math.abs((cityName + serviceInfo.prefix).split("").reduce((acc, char) => acc + char.charCodeAt(0), 0)) % imagePaths.length;
-  const selectedImageImport = allImages[imagePaths[imageIndex]];
-  const imgModule: any = await selectedImageImport();
+  const imageIndex = Math.abs((cityName + serviceInfo.prefix).split("").reduce((a, b) => a + b.charCodeAt(0), 0)) % imagePaths.length;
+  const imgModule: any = await allImages[imagePaths[imageIndex]]();
   selectedImage = imgModule.default;
 }
 
-// Akıllı FAQ Mantığı
+// FAQ Mantığı (Şehre özel yoksa varsayılan)
 const cityKey = cityData.City.toLowerCase().trim().replace(/\s+/g, "-");
-let finalFaqs = premiumFaqs[cityKey] || [];
-if (finalFaqs.length === 0) {
-  finalFaqs = {
-    "tree-removal": [
-        { q: `How much does tree removal cost in ${cityName}?`, a: `Tree removal in ${cityName} is priced based on tree size and proximity to structures like ${landmark}. We provide free estimates.` },
-        { q: `Are you licensed in ${countyName} County?`, a: `Yes, we connect you with fully licensed and insured Florida crews specialized in ${cityName} tree care.` }
-    ],
-    "stump-grinding": [
-        { q: `Do you offer stump grinding in ${cityName}?`, a: `Yes, we provide full stump removal and root grinding near ${landmark}.` },
-        { q: `Will it prevent termites?`, a: `Absolutely. Removing stumps in ${countyName} County eliminates primary termite food sources.` }
-    ],
-    "emergency-service": [
-        { q: `How fast is emergency response in ${cityName}?`, a: `Typically within 2-4 hours after a storm near ${landmark}.` },
-        { q: `Do you work with insurance?`, a: `Yes, local crews help with insurance mitigation data in ${countyName} County.` }
-    ]
-  }[serviceInfo.prefix] || [];
-}
-
-const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & Insured`;
+let finalFaqs = premiumFaqs[cityKey] || [
+    { q: `How much is ${serviceInfo.name} in ${cityName}?`, a: `Pricing for ${serviceInfo.name} in ${cityName} depends on the job size and proximity to structures like ${landmark}. Call for a free onsite quote.` },
+    { q: `Are you available for emergencies in ${countyName} County?`, a: `Yes, we provide 24/7 priority dispatch for tree emergencies throughout ${cityName} and surrounding areas.` }
+];
 ---
 
-<MainLayout title={optimizedTitle} description={cityData.Description}>
+<MainLayout title={`#1 ${serviceInfo.name} ${cityName}, FL | Licensed & Insured`} description={`Need ${serviceInfo.name.toLowerCase()} in ${cityName}, FL? Professional tree care near ${landmark}. Licensed experts, free estimates, 24/7 service.`}>
   
-  <!-- ★ BREADCRUMB SCHEMA ★ -->
-  <script type="application/ld+json" is:inline define:vars={{ cityName, currentUrl }}>
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protreetrim.com" },
-        { "@type": "ListItem", "position": 2, "name": "Florida", "item": "https://protreetrim.com" },
-        { "@type": "ListItem", "position": 3, "name": cityName, "item": currentUrl }
-      ]
-    }
-  </script>
-
-  <!-- ★ SERVICE SCHEMA ★ -->
-  <script type="application/ld+json" is:inline define:vars={{ cityName, serviceInfo, countyName }}>
+  <!-- Breadcrumb & Service Schema -->
+  <script type="application/ld+json" is:inline define:vars={{ cityName, serviceName: serviceInfo.name, countyName, siteUrl: SITE_CONFIG.siteUrl }}>
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": serviceInfo.name,
+      "name": serviceName + " in " + cityName,
       "provider": { "@type": "LocalBusiness", "name": "ProTreeTrim™ Florida" },
       "areaServed": [
         { "@type": "City", "name": cityName },
         { "@type": "AdministrativeArea", "name": countyName }
       ],
-      "description": "Professional " + serviceInfo.name + " services in " + cityName + ", Florida. Licensed and insured experts."
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Tree Care",
+        "itemListElement": [{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free Estimate" } }]
+      }
     }
   </script>
 
-  <!-- HEADER -->
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;">
     <div class="container">
-      <div style="font-size: 0.85rem; margin-bottom: 1rem; color: #ffb703; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;">Verified Experts in {countyName} County</div>
-      <h1 style="margin: 0; font-size: clamp(1.8rem, 7vw, 3rem); font-weight: 900; line-height: 1.2;">{cityName} {serviceInfo.name}</h1>
-      <p style="font-size: 1.2rem; margin-top: 1rem; color: #95d5b2; max-width: 750px; margin-left: auto; margin-right: auto;">Serving the {cityName} community near <strong>{landmark}</strong>.</p>
+      <h1 style="margin: 0; font-size: clamp(2rem, 7vw, 3.5rem); font-weight: 900; line-height: 1.1;">{cityName} {serviceInfo.name}</h1>
+      <p style="font-size: 1.2rem; margin-top: 1rem; color: #95d5b2;">Trusted arboriculture near <strong>{landmark}</strong></p>
     </div>
   </header>
 
-  <main class="container" style="max-width: 1000px; margin: -2.5rem auto 0; padding: 0 1rem; position: relative; z-index: 10;">
-    
-    <!-- CTA BOX -->
+  <main class="container" style="max-width: 1000px; margin-top: -2rem;">
+    <!-- CTA Card -->
     <div style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;">
-      <h3 style="margin: 0 0 10px; color: #064e3b; font-size: 1.6rem; font-weight: 800;">Get a Free Estimate</h3>
-      <p style="color: #6b7280; margin-bottom: 1.5rem; font-size: 0.95rem;">Connect with licensed professionals in {cityName}.</p>
-      <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem; text-decoration: none; border-radius: 12px; font-weight: 900; font-size: clamp(1.3rem, 5vw, 1.8rem); display: block; box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3);">{SITE_CONFIG.phone}</a>
+      <h3 style="margin: 0 0 10px; color: #1b4332; font-size: 1.5rem; font-weight: 800;">Get Your Free Estimate</h3>
+      <a href={SITE_CONFIG.phoneHref} style="color: #ea580c; text-decoration: none; font-size: 2.2rem; font-weight: 900; display: block;">{SITE_CONFIG.phone}</a>
     </div>
 
-    <!-- 1. KAYIP BÖLÜM: 3 SIMPLE STEPS (GERİ GELDİ) -->
-    <section style="margin-top: 4rem;">
-      <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;">3 Simple Steps to Service</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-        <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #e0f2fe;">📞</div>
-          <h4>1. Call Us</h4>
-          <p>Connect with our dispatch office instantly for help.</p>
-        </div>
-        <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #fef3c7;">📋</div>
-          <h4>2. Free Quote</h4>
-          <p>Get an expert assessment and no-obligation pricing.</p>
-        </div>
-        <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #dcfce7;">✅</div>
-          <h4>3. Job Done</h4>
-          <p>Professional service completed with full property cleanup.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- REAL-TIME WEATHER & LOCAL HUB -->
-    <section style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 15px;">
-      <div style="background: white; padding: 1.5rem; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: center;">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
-          <div><span style="background: #0ea5e9; color: white; font-size: 0.65rem; padding: 3px 10px; border-radius: 50px; font-weight: 800; text-transform: uppercase;">Live Feed</span><h4 style="margin: 5px 0 0; color: #1e293b; font-size: 1.1rem; font-weight: 800;">{cityName} Conditions</h4></div>
-          <div id="weather-icon" style="font-size: 2.2rem;">🌤️</div>
-        </div>
+    <!-- Weather & Local Hub (Internal Linking Power) -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px;">
+      <!-- Hızlandırılmış Hava Durumu (Skeleton ile) -->
+      <div style="background: white; padding: 1.5rem; border-radius: 20px; border: 1px solid #e2e8f0;">
+        <h4 style="margin: 0 0 15px; color: #1b4332; font-size: 1rem;">{cityName} Conditions</h4>
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; text-align: center;">
-          <div style="background: #f8fafc; padding: 12px 5px; border-radius: 12px; border: 1px solid #f1f5f9;"><span id="live-temp" style="display: block; font-size: 1.4rem; font-weight: 900; color: #0f172a;">--<small>°F</small></span><span style="font-size: 0.65rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Temp</span></div>
-          <div style="background: #f8fafc; padding: 12px 5px; border-radius: 12px; border: 1px solid #f1f5f9;"><span id="live-humidity" style="display: block; font-size: 1.4rem; font-weight: 900; color: #0f172a;">--<small>%</small></span><span style="font-size: 0.65rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Humidity</span></div>
-          <div style="background: #f8fafc; padding: 12px 5px; border-radius: 12px; border: 1px solid #f1f5f9;"><span id="live-wind" style="display: block; font-size: 1.4rem; font-weight: 900; color: #0f172a;">--<small>mph</small></span><span style="font-size: 0.65rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Wind</span></div>
-        </div>
-        <div id="weather-status" style="margin-top: 12px; display: flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 700; color: #64748b;">Connecting...</div>
-      </div>
-
-      <div style="background: white; padding: 1.5rem; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: center;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-          <div style="background: #fff7ed; width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; border: 1px solid #ffedd5;">📍</div>
-          <div><h4 style="margin: 0; color: #1b4332; font-size: 1.1rem; font-weight: 800;">{countyName} Hub</h4><p style="margin: 0; color: #64748b; font-size: 0.75rem; font-weight: 600;">Service Dispatch</p></div>
-        </div>
-        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 10px;">
-          <div style="background: #fdfbf9; padding: 12px; border-radius: 12px; border: 1px solid #ffedd5;"><span style="display: block; font-size: 0.6rem; color: #9a3412; font-weight: 800; text-transform: uppercase; margin-bottom: 4px;">Main Landmark</span><span style="font-size: 0.85rem; color: #1b4332; font-weight: 700; line-height: 1.2;">{landmark}</span></div>
-          <div style="background: #f0fdf4; padding: 12px; border-radius: 12px; border: 1px solid #dcfce7; text-align: center;"><span style="display: block; font-size: 0.6rem; color: #166534; font-weight: 800; text-transform: uppercase;">Status</span><span style="font-size: 0.9rem; color: #15803d; font-weight: 900;">READY</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTENT AND IMAGE -->
-    <section style="margin-top: 4rem;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center;">
-        <div>
-          <h2 style="color: #064e3b; font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem;">Expert {serviceInfo.name} in {cityName}</h2>
-          <p style="font-size: 1rem; color: #374151; line-height: 1.6;">{cityData.Description}</p>
-          <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.6;">Safety prioritied near <strong>{landmark}</strong>. We understand Florida landscapes in {countyName} County.</p>
-        </div>
-        {selectedImage && <Image src={selectedImage} alt={`${serviceInfo.name} in ${cityName}, FL - Certified crew near ${landmark}`} width={600} height={400} format="webp" style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);" />}
-      </div>
-    </section>
-
-    <!-- 2. KAYIP BÖLÜM: WHY CHOOSE US (GERİ GELDİ) -->
-    <section style="margin-top: 5rem;">
-      <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;">Why Choose Our {cityName} Network?</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-        <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #dcfce7;">🛡️</div>
-          <h4>Verified Compliance</h4>
-          <p>Licensed and insured crews specialized in {cityName} tree care standards.</p>
-        </div>
-        <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #fef3c7;">🚜</div>
-          <h4>Expert Equipment</h4>
-          <p>From massive Oaks near {landmark} to Palms, we have the right tools for the job.</p>
-        </div>
-        <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #fee2e2;">🚑</div>
-          <h4>Storm Ready</h4>
-          <p>Priority dispatch for emergency storm damage in {countyName} County.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section style="margin-top: 4rem;">
-      <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;">Common Questions</h2>
-      <div style="display: flex; flex-direction: column; gap: 15px;">
-        {finalFaqs.map((f) => (
-            <div style="background: white; padding: 1.5rem; border-radius: 16px; border: 1px solid #eee;">
-              <h4 style="color: #1b4332; font-weight: 800; margin: 0 0 10px; font-size: 1.1rem;">{f.q}</h4>
-              <p style="color: #4b5563; line-height: 1.6; margin: 0; font-size: 0.95rem;">{f.a}</p>
+            <div style="background: #f8fafc; padding: 10px; border-radius: 12px;">
+                <span id="temp" class="loading-pulse" style="display:block; font-size: 1.2rem; font-weight: 800;">00°F</span>
+                <small style="font-size: 0.6rem; opacity: 0.7; font-weight: 700;">TEMP</small>
             </div>
-        ))}
+            <div style="background: #f8fafc; padding: 10px; border-radius: 12px;">
+                <span id="wind" class="loading-pulse" style="display:block; font-size: 1.2rem; font-weight: 800;">0mph</span>
+                <small style="font-size: 0.6rem; opacity: 0.7; font-weight: 700;">WIND</small>
+            </div>
+            <div style="background: #f8fafc; padding: 10px; border-radius: 12px;">
+                <span id="cond" class="loading-pulse" style="display:block; font-size: 1.1rem; font-weight: 800;">---</span>
+                <small style="font-size: 0.6rem; opacity: 0.7; font-weight: 700;">SKIES</small>
+            </div>
+        </div>
       </div>
+
+      <!-- City Link Hub (Çapraz Linkleme) -->
+      <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 20px; border: 1px solid #dcfce7;">
+        <h4 style="margin: 0 0 10px; color: #166534; font-size: 1rem;">Also Available in {cityName}:</h4>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+            {allServices.filter(s => s.name !== serviceInfo.name).map(s => (
+                <a href={`/${s.prefix}-${cityData.City.toLowerCase().replace(/\s+/g, '-')}`} style="color: #1b4332; text-decoration: none; font-size: 0.9rem; font-weight: 700;">
+                    {s.icon} {s.name} Service →
+                </a>
+            ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <section style="margin-top: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+        <div>
+            <h2 style="color: #1b4332; font-size: 1.8rem; font-weight: 800;">Expert {serviceInfo.name} in {cityName}</h2>
+            <p style="line-height: 1.8; color: #4b5563; font-size: 1.05rem;">{cityData.Description}</p>
+            <p style="line-height: 1.8; color: #4b5563;">Located near <strong>{landmark}</strong>, our teams are fully equipped for the unique challenges of the {countyName} County landscape.</p>
+        </div>
+        {selectedImage && (
+            <div style="position: relative;">
+                <Image src={selectedImage} alt={`${serviceInfo.name} in ${cityName} FL near ${landmark}`} width={600} height={400} style="width:100%; height:auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
+                <div style="position: absolute; bottom: 15px; right: 15px; background: #ea580c; color: white; padding: 6px 14px; border-radius: 50px; font-size: 0.7rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px;">✓ Verified Local Crew</div>
+            </div>
+        )}
     </section>
 
-    <!-- 3. KAYIP BÖLÜM: NEARBY CITIES (GERİ GELDİ) -->
-    <section style="margin-top: 4rem; margin-bottom: 8rem; border-top: 1px solid #eee; padding-top: 3rem;">
-      <h3 style="color: #064e3b; font-size: 1.1rem; font-weight: 800; margin-bottom: 1.5rem; text-align: center;">Other Service Areas in {countyName} County:</h3>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        {nearby.map((n: any) => (
-            <a href={`/tree-removal-${n.City.toLowerCase().replace(/\s+/g, "-")}`} style="background: white; color: #166534; padding: 8px 16px; border-radius: 50px; text-decoration: none; font-size: 0.85rem; font-weight: 700; border: 1px solid #dcfce7; transition: 0.2s;" class="nearby-link">
-              {toTitleCase(n.City)} Tree Service
-            </a>
-        ))}
-      </div>
+    <!-- FAQ Section -->
+    <section style="margin: 80px 0;">
+        <h2 style="text-align: center; color: #1b4332; margin-bottom: 40px; font-weight: 900;">Common Questions in {cityName}</h2>
+        <div style="display: grid; gap: 15px; max-width: 800px; margin: 0 auto;">
+            {finalFaqs.map(f => (
+                <div style="background: white; padding: 1.5rem; border-radius: 18px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                    <p style="margin: 0 0 8px; font-weight: 800; color: #1b4332; font-size: 1.1rem;">{f.q}</p>
+                    <p style="margin: 0; color: #64748b; font-size: 1rem; line-height: 1.6;">{f.a}</p>
+                </div>
+            ))}
+        </div>
     </section>
 
+    <!-- Surrounding Cities (Internal Linking) -->
+    <section style="margin-bottom: 120px; text-align: center; border-top: 1px solid #eee; padding-top: 50px;">
+        <p style="font-weight: 800; color: #94a3b8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Serving Surrounding {countyName} County Areas:</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px;">
+            {nearby.map(n => (
+                <a href={`/tree-removal-${n.City.toLowerCase().replace(/\s+/g, '-')}`} style="background: white; border: 1px solid #e2e8f0; padding: 10px 20px; border-radius: 50px; text-decoration: none; color: #4b5563; font-size: 0.85rem; font-weight: 700; transition: 0.2s;" class="nearby-hover">
+                    {n.City} Tree Care
+                </a>
+            ))}
+        </div>
+    </section>
   </main>
 
-  <script is:inline define:vars={{ rawCityName }}>
-    async function fetchWeather() {
+  <script is:inline define:vars={{ rawCityName: cityData.City }}>
+    async function updateWeather() {
       try {
-        const response = await fetch(`https://wttr.in/${rawCityName},Florida?format=j1`);
-        const data = await response.json();
-        const current = data.current_condition[0];
-        document.getElementById('live-temp').innerHTML = `${current.temp_F}<small>°F</small>`;
-        document.getElementById('live-humidity').innerHTML = `${current.humidity}<small>%</small>`;
-        document.getElementById('live-wind').innerHTML = `${current.windspeedMiles}<small>mph</small>`;
-        const desc = current.weatherDesc[0].value;
-        document.getElementById('weather-status').innerHTML = `<span style="color: #16a34a;">●</span> Safe for Operations (${desc})`;
-        const iconBox = document.getElementById('weather-icon');
-        if(desc.toLowerCase().includes('sun')) iconBox.innerText = '☀️';
-        else if(desc.toLowerCase().includes('cloud')) iconBox.innerText = '☁️';
-        else iconBox.innerText = '🌤️';
+        const res = await fetch(`https://wttr.in/${rawCityName},Florida?format=j1`);
+        const data = await res.json();
+        const cur = data.current_condition[0];
+        
+        const tempEl = document.getElementById('temp');
+        const windEl = document.getElementById('wind');
+        const condEl = document.getElementById('cond');
+
+        tempEl.innerText = cur.temp_F + '°F';
+        windEl.innerText = cur.windspeedMiles + 'mph';
+        condEl.innerText = cur.weatherDesc[0].value.split(' ')[0];
+
+        // Animasyonu kaldır
+        [tempEl, windEl, condEl].forEach(el => el.classList.remove('loading-pulse'));
       } catch (e) {
-        document.getElementById('live-temp').innerText = '76°F';
-        document.getElementById('weather-status').innerText = 'Status: Operational';
+        console.error("Weather failed");
       }
     }
-    fetchWeather();
+    updateWeather();
   </script>
 </MainLayout>
 
 <style>
-  .info-card-base { background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); }
-  .step-card { text-align: center; }
-  .feature-card { text-align: left; }
-  .icon-box { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; }
-  .step-card .icon-box { margin-left: auto; margin-right: auto; }
-  h4 { font-weight: 800; margin: 0 0 10px; color: #1b4332; }
-  p { font-size: 0.9rem; color: #4b5563; line-height: 1.5; margin: 0; }
-  .nearby-link:hover { background: #f0fdf4 !important; border-color: #166534 !important; transform: translateY(-2px); }
+    .nearby-hover:hover { border-color: #ea580c !important; color: #ea580c !important; transform: translateY(-2px); }
 </style>
