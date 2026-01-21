@@ -2,6 +2,9 @@
 // src/pages/contact.astro
 import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../config.js";
+
+// Form gönderildikten sonra URL'de ?status=success varsa mesaj gösterir
+const isSuccess = Astro.url.searchParams.get("status") === "success";
 ---
 
 <MainLayout
@@ -11,20 +14,32 @@ import { SITE_CONFIG } from "../config.js";
   <header
     style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center;"
   >
-    <h1
-      style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900;"
-    >
-      Get In Touch
-    </h1>
-    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">
-      Professional Tree Care Coordination Across Florida
-    </p>
+    <div class="container">
+      <h1
+        style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900;"
+      >
+        Get In Touch
+      </h1>
+      <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">
+        Professional Tree Care Coordination Across Florida
+      </p>
+    </div>
   </header>
 
   <main
     class="container"
     style="max-width: 1100px; padding: 4rem 1.5rem 12rem;"
   >
+    <!-- Başarı Mesajı (Form gönderilince çıkar) -->
+    {
+      isSuccess && (
+        <div style="background: #dcfce7; border: 1px solid #16a34a; color: #166534; padding: 1.5rem; border-radius: 12px; text-align: center; margin-bottom: 3rem; font-weight: 700;">
+          ✓ Thank you! Your request has been sent successfully. Our dispatch
+          team will contact you shortly.
+        </div>
+      )
+    }
+
     <div
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 5rem;"
     >
@@ -70,7 +85,7 @@ import { SITE_CONFIG } from "../config.js";
     <div
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: start;"
     >
-      <!-- SOL: İLETİŞİM FORMU (Çalışır Hale Getirildi) -->
+      <!-- İLETİŞİM FORMU (Kendi API'mize Bağlı) -->
       <div
         style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 15px 35px rgba(0,0,0,0.05);"
       >
@@ -80,9 +95,8 @@ import { SITE_CONFIG } from "../config.js";
           Request a Quote
         </h2>
 
-        <!-- FORM ACTION: Buradaki XYZ123 yerine Formspree'den alacağın ID gelecek -->
         <form
-          action="https://formspree.io/f/xwvvavyl"
+          action="/api/contact"
           method="POST"
           style="display: flex; flex-direction: column; gap: 15px;"
         >
@@ -165,7 +179,7 @@ import { SITE_CONFIG } from "../config.js";
         </form>
       </div>
 
-      <!-- SAĞ: HARİTA (KESİN ÇÖZÜM) -->
+      <!-- HARİTA -->
       <div>
         <h2
           style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0;"
@@ -176,8 +190,6 @@ import { SITE_CONFIG } from "../config.js";
           ProTreeTrim™ manages a distributed network of certified experts across
           all <strong>67 Florida counties</strong>.
         </p>
-
-        <!-- GARANTİLİ FLORIDA HARİTASI: pb parametresi yerine direkt search query kullanıyoruz -->
         <div
           style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"
         >
@@ -190,11 +202,6 @@ import { SITE_CONFIG } from "../config.js";
             src="https://maps.google.com/maps?q=Florida&t=&z=6&ie=UTF8&iwloc=&output=embed"
           >
           </iframe>
-        </div>
-        <div
-          style="margin-top: 20px; font-weight: 700; color: #166534; display: flex; align-items: center; gap: 8px; justify-content: center;"
-        >
-          <span>📍</span> Official Service Network: All Florida Regions
         </div>
       </div>
     </div>
