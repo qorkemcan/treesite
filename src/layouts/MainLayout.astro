@@ -19,16 +19,6 @@ const {
 const canonicalURL = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl);
 const fullTitle = `${title} | ${SITE_CONFIG.brandName}`;
 const GTM_ID = "GTM-PW924QGW";
-
-// Yardımcı Fonksiyon (Şema ve Footer için)
-const toTitleCase = (str) =>
-  str
-    ? str
-        .toLowerCase()
-        .split(" ")
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(" ")
-    : "";
 ---
 
 <!doctype html>
@@ -90,7 +80,6 @@ const toTitleCase = (str) =>
         padding: 0 1.2rem;
       }
 
-      /* Desktop Navigation */
       .desktop-links {
         display: flex;
         gap: 20px;
@@ -108,7 +97,6 @@ const toTitleCase = (str) =>
         color: var(--secondary);
       }
 
-      /* Mobile Toggle */
       .menu-toggle {
         display: none;
       }
@@ -121,9 +109,6 @@ const toTitleCase = (str) =>
           display: flex !important;
           align-items: center;
           gap: 10px;
-        }
-        .logo-text {
-          font-size: 1.05rem !important;
         }
       }
 
@@ -160,14 +145,12 @@ const toTitleCase = (str) =>
     </style>
   </head>
   <body>
-    <!-- Top Bar -->
     <div
       style="background: var(--primary-dark); color: #ffb703; padding: 8px; text-align: center; font-size: 0.6rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;"
     >
       {badgeText}
     </div>
 
-    <!-- Navigation -->
     <nav
       style="background: rgba(255, 255, 255, 0.98); border-bottom: 1px solid #eee; padding: 0.6rem 0; position: sticky; top: 0; z-index: 10000;"
     >
@@ -185,8 +168,7 @@ const toTitleCase = (str) =>
             🌳
           </div>
           <span
-            class="logo-text"
-            style="font-weight: 900; color: var(--primary); font-size: 1.2rem; letter-spacing: -0.5px; text-transform: uppercase;"
+            style="font-weight: 900; color: var(--primary); font-size: 1.15rem; letter-spacing: -0.5px; text-transform: uppercase;"
             >Pro<span style="color: var(--secondary);">Tree</span>Trim</span
           >
         </a>
@@ -194,6 +176,7 @@ const toTitleCase = (str) =>
         <div class="desktop-links">
           <a href="/services" class="nav-link">Services</a>
           <a href="/gallery" class="nav-link">Gallery</a>
+          <a href="/about" class="nav-link">About</a>
           <a href="/contact" class="nav-link">Contact</a>
           <a
             href={SITE_CONFIG.phoneHref}
@@ -217,7 +200,6 @@ const toTitleCase = (str) =>
       </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu">
       <button
         id="closeBtn"
@@ -229,6 +211,7 @@ const toTitleCase = (str) =>
         >SERVICES</a
       >
       <a href="/gallery" class="nav-link" style="font-size: 1.5rem;">GALLERY</a>
+      <a href="/about" class="nav-link" style="font-size: 1.5rem;">ABOUT</a>
       <a href="/contact" class="nav-link" style="font-size: 1.5rem;">CONTACT</a>
       <a
         href={SITE_CONFIG.phoneHref}
@@ -239,7 +222,6 @@ const toTitleCase = (str) =>
 
     <slot />
 
-    <!-- Footer -->
     <footer
       style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 10rem; text-align: center; border-top: 5px solid var(--secondary);"
     >
@@ -274,16 +256,12 @@ const toTitleCase = (str) =>
         >
           ProTreeTrim™ Florida
         </p>
-        <p
-          style="font-size: 0.75rem; opacity: 0.5; max-width: 800px; margin: 0 auto 30px; line-height: 1.6;"
-        >
-          ProTreeTrim™ is a free referral service. All contractors are
-          independent. Homeowners must verify license and insurance.
-        </p>
         <div
           style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-weight: 700; font-size: 0.75rem; text-transform: uppercase;"
         >
           <a href="/" style="color: white; text-decoration: none;">Directory</a>
+          <a href="/about" style="color: white; text-decoration: none;">About</a
+          >
           <a href="/privacy" style="color: white; text-decoration: none;"
             >Privacy</a
           >
@@ -294,7 +272,6 @@ const toTitleCase = (str) =>
       </div>
     </footer>
 
-    <!-- Bottom Sticky Call -->
     <div
       style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px; z-index: 10001; border-top: 1px solid #eee; display: flex; justify-content: center; box-shadow: 0 -5px 15px rgba(0,0,0,0.05);"
     >
