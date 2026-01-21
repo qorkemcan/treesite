@@ -8,8 +8,9 @@ export default defineConfig({
   // Sitemizin tam adresi (Site haritası için şart!)
   site: 'https://protreetrim.com',
 
-  // ★ BU SATIR ŞART: Hem hızlı statik sayfalar hem de canlı API (e-posta) için.
-  output: 'hybrid', 
+  // Hatanın çözümü: Astro v5 "hybrid" yerine "static" kullanımını öneriyor.
+  // API dosyamızdaki "prerender = false" ayarı sayesinde formumuz yine çalışacak.
+  output: 'static', 
 
   integrations: [sitemap()],
   
