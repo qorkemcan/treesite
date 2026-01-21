@@ -1,73 +1,110 @@
 ---
 // src/pages/about.astro
-import MainLayout from '../layouts/MainLayout.astro';
-import { SITE_CONFIG } from '../config.js';
-import { Image } from 'astro:assets';
-import teamImg from '../assets/team.jpg';
+import MainLayout from "../layouts/MainLayout.astro";
+import { SITE_CONFIG } from "../config.js";
+import { Image } from "astro:assets";
+import teamImg from "../assets/team.jpg";
 ---
 
-<MainLayout 
-  title="About Our Florida Tree Care Network" 
-  description="Discover how ProTreeTrim™ connects Florida homeowners with elite, certified tree care specialists for safer properties and healthier landscapes."
+<MainLayout
+  title="About ProTreeTrim™ | Florida's Tree Care Network"
+  description="Learn about ProTreeTrim™, Florida's premier network of licensed and insured tree service professionals dedicated to safety and arboricultural excellence."
 >
-  <!-- HERO SECTION -->
-  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4rem 1.5rem; text-align: center;">
-    <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; letter-spacing: -1.5px; font-weight: 900; line-height: 1.1;">The ProTreeTrim™ Mission</h1>
-    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem; font-weight: 400; max-width: 800px; margin-left: auto; margin-right: auto;">Connecting Florida with excellence in arboriculture, one property at a time.</p>
+  <header
+    style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center;"
+  >
+    <h1
+      style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900; line-height: 1.1;"
+    >
+      The ProTreeTrim™ Mission
+    </h1>
+    <p
+      style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;"
+    >
+      Setting the Standard for Tree Care Across the Sunshine State.
+    </p>
   </header>
 
-  <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem;">
-    
-    <!-- IMAGE SECTION -->
-    <div style="margin-top: 2rem; margin-bottom: 3rem; text-align: center; padding: 0 0.5rem;">
-        <Image 
-          src={teamImg} 
-          alt="ProTreeTrim Certified Arborist Network" 
-          width={1000} 
-          height={540} 
-          format="webp"
-          style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.12); display: block; margin: 0 auto;" 
-        />
-    </div>
-    
-    <!-- PROFESSIONAL CONTENT -->
-    <div style="background: white; border: 1px solid #eee; border-radius: 24px; padding: 3rem 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); margin-bottom: 3rem;">
-      <h2 style="color: #064e3b; font-size: 1.8rem; margin-top: 0; font-weight: 800; margin-bottom: 1.5rem;">Florida’s Trusted Arboreal Authority</h2>
-      
-      <p style="font-size: 1.1rem; color: #374151; margin-bottom: 1.5rem; line-height: 1.8;">
-        Florida's unique climate demands more than just standard yard work. From the towering Live Oaks of Central Florida to the iconic palms of the coast, maintaining a safe and beautiful property requires specialized knowledge and high-performance equipment.
-      </p>
-
-      <p style="font-size: 1.1rem; color: #374151; margin-bottom: 1.5rem; line-height: 1.8;">
-        <strong>ProTreeTrim™</strong> was founded to bridge the gap between Florida homeowners and elite, licensed tree care professionals. We understand that whether it's routine canopy thinning to prepare for hurricane season or emergency tree removal after a storm, timing and safety are everything.
-      </p>
-
-      <div style="background: #f0fdf4; border-left: 5px solid #166534; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
-        <h3 style="margin-top: 0; color: #064e3b; font-size: 1.2rem; font-weight: 800;">Our Commitment to Compliance</h3>
-        <p style="margin-bottom: 0; font-size: 1rem; color: #166534; line-height: 1.6;">
-          Every specialist in our connection network is vetted for active licensing and insurance according to Florida state regulations, ensuring your home is protected and the work meets ANSI A300 standards.
+  <div
+    class="container"
+    style="max-width: 1000px; margin: 0 auto; padding: 4rem 1.5rem;"
+  >
+    <!-- GÜVEN KUŞAĞI (TRUST BADGES) -->
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 4rem; text-align: center;"
+    >
+      <div
+        style="background: #f8fafc; padding: 20px; border-radius: 16px; border: 1px solid #e2e8f0;"
+      >
+        <div style="font-size: 2rem; margin-bottom: 10px;">🛡️</div>
+        <h4 style="margin: 0; color: #1b4332;">Fully Verified</h4>
+        <p style="font-size: 0.8rem; color: #64748b; margin-top: 5px;">
+          Licensed & Insured Crews
         </p>
       </div>
-
-      <h3 style="color: #064e3b; font-size: 1.5rem; font-weight: 800; margin-top: 2rem;">Why Choose ProTreeTrim™?</h3>
-      <ul style="color: #4b5563; font-size: 1.1rem; line-height: 2; margin-top: 1rem;">
-        <li><strong>Local Expertise:</strong> Solutions tailored to Florida species and weather patterns.</li>
-        <li><strong>Rapid Response:</strong> Direct connection to crews in your specific county.</li>
-        <li><strong>Safety First:</strong> Rigorous adherence to industry safety protocols.</li>
-      </ul>
+      <div
+        style="background: #f8fafc; padding: 20px; border-radius: 16px; border: 1px solid #e2e8f0;"
+      >
+        <div style="font-size: 2rem; margin-bottom: 10px;">🌴</div>
+        <h4 style="margin: 0; color: #1b4332;">Florida Experts</h4>
+        <p style="font-size: 0.8rem; color: #64748b; margin-top: 5px;">
+          Specialized in Local Species
+        </p>
+      </div>
+      <div
+        style="background: #f8fafc; padding: 20px; border-radius: 16px; border: 1px solid #e2e8f0;"
+      >
+        <div style="font-size: 2rem; margin-bottom: 10px;">⚡</div>
+        <h4 style="margin: 0; color: #1b4332;">24/7 Response</h4>
+        <p style="font-size: 0.8rem; color: #64748b; margin-top: 5px;">
+          Emergency Storm Dispatch
+        </p>
+      </div>
     </div>
 
-    <!-- CONTACT BOX -->
-    <div style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin-bottom: 6rem;">
-      <p style="margin: 0; font-size: 1.1rem; color: #4b5563; line-height: 1.6;">
-        For professional inquiries, partnership opportunities, or feedback on our service network, please reach out via our official channel:
-      </p>
-      <a href={`mailto:${SITE_CONFIG.email}`} style="color: #ea580c; font-weight: 800; text-decoration: none; font-size: 1.4rem; display: inline-block; margin-top: 15px; letter-spacing: -0.5px;">
-        {SITE_CONFIG.email}
-      </a>
-      <div style="margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem;">
-          <a href="/" style="color: #64748b; text-decoration: none; font-size: 0.95rem; font-weight: 700;">← Back to Service Locations</a>
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; margin-bottom: 5rem;"
+    >
+      <div>
+        <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 800;">
+          Who We Are
+        </h2>
+        <p style="font-size: 1.1rem; color: #374151; line-height: 1.8;">
+          ProTreeTrim™ isn't just a directory; we are a specialized dispatch
+          network. Florida’s volatile weather and unique ecosystems require
+          arborists who understand more than just a chainsaw.
+        </p>
+        <p style="font-size: 1.1rem; color: #374151; line-height: 1.8;">
+          Our mission is to connect every Florida homeowner with <strong
+            >elite, vetted tree care professionals</strong
+          > who adhere to the highest industry safety standards (ANSI A300).
+        </p>
       </div>
+      <Image
+        src={teamImg}
+        alt="ProTreeTrim Expert Network"
+        style="width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"
+      />
+    </div>
+
+    <div
+      style="background: #1b4332; color: white; padding: 3rem; border-radius: 30px; text-align: center;"
+    >
+      <h3 style="font-size: 1.8rem; font-weight: 800; margin-top: 0;">
+        Statewide Reliability
+      </h3>
+      <p
+        style="font-size: 1.1rem; opacity: 0.9; max-width: 700px; margin: 0 auto 2rem;"
+      >
+        From Miami's palms to Tallahassee's oaks, we coordinate with teams in
+        all 67 counties to ensure your property remains safe, beautiful, and
+        hurricane-ready.
+      </p>
+      <a
+        href="/"
+        style="background: #ea580c; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 12px; font-weight: 900; display: inline-block;"
+        >Find a Specialist Near You</a
+      >
     </div>
   </div>
 </MainLayout>
