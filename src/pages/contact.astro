@@ -2,9 +2,6 @@
 // src/pages/contact.astro
 import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../config.js";
-
-// Form gönderildikten sonra URL'de ?status=success varsa mesaj gösterir
-const isSuccess = Astro.url.searchParams.get("status") === "success";
 ---
 
 <MainLayout
@@ -30,16 +27,6 @@ const isSuccess = Astro.url.searchParams.get("status") === "success";
     class="container"
     style="max-width: 1100px; padding: 4rem 1.5rem 12rem;"
   >
-    <!-- Başarı Mesajı (Form gönderilince çıkar) -->
-    {
-      isSuccess && (
-        <div style="background: #dcfce7; border: 1px solid #16a34a; color: #166534; padding: 1.5rem; border-radius: 12px; text-align: center; margin-bottom: 3rem; font-weight: 700;">
-          ✓ Thank you! Your request has been sent successfully. Our dispatch
-          team will contact you shortly.
-        </div>
-      )
-    }
-
     <div
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 5rem;"
     >
@@ -85,7 +72,6 @@ const isSuccess = Astro.url.searchParams.get("status") === "success";
     <div
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: start;"
     >
-      <!-- İLETİŞİM FORMU (Kendi API'mize Bağlı) -->
       <div
         style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 15px 35px rgba(0,0,0,0.05);"
       >
@@ -179,7 +165,6 @@ const isSuccess = Astro.url.searchParams.get("status") === "success";
         </form>
       </div>
 
-      <!-- HARİTA -->
       <div>
         <h2
           style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0;"

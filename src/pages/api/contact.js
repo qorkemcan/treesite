@@ -39,7 +39,7 @@ export async function POST({ request }) {
     if (response.ok) {
       return new Response(null, {
         status: 302,
-        headers: { "Location": "/contact?status=success" },
+        headers: { "Location": "/thank-you" },
       });
     } else {
       const errorData = await response.json();
