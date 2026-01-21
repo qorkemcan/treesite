@@ -1,0 +1,201 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { SITE_CONFIG } from "../config.js";
+---
+
+<MainLayout
+  title="Trust & Safety Standards | ProTreeTrim™ Florida"
+  description="How ProTreeTrim™ vets professionals to ensure safety, licensing compliance, and property protection across Florida."
+>
+  <header
+    style="background: linear-gradient(135deg, #081c15 0%, #1b4332 100%); color: white; padding: 6rem 1.5rem; text-align: center;"
+  >
+    <div class="container">
+      <h1
+        style="font-size: clamp(2.2rem, 8vw, 3.8rem); font-weight: 900; margin: 0; line-height: 1.1;"
+      >
+        Safety Isn’t Optional.<br /><span style="color: #ffb703;"
+          >It’s Our Foundation.</span>
+      </h1>
+      <p
+        style="font-size: 1.25rem; color: #95d5b2; margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;"
+      >
+        In Florida, tree work is high-stakes. We’ve built a network where
+        licensing, insurance, and elite arboricultural standards are the bare
+        minimum.
+      </p>
+    </div>
+  </header>
+
+  <main class="container" style="max-width: 900px; padding: 5rem 1.5rem 10rem;">
+    <!-- THE REALITY SECTION -->
+    <section style="margin-bottom: 5rem;">
+      <h2
+        style="color: #064e3b; font-size: 2rem; font-weight: 800; border-left: 6px solid #ea580c; padding-left: 20px; margin-bottom: 1.5rem;"
+      >
+        The ProTreeTrim™ Vetting Protocol
+      </h2>
+      <p style="font-size: 1.15rem; color: #374151; line-height: 1.8;">
+        Most homeowners realize too late that an unlicensed "guy with a
+        chainsaw" is a massive legal and financial liability. Florida law is
+        strict, and property damage during tree removal can cost tens of
+        thousands. Our mission is to filter the elite from the amateurs.
+      </p>
+    </section>
+
+    <!-- 4 PILLARS OF TRUST -->
+    <div style="display: grid; gap: 30px; margin-bottom: 6rem;">
+      <div class="trust-card">
+        <div class="trust-icon">🛡️</div>
+        <div>
+          <h3>Rigid Insurance Verification</h3>
+          <p>
+            We don't just take a contractor’s word for it. Our network members
+            must maintain active <strong>General Liability</strong> and <strong
+              >Workers' Compensation</strong
+            > insurance specific to tree services. This protects you from being held
+            liable for onsite injuries or accidental property damage.
+          </p>
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">📜</div>
+        <div>
+          <h3>State & Local Compliance</h3>
+          <p>
+            Tree care regulations vary by Florida county. Our vetting process
+            ensures that the specialists dispatched to your property understand
+            local permit requirements and adhere to Florida’s strict
+            arboricultural statutes.
+          </p>
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">🏗️</div>
+        <div>
+          <h3>ANSI A300 Performance Standards</h3>
+          <p>
+            We advocate for the life of your trees. Our partners are expected to
+            follow <strong>ANSI A300 standards</strong>—the industry-recognized
+            gold standard for tree care. This means no improper "topping" or
+            "lion's tailing" that weakens your trees before hurricane season.
+          </p>
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">🌪️</div>
+        <div>
+          <h3>Hurricane Readiness & Response</h3>
+          <p>
+            Florida’s climate is unforgiving. We prioritize crews that possess
+            high-capacity rigging and heavy machinery capable of handling
+            storm-damaged Oaks and Palms safely, minimizing further risk to your
+            home or power lines.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ZERO COMPROMISE BOX -->
+    <section
+      style="background: #f8fafc; border: 2px solid #e2e8f0; padding: 3rem; border-radius: 30px; text-align: center;"
+    >
+      <h2 style="color: #064e3b; font-weight: 900; margin-top: 0;">
+        Our "Zero Compromise" Commitment
+      </h2>
+      <p
+        style="font-size: 1.1rem; color: #475569; line-height: 1.7; max-width: 700px; margin: 1rem auto 2.5rem;"
+      >
+        If a service provider in our network fails to meet our safety benchmarks
+        or receives consistent negative feedback regarding professional conduct,
+        they are immediately removed from our dispatch list. We represent the
+        homeowner first.
+      </p>
+      <div
+        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: #1b4332;"
+        >
+          <span style="color: #16a34a;">✔</span> Verified Licenses
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: #1b4332;"
+        >
+          <span style="color: #16a34a;">✔</span> Verified Insurance
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: #1b4332;"
+        >
+          <span style="color: #16a34a;">✔</span> 24/7 Accountability
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <div style="margin-top: 6rem; text-align: center;">
+      <h3 style="color: #1b4332; font-size: 1.8rem; font-weight: 800;">
+        Ready for a Risk-Free Estimate?
+      </h3>
+      <p style="color: #64748b; margin-bottom: 2rem;">
+        Put your property in the hands of Florida's vetted professionals.
+      </p>
+      <a
+        href={SITE_CONFIG.phoneHref}
+        style="background: #ea580c; color: white !important; padding: 1.2rem 3rem; text-decoration: none; border-radius: 14px; font-weight: 900; font-size: 1.3rem; display: inline-block; box-shadow: 0 10px 20px rgba(234, 88, 12, 0.2);"
+      >
+        CALL DISPATCH: {SITE_CONFIG.phone}
+      </a>
+    </div>
+  </main>
+</MainLayout>
+
+<style>
+  .trust-card {
+    display: flex;
+    gap: 25px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+  }
+  .trust-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  .trust-icon {
+    font-size: 2.5rem;
+    background: #f0fdf4;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    flex-shrink: 0;
+  }
+  h3 {
+    margin: 0 0 10px;
+    color: #1b4332;
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+  p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    .trust-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    .trust-icon {
+      margin: 0 auto;
+    }
+  }
+</style>
