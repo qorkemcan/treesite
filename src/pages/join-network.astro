@@ -1,0 +1,207 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { SITE_CONFIG } from "../config.js";
+---
+
+<MainLayout
+  title="Partner With Us | ProTreeTrim™ Florida Contractor Network"
+  description="Licensed tree service professionals: Join Florida's premier dispatch network. Get high-quality leads without the marketing headache."
+>
+  <header
+    style="background: linear-gradient(135deg, #081c15 0%, #1b4332 100%); color: white; padding: 6rem 1.5rem; text-align: center;"
+  >
+    <div class="container">
+      <h1
+        style="font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 900; margin: 0; line-height: 1.1;"
+      >
+        Scale Your Tree Business<br /><span style="color: #ffb703;"
+          >Without the Marketing Stress</span>
+      </h1>
+      <p
+        style="font-size: 1.2rem; color: #95d5b2; margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;"
+      >
+        We handle the Florida-wide SEO and dispatch. You handle the canopies.
+        Join our elite network of verified contractors today.
+      </p>
+    </div>
+  </header>
+
+  <main
+    class="container"
+    style="max-width: 1000px; padding: 5rem 1.5rem 10rem;"
+  >
+    <!-- WHY PARTNER WITH US -->
+    <section
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 6rem;"
+    >
+      <div class="b2b-card">
+        <div class="b2b-icon">📈</div>
+        <h3>Consistent Lead Flow</h3>
+        <p>
+          Stop chasing jobs on crowded platforms. We provide high-intent leads
+          from homeowners across Florida specifically looking for tree removal
+          and emergency care.
+        </p>
+      </div>
+
+      <div class="b2b-card">
+        <div class="b2b-icon">🎯</div>
+        <h3>Zero Marketing Cost</h3>
+        <p>
+          Forget expensive ad spends or SEO retainers. We invest in the brand
+          authority of ProTreeTrim™ so you can focus on your crew and equipment.
+        </p>
+      </div>
+
+      <div class="b2b-card" style="border: 2px solid #ffb703;">
+        <div class="b2b-icon">📍</div>
+        <h3>Territory Exclusivity</h3>
+        <p>
+          <strong>Coming Soon:</strong> We are preparing to offer exclusive territory
+          rights. Top-performing partners will have the opportunity to have their
+          direct line featured on specific city pages.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: start;"
+    >
+      <div>
+        <h2
+          style="color: #1b4332; font-size: 2rem; font-weight: 900; margin-top: 0;"
+        >
+          Partner Qualification
+        </h2>
+        <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.7;">
+          To maintain our "Authority" status, we only partner with crews that
+          meet Florida state requirements.
+        </p>
+        <ul
+          style="color: #374151; line-height: 2; font-weight: 600; padding-left: 20px;"
+        >
+          <li>Active General Liability Insurance</li>
+          <li>Workers' Compensation Compliance</li>
+          <li>Verified Business License (Sunbiz)</li>
+          <li>Proven Track Record & Equipment</li>
+        </ul>
+        <div
+          style="background: #f0fdf4; border-left: 5px solid #166534; padding: 1.5rem; margin-top: 2rem; border-radius: 8px;"
+        >
+          <p
+            style="margin: 0; color: #166534; font-size: 0.95rem; font-weight: 700;"
+          >
+            "We don't just send jobs; we build territories. Our goal is to find
+            one reliable partner per major Florida metro."
+          </p>
+        </div>
+      </div>
+
+      <!-- CONTRACTOR FORM -->
+      <div
+        style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #e5e7eb; box-shadow: 0 15px 35px rgba(0,0,0,0.05);"
+      >
+        <h3 style="margin-top: 0; margin-bottom: 1.5rem; color: #1b4332;">
+          Inquiry Form
+        </h3>
+        <form
+          action="/api/contact"
+          method="POST"
+          style="display: grid; gap: 15px;"
+        >
+          <input type="hidden" name="service" value="B2B-Partner-Application" />
+
+          <div>
+            <label
+              style="display: block; font-size: 0.8rem; font-weight: 800; color: #64748b; margin-bottom: 5px;"
+              >Company Name</label
+            >
+            <input
+              type="text"
+              name="name"
+              placeholder="Extreme Tree Services LLC"
+              required
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;"
+            />
+          </div>
+
+          <div>
+            <label
+              style="display: block; font-size: 0.8rem; font-weight: 800; color: #64748b; margin-bottom: 5px;"
+              >Primary Service Area (County/City)</label
+            >
+            <input
+              type="text"
+              name="city"
+              placeholder="e.g. Tampa / Hillsborough"
+              required
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;"
+            />
+          </div>
+
+          <div>
+            <label
+              style="display: block; font-size: 0.8rem; font-weight: 800; color: #64748b; margin-bottom: 5px;"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              name="phone"
+              placeholder="(555) 000-0000"
+              required
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;"
+            />
+          </div>
+
+          <div>
+            <label
+              style="display: block; font-size: 0.8rem; font-weight: 800; color: #64748b; margin-bottom: 5px;"
+              >Equipment & Crew Size</label
+            >
+            <textarea
+              name="message"
+              rows="3"
+              placeholder="Describe your trucks, cranes, and crew capacity..."
+              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; resize: vertical; outline: none;"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            style="background: #1b4332; color: white; padding: 15px; border: none; border-radius: 10px; font-weight: 900; cursor: pointer; transition: 0.3s; width: 100%;"
+            >SUBMIT PARTNERSHIP REQUEST</button
+          >
+        </form>
+      </div>
+    </div>
+  </main>
+</MainLayout>
+
+<style>
+  .b2b-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+  }
+  .b2b-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  .b2b-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    color: #1b4332;
+    font-weight: 800;
+    margin: 0 0 15px;
+  }
+  p {
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>
