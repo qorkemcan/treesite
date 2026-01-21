@@ -24,6 +24,7 @@ const GTM_ID = "GTM-PW924QGW";
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
     <script is:inline define:vars={{ GTM_ID }}>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -37,17 +38,68 @@ const GTM_ID = "GTM-PW924QGW";
       })(window, document, "script", "dataLayer", GTM_ID);
     </script>
 
+    <!-- ★ MICROSOFT CLARITY ★ -->
+    <script type="text/javascript" is:inline>
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "v3rg2oj6sv"); // Buraya Clarity'den aldığın ID'yi yapıştır
+    </script>
+
+    <!-- ★ GLOBAL LOCALBUSINESS SCHEMA ★ -->
+    <script type="application/ld+json" is:inline define:vars={{ SITE_CONFIG }}>
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ProTreeTrim™ Florida",
+        "image": "https://protreetrim.com/og-image.jpg",
+        "@id": "https://protreetrim.com",
+        "url": "https://protreetrim.com",
+        "telephone": "SITE_CONFIG.phone",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Statewide",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 27.6648,
+          "longitude": -81.5158
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      }
+    </script>
+
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-
-    <!-- FAVICON AYARLARI (GÜNCELLENDİ) -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <!-- Opsiyonel: public klasöründe varsa -->
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
@@ -85,7 +137,6 @@ const GTM_ID = "GTM-PW924QGW";
         margin: 0 auto;
         padding: 0 1.2rem;
       }
-
       .desktop-links {
         display: flex;
         gap: 20px;
@@ -102,11 +153,9 @@ const GTM_ID = "GTM-PW924QGW";
       .nav-link:hover {
         color: var(--secondary);
       }
-
       .menu-toggle {
         display: none;
       }
-
       @media (max-width: 1024px) {
         .desktop-links {
           display: none !important;
@@ -117,7 +166,6 @@ const GTM_ID = "GTM-PW924QGW";
           gap: 10px;
         }
       }
-
       #mobile-menu {
         display: none;
         position: fixed;
@@ -151,7 +199,6 @@ const GTM_ID = "GTM-PW924QGW";
     </style>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
         src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -159,7 +206,6 @@ const GTM_ID = "GTM-PW924QGW";
         width="0"
         style="display:none;visibility:hidden"></iframe></noscript
     >
-    <!-- End Google Tag Manager (noscript) -->
 
     <div
       style="background: var(--primary-dark); color: #ffb703; padding: 8px; text-align: center; font-size: 0.6rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;"
@@ -204,7 +250,7 @@ const GTM_ID = "GTM-PW924QGW";
         <div class="menu-toggle">
           <a
             href={SITE_CONFIG.phoneHref}
-            style="background: var(--secondary); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1rem;"
+            style="background: var(--secondary); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;"
             >📞</a
           >
           <button
@@ -222,13 +268,11 @@ const GTM_ID = "GTM-PW924QGW";
         style="position: absolute; top: 20px; right: 20px; font-size: 3rem; background: none; border: none; color: #94a3b8;"
         >&times;</button
       >
-      <a href="/" class="nav-link" style="font-size: 1.5rem;">HOME</a>
-      <a href="/services" class="nav-link" style="font-size: 1.5rem;"
-        >SERVICES</a
-      >
-      <a href="/gallery" class="nav-link" style="font-size: 1.5rem;">GALLERY</a>
-      <a href="/about" class="nav-link" style="font-size: 1.5rem;">ABOUT</a>
-      <a href="/contact" class="nav-link" style="font-size: 1.5rem;">CONTACT</a>
+      <a href="/" class="nav-link">HOME</a>
+      <a href="/services" class="nav-link">SERVICES</a>
+      <a href="/gallery" class="nav-link">GALLERY</a>
+      <a href="/about" class="nav-link">ABOUT</a>
+      <a href="/contact" class="nav-link">CONTACT</a>
       <a
         href={SITE_CONFIG.phoneHref}
         style="background: var(--secondary); color: white !important; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 900; font-size: 1.2rem; margin-top: 1rem;"
@@ -246,28 +290,22 @@ const GTM_ID = "GTM-PW924QGW";
           style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-bottom: 40px;"
         >
           <div class="trust-badge-footer">
-            <span>🛡️</span>
-            <span
+            <span>🛡️</span><span
               >LICENSED & INSURED<br /><small style="opacity: 0.7;"
                 >Verified Florida Network</small
-              ></span
-            >
+              ></span>
           </div>
           <div class="trust-badge-footer">
-            <span>⚡</span>
-            <span
+            <span>⚡</span><span
               >24/7 RESPONSE<br /><small style="opacity: 0.7;"
                 >Emergency Dispatch</small
-              ></span
-            >
+              ></span>
           </div>
           <div class="trust-badge-footer">
-            <span>💰</span>
-            <span
+            <span>💰</span><span
               >FREE ESTIMATES<br /><small style="opacity: 0.7;"
                 >No-Obligation Quotes</small
-              ></span
-            >
+              ></span>
           </div>
         </div>
         <p
@@ -297,9 +335,8 @@ const GTM_ID = "GTM-PW924QGW";
       <a
         href={SITE_CONFIG.phoneHref}
         style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 15px; text-decoration: none !important; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px;"
+        >📞 CALL FOR FREE ESTIMATE</a
       >
-        📞 CALL FOR FREE ESTIMATE
-      </a>
     </div>
 
     <script is:inline>
