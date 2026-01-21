@@ -89,7 +89,6 @@ if (imagePaths.length > 0) {
 const cityKey = cityData.City.toLowerCase().trim().replace(/\s+/g, "-");
 let finalFaqs = premiumFaqs[cityKey] || [];
 
-// Eğer bu şehir için özel FAQ yoksa, standart olanları oluştur
 if (finalFaqs.length === 0) {
   finalFaqs =
     {
@@ -186,51 +185,79 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & I
       <div
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"
       >
-        <div
-          style="background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; text-align: center; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);"
-        >
-          <div
-            style="background: #e0f2fe; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1.5rem;"
+        <div class="step-card">
+          <div class="step-icon" style="background: #e0f2fe;">📞</div>
+          <h4>1. Call Us</h4>
+          <p>Connect with our dispatch office instantly for help.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon" style="background: #fef3c7;">📋</div>
+          <h4>2. Free Quote</h4>
+          <p>Get an expert assessment and no-obligation pricing.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon" style="background: #dcfce7;">✅</div>
+          <h4>3. Job Done</h4>
+          <p>Professional service completed with full property cleanup.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ★ YEREL HAVA DURUMU VE BİLGİ KUTUSU (GERİ GELDİ) ★ -->
+    <section
+      style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"
+    >
+      <!-- Sol: Hava Durumu Widget Görünümlü Kart -->
+      <div
+        style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 1.5rem; border-radius: 20px; border: 1px solid #bae6fd; display: flex; align-items: center; gap: 20px;"
+      >
+        <div style="font-size: 3rem;">☀️</div>
+        <div>
+          <h4
+            style="margin: 0; color: #0369a1; font-size: 1.1rem; font-weight: 800;"
           >
-            📞
-          </div>
-          <h4 style="font-weight: 800; margin-bottom: 10px; color: #1b4332;">
-            1. Call Us
+            {cityName} Outlook
           </h4>
-          <p style="font-size: 0.9rem; color: #4b5563; line-height: 1.5;">
-            Connect with our dispatch office instantly for help.
+          <p
+            style="margin: 4px 0 0; color: #0c4a6e; font-size: 0.85rem; line-height: 1.4;"
+          >
+            <strong>Condition:</strong> Clear for Service<br />
+            Safe conditions for {serviceInfo.name.toLowerCase()} in {
+              countyName
+            }.
           </p>
         </div>
-        <div
-          style="background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; text-align: center; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);"
+      </div>
+
+      <!-- Sağ: Hızlı Yerel Bilgi Kartı -->
+      <div
+        style="background: white; padding: 1.5rem; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 4px 12px rgba(0,0,0,0.03);"
+      >
+        <h4
+          style="margin: 0 0 10px; color: #1b4332; font-size: 1rem; font-weight: 800; display: flex; align-items: center; gap: 8px;"
         >
-          <div
-            style="background: #fef3c7; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1.5rem;"
-          >
-            📋
-          </div>
-          <h4 style="font-weight: 800; margin-bottom: 10px; color: #1b4332;">
-            2. Free Quote
-          </h4>
-          <p style="font-size: 0.9rem; color: #4b5563; line-height: 1.5;">
-            Get an expert assessment and no-obligation pricing.
-          </p>
-        </div>
-        <div
-          style="background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; text-align: center; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);"
+          <span style="color: #ea580c;">📍</span> Local Service Data
+        </h4>
+        <ul
+          style="margin: 0; padding: 0; list-style: none; font-size: 0.85rem; color: #4b5563;"
         >
-          <div
-            style="background: #dcfce7; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1.5rem;"
+          <li
+            style="margin-bottom: 6px; display: flex; justify-content: space-between;"
           >
-            ✅
-          </div>
-          <h4 style="font-weight: 800; margin-bottom: 10px; color: #1b4332;">
-            3. Job Done
-          </h4>
-          <p style="font-size: 0.9rem; color: #4b5563; line-height: 1.5;">
-            Professional service completed with full property cleanup.
-          </p>
-        </div>
+            <span>Primary Landmark:</span>
+            <strong style="color: #1b4332;">{landmark}</strong>
+          </li>
+          <li
+            style="margin-bottom: 6px; display: flex; justify-content: space-between;"
+          >
+            <span>Dispatch Area:</span>
+            <strong style="color: #1b4332;">{countyName} County</strong>
+          </li>
+          <li style="display: flex; justify-content: space-between;">
+            <span>Response Time:</span>
+            <strong style="color: #16a34a;">Local Rapid-Response</strong>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -253,7 +280,7 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & I
           <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.6;">
             Our network of tree care professionals prioritizes safety and
             property protection. We understand the unique needs of Florida
-            landscapes.
+            landscapes near <strong>{landmark}</strong>.
           </p>
         </div>
         {
@@ -281,56 +308,32 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & I
       <div
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"
       >
-        <div
-          style="background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; text-align: left; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);"
-        >
-          <div
-            style="background: #dcfce7; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1rem;"
-          >
-            🛡️
-          </div>
-          <h4 style="margin-bottom: 8px; font-weight: 800; color: #1b4332;">
-            Verified Compliance
-          </h4>
-          <p style="font-size: 0.85rem; color: #4b5563; line-height: 1.5;">
+        <div class="feature-card">
+          <div class="feature-icon" style="background: #dcfce7;">🛡️</div>
+          <h4>Verified Compliance</h4>
+          <p>
             Licensed and insured crews specialized in {cityName} tree care standards.
           </p>
         </div>
-        <div
-          style="background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; text-align: left; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);"
-        >
-          <div
-            style="background: #fef3c7; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1rem;"
-          >
-            🚜
-          </div>
-          <h4 style="margin-bottom: 8px; font-weight: 800; color: #1b4332;">
-            Expert Equipment
-          </h4>
-          <p style="font-size: 0.85rem; color: #4b5563; line-height: 1.5;">
+        <div class="feature-card">
+          <div class="feature-icon" style="background: #fef3c7;">🚜</div>
+          <h4>Expert Equipment</h4>
+          <p>
             From massive Oaks near {landmark} to Palms, we have the right tools for
             the job.
           </p>
         </div>
-        <div
-          style="background: white; padding: 2rem; border-radius: 20px; border: 1px solid #eee; text-align: left; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);"
-        >
-          <div
-            style="background: #fee2e2; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1rem;"
-          >
-            🚑
-          </div>
-          <h4 style="margin-bottom: 8px; font-weight: 800; color: #1b4332;">
-            Storm Ready
-          </h4>
-          <p style="font-size: 0.85rem; color: #4b5563; line-height: 1.5;">
+        <div class="feature-card">
+          <div class="feature-icon" style="background: #fee2e2;">🚑</div>
+          <h4>Storm Ready</h4>
+          <p>
             Priority dispatch for emergency storm damage in {countyName} County.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- FAQ (Burada finalFaqs kullanılıyor) -->
+    <!-- FAQ -->
     <section style="margin-top: 4rem;">
       <h2
         style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;"
@@ -382,6 +385,47 @@ const optimizedTitle = `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & I
 </MainLayout>
 
 <style>
+  .step-card,
+  .feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  }
+  .feature-card {
+    text-align: left;
+  }
+  .step-icon,
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1.5rem;
+  }
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+  }
+  .step-card h4,
+  .feature-card h4 {
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #1b4332;
+  }
+  .step-card p,
+  .feature-card p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.5;
+  }
   .nearby-link:hover {
     background: #f0fdf4 !important;
     border-color: #166534 !important;
