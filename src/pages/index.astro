@@ -39,7 +39,7 @@ const toTitleCase = (str) => {
     .join(" ");
 };
 
-// POPÜLER ŞEHİRLER LİSTESİ (Senin verdiğin listeden en büyük 8 tanesi)
+// POPÜLER ŞEHİRLER LİSTESİ (Slug hataları düzeltildi)
 const featuredCities = [
   { name: "Miami", slug: "miami", icon: "🏙️", desc: "Dade County" },
   { name: "Orlando", slug: "orlando", icon: "🎢", desc: "Orange County" },
@@ -53,17 +53,17 @@ const featuredCities = [
   {
     name: "Fort Lauderdale",
     slug: "fort-lauderdale",
-    icon: "🛥️",
+    icon: "艇",
     desc: "Broward County",
   },
   { name: "Tallahassee", slug: "tallahassee", icon: "🏛️", desc: "Leon County" },
   { name: "Cape Coral", slug: "cape-coral", icon: "🏖️", desc: "Lee County" },
   {
     name: "St. Petersburg",
-    slug: "st-petersburg",
+    slug: "st.-petersburg",
     icon: "☀️",
     desc: "Pinellas County",
-  },
+  }, // slug "st.-petersburg" yapıldı
 ];
 ---
 
