@@ -6,6 +6,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../config.js";
 import { Image } from "astro:assets";
 import premiumFaqs from "../data/premium-faqs.json";
+// ★ YENİ: Tavsiye havuzunu içeri alıyoruz
+import arboristTips from "../data/arborist-tips.json";
 
 export async function getStaticPaths() {
   const filePath = path.resolve("./src/data/cities.csv");
@@ -58,6 +60,21 @@ const cityName = toTitleCase(cityData.City);
 const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
+
+// ★ YENİ: DİNAMİK ARBORIST TAVSİYESİ MANTIĞI (SEO İÇİN KRİTİK)
+// Her şehir için 50 tavsiyeden birini sabit ama diğerlerinden farklı seçer
+const tipIndex =
+  (cityData.City.length + cityData.Landmark.length) % arboristTips.length;
+const selectedTemplate = arboristTips[tipIndex];
+
+const finalDynamicTip = selectedTemplate
+  .replaceAll("[City]", cityName)
+  .replaceAll("[Landmark]", landmark)
+  .replaceAll("[MainTreeType]", cityData.MainTreeType || "local trees")
+  .replaceAll(
+    "[FocusService]",
+    cityData.FocusService || "professional tree care",
+  );
 
 const serviceFolder = serviceInfo.prefix.includes("removal")
   ? "removal"
@@ -125,7 +142,7 @@ let finalFaqs =
   title={`#1 ${serviceInfo.name} ${cityName}, FL | Licensed & Insured`}
   description={cityData.Description}
 >
-  <!-- ★ SEO: BREADCRUMB SCHEMA ★ (HATASIZ NİHAİ HALİ) -->
+  <!-- ★ SEO: BREADCRUMB SCHEMA ★ -->
   <script
     type="application/ld+json"
     set:html={JSON.stringify({
@@ -149,7 +166,7 @@ let finalFaqs =
     })}
   />
 
-  <!-- ★ SEO: SERVICE SCHEMA ★ (HATASIZ NİHAİ HALİ) -->
+  <!-- ★ SEO: SERVICE SCHEMA ★ -->
   <script
     type="application/ld+json"
     set:html={JSON.stringify({
@@ -298,11 +315,12 @@ let finalFaqs =
             >
             <span style="font-size: 1.3rem;">📅</span>
           </div>
+          <!-- ★ DEĞİŞTİ: Metin artık sunucu tarafında (Server-side) benzersiz üretiliyor ★ -->
           <p
             id="seasonal-advice"
             style="margin: 0; font-size: 0.9rem; color: #4b5563; line-height: 1.5; font-weight: 700; font-style: italic;"
           >
-            Accessing local arborist database...
+            {finalDynamicTip}
           </p>
         </div>
 
@@ -505,24 +523,8 @@ let finalFaqs =
       const dateEl = document.getElementById("current-date");
       if (dateEl) dateEl.innerText = now.toLocaleDateString("en-US", options);
 
-      const insights = [
-        "January: Optimal window for dormant structural pruning and dormant oil treatments.",
-        "February: Essential month for palm sanitation and pre-spring hazard assessments.",
-        "March: Spring growth spurt active! Schedule fertilizing and health checks now.",
-        "April: Early storm preparation: Thin dense canopies to reduce wind sail effects.",
-        "May: Dry season maintenance: Deep root watering and mulch refreshment recommended.",
-        "June: Hurricane season begins. Book your 24/7 priority emergency dispatch status.",
-        "July: Mid-season inspection: Check for pests and lightning-damaged limbs.",
-        "August: Peak storm activity month. Remove all dead or overhanging limbs immediately.",
-        "September: Hurricane peak. Direct crew coordination active for hazard mitigation.",
-        "October: Post-storm recovery. Assess tree stability and soil compaction after rains.",
-        "November: Ideal planting season begins. Soil enrichment and root-care focus.",
-        "December: End-of-year safety audits. Prune for property clearance and winter health.",
-      ];
-
-      const adviceEl = document.getElementById("seasonal-advice");
+      // ★ DEĞİŞTİ: Insights listesi sunucu tarafına taşındığı için JS içinden silindi ★
       const riskEl = document.getElementById("risk-level");
-      if (adviceEl) adviceEl.innerText = insights[month];
 
       if (riskEl) {
         if (month >= 5 && month <= 8) {
