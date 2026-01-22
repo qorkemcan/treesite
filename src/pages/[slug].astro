@@ -61,8 +61,7 @@ const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
 
-// ★ YENİ: DİNAMİK ARBORIST TAVSİYESİ MANTIĞI (SEO İÇİN KRİTİK)
-// Her şehir için 50 tavsiyeden birini sabit ama diğerlerinden farklı seçer
+// ★ DİNAMİK ARBORIST TAVSİYESİ MANTIĞI
 const tipIndex =
   (cityData.City.length + cityData.Landmark.length) % arboristTips.length;
 const selectedTemplate = arboristTips[tipIndex];
@@ -315,7 +314,6 @@ let finalFaqs =
             >
             <span style="font-size: 1.3rem;">📅</span>
           </div>
-          <!-- ★ DEĞİŞTİ: Metin artık sunucu tarafında (Server-side) benzersiz üretiliyor ★ -->
           <p
             id="seasonal-advice"
             style="margin: 0; font-size: 0.9rem; color: #4b5563; line-height: 1.5; font-weight: 700; font-style: italic;"
@@ -392,7 +390,7 @@ let finalFaqs =
       </div>
     </section>
 
-    <!-- CONTENT & IMAGE -->
+    <!-- CONTENT & IMAGE (GÜNCELLENMİŞ ZENGİN METİN ALANI) -->
     <section style="margin-top: 5rem;">
       <div
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;"
@@ -403,13 +401,25 @@ let finalFaqs =
           >
             Expert {serviceInfo.name} in {cityName}
           </h2>
+          <!-- 1. Paragraf: Mevcut CSV Açıklaması -->
           <p style="font-size: 1.1rem; color: #374151; line-height: 1.8;">
             {cityData.Description}
           </p>
-          <p style="font-size: 1.1rem; color: #374151; line-height: 1.8;">
-            Located near <strong>{landmark}</strong>, our teams are fully vetted
-            and compliant with Florida's safety regulations to ensure your
-            property remains hazard-free.
+          <!-- 2. Paragraf: Yeni Zenginleştirilmiş Dinamik Metin -->
+          <p
+            style="font-size: 1.1rem; color: #374151; line-height: 1.8; margin-top: 1rem;"
+          >
+            Beyond general maintenance, our specialists in <strong
+              >{cityName}</strong
+            > are specifically trained to manage the complex growth patterns of <strong
+              >{cityData.MainTreeType}</strong
+            >, ensuring structural integrity and long-term health. Located near <strong
+              >{landmark}</strong
+            >, we dispatch fully vetted crews that follow strict Florida safety
+            standards for every <strong>{cityData.FocusService}</strong> project.
+            Our commitment to professional excellence ensures that tree care throughout
+            <strong>{countyName} County</strong> remains safe, efficient, and tailored
+            to the unique environmental needs of your local Florida landscape.
           </p>
         </div>
         {
@@ -523,7 +533,6 @@ let finalFaqs =
       const dateEl = document.getElementById("current-date");
       if (dateEl) dateEl.innerText = now.toLocaleDateString("en-US", options);
 
-      // ★ DEĞİŞTİ: Insights listesi sunucu tarafına taşındığı için JS içinden silindi ★
       const riskEl = document.getElementById("risk-level");
 
       if (riskEl) {
