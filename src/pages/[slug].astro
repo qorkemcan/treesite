@@ -82,18 +82,33 @@ let finalFaqs = premiumFaqs[cityKey] || {
 
 <MainLayout title={`#1 ${serviceInfo.name} ${cityName}, FL | Licensed & Insured`} description={cityData.Description}>
   
-  <!-- ★ SEO: BREADCRUMB SCHEMA ★ -->
-  <script type="application/ld+json" is:inline define:vars={{ cityName, currentUrl }}>
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protreetrim.com" },
-        { "@type": "ListItem", "position": 2, "name": "Florida", "item": "https://protreetrim.com" },
-        { "@type": "ListItem", "position": 3, "name": cityName, "item": currentUrl }
-      ]
-    }
-  </script>
+  <!-- ★ SEO: BREADCRUMB SCHEMA ★ (HATASIZ NİHAİ HALİ) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protreetrim.com" },
+      { "@type": "ListItem", "position": 2, "name": "Florida", "item": "https://protreetrim.com" },
+      { "@type": "ListItem", "position": 3, "name": cityName, "item": currentUrl }
+    ]
+  })} />
+
+  <!-- ★ SEO: SERVICE SCHEMA ★ (HATASIZ NİHAİ HALİ) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": serviceInfo.name,
+    "provider": { 
+      "@type": "LocalBusiness", 
+      "name": "ProTreeTrim™ Florida", 
+      "telephone": SITE_CONFIG.phone 
+    },
+    "areaServed": [
+      { "@type": "City", "name": cityName },
+      { "@type": "AdministrativeArea", "name": countyName }
+    ],
+    "description": `Professional ${serviceInfo.name} services in ${cityName}, Florida. Licensed and insured experts.`
+  })} />
 
   <!-- ★ SEO: SERVICE SCHEMA ★ -->
   <script type="application/ld+json" is:inline define:vars={{ cityName, serviceName: serviceInfo.name, countyName, siteUrl: SITE_CONFIG.siteUrl, phone: SITE_CONFIG.phone }}>

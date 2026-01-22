@@ -23,16 +23,19 @@ const GTM_ID = "GTM-PW924QGW";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
+
     <!-- ★ HIZ OPTİMİZASYONU: PRECONNECT ★ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
     <!-- Google Tag Manager (Head) - ASYNC (Hız için optimize edildi) -->
     <script is:inline define:vars={{ GTM_ID }}>
@@ -42,85 +45,146 @@ const GTM_ID = "GTM-PW924QGW";
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true; 
+        j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", GTM_ID);
     </script>
 
     <!-- Google Fonts - OPTİMİZE EDİLMİŞ (LCP'yi düşürür) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
 
-    <!-- ★ LOCALBUSINESS SCHEMA ★ -->
-    <script type="application/ld+json" is:inline define:vars={{ brandName: SITE_CONFIG.brandName, phone: SITE_CONFIG.phone, siteUrl: SITE_CONFIG.siteUrl }}>
-      {
+    <!-- ★ LOCALBUSINESS SCHEMA ★ (HATASIZ NİHAİ HALİ) -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": brandName,
-        "image": "https://protreetrim.com/og-image.jpg",
-        "@id": siteUrl,
-        "url": siteUrl,
-        "telephone": phone,
-        "address": {
+        name: SITE_CONFIG.brandName,
+        image: "https://protreetrim.com/og-image.jpg",
+        "@id": SITE_CONFIG.siteUrl,
+        url: SITE_CONFIG.siteUrl,
+        telephone: SITE_CONFIG.phone,
+        address: {
           "@type": "PostalAddress",
-          "addressLocality": "Statewide",
-          "addressRegion": "FL",
-          "addressCountry": "US"
-        }
-      }
-    </script>
+          addressLocality: "Statewide",
+          addressRegion: "FL",
+          addressCountry: "US",
+        },
+      })}
+    />
 
     <style is:global>
-      :root { --primary: #1b4332; --primary-dark: #081c15; --secondary: #ea580c; --bg-light: #fcfcfc; }
-      
+      :root {
+        --primary: #1b4332;
+        --primary-dark: #081c15;
+        --secondary: #ea580c;
+        --bg-light: #fcfcfc;
+      }
+
       /* GLOBAL RESET */
-      html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
-      body { background: var(--bg-light); color: #1a1a1a; line-height: 1.5; font-family: sans-serif; padding-bottom: 80px; }
-      
-      .container { max-width: 1200px; margin: 0 auto; padding: 0 1.2rem; width: 100%; box-sizing: border-box; }
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+      }
+      body {
+        background: var(--bg-light);
+        color: #1a1a1a;
+        line-height: 1.5;
+        font-family: sans-serif;
+        padding-bottom: 80px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
 
       /* Navigasyon Masaüstü */
-      .nav-links-desktop { display: flex; gap: 15px; align-items: center; }
-      .nav-link { color: #4b5563; text-decoration: none; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; transition: 0.2s; white-space: nowrap; }
-      .nav-link:hover { color: var(--secondary); }
+      .nav-links-desktop {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .nav-link {
+        color: #4b5563;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        transition: 0.2s;
+        white-space: nowrap;
+      }
+      .nav-link:hover {
+        color: var(--secondary);
+      }
 
-      .mobile-toggle-area { display: none; align-items: center; gap: 12px; }
-      
+      .mobile-toggle-area {
+        display: none;
+        align-items: center;
+        gap: 12px;
+      }
+
       @media (max-width: 1150px) {
-        .nav-links-desktop { display: none; }
-        .mobile-toggle-area { display: flex; }
+        .nav-links-desktop {
+          display: none;
+        }
+        .mobile-toggle-area {
+          display: flex;
+        }
       }
 
       /* MOBİL MENÜ OVERLAY (TAM ORTALANMIŞ) */
       #mobile-menu {
-        display: none; 
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100dvh; 
-        background: white; 
-        z-index: 10002; 
-        flex-direction: column; 
-        align-items: center; 
-        justify-content: center; 
-        gap: 1.5rem; 
-        padding: 40px 20px; 
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        background: white;
+        z-index: 10002;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 40px 20px;
         text-align: center;
         box-sizing: border-box;
       }
-      #mobile-menu.active { display: flex; }
-      .mobile-nav-link { font-size: 1.3rem; font-weight: 800; color: var(--primary); text-decoration: none; text-transform: uppercase; width: 100%; }
+      #mobile-menu.active {
+        display: flex;
+      }
+      .mobile-nav-link {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: var(--primary);
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+      }
 
       /* X Butonu (Kapatma) */
       #closeMenuBtn {
-        position: absolute; 
-        top: 15px; 
-        right: 15px; 
-        font-size: 3rem; 
-        background: none; 
-        border: none; 
-        color: #94a3b8; 
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 3rem;
+        background: none;
+        border: none;
+        color: #94a3b8;
         cursor: pointer;
         line-height: 1;
         padding: 5px;
@@ -128,42 +192,88 @@ const GTM_ID = "GTM-PW924QGW";
 
       /* Footer Rozetler */
       .trust-badge-footer {
-        background: rgba(255, 255, 255, 0.05); padding: 18px; border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center;
-        gap: 12px; color: white; text-align: left;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 18px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: white;
+        text-align: left;
       }
     </style>
   </head>
   <body>
-    <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
 
     <!-- Top Badge -->
-    <div style="background: var(--primary-dark); color: #ffb703; padding: 10px 5px; text-align: center; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;">
+    <div
+      style="background: var(--primary-dark); color: #ffb703; padding: 10px 5px; text-align: center; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;"
+    >
       {badgeText}
     </div>
 
     <!-- Navigation -->
-    <nav style="background: rgba(255, 255, 255, 0.98); border-bottom: 1px solid #eee; padding: 0.8rem 0; position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(10px);">
-      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 6px; flex-shrink: 0;">
-          <div style="background: var(--primary); width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🌳</div>
-          <span style="font-weight: 900; color: var(--primary); font-size: 1.1rem; text-transform: uppercase; letter-spacing: -0.5px;">Pro<span style="color: var(--secondary);">Tree</span>Trim</span>
+    <nav
+      style="background: rgba(255, 255, 255, 0.98); border-bottom: 1px solid #eee; padding: 0.8rem 0; position: sticky; top: 0; z-index: 10000; backdrop-filter: blur(10px);"
+    >
+      <div
+        class="container"
+        style="display: flex; justify-content: space-between; align-items: center;"
+      >
+        <a
+          href="/"
+          style="text-decoration: none; display: flex; align-items: center; gap: 6px; flex-shrink: 0;"
+        >
+          <div
+            style="background: var(--primary); width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;"
+          >
+            🌳
+          </div>
+          <span
+            style="font-weight: 900; color: var(--primary); font-size: 1.1rem; text-transform: uppercase; letter-spacing: -0.5px;"
+            >Pro<span style="color: var(--secondary);">Tree</span>Trim</span
+          >
         </a>
 
         <!-- Desktop links -->
         <div class="nav-links-desktop">
           <a href="/services" class="nav-link">Services</a>
           <a href="/gallery" class="nav-link">Gallery</a>
-          <a href="/trust-safety" class="nav-link" style="color:var(--primary); font-weight:800; border-bottom: 2px solid #ffb703;">Trust & Safety</a>
+          <a
+            href="/trust-safety"
+            class="nav-link"
+            style="color:var(--primary); font-weight:800; border-bottom: 2px solid #ffb703;"
+            >Trust & Safety</a
+          >
           <a href="/join-network" class="nav-link">Join Network</a>
           <a href="/about" class="nav-link">About</a>
           <a href="/contact" class="nav-link">Contact</a>
-          <a href={SITE_CONFIG.phoneHref} style="background: var(--primary); color: white !important; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.7rem;">{SITE_CONFIG.phone}</a>
+          <a
+            href={SITE_CONFIG.phoneHref}
+            style="background: var(--primary); color: white !important; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.7rem;"
+            >{SITE_CONFIG.phone}</a
+          >
         </div>
 
         <div class="mobile-toggle-area">
-          <a href={SITE_CONFIG.phoneHref} style="text-decoration: none; font-size: 1.3rem; background: #f3f4f6; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">📞</a>
-          <button id="mobileMenuBtn" style="background: var(--primary); color: white; border: none; padding: 8px 12px; border-radius: 6px; font-size: 1.1rem; cursor: pointer;">☰</button>
+          <a
+            href={SITE_CONFIG.phoneHref}
+            style="text-decoration: none; font-size: 1.3rem; background: #f3f4f6; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"
+            >📞</a
+          >
+          <button
+            id="mobileMenuBtn"
+            style="background: var(--primary); color: white; border: none; padding: 8px 12px; border-radius: 6px; font-size: 1.1rem; cursor: pointer;"
+            >☰</button
+          >
         </div>
       </div>
     </nav>
@@ -174,62 +284,124 @@ const GTM_ID = "GTM-PW924QGW";
       <a href="/" class="mobile-nav-link">Home</a>
       <a href="/services" class="mobile-nav-link">Services</a>
       <a href="/gallery" class="mobile-nav-link">Gallery</a>
-      <a href="/trust-safety" class="mobile-nav-link" style="color: #ea580c;">Trust & Safety</a>
+      <a href="/trust-safety" class="mobile-nav-link" style="color: #ea580c;"
+        >Trust & Safety</a
+      >
       <a href="/join-network" class="mobile-nav-link">Join Our Network</a>
       <a href="/about" class="mobile-nav-link">About Us</a>
       <a href="/contact" class="mobile-nav-link">Contact</a>
       <div style="width: 100%; padding-top: 1rem;">
-        <a href={SITE_CONFIG.phoneHref} style="background: var(--secondary); color: white !important; padding: 1.1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 900; display: inline-block; width: 85%;">{SITE_CONFIG.phone}</a>
+        <a
+          href={SITE_CONFIG.phoneHref}
+          style="background: var(--secondary); color: white !important; padding: 1.1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 900; display: inline-block; width: 85%;"
+          >{SITE_CONFIG.phone}</a
+        >
       </div>
     </div>
 
     <slot />
 
     <!-- FOOTER -->
-    <footer style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 8rem; text-align: center; border-top: 6px solid var(--secondary);">
+    <footer
+      style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 8rem; text-align: center; border-top: 6px solid var(--secondary);"
+    >
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 50px;">
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 50px;"
+        >
           <div class="trust-badge-footer">
             <span style="font-size: 1.8rem;">🛡️</span>
-            <span style="font-size: 0.8rem; font-weight: 700;">LICENSED & INSURED<br /><small style="opacity: 0.7; font-weight: 400;">Verified Florida Network</small></span>
+            <span style="font-size: 0.8rem; font-weight: 700;"
+              >LICENSED & INSURED<br /><small
+                style="opacity: 0.7; font-weight: 400;"
+                >Verified Florida Network</small
+              ></span
+            >
           </div>
           <div class="trust-badge-footer">
             <span style="font-size: 1.8rem;">⚡</span>
-            <span style="font-size: 0.8rem; font-weight: 700;">24/7 RESPONSE<br /><small style="opacity: 0.7; font-weight: 400;">Emergency Storm Dispatch</small></span>
+            <span style="font-size: 0.8rem; font-weight: 700;"
+              >24/7 RESPONSE<br /><small style="opacity: 0.7; font-weight: 400;"
+                >Emergency Storm Dispatch</small
+              ></span
+            >
           </div>
           <div class="trust-badge-footer">
             <span style="font-size: 1.8rem;">💰</span>
-            <span style="font-size: 0.8rem; font-weight: 700;">FREE ESTIMATES<br /><small style="opacity: 0.7; font-weight: 400;">No-Obligation Quotes</small></span>
+            <span style="font-size: 0.8rem; font-weight: 700;"
+              >FREE ESTIMATES<br /><small
+                style="opacity: 0.7; font-weight: 400;"
+                >No-Obligation Quotes</small
+              ></span
+            >
           </div>
         </div>
 
-        <p style="font-weight: 900; font-size: 1.4rem; margin-bottom: 25px; color: white;">ProTreeTrim™ Florida</p>
+        <p
+          style="font-weight: 900; font-size: 1.4rem; margin-bottom: 25px; color: white;"
+        >
+          ProTreeTrim™ Florida
+        </p>
 
-        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 40px;">
+        <div
+          style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 40px;"
+        >
           <a href="/" style="color: white; text-decoration: none;">Directory</a>
-          <a href="/services" style="color: white; text-decoration: none;">Services</a>
-          <a href="/gallery" style="color: white; text-decoration: none;">Gallery</a>
-          <a href="/trust-safety" style="color: #ffb703; text-decoration: none;">Trust & Safety</a>
-          <a href="/join-network" style="color: white; text-decoration: none;">Join Network</a>
-          <a href="/about" style="color: white; text-decoration: none;">About</a>
-          <a href="/privacy" style="color: white; text-decoration: none;">Privacy</a>
-          <a href="/contact" style="color: white; text-decoration: none;">Contact</a>
+          <a href="/services" style="color: white; text-decoration: none;"
+            >Services</a
+          >
+          <a href="/gallery" style="color: white; text-decoration: none;"
+            >Gallery</a
+          >
+          <a href="/trust-safety" style="color: #ffb703; text-decoration: none;"
+            >Trust & Safety</a
+          >
+          <a href="/join-network" style="color: white; text-decoration: none;"
+            >Join Network</a
+          >
+          <a href="/about" style="color: white; text-decoration: none;">About</a
+          >
+          <a href="/privacy" style="color: white; text-decoration: none;"
+            >Privacy</a
+          >
+          <a href="/contact" style="color: white; text-decoration: none;"
+            >Contact</a
+          >
         </div>
 
-        <div style="max-width: 850px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center;">
-          <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 15px; font-weight: 600;">
-            © {SITE_CONFIG.year} ProTreeTrim™ Florida. Licensed & Insured Expert Dispatch Network.
+        <div
+          style="max-width: 850px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center;"
+        >
+          <p
+            style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 15px; font-weight: 600;"
+          >
+            © {SITE_CONFIG.year} ProTreeTrim™ Florida. Licensed & Insured Expert Dispatch
+            Network.
           </p>
-          <p style="font-size: 0.7rem; opacity: 0.5; line-height: 1.6; text-align: justify; text-align-last: center;">
-            <strong>Disclaimer:</strong> ProTreeTrim™ operates as a professional referral and dispatch network. We connect Florida homeowners with local, independently owned and operated tree service professionals. ProTreeTrim™ does not directly perform tree removal or arborist services. All work is completed by third-party contractors. It is the property owner's sole responsibility to verify that their matched contractor maintains active licensing and the specific insurance coverage required by their Florida county or municipality before work begins.
+          <p
+            style="font-size: 0.7rem; opacity: 0.5; line-height: 1.6; text-align: justify; text-align-last: center;"
+          >
+            <strong>Disclaimer:</strong> ProTreeTrim™ operates as a professional referral
+            and dispatch network. We connect Florida homeowners with local, independently
+            owned and operated tree service professionals. ProTreeTrim™ does not directly
+            perform tree removal or arborist services. All work is completed by third-party
+            contractors. It is the property owner's sole responsibility to verify
+            that their matched contractor maintains active licensing and the specific
+            insurance coverage required by their Florida county or municipality before
+            work begins.
           </p>
         </div>
       </div>
     </footer>
 
     <!-- Fixed Mobile CTA -->
-    <div style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px; z-index: 10001; border-top: 1px solid #eee; display: flex; justify-content: center; box-shadow: 0 -5px 15px rgba(0,0,0,0.1);">
-      <a href={SITE_CONFIG.phoneHref} style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 16px; text-decoration: none; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <div
+      style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px; z-index: 10001; border-top: 1px solid #eee; display: flex; justify-content: center; box-shadow: 0 -5px 15px rgba(0,0,0,0.1);"
+    >
+      <a
+        href={SITE_CONFIG.phoneHref}
+        style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 16px; text-decoration: none; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px;"
+      >
         📞 CALL FOR FREE ESTIMATE
       </a>
     </div>
@@ -251,7 +423,7 @@ const GTM_ID = "GTM-PW924QGW";
 
       menuBtn?.addEventListener("click", () => toggleMenu(true));
       closeBtn?.addEventListener("click", () => toggleMenu(false));
-      
+
       mobileMenu?.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => toggleMenu(false));
       });
