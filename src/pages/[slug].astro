@@ -26,7 +26,7 @@ export async function getStaticPaths() {
   const paths = [];
   records.forEach((row) => {
     if (!row.City) return;
-    // DÜZELTME: Noktaları siliyoruz (.replace(/\./g, ""))
+    // DÜZELTME: Hem noktaları siliyoruz hem boşlukları tire yapıyoruz
     const citySlug = row.City.toLowerCase().trim().replace(/\./g, "").replace(/\s+/g, "-");
     
     services.forEach((service) => {
@@ -62,8 +62,10 @@ const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
 
-// ★ DİNAMİK ARBORIST TAVSİYESİ MANTIĞI (Korundu)
-const tipIndex = (cityData.City.length + cityData.Landmark.length) % arboristTips.length;
+// ★ YENİ: SÜPER BENZERSİZLEŞTİRİCİ MANTIĞI
+// Sadece harf sayısına değil, harflerin ASCII kodlarına ve servis tipine bakar.
+// Böylece her sayfa (Miami-Removal, Miami-Grinding vb.) farklı bir ipucu seçer.
+const tipIndex = Math.abs((cityData.City + cityData.Landmark + serviceInfo.prefix).split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % arboristTips.length;
 const selectedTemplate = arboristTips[tipIndex];
 
 const finalDynamicTip = selectedTemplate
@@ -83,7 +85,7 @@ if (imagePaths.length > 0) {
   selectedImage = imgModule.default;
 }
 
-// DÜZELTME: FAQ key eşleşmesi için noktaları siliyoruz
+// DÜZELTME: FAQ çekmek için kullanılan anahtardaki noktaları siliyoruz (JSON uyumu için)
 const cityKey = cityData.City.toLowerCase().trim().replace(/\./g, "").replace(/\s+/g, "-");
 
 let finalFaqs = premiumFaqs[cityKey] || {
@@ -103,7 +105,28 @@ let finalFaqs = premiumFaqs[cityKey] || {
 ---
 
 <MainLayout title={`#1 ${serviceInfo.name} ${cityName}, FL | Licensed & Insured`} description={cityData.Description}>
-  <!-- Schema ve Görsel Bölümleri (Aynı Kaldı) -->
+  
+  <!-- SEO: BREADCRUMB SCHEMA -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protreetrim.com" },
+      { "@type": "ListItem", "position": 2, "name": "Florida", "item": "https://protreetrim.com" },
+      { "@type": "ListItem", "position": 3, "name": cityName, "item": currentUrl }
+    ]
+  })} />
+
+  <!-- SEO: SERVICE SCHEMA -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": serviceInfo.name,
+    "provider": { "@type": "LocalBusiness", "name": "ProTreeTrim™ Florida", "telephone": SITE_CONFIG.phone },
+    "areaServed": [ { "@type": "City", "name": cityName }, { "@type": "AdministrativeArea", "name": countyName } ],
+    "description": `Professional ${serviceInfo.name} services in ${cityName}, Florida. Licensed and insured experts.`
+  })} />
+
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4.5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;">
     <div class="container">
       <div style="font-size: 0.85rem; margin-bottom: 1rem; color: #ffb703; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;">Official Service Dispatch • {countyName} County</div>
@@ -113,13 +136,14 @@ let finalFaqs = premiumFaqs[cityKey] || {
   </header>
 
   <main class="container" style="max-width: 1000px; margin: -2.5rem auto 0; padding: 0 1rem; position: relative; z-index: 10;">
+    <!-- ESTIMATE CTA -->
     <div style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;">
       <h3 style="margin: 0 0 10px; color: #064e3b; font-size: 1.6rem; font-weight: 800;">Instant Professional Estimate</h3>
       <p style="color: #6b7280; margin-bottom: 1.5rem; font-size: 1rem;">Connect with verified {serviceInfo.name} specialists in {cityName}.</p>
       <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.2rem; text-decoration: none; border-radius: 12px; font-weight: 900; font-size: clamp(1.4rem, 5vw, 2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); transition: 0.3s;">{SITE_CONFIG.phone}</a>
     </div>
 
-    <!-- Authority Monitor Section -->
+    <!-- LOCAL STATUS MONITOR -->
     <section style="margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
       <div style="background: white; padding: 1.8rem; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
@@ -140,7 +164,8 @@ let finalFaqs = premiumFaqs[cityKey] || {
           <p style="margin: 0; font-size: 0.9rem; color: #4b5563; line-height: 1.5; font-weight: 700; font-style: italic;">{finalDynamicTip}</p>
         </div>
       </div>
-      <!-- Local Service Hub -->
+      
+      <!-- LOCAL SERVICE HUB LINKS -->
       <div style="background: #f0fdf4; padding: 1.8rem; border-radius: 24px; border: 1px solid #dcfce7; display: flex; flex-direction: column; justify-content: center;">
         <h4 style="margin: 0 0 15px; color: #166534; font-size: 1.15rem; font-weight: 800;">Local Service Hub</h4>
         <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
@@ -153,7 +178,7 @@ let finalFaqs = premiumFaqs[cityKey] || {
       </div>
     </section>
 
-    <!-- Content & Description -->
+    <!-- CONTENT AREA -->
     <section style="margin-top: 5rem;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
         <div>
@@ -163,11 +188,11 @@ let finalFaqs = premiumFaqs[cityKey] || {
             Beyond general maintenance, our specialists in <strong>{cityName}</strong> are specifically trained to manage the complex growth patterns of <strong>{cityData.MainTreeType}</strong>, ensuring structural integrity and long-term health. Located near <strong>{landmark}</strong>, we dispatch fully vetted crews that follow strict Florida safety standards for every <strong>{cityData.FocusService}</strong> project.
           </p>
         </div>
-        {selectedImage && <Image src={selectedImage} alt={`${serviceInfo.name} in ${cityName}, FL`} width={600} height={400} format="webp" style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.08);" />}
+        {selectedImage && <Image src={selectedImage} alt={`${serviceInfo.name} in ${cityName}, FL - Certified crew near ${landmark}`} width={600} height={400} format="webp" style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.08);" />}
       </div>
     </section>
 
-    <!-- FAQ SECTION (Premium Veriler Buraya Gelecek) -->
+    <!-- FAQ SECTION -->
     <section style="margin: 6rem 0;">
       <h2 style="color: #064e3b; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 3rem;">Local FAQ for {cityName}</h2>
       <div style="display: grid; gap: 15px; max-width: 800px; margin: 0 auto;">
@@ -180,7 +205,7 @@ let finalFaqs = premiumFaqs[cityKey] || {
       </div>
     </section>
 
-    <!-- Nearby Areas (Sluglar düzeltildi) -->
+    <!-- NEARBY FOOTPRINT -->
     <section style="margin-bottom: 12rem; border-top: 1px solid #eee; padding-top: 4rem; text-align: center;">
       <h3 style="color: #064e3b; font-size: 1rem; font-weight: 900; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px;">Also Serving Nearby {countyName} County Areas:</h3>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
@@ -208,5 +233,5 @@ let finalFaqs = premiumFaqs[cityKey] || {
   h4 { font-weight: 900; color: #1b4332; }
   .hub-link:hover { color: #ea580c !important; transform: translateX(5px); transition: 0.2s; }
   @keyframes live-pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); } }
-  #live-dot { animation: live-pulse 2s infinite; }
+  #live-dot { animation: live-pulse 2s infinite; background: #16a34a; border-radius: 50%; width: 10px; height: 10px; display: inline-block; }
 </style>
