@@ -6,7 +6,7 @@ import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
   // Sitemizin tam adresi (Site haritası için şart!)
-  site: 'https://protreetrim.com',
+  site: 'https://www.protreetrim.com',
 
   // Hatanın çözümü: Astro v5 "hybrid" yerine "static" kullanımını öneriyor.
   // API dosyamızdaki "prerender = false" ayarı sayesinde formumuz yine çalışacak.

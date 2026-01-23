@@ -1,81 +1,52 @@
 ---
+// src/pages/join-network.astro (TAMAMEN ONARILMIŞ VE GÜNCELLENMİŞ VERSİYON)
 import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../config.js";
 ---
 
-<MainLayout
-  title="Partner With Us | ProTreeTrim™ Florida Contractor Network"
+<MainLayout 
+  title="Partner With Us | ProTreeTrim™ Florida Contractor Network" 
   description="Licensed tree service professionals: Join Florida's premier dispatch network. Get high-quality leads without the marketing headache."
 >
-  <header
-    style="background: linear-gradient(135deg, #081c15 0%, #1b4332 100%); color: white; padding: 6rem 1.5rem; text-align: center;"
-  >
+  <header style="background: linear-gradient(135deg, #081c15 0%, #1b4332 100%); color: white; padding: 6rem 1.5rem; text-align: center;">
     <div class="container">
-      <h1
-        style="font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 900; margin: 0; line-height: 1.1;"
-      >
-        Scale Your Tree Business<br /><span style="color: #ffb703;"
-          >Without the Marketing Stress</span>
-      </h1>
-      <p
-        style="font-size: 1.2rem; color: #95d5b2; margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;"
-      >
-        We handle the Florida-wide SEO and dispatch. You handle the canopies.
-        Join our elite network of verified contractors today.
+      <h1 style="font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 900; margin: 0; line-height: 1.1;">Scale Your Tree Business<br/><span style="color: #ffb703;">Without the Marketing Stress</span></h1>
+      <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+        We handle the Florida-wide SEO and dispatch. You handle the canopies. Join our elite network of verified contractors today.
       </p>
     </div>
   </header>
 
   <main class="container" style="padding: 5rem 1.2rem 10rem;">
-    <!-- ANA DÜZEN SARMALAYICI (Grid) -->
+    
     <div class="b2b-layout">
-      <!-- SOL TARAF: B2B KARTLAR VE ŞARTLAR -->
+      
+      <!-- SOL TARAF: KARTLAR VE ŞARTLAR -->
       <div class="b2b-content">
-        <!-- Üst Kartlar Grid -->
         <div class="cards-grid">
           <div class="b2b-card">
             <div class="b2b-icon">📈</div>
             <h3>Consistent Lead Flow</h3>
-            <p>
-              Stop chasing jobs on crowded platforms. We provide high-intent
-              leads from homeowners specifically looking for tree removal and
-              emergency care.
-            </p>
+            <p>Stop chasing jobs on crowded platforms. We provide high-intent leads from homeowners across Florida.</p>
           </div>
 
           <div class="b2b-card">
             <div class="b2b-icon">🎯</div>
             <h3>Zero Marketing Cost</h3>
-            <p>
-              Forget expensive ad spends or SEO retainers. We invest in the
-              brand authority of ProTreeTrim™ so you can focus on your crew and
-              equipment.
-            </p>
+            <p>Forget expensive ad spends. We invest in the brand authority so you can focus on your crew.</p>
           </div>
 
           <div class="b2b-card exclusivity-card">
             <div class="b2b-icon">📍</div>
             <h3>Territory Exclusivity</h3>
-            <p>
-              <strong>Coming Soon:</strong> We are preparing to offer exclusive territory
-              rights. Top-performing partners will have the opportunity to have their
-              direct line featured on specific city pages.
-            </p>
+            <p><strong>Coming Soon:</strong> Top-performing partners will have the opportunity to have their direct line featured on specific city pages.</p>
           </div>
         </div>
 
-        <!-- Şartlar Bölümü -->
         <section class="qualification-section">
-          <h2
-            style="color: #1b4332; font-size: 2rem; font-weight: 900; margin-top: 0;"
-          >
-            Partner Qualification
-          </h2>
-          <p
-            style="font-size: 1.1rem; color: #4b5563; line-height: 1.7; margin-bottom: 2rem;"
-          >
-            To maintain our "Authority" status, we only partner with crews that
-            meet Florida state requirements.
+          <h2 style="color: #1b4332; font-size: 2rem; font-weight: 900; margin-top: 0;">Partner Qualification</h2>
+          <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.7; margin-bottom: 2rem;">
+            To maintain our "Authority" status, we only partner with crews that meet Florida state requirements. 
           </p>
           <ul class="check-list">
             <li>Active General Liability Insurance</li>
@@ -84,105 +55,70 @@ import { SITE_CONFIG } from "../config.js";
             <li>Proven Track Record & Equipment</li>
           </ul>
           <div class="quote-box">
-            <p
-              style="margin: 0; color: #166534; font-size: 0.95rem; font-weight: 700;"
-            >
-              "We don't just send jobs; we build territories. Our goal is to
-              find one reliable partner per major Florida metro."
-            </p>
+              <p style="margin: 0; color: #166534; font-size: 0.95rem; font-weight: 700;">
+                  "We don't just send jobs; we build territories. Our goal is to find one reliable partner per major Florida metro."
+              </p>
           </div>
         </section>
       </div>
 
-      <!-- SAĞ TARAF: İLETİŞİM FORMU (Sticky on Desktop) -->
+      <!-- SAĞ TARAF: İLETİŞİM FORMU (EMAIL EKLENDİ) -->
       <aside class="b2b-sidebar">
         <div class="form-wrapper">
-          <h3
-            style="margin-top: 0; margin-bottom: 1.5rem; color: #1b4332; font-size: 1.4rem; font-weight: 800;"
-          >
-            Inquiry Form
-          </h3>
-          <form
-            action="/api/contact"
-            method="POST"
-            style="display: grid; gap: 15px;"
-          >
-            <input
-              type="hidden"
-              name="service"
-              value="B2B-Partner-Application"
-            />
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem; color: #1b4332; font-size: 1.4rem; font-weight: 800;">Inquiry Form</h3>
+          <form action="/api/contact" method="POST" style="display: grid; gap: 15px;">
+            <!-- TUZAK -->
+            <div style="display:none;" aria-hidden="true">
+              <input type="text" name="fax_number" tabindex="-1" autocomplete="off" />
+            </div>
 
+            <input type="hidden" name="service" value="B2B-Partner-Application" />
+            
             <div>
               <label class="form-label">Company Name</label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Extreme Tree Services LLC"
-                required
-                class="form-input"
-              />
+              <input type="text" name="name" placeholder="Extreme Tree Services LLC" required class="form-input"/>
             </div>
 
             <div>
-              <label class="form-label"
-                >Primary Service Area (County/City)</label
-              >
-              <input
-                type="text"
-                name="city"
-                placeholder="e.g. Tampa / Hillsborough"
-                required
-                class="form-input"
-              />
+              <label class="form-label">Business Email</label>
+              <input type="email" name="email" placeholder="owner@company.com" required class="form-input"/>
+            </div>
+
+            <div>
+              <label class="form-label">Primary Service Area</label>
+              <input type="text" name="city" placeholder="e.g. Tampa / Hillsborough" required class="form-input"/>
             </div>
 
             <div>
               <label class="form-label">Phone Number</label>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="(555) 000-0000"
-                required
-                class="form-input"
-              />
+              <input type="tel" name="phone" placeholder="(555) 000-0000" required class="form-input"/>
             </div>
 
             <div>
               <label class="form-label">Equipment & Crew Size</label>
-              <textarea
-                name="message"
-                rows="4"
-                placeholder="Describe your trucks, cranes, and crew capacity..."
-                class="form-input"
-                style="resize: vertical;"></textarea>
+              <textarea name="message" rows="4" placeholder="Describe your trucks, cranes, and crew capacity..." class="form-input" style="resize: vertical;"></textarea>
             </div>
 
-            <button type="submit" class="submit-btn"
-              >SUBMIT PARTNERSHIP REQUEST</button
-            >
+            <button type="submit" class="submit-btn">SUBMIT PARTNERSHIP REQUEST</button>
           </form>
-          <p
-            style="text-align: center; font-size: 0.75rem; color: #94a3b8; margin-top: 15px; font-weight: 600;"
-          >
+          <p style="text-align: center; font-size: 0.75rem; color: #94a3b8; margin-top: 15px; font-weight: 600;">
             ✓ Secure Data Transmission
           </p>
         </div>
       </aside>
+
     </div>
   </main>
 </MainLayout>
 
 <style>
-  /* ANA DÜZEN SÜTUNLARI */
   .b2b-layout {
     display: grid;
-    grid-template-columns: 1fr 400px; /* Masaüstünde sol geniş, sağ form alanı */
+    grid-template-columns: 1fr 400px;
     gap: 50px;
     align-items: start;
   }
 
-  /* KARTLARIN GRİDİ */
   .cards-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -191,7 +127,7 @@ import { SITE_CONFIG } from "../config.js";
   }
 
   .exclusivity-card {
-    grid-column: span 2; /* 3. kartı alta tam genişlik yapalım ki şık dursun */
+    grid-column: span 2;
     border: 2px solid #ffb703;
   }
 
@@ -202,24 +138,13 @@ import { SITE_CONFIG } from "../config.js";
     border: 1px solid #e5e7eb;
     transition: 0.3s;
   }
-  .b2b-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-  }
-  .b2b-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  h3 {
-    color: #1b4332;
-    font-weight: 800;
-    margin: 0 0 12px;
-  }
+  .b2b-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.05); }
+  .b2b-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  h3 { color: #1b4332; font-weight: 800; margin: 0 0 12px; }
 
-  /* FORM SIDEBAR */
   .b2b-sidebar {
     position: sticky;
-    top: 120px; /* Navigasyonun altında asılı kalsın */
+    top: 120px;
   }
 
   .form-wrapper {
@@ -227,98 +152,26 @@ import { SITE_CONFIG } from "../config.js";
     padding: 2.5rem;
     border-radius: 28px;
     border: 1px solid #e5e7eb;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
   }
 
-  .form-label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 800;
-    color: #64748b;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .form-input {
-    width: 100%;
-    padding: 14px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    outline: none;
-    font-size: 1rem;
-    font-family: inherit;
-  }
-  .form-input:focus {
-    border-color: #1b4332;
-    box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.05);
-  }
+  .form-label { display: block; font-size: 0.8rem; font-weight: 800; color: #64748b; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .form-input { width: 100%; padding: 14px; border-radius: 10px; border: 1px solid #ddd; outline: none; font-size: 1rem; font-family: inherit; }
+  .form-input:focus { border-color: #1b4332; box-shadow: 0 0 0 3px rgba(27,67,50,0.05); }
 
-  .submit-btn {
-    background: #1b4332;
-    color: white;
-    padding: 16px;
-    border: none;
-    border-radius: 12px;
-    font-weight: 900;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 100%;
-    font-size: 1rem;
-  }
-  .submit-btn:hover {
-    background: #081c15;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(27, 67, 50, 0.2);
-  }
+  .submit-btn { background: #1b4332; color: white; padding: 16px; border: none; border-radius: 12px; font-weight: 900; cursor: pointer; transition: 0.3s; width: 100%; font-size: 1rem; }
+  .submit-btn:hover { background: #081c15; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(27,67,50,0.2); }
 
-  /* ŞARTLAR */
-  .qualification-section {
-    padding-right: 40px;
-  }
-  .check-list {
-    list-style: none;
-    padding: 0;
-    color: #374151;
-    font-weight: 700;
-    font-size: 1.1rem;
-    line-height: 2.2;
-    margin-bottom: 2rem;
-  }
-  .check-list li::before {
-    content: "✓";
-    color: #16a34a;
-    margin-right: 12px;
-    font-weight: 900;
-  }
-  .quote-box {
-    background: #f0fdf4;
-    border-left: 5px solid #166534;
-    padding: 1.5rem;
-    border-radius: 12px;
-  }
+  .check-list { list-style: none; padding: 0; color: #374151; font-weight: 700; font-size: 1.1rem; line-height: 2.2; margin-bottom: 2rem; }
+  .check-list li::before { content: "✓"; color: #16a34a; margin-right: 12px; font-weight: 900; }
+  .quote-box { background: #f0fdf4; border-left: 5px solid #166534; padding: 1.5rem; border-radius: 12px; }
 
-  /* RESPONSIVE (MOBİL) */
   @media (max-width: 1024px) {
-    .b2b-layout {
-      grid-template-columns: 1fr;
-    } /* Sütunları teke düşür */
-    .b2b-sidebar {
-      position: static;
-      order: 2;
-    } /* Formu kartların altına al */
-    .b2b-content {
-      order: 1;
-    }
-    .cards-grid {
-      grid-template-columns: 1fr;
-    }
-    .exclusivity-card {
-      grid-column: span 1;
-    }
-    .qualification-section {
-      padding-right: 0;
-      order: 3;
-      margin-top: 4rem;
-    }
+    .b2b-layout { grid-template-columns: 1fr; }
+    .b2b-sidebar { position: static; order: 2; }
+    .b2b-content { order: 1; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .exclusivity-card { grid-column: span 1; }
+    .qualification-section { padding-right: 0; order: 3; margin-top: 4rem; }
   }
 </style>
