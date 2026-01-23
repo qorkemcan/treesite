@@ -63,7 +63,7 @@ const GTM_ID = "GTM-PW924QGW";
       rel="stylesheet"
     />
 
-    <!-- ★ LOCALBUSINESS SCHEMA (HAKKIYLA DOLDURULMUŞ HALİ) ★ -->
+    <!-- ★ LOCALBUSINESS SCHEMA ★ -->
     <script
       type="application/ld+json"
       set:html={JSON.stringify({
@@ -222,6 +222,25 @@ const GTM_ID = "GTM-PW924QGW";
         gap: 12px;
         color: white;
         text-align: left;
+      }
+
+      /* Nabız Atışı Animasyonu */
+      @keyframes pulse-animation {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4);
+        }
+        50% {
+          transform: scale(1.03);
+          box-shadow: 0 10px 35px rgba(234, 88, 12, 0.7);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4);
+        }
+      }
+      .sticky-call-btn {
+        animation: pulse-animation 2s infinite ease-in-out;
       }
     </style>
   </head>
@@ -409,9 +428,11 @@ const GTM_ID = "GTM-PW924QGW";
     >
       <a
         href={SITE_CONFIG.phoneHref}
+        class="sticky-call-btn"
         style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 16px; text-decoration: none !important; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4);"
-        ><span style="font-size: 1.6rem;">📞</span> CALL FOR FREE QUOTE</a
       >
+        <span style="font-size: 1.6rem;">📞</span> CALL FOR FREE QUOTE
+      </a>
     </div>
 
     <script is:inline>
