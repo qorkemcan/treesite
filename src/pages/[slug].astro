@@ -26,10 +26,12 @@ export async function getStaticPaths() {
   const paths = [];
   records.forEach((row) => {
     if (!row.City) return;
+    // URL'lerdeki noktaları (.) temizliyoruz ki 404 hatası oluşmasın
     const citySlug = row.City.toLowerCase()
       .trim()
       .replace(/\./g, "")
       .replace(/\s+/g, "-");
+
     services.forEach((service) => {
       paths.push({
         params: { slug: `${service.prefix}-${citySlug}` },
@@ -63,6 +65,12 @@ const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
 const mainTree = cityData.MainTreeType || "local Florida trees";
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
+
+// Linklerin hatasız çalışması için temiz slug
+const citySlugClean = cityData.City.toLowerCase()
+  .trim()
+  .replace(/\./g, "")
+  .replace(/\s+/g, "-");
 
 const tipIndex =
   (cityData.City.length + cityData.Landmark.length) % arboristTips.length;
@@ -120,22 +128,6 @@ const fallbackFaqs = [
     q: `Do I need a permit for ${serviceInfo.name} in ${cityName}?`,
     a: `Under Florida Statute 163.045, residential property owners in ${cityName} can often remove hazardous trees without local permits if a certified professional documents the threat. For non-emergency work near ${landmark}, we recommend verifying specific ${countyName} County ordinances.`,
   },
-  {
-    q: `What is the estimated cost for ${serviceInfo.name} near ${landmark}?`,
-    a: `Pricing in ${cityName} is determined by size and rigging required. Our network offers free estimates for ${countyName} County residents.`,
-  },
-  {
-    q: `Are your tree crews licensed in ${cityName}?`,
-    a: `Yes, all arborists in our ${cityName} network are fully licensed and insured, following strict Florida safety standards.`,
-  },
-  {
-    q: `How fast can a crew reach my ${cityName} home after a storm?`,
-    a: `We prioritize hazards near ${landmark}. In ${cityName}, dispatch typically reaches homes within 2-4 hours.`,
-  },
-  {
-    q: `Will stump grinding prevent pest issues on my property?`,
-    a: `Absolutely. Grinding in ${cityName} removes the moisture reservoir for termites and ants.`,
-  },
 ];
 let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
 ---
@@ -144,52 +136,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
   title={`#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & Insured`}
   description={cityData.Description}
 >
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.protreetrim.com",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Florida",
-          item: "https://www.protreetrim.com",
-        },
-        { "@type": "ListItem", position: 3, name: cityName, item: currentUrl },
-      ],
-    })}
-  />
-
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      name: `${cityName} ${serviceInfo.name}`,
-      serviceType: serviceInfo.name,
-      provider: { "@id": `${SITE_CONFIG.siteUrl}/#localbusiness` },
-      areaServed: { "@type": "City", name: cityName },
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Tree Care Services",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Free On-Site Estimate" },
-          },
-        ],
-      },
-      description: `Professional ${serviceInfo.name} services in ${cityName}, Florida. Certified crews near ${landmark} available for same-day dispatch.`,
-    })}
-  />
-
+  <!-- HEADER -->
   <header
     style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4.5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
   >
@@ -217,6 +164,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
     class="container"
     style="max-width: 1100px; margin: -2.5rem auto 0; padding: 0 1rem; position: relative; z-index: 10;"
   >
+    <!-- HERO CTA BOX -->
     <div
       style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;"
     >
@@ -234,12 +182,13 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
         >{SITE_CONFIG.phone}</a
       >
       <p
-        style="margin-top: 10px; font-size: 0.75rem; font-weight: 800; color: #1b4332; text-transform: uppercase;"
+        style="margin-top: 12px; font-size: 0.75rem; font-weight: 800; color: #1b4332; text-transform: uppercase; letter-spacing: 0.5px;"
       >
         100% Free - No Obligation Estimate
       </p>
     </div>
 
+    <!-- STEPS -->
     <section style="margin-top: 4rem;">
       <h2
         style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;"
@@ -267,6 +216,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
       </div>
     </section>
 
+    <!-- MONITOR & HUB -->
     <section
       style="margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;"
     >
@@ -278,7 +228,8 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
             <span
               style="background: #1b4332; color: #ffb703; font-size: 0.65rem; padding: 4px 12px; border-radius: 50px; font-weight: 800; text-transform: uppercase;"
               >Local Authority Monitor</span
-            ><h4
+            >
+            <h4
               style="margin: 8px 0 0; color: #1e293b; font-size: 1.15rem; font-weight: 800;"
             >
               {cityName} Service Status
@@ -292,6 +243,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           </div>
         </div>
 
+        <!-- WEATHER WIDGET -->
         <div
           id="weather-widget"
           data-city={cityName}
@@ -300,7 +252,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           <div
             style="font-size: 0.8rem; color: #94a3b8; display: flex; align-items: center; justify-content: center; width: 100%;"
           >
-            Loading local weather...
+            Loading {cityName} weather...
           </div>
         </div>
 
@@ -323,6 +275,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           </p>
         </div>
       </div>
+
       <div
         style="background: #f0fdf4; padding: 1.8rem; border-radius: 24px; border: 1px solid #dcfce7; display: flex; flex-direction: column; justify-content: center;"
       >
@@ -336,10 +289,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
             allServices
               .filter((s) => s.name !== serviceInfo.name)
               .map((s) => (
-                <a
-                  href={`/${s.prefix}-${cityData.City.toLowerCase().replace(/\s+/g, "-")}`}
-                  class="hub-link-item"
-                >
+                <a href={`/${s.prefix}-${citySlugClean}`} class="hub-link-item">
                   <span>{s.icon}</span> {s.name} in {cityName} →
                 </a>
               ))
@@ -348,7 +298,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
       </div>
     </section>
 
-    <!-- GREEN STATUS STRIP (GÜNCELLENDİ: Class Eklendi) -->
+    <!-- STATUS STRIP (Green area with border fix) -->
     <section
       style="margin-top: 2rem; background: #064e3b; color: white; padding: 2rem; border-radius: 24px; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; align-items: center; border: 1px solid #1b4332;"
     >
@@ -357,7 +307,8 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
         >
           Service Area
-        </p><p
+        </p>
+        <p
           style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #ffffff;"
         >
           {countyName} County
@@ -368,7 +319,8 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
         >
           Local Landmark
-        </p><p
+        </p>
+        <p
           style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #ffffff;"
         >
           {landmark}
@@ -379,7 +331,8 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
         >
           Dispatch Status
-        </p><p
+        </p>
+        <p
           style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #4ade80;"
         >
           ● Active in {cityName}
@@ -387,6 +340,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
       </div>
     </section>
 
+    <!-- RICH TEXT & IMAGE -->
     <section style="margin-top: 5rem;">
       <div
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;"
@@ -417,7 +371,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
                 format="webp"
                 style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);"
               />
-              <div style="position: absolute bottom 15px right 15px background rgba(0,0,0,0.6) color white padding 5px 12px border-radius 50px font-size 0.75rem backdrop-filter blur(5px)">
+              <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.6); color: white; padding: 5px 12px; border-radius: 50px; font-size: 0.75rem; backdrop-filter: blur(5px);">
                 Representative Project
               </div>
             </div>
@@ -426,45 +380,8 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
       </div>
     </section>
 
+    <!-- SOCIAL PROOF & FAQ -->
     <section style="margin-top: 6rem;">
-      <h2
-        style="color: #064e3b; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 2.5rem;"
-      >
-        Why Choose Our {cityName} Network?
-      </h2>
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;"
-      >
-        <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #dcfce7;">🛡️</div><h4>
-            Verified Compliance
-          </h4><p>
-            Every specialist is licensed and insured according to Florida's
-            strict standards.
-          </p>
-        </div>
-        <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #fef3c7;">🚜</div><h4>
-            Elite Equipment
-          </h4><p>
-            High-performance rigging and machinery to handle Pines and Live Oaks
-            safely.
-          </p>
-        </div>
-        <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #fee2e2;">🚑</div><h4>
-            Storm Response
-          </h4><p>
-            Direct coordination for emergency storm damage removal across {
-              countyName
-            } County.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section style="margin-top: 6rem;">
-      <!-- SOSYAL KANIT (LAST SERVICE REQUEST) -->
       <div
         style="margin-bottom: 1.5rem; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; background: #fffbeb; padding: 12px; border-radius: 50px; border: 1px solid #fef3c7;"
       >
@@ -502,7 +419,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
       </div>
     </section>
 
-    <!-- DINAMIK SEHIR HARITASI -->
+    <!-- DYNAMIC CITY MAP -->
     <section
       style="margin-top: 6rem; border-top: 1px solid #eee; padding-top: 4rem;"
     >
@@ -521,11 +438,11 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           loading="lazy"
           allowfullscreen
           src={`https://maps.google.com/maps?q=${cityName},${countyName},FL&t=&z=12&ie=UTF8&iwloc=&output=embed`}
-        >
-        </iframe>
+        ></iframe>
       </div>
     </section>
 
+    <!-- NEARBY LINKS -->
     <section
       style="margin-top: 6rem; margin-bottom: 12rem; border-top: 1px solid #eee; padding-top: 4rem;"
     >
@@ -552,7 +469,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
   </main>
 
   <script is:inline>
-    function runAuthorityMonitor() {
+    function runCommonScripts() {
       const now = new Date();
       const dateEl = document.getElementById("current-date");
       if (dateEl)
@@ -561,25 +478,25 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           month: "long",
           day: "numeric",
         });
+
+      const timeEl = document.getElementById("last-request-time");
+      if (timeEl) timeEl.innerText = Math.floor(Math.random() * 8) + 2;
     }
 
     async function loadWeather() {
       const widget = document.getElementById("weather-widget");
       const cityName = widget.getAttribute("data-city");
-
       try {
         const geoRes = await fetch(
           `https://geocoding-api.open-meteo.com/v1/search?name=${cityName}&count=1&language=en&format=json`,
         );
         const geoData = await geoRes.json();
-
         if (geoData.results) {
           const { latitude, longitude } = geoData.results[0];
           const weatherRes = await fetch(
             `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weathercode,temperature_2m_max&temperature_unit=fahrenheit&timezone=auto`,
           );
           const weatherData = await weatherRes.json();
-
           const icons = {
             0: "☀️",
             1: "🌤️",
@@ -591,7 +508,6 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
             80: "🌦️",
             95: "⛈️",
           };
-
           let html = "";
           for (let i = 0; i < 3; i++) {
             const day =
@@ -601,17 +517,8 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
                     "en-US",
                     { weekday: "short" },
                   );
-            const code = weatherData.daily.weathercode[i];
             const temp = Math.round(weatherData.daily.temperature_2m_max[i]);
-            const icon = icons[code] || "⛅";
-
-            html += `
-              <div style="text-align: center; flex: 1;">
-                <div style="font-size: 0.6rem; font-weight: 800; color: #94a3b8; text-transform: uppercase;">${day}</div>
-                <div style="font-size: 1.2rem; margin: 2px 0;">${icon}</div>
-                <div style="font-size: 0.85rem; font-weight: 900; color: #1e293b;">${temp}°F</div>
-              </div>
-            `;
+            html += `<div style="text-align: center; flex: 1;"><div style="font-size: 0.6rem; font-weight: 800; color: #94a3b8; text-transform: uppercase;">${day}</div><div style="font-size: 1.2rem; margin: 2px 0;">${icons[weatherData.daily.weathercode[i]] || "⛅"}</div><div style="font-size: 0.85rem; font-weight: 900; color: #1e293b;">${temp}°F</div></div>`;
           }
           widget.innerHTML = html;
         }
@@ -620,19 +527,9 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
       }
     }
 
-    function generateRandomActivity() {
-      const timeEl = document.getElementById("last-request-time");
-      if (timeEl) {
-        // 2 ile 9 saat arasında rastgele bir sayı üretir
-        const randomHours = Math.floor(Math.random() * 8) + 2;
-        timeEl.innerText = randomHours;
-      }
-    }
-
     window.addEventListener("DOMContentLoaded", () => {
-      runAuthorityMonitor();
+      runCommonScripts();
       loadWeather();
-      generateRandomActivity();
     });
   </script>
 </MainLayout>
@@ -736,12 +633,11 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
     margin-right: 5px;
   }
 
-  /* Yeşil şeritteki orta elemanın çizgilerini sadece masaüstünde göster */
+  /* Yeşil şeritteki orta elemanın çizgilerini sadece masaüstünde göster (MOBIL DÜZELTME) */
   .status-item-middle {
     text-align: center;
     padding: 0 2rem;
   }
-
   @media (min-width: 768px) {
     .status-item-middle {
       border-left: 1px solid rgba(255, 255, 255, 0.1);
