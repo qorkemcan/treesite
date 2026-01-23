@@ -287,6 +287,20 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
             >
           </div>
         </div>
+
+        <!-- HAVA DURUMU ŞERİDİ -->
+        <div
+          id="weather-widget"
+          data-city={cityName}
+          style="display: flex; justify-content: space-between; gap: 10px; margin: 15px 0; background: #fff; padding: 10px; border-radius: 15px; border: 1px solid #f1f5f9; min-height: 70px;"
+        >
+          <div
+            style="font-size: 0.8rem; color: #94a3b8; display: flex; align-items: center; justify-content: center; width: 100%;"
+          >
+            Loading local weather...
+          </div>
+        </div>
+
         <div
           style="background: #f8fafc; padding: 15px; border-radius: 18px; border: 1px solid #f1f5f9; margin: 10px 0;"
         >
@@ -505,7 +519,68 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           day: "numeric",
         });
     }
-    window.addEventListener("DOMContentLoaded", runAuthorityMonitor);
+
+    async function loadWeather() {
+      const widget = document.getElementById("weather-widget");
+      const cityName = widget.getAttribute("data-city");
+
+      try {
+        const geoRes = await fetch(
+          `https://geocoding-api.open-meteo.com/v1/search?name=${cityName}&count=1&language=en&format=json`,
+        );
+        const geoData = await geoRes.json();
+
+        if (geoData.results) {
+          const { latitude, longitude } = geoData.results[0];
+          const weatherRes = await fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weathercode,temperature_2m_max&temperature_unit=fahrenheit&timezone=auto`,
+          );
+          const weatherData = await weatherRes.json();
+
+          const icons = {
+            0: "☀️",
+            1: "🌤️",
+            2: "⛅",
+            3: "☁️",
+            45: "🌫️",
+            51: "🌧️",
+            61: "🌧️",
+            80: "🌦️",
+            95: "⛈️",
+          };
+
+          let html = "";
+          for (let i = 0; i < 3; i++) {
+            const day =
+              i === 0
+                ? "Today"
+                : new Date(weatherData.daily.time[i]).toLocaleDateString(
+                    "en-US",
+                    { weekday: "short" },
+                  );
+            const code = weatherData.daily.weathercode[i];
+            const temp = Math.round(weatherData.daily.temperature_2m_max[i]);
+            const icon = icons[code] || "⛅";
+
+            html += `
+              <div style="text-align: center; flex: 1;">
+                <div style="font-size: 0.6rem; font-weight: 800; color: #94a3b8; text-transform: uppercase;">${day}</div>
+                <div style="font-size: 1.2rem; margin: 2px 0;">${icon}</div>
+                <div style="font-size: 0.85rem; font-weight: 900; color: #1e293b;">${temp}°F</div>
+              </div>
+            `;
+          }
+          widget.innerHTML = html;
+        }
+      } catch (e) {
+        widget.innerHTML = `<div style="font-size: 0.75rem; color: #94a3b8;">Weather update unavailable</div>`;
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      runAuthorityMonitor();
+      loadWeather();
+    });
   </script>
 </MainLayout>
 
