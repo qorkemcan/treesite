@@ -292,7 +292,6 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           </div>
         </div>
 
-        <!-- HAVA DURUMU ŞERİDİ -->
         <div
           id="weather-widget"
           data-city={cityName}
@@ -349,6 +348,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
       </div>
     </section>
 
+    <!-- GREEN STATUS STRIP (GÜNCELLENDİ: Class Eklendi) -->
     <section
       style="margin-top: 2rem; background: #064e3b; color: white; padding: 2rem; border-radius: 24px; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; align-items: center; border: 1px solid #1b4332;"
     >
@@ -363,9 +363,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           {countyName} County
         </p>
       </div>
-      <div
-        style="text-align: center; border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1); padding: 0 2rem;"
-      >
+      <div class="status-item-middle">
         <p
           style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
         >
@@ -419,7 +417,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
                 format="webp"
                 style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);"
               />
-              <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.6); color: white; padding: 5px 12px; border-radius: 50px; font-size: 0.75rem; backdrop-filter: blur(5px);">
+              <div style="position: absolute bottom 15px right 15px background rgba(0,0,0,0.6) color white padding 5px 12px border-radius 50px font-size 0.75rem backdrop-filter blur(5px)">
                 Representative Project
               </div>
             </div>
@@ -736,5 +734,18 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
     height: 10px;
     display: inline-block;
     margin-right: 5px;
+  }
+
+  /* Yeşil şeritteki orta elemanın çizgilerini sadece masaüstünde göster */
+  .status-item-middle {
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .status-item-middle {
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
   }
 </style>
