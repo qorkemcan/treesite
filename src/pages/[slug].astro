@@ -6,7 +6,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../config.js";
 import { Image } from "astro:assets";
 import premiumFaqs from "../data/premium-faqs.json";
-// ★ YENİ: Tavsiye havuzunu içeri alıyoruz
 import arboristTips from "../data/arborist-tips.json";
 
 export async function getStaticPaths() {
@@ -27,12 +26,10 @@ export async function getStaticPaths() {
   const paths = [];
   records.forEach((row) => {
     if (!row.City) return;
-    // DÜZELTME: URL'lerde nokta hatasını önlemek için noktaları siliyoruz
     const citySlug = row.City.toLowerCase()
       .trim()
       .replace(/\./g, "")
       .replace(/\s+/g, "-");
-
     services.forEach((service) => {
       paths.push({
         params: { slug: `${service.prefix}-${citySlug}` },
@@ -64,27 +61,26 @@ const toTitleCase = (str) => {
 const cityName = toTitleCase(cityData.City);
 const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
+const mainTree = cityData.MainTreeType || "local Florida trees";
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
 
-// ★ DİNAMİK ARBORIST TAVSİYESİ MANTIĞI
 const tipIndex =
   (cityData.City.length + cityData.Landmark.length) % arboristTips.length;
 const selectedTemplate = arboristTips[tipIndex];
 const finalDynamicTip = selectedTemplate
   .replaceAll("[City]", cityName)
   .replaceAll("[Landmark]", landmark)
-  .replaceAll("[MainTreeType]", cityData.MainTreeType || "local trees")
+  .replaceAll("[MainTreeType]", mainTree)
   .replaceAll(
     "[FocusService]",
     cityData.FocusService || "professional tree care",
   );
 
-// ★ SEO ŞABLON KARIŞTIRICI (ZENGİN METİN)
 const cityTemplates = [
-  `In ${cityName}, our tree operations are defined by high-angle rigging precision and an uncompromising focus on safety. For projects located near ${landmark}, our certified teams evaluate the specific structural needs of ${cityData.MainTreeType}, ensuring that every ${serviceInfo.name} or hazard mitigation task aligns with the latest ISA standards. By accounting for the unique wind-load dynamics of ${countyName} County, we provide local property owners with a service that protects both their structures and the long-term vitality of the surrounding landscape.`,
-  `The Florida climate in ${cityName} presents unique challenges for native vegetation, especially species like ${cityData.MainTreeType}. Our crews, active throughout ${countyName} County and specifically near ${landmark}, utilize advanced technical pruning to mitigate storm risks before they escalate. We don't just perform ${serviceInfo.name}; we build a comprehensive property plan that accounts for local soil saturation and coastal gust patterns, ensuring your ${cityName} residence remains hazard-free throughout the year.`,
-  `Residents near ${landmark} understand the value of a well-maintained canopy. In ${cityName}, our dispatch network specializes in managing complex ${cityData.MainTreeType} projects where property lines and structures are in close proximity. From precision ${serviceInfo.name} to urgent hazard removal, we bring deep ${countyName} County environmental knowledge to every job site. Our goal is simple: providing ${cityName} with elite arborist expertise that enhances curb appeal while prioritizing the safety of your home.`,
-  `Professionalism in ${countyName} County tree care requires a balance of biological science and modern engineering. In ${cityName}, we connect you with vetted specialists who understand the complex growth habits of ${cityData.MainTreeType} near ${landmark}. Whether you require a routine ${serviceInfo.name} or a technical canopy reduction, our operations strictly follow safety regulations designed for the unique Florida terrain. We ensure that every landscape in ${cityName} we service is better prepared for environmental stress.`,
+  `In ${cityName}, our tree operations are defined by high-angle rigging precision and an uncompromising focus on safety. For projects located near ${landmark}, our certified teams evaluate the specific structural needs of ${mainTree}, ensuring that every ${serviceInfo.name} or hazard mitigation task aligns with the latest ISA standards. By accounting for the unique wind-load dynamics of ${countyName} County, we provide local property owners with a service that protects both their structures and the long-term vitality of the surrounding landscape.`,
+  `The Florida climate in ${cityName} presents unique challenges for native vegetation, especially species like ${mainTree}. Our crews, active throughout ${countyName} County and specifically near ${landmark}, utilize advanced technical pruning to mitigate storm risks before they escalate. We don't just perform ${serviceInfo.name}; we build a comprehensive property plan that accounts for local soil saturation and coastal gust patterns, ensuring your ${cityName} residence remains hazard-free throughout the year.`,
+  `Residents near ${landmark} understand the value of a well-maintained canopy. In ${cityName}, our dispatch network specializes in managing complex ${mainTree} projects where property lines and structures are in close proximity. From precision ${serviceInfo.name} to urgent hazard removal, we bring deep ${countyName} County environmental knowledge to every job site. Our goal is simple: providing ${cityName} with elite arborist expertise that enhances curb appeal while prioritizing the safety of your home.`,
+  `Professionalism in ${countyName} County tree care requires a balance of biological science and modern engineering. In ${cityName}, we connect you with vetted specialists who understand the complex growth habits of ${mainTree} near ${landmark}. Whether you require a routine ${serviceInfo.name} or a technical canopy reduction, our operations strictly follow safety regulations designed for the unique Florida terrain. We ensure that every landscape in ${cityName} we service is better prepared for environmental stress.`,
 ];
 const templateChoiceIndex =
   Math.abs(cityName.split("").reduce((a, b) => a + b.charCodeAt(0), 0)) %
@@ -119,14 +115,35 @@ const cityKey = cityData.City.toLowerCase()
   .trim()
   .replace(/\./g, "")
   .replace(/\s+/g, "-");
-let finalFaqs = premiumFaqs[cityKey] || [];
+const fallbackFaqs = [
+  {
+    q: `Do I need a permit for ${serviceInfo.name} in ${cityName}?`,
+    a: `Under Florida Statute 163.045, residential property owners in ${cityName} can often remove hazardous trees without local permits if a certified professional documents the threat. For non-emergency work near ${landmark}, we recommend verifying specific ${countyName} County ordinances.`,
+  },
+  {
+    q: `What is the estimated cost for ${serviceInfo.name} near ${landmark}?`,
+    a: `Pricing in ${cityName} is determined by size and rigging required. Our network offers free estimates for ${countyName} County residents.`,
+  },
+  {
+    q: `Are your tree crews licensed in ${cityName}?`,
+    a: `Yes, all arborists in our ${cityName} network are fully licensed and insured, following strict Florida safety standards.`,
+  },
+  {
+    q: `How fast can a crew reach my ${cityName} home after a storm?`,
+    a: `We prioritize hazards near ${landmark}. In ${cityName}, dispatch typically reaches homes within 2-4 hours.`,
+  },
+  {
+    q: `Will stump grinding prevent pest issues on my property?`,
+    a: `Absolutely. Grinding in ${cityName} removes the moisture reservoir for termites and ants.`,
+  },
+];
+let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
 ---
 
 <MainLayout
   title={`#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & Insured`}
   description={cityData.Description}
 >
-  <!-- ★ SEO: BREADCRUMB SCHEMA ★ -->
   <script
     type="application/ld+json"
     set:html={JSON.stringify({
@@ -137,13 +154,13 @@ let finalFaqs = premiumFaqs[cityKey] || [];
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://protreetrim.com",
+          item: "https://www.protreetrim.com",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Florida",
-          item: "https://protreetrim.com",
+          item: "https://www.protreetrim.com",
         },
         { "@type": "ListItem", position: 3, name: cityName, item: currentUrl },
       ],
@@ -158,23 +175,15 @@ let finalFaqs = premiumFaqs[cityKey] || [];
       "@type": "Service",
       name: `${cityName} ${serviceInfo.name}`,
       serviceType: serviceInfo.name,
-      provider: {
-        "@id": `${SITE_CONFIG.siteUrl}/#localbusiness`,
-      },
-      areaServed: {
-        "@type": "City",
-        name: cityName,
-      },
+      provider: { "@id": `${SITE_CONFIG.siteUrl}/#localbusiness` },
+      areaServed: { "@type": "City", name: cityName },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Tree Care Services",
         itemListElement: [
           {
             "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Free On-Site Estimate",
-            },
+            itemOffered: { "@type": "Service", name: "Free On-Site Estimate" },
           },
         ],
       },
@@ -209,7 +218,6 @@ let finalFaqs = premiumFaqs[cityKey] || [];
     class="container"
     style="max-width: 1100px; margin: -2.5rem auto 0; padding: 0 1rem; position: relative; z-index: 10;"
   >
-    <!-- CTA BOX -->
     <div
       style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;"
     >
@@ -228,7 +236,6 @@ let finalFaqs = premiumFaqs[cityKey] || [];
       >
     </div>
 
-    <!-- 3 SIMPLE STEPS -->
     <section style="margin-top: 4rem;">
       <h2
         style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;"
@@ -239,31 +246,23 @@ let finalFaqs = premiumFaqs[cityKey] || [];
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"
       >
         <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #e0f2fe;">📞</div>
-          <h4>1. Call Dispatch</h4>
-          <p>
-            Connect with our {cityName} office instantly to discuss your project.
-          </p>
+          <div class="icon-box" style="background: #e0f2fe;">📞</div><h4>
+            1. Call Dispatch
+          </h4><p>Connect with our office instantly.</p>
         </div>
         <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #fef3c7;">📋</div>
-          <h4>2. Get a Quote</h4>
-          <p>
-            A local specialist will provide an expert assessment and transparent
-            pricing.
-          </p>
+          <div class="icon-box" style="background: #fef3c7;">📋</div><h4>
+            2. Get a Quote
+          </h4><p>A local specialist provides a transparent assessment.</p>
         </div>
         <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #dcfce7;">✅</div>
-          <h4>3. Job Completed</h4>
-          <p>
-            Safe execution and thorough cleanup of your {cityName} property.
-          </p>
+          <div class="icon-box" style="background: #dcfce7;">✅</div><h4>
+            3. Job Completed
+          </h4><p>Safe execution and thorough cleanup of your property.</p>
         </div>
       </div>
     </section>
 
-    <!-- MONITOR & HUB SEKSİYONU -->
     <section
       style="margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;"
     >
@@ -332,7 +331,6 @@ let finalFaqs = premiumFaqs[cityKey] || [];
       </div>
     </section>
 
-    <!-- BİLGİ KÜNYESİ (YAZI RENKLERİ PARLAK BEYAZ YAPILDI ✅) -->
     <section
       style="margin-top: 2rem; background: #064e3b; color: white; padding: 2rem; border-radius: 24px; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; align-items: center; border: 1px solid #1b4332;"
     >
@@ -341,8 +339,7 @@ let finalFaqs = premiumFaqs[cityKey] || [];
           style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
         >
           Service Area
-        </p>
-        <p
+        </p><p
           style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #ffffff;"
         >
           {countyName} County
@@ -355,8 +352,7 @@ let finalFaqs = premiumFaqs[cityKey] || [];
           style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
         >
           Local Landmark
-        </p>
-        <p
+        </p><p
           style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #ffffff;"
         >
           {landmark}
@@ -367,8 +363,7 @@ let finalFaqs = premiumFaqs[cityKey] || [];
           style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
         >
           Dispatch Status
-        </p>
-        <p
+        </p><p
           style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #4ade80;"
         >
           ● Active in {cityName}
@@ -376,7 +371,6 @@ let finalFaqs = premiumFaqs[cityKey] || [];
       </div>
     </section>
 
-    <!-- ZENGİN METİN ALANI VE GÖRSEL (ETİKET GERİ GELDİ ✅) -->
     <section style="margin-top: 5rem;">
       <div
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;"
@@ -416,7 +410,6 @@ let finalFaqs = premiumFaqs[cityKey] || [];
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
     <section style="margin-top: 6rem;">
       <h2
         style="color: #064e3b; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 2.5rem;"
@@ -427,34 +420,34 @@ let finalFaqs = premiumFaqs[cityKey] || [];
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;"
       >
         <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #dcfce7;">🛡️</div>
-          <h4>Verified Compliance</h4>
-          <p>
+          <div class="icon-box" style="background: #dcfce7;">🛡️</div><h4>
+            Verified Compliance
+          </h4><p>
             Every specialist is licensed and insured according to Florida's
-            strict standards for {cityName}.
+            strict standards.
           </p>
         </div>
         <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #fef3c7;">🚜</div>
-          <h4>Elite Equipment</h4>
-          <p>
-            High-performance rigging and machinery to handle anything from Pines
-            to massive Live Oaks.
+          <div class="icon-box" style="background: #fef3c7;">🚜</div><h4>
+            Elite Equipment
+          </h4><p>
+            High-performance rigging and machinery to handle Pines and Live Oaks
+            safely.
           </p>
         </div>
         <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #fee2e2;">🚑</div>
-          <h4>Storm Response</h4>
-          <p>
-            Direct coordination for emergency storm damage and fallen tree
-            removal across {countyName} County.
+          <div class="icon-box" style="background: #fee2e2;">🚑</div><h4>
+            Storm Response
+          </h4><p>
+            Direct coordination for emergency storm damage removal across {
+              countyName
+            } County.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- FAQ BÖLÜMÜ -->
-    <section style="margin: 6rem 0;">
+    <section style="margin-top: 6rem;">
       <h2
         style="color: #064e3b; font-size: 2.2rem; font-weight: 900; text-align: center; margin-bottom: 3rem;"
       >
@@ -476,9 +469,8 @@ let finalFaqs = premiumFaqs[cityKey] || [];
       </div>
     </section>
 
-    <!-- ÇEVRE ŞEHİRLER -->
     <section
-      style="margin: 6rem 0 12rem; border-top: 1px solid #eee; padding-top: 4rem;"
+      style="margin-top: 6rem; margin-bottom: 12rem; border-top: 1px solid #eee; padding-top: 4rem;"
     >
       <h3
         style="color: #064e3b; font-size: 1.3rem; font-weight: 800; margin-bottom: 2rem; text-align: center;"
