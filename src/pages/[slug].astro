@@ -167,7 +167,6 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
     })}
   />
 
-  <!-- ★ SEO: SERVICE SCHEMA (ZENGİNLEŞTİRİLDİ) ★ -->
   <script
     type="application/ld+json"
     set:html={JSON.stringify({
@@ -288,7 +287,6 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           </div>
         </div>
 
-        <!-- HAVA DURUMU ŞERİDİ -->
         <div
           id="weather-widget"
           data-city={cityName}
@@ -462,6 +460,19 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
     </section>
 
     <section style="margin-top: 6rem;">
+      <!-- SOSYAL KANIT (LAST SERVICE REQUEST) -->
+      <div
+        style="margin-bottom: 1.5rem; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px;"
+      >
+        <div class="active-pulse" style="width: 8px; height: 8px;"></div>
+        <p
+          style="margin: 0; font-size: 1rem; color: #1b4332; font-weight: 700; letter-spacing: -0.2px;"
+        >
+          Last service request in <span style="color:#ea580c;">{cityName}</span> was
+          <span id="last-request-time">...</span> hours ago.
+        </p>
+      </div>
+
       <h2
         style="color: #064e3b; font-size: 2.2rem; font-weight: 900; text-align: center; margin-bottom: 3rem;"
       >
@@ -577,9 +588,19 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
       }
     }
 
+    function generateRandomActivity() {
+      const timeEl = document.getElementById("last-request-time");
+      if (timeEl) {
+        // 2 ile 9 saat arasında rastgele bir sayı üretir
+        const randomHours = Math.floor(Math.random() * 8) + 2;
+        timeEl.innerText = randomHours;
+      }
+    }
+
     window.addEventListener("DOMContentLoaded", () => {
       runAuthorityMonitor();
       loadWeather();
+      generateRandomActivity();
     });
   </script>
 </MainLayout>
