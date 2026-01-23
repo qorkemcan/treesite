@@ -1,47 +1,30 @@
+// src/pages/api/contact.js (GÜNCELLENDİ)
 export const prerender = false;
 
 export async function POST({ request }) {
   try {
     const data = await request.formData();
     
-    // 1. HONEYPOT KONTROLÜ (En Etkili Bot Koruması)
-    // Eğer 'fax_number' alanı doluysa, bu bir bottur.
-    const botTrap = data.get("fax_number");
-    if (botTrap) {
-      console.log("Spam detected via Honeypot trap.");
-      // Botu kandır: Hata verme, başarılıymış gibi teşekkürler sayfasına yolla ama mail atma.
-      return new Response(null, {
-        status: 302,
-        headers: { "Location": "/thank-you" },
-      });
+    // HONEYPOT
+    if (data.get("fax_number")) {
+      return new Response(null, { status: 302, headers: { "Location": "/thank-you" } });
     }
 
     const name = data.get("name");
+    const email = data.get("email"); // YENİ ALAN
     const phone = data.get("phone");
     const city = data.get("city");
     const service = data.get("service");
     const message = data.get("message") || "";
 
-    // 2. SPAM KELİME FİLTRESİ
-    // "seo", "marketing", "crypto", "backlink" gibi kelimeler geçerse maili gönderme.
-    const spamKeywords = ["seo", "marketing", "promotion", "backlink", "crypto", "bitcoin", "index", "ranking", "website traffic"];
+    // SPAM FİLTRESİ
+    const spamKeywords = ["seo", "marketing", "promotion", "backlink", "crypto", "bitcoin"];
     const isSpam = spamKeywords.some(keyword => message.toLowerCase().includes(keyword));
-    
     if (isSpam) {
-      console.log("Spam detected via keywords.");
-      return new Response(null, {
-        status: 302,
-        headers: { "Location": "/thank-you" },
-      });
+      return new Response(null, { status: 302, headers: { "Location": "/thank-you" } });
     }
 
-    // 3. LOKASYON KONTROLÜ (Hintli/Rus Botlar için ek önlem)
-    // Eğer şehir kısmına bariz dış lokasyon yazıldıysa durdur.
-    if (city.toLowerCase().includes("india") || city.toLowerCase().includes("russia")) {
-        return new Response("Service not available in your region", { status: 403 });
-    }
-
-    // RESEND API İSTEĞİ (Her şey temizse buraya geçer)
+    // RESEND API
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -57,6 +40,7 @@ export async function POST({ request }) {
             <h2 style="color: #1b4332;">New Service Request</h2>
             <hr style="border: 0; border-top: 1px solid #eee;" />
             <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p> <!-- YENİ -->
             <p><strong>Phone:</strong> ${phone}</p>
             <p><strong>City:</strong> ${city}</p>
             <p><strong>Service:</strong> ${service}</p>
@@ -69,17 +53,11 @@ export async function POST({ request }) {
     });
 
     if (response.ok) {
-      return new Response(null, {
-        status: 302,
-        headers: { "Location": "/thank-you" },
-      });
+      return new Response(null, { status: 302, headers: { "Location": "/thank-you" } });
     } else {
-      const errorData = await response.json();
-      console.error("Resend API Error:", errorData);
-      return new Response("Email failed to send", { status: 500 });
+      return new Response("Email failed", { status: 500 });
     }
   } catch (error) {
-    console.error("Server Error:", error);
-    return new Response("Internal Server Error", { status: 500 });
+    return new Response("Error", { status: 500 });
   }
 }

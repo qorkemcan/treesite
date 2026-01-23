@@ -1,5 +1,5 @@
 ---
-// src/pages/contact.astro
+// src/pages/contact.astro (GÜNCELLENDİ)
 import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../config.js";
 ---
@@ -8,192 +8,85 @@ import { SITE_CONFIG } from "../config.js";
   title="Contact Us | ProTreeTrim™ Florida Dispatch"
   description="Contact ProTreeTrim™ for service coordination, free estimates, or partnership opportunities across Florida."
 >
-  <header
-    style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center;"
-  >
+  <!-- [Header kısmı aynı kaldı] -->
+  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center;">
     <div class="container">
-      <h1
-        style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900;"
-      >
-        Get In Touch
-      </h1>
-      <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">
-        Professional Tree Care Coordination Across Florida
-      </p>
+      <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900;">Get In Touch</h1>
+      <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">Professional Tree Care Coordination Across Florida</p>
     </div>
   </header>
 
-  <main
-    class="container"
-    style="max-width: 1100px; padding: 4rem 1.5rem 12rem;"
-  >
-    <div
-      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 5rem;"
-    >
-      <div
-        style="background: #fff7ed; border: 2px solid #ea580c; padding: 2.5rem; border-radius: 24px; text-align: center;"
-      >
-        <div style="font-size: 2.5rem; margin-bottom: 15px;">📞</div>
-        <h3
-          style="color: #9a3412; margin: 0; font-size: 1.5rem; font-weight: 800;"
-        >
-          24/7 Dispatch
-        </h3>
-        <p style="color: #7c2d12; font-size: 0.95rem; margin-bottom: 1.5rem;">
-          For estimates and storm emergencies.
-        </p>
-        <a
-          href={SITE_CONFIG.phoneHref}
-          style="background: #ea580c; color: white !important; padding: 12px 24px; text-decoration: none; border-radius: 12px; font-weight: 900; font-size: 1.2rem; display: block;"
-          >{SITE_CONFIG.phone}</a
-        >
-      </div>
-
-      <div
-        style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 24px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.02);"
-      >
-        <div style="font-size: 2.5rem; margin-bottom: 15px;">📧</div>
-        <h3
-          style="color: #1b4332; margin: 0; font-size: 1.5rem; font-weight: 800;"
-        >
-          Email Support
-        </h3>
-        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1.5rem;">
-          For business and partnership inquiries.
-        </p>
-        <a
-          href={`mailto:${SITE_CONFIG.email}`}
-          style="color: #ea580c; font-weight: 800; text-decoration: none; font-size: 1.1rem;"
-          >{SITE_CONFIG.email}</a
-        >
-      </div>
+  <main class="container" style="max-width: 1100px; padding: 4rem 1.5rem 12rem;">
+    <!-- [Badges kısmı aynı kaldı] -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 5rem;">
+        <div style="background: #fff7ed; border: 2px solid #ea580c; padding: 2.5rem; border-radius: 24px; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">📞</div>
+          <h3 style="color: #9a3412; margin: 0; font-size: 1.5rem; font-weight: 800;">24/7 Dispatch</h3>
+          <p style="color: #7c2d12; font-size: 0.95rem; margin-bottom: 1.5rem;">For estimates and storm emergencies.</p>
+          <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 12px 24px; text-decoration: none; border-radius: 12px; font-weight: 900; font-size: 1.2rem; display: block;">{SITE_CONFIG.phone}</a>
+        </div>
+        <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 24px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.02);">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">📧</div>
+          <h3 style="color: #1b4332; margin: 0; font-size: 1.5rem; font-weight: 800;">Email Support</h3>
+          <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1.5rem;">For business and partnership inquiries.</p>
+          <a href={`mailto:${SITE_CONFIG.email}`} style="color: #ea580c; font-weight: 800; text-decoration: none; font-size: 1.1rem;">{SITE_CONFIG.email}</a>
+        </div>
     </div>
 
-    <div
-      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: start;"
-    >
-      <!-- FORM ALANI -->
-      <div
-        style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 15px 35px rgba(0,0,0,0.05);"
-      >
-        <h2
-          style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0; margin-bottom: 1.5rem;"
-        >
-          Request a Quote
-        </h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: start;">
+      <div style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 15px 35px rgba(0,0,0,0.05);">
+        <h2 style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0; margin-bottom: 1.5rem;">Request a Quote</h2>
 
-        <form
-          action="/api/contact"
-          method="POST"
-          style="display: flex; flex-direction: column; gap: 15px;"
-        >
-          <!-- ★ TUZAK ALAN (HONEYPOT) ★ -->
-          <div style="display:none;" aria-hidden="true">
-            <input type="text" name="fax_number" tabindex="-1" autocomplete="off" />
-          </div>
+        <form action="/api/contact" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+          <!-- TUZAK -->
+          <div style="display:none;" aria-hidden="true"><input type="text" name="fax_number" tabindex="-1" autocomplete="off" /></div>
 
           <div>
-            <label
-              style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
-              >Your Name</label
-            >
-            <input
-              type="text"
-              name="name"
-              placeholder="John Doe"
-              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;"
-              required
-            />
+            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Your Name</label>
+            <input type="text" name="name" placeholder="John Doe" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
           </div>
-          <div
-            style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;"
-          >
+
+          <!-- YENİ: E-mail ve Phone yan yana -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
             <div>
-              <label
-                style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
-                >Phone</label
-              >
-              <input
-                type="tel"
-                name="phone"
-                placeholder="(555) 000-0000"
-                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;"
-                required
-              />
+              <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Email Address</label>
+              <input type="email" name="email" placeholder="john@example.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
             </div>
             <div>
-              <label
-                style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
-                >City</label
-              >
-              <input
-                type="text"
-                name="city"
-                placeholder="e.g. Miami"
-                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;"
-                required
-              />
+              <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Phone</label>
+              <input type="tel" name="phone" placeholder="(555) 000-0000" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
             </div>
           </div>
-          <div>
-            <label
-              style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
-              >Service Needed</label
-            >
-            <select
-              name="service"
-              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; background: white;"
-            >
-              <option>Tree Removal</option>
-              <option>Stump Grinding</option>
-              <option>Emergency Service</option>
-              <option>General Pruning</option>
-            </select>
+
+          <!-- City ve Service yan yana -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">City</label>
+              <input type="text" name="city" placeholder="e.g. Miami" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
+            </div>
+            <div>
+              <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Service Needed</label>
+              <select name="service" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; background: white;">
+                <option>Tree Removal</option>
+                <option>Stump Grinding</option>
+                <option>Emergency Service</option>
+                <option>General Pruning</option>
+              </select>
+            </div>
           </div>
+
           <div>
-            <label
-              style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
-              >Message</label
-            >
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Tell us about your project..."
-              style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; resize: vertical;"
-            ></textarea>
+            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Message</label>
+            <textarea name="message" rows="4" placeholder="Tell us about your project..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; resize: vertical;"></textarea>
           </div>
-          <button
-            type="submit"
-            style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;"
-          >
-            SEND REQUEST
-          </button>
+          <button type="submit" style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;">SEND REQUEST</button>
         </form>
       </div>
-
-      <!-- HARİTA ALANI -->
+      <!-- [Harita kısmı aynı kaldı] -->
       <div>
-        <h2
-          style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0;"
-        >
-          Statewide Coverage
-        </h2>
-        <p style="color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
-          ProTreeTrim™ manages a distributed network of certified experts across
-          all <strong>67 Florida counties</strong>.
-        </p>
-        <div
-          style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"
-        >
-          <iframe
-            width="100%"
-            height="450"
-            style="border:0"
-            loading="lazy"
-            allowfullscreen
-            src="https://maps.google.com/maps?q=Florida&t=&z=6&ie=UTF8&iwloc=&output=embed"
-          ></iframe>
-        </div>
+        <h2 style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0;">Statewide Coverage</h2>
+        <p style="color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">ProTreeTrim™ manages a distributed network of certified experts across all <strong>67 Florida counties</strong>.</p>
+        <div style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"><iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=Florida&t=&z=6&ie=UTF8&iwloc=&output=embed"></iframe></div>
       </div>
     </div>
   </main>
