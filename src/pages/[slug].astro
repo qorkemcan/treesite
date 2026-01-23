@@ -27,7 +27,12 @@ export async function getStaticPaths() {
   const paths = [];
   records.forEach((row) => {
     if (!row.City) return;
-    const citySlug = row.City.toLowerCase().trim().replace(/\s+/g, "-");
+    // DÜZELTME: URL'lerde nokta hatasını önlemek için noktaları siliyoruz
+    const citySlug = row.City.toLowerCase()
+      .trim()
+      .replace(/\./g, "")
+      .replace(/\s+/g, "-");
+
     services.forEach((service) => {
       paths.push({
         params: { slug: `${service.prefix}-${citySlug}` },
@@ -61,12 +66,10 @@ const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
 
-// ★ DİNAMİK ARBORIST TAVSİYESİ MANTIĞI (SEO İÇİN KRİTİK)
-// Her şehir için 50 tavsiyeden birini sabit ama diğerlerinden farklı seçer
+// ★ DİNAMİK ARBORIST TAVSİYESİ MANTIĞI
 const tipIndex =
   (cityData.City.length + cityData.Landmark.length) % arboristTips.length;
 const selectedTemplate = arboristTips[tipIndex];
-
 const finalDynamicTip = selectedTemplate
   .replaceAll("[City]", cityName)
   .replaceAll("[Landmark]", landmark)
@@ -75,6 +78,18 @@ const finalDynamicTip = selectedTemplate
     "[FocusService]",
     cityData.FocusService || "professional tree care",
   );
+
+// ★ SEO SİLAHI: 4 FARKLI ANLATIM ŞABLONU (SOL METİN ALANI İÇİN) ★
+const cityTemplates = [
+  `In ${cityName}, our tree operations are defined by high-angle rigging precision and an uncompromising focus on safety. For projects located near ${landmark}, our certified teams evaluate the specific structural needs of ${cityData.MainTreeType}, ensuring that every ${serviceInfo.name} or hazard mitigation task aligns with the latest ISA standards. By accounting for the unique wind-load dynamics of ${countyName} County, we provide local property owners with a service that protects both their structures and the long-term vitality of the surrounding landscape.`,
+  `The Florida climate in ${cityName} presents unique challenges for native vegetation, especially species like ${cityData.MainTreeType}. Our crews, active throughout ${countyName} County and specifically near ${landmark}, utilize advanced technical pruning to mitigate storm risks before they escalate. We don't just perform ${serviceInfo.name}; we build a comprehensive property plan that accounts for local soil saturation and coastal gust patterns, ensuring your ${cityName} residence remains hazard-free throughout the year.`,
+  `Residents near ${landmark} understand the value of a well-maintained canopy. In ${cityName}, our dispatch network specializes in managing complex ${cityData.MainTreeType} projects where property lines and structures are in close proximity. From precision ${serviceInfo.name} to urgent hazard removal, we bring deep ${countyName} County environmental knowledge to every job site. Our goal is simple: providing ${cityName} with elite arborist expertise that enhances curb appeal while prioritizing the safety of your home.`,
+  `Professionalism in ${countyName} County tree care requires a balance of biological science and modern engineering. In ${cityName}, we connect you with vetted specialists who understand the complex growth habits of ${cityData.MainTreeType} near ${landmark}. Whether you require a routine ${serviceInfo.name} or a technical canopy reduction, our operations strictly follow safety regulations designed for the unique Florida terrain. We ensure that every landscape in ${cityName} we service is better prepared for environmental stress.`,
+];
+const templateIndex =
+  Math.abs(cityName.split("").reduce((a, b) => a + b.charCodeAt(0), 0)) %
+  cityTemplates.length;
+const selectedRichText = cityTemplates[templateIndex];
 
 const serviceFolder = serviceInfo.prefix.includes("removal")
   ? "removal"
@@ -100,49 +115,17 @@ if (imagePaths.length > 0) {
   selectedImage = imgModule.default;
 }
 
-const cityKey = cityData.City.toLowerCase().trim().replace(/\s+/g, "-");
-let finalFaqs =
-  premiumFaqs[cityKey] ||
-  {
-    "tree-removal": [
-      {
-        q: `How much is tree removal in ${cityName}?`,
-        a: `Costs vary based on tree size and proximity to ${landmark}. Call for a free estimate.`,
-      },
-      {
-        q: `Are you licensed in ${countyName} County?`,
-        a: `Yes, we connect you with fully licensed and insured Florida crews.`,
-      },
-    ],
-    "stump-grinding": [
-      {
-        q: `Do you offer stump grinding in ${cityName}?`,
-        a: `Yes, we provide full stump removal near ${landmark}.`,
-      },
-      {
-        q: `Will it prevent termites?`,
-        a: `Absolutely. Removing stumps in ${countyName} County eliminates primary termite food sources.`,
-      },
-    ],
-    "emergency-service": [
-      {
-        q: `How fast is emergency response in ${cityName}?`,
-        a: `Typically within 2-4 hours near ${landmark} after a storm.`,
-      },
-      {
-        q: `Do you work with insurance?`,
-        a: `Yes, local crews help with insurance mitigation data in ${countyName} County.`,
-      },
-    ],
-  }[serviceInfo.prefix] ||
-  [];
+const cityKey = cityData.City.toLowerCase()
+  .trim()
+  .replace(/\./g, "")
+  .replace(/\s+/g, "-");
+let finalFaqs = premiumFaqs[cityKey] || [];
 ---
 
 <MainLayout
-  title={`#1 ${serviceInfo.name} ${cityName}, FL | Licensed & Insured`}
+  title={`#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & Insured`}
   description={cityData.Description}
 >
-  <!-- ★ SEO: BREADCRUMB SCHEMA ★ -->
   <script
     type="application/ld+json"
     set:html={JSON.stringify({
@@ -166,7 +149,6 @@ let finalFaqs =
     })}
   />
 
-  <!-- ★ SEO: SERVICE SCHEMA ★ -->
   <script
     type="application/ld+json"
     set:html={JSON.stringify({
@@ -186,13 +168,12 @@ let finalFaqs =
     })}
   />
 
-  <!-- HEADER -->
   <header
-    style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4.5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
+    style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
   >
     <div class="container">
       <div
-        style="font-size: 0.85rem; margin-bottom: 1rem; color: #ffb703; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;"
+        style="font-size: 0.85rem; margin-bottom: 1rem; color: #ffb703; font-weight: 800; text-transform: uppercase;"
       >
         Official Service Dispatch • {countyName} County
       </div>
@@ -203,7 +184,7 @@ let finalFaqs =
         {serviceInfo.name}
       </h1>
       <p
-        style="font-size: 1.25rem; margin-top: 1.2rem; color: #95d5b2; max-width: 750px; margin-left: auto; margin-right: auto;"
+        style="font-size: 1.25rem; margin-top: 1.5rem; color: #95d5b2; max-width: 800px; margin-left: auto; margin-right: auto;"
       >
         Providing elite care for properties near <strong>{landmark}</strong>.
       </p>
@@ -212,96 +193,55 @@ let finalFaqs =
 
   <main
     class="container"
-    style="max-width: 1000px; margin: -2.5rem auto 0; padding: 0 1rem; position: relative; z-index: 10;"
+    style="max-width: 1100px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 10;"
   >
     <!-- CTA BOX -->
     <div
-      style="background: white; padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee;"
+      style="background: white; padding: 3rem 1.5rem; border-radius: 24px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e5e7eb;"
     >
       <h3
-        style="margin: 0 0 10px; color: #064e3b; font-size: 1.6rem; font-weight: 800;"
+        style="margin-top: 0; color: #064e3b; font-size: 1.8rem; font-weight: 800;"
       >
-        Instant Professional Estimate
+        Free Estimate for {cityName}
       </h3>
-      <p style="color: #6b7280; margin-bottom: 1.5rem; font-size: 1rem;">
-        Connect with verified {serviceInfo.name} specialists in {cityName}.
+      <p style="color: #4b5563; margin-bottom: 2rem;">
+        Local, licensed, and insured crews for <strong
+          >{serviceInfo.name}</strong
+        >.
       </p>
       <a
         href={SITE_CONFIG.phoneHref}
-        style="background: #ea580c; color: white !important; padding: 1.2rem; text-decoration: none; border-radius: 12px; font-weight: 900; font-size: clamp(1.4rem, 5vw, 2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); transition: 0.3s;"
+        style="background: #ea580c; color: white !important; padding: 1.4rem; text-decoration: none; border-radius: 16px; font-weight: 900; font-size: clamp(1.4rem, 6vw, 2.2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); border: 2px solid #fdba74;"
         >{SITE_CONFIG.phone}</a
       >
     </div>
 
-    <!-- 3 SIMPLE STEPS -->
-    <section style="margin-top: 4rem;">
-      <h2
-        style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;"
-      >
-        3 Simple Steps to Service
-      </h2>
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"
-      >
-        <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #e0f2fe;">📞</div>
-          <h4>1. Call Dispatch</h4>
-          <p>
-            Connect with our {cityName} office instantly to discuss your project.
-          </p>
-        </div>
-        <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #fef3c7;">📋</div>
-          <h4>2. Get a Quote</h4>
-          <p>
-            A local specialist will provide an expert assessment and transparent
-            pricing.
-          </p>
-        </div>
-        <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #dcfce7;">✅</div>
-          <h4>3. Job Completed</h4>
-          <p>
-            Safe execution and thorough cleanup of your {cityName} property.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- AUTHORITY MONITOR & LOCAL HUB -->
+    <!-- HAVA DURUMU & MONITOR SEKSİYONU ⚡ -->
     <section
-      style="margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;"
+      style="margin-top: 4rem; display: flex; flex-wrap: wrap; gap: 20px;"
     >
       <div
-        style="background: white; padding: 1.8rem; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between;"
+        style="flex: 1; min-width: 320px; background: white; padding: 1.8rem; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between;"
       >
         <div
           style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;"
         >
           <div>
             <span
-              style="background: #1b4332; color: #ffb703; font-size: 0.65rem; padding: 4px 12px; border-radius: 50px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;"
+              style="background: #1b4332; color: #ffb703; font-size: 0.65rem; padding: 4px 12px; border-radius: 50px; font-weight: 800; text-transform: uppercase;"
               >Local Authority Monitor</span
-            >
-            <h4
+            ><h4
               style="margin: 8px 0 0; color: #1e293b; font-size: 1.15rem; font-weight: 800;"
             >
-              {cityName} Service Status
+              {cityName} Status
             </h4>
           </div>
           <div style="text-align: right;">
-            <div
-              id="live-dot"
-              style="display: inline-block; width: 10px; height: 10px; background: #16a34a; border-radius: 50%; margin-right: 5px;"
-            >
-            </div>
-            <span
-              style="font-size: 0.75rem; font-weight: 900; color: #16a34a; text-transform: uppercase;"
-              >Active</span
-            >
+            <div id="live-dot" class="active-pulse"></div><span
+              style="font-size: 0.75rem; font-weight: 900; color: #16a34a;"
+              >Active</span>
           </div>
         </div>
-
         <div
           style="background: #f8fafc; padding: 15px; border-radius: 18px; border: 1px solid #f1f5f9; margin: 10px 0;"
         >
@@ -312,185 +252,136 @@ let finalFaqs =
               id="current-date"
               style="font-size: 0.95rem; font-weight: 800; color: #1b4332;"
               >--/--/2026</span
-            >
-            <span style="font-size: 1.3rem;">📅</span>
+            ><span style="font-size: 1.3rem;">📅</span>
           </div>
           <p
-            id="seasonal-advice"
             style="margin: 0; font-size: 0.9rem; color: #4b5563; line-height: 1.5; font-weight: 700; font-style: italic;"
           >
             {finalDynamicTip}
           </p>
         </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-          <div
-            style="background: #fff7ed; padding: 12px; border-radius: 14px; border: 1px solid #ffedd5; text-align: center;"
-          >
-            <span
-              style="display: block; font-size: 0.6rem; color: #9a3412; font-weight: 800; text-transform: uppercase;"
-              >Storm Risk</span
-            >
-            <span
-              id="risk-level"
-              style="font-size: 0.9rem; color: #ea580c; font-weight: 900;"
-              >Calculating...</span
-            >
-          </div>
-          <div
-            style="background: #f0fdf4; padding: 12px; border-radius: 14px; border: 1px solid #dcfce7; text-align: center;"
-          >
-            <span
-              style="display: block; font-size: 0.6rem; color: #166534; font-weight: 800; text-transform: uppercase;"
-              >Crew Status</span
-            >
-            <span style="font-size: 0.9rem; color: #15803d; font-weight: 900;"
-              >On Standby</span
-            >
-          </div>
-        </div>
       </div>
 
       <div
-        style="background: #f0fdf4; padding: 1.8rem; border-radius: 24px; border: 1px solid #dcfce7; display: flex; flex-direction: column; justify-content: center;"
+        style="flex: 1; min-width: 320px; background: #f0fdf4; padding: 1.8rem; border-radius: 24px; border: 1px solid #dcfce7; display: flex; flex-direction: column; justify-content: center;"
       >
         <h4
           style="margin: 0 0 15px; color: #166534; font-size: 1.15rem; font-weight: 800;"
         >
           Local Service Hub
         </h4>
-        <div
-          style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;"
-        >
+        <div style="display: flex; flex-direction: column; gap: 10px;">
           {
             allServices
               .filter((s) => s.name !== serviceInfo.name)
               .map((s) => (
                 <a
                   href={`/${s.prefix}-${cityData.City.toLowerCase().replace(/\s+/g, "-")}`}
-                  style="color: #1b4332; text-decoration: none; font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 10px;"
-                  class="hub-link"
+                  class="hub-link-item"
                 >
                   <span>{s.icon}</span> {s.name} in {cityName} →
                 </a>
               ))
           }
         </div>
-        <div
-          style="background: white; padding: 14px; border-radius: 14px; border: 1px solid #dcfce7;"
-        >
-          <span
-            style="display: block; font-size: 0.6rem; color: #15803d; font-weight: 800; text-transform: uppercase; margin-bottom: 4px;"
-            >Main Landmark</span
-          >
-          <span
-            style="font-size: 0.9rem; color: #1b4332; font-weight: 800; line-height: 1.2;"
-            >{landmark}</span
-          >
-        </div>
       </div>
     </section>
 
-    <!-- CONTENT & IMAGE (GÜNCELLENMİŞ ZENGİN METİN ALANI) -->
+    <!-- BİLGİ KÜNYESİ 🛡️ -->
+    <section
+      style="margin-top: 2rem; background: #064e3b; color: white; padding: 2rem; border-radius: 24px; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; align-items: center; border: 1px solid #1b4332;"
+    >
+      <div style="text-align: center;">
+        <p
+          style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
+        >
+          Service Area
+        </p>
+        <p style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem;">
+          {countyName} County
+        </p>
+      </div>
+      <div
+        style="text-align: center; border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1); padding: 0 2rem;"
+      >
+        <p
+          style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
+        >
+          Local Landmark
+        </p>
+        <p style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem;">
+          {landmark}
+        </p>
+      </div>
+      <div style="text-align: center;">
+        <p
+          style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
+        >
+          Dispatch Status
+        </p>
+        <p
+          style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #4ade80;"
+        >
+          ● Active in {cityName}
+        </p>
+      </div>
+    </section>
+
+    <!-- ZENGİN METİN ALANI VE GÖRSEL -->
     <section style="margin-top: 5rem;">
       <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;"
       >
         <div>
           <h2
-            style="color: #064e3b; font-size: 1.8rem; font-weight: 900; margin-bottom: 1.5rem;"
+            style="color: #064e3b; font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;"
           >
             Expert {serviceInfo.name} in {cityName}
           </h2>
-          <!-- 1. Paragraf: Mevcut CSV Açıklaması -->
-          <p style="font-size: 1.1rem; color: #374151; line-height: 1.8;">
+          <p
+            style="font-size: 1.15rem; color: #374151; line-height: 1.8; margin-bottom: 1.5rem;"
+          >
             {cityData.Description}
           </p>
-          <!-- 2. Paragraf: ZENGİNLEŞTİRİLMİŞ TEKNİK METİN (GÜNCELLENDİ) -->
-          <p
-            style="font-size: 1.1rem; color: #374151; line-height: 1.8; margin-top: 1rem;"
-          >
-            Our specialized operations in <strong>{cityName}</strong> go far beyond
-            standard tree cutting. When conducting work near <strong
-              >{landmark}</strong
-            >, our vetted crews prioritize the structural integrity of local
-            species like <strong>{cityData.MainTreeType}</strong>, accounting
-            for the unique soil conditions and coastal wind-load dynamics found
-            throughout <strong>{countyName} County</strong>. Whether managing a
-            complex <strong>{cityData.FocusService}</strong> project or providing
-            emergency hazard mitigation, we integrate advanced technical pruning with
-            deep Florida climate knowledge. Every job in {cityName} adheres to strict
-            ISA safety standards to ensure your property remains protected and your
-            landscape continues to thrive.
+          <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.8;">
+            {selectedRichText}
           </p>
         </div>
         {
           selectedImage && (
-            <Image
-              src={selectedImage}
-              alt={`${serviceInfo.name} in ${cityName}, FL - Certified crew near ${landmark}`}
-              width={600}
-              height={400}
-              format="webp"
-              style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.08);"
-            />
+            <div style="position: relative;">
+              <Image
+                src={selectedImage}
+                alt={`${serviceInfo.name} in ${cityName}`}
+                width={600}
+                height={450}
+                format="webp"
+                style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);"
+              />
+              <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.6); color: white; padding: 5px 12px; border-radius: 50px; font-size: 0.75rem; backdrop-filter: blur(5px);">
+                Representative Project
+              </div>
+            </div>
           )
         }
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
+    <!-- FAQ BÖLÜMÜ -->
     <section style="margin-top: 6rem;">
       <h2
-        style="color: #064e3b; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 2.5rem;"
+        style="color: #064e3b; font-size: 2.2rem; font-weight: 900; text-align: center; margin-bottom: 3rem;"
       >
-        Why Choose Our {cityName} Network?
+        Common Questions in {cityName}
       </h2>
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;"
-      >
-        <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #dcfce7;">🛡️</div>
-          <h4>Verified Compliance</h4>
-          <p>
-            Every specialist is licensed and insured according to Florida's
-            strict standards for {cityName}.
-          </p>
-        </div>
-        <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #fef3c7;">🚜</div>
-          <h4>Elite Equipment</h4>
-          <p>
-            High-performance rigging and machinery to handle anything from Pines
-            to massive Live Oaks.
-          </p>
-        </div>
-        <div class="info-card-base feature-card">
-          <div class="icon-box" style="background: #fee2e2;">🚑</div>
-          <h4>Storm Response</h4>
-          <p>
-            Direct coordination for emergency storm damage and fallen tree
-            removal across {countyName} County.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section style="margin: 6rem 0;">
-      <h2
-        style="color: #064e3b; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 3rem;"
-      >
-        Local FAQ for {cityName}
-      </h2>
-      <div style="display: grid; gap: 15px; max-width: 800px; margin: 0 auto;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
         {
           finalFaqs.map((f) => (
-            <div style="background: white; padding: 1.5rem; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
-              <h4 style="color: #1b4332; font-weight: 800; margin: 0 0 10px; font-size: 1.15rem;">
+            <div style="background: white; padding: 2.5rem; border-radius: 28px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+              <h4 style="color: #1b4332; font-weight: 800; margin: 0 0 10px; font-size: 1.3rem;">
                 {f.q}
               </h4>
-              <p style="color: #4b5563; line-height: 1.7; margin: 0; font-size: 1rem;">
+              <p style="color: #4b5563; line-height: 1.8; margin: 0; font-size: 1.1rem;">
                 {f.a}
               </p>
             </div>
@@ -499,14 +390,14 @@ let finalFaqs =
       </div>
     </section>
 
-    <!-- NEARBY AREAS (SEO FOOTPRINT) -->
+    <!-- ÇEVRE ŞEHİRLER -->
     <section
-      style="margin-bottom: 12rem; border-top: 1px solid #eee; padding-top: 4rem; text-align: center;"
+      style="margin-top: 6rem; margin-bottom: 12rem; border-top: 1px solid #eee; padding-top: 4rem;"
     >
       <h3
-        style="color: #064e3b; font-size: 1rem; font-weight: 900; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px;"
+        style="color: #064e3b; font-size: 1.3rem; font-weight: 800; margin-bottom: 2rem; text-align: center;"
       >
-        Also Serving Nearby {countyName} County Areas:
+        Other Local Dispatch Areas in {countyName} County:
       </h3>
       <div
         style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;"
@@ -514,8 +405,7 @@ let finalFaqs =
         {
           nearby.map((n: any) => (
             <a
-              href={`/tree-removal-${n.City.toLowerCase().replace(/\s+/g, "-")}`}
-              style="background: white; color: #166534; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 700; border: 1px solid #e2e8f0; transition: 0.2s;"
+              href={`/tree-removal-${n.City.toLowerCase().trim().replace(/\./g, "").replace(/\s+/g, "-")}`}
               class="nearby-link"
             >
               {toTitleCase(n.City)} Tree Service
@@ -526,84 +416,51 @@ let finalFaqs =
     </section>
   </main>
 
-  <!-- SCRIPTS -->
   <script is:inline>
     function runAuthorityMonitor() {
       const now = new Date();
-      const month = now.getMonth();
-      const options = { year: "numeric", month: "long", day: "numeric" };
       const dateEl = document.getElementById("current-date");
-      if (dateEl) dateEl.innerText = now.toLocaleDateString("en-US", options);
-
-      const riskEl = document.getElementById("risk-level");
-
-      if (riskEl) {
-        if (month >= 5 && month <= 8) {
-          riskEl.innerText = "Storm Risk: High";
-          riskEl.style.color = "#ef4444";
-        } else {
-          riskEl.innerText = "Normal / Safe";
-          riskEl.style.color = "#ea580c";
-        }
-      }
+      if (dateEl)
+        dateEl.innerText = now.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
     }
     window.addEventListener("DOMContentLoaded", runAuthorityMonitor);
   </script>
 </MainLayout>
 
 <style>
-  .info-card-base {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 24px;
-    border: 1px solid #eee;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
-  }
-  .step-card {
-    text-align: center;
-  }
-  .feature-card {
-    text-align: left;
-    transition: transform 0.3s ease;
-  }
-  .feature-card:hover {
-    transform: translateY(-5px);
-    border-color: #dcfce7;
-  }
-  .icon-box {
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
+  .hub-link-item {
+    color: #1b4332;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
+    gap: 10px;
+    transition: 0.2s;
+    margin-bottom: 5px;
   }
-  .step-card .icon-box {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h4 {
-    font-weight: 900;
-    margin: 0 0 12px;
-    color: #1b4332;
-  }
-  p {
-    font-size: 0.95rem;
-    color: #4b5563;
-    line-height: 1.6;
-    margin: 0;
-  }
-  .hub-link:hover {
-    color: #ea580c !important;
+  .hub-link-item:hover {
+    color: #ea580c;
     transform: translateX(5px);
+  }
+  .nearby-link {
+    background: white;
+    color: #166534;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 1px solid #dcfce7;
     transition: 0.2s;
   }
   .nearby-link:hover {
     background: #f0fdf4 !important;
     border-color: #166534 !important;
-    color: #166534 !important;
     transform: translateY(-2px);
   }
   @keyframes live-pulse {
@@ -620,8 +477,13 @@ let finalFaqs =
       box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
     }
   }
-  #live-dot {
+  .active-pulse {
     animation: live-pulse 2s infinite;
-    box-shadow: 0 0 10px #16a34a;
+    background: #16a34a;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 5px;
   }
 </style>

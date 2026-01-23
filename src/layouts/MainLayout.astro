@@ -6,12 +6,14 @@ interface Props {
   title: string;
   description: string;
   badgeText?: string;
+  ogImage?: string;
 }
 
 const {
   title,
   description,
   badgeText = "✓ 2026 OFFICIAL FLORIDA DIRECTORY • LICENSED & INSURED SPECIALISTS",
+  ogImage = SITE_CONFIG.defaultOGImage,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl);
@@ -22,22 +24,7 @@ const GTM_ID = "GTM-PW924QGW";
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-    />
-    <title>{fullTitle}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalURL} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- ★ HIZ OPTİMİZASYONU: PRECONNECT ★ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
-    <!-- Google Tag Manager (Head) - ASYNC (Hız için optimize edildi) -->
+    <!-- 1. GTM Head Script -->
     <script is:inline define:vars={{ GTM_ID }}>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -51,25 +38,43 @@ const GTM_ID = "GTM-PW924QGW";
       })(window, document, "script", "dataLayer", GTM_ID);
     </script>
 
-    <!-- Google Fonts - OPTİMİZE EDİLMİŞ (LCP'yi düşürür) -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, SITE_CONFIG.siteUrl)} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
       rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
     />
 
-    <!-- ★ LOCALBUSINESS SCHEMA ★ (HATASIZ NİHAİ HALİ) -->
+    <!-- ★ LOCALBUSINESS SCHEMA (HATASIZ NİHAİ HALİ) ★ -->
     <script
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         name: SITE_CONFIG.brandName,
-        image: "https://protreetrim.com/og-image.jpg",
+        image: "https://www.protreetrim.com/team.jpg",
         "@id": SITE_CONFIG.siteUrl,
         url: SITE_CONFIG.siteUrl,
         telephone: SITE_CONFIG.phone,
+        priceRange: "$$",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Statewide",
@@ -79,43 +84,37 @@ const GTM_ID = "GTM-PW924QGW";
       })}
     />
 
+    <slot name="head" />
+
     <style is:global>
       :root {
         --primary: #1b4332;
         --primary-dark: #081c15;
         --secondary: #ea580c;
+        --accent: #ffb703;
         --bg-light: #fcfcfc;
       }
-
-      /* GLOBAL RESET */
-      html,
-      body {
-        overflow-x: hidden;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        -webkit-font-smoothing: antialiased;
+      * {
+        font-family: "Inter", sans-serif !important;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
       }
       body {
+        margin: 0;
         background: var(--bg-light);
         color: #1a1a1a;
         line-height: 1.5;
-        font-family: sans-serif;
-        padding-bottom: 80px;
+        -webkit-font-smoothing: antialiased;
+        padding-bottom: 90px;
       }
-
       .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 1.2rem;
-        width: 100%;
-        box-sizing: border-box;
       }
-
-      /* Navigasyon Masaüstü */
       .nav-links-desktop {
         display: flex;
-        gap: 15px;
+        gap: 20px;
         align-items: center;
       }
       .nav-link {
@@ -125,12 +124,11 @@ const GTM_ID = "GTM-PW924QGW";
         font-size: 0.75rem;
         text-transform: uppercase;
         transition: 0.2s;
-        white-space: nowrap;
+        letter-spacing: 0.5px;
       }
       .nav-link:hover {
-        color: var(--secondary);
+        color: var(--secondary) !important;
       }
-
       .mobile-toggle-area {
         display: none;
         align-items: center;
@@ -139,14 +137,13 @@ const GTM_ID = "GTM-PW924QGW";
 
       @media (max-width: 1150px) {
         .nav-links-desktop {
-          display: none;
+          display: none !important;
         }
         .mobile-toggle-area {
-          display: flex;
+          display: flex !important;
         }
       }
 
-      /* MOBİL MENÜ OVERLAY (TAM ORTALANMIŞ) */
       #mobile-menu {
         display: none;
         position: fixed;
@@ -155,14 +152,13 @@ const GTM_ID = "GTM-PW924QGW";
         width: 100%;
         height: 100dvh;
         background: white;
-        z-index: 10002;
+        z-index: 100002;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
         padding: 40px 20px;
         text-align: center;
-        box-sizing: border-box;
       }
       #mobile-menu.active {
         display: flex;
@@ -173,10 +169,7 @@ const GTM_ID = "GTM-PW924QGW";
         color: var(--primary);
         text-decoration: none;
         text-transform: uppercase;
-        width: 100%;
       }
-
-      /* X Butonu (Kapatma) */
       #closeMenuBtn {
         position: absolute;
         top: 15px;
@@ -186,11 +179,7 @@ const GTM_ID = "GTM-PW924QGW";
         border: none;
         color: #94a3b8;
         cursor: pointer;
-        line-height: 1;
-        padding: 5px;
       }
-
-      /* Footer Rozetler */
       .trust-badge-footer {
         background: rgba(255, 255, 255, 0.05);
         padding: 18px;
@@ -205,6 +194,7 @@ const GTM_ID = "GTM-PW924QGW";
     </style>
   </head>
   <body>
+    <!-- 2. GTM Noscript -->
     <noscript
       ><iframe
         src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -213,7 +203,7 @@ const GTM_ID = "GTM-PW924QGW";
         style="display:none;visibility:hidden"></iframe></noscript
     >
 
-    <!-- Top Badge -->
+    <!-- Top Bar -->
     <div
       style="background: var(--primary-dark); color: #ffb703; padding: 10px 5px; text-align: center; font-size: 0.65rem; font-weight: 900; text-transform: uppercase;"
     >
@@ -243,7 +233,6 @@ const GTM_ID = "GTM-PW924QGW";
           >
         </a>
 
-        <!-- Desktop links -->
         <div class="nav-links-desktop">
           <a href="/services" class="nav-link">Services</a>
           <a href="/gallery" class="nav-link">Gallery</a>
@@ -259,7 +248,7 @@ const GTM_ID = "GTM-PW924QGW";
           <a
             href={SITE_CONFIG.phoneHref}
             style="background: var(--primary); color: white !important; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.7rem;"
-            >{SITE_CONFIG.phone}</a
+            >CALL DISPATCH</a
           >
         </div>
 
@@ -278,7 +267,7 @@ const GTM_ID = "GTM-PW924QGW";
       </div>
     </nav>
 
-    <!-- Mobil Menü Overlay -->
+    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu">
       <button id="closeMenuBtn" aria-label="Close Menu">&times;</button>
       <a href="/" class="mobile-nav-link">Home</a>
@@ -303,9 +292,10 @@ const GTM_ID = "GTM-PW924QGW";
 
     <!-- FOOTER -->
     <footer
-      style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 8rem; text-align: center; border-top: 6px solid var(--secondary);"
+      style="background: var(--primary-dark); color: #d1fae5; padding: 6rem 1.5rem 10rem; text-align: center; border-top: 6px solid var(--secondary);"
     >
       <div class="container">
+        <!-- Trust Badges -->
         <div
           style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 50px;"
         >
@@ -343,6 +333,7 @@ const GTM_ID = "GTM-PW924QGW";
           ProTreeTrim™ Florida
         </p>
 
+        <!-- Footer Links -->
         <div
           style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 40px;"
         >
@@ -385,8 +376,8 @@ const GTM_ID = "GTM-PW924QGW";
             <strong>Disclaimer:</strong> ProTreeTrim™ operates as a professional referral
             and dispatch network. We connect Florida homeowners and businesses with
             local, independently owned and operated tree service professionals. ProTreeTrim™
-            is not a contractor and does not directly perform arborist, removal, or
-            trimming services. All field work is executed by third-party providers.
+            is not a licensed contractor and does not directly perform arborist, removal,
+            or trimming services. All field work is executed by third-party providers.
             It is the property owner's sole responsibility to verify that their matched
             contractor maintains active licensing and the specific insurance coverage
             (General Liability and Workers' Comp) required by their respective Florida
@@ -396,18 +387,19 @@ const GTM_ID = "GTM-PW924QGW";
       </div>
     </footer>
 
-    <!-- ★ GERİ GELDİ: STICKY MOBILE CALL BUTTON (Z-INDEX ARTIRILDI) ★ -->
+    <!-- ★ STICKY MOBILE CALL BUTTON (Z-INDEX ARTIRILDI) ★ -->
     <div
       style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px; z-index: 100000; border-top: 1px solid #eee; display: flex; justify-content: center; box-shadow: 0 -5px 15px rgba(0,0,0,0.1);"
     >
       <a
         href={SITE_CONFIG.phoneHref}
-        style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 16px; text-decoration: none; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px;"
+        style="background: var(--secondary); color: white !important; width: 100%; max-width: 500px; padding: 16px; text-decoration: none !important; border-radius: 12px; font-weight: 900; text-align: center; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4);"
       >
-        📞 CALL FOR FREE ESTIMATE
+        <span style="font-size: 1.6rem;">📞</span> CALL FOR FREE QUOTE
       </a>
     </div>
 
+    <!-- Mobile Menu Script -->
     <script is:inline>
       const menuBtn = document.getElementById("mobileMenuBtn");
       const closeBtn = document.getElementById("closeMenuBtn");
