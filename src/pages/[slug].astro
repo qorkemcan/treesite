@@ -61,7 +61,8 @@ const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
 
-// ★ DİNAMİK ARBORIST TAVSİYESİ MANTIĞI
+// ★ DİNAMİK ARBORIST TAVSİYESİ MANTIĞI (SEO İÇİN KRİTİK)
+// Her şehir için 50 tavsiyeden birini sabit ama diğerlerinden farklı seçer
 const tipIndex =
   (cityData.City.length + cityData.Landmark.length) % arboristTips.length;
 const selectedTemplate = arboristTips[tipIndex];
@@ -405,21 +406,22 @@ let finalFaqs =
           <p style="font-size: 1.1rem; color: #374151; line-height: 1.8;">
             {cityData.Description}
           </p>
-          <!-- 2. Paragraf: Yeni Zenginleştirilmiş Dinamik Metin -->
+          <!-- 2. Paragraf: ZENGİNLEŞTİRİLMİŞ TEKNİK METİN (GÜNCELLENDİ) -->
           <p
             style="font-size: 1.1rem; color: #374151; line-height: 1.8; margin-top: 1rem;"
           >
-            Beyond general maintenance, our specialists in <strong
-              >{cityName}</strong
-            > are specifically trained to manage the complex growth patterns of <strong
-              >{cityData.MainTreeType}</strong
-            >, ensuring structural integrity and long-term health. Located near <strong
+            Our specialized operations in <strong>{cityName}</strong> go far beyond
+            standard tree cutting. When conducting work near <strong
               >{landmark}</strong
-            >, we dispatch fully vetted crews that follow strict Florida safety
-            standards for every <strong>{cityData.FocusService}</strong> project.
-            Our commitment to professional excellence ensures that tree care throughout
-            <strong>{countyName} County</strong> remains safe, efficient, and tailored
-            to the unique environmental needs of your local Florida landscape.
+            >, our vetted crews prioritize the structural integrity of local
+            species like <strong>{cityData.MainTreeType}</strong>, accounting
+            for the unique soil conditions and coastal wind-load dynamics found
+            throughout <strong>{countyName} County</strong>. Whether managing a
+            complex <strong>{cityData.FocusService}</strong> project or providing
+            emergency hazard mitigation, we integrate advanced technical pruning with
+            deep Florida climate knowledge. Every job in {cityName} adheres to strict
+            ISA safety standards to ensure your property remains protected and your
+            landscape continues to thrive.
           </p>
         </div>
         {
