@@ -63,23 +63,55 @@ const GTM_ID = "GTM-PW924QGW";
       rel="stylesheet"
     />
 
-    <!-- ★ LOCALBUSINESS SCHEMA (HATASIZ NİHAİ HALİ) ★ -->
+    <!-- ★ LOCALBUSINESS SCHEMA (HATASIZ VE EKSİKSİZ) ★ -->
     <script
       type="application/ld+json"
       set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
+        "@id": `${SITE_CONFIG.siteUrl}/#localbusiness`,
         name: SITE_CONFIG.brandName,
         image: "https://www.protreetrim.com/team.jpg",
-        "@id": SITE_CONFIG.siteUrl,
         url: SITE_CONFIG.siteUrl,
         telephone: SITE_CONFIG.phone,
         priceRange: "$$",
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Statewide",
+          streetAddress: "Statewide Dispatch Office",
+          addressLocality: "Miami",
           addressRegion: "FL",
+          postalCode: "33131",
           addressCountry: "US",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 25.7617,
+          longitude: -80.1918,
+        },
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+          },
+        ],
+        sameAs: [
+          "https://www.facebook.com/protreetrim",
+          "https://www.linkedin.com/company/protreetrim",
+          "https://x.com/protreetrim",
+        ],
+        areaServed: {
+          "@type": "State",
+          name: "Florida",
         },
       })}
     />
@@ -247,7 +279,7 @@ const GTM_ID = "GTM-PW924QGW";
           <a href="/contact" class="nav-link">Contact</a>
           <a
             href={SITE_CONFIG.phoneHref}
-            style="background: var(--primary); color: white !important; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.7rem;"
+            style="background: var(--primary); color: white !important; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.8rem;"
             >CALL DISPATCH</a
           >
         </div>
@@ -292,7 +324,7 @@ const GTM_ID = "GTM-PW924QGW";
 
     <!-- FOOTER -->
     <footer
-      style="background: var(--primary-dark); color: #d1fae5; padding: 6rem 1.5rem 10rem; text-align: center; border-top: 6px solid var(--secondary);"
+      style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 10rem; text-align: center; border-top: 6px solid var(--secondary);"
     >
       <div class="container">
         <!-- Trust Badges -->
@@ -369,7 +401,6 @@ const GTM_ID = "GTM-PW924QGW";
             © {SITE_CONFIG.year} ProTreeTrim™ Florida. Licensed & Insured Expert Dispatch
             Network.
           </p>
-          <!-- ★ DÜZELTİLDİ: PROFESYONEL UZUN DISCLAIMER ★ -->
           <p
             style="font-size: 0.7rem; opacity: 0.5; line-height: 1.6; text-align: justify; text-align-last: center;"
           >
@@ -387,7 +418,7 @@ const GTM_ID = "GTM-PW924QGW";
       </div>
     </footer>
 
-    <!-- ★ STICKY MOBILE CALL BUTTON (Z-INDEX ARTIRILDI) ★ -->
+    <!-- Fixed Mobile CTA -->
     <div
       style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px; z-index: 100000; border-top: 1px solid #eee; display: flex; justify-content: center; box-shadow: 0 -5px 15px rgba(0,0,0,0.1);"
     >
@@ -399,7 +430,6 @@ const GTM_ID = "GTM-PW924QGW";
       </a>
     </div>
 
-    <!-- Mobile Menu Script -->
     <script is:inline>
       const menuBtn = document.getElementById("mobileMenuBtn");
       const closeBtn = document.getElementById("closeMenuBtn");

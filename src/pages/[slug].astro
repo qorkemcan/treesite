@@ -27,6 +27,7 @@ export async function getStaticPaths() {
   const paths = [];
   records.forEach((row) => {
     if (!row.City) return;
+    // DÜZELTME: URL'lerde nokta hatasını önlemek için noktaları siliyoruz
     const citySlug = row.City.toLowerCase()
       .trim()
       .replace(/\./g, "")
@@ -125,6 +126,62 @@ let finalFaqs = premiumFaqs[cityKey] || [];
   title={`#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & Insured`}
   description={cityData.Description}
 >
+  <!-- ★ SEO: BREADCRUMB SCHEMA ★ -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://protreetrim.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Florida",
+          item: "https://protreetrim.com",
+        },
+        { "@type": "ListItem", position: 3, name: cityName, item: currentUrl },
+      ],
+    })}
+  />
+
+  <!-- ★ SEO: SERVICE SCHEMA (ZENGİNLEŞTİRİLDİ) ★ -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: `${cityName} ${serviceInfo.name}`,
+      serviceType: serviceInfo.name,
+      provider: {
+        "@id": `${SITE_CONFIG.siteUrl}/#localbusiness`,
+      },
+      areaServed: {
+        "@type": "City",
+        name: cityName,
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Tree Care Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Free On-Site Estimate",
+            },
+          },
+        ],
+      },
+      description: `Professional ${serviceInfo.name} services in ${cityName}, Florida. Certified crews near ${landmark} available for same-day dispatch.`,
+    })}
+  />
+
   <header
     style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4.5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
   >
@@ -227,7 +284,8 @@ let finalFaqs = premiumFaqs[cityKey] || [];
           <div style="text-align: right;">
             <div id="live-dot" class="active-pulse"></div><span
               style="font-size: 0.75rem; font-weight: 900; color: #16a34a;"
-              >Active</span>
+              >Active</span
+            >
           </div>
         </div>
         <div
