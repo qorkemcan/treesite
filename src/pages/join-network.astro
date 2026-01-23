@@ -94,7 +94,7 @@ import { SITE_CONFIG } from "../config.js";
         </section>
       </div>
 
-      <!-- SAĞ TARAF: İLETİŞİM FORMU (Sticky on Desktop) -->
+      <!-- SAĞ TARAF: İLETİŞİM FORMU -->
       <aside class="b2b-sidebar">
         <div class="form-wrapper">
           <h3
@@ -107,6 +107,11 @@ import { SITE_CONFIG } from "../config.js";
             method="POST"
             style="display: grid; gap: 15px;"
           >
+            <!-- ★ TUZAK ALAN (HONEYPOT) ★ -->
+            <div style="display:none;" aria-hidden="true">
+              <input type="text" name="fax_number" tabindex="-1" autocomplete="off" />
+            </div>
+
             <input
               type="hidden"
               name="service"
@@ -174,151 +179,31 @@ import { SITE_CONFIG } from "../config.js";
 </MainLayout>
 
 <style>
-  /* ANA DÜZEN SÜTUNLARI */
-  .b2b-layout {
-    display: grid;
-    grid-template-columns: 1fr 400px; /* Masaüstünde sol geniş, sağ form alanı */
-    gap: 50px;
-    align-items: start;
-  }
-
-  /* KARTLARIN GRİDİ */
-  .cards-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 4rem;
-  }
-
-  .exclusivity-card {
-    grid-column: span 2; /* 3. kartı alta tam genişlik yapalım ki şık dursun */
-    border: 2px solid #ffb703;
-  }
-
-  .b2b-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 24px;
-    border: 1px solid #e5e7eb;
-    transition: 0.3s;
-  }
-  .b2b-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-  }
-  .b2b-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  h3 {
-    color: #1b4332;
-    font-weight: 800;
-    margin: 0 0 12px;
-  }
-
-  /* FORM SIDEBAR */
-  .b2b-sidebar {
-    position: sticky;
-    top: 120px; /* Navigasyonun altında asılı kalsın */
-  }
-
-  .form-wrapper {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 28px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-  }
-
-  .form-label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 800;
-    color: #64748b;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .form-input {
-    width: 100%;
-    padding: 14px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    outline: none;
-    font-size: 1rem;
-    font-family: inherit;
-  }
-  .form-input:focus {
-    border-color: #1b4332;
-    box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.05);
-  }
-
-  .submit-btn {
-    background: #1b4332;
-    color: white;
-    padding: 16px;
-    border: none;
-    border-radius: 12px;
-    font-weight: 900;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 100%;
-    font-size: 1rem;
-  }
-  .submit-btn:hover {
-    background: #081c15;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(27, 67, 50, 0.2);
-  }
-
-  /* ŞARTLAR */
-  .qualification-section {
-    padding-right: 40px;
-  }
-  .check-list {
-    list-style: none;
-    padding: 0;
-    color: #374151;
-    font-weight: 700;
-    font-size: 1.1rem;
-    line-height: 2.2;
-    margin-bottom: 2rem;
-  }
-  .check-list li::before {
-    content: "✓";
-    color: #16a34a;
-    margin-right: 12px;
-    font-weight: 900;
-  }
-  .quote-box {
-    background: #f0fdf4;
-    border-left: 5px solid #166534;
-    padding: 1.5rem;
-    border-radius: 12px;
-  }
-
-  /* RESPONSIVE (MOBİL) */
+  /* [CSS STİLLERİN AYNI KALDI - DEĞİŞİKLİK YOK] */
+  .b2b-layout { display: grid; grid-template-columns: 1fr 400px; gap: 50px; align-items: start; }
+  .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 4rem; }
+  .exclusivity-card { grid-column: span 2; border: 2px solid #ffb703; }
+  .b2b-card { background: white; padding: 2rem; border-radius: 24px; border: 1px solid #e5e7eb; transition: 0.3s; }
+  .b2b-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05); }
+  .b2b-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  h3 { color: #1b4332; font-weight: 800; margin: 0 0 12px; }
+  .b2b-sidebar { position: sticky; top: 120px; }
+  .form-wrapper { background: white; padding: 2.5rem; border-radius: 28px; border: 1px solid #e5e7eb; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); }
+  .form-label { display: block; font-size: 0.8rem; font-weight: 800; color: #64748b; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .form-input { width: 100%; padding: 14px; border-radius: 10px; border: 1px solid #ddd; outline: none; font-size: 1rem; font-family: inherit; }
+  .form-input:focus { border-color: #1b4332; box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.05); }
+  .submit-btn { background: #1b4332; color: white; padding: 16px; border: none; border-radius: 12px; font-weight: 900; cursor: pointer; transition: 0.3s; width: 100%; font-size: 1rem; }
+  .submit-btn:hover { background: #081c15; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(27, 67, 50, 0.2); }
+  .qualification-section { padding-right: 40px; }
+  .check-list { list-style: none; padding: 0; color: #374151; font-weight: 700; font-size: 1.1rem; line-height: 2.2; margin-bottom: 2rem; }
+  .check-list li::before { content: "✓"; color: #16a34a; margin-right: 12px; font-weight: 900; }
+  .quote-box { background: #f0fdf4; border-left: 5px solid #166534; padding: 1.5rem; border-radius: 12px; }
   @media (max-width: 1024px) {
-    .b2b-layout {
-      grid-template-columns: 1fr;
-    } /* Sütunları teke düşür */
-    .b2b-sidebar {
-      position: static;
-      order: 2;
-    } /* Formu kartların altına al */
-    .b2b-content {
-      order: 1;
-    }
-    .cards-grid {
-      grid-template-columns: 1fr;
-    }
-    .exclusivity-card {
-      grid-column: span 1;
-    }
-    .qualification-section {
-      padding-right: 0;
-      order: 3;
-      margin-top: 4rem;
-    }
+    .b2b-layout { grid-template-columns: 1fr; }
+    .b2b-sidebar { position: static; order: 2; }
+    .b2b-content { order: 1; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .exclusivity-card { grid-column: span 1; }
+    .qualification-section { padding-right: 0; order: 3; margin-top: 4rem; }
   }
 </style>

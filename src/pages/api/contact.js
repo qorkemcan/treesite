@@ -1,26 +1,56 @@
-export const prerender = false; // Bu dosyanın sunucuda canlı çalışmasını sağlar
+export const prerender = false;
 
 export async function POST({ request }) {
   try {
-    // Formdan gelen verileri alıyoruz
     const data = await request.formData();
+    
+    // 1. HONEYPOT KONTROLÜ (En Etkili Bot Koruması)
+    // Eğer 'fax_number' alanı doluysa, bu bir bottur.
+    const botTrap = data.get("fax_number");
+    if (botTrap) {
+      console.log("Spam detected via Honeypot trap.");
+      // Botu kandır: Hata verme, başarılıymış gibi teşekkürler sayfasına yolla ama mail atma.
+      return new Response(null, {
+        status: 302,
+        headers: { "Location": "/thank-you" },
+      });
+    }
+
     const name = data.get("name");
     const phone = data.get("phone");
     const city = data.get("city");
     const service = data.get("service");
-    const message = data.get("message");
+    const message = data.get("message") || "";
 
-    // RESEND API İSTEĞİ
+    // 2. SPAM KELİME FİLTRESİ
+    // "seo", "marketing", "crypto", "backlink" gibi kelimeler geçerse maili gönderme.
+    const spamKeywords = ["seo", "marketing", "promotion", "backlink", "crypto", "bitcoin", "index", "ranking", "website traffic"];
+    const isSpam = spamKeywords.some(keyword => message.toLowerCase().includes(keyword));
+    
+    if (isSpam) {
+      console.log("Spam detected via keywords.");
+      return new Response(null, {
+        status: 302,
+        headers: { "Location": "/thank-you" },
+      });
+    }
+
+    // 3. LOKASYON KONTROLÜ (Hintli/Rus Botlar için ek önlem)
+    // Eğer şehir kısmına bariz dış lokasyon yazıldıysa durdur.
+    if (city.toLowerCase().includes("india") || city.toLowerCase().includes("russia")) {
+        return new Response("Service not available in your region", { status: 403 });
+    }
+
+    // RESEND API İSTEĞİ (Her şey temizse buraya geçer)
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // ÖNEMLİ: Bearer kelimesi ve boşluk mutlaka olmalı
         "Authorization": `Bearer re_iJFNPLSX_MoGBc45fNbNLnRk3agvWfQtR`, 
       },
       body: JSON.stringify({
         from: "ProTreeTrim <onboarding@resend.dev>",
-        to: ["gorkemcan@aol.com"], // Bildirim senin mailine gelecek
+        to: ["gorkemcan@aol.com"],
         subject: `New Lead: ${service} in ${city}`,
         html: `
           <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
@@ -32,26 +62,23 @@ export async function POST({ request }) {
             <p><strong>Service:</strong> ${service}</p>
             <p><strong>Message:</strong> ${message || "No message provided"}</p>
             <hr style="border: 0; border-top: 1px solid #eee;" />
-            <small style="color: #888;">Sent from ProTreeTrim.com Contact Form</small>
+            <small style="color: #888;">Sent from ProTreeTrim.com Secure Form</small>
           </div>
         `,
       }),
     });
 
     if (response.ok) {
-      // BAŞARILI: Kullanıcıyı Teşekkürler sayfasına yönlendir
       return new Response(null, {
         status: 302,
         headers: { "Location": "/thank-you" },
       });
     } else {
-      // HATA: Resend tarafından gelen hata
       const errorData = await response.json();
       console.error("Resend API Error:", errorData);
       return new Response("Email failed to send", { status: 500 });
     }
   } catch (error) {
-    // SUNUCU HATASI
     console.error("Server Error:", error);
     return new Response("Internal Server Error", { status: 500 });
   }

@@ -87,6 +87,11 @@ import { SITE_CONFIG } from "../config.js";
           method="POST"
           style="display: flex; flex-direction: column; gap: 15px;"
         >
+          <!-- ★ TUZAK ALAN (HONEYPOT) ★ -->
+          <div style="display:none;" aria-hidden="true">
+            <input type="text" name="fax_number" tabindex="-1" autocomplete="off" />
+          </div>
+
           <div>
             <label
               style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;"
