@@ -27,7 +27,6 @@ export async function getStaticPaths() {
   const paths = [];
   records.forEach((row) => {
     if (!row.City) return;
-    // DÜZELTME: URL'lerde nokta hatasını önlemek için noktaları siliyoruz
     const citySlug = row.City.toLowerCase()
       .trim()
       .replace(/\./g, "")
@@ -86,10 +85,10 @@ const cityTemplates = [
   `Residents near ${landmark} understand the value of a well-maintained canopy. In ${cityName}, our dispatch network specializes in managing complex ${cityData.MainTreeType} projects where property lines and structures are in close proximity. From precision ${serviceInfo.name} to urgent hazard removal, we bring deep ${countyName} County environmental knowledge to every job site. Our goal is simple: providing ${cityName} with elite arborist expertise that enhances curb appeal while prioritizing the safety of your home.`,
   `Professionalism in ${countyName} County tree care requires a balance of biological science and modern engineering. In ${cityName}, we connect you with vetted specialists who understand the complex growth habits of ${cityData.MainTreeType} near ${landmark}. Whether you require a routine ${serviceInfo.name} or a technical canopy reduction, our operations strictly follow safety regulations designed for the unique Florida terrain. We ensure that every landscape in ${cityName} we service is better prepared for environmental stress.`,
 ];
-const templateIndex =
+const templateChoiceIndex =
   Math.abs(cityName.split("").reduce((a, b) => a + b.charCodeAt(0), 0)) %
   cityTemplates.length;
-const selectedRichText = cityTemplates[templateIndex];
+const selectedRichText = cityTemplates[templateChoiceIndex];
 
 const serviceFolder = serviceInfo.prefix.includes("removal")
   ? "removal"
@@ -275,7 +274,7 @@ let finalFaqs = premiumFaqs[cityKey] || [];
       </div>
     </section>
 
-    <!-- BİLGİ KÜNYESİ (YAZI RENKLERİ BEYAZ YAPILDI ✅) -->
+    <!-- BİLGİ KÜNYESİ (YAZI RENKLERİ PARLAK BEYAZ YAPILDI ✅) -->
     <section
       style="margin-top: 2rem; background: #064e3b; color: white; padding: 2rem; border-radius: 24px; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; align-items: center; border: 1px solid #1b4332;"
     >
@@ -286,7 +285,7 @@ let finalFaqs = premiumFaqs[cityKey] || [];
           Service Area
         </p>
         <p
-          style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: white;"
+          style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #ffffff;"
         >
           {countyName} County
         </p>
@@ -300,7 +299,7 @@ let finalFaqs = premiumFaqs[cityKey] || [];
           Local Landmark
         </p>
         <p
-          style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: white;"
+          style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #ffffff;"
         >
           {landmark}
         </p>
@@ -397,7 +396,7 @@ let finalFaqs = premiumFaqs[cityKey] || [];
     </section>
 
     <!-- FAQ BÖLÜMÜ -->
-    <section style="margin-top: 6rem;">
+    <section style="margin: 6rem 0;">
       <h2
         style="color: #064e3b; font-size: 2.2rem; font-weight: 900; text-align: center; margin-bottom: 3rem;"
       >
@@ -421,7 +420,7 @@ let finalFaqs = premiumFaqs[cityKey] || [];
 
     <!-- ÇEVRE ŞEHİRLER -->
     <section
-      style="margin-top: 6rem; margin-bottom: 12rem; border-top: 1px solid #eee; padding-top: 4rem;"
+      style="margin: 6rem 0 12rem; border-top: 1px solid #eee; padding-top: 4rem;"
     >
       <h3
         style="color: #064e3b; font-size: 1.3rem; font-weight: 800; margin-bottom: 2rem; text-align: center;"
