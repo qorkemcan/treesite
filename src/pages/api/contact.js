@@ -29,7 +29,7 @@ export async function POST({ request }) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer re_iJFNPLSX_MoGBc45fNbNLnRk3agvWfQtR`, 
+        "Authorization": `Bearer ${import.meta.env.RESEND_API_KEY}`, 
       },
       body: JSON.stringify({
         from: "ProTreeTrim <onboarding@resend.dev>",
