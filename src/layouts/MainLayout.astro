@@ -63,7 +63,7 @@ const GTM_ID = "GTM-PW924QGW";
       rel="stylesheet"
     />
 
-    <!-- ★ LOCALBUSINESS SCHEMA ★ -->
+    <!-- ★ LOCALBUSINESS SCHEMA (SOCIAL MEDIA LINKS UPDATED) ★ -->
     <script
       type="application/ld+json"
       set:html={JSON.stringify({
@@ -105,9 +105,9 @@ const GTM_ID = "GTM-PW924QGW";
           },
         ],
         sameAs: [
-          "https://www.facebook.com/protreetrim",
-          "https://www.linkedin.com/company/protreetrim",
+          "https://www.facebook.com/ProTreeTrimUSA/",
           "https://x.com/protreetrim",
+          "https://www.linkedin.com/company/protreetrim/",
         ],
         areaServed: {
           "@type": "State",
@@ -137,7 +137,7 @@ const GTM_ID = "GTM-PW924QGW";
         color: #1a1a1a;
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
-        padding-bottom: 110px; /* Alttaki çift satırlı CTA için artırıldı */
+        padding-bottom: 120px; /* Alttaki çift satırlı CTA için artırıldı */
       }
       .container {
         max-width: 1200px;
@@ -224,6 +224,26 @@ const GTM_ID = "GTM-PW924QGW";
         text-align: left;
       }
 
+      /* Sosyal Medya Link Stili */
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: 800;
+        font-size: 0.9rem;
+      }
+      .social-link:hover {
+        background: var(--secondary);
+        transform: translateY(-3px);
+      }
+
       /* Nabız Atışı Animasyonu */
       @keyframes pulse-animation {
         0% {
@@ -240,7 +260,7 @@ const GTM_ID = "GTM-PW924QGW";
         }
       }
       .sticky-call-btn {
-        animation: pulse-animation 2.5s infinite ease-in-out;
+        animation: pulse-animation 2s infinite ease-in-out;
         transition: 0.3s;
       }
     </style>
@@ -371,11 +391,40 @@ const GTM_ID = "GTM-PW924QGW";
             >
           </div>
         </div>
+
         <p
-          style="font-weight: 900; font-size: 1.4rem; margin-bottom: 25px; color: white;"
+          style="font-weight: 900; font-size: 1.4rem; margin-bottom: 15px; color: white;"
         >
           ProTreeTrim™ Florida
         </p>
+
+        <!-- SOSYAL MEDYA IKONLARI -->
+        <div
+          style="display: flex; justify-content: center; gap: 15px; margin-bottom: 30px;"
+        >
+          <a
+            href="https://www.facebook.com/ProTreeTrimUSA/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            title="Follow on Facebook">FB</a
+          >
+          <a
+            href="https://x.com/protreetrim"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            title="Follow on X">X</a
+          >
+          <a
+            href="https://www.linkedin.com/company/protreetrim/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            title="Follow on LinkedIn">IN</a
+          >
+        </div>
+
         <div
           style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 40px;"
         >
