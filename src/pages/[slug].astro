@@ -61,7 +61,7 @@ const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
 
-// ★ SÜPER BENZERSİZLEŞTİRİCİ MANTIĞI (ASCII Reduce)
+// ★ SÜPER BENZERSİZLEŞTİRİCİ MANTIĞI
 const tipIndex = Math.abs((cityData.City + cityData.Landmark + serviceInfo.prefix).split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % arboristTips.length;
 const selectedTemplate = arboristTips[tipIndex];
 
@@ -84,20 +84,21 @@ if (imagePaths.length > 0) {
 
 const cityKey = cityData.City.toLowerCase().trim().replace(/\./g, "").replace(/\s+/g, "-");
 
-let finalFaqs = premiumFaqs[cityKey] || {
-    "tree-removal": [
-      { q: `How much is tree removal in ${cityName}?`, a: `Costs vary based on tree size and proximity to ${landmark}. Call for a free estimate.` },
-      { q: `Are you licensed in ${countyName} County?`, a: `Yes, we connect you with fully licensed and insured Florida crews.` },
-    ],
-    "stump-grinding": [
-      { q: `Do you offer stump grinding in ${cityName}?`, a: `Yes, we provide full stump removal near ${landmark}.` },
-      { q: `Will it prevent termites?`, a: `Absolutely. Removing stumps in ${countyName} County eliminates primary termite food sources.` },
-    ],
-    "emergency-service": [
-      { q: `How fast is emergency response in ${cityName}?`, a: `Typically within 2-4 hours near ${landmark} after a storm.` },
-      { q: `Do you work with insurance?`, a: `Yes, local crews help with insurance mitigation data in ${countyName} County.` },
-    ],
-  }[serviceInfo.prefix] || [];
+let finalFaqs = premiumFaqs[cityKey] || [];
+
+// ★ YENİ: FAQ SCHEMA GENERATOR ★
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": finalFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
 ---
 
 <MainLayout title={`#1 ${serviceInfo.name} ${cityName}, FL | Licensed & Insured`} description={cityData.Description}>
@@ -121,6 +122,11 @@ let finalFaqs = premiumFaqs[cityKey] || {
     "areaServed": [ { "@type": "City", "name": cityName }, { "@type": "AdministrativeArea", "name": countyName } ],
     "description": `Professional ${serviceInfo.name} services in ${cityName}, Florida. Licensed and insured experts.`
   })} />
+
+  <!-- ★ YENİ: FAQ SCHEMA SCRIPT ★ -->
+  {finalFaqs.length > 0 && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  )}
 
   <!-- HEADER -->
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4.5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;">
@@ -287,41 +293,27 @@ let finalFaqs = premiumFaqs[cityKey] || {
 </MainLayout>
 
 <style>
-  /* GENEL KART STİLİ */
+  /* [CSS kısmı değişmedi, aynen kalabilir] */
   .info-card-base { background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03); }
-  
-  /* CTA GRID */
   .cta-grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: white; padding: 1.5rem; border-radius: 30px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); border: 1px solid #eee; }
   .cta-call-box, .cta-form-box { padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; }
   .cta-call-box { border-right: 1px solid #f1f5f9; text-align: center; }
   .main-phone-btn { background: #ea580c; color: white !important; padding: 1.2rem; text-decoration: none; border-radius: 14px; font-weight: 900; font-size: clamp(1.4rem, 4vw, 2.2rem); box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); transition: 0.3s; }
   .main-phone-btn:hover { transform: translateY(-3px); background: #f97316; }
-
-  /* MINI FORM */
   .mini-lead-form { display: grid; gap: 10px; }
   .mini-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .mini-lead-form input, .mini-lead-form textarea { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #e2e8f0; font-size: 0.9rem; outline: none; background: #f8fafc; font-family: inherit; }
   .mini-lead-form button { background: #1b4332; color: white; border: none; padding: 12px; border-radius: 10px; font-weight: 800; cursor: pointer; transition: 0.3s; }
-
-  /* STEPS & FEATURES */
   .step-card { text-align: center; }
   .feature-card { text-align: left; transition: transform 0.3s ease; }
   .icon-box { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.5rem; }
   .step-card .icon-box { margin-left: auto; margin-right: auto; }
   h4 { font-weight: 900; color: #1b4332; margin: 0 0 12px; }
-
-  /* HUB & NEARBY */
   .hub-link-item { color: #1b4332; text-decoration: none; font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 10px; transition: 0.2s; margin-bottom: 5px; }
   .hub-link-item:hover { color: #ea580c; transform: translateX(5px); }
   .nearby-tag { background: white; color: #166534; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 700; border: 1px solid #e2e8f0; transition: 0.2s; }
   .nearby-tag:hover { background: #f0fdf4; border-color: #166534; transform: translateY(-2px); }
-
-  /* ANIMATIONS */
   @keyframes live-pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); } }
   .active-pulse { animation: live-pulse 2s infinite; background: #16a34a; border-radius: 50%; width: 10px; height: 10px; display: inline-block; margin-right: 5px; }
-
-  @media (max-width: 850px) {
-    .cta-grid-container { grid-template-columns: 1fr; }
-    .cta-call-box { border-right: none; border-bottom: 1px solid #f1f5f9; padding-bottom: 2rem; }
-  }
+  @media (max-width: 850px) { .cta-grid-container { grid-template-columns: 1fr; } .cta-call-box { border-right: none; border-bottom: 1px solid #f1f5f9; padding-bottom: 2rem; } }
 </style>
