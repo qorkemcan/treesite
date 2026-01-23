@@ -61,7 +61,7 @@ const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
 
-// ★ SÜPER BENZERSİZLEŞTİRİCİ MANTIĞI (Korundu)
+// ★ SÜPER BENZERSİZLEŞTİRİCİ MANTIĞI (ASCII Reduce)
 const tipIndex = Math.abs((cityData.City + cityData.Landmark + serviceInfo.prefix).split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % arboristTips.length;
 const selectedTemplate = arboristTips[tipIndex];
 
@@ -102,7 +102,7 @@ let finalFaqs = premiumFaqs[cityKey] || {
 
 <MainLayout title={`#1 ${serviceInfo.name} ${cityName}, FL | Licensed & Insured`} description={cityData.Description}>
   
-  <!-- SEO: BREADCRUMB SCHEMA -->
+  <!-- SEO: SCHEMAS -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -113,7 +113,6 @@ let finalFaqs = premiumFaqs[cityKey] || {
     ]
   })} />
 
-  <!-- SEO: SERVICE SCHEMA -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Service",
@@ -123,6 +122,7 @@ let finalFaqs = premiumFaqs[cityKey] || {
     "description": `Professional ${serviceInfo.name} services in ${cityName}, Florida. Licensed and insured experts.`
   })} />
 
+  <!-- HEADER -->
   <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4.5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;">
     <div class="container">
       <div style="font-size: 0.85rem; margin-bottom: 1rem; color: #ffb703; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;">Official Service Dispatch • {countyName} County</div>
@@ -133,9 +133,8 @@ let finalFaqs = premiumFaqs[cityKey] || {
 
   <main class="container" style="max-width: 1100px; margin: -2.5rem auto 0; padding: 0 1rem; position: relative; z-index: 10;">
     
-    <!-- ★ DÖNÜŞÜM MERKEZİ: TELEFON + HIZLI FORM ★ -->
+    <!-- CTA GRID: PHONE + QUICK FORM -->
     <div class="cta-grid-container">
-      <!-- SOL: TELEFON -->
       <div class="cta-call-box">
         <h3 style="margin: 0 0 10px; color: #064e3b; font-size: 1.4rem; font-weight: 800;">Call for Immediate Help</h3>
         <p style="color: #6b7280; margin-bottom: 1.5rem; font-size: 0.95rem;">Direct dispatch for {cityName} projects.</p>
@@ -143,17 +142,12 @@ let finalFaqs = premiumFaqs[cityKey] || {
         <div style="margin-top: 15px; font-size: 0.8rem; font-weight: 700; color: #16a34a;">⚡ AVERAGE RESPONSE: 2-4 HOURS</div>
       </div>
 
-      <!-- SAĞ: HIZLI TEKLİF FORMU -->
       <div class="cta-form-box">
         <h3 style="margin: 0 0 15px; color: #1b4332; font-size: 1.2rem; font-weight: 800;">Get a Quick Quote</h3>
         <form action="/api/contact" method="POST" class="mini-lead-form">
-          <!-- Honeypot -->
           <div style="display:none;" aria-hidden="true"><input type="text" name="fax_number" tabindex="-1" autocomplete="off" /></div>
-          
-          <!-- Gizli Veriler (Lead takibi için) -->
           <input type="hidden" name="city" value={cityName} />
           <input type="hidden" name="service" value={serviceInfo.name} />
-
           <div class="mini-form-row">
             <input type="text" name="name" placeholder="Name" required />
             <input type="tel" name="phone" placeholder="Phone" required />
@@ -164,7 +158,29 @@ let finalFaqs = premiumFaqs[cityKey] || {
       </div>
     </div>
 
-    <!-- LOCAL STATUS MONITOR -->
+    <!-- 3 SIMPLE STEPS -->
+    <section style="margin-top: 4rem;">
+      <h2 style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;">3 Simple Steps to Service</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div class="info-card-base step-card">
+          <div class="icon-box" style="background: #e0f2fe;">📞</div>
+          <h4>1. Call Dispatch</h4>
+          <p>Connect with our {cityName} office instantly to discuss your project.</p>
+        </div>
+        <div class="info-card-base step-card">
+          <div class="icon-box" style="background: #fef3c7;">📋</div>
+          <h4>2. Get a Quote</h4>
+          <p>A local specialist will provide an expert assessment and transparent pricing.</p>
+        </div>
+        <div class="info-card-base step-card">
+          <div class="icon-box" style="background: #dcfce7;">✅</div>
+          <h4>3. Job Completed</h4>
+          <p>Safe execution and thorough cleanup of your {cityName} property.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MONITOR & HUB -->
     <section style="margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
       <div class="info-card-base monitor-card">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
@@ -186,10 +202,9 @@ let finalFaqs = premiumFaqs[cityKey] || {
         </div>
       </div>
       
-      <!-- Local Service Hub -->
       <div class="info-card-base hub-card-style">
         <h4 style="margin: 0 0 15px; color: #166534; font-size: 1.15rem; font-weight: 800;">Local Service Hub</h4>
-        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
           {allServices.filter((s) => s.name !== serviceInfo.name).map((s) => (
             <a href={`/${s.prefix}-${cityKey}`} class="hub-link-item">
               <span>{s.icon}</span> {s.name} in {cityName} →
@@ -213,6 +228,28 @@ let finalFaqs = premiumFaqs[cityKey] || {
       </div>
     </section>
 
+    <!-- WHY CHOOSE US FEATURES -->
+    <section style="margin-top: 6rem;">
+      <h2 style="color: #064e3b; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 2.5rem;">Why Choose Our {cityName} Network?</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+        <div class="info-card-base feature-card">
+          <div class="icon-box" style="background: #dcfce7;">🛡️</div>
+          <h4>Verified Compliance</h4>
+          <p>Every specialist is licensed and insured according to Florida's strict standards for {cityName}.</p>
+        </div>
+        <div class="info-card-base feature-card">
+          <div class="icon-box" style="background: #fef3c7;">🚜</div>
+          <h4>Elite Equipment</h4>
+          <p>High-performance rigging and machinery to handle anything from Pines to massive Live Oaks.</p>
+        </div>
+        <div class="info-card-base feature-card">
+          <div class="icon-box" style="background: #fee2e2;">🚑</div>
+          <h4>Storm Response</h4>
+          <p>Direct coordination for emergency storm damage and fallen tree removal across {countyName} County.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ SECTION -->
     <section style="margin: 6rem 0;">
       <h2 style="color: #064e3b; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 3rem;">Local FAQ for {cityName}</h2>
@@ -226,7 +263,7 @@ let finalFaqs = premiumFaqs[cityKey] || {
       </div>
     </section>
 
-    <!-- NEARBY FOOTPRINT -->
+    <!-- NEARBY AREAS -->
     <section style="margin-bottom: 12rem; border-top: 1px solid #eee; padding-top: 4rem; text-align: center;">
       <h3 style="color: #064e3b; font-size: 1rem; font-weight: 900; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px;">Also Serving Nearby {countyName} County Areas:</h3>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
@@ -250,61 +287,36 @@ let finalFaqs = premiumFaqs[cityKey] || {
 </MainLayout>
 
 <style>
+  /* GENEL KART STİLİ */
+  .info-card-base { background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03); }
+  
   /* CTA GRID */
-  .cta-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 30px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-    border: 1px solid #eee;
-  }
-  
-  .cta-call-box, .cta-form-box {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
+  .cta-grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: white; padding: 1.5rem; border-radius: 30px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); border: 1px solid #eee; }
+  .cta-call-box, .cta-form-box { padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; }
   .cta-call-box { border-right: 1px solid #f1f5f9; text-align: center; }
-
-  .main-phone-btn {
-    background: #ea580c;
-    color: white !important;
-    padding: 1.2rem;
-    text-decoration: none;
-    border-radius: 14px;
-    font-weight: 900;
-    font-size: clamp(1.4rem, 4vw, 2.2rem);
-    box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3);
-    transition: 0.3s;
-  }
+  .main-phone-btn { background: #ea580c; color: white !important; padding: 1.2rem; text-decoration: none; border-radius: 14px; font-weight: 900; font-size: clamp(1.4rem, 4vw, 2.2rem); box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); transition: 0.3s; }
   .main-phone-btn:hover { transform: translateY(-3px); background: #f97316; }
 
   /* MINI FORM */
   .mini-lead-form { display: grid; gap: 10px; }
   .mini-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .mini-lead-form input, .mini-lead-form textarea {
-    width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #e2e8f0; 
-    font-size: 0.9rem; outline: none; background: #f8fafc; font-family: inherit;
-  }
-  .mini-lead-form input:focus { border-color: #1b4332; background: white; }
-  .mini-lead-form button {
-    background: #1b4332; color: white; border: none; padding: 12px; 
-    border-radius: 10px; font-weight: 800; cursor: pointer; transition: 0.3s;
-  }
-  .mini-lead-form button:hover { background: #081c15; transform: translateY(-2px); }
+  .mini-lead-form input, .mini-lead-form textarea { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #e2e8f0; font-size: 0.9rem; outline: none; background: #f8fafc; font-family: inherit; }
+  .mini-lead-form button { background: #1b4332; color: white; border: none; padding: 12px; border-radius: 10px; font-weight: 800; cursor: pointer; transition: 0.3s; }
 
-  /* UTILS */
-  .info-card-base { background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; }
-  .hub-link-item { color: #1b4332; text-decoration: none; font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 10px; transition: 0.2s; }
+  /* STEPS & FEATURES */
+  .step-card { text-align: center; }
+  .feature-card { text-align: left; transition: transform 0.3s ease; }
+  .icon-box { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.5rem; }
+  .step-card .icon-box { margin-left: auto; margin-right: auto; }
+  h4 { font-weight: 900; color: #1b4332; margin: 0 0 12px; }
+
+  /* HUB & NEARBY */
+  .hub-link-item { color: #1b4332; text-decoration: none; font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 10px; transition: 0.2s; margin-bottom: 5px; }
   .hub-link-item:hover { color: #ea580c; transform: translateX(5px); }
   .nearby-tag { background: white; color: #166534; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 700; border: 1px solid #e2e8f0; transition: 0.2s; }
   .nearby-tag:hover { background: #f0fdf4; border-color: #166534; transform: translateY(-2px); }
 
+  /* ANIMATIONS */
   @keyframes live-pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); } }
   .active-pulse { animation: live-pulse 2s infinite; background: #16a34a; border-radius: 50%; width: 10px; height: 10px; display: inline-block; margin-right: 5px; }
 
