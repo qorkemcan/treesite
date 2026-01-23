@@ -230,9 +230,14 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
       </p>
       <a
         href={SITE_CONFIG.phoneHref}
-        style="background: #ea580c; color: white !important; padding: 1.2rem; text-decoration: none; border-radius: 12px; font-weight: 900; font-size: clamp(1.4rem, 5vw, 2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); transition: 0.3s;"
+        style="background: #ea580c; color: white !important; padding: 1.2rem; text-decoration: none; border-radius: 12px; font-weight: 900; font-size: clamp(1.4rem, 5vw, 2.2rem); display: block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); transition: 0.3s;"
         >{SITE_CONFIG.phone}</a
       >
+      <p
+        style="margin-top: 10px; font-size: 0.75rem; font-weight: 800; color: #1b4332; text-transform: uppercase;"
+      >
+        100% Free - No Obligation Estimate
+      </p>
     </div>
 
     <section style="margin-top: 4rem;">
@@ -287,6 +292,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
           </div>
         </div>
 
+        <!-- HAVA DURUMU ŞERİDİ -->
         <div
           id="weather-widget"
           data-city={cityName}
@@ -462,11 +468,15 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
     <section style="margin-top: 6rem;">
       <!-- SOSYAL KANIT (LAST SERVICE REQUEST) -->
       <div
-        style="margin-bottom: 1.5rem; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px;"
+        style="margin-bottom: 1.5rem; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; background: #fffbeb; padding: 12px; border-radius: 50px; border: 1px solid #fef3c7;"
       >
-        <div class="active-pulse" style="width: 8px; height: 8px;"></div>
+        <div
+          class="active-pulse"
+          style="width: 8px; height: 8px; background: #ea580c;"
+        >
+        </div>
         <p
-          style="margin: 0; font-size: 1rem; color: #1b4332; font-weight: 700; letter-spacing: -0.2px;"
+          style="margin: 0; font-size: 0.95rem; color: #1b4332; font-weight: 800; letter-spacing: -0.2px;"
         >
           Last service request in <span style="color:#ea580c;">{cityName}</span> was
           <span id="last-request-time">...</span> hours ago.
@@ -491,6 +501,30 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
             </div>
           ))
         }
+      </div>
+    </section>
+
+    <!-- DINAMIK SEHIR HARITASI -->
+    <section
+      style="margin-top: 6rem; border-top: 1px solid #eee; padding-top: 4rem;"
+    >
+      <h2
+        style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;"
+      >
+        Service Coverage: {cityName}, {countyName} County
+      </h2>
+      <div
+        style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"
+      >
+        <iframe
+          width="100%"
+          height="400"
+          style="border:0"
+          loading="lazy"
+          allowfullscreen
+          src={`https://maps.google.com/maps?q=${cityName},${countyName},FL&t=&z=12&ie=UTF8&iwloc=&output=embed`}
+        >
+        </iframe>
       </div>
     </section>
 
