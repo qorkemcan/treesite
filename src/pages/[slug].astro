@@ -11,7 +11,11 @@ import arboristTips from "../data/arborist-tips.json";
 export async function getStaticPaths() {
   const filePath = path.resolve("./src/data/cities.csv");
   const fileContent = fs.readFileSync(filePath, "utf-8");
-  const records = parse(fileContent, { columns: true, skip_empty_lines: true, bom: true });
+  const records = parse(fileContent, {
+    columns: true,
+    skip_empty_lines: true,
+    bom: true,
+  });
 
   const services = [
     { prefix: "tree-removal", name: "Tree Removal", icon: "🌳" },
@@ -23,6 +27,7 @@ export async function getStaticPaths() {
   records.forEach((row) => {
     if (!row.City) return;
     const citySlug = row.City.toLowerCase().trim().replace(/\./g, "").replace(/\s+/g, "-");
+    
     services.forEach((service) => {
       paths.push({
         params: { slug: `${service.prefix}-${citySlug}` },
@@ -30,7 +35,9 @@ export async function getStaticPaths() {
           cityData: row,
           serviceInfo: service,
           allServices: services,
-          nearby: records.filter((r) => r.County === row.County && r.City !== row.City).slice(0, 5),
+          nearby: records
+            .filter((r) => r.County === row.County && r.City !== row.City)
+            .slice(0, 5),
         },
       });
     });
@@ -42,7 +49,11 @@ const { cityData, serviceInfo, nearby, allServices } = Astro.props;
 
 const toTitleCase = (str) => {
   if (!str) return "";
-  return str.toLowerCase().split(" ").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 };
 
 const cityName = toTitleCase(cityData.City);
@@ -70,8 +81,34 @@ if (imagePaths.length > 0) {
   selectedImage = imgModule.default;
 }
 
+// ★ AKILLI FAQ SİSTEMİ ★
 const cityKey = cityData.City.toLowerCase().trim().replace(/\./g, "").replace(/\s+/g, "-");
-let finalFaqs = premiumFaqs[cityKey] || [];
+
+// Eğer premium-faqs.json dosyasında yoksa, bu varsayılan ama dinamik listeyi kullan:
+const defaultFaqs = [
+  {
+    q: `Do I need a permit for tree removal in ${cityName}?`,
+    a: `Under Florida Statute 163.045, residential property owners in ${cityName} can generally remove hazardous trees without a local permit if a certified professional documents the danger. For non-hazardous trees near ${landmark}, we recommend checking with ${countyName} County's local ordinances.`
+  },
+  {
+    q: `How much does ${serviceInfo.name} cost near ${landmark}?`,
+    a: `Costs in ${cityName} depend on the tree's size, its proximity to structures near ${landmark}, and the specific equipment needed. We provide free, no-obligation estimates tailored to the unique conditions of your ${countyName} County property.`
+  },
+  {
+    q: `Is your tree service licensed to work in ${countyName} County?`,
+    a: `Yes, all crews in our network are fully licensed and insured to perform ${serviceInfo.name} and other arborist services throughout ${cityName} and the surrounding Florida areas.`
+  },
+  {
+    q: `What is the best time of year for ${serviceInfo.name} in ${cityName}?`,
+    a: `While Florida's climate allows for year-round care, January is an excellent time for dormant pruning of hardwoods. For properties near ${landmark}, scheduling maintenance before the peak of the hurricane season is the best way to prevent storm-related failures.`
+  },
+  {
+    q: `Will homeowners insurance cover emergency tree work in ${cityName}?`,
+    a: `Typically, insurance covers ${serviceInfo.name} if the tree has caused structural damage to your home or fence during a storm event. We provide the professional documentation and itemized invoices that ${countyName} County residents need to facilitate their claims.`
+  }
+];
+
+let finalFaqs = premiumFaqs[cityKey] || defaultFaqs;
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -86,7 +123,7 @@ const faqSchema = {
 
 <MainLayout title={`#1 ${serviceInfo.name} ${cityName}, FL | Licensed & Insured`} description={cityData.Description}>
   
-  <!-- ★ SEO: BREADCRUMB SCHEMA ★ -->
+  <!-- SEO: SCHEMAS -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -97,7 +134,6 @@ const faqSchema = {
     ]
   })} />
 
-  <!-- ★ SEO: SERVICE SCHEMA ★ (DÜZELTİLDİ: PROVIDER @ID İLE BAĞLANDI) -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Service",
@@ -126,6 +162,7 @@ const faqSchema = {
   </header>
 
   <main class="container" style="max-width: 1100px; margin: -2.5rem auto 0; padding: 0 1rem; position: relative; z-index: 10;">
+    
     <div class="cta-grid-container">
       <div class="cta-call-box">
         <h3 style="margin: 0 0 10px; color: #064e3b; font-size: 1.4rem; font-weight: 800;">Call for Immediate Help</h3>
@@ -195,11 +232,15 @@ const faqSchema = {
       </div>
     </section>
 
+    <!-- ★ FAQ SECTION (DİNAMİK YEDEKLEMELİ) ★ -->
     <section style="margin: 6rem 0;">
       <h2 style="color: #064e3b; font-size: 2rem; font-weight: 900; text-align: center; margin-bottom: 3rem;">Local FAQ for {cityName}</h2>
       <div style="display: grid; gap: 15px; max-width: 800px; margin: 0 auto;">
         {finalFaqs.map((f) => (
-          <div style="background: white; padding: 1.5rem; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.02);"><h4 style="color: #1b4332; font-weight: 800; margin: 0 0 10px;">{f.q}</h4><p style="color: #4b5563; line-height: 1.7;">{f.a}</p></div>
+          <div style="background: white; padding: 1.5rem; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+            <h4 style="color: #1b4332; font-weight: 800; margin: 0 0 10px;">{f.q}</h4>
+            <p style="color: #4b5563; line-height: 1.7;">{f.a}</p>
+          </div>
         ))}
       </div>
     </section>
@@ -228,6 +269,7 @@ const faqSchema = {
   .cta-call-box, .cta-form-box { padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; }
   .cta-call-box { border-right: 1px solid #f1f5f9; text-align: center; }
   .main-phone-btn { background: #ea580c; color: white !important; padding: 1.2rem; text-decoration: none; border-radius: 14px; font-weight: 900; font-size: clamp(1.4rem, 4vw, 2.2rem); box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3); transition: 0.3s; }
+  .main-phone-btn:hover { transform: translateY(-3px); background: #f97316; }
   .mini-lead-form { display: grid; gap: 10px; }
   .mini-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .mini-lead-form input, .mini-lead-form textarea { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #e2e8f0; font-size: 0.9rem; outline: none; background: #f8fafc; font-family: inherit; }
