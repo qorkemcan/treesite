@@ -8,6 +8,11 @@ import { Image } from "astro:assets";
 import premiumFaqs from "../data/premium-faqs.json";
 import arboristTips from "../data/arborist-tips.json";
 
+// YENİ: Hazırladığımız zengin içerik JSON dosyalarını içe aktarıyoruz
+import cityEmergency from "../data/city-emergency.json";
+import cityRemoval from "../data/city-removal.json";
+import cityStump from "../data/city-stump.json";
+
 export async function getStaticPaths() {
   const filePath = path.resolve("./src/data/cities.csv");
   const fileContent = fs.readFileSync(filePath, "utf-8");
@@ -26,7 +31,6 @@ export async function getStaticPaths() {
   const paths = [];
   records.forEach((row) => {
     if (!row.City) return;
-    // URL'lerdeki noktaları (.) temizliyoruz ki 404 hatası oluşmasın
     const citySlug = row.City.toLowerCase()
       .trim()
       .replace(/\./g, "")
@@ -66,7 +70,6 @@ const countyName = toTitleCase(cityData.County);
 const mainTree = cityData.MainTreeType || "local Florida trees";
 const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
 
-// Linklerin hatasız çalışması için temiz slug
 const citySlugClean = cityData.City.toLowerCase()
   .trim()
   .replace(/\./g, "")
@@ -90,10 +93,25 @@ const cityTemplates = [
   `Residents near ${landmark} understand the value of a well-maintained canopy. In ${cityName}, our dispatch network specializes in managing complex ${mainTree} projects where property lines and structures are in close proximity. From precision ${serviceInfo.name} to urgent hazard removal, we bring deep ${countyName} County environmental knowledge to every job site. Our goal is simple: providing ${cityName} with elite arborist expertise that enhances curb appeal while prioritizing the safety of your home.`,
   `Professionalism in ${countyName} County tree care requires a balance of biological science and modern engineering. In ${cityName}, we connect you with vetted specialists who understand the complex growth habits of ${mainTree} near ${landmark}. Whether you require a routine ${serviceInfo.name} or a technical canopy reduction, our operations strictly follow safety regulations designed for the unique Florida terrain. We ensure that every landscape in ${cityName} we service is better prepared for environmental stress.`,
 ];
+
 const templateChoiceIndex =
   Math.abs(cityName.split("").reduce((a, b) => a + b.charCodeAt(0), 0)) %
   cityTemplates.length;
-const selectedRichText = cityTemplates[templateChoiceIndex];
+
+// GÜNCELLEME: Hizmet türüne göre hazırladığımız özel JSON'dan veriyi çekiyoruz
+let selectedRichText = "";
+if (serviceInfo.prefix === "tree-removal") {
+  selectedRichText =
+    cityRemoval[citySlugClean] || cityTemplates[templateChoiceIndex];
+} else if (serviceInfo.prefix === "stump-grinding") {
+  selectedRichText =
+    cityStump[citySlugClean] || cityTemplates[templateChoiceIndex];
+} else if (serviceInfo.prefix === "emergency-service") {
+  selectedRichText =
+    cityEmergency[citySlugClean] || cityTemplates[templateChoiceIndex];
+} else {
+  selectedRichText = cityTemplates[templateChoiceIndex];
+}
 
 const serviceFolder = serviceInfo.prefix.includes("removal")
   ? "removal"
@@ -485,6 +503,7 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
 
     async function loadWeather() {
       const widget = document.getElementById("weather-widget");
+      if (!widget) return;
       const cityName = widget.getAttribute("data-city");
       try {
         const geoRes = await fetch(
@@ -544,14 +563,6 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
   }
   .step-card {
     text-align: center;
-  }
-  .feature-card {
-    text-align: left;
-    transition: transform 0.3s ease;
-  }
-  .feature-card:hover {
-    transform: translateY(-5px);
-    border-color: #dcfce7;
   }
   .icon-box {
     width: 56px;
@@ -632,8 +643,6 @@ let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
     display: inline-block;
     margin-right: 5px;
   }
-
-  /* Yeşil şeritteki orta elemanın çizgilerini sadece masaüstünde göster (MOBIL DÜZELTME) */
   .status-item-middle {
     text-align: center;
     padding: 0 2rem;
