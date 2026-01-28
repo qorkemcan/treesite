@@ -1,0 +1,187 @@
+---
+// src/components/PriceCalculator.astro
+const { city = "Florida" } = Astro.props;
+---
+
+<section class="calc-wrapper">
+  <div class="calc-card">
+    <div class="calc-header">
+      <span class="live-indicator">● 2026 LIVE MARKET DATA</span>
+      <h2>{city} Price Estimator</h2>
+      <p>Instant estimate for professional tree services in {city}, FL.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-inputs">
+        <div class="field">
+          <label>Service Type</label>
+          <select id="svc-type">
+            <option value="removal" data-base="850">Tree Removal</option>
+            <option value="trimming" data-base="450">Tree Trimming</option>
+            <option value="stump" data-base="250">Stump Grinding</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Tree Size</label>
+          <div class="radio-group">
+            <input type="radio" name="size" value="1" id="s" checked /><label
+              for="s">Small</label
+            >
+            <input type="radio" name="size" value="2.2" id="m" /><label for="m"
+              >Medium</label
+            >
+            <input type="radio" name="size" value="4.5" id="l" /><label for="l"
+              >Large</label
+            >
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="check-container">
+            <input type="checkbox" id="complexity" />
+            <span class="checkmark"></span>
+            Near House / Power Lines
+          </label>
+        </div>
+
+        <button id="calculate-trigger" class="calc-btn">GET ESTIMATE</button>
+      </div>
+
+      <div id="calc-result" class="calc-result" style="display:none;">
+        <div class="result-content">
+          <small>Estimated Range:</small>
+          <div id="price-range" class="price-val">Calculating...</div>
+          <p>Based on 2026 average labor rates in {city}.</p>
+          <a href="tel:+18554982578" class="call-trigger">
+            <span class="icon">📞</span> VERIFY WITH DISPATCH
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .calc-wrapper {
+    padding: 2rem 0;
+  }
+  .calc-card {
+    background: white;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  .calc-header {
+    background: #1b4332;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  .live-indicator {
+    color: #ffb703;
+    font-size: 0.7rem;
+    font-weight: 900;
+  }
+  .calc-grid {
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+  }
+  .field {
+    margin-bottom: 1.5rem;
+  }
+  label {
+    display: block;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #1b4332;
+    font-size: 0.9rem;
+  }
+  select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #f1f5f9;
+    font-weight: 600;
+  }
+  .radio-group {
+    display: flex;
+    gap: 10px;
+  }
+  .radio-group label {
+    background: #f8fafc;
+    padding: 10px 15px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  .radio-group input {
+    display: none;
+  }
+  .radio-group input:checked + label {
+    border-color: #ea580c;
+    background: #fff7ed;
+    color: #ea580c;
+  }
+  .calc-btn {
+    width: 100%;
+    background: #ea580c;
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  .calc-result {
+    background: #f0fdf4;
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 2px dashed #16a34a;
+    text-align: center;
+  }
+  .price-val {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #166534;
+    margin: 10px 0;
+  }
+  .call-trigger {
+    display: block;
+    background: #1b4332;
+    color: white !important;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-top: 10px;
+  }
+</style>
+
+<script is:inline>
+  document
+    .getElementById("calculate-trigger")
+    ?.addEventListener("click", () => {
+      const base = parseFloat(
+        document.getElementById("svc-type").options[
+          document.getElementById("svc-type").selectedIndex
+        ].dataset.base,
+      );
+      const size = parseFloat(
+        document.querySelector('input[name="size"]:checked').value,
+      );
+      const complex = document.getElementById("complexity").checked ? 1.4 : 1;
+
+      const min = Math.round(base * size * complex);
+      const max = Math.round(min * 1.5);
+
+      document.getElementById("price-range").innerText =
+        `$${min.toLocaleString()} - $${max.toLocaleString()}`;
+      document.getElementById("calc-result").style.display = "block";
+    });
+</script>
