@@ -148,12 +148,23 @@ const fallbackFaqs = [
   },
 ];
 let finalFaqs = premiumFaqs[cityKey] || fallbackFaqs;
+
+// BAŞLIK ÇEŞİTLENDİRME MANTIĞI
+const titleTemplates = [
+  `#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & Insured`,
+  `Expert ${serviceInfo.name} ${cityName} | 24/7 Emergency Service`,
+  `Top Rated ${serviceInfo.name} in ${cityName} | Free Estimates`,
+  `Trusted ${serviceInfo.name} Specialists: ${cityName}, FL`,
+  `Affordable ${serviceInfo.name} in ${cityName} | ProTreeTrim™`,
+];
+
+// Şehir ve hizmet isminin toplam uzunluğuna göre her sayfa için sabit ama farklı bir başlık seçiyoruz
+const titleIndex =
+  Math.abs(cityName.length + serviceInfo.name.length) % titleTemplates.length;
+const finalPageTitle = titleTemplates[titleIndex];
 ---
 
-<MainLayout
-  title={`#1 ${serviceInfo.name} in ${cityName}, FL | Licensed & Insured`}
-  description={cityData.Description}
->
+<MainLayout title={finalPageTitle} description={cityData.Description}>
   <!-- HEADER -->
   <header
     style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4.5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
