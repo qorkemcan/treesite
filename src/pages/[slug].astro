@@ -177,6 +177,9 @@ const avgResponse = (seed % 15) + 25;
 
 const nearbyCitiesList = cityData.NearbyCities || "";
 const serviceAreaNote = `Our strategic dispatch model ensures that while we are focused on ${cityName}, our crews also maintain a rapid response presence in ${nearbyCitiesList} and the greater ${countyName} County region. This geographic spread allows us to manage ${mainTree} maintenance projects for both residential gardens and commercial properties near ${landmark} with minimal lead times.`;
+
+// GSC HATASINI ÇÖZEN TELEFON FORMATI
+const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
 ---
 
 <MainLayout title={finalPageTitle} description={cityData.Description}>
@@ -220,9 +223,19 @@ const serviceAreaNote = `Our strategic dispatch model ensures that while we are 
         "description": cityData.Description,
         "provider": {
           "@type": "LocalBusiness",
+          "@id": `${SITE_CONFIG.siteUrl}/#localbusiness`,
           "name": SITE_CONFIG.brandName,
           "image": "https://www.protreetrim.com/team.jpg",
-          "telephone": SITE_CONFIG.phoneHref.replace("tel:", "")
+          "telephone": schemaPhone,
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Statewide Dispatch Office",
+            "addressLocality": "Miami",
+            "addressRegion": "FL",
+            "postalCode": "33131",
+            "addressCountry": "US"
+          }
         },
         "areaServed": {
           "@type": "City",
