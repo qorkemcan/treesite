@@ -300,6 +300,12 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
       <ol class="breadcrumb-list">
         <li><a href="/">Home</a></li>
         <li>Florida</li>
+        <!-- YENİ: İlçeye Link Veren Adım -->
+        <li>
+          <a href={`/county/${cityData.County.toLowerCase().trim().replace(/\s+/g, "-")}`}>
+            {countyName}
+          </a>
+        </li>
         {serviceInfo.prefix === "tree-removal" ? (
           <li class="active">{cityName}</li>
         ) : (
