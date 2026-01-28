@@ -7,8 +7,8 @@ export default defineConfig({
   output: 'static', 
   integrations: [
     sitemap({
-      // Şehir ve ilçe sayfalarını Astro'nun standart sitemap'inden çıkarıyoruz
-      // Çünkü bunları custom scriptimiz (generate-sitemaps.mjs) çok daha düzenli üretiyor.
+      // Astro'nun otomatik sitemap'inden şehir sayfalarını çıkarıyoruz.
+      // Çünkü bunları özel scriptimiz (generate-sitemaps.mjs) daha profesyonel oluşturuyor.
       filter: (page) => 
         !page.includes('tree-removal-') && 
         !page.includes('stump-grinding-') && 

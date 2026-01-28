@@ -11,17 +11,11 @@ async function generate() {
     console.log('🚀 Özel Sitemap oluşturma işlemi başlıyor...');
 
     try {
-        // Vercel build bittiğinde dosyaları 'dist/client' içinden okur.
-        // Biz her iki klasöre de (dist ve dist/client) yazarak riski sıfırlıyoruz.
-        const rootDist = path.join(process.cwd(), 'dist');
-        const clientDist = path.join(process.cwd(), 'dist/client');
+        // Astro'nun build çıktısını koyduğu yer
+        const distPath = path.join(process.cwd(), 'dist');
         
-        const targetPaths = [];
-        if (fs.existsSync(rootDist)) targetPaths.push(rootDist);
-        if (fs.existsSync(clientDist)) targetPaths.push(clientDist);
-
-        if (targetPaths.length === 0) {
-            throw new Error('HATA: dist klasörü bulunamadı! Önce build almalısınız.');
+        if (!fs.existsSync(distPath)) {
+            throw new Error('HATA: dist klasörü bulunamadı! Önce npm run build almalısınız.');
         }
 
         // 1. Verileri Oku
@@ -43,8 +37,11 @@ async function generate() {
             { prefix: 'emergency-service' }
         ];
 
-        // sitemap-0.xml Astro'nun oluşturduğu statik sayfaları (Home, About vb.) içerir.
-        const sitemapFiles = ['sitemap-0.xml'];
+        // sitemap-0.xml Astro'nun oluşturduğu ana sayfaları (About, Contact vb.) içerir.
+        const sitemapFiles = [];
+        if (fs.existsSync(path.join(distPath, 'sitemap-0.xml'))) {
+            sitemapFiles.push('sitemap-0.xml');
+        }
 
         // 3. Her İlçe İçin Ayrı XML Dosyası Oluştur
         Object.keys(countyGroups).forEach(countySlug => {
@@ -53,7 +50,7 @@ async function generate() {
             // İlçe Hub Sayfası
             xml += `\n  <url>\n    <loc>${SITE_URL}/county/${countySlug}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <priority>0.9</priority>\n  </url>`;
 
-            // O ilçeye bağlı şehirlerin 3 ayrı hizmet sayfası
+            // O ilçeye bağlı şehirlerin sayfaları
             countyGroups[countySlug].forEach(city => {
                 if (!city.City) return;
                 const citySlug = city.City.toLowerCase().trim().replace(/\./g, '').replace(/\s+/g, '-');
@@ -66,15 +63,11 @@ async function generate() {
             xml += `\n</urlset>`;
             
             const fileName = `sitemap-county-${countySlug}.xml`;
-            
-            // Dosyayı her iki klasöre de yaz
-            targetPaths.forEach(p => {
-                fs.writeFileSync(path.join(p, fileName), xml);
-            });
+            fs.writeFileSync(path.join(distPath, fileName), xml);
             sitemapFiles.push(fileName);
         });
 
-        // 4. Ana sitemap-index.xml Dosyasını Her Şeyi Kapsayacak Şekilde Yeniden Yaz
+        // 4. Ana sitemap-index.xml Dosyasını Oluştur
         let indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
         sitemapFiles.forEach(file => {
@@ -83,15 +76,12 @@ async function generate() {
 
         indexXml += `\n</sitemapindex>`;
         
-        targetPaths.forEach(p => {
-            fs.writeFileSync(path.join(p, 'sitemap-index.xml'), indexXml);
-            console.log(`✅ ${p}/sitemap-index.xml güncellendi.`);
-        });
+        fs.writeFileSync(path.join(distPath, 'sitemap-index.xml'), indexXml);
 
-        console.log(`✨ TAMAMLANDI: Toplam ${sitemapFiles.length} sitemap dosyası aktif.`);
+        console.log(`✅ TAMAMLANDI: Toplam ${sitemapFiles.length} sitemap dosyası sitemap-index.xml'e bağlandı.`);
 
     } catch (err) {
-        console.error('❌ KRİTİK HATA:', err.message);
+        console.error('❌ HATA:', err.message);
         process.exit(1);
     }
 }
