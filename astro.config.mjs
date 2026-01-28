@@ -8,36 +8,31 @@ export default defineConfig({
   output: 'static', 
   integrations: [
     sitemap({
-      // Her sayfa için özel SEO kuralları tanımlıyoruz
+      // DİKKAT: Script ile oluşturduğumuz sayfaları buradan eliyoruz.
+      // Astro sadece ana sayfaları (Home, About, Contact, Gallery vb.) sitemap yapacak.
+      filter: (page) => 
+        !page.includes('tree-removal-') && 
+        !page.includes('stump-grinding-') && 
+        !page.includes('emergency-service-') &&
+        !page.includes('/county/'),
+      
       serialize(item) {
-        // Şehir bazlı programmatic sayfalar (tree-removal, stump-grinding, emergency-service)
-        if (
-          item.url.includes('tree-removal') || 
-          item.url.includes('stump-grinding') || 
-          item.url.includes('emergency-service')
-        ) {
-          return {
-            ...item,
-            changefreq: 'weekly', // Fiyatlar veya veriler değiştikçe haftalık taransın
-            priority: 0.9,       // Bu sayfalar bizim en önemli sayfalarımız (Hero pages)
-            lastmod: new Date().toISOString(), // Her build alındığında güncel tarih basar
-          };
-        }
-        
-        // Ana sayfa için en yüksek öncelik
+        // Ana sayfa için ayarlar
         if (item.url === 'https://www.protreetrim.com/') {
           return {
             ...item,
             changefreq: 'daily',
             priority: 1.0,
+            lastmod: new Date().toISOString(),
           };
         }
 
-        // Diğer statik sayfalar (About, Privacy, etc.)
+        // Geri kalan sabit sayfalar (About, Contact, Privacy, Gallery)
         return {
           ...item,
           changefreq: 'monthly',
-          priority: 0.5,
+          priority: 0.7,
+          lastmod: new Date().toISOString(),
         };
       },
     }),

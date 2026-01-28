@@ -3,7 +3,8 @@ import path from 'path';
 import { parse } from 'csv-parse/sync';
 
 const SITE_URL = 'https://www.protreetrim.com';
-const DIST_PATH = './dist'; // Vercel/Astro build çıktı klasörü
+const DIST_PATH = './dist'; // Astro/Vercel build çıktı klasörü
+const TODAY = new Date().toISOString().split('T')[0]; // Bugünün tarihi (Örn: 2026-01-28)
 
 // 1. Verileri Oku
 const fileContent = fs.readFileSync('./src/data/cities.csv', 'utf-8');
@@ -25,13 +26,15 @@ const services = [
 
 const sitemapFiles = [];
 
-// 3. Her İlçe İçin Sitemap Oluştur
+// 3. Her İlçe İçin Özel Sitemap Oluştur
 Object.keys(countyGroups).forEach(countySlug => {
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- County Hub Page -->
     <url>
         <loc>${SITE_URL}/county/${countySlug}</loc>
+        <lastmod>${TODAY}</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>`;
 
@@ -42,6 +45,8 @@ Object.keys(countyGroups).forEach(countySlug => {
             xml += `
     <url>
         <loc>${SITE_URL}/${svc.prefix}-${citySlug}</loc>
+        <lastmod>${TODAY}</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>`;
         });
@@ -50,11 +55,17 @@ Object.keys(countyGroups).forEach(countySlug => {
     xml += `\n</urlset>`;
     
     const fileName = `sitemap-county-${countySlug}.xml`;
+    
+    // Klasör yoksa oluştur (Hata almamak için tedbir)
+    if (!fs.existsSync(DIST_PATH)) {
+        fs.mkdirSync(DIST_PATH, { recursive: true });
+    }
+    
     fs.writeFileSync(path.join(DIST_PATH, fileName), xml);
     sitemapFiles.push(fileName);
 });
 
-// 4. Ana Sitemap Index Dosyasını Oluştur
+// 4. Ana Sitemap Index Dosyasını Oluştur (Google'a gönderilecek dosya)
 let indexXml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
@@ -62,10 +73,11 @@ sitemapFiles.forEach(file => {
     indexXml += `
     <sitemap>
         <loc>${SITE_URL}/${file}</loc>
+        <lastmod>${TODAY}</lastmod>
     </sitemap>`;
 });
 
 indexXml += `\n</sitemapindex>`;
 fs.writeFileSync(path.join(DIST_PATH, 'sitemap-index.xml'), indexXml);
 
-console.log(`✅ ${sitemapFiles.length} adet ilçe sitemap dosyası ve index başarıyla oluşturuldu!`);
+console.log(`✅ İşlem Başarılı: ${sitemapFiles.length} adet ilçe sitemap dosyası ve 1 adet index dosyası '${DIST_PATH}' klasörüne oluşturuldu!`);
