@@ -140,7 +140,8 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
         color: #1a1a1a;
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
-        padding-bottom: 120px;
+        /* Sticky butonun üzerine binmemesi için padding 120px'den 90px'e çekildi */
+        padding-bottom: 90px;
       }
       .container {
         max-width: 1200px;
@@ -353,7 +354,7 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
     <slot />
 
     <footer
-      style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 10rem; text-align: center; border-top: 6px solid var(--secondary);"
+      style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 5rem; text-align: center; border-top: 6px solid var(--secondary);"
     >
       <div class="container">
         <div
