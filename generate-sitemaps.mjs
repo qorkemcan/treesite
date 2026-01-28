@@ -8,20 +8,20 @@ const CSV_PATH = path.join(process.cwd(), 'src/data/cities.csv');
 const TODAY = new Date().toISOString().split('T')[0];
 
 async function generate() {
-    console.log('🚀 Sitemap oluşturma işlemi başlıyor...');
+    console.log('🚀 Özel Sitemap oluşturma işlemi başlıyor...');
 
     try {
-        // Vercel/Astro'nun dosyaları servis ettiği asıl klasör dist/client'dır.
-        // Biz işimizi sağlama alıp her iki klasöre de yazdıracağız.
+        // Vercel build bittiğinde dosyaları 'dist/client' içinden okur.
+        // Biz her iki klasöre de (dist ve dist/client) yazarak riski sıfırlıyoruz.
         const rootDist = path.join(process.cwd(), 'dist');
         const clientDist = path.join(process.cwd(), 'dist/client');
         
-        const pathsToWrite = [];
-        if (fs.existsSync(rootDist)) pathsToWrite.push(rootDist);
-        if (fs.existsSync(clientDist)) pathsToWrite.push(clientDist);
+        const targetPaths = [];
+        if (fs.existsSync(rootDist)) targetPaths.push(rootDist);
+        if (fs.existsSync(clientDist)) targetPaths.push(clientDist);
 
-        if (pathsToWrite.length === 0) {
-            throw new Error('HATA: dist klasörü bulunamadı! Önce npm run build yapmalısınız.');
+        if (targetPaths.length === 0) {
+            throw new Error('HATA: dist klasörü bulunamadı! Önce build almalısınız.');
         }
 
         // 1. Verileri Oku
@@ -43,17 +43,17 @@ async function generate() {
             { prefix: 'emergency-service' }
         ];
 
-        // sitemap-0.xml Astro'nun oluşturduğu ana sayfaları (Home, About vb.) içerir.
+        // sitemap-0.xml Astro'nun oluşturduğu statik sayfaları (Home, About vb.) içerir.
         const sitemapFiles = ['sitemap-0.xml'];
 
-        // 3. Her İlçe İçin Özel Sitemap Oluştur
+        // 3. Her İlçe İçin Ayrı XML Dosyası Oluştur
         Object.keys(countyGroups).forEach(countySlug => {
             let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
             
-            // County Hub Sayfası
+            // İlçe Hub Sayfası
             xml += `\n  <url>\n    <loc>${SITE_URL}/county/${countySlug}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <priority>0.9</priority>\n  </url>`;
 
-            // Şehir Sayfaları
+            // O ilçeye bağlı şehirlerin 3 ayrı hizmet sayfası
             countyGroups[countySlug].forEach(city => {
                 if (!city.City) return;
                 const citySlug = city.City.toLowerCase().trim().replace(/\./g, '').replace(/\s+/g, '-');
@@ -67,14 +67,14 @@ async function generate() {
             
             const fileName = `sitemap-county-${countySlug}.xml`;
             
-            // Dosyayı bulduğumuz tüm dist yollarına yaz
-            pathsToWrite.forEach(p => {
+            // Dosyayı her iki klasöre de yaz
+            targetPaths.forEach(p => {
                 fs.writeFileSync(path.join(p, fileName), xml);
             });
             sitemapFiles.push(fileName);
         });
 
-        // 4. ANA İNDEKS DOSYASINI OLUŞTUR (sitemap-index.xml)
+        // 4. Ana sitemap-index.xml Dosyasını Her Şeyi Kapsayacak Şekilde Yeniden Yaz
         let indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
         sitemapFiles.forEach(file => {
@@ -83,16 +83,15 @@ async function generate() {
 
         indexXml += `\n</sitemapindex>`;
         
-        // ÖNEMLİ: Mevcut tüm sitemap-index.xml dosyalarının üzerine kendi indeksimizi yazıyoruz
-        pathsToWrite.forEach(p => {
+        targetPaths.forEach(p => {
             fs.writeFileSync(path.join(p, 'sitemap-index.xml'), indexXml);
-            console.log(`✅ Yazıldı: ${p}/sitemap-index.xml`);
+            console.log(`✅ ${p}/sitemap-index.xml güncellendi.`);
         });
 
-        console.log(`✨ BAŞARILI: Toplam ${sitemapFiles.length} sitemap dosyası yayına hazır!`);
+        console.log(`✨ TAMAMLANDI: Toplam ${sitemapFiles.length} sitemap dosyası aktif.`);
 
     } catch (err) {
-        console.error('❌ SİTEMAP HATASI:', err.message);
+        console.error('❌ KRİTİK HATA:', err.message);
         process.exit(1);
     }
 }

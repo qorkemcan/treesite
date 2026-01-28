@@ -7,7 +7,8 @@ export default defineConfig({
   output: 'static', 
   integrations: [
     sitemap({
-      // Sadece ana statik sayfaları (Home, About, Contact vb.) dahil et
+      // Şehir ve ilçe sayfalarını Astro'nun standart sitemap'inden çıkarıyoruz
+      // Çünkü bunları custom scriptimiz (generate-sitemaps.mjs) çok daha düzenli üretiyor.
       filter: (page) => 
         !page.includes('tree-removal-') && 
         !page.includes('stump-grinding-') && 
