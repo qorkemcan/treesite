@@ -162,6 +162,10 @@ const titleTemplates = [
 const titleIndex =
   Math.abs(cityName.length + serviceInfo.name.length) % titleTemplates.length;
 const finalPageTitle = titleTemplates[titleIndex];
+
+// YENİ: SERVICE AREA LOGISTICS PARAGRAFI (SEO İÇİN YERELLEŞTİRME)
+const nearbyCitiesList = cityData.NearbyCities || "";
+const serviceAreaNote = `Our strategic dispatch model ensures that while we are focused on ${cityName}, our crews also maintain a rapid response presence in ${nearbyCitiesList} and the greater ${countyName} County region. This geographic spread allows us to manage ${mainTree} maintenance projects for both residential gardens and commercial properties near ${landmark} with minimal lead times.`;
 ---
 
 <MainLayout title={finalPageTitle} description={cityData.Description}>
@@ -466,6 +470,22 @@ const finalPageTitle = titleTemplates[titleIndex];
           src={`https://maps.google.com/maps?q=${cityName},${countyName},FL&t=&z=12&ie=UTF8&iwloc=&output=embed`}
         ></iframe>
       </div>
+    </section>
+
+    <!-- LOCAL LOGISTICS BLOCK - ÖZGÜNLÜK İÇİN -->
+    <section
+      style="margin-top: 4rem; padding: 2.5rem; background: #f8fafc; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 20px rgba(0,0,0,0.02);"
+    >
+      <h3
+        style="color: #1b4332; font-size: 1.5rem; font-weight: 900; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 10px;"
+      >
+        <span style="font-size: 1.8rem;">📍</span> Regional Service Area Information
+      </h3>
+      <p
+        style="color: #4b5563; line-height: 1.8; font-size: 1.1rem; font-weight: 500; margin: 0;"
+      >
+        {serviceAreaNote}
+      </p>
     </section>
 
     <!-- NEARBY LINKS -->
