@@ -7,8 +7,9 @@ import { SITE_CONFIG } from "../config.js";
 import { Image } from "astro:assets";
 import premiumFaqs from "../data/premium-faqs.json";
 import arboristTips from "../data/arborist-tips.json";
+import PriceCalculator from "../components/PriceCalculator.astro"; // YENİ IMPORT
 
-// YENİ: Hazırladığımız zengin içerik JSON dosyalarını içe aktarıyoruz
+// Zengin içerik JSON dosyaları
 import cityEmergency from "../data/city-emergency.json";
 import cityRemoval from "../data/city-removal.json";
 import cityStump from "../data/city-stump.json";
@@ -68,7 +69,6 @@ const cityName = toTitleCase(cityData.City);
 const landmark = toTitleCase(cityData.Landmark) || "the local area";
 const countyName = toTitleCase(cityData.County);
 const mainTree = cityData.MainTreeType || "local Florida trees";
-const currentUrl = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl).toString();
 
 const citySlugClean = cityData.City.toLowerCase()
   .trim()
@@ -160,7 +160,7 @@ const titleTemplates = [
 const titleIndex = Math.abs(cityName.length + serviceInfo.name.length) % titleTemplates.length;
 const finalPageTitle = titleTemplates[titleIndex];
 
-// YENİ: RESIDENTIAL FOCUS MANTIĞI (Özgünlük için)
+// RESIDENTIAL FOCUS MANTIĞI
 const residentialTemplates = [
   `For residential gardens in ${cityName}, we prioritize zero-impact removal techniques. Our crews use specialized matting to protect your lawn and decorative pavers while dismantling ${mainTree} near structures.`,
   `Backyard tree projects near ${landmark} require precision. We specialize in tight-access removals, ensuring that your garden beds and irrigation lines remain undisturbed throughout the ${serviceInfo.name} process.`,
@@ -171,12 +171,10 @@ const residentialTemplates = [
 const resIndex = Math.abs(cityName.length - serviceInfo.name.length) % residentialTemplates.length;
 const selectedResidentialNote = residentialTemplates[resIndex];
 
-// YENİ: DİNAMİK İSTATİSTİK MANTIĞI
 const seed = cityName.length + countyName.length;
 const activeCrews = (seed % 5) + 3; 
 const avgResponse = (seed % 15) + 25;
 
-// SERVICE AREA LOGISTICS PARAGRAFI
 const nearbyCitiesList = cityData.NearbyCities || "";
 const serviceAreaNote = `Our strategic dispatch model ensures that while we are focused on ${cityName}, our crews also maintain a rapid response presence in ${nearbyCitiesList} and the greater ${countyName} County region. This geographic spread allows us to manage ${mainTree} maintenance projects for both residential gardens and commercial properties near ${landmark} with minimal lead times.`;
 ---
@@ -393,6 +391,10 @@ const serviceAreaNote = `Our strategic dispatch model ensures that while we are 
         </p>
       </div>
     </section>
+
+    <!-- ↓↓↓ YENİ: PRICE CALCULATOR INTEGRATION ↓↓↓ -->
+    <PriceCalculator city={cityName} />
+    <!-- ↑↑↑ YENİ: PRICE CALCULATOR INTEGRATION ↑↑↑ -->
 
     <!-- RICH TEXT & IMAGE -->
     <section style="margin-top: 5rem;">
@@ -645,8 +647,7 @@ const serviceAreaNote = `Our strategic dispatch model ensures that while we are 
     font-size: 0.95rem;
     font-weight: 700;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: center; gap: 10px;
     transition: 0.2s;
     margin-bottom: 5px;
   }
@@ -671,18 +672,9 @@ const serviceAreaNote = `Our strategic dispatch model ensures that while we are 
     transform: translateY(-2px);
   }
   @keyframes live-pulse {
-    0% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
-    }
-    70% {
-      transform: scale(1);
-      box-shadow: 0 0 0 8px rgba(22, 163, 74, 0);
-    }
-    100% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
-    }
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
   }
   .active-pulse {
     animation: live-pulse 2s infinite;
