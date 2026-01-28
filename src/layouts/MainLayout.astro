@@ -19,6 +19,9 @@ const {
 const canonicalURL = new URL(Astro.url.pathname, SITE_CONFIG.siteUrl);
 const fullTitle = `${title} | ${SITE_CONFIG.brandName}`;
 const GTM_ID = "GTM-PW924QGW";
+
+// GSC HATASINI ÇÖZEN TELEFON FORMATI (+18554982578)
+const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
 ---
 
 <!doctype html>
@@ -63,7 +66,7 @@ const GTM_ID = "GTM-PW924QGW";
       rel="stylesheet"
     />
 
-    <!-- ★ LOCALBUSINESS SCHEMA (OPTIMIZED VERSION TO FIX GSC TYPE ERRORS) ★ -->
+    <!-- ★ LOCALBUSINESS SCHEMA (DÜZELTİLMİŞ VERSİYON - HATA VERMEZ) ★ -->
     <script
       type="application/ld+json"
       set:html={JSON.stringify({
@@ -73,7 +76,7 @@ const GTM_ID = "GTM-PW924QGW";
         name: SITE_CONFIG.brandName,
         image: "https://www.protreetrim.com/team.jpg",
         url: SITE_CONFIG.siteUrl,
-        telephone: SITE_CONFIG.phone,
+        telephone: schemaPhone,
         priceRange: "$$",
         address: {
           "@type": "PostalAddress",
@@ -109,7 +112,10 @@ const GTM_ID = "GTM-PW924QGW";
           "https://x.com/protreetrim",
           "https://www.linkedin.com/company/protreetrim/",
         ],
-        areaServed: "Florida",
+        areaServed: {
+          "@type": "State",
+          name: "Florida",
+        },
       })}
     />
 
