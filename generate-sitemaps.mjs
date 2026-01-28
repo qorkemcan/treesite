@@ -35,19 +35,20 @@ async function generate() {
         ];
 
         // Google'a sunulacak tüm sitemap dosyalarının listesi
-        // sitemap-0.xml'i her zaman dahil et (Astro'nun ana sayfaları)
+        // sitemap-0.xml Astro'nun otomatik oluşturduğu (Ana sayfa, About vb.) dosyadır.
         const sitemapFiles = ['sitemap-0.xml'];
 
         // 3. Her İlçe İçin Özel Sitemap Oluştur
         Object.keys(countyGroups).forEach(countySlug => {
             let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
             
-            // County Hub Sayfası
+            // County Hub Sayfası (Örn: /county/miami-dade)
             xml += `\n  <url>\n    <loc>${SITE_URL}/county/${countySlug}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <priority>0.9</priority>\n  </url>`;
 
-            // Şehir Sayfaları
+            // Şehir Sayfaları (Örn: /tree-removal-miami)
             countyGroups[countySlug].forEach(city => {
                 if (!city.City) return;
+                // Noktaları sil, boşlukları tire yap (Astro slug yapısıyla tam uyumlu)
                 const citySlug = city.City.toLowerCase().trim().replace(/\./g, '').replace(/\s+/g, '-');
                 
                 services.forEach(svc => {
@@ -63,15 +64,19 @@ async function generate() {
         });
 
         // 4. ANA İNDEKS DOSYASINI OLUŞTUR (sitemap-index.xml)
+        // Google'a sadece bu dosyayı göndermen yeterli olacak.
         let indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
         sitemapFiles.forEach(file => {
-            indexXml += `\n  <sitemap>\n    <loc>${SITE_URL}/${file}</loc>\n    <lastmod>${TODAY}</lastmod>\n  </sitemap>`;
+            // Sadece dosya dist içinde varsa indekse ekle (Hata önleyici)
+            if (fs.existsSync(path.join(DIST_PATH, file))) {
+                indexXml += `\n  <sitemap>\n    <loc>${SITE_URL}/${file}</loc>\n    <lastmod>${TODAY}</lastmod>\n  </sitemap>`;
+            }
         });
 
         indexXml += `\n</sitemapindex>`;
         
-        // ÖNEMLİ: Astro'nun oluşturduğu sitemap-index.xml'in üzerine yazıyoruz
+        // Astro'nun otomatik oluşturduğu indeksi bizimkiyle değiştiriyoruz
         fs.writeFileSync(path.join(DIST_PATH, 'sitemap-index.xml'), indexXml);
 
         console.log(`✅ BAŞARILI: Toplam ${sitemapFiles.length} sitemap dosyası sitemap-index.xml içinde birleştirildi!`);
