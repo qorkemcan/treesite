@@ -180,6 +180,54 @@ const serviceAreaNote = `Our strategic dispatch model ensures that while we are 
 ---
 
 <MainLayout title={finalPageTitle} description={cityData.Description}>
+  
+  <!-- SEO SCHEMA START -->
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": `${serviceInfo.name} in ${cityName}, FL`,
+        "description": cityData.Description,
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": SITE_CONFIG.brandName,
+          "image": "https://www.protreetrim.com/team.jpg",
+          "telephone": SITE_CONFIG.phoneHref.replace("tel:", "")
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": cityName
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Tree Care Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": serviceInfo.name
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": finalFaqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+          }
+        }))
+      }
+    ]
+  })} />
+  <!-- SEO SCHEMA END -->
+
   <!-- HEADER -->
   <header
     style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4.5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
