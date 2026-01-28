@@ -3,8 +3,8 @@ import path from 'path';
 import { parse } from 'csv-parse/sync';
 
 const SITE_URL = 'https://www.protreetrim.com';
-const DIST_PATH = './dist'; // Astro/Vercel build çıktı klasörü
-const TODAY = new Date().toISOString().split('T')[0]; // Bugünün tarihi (Örn: 2026-01-28)
+const DIST_PATH = './dist'; 
+const TODAY = new Date().toISOString().split('T')[0];
 
 // 1. Verileri Oku
 const fileContent = fs.readFileSync('./src/data/cities.csv', 'utf-8');
@@ -24,13 +24,18 @@ const services = [
     { prefix: 'emergency-service' }
 ];
 
+// Google'a sunulacak tüm sitemap dosyalarının listesi
 const sitemapFiles = [];
+
+// ÖNEMLİ: Eğer Astro'nun oluşturduğu sitemap-0.xml varsa listeye ekle
+if (fs.existsSync(path.join(DIST_PATH, 'sitemap-0.xml'))) {
+    sitemapFiles.push('sitemap-0.xml');
+}
 
 // 3. Her İlçe İçin Özel Sitemap Oluştur
 Object.keys(countyGroups).forEach(countySlug => {
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- County Hub Page -->
     <url>
         <loc>${SITE_URL}/county/${countySlug}</loc>
         <lastmod>${TODAY}</lastmod>
@@ -55,11 +60,7 @@ Object.keys(countyGroups).forEach(countySlug => {
     xml += `\n</urlset>`;
     
     const fileName = `sitemap-county-${countySlug}.xml`;
-    
-    // Klasör yoksa oluştur (Hata almamak için tedbir)
-    if (!fs.existsSync(DIST_PATH)) {
-        fs.mkdirSync(DIST_PATH, { recursive: true });
-    }
+    if (!fs.existsSync(DIST_PATH)) fs.mkdirSync(DIST_PATH, { recursive: true });
     
     fs.writeFileSync(path.join(DIST_PATH, fileName), xml);
     sitemapFiles.push(fileName);
@@ -80,4 +81,4 @@ sitemapFiles.forEach(file => {
 indexXml += `\n</sitemapindex>`;
 fs.writeFileSync(path.join(DIST_PATH, 'sitemap-index.xml'), indexXml);
 
-console.log(`✅ İşlem Başarılı: ${sitemapFiles.length} adet ilçe sitemap dosyası ve 1 adet index dosyası '${DIST_PATH}' klasörüne oluşturuldu!`);
+console.log(`✅ BAŞARILI: Toplam ${sitemapFiles.length} sitemap dosyası sitemap-index.xml içinde birleştirildi!`);

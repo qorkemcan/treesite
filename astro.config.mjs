@@ -1,4 +1,3 @@
-// astro.config.mjs
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
@@ -8,8 +7,7 @@ export default defineConfig({
   output: 'static', 
   integrations: [
     sitemap({
-      // DİKKAT: Script ile oluşturduğumuz sayfaları buradan eliyoruz.
-      // Astro sadece ana sayfaları (Home, About, Contact, Gallery vb.) sitemap yapacak.
+      // Sadece ana statik sayfaları (Home, About, Contact vb.) dahil et
       filter: (page) => 
         !page.includes('tree-removal-') && 
         !page.includes('stump-grinding-') && 
@@ -17,17 +15,6 @@ export default defineConfig({
         !page.includes('/county/'),
       
       serialize(item) {
-        // Ana sayfa için ayarlar
-        if (item.url === 'https://www.protreetrim.com/') {
-          return {
-            ...item,
-            changefreq: 'daily',
-            priority: 1.0,
-            lastmod: new Date().toISOString(),
-          };
-        }
-
-        // Geri kalan sabit sayfalar (About, Contact, Privacy, Gallery)
         return {
           ...item,
           changefreq: 'monthly',
