@@ -1,61 +1,151 @@
 ---
 // src/components/PriceCalculator.astro
-const { city = "Florida" } = Astro.props;
+// Bu bileşen hem ana sayfada hem de [slug] sayfalarında çalışır.
+interface Props {
+  city?: string;
+}
+
+const { city = "" } = Astro.props;
+const isGeneral = city === "" || city === "Florida";
 ---
 
-<section class="calc-wrapper">
-  <div class="calc-card">
-    <div class="calc-header">
-      <span class="live-indicator">● 2026 LIVE MARKET DATA</span>
-      <h2>{city} Price Estimator</h2>
-      <p>Instant estimate for professional tree services in {city}, FL.</p>
+<section class="premium-calc-section">
+  <div class="calculator-card">
+    <!-- Üst Bilgi Paneli -->
+    <div class="calculator-header">
+      <div class="badge-row">
+        <span class="status-dot"></span>
+        <span class="badge-text">OFFICIAL 2026 COST ESTIMATOR</span>
+      </div>
+      <h2 class="calc-main-title">
+        {
+          isGeneral
+            ? "Florida Tree Service Cost Calculator"
+            : `${city} Tree Service Estimator`
+        }
+      </h2>
+      <p class="calc-subtitle">
+        {
+          isGeneral
+            ? "Select your Florida region and service details for a 2026 market-rate estimate."
+            : `Get a location-specific baseline quote for tree services in ${city}, FL.`
+        }
+      </p>
     </div>
 
-    <div class="calc-grid">
-      <div class="calc-inputs">
-        <div class="field">
-          <label>Service Type</label>
-          <select id="svc-type">
-            <option value="removal" data-base="850">Tree Removal</option>
-            <option value="trimming" data-base="450">Tree Trimming</option>
-            <option value="stump" data-base="250">Stump Grinding</option>
+    <div class="calculator-content">
+      <div class="input-grid">
+        <!-- BÖLGE SEÇİMİ (Sadece Ana Sayfada Görünür) -->
+        {
+          isGeneral && (
+            <div class="input-wrapper full-width">
+              <label for="region-type">1. Select Your Florida Region</label>
+              <select id="region-type" class="styled-select">
+                <option value="1.25" selected>
+                  South Florida (Miami, Ft. Lauderdale, Palm Beach)
+                </option>
+                <option value="1.15">
+                  Central Florida (Orlando, Tampa, Lakeland)
+                </option>
+                <option value="1.10">
+                  Gulf Coast (Sarasota, Ft. Myers, Naples)
+                </option>
+                <option value="1.00">
+                  North Florida & Panhandle (Jacksonville, Tallahassee)
+                </option>
+              </select>
+              <small class="helper-text">
+                Prices vary by county due to insurance and disposal fees.
+              </small>
+            </div>
+          )
+        }
+
+        <!-- HİZMET TÜRÜ -->
+        <div class="input-wrapper">
+          <label for="svc-type">{isGeneral ? "2" : "1"}. Service Required</label
+          >
+          <select id="svc-type" class="styled-select">
+            <option value="removal" data-base="850"
+              >Professional Tree Removal</option
+            >
+            <option value="trimming" data-base="450"
+              >Trimming & Maintenance</option
+            >
+            <option value="stump" data-base="250"
+              >Stump Grinding & Removal</option
+            >
+            <option value="emergency" data-base="1400"
+              >Emergency Storm Response</option
+            >
           </select>
         </div>
 
-        <div class="field">
-          <label>Tree Size</label>
-          <div class="radio-group">
-            <input type="radio" name="size" value="1" id="s" checked /><label
-              for="s">Small</label
-            >
-            <input type="radio" name="size" value="2.2" id="m" /><label for="m"
-              >Medium</label
-            >
-            <input type="radio" name="size" value="4.5" id="l" /><label for="l"
-              >Large</label
-            >
+        <!-- AĞAÇ BOYUTU -->
+        <div class="input-wrapper">
+          <label>{isGeneral ? "3" : "2"}. Estimated Tree Size</label>
+          <div class="radio-toggle-group">
+            <input
+              type="radio"
+              name="tree-size"
+              value="1.0"
+              id="size-s"
+              checked
+            />
+            <label for="size-s" class="toggle-btn">Small</label>
+
+            <input type="radio" name="tree-size" value="2.5" id="size-m" />
+            <label for="size-m" class="toggle-btn">Medium</label>
+
+            <input type="radio" name="tree-size" value="5.5" id="size-l" />
+            <label for="size-l" class="toggle-btn">Large</label>
           </div>
         </div>
 
-        <div class="field">
-          <label class="check-container">
-            <input type="checkbox" id="complexity" />
-            <span class="checkmark"></span>
-            Near House / Power Lines
-          </label>
+        <!-- KOMPLEKSİTE / RİSK -->
+        <div class="input-wrapper full-width">
+          <div class="checkbox-premium">
+            <input type="checkbox" id="risk-factor" />
+            <label for="risk-factor">
+              <span class="check-title">High-Risk Environment</span>
+              <span class="check-desc"
+                >Tree is near power lines, roof, or screen enclosure.</span
+              >
+            </label>
+          </div>
         </div>
-
-        <button id="calculate-trigger" class="calc-btn">GET ESTIMATE</button>
       </div>
 
-      <div id="calc-result" class="calc-result" style="display:none;">
-        <div class="result-content">
-          <small>Estimated Range:</small>
-          <div id="price-range" class="price-val">Calculating...</div>
-          <p>Based on 2026 average labor rates in {city}.</p>
-          <a href="tel:+18554982578" class="call-trigger">
-            <span class="icon">📞</span> VERIFY WITH DISPATCH
-          </a>
+      <button id="trigger-calc" class="main-calc-btn">
+        CALCULATE 2026 ESTIMATE
+      </button>
+
+      <!-- SONUÇ ALANI -->
+      <div
+        id="calculator-result"
+        class="result-container"
+        style="display: none;"
+      >
+        <div class="result-inner">
+          <p class="res-head">
+            Estimated Price Range for {isGeneral ? "Selected Region" : city}:
+          </p>
+          <div id="price-val" class="price-amount">$0 - $0</div>
+          <div class="guarantee-box">
+            <span class="icon">🛡️</span>
+            <p>
+              Includes debris haul-off, $2M liability protection, and
+              professional cleanup.
+            </p>
+          </div>
+          <div class="action-box">
+            <a href="tel:+18554982578" class="final-cta-btn">
+              CONFIRM THIS QUOTE VIA PHONE
+            </a>
+            <span class="dispatch-note"
+              >Average dispatch time in {isGeneral ? "Florida" : city}: 28 mins</span
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -63,125 +153,270 @@ const { city = "Florida" } = Astro.props;
 </section>
 
 <style>
-  .calc-wrapper {
-    padding: 2rem 0;
+  /* GÖRSEL DÜZEN VE TİPOGRAFİ */
+  .premium-calc-section {
+    padding: 4rem 0;
   }
-  .calc-card {
+  .calculator-card {
+    max-width: 800px;
+    margin: 0 auto;
     background: white;
-    border-radius: 24px;
+    border-radius: 32px;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
   }
-  .calc-header {
+
+  .calculator-header {
     background: #1b4332;
     color: white;
-    padding: 2rem;
+    padding: 3rem 2rem;
     text-align: center;
   }
-  .live-indicator {
-    color: #ffb703;
-    font-size: 0.7rem;
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 8px #4ade80;
+  }
+  .badge-text {
+    font-size: 0.75rem;
     font-weight: 900;
+    color: #ffb703;
+    letter-spacing: 1px;
   }
-  .calc-grid {
-    padding: 2rem;
+  .calc-main-title {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-weight: 900;
+    margin: 15px 0;
+    line-height: 1.1;
+  }
+  .calc-subtitle {
+    color: #95d5b2;
+    font-size: 1.05rem;
+    opacity: 0.9;
+  }
+
+  .calculator-content {
+    padding: 2.5rem;
+  }
+  .input-grid {
     display: grid;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 2rem;
   }
-  .field {
-    margin-bottom: 1.5rem;
+  @media (max-width: 640px) {
+    .input-grid {
+      grid-template-columns: 1fr;
+    }
   }
+  .full-width {
+    grid-column: span 2;
+  }
+  @media (max-width: 640px) {
+    .full-width {
+      grid-column: span 1;
+    }
+  }
+
   label {
     display: block;
     font-weight: 800;
-    margin-bottom: 8px;
     color: #1b4332;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
   }
-  select {
+  .styled-select {
     width: 100%;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 14px;
+    border-radius: 12px;
     border: 2px solid #f1f5f9;
-    font-weight: 600;
-  }
-  .radio-group {
-    display: flex;
-    gap: 10px;
-  }
-  .radio-group label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #334155;
     background: #f8fafc;
-    padding: 10px 15px;
-    border-radius: 8px;
-    flex: 1;
-    text-align: center;
     cursor: pointer;
-    border: 2px solid transparent;
   }
-  .radio-group input {
+
+  /* RADİO BUTTON GRUBU */
+  .radio-toggle-group {
+    display: flex;
+    gap: 8px;
+    background: #f1f5f9;
+    padding: 5px;
+    border-radius: 14px;
+  }
+  .radio-toggle-group input {
     display: none;
   }
-  .radio-group input:checked + label {
-    border-color: #ea580c;
-    background: #fff7ed;
-    color: #ea580c;
+  .toggle-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background: transparent;
+    color: #64748b;
+    margin: 0;
   }
-  .calc-btn {
+  .radio-toggle-group input:checked + label {
+    background: white;
+    color: #1b4332;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  /* CHECKBOX TASARIMI */
+  .checkbox-premium {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background: #fffbeb;
+    padding: 1.2rem;
+    border-radius: 15px;
+    border: 1px solid #fef3c7;
+    cursor: pointer;
+  }
+  .checkbox-premium input {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+  .check-title {
+    display: block;
+    font-weight: 900;
+    color: #92400e;
+    font-size: 0.95rem;
+  }
+  .check-desc {
+    font-size: 0.8rem;
+    color: #b45309;
+    font-weight: 600;
+  }
+
+  /* BUTON VE SONUÇ */
+  .main-calc-btn {
     width: 100%;
     background: #ea580c;
     color: white;
     border: none;
-    padding: 1.2rem;
-    border-radius: 12px;
+    padding: 1.4rem;
+    border-radius: 16px;
     font-weight: 900;
+    font-size: 1.2rem;
     cursor: pointer;
-    font-size: 1.1rem;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(234, 88, 12, 0.2);
   }
-  .calc-result {
+  .main-calc-btn:hover {
+    background: #c2410c;
+    transform: translateY(-2px);
+  }
+
+  .result-container {
+    margin-top: 2.5rem;
     background: #f0fdf4;
-    border-radius: 15px;
-    padding: 1.5rem;
     border: 2px dashed #16a34a;
-    text-align: center;
+    border-radius: 24px;
+    padding: 2rem;
+    animation: fadeInUp 0.5s ease-out;
   }
-  .price-val {
-    font-size: 2rem;
-    font-weight: 900;
+  .price-amount {
+    font-size: 2.8rem;
+    font-weight: 950;
     color: #166534;
     margin: 10px 0;
+    letter-spacing: -1px;
   }
-  .call-trigger {
+  .guarantee-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: #15803d;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  .final-cta-btn {
     display: block;
     background: #1b4332;
     color: white !important;
     text-decoration: none;
-    padding: 1rem;
-    border-radius: 10px;
+    padding: 1.2rem;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .dispatch-note {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.75rem;
     font-weight: 800;
-    margin-top: 10px;
+    color: #64748b;
+    text-transform: uppercase;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
 
 <script is:inline>
   document
-    .getElementById("calculate-trigger")
-    ?.addEventListener("click", () => {
-      const base = parseFloat(
-        document.getElementById("svc-type").options[
-          document.getElementById("svc-type").selectedIndex
-        ].dataset.base,
+    .getElementById("trigger-calc")
+    ?.addEventListener("click", function () {
+      // 1. Temel Verileri Al
+      const svcElement = document.getElementById("svc-type");
+      const basePrice = parseFloat(
+        svcElement.options[svcElement.selectedIndex].dataset.base,
       );
-      const size = parseFloat(
-        document.querySelector('input[name="size"]:checked').value,
+
+      // 2. Boyut Çarpanı
+      const sizeMult = parseFloat(
+        document.querySelector('input[name="tree-size"]:checked').value,
       );
-      const complex = document.getElementById("complexity").checked ? 1.4 : 1;
 
-      const min = Math.round(base * size * complex);
-      const max = Math.round(min * 1.5);
+      // 3. Bölge Çarpanı (Varsayılan 1.15)
+      const regionElement = document.getElementById("region-type");
+      const regionMult = regionElement ? parseFloat(regionElement.value) : 1.15;
 
-      document.getElementById("price-range").innerText =
-        `$${min.toLocaleString()} - $${max.toLocaleString()}`;
-      document.getElementById("calc-result").style.display = "block";
+      // 4. Risk Faktörü (+%45 Complexity)
+      const riskMult = document.getElementById("risk-factor").checked
+        ? 1.45
+        : 1.0;
+
+      // HESAPLAMA MANTIĞI (2026 Florida Market Data)
+      const calculatedMin = Math.round(
+        basePrice * sizeMult * regionMult * riskMult,
+      );
+      const calculatedMax = Math.round(calculatedMin * 1.55); // Piyasa dalgalanma payı
+
+      // Sonucu Bas
+      const priceDisplay = document.getElementById("price-val");
+      if (priceDisplay) {
+        priceDisplay.innerText = `$${calculatedMin.toLocaleString()} - $${calculatedMax.toLocaleString()}`;
+      }
+
+      const resArea = document.getElementById("calculator-result");
+      resArea.style.display = "block";
+
+      // Otomatik Kaydırma (Kullanıcı sonucu görsün)
+      resArea.scrollIntoView({ behavior: "smooth", block: "nearest" });
     });
 </script>
