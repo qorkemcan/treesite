@@ -1,17 +1,6 @@
-{
-  "name": "treesite",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build && node generate-sitemaps.mjs",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/sitemap": "^3.7.0",
-    "@astrojs/vercel": "^9.0.4",
-    "astro": "^5.16.10",
-    "csv-parse": "^6.1.0"
-  }
+"scripts": {
+  "dev": "astro dev",
+  "build": "astro build && node generate-sitemaps.mjs",
+  "preview": "astro preview",
+  "astro": "astro"
 }
