@@ -286,9 +286,13 @@ const serviceAreaNote = `Our strategic dispatch model ensures that while we are 
     <div class="container">
       <ol class="breadcrumb-list">
         <li><a href="/">Home</a></li>
-        <li><a href="/">Florida</a></li>
-        <li><a href={`/tree-removal-${citySlugClean}`}>{cityName}</a></li>
-        <li class="active">{serviceInfo.name}</li>
+        <li>Florida</li>
+        {serviceInfo.prefix === "tree-removal" ? (
+          <li class="active">{cityName}</li>
+        ) : (
+          <li><a href={`/tree-removal-${citySlugClean}`}>{cityName}</a></li>
+          <li class="active">{serviceInfo.name}</li>
+        )}
       </ol>
     </div>
   </nav>
