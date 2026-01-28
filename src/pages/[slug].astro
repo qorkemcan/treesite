@@ -7,7 +7,7 @@ import { SITE_CONFIG } from "../config.js";
 import { Image } from "astro:assets";
 import premiumFaqs from "../data/premium-faqs.json";
 import arboristTips from "../data/arborist-tips.json";
-import PriceCalculator from "../components/PriceCalculator.astro"; // YENİ IMPORT
+import PriceCalculator from "../components/PriceCalculator.astro"; 
 
 // Zengin içerik JSON dosyaları
 import cityEmergency from "../data/city-emergency.json";
@@ -74,6 +74,8 @@ const citySlugClean = cityData.City.toLowerCase()
   .trim()
   .replace(/\./g, "")
   .replace(/\s+/g, "-");
+
+const countySlug = cityData.County.toLowerCase().trim().replace(/\s+/g, "-");
 
 const tipIndex =
   (cityData.City.length + cityData.Landmark.length) % arboristTips.length;
@@ -180,94 +182,97 @@ const serviceAreaNote = `Our strategic dispatch model ensures that while we are 
 
 // GSC HATASINI ÇÖZEN TELEFON FORMATI
 const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
+const currentFullUrl = `${SITE_CONFIG.siteUrl}/${Astro.params.slug}`;
 ---
 
 <MainLayout title={finalPageTitle} description={cityData.Description}>
   
   <!-- SEO SCHEMA START -->
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": SITE_CONFIG.siteUrl
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Florida",
-            "item": SITE_CONFIG.siteUrl
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": cityName,
-            "item": `${SITE_CONFIG.siteUrl}/tree-removal-${citySlugClean}`
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": serviceInfo.name,
-            "item": `${SITE_CONFIG.siteUrl}/${Astro.params.slug}`
-          }
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": `${serviceInfo.name} in ${cityName}, FL`,
-        "description": cityData.Description,
-        "provider": {
-          "@type": "LocalBusiness",
-          "@id": `${SITE_CONFIG.siteUrl}/#localbusiness`,
-          "name": SITE_CONFIG.brandName,
-          "image": "https://www.protreetrim.com/team.jpg",
-          "telephone": schemaPhone,
-          "priceRange": "$$",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Statewide Dispatch Office",
-            "addressLocality": "Miami",
-            "addressRegion": "FL",
-            "postalCode": "33131",
-            "addressCountry": "US"
-          }
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": cityName
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Tree Care Services",
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
           "itemListElement": [
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": serviceInfo.name
-              }
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": SITE_CONFIG.siteUrl
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Florida",
+              "item": SITE_CONFIG.siteUrl
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": countyName,
+              "item": `${SITE_CONFIG.siteUrl}/county/${countySlug}`
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": `${serviceInfo.name} in ${cityName}`,
+              "item": currentFullUrl
             }
           ]
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": finalFaqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.q,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.a
+        },
+        {
+          "@type": "Service",
+          "name": `${serviceInfo.name} in ${cityName}, FL`,
+          "description": cityData.Description,
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": `${SITE_CONFIG.siteUrl}/#localbusiness`,
+            "name": SITE_CONFIG.brandName,
+            "image": "https://www.protreetrim.com/team.jpg",
+            "telephone": schemaPhone,
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Statewide Dispatch Office",
+              "addressLocality": "Miami",
+              "addressRegion": "FL",
+              "postalCode": "33131",
+              "addressCountry": "US"
+            }
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": cityName
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Tree Care Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": serviceInfo.name
+                }
+              }
+            ]
           }
-        }))
-      }
-    ]
-  })} />
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": finalFaqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.a
+            }
+          }))
+        }
+      ]
+    })} />
+  </Fragment>
   <!-- SEO SCHEMA END -->
 
   <!-- HEADER -->
@@ -300,9 +305,8 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
       <ol class="breadcrumb-list">
         <li><a href="/">Home</a></li>
         <li>Florida</li>
-        <!-- YENİ: İlçeye Link Veren Adım -->
         <li>
-          <a href={`/county/${cityData.County.toLowerCase().trim().replace(/\s+/g, "-")}`}>
+          <a href={`/county/${countySlug}`}>
             {countyName}
           </a>
         </li>
@@ -504,9 +508,8 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
       </div>
     </section>
 
-    <!-- ↓↓↓ YENİ: PRICE CALCULATOR INTEGRATION ↓↓↓ -->
+    <!-- PRICE CALCULATOR INTEGRATION -->
     <PriceCalculator city={cityName} />
-    <!-- ↑↑↑ YENİ: PRICE CALCULATOR INTEGRATION ↑↑↑ -->
 
     <!-- RICH TEXT & IMAGE -->
     <section style="margin-top: 5rem;">
