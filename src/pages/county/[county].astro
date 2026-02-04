@@ -14,7 +14,6 @@ export async function getStaticPaths() {
     bom: true,
   });
 
-  // Benzersiz ilçeleri al
   const counties = [...new Set(records.map((r) => r.County))];
 
   return counties.map((county) => {
@@ -34,6 +33,11 @@ export async function getStaticPaths() {
 const { countyName, cities } = Astro.props;
 const displayCounty = countyName + " County";
 
+// SEO İÇİN GÜNCEL TARİH VE İSTATİSTİK
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().toLocaleString("en-US", { month: "long" });
+const cityCount = cities.length;
+
 const toTitleCase = (str) => {
   if (!str) return "";
   return str
@@ -42,12 +46,35 @@ const toTitleCase = (str) => {
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 };
+
+// İLÇE ÖZELİNDE TEKNİK NOT OLUŞTURUCU (ÖZGÜNLEŞTİRİCİ)
+const primaryCountyTree = cities[0]?.MainTreeType || "native Florida species";
+const countyClimateNote = `As of ${currentMonth} ${currentYear}, our arborist network is prioritizing storm-hardening for ${primaryCountyTree} across the ${cityCount} municipal zones within ${displayCounty}.`;
 ---
 
 <MainLayout
-  title={`Tree Services in ${displayCounty}, FL | Local Experts`}
-  description={`Find licensed and insured tree removal, stump grinding, and emergency services in all cities across ${displayCounty}, Florida.`}
+  title={`Tree Removal & Services in ${displayCounty}, FL | ${currentYear} Local Guide`}
+  description={`Professional arborist services available in ${cityCount} cities across ${displayCounty}. Licensed and insured tree removal, stump grinding, and emergency response in ${countyName}.`}
 >
+  <!-- SEO SCHEMA: County için ItemList eklendi -->
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: `Top Rated Tree Services in ${displayCounty}`,
+        description: `Comprehensive directory of tree care specialists serving ${displayCounty}, Florida.`,
+        itemListElement: cities.slice(0, 15).map((city, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${SITE_CONFIG.siteUrl}/tree-removal-${city.City.toLowerCase().trim().replace(/\s+/g, "-")}`,
+          name: `Tree Removal in ${city.City}`,
+        })),
+      })}
+    />
+  </Fragment>
+
   <header
     style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
   >
@@ -55,33 +82,96 @@ const toTitleCase = (str) => {
       <div
         style="font-size: 0.85rem; margin-bottom: 1rem; color: #ffb703; font-weight: 800; text-transform: uppercase;"
       >
-        Statewide Directory
+        Official 2026 Directory • {displayCounty}
       </div>
       <h1
         style="font-size: clamp(2.2rem, 7vw, 3.5rem); margin: 0; font-weight: 900;"
       >
         {displayCounty} Tree Experts
       </h1>
-      <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">
-        Complete service coverage for every city in {countyName}.
+      <p
+        style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;"
+      >
+        Providing professional dispatch and hazard mitigation for <strong
+          >{cityCount} service zones</strong
+        > in the {countyName} region.
       </p>
     </div>
   </header>
 
-  <main class="container" style="padding: 4rem 1.5rem 10rem;">
-    <div
-      style="background: white; padding: 2rem; border-radius: 24px; border: 1px solid #eee; margin-bottom: 4rem;"
-    >
-      <h2 style="color: #1b4332; font-weight: 800; margin-top: 0;">
-        Service Hub for {displayCounty}
-      </h2>
-      <p style="color: #4b5563; line-height: 1.7;">
-        ProTreeTrim™ maintains a prioritized dispatch network throughout <strong
-          >{countyName}</strong
-        >. Select your city below to get a local estimate for removal, trimming,
-        or emergency cleanup.
-      </p>
+  <!-- BREADCRUMBS -->
+  <nav
+    style="background: #f8fafc; padding: 12px 0; border-bottom: 1px solid #e2e8f0;"
+  >
+    <div class="container">
+      <div
+        style="font-size: 0.8rem; font-weight: 700; color: #64748b; text-transform: uppercase;"
+      >
+        <a href="/" style="color: #1b4332; text-decoration: none;">Home</a> /
+        <span style="color: #94a3b8;">Florida</span> /
+        <span style="color: #ea580c;">{displayCounty} Hub</span>
+      </div>
     </div>
+  </nav>
+
+  <main class="container" style="padding: 3rem 1.5rem 10rem;">
+    <!-- COUNTY OVERVIEW BLOCK (ÖZGÜN İÇERİK - BOTLARI TUTAN KISIM) -->
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 4rem;"
+    >
+      <div
+        style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.02);"
+      >
+        <h2
+          style="color: #1b4332; font-weight: 900; margin-top: 0; font-size: 1.6rem;"
+        >
+          Regional Service Overview
+        </h2>
+        <p
+          style="color: #4b5563; line-height: 1.8; font-size: 1.05rem; font-weight: 500;"
+        >
+          ProTreeTrim™ maintains a prioritized dispatch network throughout the <strong
+            >{displayCounty}</strong
+          > landscape. {countyClimateNote}
+          From the high-density urban centers to the rural residential outskirts,
+          we coordinate with vetted specialists to manage canopy health and property
+          safety near every major local landmark in the county.
+        </p>
+      </div>
+
+      <div
+        style="background: #f0fdf4; padding: 2.5rem; border-radius: 24px; border: 1px solid #dcfce7; display: flex; flex-direction: column; justify-content: center;"
+      >
+        <div
+          style="display: flex; gap: 20px; align-items: center; margin-bottom: 15px;"
+        >
+          <span style="font-size: 2.5rem;">🏗️</span>
+          <div>
+            <h4
+              style="margin: 0; color: #166534; font-size: 1.3rem; font-weight: 900;"
+            >
+              24/7 Coverage
+            </h4>
+            <p
+              style="margin: 5px 0 0; color: #166534; font-weight: 600; opacity: 0.8;"
+            >
+              Full mitigation support for all {cityCount} cities.
+            </p>
+          </div>
+        </div>
+        <p style="color: #166534; font-size: 0.95rem; line-height: 1.6;">
+          Our technical teams utilize high-angle rigging and crane assistance
+          specifically adapted for the soil profiles and wind-load patterns
+          unique to {countyName} County properties.
+        </p>
+      </div>
+    </div>
+
+    <h2
+      style="text-align: center; color: #1b4332; font-weight: 900; font-size: 1.8rem; margin-bottom: 2.5rem;"
+    >
+      Select Your City in {countyName}
+    </h2>
 
     <div
       style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;"
@@ -94,44 +184,105 @@ const toTitleCase = (str) => {
             .replace(/\s+/g, "-");
           return (
             <div
-              style="background: white; padding: 1.5rem; border-radius: 16px; border: 1px solid #e5e7eb; transition: 0.3s;"
+              style="background: white; padding: 1.8rem; border-radius: 20px; border: 1px solid #e5e7eb; transition: 0.3s; position: relative; overflow: hidden;"
               class="city-hub-card"
             >
-              <h3 style="margin: 0 0 10px; color: #1b4332; font-size: 1.1rem; font-weight: 800;">
+              <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #16a34a;" />
+              <h3 style="margin: 0 0 15px; color: #1b4332; font-size: 1.2rem; font-weight: 900;">
                 {toTitleCase(city.City)}
               </h3>
-              <div style="display: flex; flex-direction: column; gap: 8px;">
-                <a
-                  href={`/tree-removal-${citySlug}`}
-                  style="text-decoration: none; color: #4b5563; font-size: 0.85rem; font-weight: 700;"
-                >
-                  🌳 Tree Removal →
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <a href={`/tree-removal-${citySlug}`} class="service-link">
+                  <span style="opacity: 0.8;">🌳</span> Tree Removal Service →
                 </a>
-                <a
-                  href={`/stump-grinding-${citySlug}`}
-                  style="text-decoration: none; color: #4b5563; font-size: 0.85rem; font-weight: 700;"
-                >
-                  🏗️ Stump Grinding →
+                <a href={`/stump-grinding-${citySlug}`} class="service-link">
+                  <span style="opacity: 0.8;">🏗️</span> Stump Grinding & Removal
+                  →
                 </a>
                 <a
                   href={`/emergency-service-${citySlug}`}
-                  style="text-decoration: none; color: #ea580c; font-size: 0.85rem; font-weight: 900;"
+                  class="service-link-emergency"
                 >
-                  🌪️ Emergency Response →
+                  <span style="filter: grayscale(0);">🌪️</span> Emergency
+                  Response 24/7 →
                 </a>
+              </div>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #f1f5f9;">
+                <small style="color: #94a3b8; font-weight: 700; text-transform: uppercase; font-size: 0.65rem;">
+                  Primary Species
+                </small>
+                <p style="margin: 2px 0 0; font-size: 0.8rem; color: #475569; font-weight: 600;">
+                  {city.MainTreeType}
+                </p>
               </div>
             </div>
           );
         })
       }
     </div>
+
+    <!-- STATUTE 163.045 HIGHLIGHT (YENİ EKLEME) -->
+    <section
+      style="margin-top: 6rem; padding: 3rem; background: #081c15; border-radius: 32px; color: white; position: relative; overflow: hidden;"
+    >
+      <div
+        style="position: absolute; top: -20px; right: -20px; font-size: 10rem; opacity: 0.05; font-weight: 900;"
+      >
+        FL
+      </div>
+      <h3
+        style="color: #ffb703; font-size: 1.6rem; font-weight: 900; margin-top: 0;"
+      >
+        Legal Framework for {countyName} Residents
+      </h3>
+      <p
+        style="font-size: 1.1rem; line-height: 1.7; color: #d1fae5; max-width: 900px;"
+      >
+        In accordance with <strong>Florida Statute 163.045</strong>, residential
+        property owners across {displayCounty}
+        have the right to manage high-risk trees on their land. Our local experts
+        provide the formal arborist documentation required to proceed with safety
+        removals without the standard municipal permit delays common in {
+          countyName
+        } municipalities.
+      </p>
+      <div style="margin-top: 2rem;">
+        <a
+          href="/contact"
+          style="background: #ea580c; color: white; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 0.9rem;"
+          >REQUEST A HAZARD AUDIT</a
+        >
+      </div>
+    </section>
   </main>
 </MainLayout>
 
 <style>
   .city-hub-card:hover {
     border-color: #ea580c !important;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  }
+  .service-link {
+    text-decoration: none;
+    color: #475569;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.2s;
+  }
+  .service-link:hover {
+    color: #16a34a;
+    padding-left: 5px;
+  }
+  .service-link-emergency {
+    text-decoration: none;
+    color: #ea580c;
+    font-size: 0.9rem;
+    font-weight: 900;
+    transition: 0.2s;
+  }
+  .service-link-emergency:hover {
+    color: #c2410c;
+    padding-left: 5px;
   }
 </style>

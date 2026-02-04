@@ -4,7 +4,7 @@ import path from "node:path";
 import { parse } from "csv-parse/sync";
 import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../config.js";
-import PriceCalculator from "../components/PriceCalculator.astro"; // YENİ: Hesaplayıcı eklendi
+import PriceCalculator from "../components/PriceCalculator.astro";
 
 const filePath = path.resolve("./src/data/cities.csv");
 const fileContent = fs.readFileSync(filePath, "utf-8");
@@ -13,6 +13,10 @@ const records = parse(fileContent, {
   skip_empty_lines: true,
   bom: true,
 });
+
+// SEO İÇİN GÜNCEL TARİH
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().toLocaleString('en-US', { month: 'long' });
 
 // Mükerrerleri temizle ve İlçelere (County) göre grupla
 const seenCities = new Set();
@@ -40,52 +44,40 @@ const toTitleCase = (str) => {
     .join(" ");
 };
 
-// POPÜLER ŞEHİRLER LİSTESİ
+// POPÜLER ŞEHİRLER LİSTESİ (KORUNDU)
 const featuredCities = [
   { name: "Miami", slug: "miami", icon: "🏙️", desc: "Dade County" },
   { name: "Orlando", slug: "orlando", icon: "🎢", desc: "Orange County" },
   { name: "Tampa", slug: "tampa", icon: "⚓", desc: "Hillsborough" },
-  {
-    name: "Jacksonville",
-    slug: "jacksonville",
-    icon: "🌉",
-    desc: "Duval County",
-  },
-  {
-    name: "Fort Lauderdale",
-    slug: "fort-lauderdale",
-    icon: "🛥️",
-    desc: "Broward County",
-  },
+  { name: "Jacksonville", slug: "jacksonville", icon: "🌉", desc: "Duval County" },
+  { name: "Fort Lauderdale", slug: "fort-lauderdale", icon: "🛥️", desc: "Broward County" },
   { name: "Tallahassee", slug: "tallahassee", icon: "🏛️", desc: "Leon County" },
   { name: "Cape Coral", slug: "cape-coral", icon: "🏖️", desc: "Lee County" },
-  {
-    name: "St. Petersburg",
-    slug: "st-petersburg",
-    icon: "☀️",
-    desc: "Pinellas County",
-  },
+  { name: "St. Petersburg", slug: "st-petersburg", icon: "☀️", desc: "Pinellas County" },
 ];
 ---
 
 <MainLayout
-  title="Florida's #1 Certified Tree Service Directory | 2000+ Locations"
-  description="The official 2026 directory for Florida tree care. Connecting homeowners with certified arborists in 67 counties."
+  title={`Florida Tree Service Network | Licensed Arborists ${currentYear}`}
+  description={`Official 2026 tree service directory for Florida. Find certified experts for tree removal, stump grinding, and emergency dispatch across all 67 counties.`}
 >
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION (GÜNCELLENDİ: Freshness eklendi) -->
   <header
     style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 6rem 1.5rem; text-align: center; border-bottom: 6px solid #ea580c;"
   >
     <div class="container">
+      <div style="background: rgba(234, 88, 12, 0.2); display: inline-block; padding: 5px 15px; border-radius: 50px; margin-bottom: 1rem; border: 1px solid #ea580c;">
+          <span style="color: #ffb703; font-weight: 800; font-size: 0.8rem; text-transform: uppercase;">Updated: {currentMonth} {currentYear}</span>
+      </div>
       <h1
         style="font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; letter-spacing: -2px; font-weight: 900; line-height: 0.95;"
       >
         FLORIDA TREE <br /><span style="color: #ffb703;">SERVICE NETWORK</span>
       </h1>
       <p
-        style="font-size: 1.2rem; color: #95d5b2; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;"
+        style="font-size: 1.25rem; color: #95d5b2; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; font-weight: 500;"
       >
-        Verified Experts & Emergency Removal Across 67 Counties.
+        Florida's most comprehensive directory for verified tree care experts and immediate emergency removal services.
       </p>
 
       <!-- LIVE SEARCH BOX -->
@@ -100,12 +92,6 @@ const featuredCities = [
           style="width: 100%; border: none; padding: 15px 12px; font-size: 1.15rem; border-radius: 50px; outline: none; color: #1b4332; font-weight: 600;"
         />
       </div>
-      <p
-        id="searchStatus"
-        style="margin-top: 20px; font-size: 1rem; color: #ffb703; font-weight: 700; display: none;"
-      >
-        No areas found matching your search.
-      </p>
     </div>
   </header>
 
@@ -115,21 +101,20 @@ const featuredCities = [
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: -3rem; position: relative; z-index: 20;"
     >
       <div class="stat-card">
-        🌪️ <h3>Emergency</h3><p>Immediate storm response dispatch.</p>
+        🌪️ <h3>Emergency</h3><p>24/7 storm response dispatch across Florida.</p>
       </div>
       <div class="stat-card">
-        🛡️ <h3>Vetted Pros</h3><p>Licensed & insured specialists.</p>
+        🛡️ <h3>Vetted Pros</h3><p>Only licensed and insured local specialists.</p>
       </div>
       <div class="stat-card">
-        🏗️ <h3>Full Service</h3><p>Removal, grinding & pruning.</p>
+        🏗️ <h3>Statewide</h3><p>Kapsayıcı removal, grinding & pruning.</p>
       </div>
     </section>
 
-    <!-- ↓↓↓ YENİ: PRICE CALCULATOR (ANA SAYFA MODU) ↓↓↓ -->
+    <!-- PRICE CALCULATOR -->
     <div style="margin-top: 4rem;">
       <PriceCalculator />
     </div>
-    <!-- ↑↑↑ YENİ: PRICE CALCULATOR ↑↑↑ -->
 
     <!-- MAJOR HUB CARDS -->
     <section style="margin-top: 6rem;">
@@ -139,7 +124,7 @@ const featuredCities = [
         Major Service Hubs
       </h2>
       <p style="text-align: center; color: #64748b; margin-bottom: 3rem;">
-        Quick access to Florida's largest metropolitan areas.
+        Instant access to Florida's high-demand service areas.
       </p>
       <div class="hub-grid">
         {
@@ -157,68 +142,89 @@ const featuredCities = [
       </div>
     </section>
 
-    <!-- DIRECTORY SECTION -->
+    <!-- DIRECTORY SECTION (GÜNCELLEME: COUNTY LİNKLERİ EKLENDİ) -->
     <section id="directory" style="margin-top: 8rem; margin-bottom: 12rem;">
       <div style="border-top: 2px solid #f1f5f9; padding-top: 4rem;">
         <h2
           style="text-align: center; color: #064e3b; font-size: 2rem; margin-bottom: 3rem; font-weight: 900;"
         >
-          Browse All 67 Florida Counties
+          Browse Local Dispatch by County
         </h2>
 
         <div id="countyGrid" class="directory-grid">
           {
-            counties.map((county) => (
-              <div class="county-card" data-county={county.toLowerCase()}>
-                <button class="county-toggle" aria-expanded="false">
-                  <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 1rem;">🌴</span>
-                    <span class="county-name">{toTitleCase(county)}</span>
+            counties.map((county) => {
+              const countySlug = county.toLowerCase().trim().replace(/\s+/g, "-");
+              return (
+                <div class="county-card" data-county={county.toLowerCase()}>
+                  <!-- TOGGLE BUTTON -->
+                  <div style="display: flex; align-items: center; background: white;">
+                    <button class="county-toggle" aria-expanded="false" style="flex: 1;">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1rem;">🌴</span>
+                        <span class="county-name">{toTitleCase(county)}</span>
+                      </div>
+                      <span class="chevron">▼</span>
+                    </button>
+                    <!-- YENİ: Doğrudan İlçe Hub Sayfasına Giden Link -->
+                    <a href={`/county/${countySlug}`} title={`View all cities in ${county}`} style="padding: 1rem; text-decoration: none; font-size: 0.8rem; font-weight: 800; color: #ea580c; border-left: 1px solid #f1f5f9;">HUB →</a>
                   </div>
-                  <span class="chevron">▼</span>
-                </button>
 
-                <div class="city-list-content">
-                  <div style="display: grid; grid-template-columns: 1fr; gap: 15px; padding: 1.5rem; border-top: 1px solid #f1f5f9;">
-                    {groupedCities[county].map((city: any) => {
-                      const citySlug = city.City.toLowerCase()
-                        .trim()
-                        .replace(/\./g, "")
-                        .replace(/\s+/g, "-");
-                      return (
-                        <div
-                          class="city-item"
-                          data-city={city.City.toLowerCase()}
-                        >
-                          <a
-                            href={`/tree-removal-${citySlug}`}
-                            class="main-service-link"
+                  <div class="city-list-content">
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 15px; padding: 1.5rem; border-top: 1px solid #f1f5f9;">
+                      {groupedCities[county].map((city: any) => {
+                        const citySlug = city.City.toLowerCase()
+                          .trim()
+                          .replace(/\./g, "")
+                          .replace(/\s+/g, "-");
+                        return (
+                          <div
+                            class="city-item"
+                            data-city={city.City.toLowerCase()}
                           >
-                            {toTitleCase(city.City)} Tree Service
-                          </a>
-                          <div class="sub-services">
-                            <a href={`/stump-grinding-${citySlug}`}>
-                              🏗️ Stump Grinding
+                            <a
+                              href={`/tree-removal-${citySlug}`}
+                              class="main-service-link"
+                            >
+                              {toTitleCase(city.City)} Tree Service
                             </a>
-                            <a href={`/emergency-service-${citySlug}`}>
-                              ⚡ Emergency
-                            </a>
+                            <div class="sub-services">
+                              <a href={`/stump-grinding-${citySlug}`}>🏗️ Stump Grinding</a>
+                              <a href={`/emergency-service-${citySlug}`}>⚡ Emergency</a>
+                            </div>
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                      <!-- İLÇE HUB'INA ALT LİNK (Link gücünü pekiştirmek için) -->
+                      <a href={`/county/${countySlug}`} style="text-align: center; padding-top: 10px; font-weight: 800; color: #16a34a; text-decoration: none; font-size: 0.85rem; border-top: 1px dashed #eee;">View Full {toTitleCase(county)} Directory →</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
+              )
+            })
           }
         </div>
       </div>
+    </section>
+
+    <!-- LEGAL AUTHORITY SECTION (YENİ - EEAT PUANI İÇİN) -->
+    <section style="margin-bottom: 10rem; background: #f8fafc; padding: 4rem 2rem; border-radius: 40px; border: 1px solid #e2e8f0; text-align: center;">
+        <h2 style="color: #1b4332; font-weight: 900; font-size: 1.8rem; margin-bottom: 1.5rem;">Florida Statute 163.045: Your Right to Safety</h2>
+        <p style="max-width: 900px; margin: 0 auto; color: #475569; line-height: 1.8; font-size: 1.1rem; font-weight: 500;">
+            Did you know that Florida state law protects a residential property owner's right to remove a high-risk tree without a local permit? 
+            In <strong>{currentYear}</strong>, we continue to help homeowners navigate these regulations by providing the professional arborist 
+            documentation required under state law to clear hazards instantly. Whether you are in <strong>Miami-Dade</strong>, 
+            <strong>Orange</strong>, or <strong>Duval County</strong>, our network ensures compliance and safety.
+        </p>
+        <div style="margin-top: 2.5rem;">
+            <a href="/trust-safety" style="background: #1b4332; color: white; padding: 15px 30px; border-radius: 12px; text-decoration: none; font-weight: 800;">Learn More About Safety Standards</a>
+        </div>
     </section>
   </div>
 </MainLayout>
 
 <style>
+  /* Mevcut stiller korundu, eklemeler yapıldı */
   .stat-card {
     background: white;
     padding: 2rem;
@@ -226,150 +232,46 @@ const featuredCities = [
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
-  .stat-card h3 {
-    color: #064e3b;
-    margin: 10px 0 0;
-    font-weight: 900;
-  }
-  .stat-card p {
-    color: #64748b;
-    font-size: 0.85rem;
-    margin-top: 5px;
-  }
+  .stat-card h3 { color: #064e3b; margin: 10px 0 0; font-weight: 900; }
+  .stat-card p { color: #64748b; font-size: 0.85rem; margin-top: 5px; }
 
-  .hub-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.5rem;
-  }
+  .hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
   .hub-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 16px;
-    border: 1px solid #e5e7eb;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    background: white; padding: 1.5rem; border-radius: 16px; border: 1px solid #e5e7eb;
+    display: flex; align-items: center; gap: 15px; text-decoration: none; transition: all 0.3s ease;
   }
-  .hub-card:hover {
-    transform: translateY(-5px);
-    border-color: #ea580c;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  }
-  .hub-icon {
-    font-size: 2rem;
-  }
-  .hub-info h4 {
-    margin: 0;
-    color: #1b4332;
-    font-weight: 800;
-  }
-  .hub-info span {
-    font-size: 0.75rem;
-    color: #64748b;
-    font-weight: 600;
-  }
-  .hub-arrow {
-    margin-left: auto;
-    color: #cbd5e1;
-    font-weight: 900;
-  }
+  .hub-card:hover { transform: translateY(-5px); border-color: #ea580c; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+  .hub-icon { font-size: 2rem; }
+  .hub-info h4 { margin: 0; color: #1b4332; font-weight: 800; }
+  .hub-info span { font-size: 0.75rem; color: #64748b; font-weight: 600; }
+  .hub-arrow { margin-left: auto; color: #cbd5e1; font-weight: 900; }
 
-  .directory-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-  @media (max-width: 1024px) {
-    .directory-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 768px) {
-    .directory-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+  .directory-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  @media (max-width: 1024px) { .directory-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) { .directory-grid { grid-template-columns: 1fr; } }
 
-  .county-card {
-    background: white;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    overflow: hidden;
-    height: fit-content;
-  }
+  .county-card { background: white; border-radius: 12px; border: 1px solid #e5e7eb; overflow: hidden; height: fit-content; }
   .county-toggle {
-    width: 100%;
-    padding: 1rem;
-    background: none;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+    padding: 1rem; background: none; border: none; display: flex; justify-content: space-between;
+    align-items: center; cursor: pointer; text-align: left;
   }
-  .county-name {
-    color: #1b4332;
-    font-weight: 800;
-    font-size: 0.95rem;
-  }
-  .chevron {
-    font-size: 0.7rem;
-    color: #94a3b8;
-    transition: transform 0.3s;
-  }
+  .county-name { color: #1b4332; font-weight: 800; font-size: 0.95rem; }
+  .chevron { font-size: 0.7rem; color: #94a3b8; transition: transform 0.3s; }
 
-  .city-list-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
-    background: #fff;
-  }
-  .county-card.is-open .city-list-content {
-    max-height: 5000px;
-    transition: max-height 0.4s ease-in-out;
-  }
-  .county-card.is-open .chevron {
-    transform: rotate(180deg);
-    color: #ea580c;
-  }
-  .county-card.is-open {
-    border-color: #ea580c;
-  }
+  .city-list-content { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0, 1, 0, 1); background: #fff; }
+  .county-card.is-open .city-list-content { max-height: 5000px; transition: max-height 0.4s ease-in-out; }
+  .county-card.is-open .chevron { transform: rotate(180deg); color: #ea580c; }
+  .county-card.is-open { border-color: #ea580c; }
 
-  .city-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    border-bottom: 1px solid #f8fafc;
-    padding-bottom: 10px;
-  }
-  .main-service-link {
-    text-decoration: none;
-    color: #1b4332;
-    font-weight: 800;
-    font-size: 0.9rem;
-  }
-  .sub-services {
-    display: flex;
-    gap: 10px;
-  }
-  .sub-services a {
-    text-decoration: none;
-    color: #64748b;
-    font-size: 0.65rem;
-    font-weight: 700;
-  }
-  .sub-services a:hover {
-    color: #ea580c;
-  }
+  .city-item { display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid #f8fafc; padding-bottom: 10px; }
+  .main-service-link { text-decoration: none; color: #1b4332; font-weight: 800; font-size: 0.9rem; }
+  .sub-services { display: flex; gap: 10px; }
+  .sub-services a { text-decoration: none; color: #64748b; font-size: 0.65rem; font-weight: 700; }
+  .sub-services a:hover { color: #ea580c; }
 </style>
 
 <script is:inline>
   const searchInput = document.getElementById("citySearch");
-  const statusText = document.getElementById("searchStatus");
   const countyCards = document.querySelectorAll(".county-card");
 
   countyCards.forEach((card) => {
@@ -382,8 +284,6 @@ const featuredCities = [
 
   searchInput.addEventListener("input", (e) => {
     const term = e.target.value.toLowerCase().trim();
-    let anyVisible = false;
-
     countyCards.forEach((card) => {
       const countyName = card.getAttribute("data-county");
       const cityItems = card.querySelectorAll(".city-item");
@@ -409,14 +309,10 @@ const featuredCities = [
       if (hasVisibleCity || countyName.includes(term)) {
         card.style.display = "block";
         card.classList.add("is-open");
-        anyVisible = true;
       } else {
         card.style.display = "none";
         card.classList.remove("is-open");
       }
     });
-
-    statusText.style.display =
-      term.length > 0 && !anyVisible ? "block" : "none";
   });
 </script>
