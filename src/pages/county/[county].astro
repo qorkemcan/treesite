@@ -43,12 +43,12 @@ const toTitleCase = (str) => {
   return str
     .toLowerCase()
     .split(" ")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .map((w) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 };
 
 // İLÇE ÖZELİNDE TEKNİK NOT OLUŞTURUCU (ÖZGÜNLEŞTİRİCİ)
-const primaryCountyTree = cities[0]?.MainTreeType || "native Florida species";
+const primaryCountyTree = cities[0]?.MainTreeType || "native Florida trees";
 const countyClimateNote = `As of ${currentMonth} ${currentYear}, our arborist network is prioritizing storm-hardening for ${primaryCountyTree} across the ${cityCount} municipal zones within ${displayCounty}.`;
 ---
 
@@ -56,7 +56,6 @@ const countyClimateNote = `As of ${currentMonth} ${currentYear}, our arborist ne
   title={`Tree Removal & Services in ${displayCounty}, FL | ${currentYear} Local Guide`}
   description={`Professional arborist services available in ${cityCount} cities across ${displayCounty}. Licensed and insured tree removal, stump grinding, and emergency response in ${countyName}.`}
 >
-  <!-- SEO SCHEMA: County için ItemList eklendi -->
   <Fragment slot="head">
     <script
       type="application/ld+json"
@@ -65,12 +64,18 @@ const countyClimateNote = `As of ${currentMonth} ${currentYear}, our arborist ne
         "@type": "ItemList",
         name: `Top Rated Tree Services in ${displayCounty}`,
         description: `Comprehensive directory of tree care specialists serving ${displayCounty}, Florida.`,
-        itemListElement: cities.slice(0, 15).map((city, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          url: ${SITE_CONFIG.siteUrl}/tree-removal-${city.City.toLowerCase().trim().replace(/\./g, "").replace(/\s+/g, "-")},
-          name: `Tree Removal in ${city.City}`,
-        })),
+        itemListElement: cities.slice(0, 20).map((city, index) => {
+          const cSlug = city.City.toLowerCase()
+            .trim()
+            .replace(/\./g, "")
+            .replace(/\s+/g, "-");
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            url: `${SITE_CONFIG.siteUrl}/tree-removal-${cSlug}`,
+            name: `Tree Removal in ${city.City}`,
+          };
+        }),
       })}
     />
   </Fragment>
@@ -99,7 +104,6 @@ const countyClimateNote = `As of ${currentMonth} ${currentYear}, our arborist ne
     </div>
   </header>
 
-  <!-- BREADCRUMBS -->
   <nav
     style="background: #f8fafc; padding: 12px 0; border-bottom: 1px solid #e2e8f0;"
   >
@@ -115,7 +119,6 @@ const countyClimateNote = `As of ${currentMonth} ${currentYear}, our arborist ne
   </nav>
 
   <main class="container" style="padding: 3rem 1.5rem 10rem;">
-    <!-- COUNTY OVERVIEW BLOCK (ÖZGÜN İÇERİK - BOTLARI TUTAN KISIM) -->
     <div
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 4rem;"
     >
@@ -221,7 +224,6 @@ const countyClimateNote = `As of ${currentMonth} ${currentYear}, our arborist ne
       }
     </div>
 
-    <!-- STATUTE 163.045 HIGHLIGHT (YENİ EKLEME) -->
     <section
       style="margin-top: 6rem; padding: 3rem; background: #081c15; border-radius: 32px; color: white; position: relative; overflow: hidden;"
     >
