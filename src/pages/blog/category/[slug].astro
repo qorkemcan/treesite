@@ -3,7 +3,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../../../config.js";
 import { getCollection } from "astro:content";
 
-const slugifyCategory = (value) =>
+const slugifyCategory = (value: string) =>
   value
     .toLowerCase()
     .trim()
@@ -13,7 +13,9 @@ const slugifyCategory = (value) =>
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
-  const categories = [...new Set(posts.map((post) => post.data.category).filter(Boolean))];
+  const categories = [
+    ...new Set(posts.map((post) => post.data.category).filter(Boolean)),
+  ];
 
   return categories.map((category) => ({
     params: { slug: slugifyCategory(category) },
@@ -59,7 +61,10 @@ const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${slugifyCategory(cat
     </div>
   </header>
 
-  <main class="container" style="padding: 3rem 1.5rem 10rem; max-width: 1100px;">
+  <main
+    class="container"
+    style="padding: 3rem 1.5rem 10rem; max-width: 1100px;"
+  >
     <div style="margin-bottom: 1.75rem;">
       <a
         href="/blog/"
@@ -79,48 +84,44 @@ const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${slugifyCategory(cat
     <div
       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
     >
-      {posts.map((post) => (
-        <article
-          style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
-        >
-          <div
-            style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;"
-          >
-            <span
-              style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
-            >
-              {post.data.category}
-            </span>
-            <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
-              {post.data.pubDate.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </span>
-          </div>
+      {
+        posts.map((post) => (
+          <article style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">
+                {post.data.category}
+              </span>
+              <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
+                {post.data.pubDate.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </span>
+            </div>
 
-          <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
+            <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
+              <a
+                href={`/blog/${post.slug}/`}
+                style="color: #1b4332; text-decoration: none; font-weight: 900;"
+              >
+                {post.data.title}
+              </a>
+            </h2>
+
+            <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
+              {post.data.description}
+            </p>
+
             <a
               href={`/blog/${post.slug}/`}
-              style="color: #1b4332; text-decoration: none; font-weight: 900;"
+              style="display: inline-block; background: #ea580c; color: white; text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 800;"
             >
-              {post.data.title}
+              Read article
             </a>
-          </h2>
-
-          <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
-            {post.data.description}
-          </p>
-
-          <a
-            href={`/blog/${post.slug}/`}
-            style="display: inline-block; background: #ea580c; color: white; text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 800;"
-          >
-            Read article
-          </a>
-        </article>
-      ))}
+          </article>
+        ))
+      }
     </div>
   </main>
 </MainLayout>
