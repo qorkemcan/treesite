@@ -4,7 +4,7 @@ description: "A practical Florida homeowner guide to what happens after tree rem
 pubDate: 2026-04-22
 updatedDate: 2026-04-22
 author: "Gorkem Can"
-category: "Stump Grinding"
+category: "Tree Care & Cleanup"
 tags:
   - stump grinding florida
   - stump removal after tree removal
@@ -57,10 +57,10 @@ The actual grinding process is usually faster than homeowners imagine, but the e
 
 In most cases, the crew will:
 
-1. position the grinder at the stump  
-2. cut the stump down below the surface  
-3. work through the visible wood into grindings  
-4. leave the area ready for the next step in restoration  
+1. position the grinder at the stump
+2. cut the stump down below the surface
+3. work through the visible wood into grindings
+4. leave the area ready for the next step in restoration
 
 The amount of time depends mostly on stump diameter, hardness, and access. A small stump in an open front yard is very different from a large stump tucked behind a fence or near delicate landscaping.
 

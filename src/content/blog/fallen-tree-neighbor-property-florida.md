@@ -4,7 +4,7 @@ description: "A practical Florida guide to what homeowners should know when a tr
 pubDate: 2026-04-22
 updatedDate: 2026-04-22
 author: "Gorkem Can"
-category: "Florida Laws & Permits"
+category: "Florida Laws & Property Risk"
 tags:
   - tree falls on neighbor property florida
   - tree liability florida

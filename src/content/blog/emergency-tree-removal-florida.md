@@ -4,7 +4,7 @@ description: "A practical Florida guide to recognizing when tree damage is urgen
 pubDate: 2026-04-22
 updatedDate: 2026-04-22
 author: "Gorkem Can"
-category: "Emergency Tree Service"
+category: "Emergency & Storm"
 tags:
   - emergency tree removal florida
   - urgent tree removal

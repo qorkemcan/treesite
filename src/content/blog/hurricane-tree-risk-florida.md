@@ -4,7 +4,7 @@ description: "A Florida homeowner guide to warning signs that a tree may not hol
 pubDate: 2026-04-22
 updatedDate: 2026-04-22
 author: "Gorkem Can"
-category: "Storm Prep"
+category: "Emergency & Storm"
 tags:
   - hurricane tree risk florida
   - storm damaged tree florida
@@ -174,12 +174,12 @@ If a tree is showing any of the signs above, do not wait for the weather alert t
 
 A smarter pre-storm checklist looks like this:
 
-1. Walk the property and look at trees near the house, driveway, and property line  
-2. Check the base, trunk, and main canopy structure—not just the leaves  
-3. Look for recent changes after heavy rain or prior storms  
-4. Note any deadwood, cracks, or uneven weight  
-5. Take photos if something looks different than it did a few months ago  
-6. Get a professional opinion if the tree is leaning, cracking, shedding major limbs, or threatening a structure  
+1. Walk the property and look at trees near the house, driveway, and property line
+2. Check the base, trunk, and main canopy structure—not just the leaves
+3. Look for recent changes after heavy rain or prior storms
+4. Note any deadwood, cracks, or uneven weight
+5. Take photos if something looks different than it did a few months ago
+6. Get a professional opinion if the tree is leaning, cracking, shedding major limbs, or threatening a structure
 
 That kind of early attention can prevent rushed decisions later.
 

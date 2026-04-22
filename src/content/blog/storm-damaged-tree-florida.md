@@ -4,7 +4,7 @@ description: "A practical Florida guide to what homeowners should do first after
 pubDate: 2026-04-22
 updatedDate: 2026-04-22
 author: "Gorkem Can"
-category: "Emergency Tree Service"
+category: "Emergency & Storm"
 tags:
   - storm damaged tree florida
   - emergency tree removal florida
@@ -187,12 +187,12 @@ The right first move is always risk reduction.
 
 If you want a simple order of operations, use this:
 
-1. Keep people and vehicles away  
-2. Stay clear of hanging limbs and leaning trunks  
-3. Watch for possible line involvement  
-4. Take photos from a safe distance  
-5. Avoid DIY cutting on compromised trees  
-6. Get a qualified assessment if the tree is split, leaning, uprooted, or over a structure  
+1. Keep people and vehicles away
+2. Stay clear of hanging limbs and leaning trunks
+3. Watch for possible line involvement
+4. Take photos from a safe distance
+5. Avoid DIY cutting on compromised trees
+6. Get a qualified assessment if the tree is split, leaning, uprooted, or over a structure
 
 That checklist alone can help prevent a lot of bad decisions.
 

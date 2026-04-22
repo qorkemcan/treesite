@@ -4,7 +4,7 @@ description: "A practical Florida guide to when palm trimming makes sense, when 
 pubDate: 2026-04-22
 updatedDate: 2026-04-22
 author: "Gorkem Can"
-category: "Tree Trimming"
+category: "Tree Care & Cleanup"
 tags:
   - best time to trim palm trees in florida
   - palm tree trimming florida
@@ -84,7 +84,7 @@ Sometimes yes—but not in the way many people assume.
 There is a difference between:
 
 - removing dead, broken, or hazardous fronds before storm season
-and
+  and
 - aggressively stripping the palm in hopes of making it storm-proof
 
 The first approach can be smart maintenance. The second can be a mistake.

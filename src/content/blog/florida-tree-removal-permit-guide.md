@@ -4,7 +4,7 @@ description: "A practical Florida guide to tree removal permits, local rules, an
 pubDate: 2026-04-22
 updatedDate: 2026-04-22
 author: "Gorkem Can"
-category: "Florida Laws & Permits"
+category: "Florida Laws & Property Risk"
 tags:
   - tree removal permit florida
   - florida tree removal law
