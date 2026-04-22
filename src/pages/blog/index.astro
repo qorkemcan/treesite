@@ -3,7 +3,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../../config.js";
 import { getCollection } from "astro:content";
 
-const slugifyCategory = (value) =>
+const slugifyCategory = (value: string) =>
   value
     .toLowerCase()
     .trim()
@@ -12,10 +12,12 @@ const slugifyCategory = (value) =>
     .replace(/\s+/g, "-");
 
 const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const categories = [...new Set(posts.map((post) => post.data.category).filter(Boolean))].sort();
+const categories = [
+  ...new Set(posts.map((post) => post.data.category).filter(Boolean)),
+].sort();
 
 const pageTitle = "Florida Tree Care Blog | ProTreeTrim";
 const pageDescription =
@@ -44,46 +46,72 @@ const pageDescription =
       <p
         style="font-size: 1.15rem; color: #95d5b2; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;"
       >
-        Practical Florida tree care guides for homeowners, HOAs, and property managers.
+        Practical Florida tree care guides for homeowners, HOAs, and property
+        managers.
       </p>
     </div>
   </header>
 
   <main class="container" style="padding: 3rem 1.5rem 10rem;">
-    <section style="max-width: 1100px; margin: 0 auto 2rem;">
+    <section style="max-width: 1100px; margin: 0 auto 1.5rem;">
       <div
         style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
       >
         <div
-          style="display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;"
+          style="display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 18px; align-items: center;"
+          class="blog-toolbar-grid"
         >
           <div>
-            <h2 style="margin: 0 0 0.45rem; color: #1b4332; font-size: 1.2rem;">
-              Browse by category
-            </h2>
-            <p style="margin: 0; color: #64748b; font-size: 0.95rem;">
-              Start with a topic instead of scrolling the full archive.
+            <label
+              for="blogSearchInput"
+              style="display: block; font-size: 0.8rem; font-weight: 800; color: #1b4332; text-transform: uppercase; margin-bottom: 0.6rem;"
+            >
+              Search articles
+            </label>
+            <div
+              style="display: flex; align-items: center; gap: 10px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 0.85rem 1rem;"
+            >
+              <span style="font-size: 1rem;">🔎</span>
+              <input
+                id="blogSearchInput"
+                type="search"
+                placeholder="Search by topic, service, cost, permit, storm..."
+                style="width: 100%; border: none; outline: none; background: transparent; font-size: 1rem; color: #0f172a;"
+              />
+            </div>
+            <p
+              id="blogSearchMeta"
+              style="margin: 0.75rem 0 0; color: #64748b; font-size: 0.9rem;"
+            >
+              Showing all {posts.length} article(s).
             </p>
           </div>
 
-          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <a
-              href="/blog/"
-              style="background: #1b4332; color: white; padding: 10px 14px; border-radius: 999px; text-decoration: none; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;"
+          <div>
+            <div
+              style="font-size: 0.8rem; font-weight: 800; color: #1b4332; text-transform: uppercase; margin-bottom: 0.6rem;"
             >
-              All Posts
-            </a>
+              Browse by category
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a
+                href="/blog/"
+                style="background: #1b4332; color: white; padding: 10px 14px; border-radius: 999px; text-decoration: none; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;"
+              >
+                All Posts
+              </a>
 
-            {
-              categories.map((category) => (
-                <a
-                  href={`/blog/category/${slugifyCategory(category)}/`}
-                  style="background: #f8fafc; color: #1b4332; border: 1px solid #e2e8f0; padding: 10px 14px; border-radius: 999px; text-decoration: none; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;"
-                >
-                  {category}
-                </a>
-              ))
-            }
+              {
+                categories.map((category) => (
+                  <a
+                    href={`/blog/category/${slugifyCategory(category)}/`}
+                    style="background: #f8fafc; color: #1b4332; border: 1px solid #e2e8f0; padding: 10px 14px; border-radius: 999px; text-decoration: none; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;"
+                  >
+                    {category}
+                  </a>
+                ))
+              }
+            </div>
           </div>
         </div>
       </div>
@@ -92,64 +120,135 @@ const pageDescription =
     <section style="max-width: 1100px; margin: 0 auto;">
       {
         posts.length === 0 ? (
-          <div
-            style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2rem; text-align: center;"
-          >
+          <div style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2rem; text-align: center;">
             <h2 style="margin-top: 0; color: #1b4332;">No blog posts yet</h2>
             <p style="color: #475569; margin-bottom: 0;">
               Add your first article inside <strong>src/content/blog/</strong>.
             </p>
           </div>
         ) : (
-          <div
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
-          >
-            {posts.map((post) => (
-              <article
-                style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+          <>
+            <div
+              id="blogNoResults"
+              style="display: none; background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+            >
+              <h2 style="margin-top: 0; color: #1b4332;">
+                No matching articles
+              </h2>
+              <p style="color: #475569; margin-bottom: 1rem;">
+                Try a broader keyword like <strong>storm</strong>,{" "}
+                <strong>cost</strong>, or <strong>tree removal</strong>.
+              </p>
+              <button
+                id="clearBlogSearchBtn"
+                type="button"
+                style="background: #ea580c; color: white; border: none; padding: 12px 18px; border-radius: 12px; font-weight: 800; cursor: pointer;"
               >
-                <div
-                  style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;"
-                >
-                  <a
-                    href={`/blog/category/${slugifyCategory(post.data.category)}/`}
-                    style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none;"
-                  >
-                    {post.data.category}
-                  </a>
-                  <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
-                    {post.data.pubDate.toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </span>
-                </div>
+                Clear search
+              </button>
+            </div>
 
-                <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
+            <div
+              id="blogPostGrid"
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
+            >
+              {posts.map((post) => (
+                <article
+                  class="blog-card"
+                  data-search={`${post.data.title} ${post.data.description} ${post.data.category} ${(post.data.tags ?? []).join(" ")}`.toLowerCase()}
+                  style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+                >
+                  <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                    <a
+                      href={`/blog/category/${slugifyCategory(post.data.category)}/`}
+                      style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none;"
+                    >
+                      {post.data.category}
+                    </a>
+                    <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
+                      {post.data.pubDate.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                  </div>
+
+                  <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
+                    <a
+                      href={`/blog/${post.slug}/`}
+                      style="color: #1b4332; text-decoration: none; font-weight: 900;"
+                    >
+                      {post.data.title}
+                    </a>
+                  </h2>
+
+                  <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
+                    {post.data.description}
+                  </p>
+
                   <a
                     href={`/blog/${post.slug}/`}
-                    style="color: #1b4332; text-decoration: none; font-weight: 900;"
+                    style="display: inline-block; background: #ea580c; color: white; text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 800;"
                   >
-                    {post.data.title}
+                    Read article
                   </a>
-                </h2>
-
-                <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
-                  {post.data.description}
-                </p>
-
-                <a
-                  href={`/blog/${post.slug}/`}
-                  style="display: inline-block; background: #ea580c; color: white; text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 800;"
-                >
-                  Read article
-                </a>
-              </article>
-            ))}
-          </div>
+                </article>
+              ))}
+            </div>
+          </>
         )
       }
     </section>
   </main>
+
+  <script is:inline define:vars={{ totalPosts: posts.length }}>
+    const searchInput = document.getElementById("blogSearchInput");
+    const cards = Array.from(document.querySelectorAll(".blog-card"));
+    const noResults = document.getElementById("blogNoResults");
+    const searchMeta = document.getElementById("blogSearchMeta");
+    const clearBtn = document.getElementById("clearBlogSearchBtn");
+
+    const updateBlogSearch = () => {
+      const query = (searchInput?.value || "").trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const haystack = (card.getAttribute("data-search") || "").toLowerCase();
+        const match = !query || haystack.includes(query);
+        card.style.display = match ? "" : "none";
+        if (match) visibleCount += 1;
+      });
+
+      if (searchMeta) {
+        searchMeta.textContent = query
+          ? `Showing ${visibleCount} result(s) for "${query}".`
+          : `Showing all ${totalPosts} article(s).`;
+      }
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      }
+    };
+
+    searchInput?.addEventListener("input", updateBlogSearch);
+
+    clearBtn?.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      updateBlogSearch();
+      searchInput?.focus();
+    });
+  </script>
+
+  <style>
+    .blog-toolbar-grid {
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    }
+
+    @media (max-width: 820px) {
+      .blog-toolbar-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </MainLayout>
