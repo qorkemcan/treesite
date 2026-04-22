@@ -3,22 +3,22 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../../../config.js";
 import { getCollection } from "astro:content";
 
-const slugifyCategory = (value: string) =>
-  value
-    .toLowerCase()
-    .trim()
-    .replace(/&/g, "and")
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-");
-
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
+
   const categories = [
     ...new Set(posts.map((post) => post.data.category).filter(Boolean)),
-  ];
+  ] as string[];
 
   return categories.map((category) => ({
-    params: { slug: slugifyCategory(category) },
+    params: {
+      slug: category
+        .toLowerCase()
+        .trim()
+        .replace(/&/g, "and")
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-"),
+    },
     props: {
       categoryName: category,
       posts: posts
@@ -29,9 +29,17 @@ export async function getStaticPaths() {
 }
 
 const { categoryName, posts } = Astro.props;
+
+const categorySlug = categoryName
+  .toLowerCase()
+  .trim()
+  .replace(/&/g, "and")
+  .replace(/[^a-z0-9\s-]/g, "")
+  .replace(/\s+/g, "-");
+
 const pageTitle = `${categoryName} Articles | ProTreeTrim Blog`;
 const pageDescription = `Read ${categoryName.toLowerCase()} articles from the ProTreeTrim blog.`;
-const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${slugifyCategory(categoryName)}/`;
+const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${categorySlug}/`;
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
