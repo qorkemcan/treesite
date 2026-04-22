@@ -1,0 +1,155 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { SITE_CONFIG } from "../../config.js";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/${post.slug}/`;
+---
+
+<MainLayout title={post.data.title} description={post.data.description}>
+  <Fragment slot="head">
+    <link rel="canonical" href={canonicalUrl} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.data.title,
+        description: post.data.description,
+        datePublished: post.data.pubDate,
+        dateModified: post.data.updatedDate ?? post.data.pubDate,
+        author: {
+          "@type": "Person",
+          name: post.data.author,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "ProTreeTrim",
+        },
+        mainEntityOfPage: canonicalUrl,
+      })}
+    />
+  </Fragment>
+
+  <main class="container" style="max-width: 860px; padding: 4rem 1.5rem 10rem;">
+    <a
+      href="/blog/"
+      style="display: inline-block; margin-bottom: 1.5rem; color: #166534; text-decoration: none; font-weight: 800;"
+    >
+      ← Back to blog
+    </a>
+
+    <article
+      style="background: white; border: 1px solid #e5e7eb; border-radius: 28px; padding: 2rem 2rem 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+    >
+      <div
+        style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;"
+      >
+        <span
+          style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
+        >
+          {post.data.category}
+        </span>
+        <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
+          Published{" "}
+          {post.data.pubDate.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </span>
+        {
+          post.data.updatedDate && (
+            <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
+              Updated{" "}
+              {post.data.updatedDate.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </span>
+          )
+        }
+      </div>
+
+      <h1
+        style="font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.08; color: #1b4332; margin: 0 0 1rem; font-weight: 900;"
+      >
+        {post.data.title}
+      </h1>
+
+      <p style="font-size: 1.1rem; line-height: 1.75; color: #475569; margin-bottom: 2rem;">
+        {post.data.description}
+      </p>
+
+      <div class="blog-prose">
+        <Content />
+      </div>
+    </article>
+  </main>
+</MainLayout>
+
+<style>
+  .blog-prose {
+    color: #374151;
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+
+  .blog-prose h2,
+  .blog-prose h3 {
+    color: #1b4332;
+    line-height: 1.2;
+    margin-top: 2.2rem;
+    margin-bottom: 0.9rem;
+    font-weight: 900;
+  }
+
+  .blog-prose h2 {
+    font-size: 1.8rem;
+  }
+
+  .blog-prose h3 {
+    font-size: 1.35rem;
+  }
+
+  .blog-prose p,
+  .blog-prose ul,
+  .blog-prose ol {
+    margin: 0 0 1.1rem;
+  }
+
+  .blog-prose ul,
+  .blog-prose ol {
+    padding-left: 1.4rem;
+  }
+
+  .blog-prose a {
+    color: #ea580c;
+    font-weight: 700;
+  }
+
+  .blog-prose strong {
+    color: #111827;
+  }
+
+  .blog-prose blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #ea580c;
+    background: #fff7ed;
+    border-radius: 12px;
+  }
+</style>
