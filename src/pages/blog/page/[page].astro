@@ -1,0 +1,343 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { SITE_CONFIG } from "../../../config.js";
+import { getCollection } from "astro:content";
+
+const POSTS_PER_PAGE = 12;
+
+const slugifyCategory = (value: string) =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-");
+
+export async function getStaticPaths() {
+  const allPosts = (
+    await getCollection("blog", ({ data }) => !data.draft)
+  ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  const categories = [
+    ...new Set(allPosts.map((post) => post.data.category).filter(Boolean)),
+  ].sort();
+
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+
+  if (totalPages <= 1) return [];
+
+  return Array.from({ length: totalPages - 1 }, (_, index) => {
+    const currentPage = index + 2;
+    const start = (currentPage - 1) * POSTS_PER_PAGE;
+    const end = start + POSTS_PER_PAGE;
+
+    return {
+      params: { page: String(currentPage) },
+      props: {
+        posts: allPosts.slice(start, end),
+        categories,
+        currentPage,
+        totalPages,
+        totalPosts: allPosts.length,
+      },
+    };
+  });
+}
+
+const { posts, categories, currentPage, totalPages, totalPosts } = Astro.props;
+
+const startPost = (currentPage - 1) * POSTS_PER_PAGE + 1;
+const endPost = Math.min(currentPage * POSTS_PER_PAGE, totalPosts);
+
+const pageTitle = `Florida Tree Care Blog - Page ${currentPage} | ProTreeTrim`;
+const pageDescription =
+  "Expert guides on tree removal, storm cleanup, stump grinding, and Florida tree care best practices.";
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <Fragment slot="head">
+    <link
+      rel="canonical"
+      href={`${SITE_CONFIG.siteUrl}/blog/page/${currentPage}/`}
+    />
+    <link
+      rel="prev"
+      href={currentPage - 1 === 1
+        ? `${SITE_CONFIG.siteUrl}/blog/`
+        : `${SITE_CONFIG.siteUrl}/blog/page/${currentPage - 1}/`}
+    />
+    {
+      currentPage < totalPages && (
+        <link
+          rel="next"
+          href={`${SITE_CONFIG.siteUrl}/blog/page/${currentPage + 1}/`}
+        />
+      )
+    }
+  </Fragment>
+
+  <header
+    style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
+  >
+    <div class="container">
+      <div
+        style="font-size: 0.85rem; margin-bottom: 1rem; color: #ffb703; font-weight: 800; text-transform: uppercase;"
+      >
+        Florida Tree Care Knowledge Base
+      </div>
+      <h1
+        style="font-size: clamp(2.4rem, 7vw, 4rem); margin: 0; font-weight: 900;"
+      >
+        ProTreeTrim Blog
+      </h1>
+      <p
+        style="font-size: 1.15rem; color: #95d5b2; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;"
+      >
+        Page {currentPage} of {totalPages}. Practical Florida tree care guides
+        for homeowners, HOAs, and property managers.
+      </p>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 3rem 1.5rem 10rem;">
+    <section style="max-width: 1100px; margin: 0 auto 1.5rem;">
+      <div
+        style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+      >
+        <div
+          style="display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 18px; align-items: center;"
+          class="blog-toolbar-grid"
+        >
+          <div>
+            <label
+              for="blogSearchInput"
+              style="display: block; font-size: 0.8rem; font-weight: 800; color: #1b4332; text-transform: uppercase; margin-bottom: 0.6rem;"
+            >
+              Search articles
+            </label>
+            <div
+              style="display: flex; align-items: center; gap: 10px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 0.85rem 1rem;"
+            >
+              <span style="font-size: 1rem;">🔎</span>
+              <input
+                id="blogSearchInput"
+                type="search"
+                placeholder="Search this page's articles..."
+                style="width: 100%; border: none; outline: none; background: transparent; font-size: 1rem; color: #0f172a;"
+              />
+            </div>
+            <p
+              id="blogSearchMeta"
+              style="margin: 0.75rem 0 0; color: #64748b; font-size: 0.9rem;"
+            >
+              Showing {startPost}-{endPost} of {totalPosts} article(s).
+            </p>
+          </div>
+
+          <div>
+            <div
+              style="font-size: 0.8rem; font-weight: 800; color: #1b4332; text-transform: uppercase; margin-bottom: 0.6rem;"
+            >
+              Browse by category
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a
+                href="/blog/"
+                style="background: #f8fafc; color: #1b4332; border: 1px solid #e2e8f0; padding: 10px 14px; border-radius: 999px; text-decoration: none; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;"
+              >
+                All Posts
+              </a>
+
+              {
+                categories.map((category) => (
+                  <a
+                    href={`/blog/category/${slugifyCategory(category)}/`}
+                    style="background: #f8fafc; color: #1b4332; border: 1px solid #e2e8f0; padding: 10px 14px; border-radius: 999px; text-decoration: none; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;"
+                  >
+                    {category}
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width: 1100px; margin: 0 auto;">
+      <div
+        id="blogNoResults"
+        style="display: none; background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+      >
+        <h2 style="margin-top: 0; color: #1b4332;">
+          No matching articles on this page
+        </h2>
+        <p style="color: #475569; margin-bottom: 1rem;">
+          Try a broader keyword or browse another page.
+        </p>
+        <button
+          id="clearBlogSearchBtn"
+          type="button"
+          style="background: #ea580c; color: white; border: none; padding: 12px 18px; border-radius: 12px; font-weight: 800; cursor: pointer;"
+        >
+          Clear search
+        </button>
+      </div>
+
+      <div
+        id="blogPostGrid"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
+      >
+        {
+          posts.map((post) => (
+            <article
+              class="blog-card"
+              data-search={`${post.data.title} ${post.data.description} ${post.data.category} ${(post.data.tags ?? []).join(" ")}`.toLowerCase()}
+              style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+            >
+              <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                <a
+                  href={`/blog/category/${slugifyCategory(post.data.category)}/`}
+                  style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none;"
+                >
+                  {post.data.category}
+                </a>
+                <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
+                  {post.data.pubDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
+              </div>
+
+              <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
+                <a
+                  href={`/blog/${post.slug}/`}
+                  style="color: #1b4332; text-decoration: none; font-weight: 900;"
+                >
+                  {post.data.title}
+                </a>
+              </h2>
+
+              <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
+                {post.data.description}
+              </p>
+
+              <a
+                href={`/blog/${post.slug}/`}
+                style="display: inline-block; background: #ea580c; color: white; text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 800;"
+              >
+                Read article
+              </a>
+            </article>
+          ))
+        }
+      </div>
+
+      {
+        totalPages > 1 && (
+          <nav
+            aria-label="Blog pagination"
+            style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 2.25rem;"
+          >
+            <a
+              href={
+                currentPage - 1 === 1
+                  ? "/blog/"
+                  : `/blog/page/${currentPage - 1}/`
+              }
+              style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+            >
+              ← Prev
+            </a>
+
+            {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+              (page) =>
+                page === currentPage ? (
+                  <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; background: #1b4332; color: white; font-weight: 900;">
+                    {page}
+                  </span>
+                ) : (
+                  <a
+                    href={page === 1 ? "/blog/" : `/blog/page/${page}/`}
+                    style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+                  >
+                    {page}
+                  </a>
+                ),
+            )}
+
+            {currentPage < totalPages ? (
+              <a
+                href={`/blog/page/${currentPage + 1}/`}
+                style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+              >
+                Next →
+              </a>
+            ) : (
+              <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; color: #94a3b8; font-weight: 800;">
+                Next →
+              </span>
+            )}
+          </nav>
+        )
+      }
+    </section>
+  </main>
+
+  <script
+    is:inline
+    define:vars={{
+      defaultMetaText: `Showing ${startPost}-${endPost} of ${totalPosts} article(s).`,
+    }}
+  >
+    const searchInput = document.getElementById("blogSearchInput");
+    const cards = Array.from(document.querySelectorAll(".blog-card"));
+    const noResults = document.getElementById("blogNoResults");
+    const searchMeta = document.getElementById("blogSearchMeta");
+    const clearBtn = document.getElementById("clearBlogSearchBtn");
+
+    const updateBlogSearch = () => {
+      const query = (searchInput?.value || "").trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const haystack = (card.getAttribute("data-search") || "").toLowerCase();
+        const match = !query || haystack.includes(query);
+        card.style.display = match ? "" : "none";
+        if (match) visibleCount += 1;
+      });
+
+      if (searchMeta) {
+        searchMeta.textContent = query
+          ? `Showing ${visibleCount} result(s) on this page for "${query}".`
+          : defaultMetaText;
+      }
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      }
+    };
+
+    searchInput?.addEventListener("input", updateBlogSearch);
+
+    clearBtn?.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      updateBlogSearch();
+      searchInput?.focus();
+    });
+  </script>
+
+  <style>
+    .blog-toolbar-grid {
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    }
+
+    @media (max-width: 820px) {
+      .blog-toolbar-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</MainLayout>

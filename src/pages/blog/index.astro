@@ -3,6 +3,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../../config.js";
 import { getCollection } from "astro:content";
 
+const POSTS_PER_PAGE = 12;
+
 const slugifyCategory = (value: string) =>
   value
     .toLowerCase()
@@ -11,13 +13,21 @@ const slugifyCategory = (value: string) =>
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/\s+/g, "-");
 
-const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+const allPosts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
 const categories = [
-  ...new Set(posts.map((post) => post.data.category).filter(Boolean)),
+  ...new Set(allPosts.map((post) => post.data.category).filter(Boolean)),
 ].sort();
+
+const currentPage = 1;
+const totalPosts = allPosts.length;
+const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+const posts = allPosts.slice(0, POSTS_PER_PAGE);
+
+const startPost = totalPosts === 0 ? 0 : 1;
+const endPost = Math.min(POSTS_PER_PAGE, totalPosts);
 
 const pageTitle = "Florida Tree Care Blog | ProTreeTrim";
 const pageDescription =
@@ -27,6 +37,11 @@ const pageDescription =
 <MainLayout title={pageTitle} description={pageDescription}>
   <Fragment slot="head">
     <link rel="canonical" href={`${SITE_CONFIG.siteUrl}/blog/`} />
+    {
+      totalPages > 1 && (
+        <link rel="next" href={`${SITE_CONFIG.siteUrl}/blog/page/2/`} />
+      )
+    }
   </Fragment>
 
   <header
@@ -75,7 +90,7 @@ const pageDescription =
               <input
                 id="blogSearchInput"
                 type="search"
-                placeholder="Search by topic, service, cost, permit, storm..."
+                placeholder="Search this page's articles..."
                 style="width: 100%; border: none; outline: none; background: transparent; font-size: 1rem; color: #0f172a;"
               />
             </div>
@@ -83,7 +98,7 @@ const pageDescription =
               id="blogSearchMeta"
               style="margin: 0.75rem 0 0; color: #64748b; font-size: 0.9rem;"
             >
-              Showing all {posts.length} article(s).
+              Showing {startPost}-{endPost} of {totalPosts} article(s).
             </p>
           </div>
 
@@ -133,11 +148,10 @@ const pageDescription =
               style="display: none; background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
             >
               <h2 style="margin-top: 0; color: #1b4332;">
-                No matching articles
+                No matching articles on this page
               </h2>
               <p style="color: #475569; margin-bottom: 1rem;">
-                Try a broader keyword like <strong>storm</strong>,{" "}
-                <strong>cost</strong>, or <strong>tree removal</strong>.
+                Try a broader keyword or browse the next page.
               </p>
               <button
                 id="clearBlogSearchBtn"
@@ -196,13 +210,54 @@ const pageDescription =
                 </article>
               ))}
             </div>
+
+            {totalPages > 1 && (
+              <nav
+                aria-label="Blog pagination"
+                style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 2.25rem;"
+              >
+                <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; color: #94a3b8; font-weight: 800;">
+                  ← Prev
+                </span>
+
+                {Array.from(
+                  { length: totalPages },
+                  (_, index) => index + 1,
+                ).map((page) =>
+                  page === currentPage ? (
+                    <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; background: #1b4332; color: white; font-weight: 900;">
+                      {page}
+                    </span>
+                  ) : (
+                    <a
+                      href={page === 1 ? "/blog/" : `/blog/page/${page}/`}
+                      style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+                    >
+                      {page}
+                    </a>
+                  ),
+                )}
+
+                <a
+                  href="/blog/page/2/"
+                  style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+                >
+                  Next →
+                </a>
+              </nav>
+            )}
           </>
         )
       }
     </section>
   </main>
 
-  <script is:inline define:vars={{ totalPosts: posts.length }}>
+  <script
+    is:inline
+    define:vars={{
+      defaultMetaText: `Showing ${startPost}-${endPost} of ${totalPosts} article(s).`,
+    }}
+  >
     const searchInput = document.getElementById("blogSearchInput");
     const cards = Array.from(document.querySelectorAll(".blog-card"));
     const noResults = document.getElementById("blogNoResults");
@@ -222,8 +277,8 @@ const pageDescription =
 
       if (searchMeta) {
         searchMeta.textContent = query
-          ? `Showing ${visibleCount} result(s) for "${query}".`
-          : `Showing all ${totalPosts} article(s).`;
+          ? `Showing ${visibleCount} result(s) on this page for "${query}".`
+          : defaultMetaText;
       }
 
       if (noResults) {
