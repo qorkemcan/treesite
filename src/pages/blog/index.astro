@@ -42,20 +42,6 @@ const categories = [
   ),
 ].sort();
 
-const searchIndex = allPosts.map((post) => ({
-  title: post.data.title,
-  description: post.data.description,
-  url: `/blog/${post.slug}/`,
-  category: normalizeCategory(post.data.category),
-  date: post.data.pubDate.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }),
-  haystack:
-    `${post.data.title} ${post.data.description} ${normalizeCategory(post.data.category)} ${(post.data.tags ?? []).join(" ")}`.toLowerCase(),
-}));
-
 const currentPage = 1;
 const totalPosts = allPosts.length;
 const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
@@ -219,11 +205,7 @@ const pageDescription =
               style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
             >
               {posts.map((post) => (
-                <article
-                  class="blog-card"
-                  data-search={`${post.data.title} ${post.data.description} ${normalizeCategory(post.data.category)} ${(post.data.tags ?? []).join(" ")}`.toLowerCase()}
-                  style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
-                >
+                <article style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
                   <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
                     <a
                       href={`/blog/category/${slugifyCategory(post.data.category)}/`}
@@ -309,7 +291,6 @@ const pageDescription =
     is:inline
     define:vars={{
       defaultMetaText: `Showing ${startPost}-${endPost} of ${totalPosts} article(s).`,
-      searchIndex,
     }}
   >
     const searchInput = document.getElementById("blogSearchInput");
@@ -324,6 +305,9 @@ const pageDescription =
       "blogGlobalResultsCount",
     );
 
+    let cachedSearchIndex = null;
+    let lastSearchToken = 0;
+
     const escapeHtml = (value = "") =>
       String(value)
         .replace(/&/g, "&amp;")
@@ -331,6 +315,19 @@ const pageDescription =
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#39;");
+
+    const loadSearchIndex = async () => {
+      if (cachedSearchIndex) return cachedSearchIndex;
+
+      const response = await fetch("/blog-search.json");
+
+      if (!response.ok) {
+        throw new Error("Failed to load blog search index.");
+      }
+
+      cachedSearchIndex = await response.json();
+      return cachedSearchIndex;
+    };
 
     const renderSearchResults = (matches) => {
       if (!globalResultsGrid) return;
@@ -341,14 +338,7 @@ const pageDescription =
             <article style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
               <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
                 <a
-                  href="/blog/category/${escapeHtml(
-                    item.category
-                      .toLowerCase()
-                      .trim()
-                      .replace(/&/g, "and")
-                      .replace(/[^a-z0-9\\s-]/g, "")
-                      .replace(/\\s+/g, "-"),
-                  )}/"
+                  href="${escapeHtml(item.categoryUrl)}"
                   style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none;"
                 >
                   ${escapeHtml(item.category)}
@@ -383,50 +373,76 @@ const pageDescription =
         .join("");
     };
 
-    const updateBlogSearch = () => {
+    const resetSearchView = () => {
+      if (paginatedGrid) paginatedGrid.style.display = "grid";
+      if (pagination) pagination.style.display = "flex";
+      if (globalResults) globalResults.style.display = "none";
+      if (noResults) noResults.style.display = "none";
+      if (searchMeta) searchMeta.textContent = defaultMetaText;
+    };
+
+    const updateBlogSearch = async () => {
       const query = (searchInput?.value || "").trim().toLowerCase();
+      const currentToken = ++lastSearchToken;
 
       if (!query) {
-        if (paginatedGrid) paginatedGrid.style.display = "grid";
-        if (pagination) pagination.style.display = "flex";
-        if (globalResults) globalResults.style.display = "none";
-        if (noResults) noResults.style.display = "none";
-        if (searchMeta) searchMeta.textContent = defaultMetaText;
+        resetSearchView();
         return;
       }
-
-      const matches = searchIndex.filter((item) =>
-        item.haystack.includes(query),
-      );
 
       if (searchMeta) {
-        searchMeta.textContent = `Showing ${matches.length} result(s) across the full blog for "${query}".`;
+        searchMeta.textContent = `Searching the full blog for "${query}"...`;
       }
 
-      if (paginatedGrid) paginatedGrid.style.display = "none";
-      if (pagination) pagination.style.display = "none";
+      try {
+        const searchIndex = await loadSearchIndex();
 
-      if (matches.length === 0) {
+        if (currentToken !== lastSearchToken) return;
+
+        const matches = searchIndex.filter((item) =>
+          item.haystack.includes(query),
+        );
+
+        if (searchMeta) {
+          searchMeta.textContent = `Showing ${matches.length} result(s) across the full blog for "${query}".`;
+        }
+
+        if (paginatedGrid) paginatedGrid.style.display = "none";
+        if (pagination) pagination.style.display = "none";
+
+        if (matches.length === 0) {
+          if (globalResults) globalResults.style.display = "none";
+          if (noResults) noResults.style.display = "block";
+          return;
+        }
+
+        renderSearchResults(matches);
+
+        if (globalResultsCount) {
+          globalResultsCount.textContent = `${matches.length} article(s) matched your search.`;
+        }
+
+        if (noResults) noResults.style.display = "none";
+        if (globalResults) globalResults.style.display = "block";
+      } catch (error) {
+        if (currentToken !== lastSearchToken) return;
+
+        if (paginatedGrid) paginatedGrid.style.display = "none";
+        if (pagination) pagination.style.display = "none";
         if (globalResults) globalResults.style.display = "none";
         if (noResults) noResults.style.display = "block";
-        return;
+
+        if (searchMeta) {
+          searchMeta.textContent = "Search is temporarily unavailable.";
+        }
       }
-
-      renderSearchResults(matches);
-
-      if (globalResultsCount) {
-        globalResultsCount.textContent = `${matches.length} article(s) matched your search.`;
-      }
-
-      if (noResults) noResults.style.display = "none";
-      if (globalResults) globalResults.style.display = "block";
     };
 
     searchInput?.addEventListener("input", updateBlogSearch);
 
     clearBtn?.addEventListener("click", () => {
       if (searchInput) searchInput.value = "";
-      updateBlogSearch();
+      resetSearchView();
       searchInput?.focus();
     });
   </script>
