@@ -1,155 +1,330 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import { SITE_CONFIG } from '../config.js';
-import { Image } from 'astro:assets';
+import MainLayout from "../layouts/MainLayout.astro";
+import { SITE_CONFIG } from "../config.js";
 
-// Tüm alt klasörlerdeki görselleri çek
-const allImagesGlob = import.meta.glob('../assets/gallery/fl/**/*.{jpeg,jpg,png,gif,webp}');
-const imagePaths = Object.keys(allImagesGlob);
+const INITIAL_VISIBLE_COUNT = 8;
+const INITIAL_CATEGORY_ID = "removal";
 
-const galleryData = await Promise.all(
-  imagePaths.map(async (path) => {
-    const img: any = await allImagesGlob[path]();
-    // Klasör ismini path'den ayıkla (removal, stump veya emergency)
-    const category = path.includes('/removal/') ? 'removal' : 
-                     path.includes('/stump/') ? 'stump' : 'emergency';
-    return {
-      src: img.default,
-      category: category,
-      path: path
-    };
-  })
+const allImagesGlob = import.meta.glob(
+  "../assets/gallery/fl/**/*.{jpeg,jpg,png,gif,webp}",
 );
+const imagePaths = Object.keys(allImagesGlob).sort();
 
-// Kategorilere ayır
-const removalImages = galleryData.filter(i => i.category === 'removal');
-const stumpImages = galleryData.filter(i => i.category === 'stump');
-const emergencyImages = galleryData.filter(i => i.category === 'emergency');
+const getCategoryFromPath = (path: string) => {
+  if (path.includes("/removal/")) return "removal";
+  if (path.includes("/stump/")) return "stump";
+  return "emergency";
+};
+
+const categoryConfig = {
+  removal: { id: "removal", name: "Tree Removal", icon: "🌳" },
+  stump: { id: "stump", name: "Stump Grinding", icon: "🏗️" },
+  emergency: { id: "emergency", name: "Emergency Care", icon: "🌪️" },
+};
+
+const categoryCounts = {
+  removal: imagePaths.filter((path) => getCategoryFromPath(path) === "removal")
+    .length,
+  stump: imagePaths.filter((path) => getCategoryFromPath(path) === "stump")
+    .length,
+  emergency: imagePaths.filter(
+    (path) => getCategoryFromPath(path) === "emergency",
+  ).length,
+};
 
 const categories = [
-    { id: 'removal', name: 'Tree Removal', icon: '🌳', data: removalImages },
-    { id: 'stump', name: 'Stump Grinding', icon: '🏗️', data: stumpImages },
-    { id: 'emergency', name: 'Emergency Care', icon: '🌪️', data: emergencyImages }
+  {
+    ...categoryConfig.removal,
+    count: categoryCounts.removal,
+  },
+  {
+    ...categoryConfig.stump,
+    count: categoryCounts.stump,
+  },
+  {
+    ...categoryConfig.emergency,
+    count: categoryCounts.emergency,
+  },
 ];
+
+const initialPaths = imagePaths
+  .filter((path) => getCategoryFromPath(path) === INITIAL_CATEGORY_ID)
+  .slice(0, INITIAL_VISIBLE_COUNT);
+
+const initialImages = await Promise.all(
+  initialPaths.map(async (path) => {
+    const mod: any = await allImagesGlob[path]();
+    const image = mod.default;
+
+    return {
+      src: image.src,
+      width: image.width ?? 500,
+      height: image.height ?? 500,
+      alt: `Florida ${categoryConfig[INITIAL_CATEGORY_ID].name} service project`,
+    };
+  }),
+);
 ---
 
-<MainLayout 
-  title="Professional Gallery | ProTreeTrim™ Florida Work" 
+<MainLayout
+  title="Professional Gallery | ProTreeTrim™ Florida Work"
   description="Explore our specialized galleries for tree removal, stump grinding, and emergency storm response across Florida."
 >
-  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center; border-bottom: 6px solid #ea580c;">
-    <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900; line-height: 1.1;">Work Gallery</h1>
-    <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-        High-performance solutions for Florida's most challenging tree projects.
+  <header
+    style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center; border-bottom: 6px solid #ea580c;"
+  >
+    <h1
+      style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900; line-height: 1.1;"
+    >
+      Work Gallery
+    </h1>
+    <p
+      style="font-size: 1.2rem; color: #95d5b2; margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;"
+    >
+      High-performance solutions for Florida's most challenging tree projects.
     </p>
   </header>
 
   <main class="container" style="padding-top: 3rem; padding-bottom: 10rem;">
-    
-    <!-- MODER TAB NAVİGASYON -->
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 4rem;">
-        {categories.map(cat => (
-            <button 
-                class="tab-btn" 
-                data-target={cat.id}
-                style="background: white; border: 2px solid #e5e7eb; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-weight: 800; color: #4b5563; display: flex; align-items: center; gap: 8px; transition: 0.3s;"
-            >
-                <span>{cat.icon}</span> {cat.name} ({cat.data.length})
-            </button>
-        ))}
+    <div
+      style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 2rem;"
+    >
+      {
+        categories.map((cat) => (
+          <button
+            class={`tab-btn ${cat.id === INITIAL_CATEGORY_ID ? "active" : ""}`}
+            data-target={cat.id}
+            style="background: white; border: 2px solid #e5e7eb; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-weight: 800; color: #4b5563; display: flex; align-items: center; gap: 8px; transition: 0.3s;"
+          >
+            <span>{cat.icon}</span> {cat.name} ({cat.count})
+          </button>
+        ))
+      }
     </div>
 
-    <!-- GALERİ KATEGORİLERİ -->
-    {categories.map(cat => (
-        <section id={cat.id} class="gallery-section" style="display: none;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
-                {cat.data.map((img, index) => (
-                    <div class={`img-card ${index >= 8 ? 'hidden-img' : ''}`} style="overflow: hidden; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); aspect-ratio: 1/1; background: #eee;">
-                        <Image 
-                            src={img.src} 
-                            alt={`Florida ${cat.name} service project`} 
-                            width={500} 
-                            height={500} 
-                            format="webp"
-                            style="width: 100%; height: 100%; object-fit: cover;"
-                            class="hover-zoom"
-                        />
-                    </div>
-                ))}
-            </div>
-            
-            {cat.data.length > 8 && (
-                <div style="text-align: center; margin-top: 4rem;">
-                    <button class="load-more-btn" style="background: #1b4332; color: white; border: none; padding: 15px 40px; border-radius: 12px; font-weight: 800; cursor: pointer;">
-                        VIEW ALL {cat.name.toUpperCase()} IMAGES
-                    </button>
-                </div>
-            )}
-        </section>
-    ))}
+    <div
+      id="galleryStatus"
+      style="text-align: center; color: #64748b; font-weight: 700; margin-bottom: 2rem;"
+    >
+      Showing {
+        Math.min(INITIAL_VISIBLE_COUNT, categoryCounts[INITIAL_CATEGORY_ID])
+      } of {categoryCounts[INITIAL_CATEGORY_ID]}
+      {categoryConfig[INITIAL_CATEGORY_ID].name.toLowerCase()} image(s)
+    </div>
 
-    <!-- Alt CTA -->
-    <div style="margin-top: 8rem; background: #f0fdf4; padding: 4rem 2rem; border-radius: 40px; text-align: center; border: 2px dashed #166534;">
-        <h2 style="color: #064e3b; font-size: 2.2rem; font-weight: 900; margin-top: 0;">Get Results Like These</h2>
-        <p style="color: #166534; font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Connect with the elite crews featured in our gallery for your property today.</p>
-        <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 1.4rem 3rem; text-decoration: none; border-radius: 18px; font-weight: 900; font-size: 1.5rem; display: inline-block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3);">
-            CALL FOR A FREE QUOTE
-        </a>
+    <section id="galleryMount">
+      <div
+        id="galleryGrid"
+        data-initial-category={INITIAL_CATEGORY_ID}
+        data-initial-rendered="true"
+        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;"
+      >
+        {
+          initialImages.map((img) => (
+            <div
+              class="img-card"
+              style="overflow: hidden; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); aspect-ratio: 1/1; background: #eee;"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+                loading="lazy"
+                decoding="async"
+                style="width: 100%; height: 100%; object-fit: cover;"
+                class="hover-zoom"
+              />
+            </div>
+          ))
+        }
+      </div>
+
+      <div
+        id="galleryLoadMoreWrap"
+        style={`text-align: center; margin-top: 4rem; ${categoryCounts[INITIAL_CATEGORY_ID] > INITIAL_VISIBLE_COUNT ? "" : "display:none;"}`}
+      >
+        <button
+          id="galleryLoadMoreBtn"
+          style="background: #1b4332; color: white; border: none; padding: 15px 40px; border-radius: 12px; font-weight: 800; cursor: pointer;"
+        >
+          VIEW ALL {categoryConfig[INITIAL_CATEGORY_ID].name.toUpperCase()} IMAGES
+        </button>
+      </div>
+    </section>
+
+    <div
+      style="margin-top: 8rem; background: #f0fdf4; padding: 4rem 2rem; border-radius: 40px; text-align: center; border: 2px dashed #166534;"
+    >
+      <h2
+        style="color: #064e3b; font-size: 2.2rem; font-weight: 900; margin-top: 0;"
+      >
+        Get Results Like These
+      </h2>
+      <p
+        style="color: #166534; font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;"
+      >
+        Connect with the elite crews featured in our gallery for your property
+        today.
+      </p>
+      <a
+        href={SITE_CONFIG.phoneHref}
+        style="background: #ea580c; color: white !important; padding: 1.4rem 3rem; text-decoration: none; border-radius: 18px; font-weight: 900; font-size: 1.5rem; display: inline-block; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3);"
+      >
+        CALL FOR A FREE QUOTE
+      </a>
     </div>
   </main>
 </MainLayout>
 
 <style>
   .tab-btn.active {
-      background: #1b4332 !important;
-      color: white !important;
-      border-color: #1b4332 !important;
-      box-shadow: 0 10px 20px rgba(27, 67, 50, 0.2);
-  }
-  
-  .hover-zoom {
-      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .img-card:hover .hover-zoom {
-      transform: scale(1.1);
+    background: #1b4332 !important;
+    color: white !important;
+    border-color: #1b4332 !important;
+    box-shadow: 0 10px 20px rgba(27, 67, 50, 0.2);
   }
 
-  .hidden-img {
-      display: none;
+  .hover-zoom {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .img-card:hover .hover-zoom {
+    transform: scale(1.1);
   }
 </style>
 
-<script is:inline>
-    const buttons = document.querySelectorAll('.tab-btn');
-    const sections = document.querySelectorAll('.gallery-section');
+<script
+  is:inline
+  define:vars={{
+    initialVisibleCount: INITIAL_VISIBLE_COUNT,
+    initialCategoryId: INITIAL_CATEGORY_ID,
+    categories,
+    galleryEndpoint: "/gallery-data.json",
+  }}
+>
+  const buttons = Array.from(document.querySelectorAll(".tab-btn"));
+  const galleryGrid = document.getElementById("galleryGrid");
+  const galleryStatus = document.getElementById("galleryStatus");
+  const loadMoreWrap = document.getElementById("galleryLoadMoreWrap");
+  const loadMoreBtn = document.getElementById("galleryLoadMoreBtn");
 
-    function switchTab(id) {
-        buttons.forEach(btn => {
-            if(btn.getAttribute('data-target') === id) btn.classList.add('active');
-            else btn.classList.remove('active');
-        });
-        sections.forEach(sec => {
-            if(sec.id === id) sec.style.display = 'block';
-            else sec.style.display = 'none';
-        });
+  const categoryMap = Object.fromEntries(
+    categories.map((cat) => [cat.id, cat]),
+  );
+
+  let galleryDataCache = null;
+  let currentCategory = initialCategoryId;
+  let visibleCount = initialVisibleCount;
+
+  const escapeHtml = (value = "") =>
+    String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+
+  const updateButtons = (activeId) => {
+    buttons.forEach((btn) => {
+      if (btn.getAttribute("data-target") === activeId)
+        btn.classList.add("active");
+      else btn.classList.remove("active");
+    });
+  };
+
+  const updateStatus = (total) => {
+    if (!galleryStatus) return;
+    galleryStatus.textContent = `Showing ${Math.min(visibleCount, total)} of ${total} ${categoryMap[currentCategory].name.toLowerCase()} image(s)`;
+  };
+
+  const updateLoadMore = (total) => {
+    if (!loadMoreWrap || !loadMoreBtn) return;
+
+    if (total > visibleCount) {
+      loadMoreWrap.style.display = "block";
+      loadMoreBtn.textContent = `VIEW ALL ${categoryMap[currentCategory].name.toUpperCase()} IMAGES`;
+    } else {
+      loadMoreWrap.style.display = "none";
+    }
+  };
+
+  const loadGalleryData = async () => {
+    if (galleryDataCache) return galleryDataCache;
+
+    const response = await fetch(galleryEndpoint);
+
+    if (!response.ok) {
+      throw new Error("Failed to load gallery data.");
     }
 
-    // İlk açılışta Removal kategorisini göster
-    switchTab('removal');
+    galleryDataCache = await response.json();
+    return galleryDataCache;
+  };
 
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => switchTab(btn.getAttribute('data-target')));
-    });
+  const renderCards = (items) => {
+    if (!galleryGrid) return;
 
-    // "View All" butonu çalışması
-    document.querySelectorAll('.load-more-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const section = this.closest('.gallery-section');
-            section.querySelectorAll('.hidden-img').forEach(img => {
-                img.classList.remove('hidden-img');
-            });
-            this.style.display = 'none'; // Butonu gizle
-        });
+    galleryGrid.innerHTML = items
+      .slice(0, visibleCount)
+      .map(
+        (img) => `
+          <div
+            class="img-card"
+            style="overflow: hidden; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); aspect-ratio: 1/1; background: #eee;"
+          >
+            <img
+              src="${escapeHtml(img.src)}"
+              alt="${escapeHtml(img.alt)}"
+              width="${escapeHtml(img.width)}"
+              height="${escapeHtml(img.height)}"
+              loading="lazy"
+              decoding="async"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              class="hover-zoom"
+            />
+          </div>
+        `,
+      )
+      .join("");
+  };
+
+  const renderCategory = async (id) => {
+    currentCategory = id;
+    visibleCount = initialVisibleCount;
+    updateButtons(id);
+
+    if (
+      id === initialCategoryId &&
+      galleryGrid?.dataset.initialRendered === "true" &&
+      !galleryDataCache
+    ) {
+      updateStatus(categoryMap[id].count);
+      updateLoadMore(categoryMap[id].count);
+      return;
+    }
+
+    const data = await loadGalleryData();
+    const items = data[id] || [];
+    renderCards(items);
+    updateStatus(items.length);
+    updateLoadMore(items.length);
+  };
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const id = btn.getAttribute("data-target");
+      if (!id || id === currentCategory) return;
+      await renderCategory(id);
     });
+  });
+
+  loadMoreBtn?.addEventListener("click", async () => {
+    const data = await loadGalleryData();
+    const items = data[currentCategory] || [];
+    visibleCount = items.length;
+    renderCards(items);
+    updateStatus(items.length);
+    updateLoadMore(items.length);
+  });
 </script>
