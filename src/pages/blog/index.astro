@@ -5,8 +5,19 @@ import { getCollection } from "astro:content";
 
 const POSTS_PER_PAGE = 12;
 
+const normalizeCategory = (value: string) => {
+  const clean = value.trim().replace(/\s+/g, " ");
+
+  const aliases: Record<string, string> = {
+    "emergency storm": "Emergency & Storm",
+    "emergency & storm": "Emergency & Storm",
+  };
+
+  return aliases[clean.toLowerCase()] ?? clean;
+};
+
 const slugifyCategory = (value: string) =>
-  value
+  normalizeCategory(value)
     .toLowerCase()
     .trim()
     .replace(/&/g, "and")
@@ -18,7 +29,11 @@ const allPosts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
 );
 
 const categories = [
-  ...new Set(allPosts.map((post) => post.data.category).filter(Boolean)),
+  ...new Set(
+    allPosts
+      .map((post) => normalizeCategory(post.data.category))
+      .filter(Boolean),
+  ),
 ].sort();
 
 const currentPage = 1;
@@ -169,7 +184,7 @@ const pageDescription =
               {posts.map((post) => (
                 <article
                   class="blog-card"
-                  data-search={`${post.data.title} ${post.data.description} ${post.data.category} ${(post.data.tags ?? []).join(" ")}`.toLowerCase()}
+                  data-search={`${post.data.title} ${post.data.description} ${normalizeCategory(post.data.category)} ${(post.data.tags ?? []).join(" ")}`.toLowerCase()}
                   style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
                 >
                   <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
@@ -177,7 +192,7 @@ const pageDescription =
                       href={`/blog/category/${slugifyCategory(post.data.category)}/`}
                       style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none;"
                     >
-                      {post.data.category}
+                      {normalizeCategory(post.data.category)}
                     </a>
                     <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
                       {post.data.pubDate.toLocaleDateString("en-US", {
