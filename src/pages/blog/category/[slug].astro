@@ -14,6 +14,8 @@ const slugifyCategory = (value: string) =>
     .replace(/\s+/g, "-");
 
 export async function getStaticPaths() {
+  const POSTS_PER_PAGE = 12;
+
   const localSlugifyCategory = (value: string) =>
     value
       .toLowerCase()
