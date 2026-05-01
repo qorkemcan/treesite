@@ -11,6 +11,12 @@ const normalizeCategory = (value: string) => {
   const aliases: Record<string, string> = {
     "emergency storm": "Emergency & Storm",
     "emergency & storm": "Emergency & Storm",
+    "florida laws & property risk": "Florida Laws & Property Risk",
+    "tree care & cleanup": "Tree Care & Cleanup",
+    "tree health & disease": "Tree Health & Disease",
+    "landscaping & planting": "Landscaping & Planting",
+    "local florida guides": "Local Florida Guides",
+    "tree removal": "Tree Removal",
   };
 
   return aliases[clean.toLowerCase()] ?? clean;
@@ -28,11 +34,17 @@ export async function getStaticPaths() {
   const POSTS_PER_PAGE = 12;
 
   const localNormalizeCategory = (value: string) => {
-    const clean = value.trim().replace(/\\s+/g, " ");
+    const clean = value.trim().replace(/\s+/g, " ");
 
     const aliases: Record<string, string> = {
       "emergency storm": "Emergency & Storm",
       "emergency & storm": "Emergency & Storm",
+      "florida laws & property risk": "Florida Laws & Property Risk",
+      "tree care & cleanup": "Tree Care & Cleanup",
+      "tree health & disease": "Tree Health & Disease",
+      "landscaping & planting": "Landscaping & Planting",
+      "local florida guides": "Local Florida Guides",
+      "tree removal": "Tree Removal",
     };
 
     return aliases[clean.toLowerCase()] ?? clean;
@@ -43,8 +55,8 @@ export async function getStaticPaths() {
       .toLowerCase()
       .trim()
       .replace(/&/g, "and")
-      .replace(/[^a-z0-9\\s-]/g, "")
-      .replace(/\\s+/g, "-");
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-");
 
   const posts = await getCollection("blog", ({ data }) => !data.draft);
 

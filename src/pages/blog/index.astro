@@ -11,6 +11,12 @@ const normalizeCategory = (value: string) => {
   const aliases: Record<string, string> = {
     "emergency storm": "Emergency & Storm",
     "emergency & storm": "Emergency & Storm",
+    "florida laws & property risk": "Florida Laws & Property Risk",
+    "tree care & cleanup": "Tree Care & Cleanup",
+    "tree health & disease": "Tree Health & Disease",
+    "landscaping & planting": "Landscaping & Planting",
+    "local florida guides": "Local Florida Guides",
+    "tree removal": "Tree Removal",
   };
 
   return aliases[clean.toLowerCase()] ?? clean;
