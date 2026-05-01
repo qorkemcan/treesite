@@ -272,4 +272,8 @@
     <loc>https://www.protreetrim.com/sitemap-county-union.xml</loc>
     <lastmod>2026-05-01</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>https://www.protreetrim.com/sitemap-blog.xml</loc>
+    <lastmod>2026-05-01</lastmod>
+  </sitemap>
 </sitemapindex>

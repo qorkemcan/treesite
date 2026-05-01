@@ -3,7 +3,6 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://www.protreetrim.com',
-  output: 'static', 
-  integrations: [], // Sitemap eklentisini sildik, çakışma riski sıfırlandı.
+  output: 'static',
   adapter: vercel(),
 });
