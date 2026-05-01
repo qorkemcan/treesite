@@ -56,6 +56,20 @@ const categories = [
   ),
 ].sort();
 
+const searchIndex = allPosts.map((post) => ({
+  title: post.data.title,
+  description: post.data.description,
+  url: `/blog/${post.slug}/`,
+  category: normalizeCategory(post.data.category),
+  date: post.data.pubDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }),
+  haystack:
+    `${post.data.title} ${post.data.description} ${normalizeCategory(post.data.category)} ${(post.data.tags ?? []).join(" ")}`.toLowerCase(),
+}));
+
 const totalPosts = allPosts.length;
 const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 
@@ -149,7 +163,7 @@ const pageDescription =
               <input
                 id="blogSearchInput"
                 type="search"
-                placeholder="Search this page's articles..."
+                placeholder="Search the full blog..."
                 style="width: 100%; border: none; outline: none; background: transparent; font-size: 1rem; color: #0f172a;"
               />
             </div>
@@ -197,10 +211,10 @@ const pageDescription =
         style="display: none; background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
       >
         <h2 style="margin-top: 0; color: #1b4332;">
-          No matching articles on this page
+          No matching articles found
         </h2>
         <p style="color: #475569; margin-bottom: 1rem;">
-          Try a broader keyword or browse another page.
+          No posts matched your search across the full blog.
         </p>
         <button
           id="clearBlogSearchBtn"
@@ -209,6 +223,23 @@ const pageDescription =
         >
           Clear search
         </button>
+      </div>
+
+      <div id="blogGlobalResults" style="display: none;">
+        <div
+          style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+        >
+          <h2 style="margin: 0 0 0.5rem; color: #1b4332; font-size: 1.4rem;">
+            Search results across the full blog
+          </h2>
+          <p id="blogGlobalResultsCount" style="margin: 0; color: #64748b;"></p>
+        </div>
+
+        <div
+          id="blogGlobalResultsGrid"
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
+        >
+        </div>
       </div>
 
       <div
@@ -265,6 +296,7 @@ const pageDescription =
       {
         totalPages > 1 && (
           <nav
+            id="blogPagination"
             aria-label="Blog pagination"
             style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 2.25rem;"
           >
@@ -316,35 +348,118 @@ const pageDescription =
   <script
     is:inline
     define:vars={{
-      defaultMetaText: `Showing ${startPost}-{endPost} of ${totalPosts} article(s).`,
+      defaultMetaText: `Showing ${startPost}-${endPost} of ${totalPosts} article(s).`,
+      searchIndex,
     }}
   >
     const searchInput = document.getElementById("blogSearchInput");
-    const cards = Array.from(document.querySelectorAll(".blog-card"));
+    const paginatedGrid = document.getElementById("blogPostGrid");
     const noResults = document.getElementById("blogNoResults");
     const searchMeta = document.getElementById("blogSearchMeta");
     const clearBtn = document.getElementById("clearBlogSearchBtn");
+    const pagination = document.getElementById("blogPagination");
+    const globalResults = document.getElementById("blogGlobalResults");
+    const globalResultsGrid = document.getElementById("blogGlobalResultsGrid");
+    const globalResultsCount = document.getElementById(
+      "blogGlobalResultsCount",
+    );
+
+    const escapeHtml = (value = "") =>
+      String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+
+    const renderSearchResults = (matches) => {
+      if (!globalResultsGrid) return;
+
+      globalResultsGrid.innerHTML = matches
+        .map(
+          (item) => `
+            <article style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+              <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                <a
+                  href="/blog/category/${escapeHtml(
+                    item.category
+                      .toLowerCase()
+                      .trim()
+                      .replace(/&/g, "and")
+                      .replace(/[^a-z0-9\\s-]/g, "")
+                      .replace(/\\s+/g, "-"),
+                  )}/"
+                  style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none;"
+                >
+                  ${escapeHtml(item.category)}
+                </a>
+                <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
+                  ${escapeHtml(item.date)}
+                </span>
+              </div>
+
+              <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
+                <a
+                  href="${escapeHtml(item.url)}"
+                  style="color: #1b4332; text-decoration: none; font-weight: 900;"
+                >
+                  ${escapeHtml(item.title)}
+                </a>
+              </h2>
+
+              <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
+                ${escapeHtml(item.description)}
+              </p>
+
+              <a
+                href="${escapeHtml(item.url)}"
+                style="display: inline-block; background: #ea580c; color: white; text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 800;"
+              >
+                Read article
+              </a>
+            </article>
+          `,
+        )
+        .join("");
+    };
 
     const updateBlogSearch = () => {
       const query = (searchInput?.value || "").trim().toLowerCase();
-      let visibleCount = 0;
 
-      cards.forEach((card) => {
-        const haystack = (card.getAttribute("data-search") || "").toLowerCase();
-        const match = !query || haystack.includes(query);
-        card.style.display = match ? "" : "none";
-        if (match) visibleCount += 1;
-      });
+      if (!query) {
+        if (paginatedGrid) paginatedGrid.style.display = "grid";
+        if (pagination) pagination.style.display = "flex";
+        if (globalResults) globalResults.style.display = "none";
+        if (noResults) noResults.style.display = "none";
+        if (searchMeta) searchMeta.textContent = defaultMetaText;
+        return;
+      }
+
+      const matches = searchIndex.filter((item) =>
+        item.haystack.includes(query),
+      );
 
       if (searchMeta) {
-        searchMeta.textContent = query
-          ? `Showing ${visibleCount} result(s) on this page for "${query}".`
-          : defaultMetaText;
+        searchMeta.textContent = `Showing ${matches.length} result(s) across the full blog for "${query}".`;
       }
 
-      if (noResults) {
-        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      if (paginatedGrid) paginatedGrid.style.display = "none";
+      if (pagination) pagination.style.display = "none";
+
+      if (matches.length === 0) {
+        if (globalResults) globalResults.style.display = "none";
+        if (noResults) noResults.style.display = "block";
+        return;
       }
+
+      renderSearchResults(matches);
+
+      if (globalResultsCount) {
+        globalResultsCount.textContent = `${matches.length} article(s) matched your search.`;
+      }
+
+      if (noResults) noResults.style.display = "none";
+      if (globalResults) globalResults.style.display = "block";
     };
 
     searchInput?.addEventListener("input", updateBlogSearch);
