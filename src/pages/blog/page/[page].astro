@@ -3,8 +3,6 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../../../config.js";
 import { getCollection } from "astro:content";
 
-const POSTS_PER_PAGE = 12;
-
 const slugifyCategory = (value: string) =>
   value
     .toLowerCase()
@@ -14,40 +12,48 @@ const slugifyCategory = (value: string) =>
     .replace(/\s+/g, "-");
 
 export async function getStaticPaths() {
+  const POSTS_PER_PAGE = 12;
+
   const allPosts = (
     await getCollection("blog", ({ data }) => !data.draft)
   ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-  const categories = [
-    ...new Set(allPosts.map((post) => post.data.category).filter(Boolean)),
-  ].sort();
-
   const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
 
-  if (totalPages <= 1) return [];
-
-  return Array.from({ length: totalPages - 1 }, (_, index) => {
-    const currentPage = index + 2;
-    const start = (currentPage - 1) * POSTS_PER_PAGE;
-    const end = start + POSTS_PER_PAGE;
-
-    return {
-      params: { page: String(currentPage) },
-      props: {
-        posts: allPosts.slice(start, end),
-        categories,
-        currentPage,
-        totalPages,
-        totalPosts: allPosts.length,
-      },
-    };
-  });
+  return Array.from({ length: Math.max(totalPages - 1, 0) }, (_, index) => ({
+    params: { page: String(index + 2) },
+  }));
 }
 
-const { posts, categories, currentPage, totalPages, totalPosts } = Astro.props;
+const POSTS_PER_PAGE = 12;
 
-const startPost = (currentPage - 1) * POSTS_PER_PAGE + 1;
-const endPost = Math.min(currentPage * POSTS_PER_PAGE, totalPosts);
+const allPosts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const categories = [
+  ...new Set(allPosts.map((post) => post.data.category).filter(Boolean)),
+].sort();
+
+const totalPosts = allPosts.length;
+const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+const currentPage = Number(Astro.params.page);
+
+if (
+  !Number.isInteger(currentPage) ||
+  currentPage < 2 ||
+  currentPage > totalPages
+) {
+  throw new Error(`Invalid blog page number: ${Astro.params.page}`);
+}
+
+const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+const endIndex = startIndex + POSTS_PER_PAGE;
+const posts = allPosts.slice(startIndex, endIndex);
+
+const startPost = startIndex + 1;
+const endPost = Math.min(endIndex, totalPosts);
 
 const pageTitle = `Florida Tree Care Blog - Page ${currentPage} | ProTreeTrim`;
 const pageDescription =
