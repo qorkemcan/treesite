@@ -1,9 +1,7 @@
 ---
-import MainLayout from "../../../layouts/MainLayout.astro";
-import { SITE_CONFIG } from "../../../config.js";
+import MainLayout from "../../../../../layouts/MainLayout.astro";
+import { SITE_CONFIG } from "../../../../../config.js";
 import { getCollection } from "astro:content";
-
-const POSTS_PER_PAGE = 12;
 
 const slugifyCategory = (value: string) =>
   value
@@ -14,53 +12,96 @@ const slugifyCategory = (value: string) =>
     .replace(/\s+/g, "-");
 
 export async function getStaticPaths() {
+  const POSTS_PER_PAGE = 12;
+
   const posts = await getCollection("blog", ({ data }) => !data.draft);
 
   const categories = [
     ...new Set(posts.map((post) => post.data.category).filter(Boolean)),
   ] as string[];
 
-  return categories.map((category) => {
+  const paths = [];
+
+  for (const category of categories) {
     const categoryPosts = posts
       .filter((post) => post.data.category === category)
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-    return {
-      params: {
-        slug: slugifyCategory(category),
-      },
-      props: {
-        categoryName: category,
-        posts: categoryPosts.slice(0, POSTS_PER_PAGE),
-        totalPosts: categoryPosts.length,
-        totalPages: Math.ceil(categoryPosts.length / POSTS_PER_PAGE),
-        currentPage: 1,
-      },
-    };
-  });
+    const totalPages = Math.ceil(categoryPosts.length / POSTS_PER_PAGE);
+
+    for (let page = 2; page <= totalPages; page++) {
+      paths.push({
+        params: {
+          slug: slugifyCategory(category),
+          page: String(page),
+        },
+      });
+    }
+  }
+
+  return paths;
 }
 
-const { categoryName, posts, totalPosts, totalPages, currentPage } =
-  Astro.props;
+const POSTS_PER_PAGE = 12;
 
-const categorySlug = slugifyCategory(categoryName);
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 
-const pageTitle = `${categoryName} Articles | ProTreeTrim Blog`;
+const categories = [
+  ...new Set(allPosts.map((post) => post.data.category).filter(Boolean)),
+] as string[];
+
+const currentCategorySlug = Astro.params.slug ?? "";
+const currentPage = Number(Astro.params.page);
+
+const categoryName = categories.find(
+  (category) => slugifyCategory(category) === currentCategorySlug,
+);
+
+if (!categoryName) {
+  throw new Error(`Invalid category slug: ${currentCategorySlug}`);
+}
+
+const categoryPosts = allPosts
+  .filter((post) => post.data.category === categoryName)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const totalPosts = categoryPosts.length;
+const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+if (
+  !Number.isInteger(currentPage) ||
+  currentPage < 2 ||
+  currentPage > totalPages
+) {
+  throw new Error(`Invalid category page number: ${Astro.params.page}`);
+}
+
+const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+const endIndex = startIndex + POSTS_PER_PAGE;
+const posts = categoryPosts.slice(startIndex, endIndex);
+
+const startPost = startIndex + 1;
+const endPost = Math.min(endIndex, totalPosts);
+
+const pageTitle = `${categoryName} Articles - Page ${currentPage} | ProTreeTrim Blog`;
 const pageDescription = `Read ${categoryName.toLowerCase()} articles from the ProTreeTrim blog.`;
-const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${categorySlug}/`;
-
-const startPost = totalPosts === 0 ? 0 : 1;
-const endPost = Math.min(posts.length, totalPosts);
+const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${currentCategorySlug}/page/${currentPage}/`;
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
   <Fragment slot="head">
     <link rel="canonical" href={canonicalUrl} />
+    <link
+      rel="prev"
+      href={currentPage - 1 === 1
+        ? `${SITE_CONFIG.siteUrl}/blog/category/${currentCategorySlug}/`
+        : `${SITE_CONFIG.siteUrl}/blog/category/${currentCategorySlug}/page/${currentPage - 1}/`}
+    />
     {
-      totalPages > 1 && (
+      currentPage < totalPages && (
         <link
           rel="next"
-          href={`${SITE_CONFIG.siteUrl}/blog/category/${categorySlug}/page/2/`}
+          href={`${SITE_CONFIG.siteUrl}/blog/category/${currentCategorySlug}/page/${currentPage + 1}/`}
         />
       )
     }
@@ -83,7 +124,9 @@ const endPost = Math.min(posts.length, totalPosts);
       <p
         style="font-size: 1.05rem; color: #95d5b2; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;"
       >
-        Browse all posts filed under {categoryName}.
+        Page {currentPage} of {totalPages}. Browse all posts filed under {
+          categoryName
+        }.
       </p>
     </div>
   </header>
@@ -159,9 +202,16 @@ const endPost = Math.min(posts.length, totalPosts);
           aria-label={`${categoryName} pagination`}
           style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 2.25rem;"
         >
-          <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; color: #94a3b8; font-weight: 800;">
+          <a
+            href={
+              currentPage - 1 === 1
+                ? `/blog/category/${currentCategorySlug}/`
+                : `/blog/category/${currentCategorySlug}/page/${currentPage - 1}/`
+            }
+            style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+          >
             ← Prev
-          </span>
+          </a>
 
           {Array.from({ length: totalPages }, (_, index) => index + 1).map(
             (page) =>
@@ -173,8 +223,8 @@ const endPost = Math.min(posts.length, totalPosts);
                 <a
                   href={
                     page === 1
-                      ? `/blog/category/${categorySlug}/`
-                      : `/blog/category/${categorySlug}/page/${page}/`
+                      ? `/blog/category/${currentCategorySlug}/`
+                      : `/blog/category/${currentCategorySlug}/page/${page}/`
                   }
                   style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
                 >
@@ -183,12 +233,18 @@ const endPost = Math.min(posts.length, totalPosts);
               ),
           )}
 
-          <a
-            href={`/blog/category/${categorySlug}/page/2/`}
-            style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
-          >
-            Next →
-          </a>
+          {currentPage < totalPages ? (
+            <a
+              href={`/blog/category/${currentCategorySlug}/page/${currentPage + 1}/`}
+              style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+            >
+              Next →
+            </a>
+          ) : (
+            <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; color: #94a3b8; font-weight: 800;">
+              Next →
+            </span>
+          )}
         </nav>
       )
     }
