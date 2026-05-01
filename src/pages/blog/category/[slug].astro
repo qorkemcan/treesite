@@ -14,6 +14,14 @@ const slugifyCategory = (value: string) =>
     .replace(/\s+/g, "-");
 
 export async function getStaticPaths() {
+  const localSlugifyCategory = (value: string) =>
+    value
+      .toLowerCase()
+      .trim()
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-");
+
   const posts = await getCollection("blog", ({ data }) => !data.draft);
 
   const categories = [
@@ -27,7 +35,7 @@ export async function getStaticPaths() {
 
     return {
       params: {
-        slug: slugifyCategory(category),
+        slug: localSlugifyCategory(category),
       },
       props: {
         categoryName: category,
