@@ -94,7 +94,7 @@ const pageDescription =
         style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
       >
         <div
-          style="display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 18px; align-items: center;"
+          style="display: grid; grid-template-columns: 1fr; gap: 18px; align-items: start;"
           class="blog-toolbar-grid"
         >
           <div>
@@ -318,13 +318,7 @@ const pageDescription =
 
   <style>
     .blog-toolbar-grid {
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-    }
-
-    @media (max-width: 820px) {
-      .blog-toolbar-grid {
-        grid-template-columns: 1fr;
-      }
+      grid-template-columns: 1fr;
     }
   </style>
 </MainLayout>
