@@ -1,9 +1,7 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
-import { SITE_CONFIG } from "../../config.js";
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { SITE_CONFIG } from "../../../config.js";
 import { getCollection } from "astro:content";
-
-const POSTS_PER_PAGE = 12;
 
 const normalizeCategory = (value: string) => {
   const clean = value.trim().replace(/\s+/g, " ");
@@ -30,6 +28,22 @@ const slugifyCategory = (value: string) =>
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/\s+/g, "-");
 
+export async function getStaticPaths() {
+  const POSTS_PER_PAGE = 12;
+
+  const allPosts = (
+    await getCollection("blog", ({ data, slug }) => !data.draft && !/\s\(\d+\)$/.test(slug))
+  ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+
+  return Array.from({ length: Math.max(totalPages - 1, 0) }, (_, index) => ({
+    params: { page: String(index + 2) },
+  }));
+}
+
+const POSTS_PER_PAGE = 12;
+
 const allPosts = (await getCollection("blog", ({ data, slug }) => !data.draft && !/\s\(\d+\)$/.test(slug))).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -42,91 +56,52 @@ const categories = [
   ),
 ].sort();
 
-const currentPage = 1;
 const totalPosts = allPosts.length;
 const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
-const posts = allPosts.slice(0, POSTS_PER_PAGE);
 
-const startPost = totalPosts === 0 ? 0 : 1;
-const endPost = Math.min(POSTS_PER_PAGE, totalPosts);
+const currentPage = Number(Astro.params.page);
 
-const pageTitle = "Florida Tree Care Blog | ProTreeTrim";
+if (
+  !Number.isInteger(currentPage) ||
+  currentPage < 2 ||
+  currentPage > totalPages
+) {
+  throw new Error(`Invalid blog page number: ${Astro.params.page}`);
+}
+
+const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+const endIndex = startIndex + POSTS_PER_PAGE;
+const posts = allPosts.slice(startIndex, endIndex);
+
+const startPost = startIndex + 1;
+const endPost = Math.min(endIndex, totalPosts);
+
+const pageTitle = `Florida Tree Care Blog - Page ${currentPage} | ProTreeTrim`;
 const pageDescription =
   "Expert guides on tree removal, storm cleanup, stump grinding, and Florida tree care best practices.";
-
-type PaginationItem = number | "ellipsis";
-
-const getCompactPaginationItems = (
-  currentPage: number,
-  totalPages: number,
-): PaginationItem[] => {
-  const pageNumbers = new Set<number>([1, totalPages, currentPage]);
-
-  if (currentPage <= 2) {
-    pageNumbers.add(2);
-    pageNumbers.add(3);
-  } else if (currentPage >= totalPages - 1) {
-    pageNumbers.add(totalPages - 2);
-    pageNumbers.add(totalPages - 1);
-  } else {
-    pageNumbers.add(currentPage - 1);
-    pageNumbers.add(currentPage + 1);
-  }
-
-  const sortedPages = [...pageNumbers]
-    .filter((page) => page >= 1 && page <= totalPages)
-    .sort((a, b) => a - b);
-
-  return sortedPages.reduce<PaginationItem[]>((items, page, index) => {
-    const previousPage = sortedPages[index - 1];
-
-    if (previousPage && page - previousPage > 1) {
-      items.push("ellipsis");
-    }
-
-    items.push(page);
-    return items;
-  }, []);
-};
-
-const paginationItems = getCompactPaginationItems(currentPage, totalPages);
 ---
 
 <MainLayout
   title={pageTitle}
   description={pageDescription}
-  canonical={`${SITE_CONFIG.siteUrl}/blog/`}
+  canonical={`${SITE_CONFIG.siteUrl}/blog/page/${currentPage}/`}
 >
   <Fragment slot="head">
+    <link
+      rel="prev"
+      href={currentPage - 1 === 1
+        ? `${SITE_CONFIG.siteUrl}/blog/`
+        : `${SITE_CONFIG.siteUrl}/blog/page/${currentPage - 1}/`}
+    />
     {
-      totalPages > 1 && (
-        <link rel="next" href={`${SITE_CONFIG.siteUrl}/blog/page/2/`} />
+      currentPage < totalPages && (
+        <link
+          rel="next"
+          href={`${SITE_CONFIG.siteUrl}/blog/page/${currentPage + 1}/`}
+        />
       )
     }
   </Fragment>
-
-
-  <style>
-    .blog-pagination-mobile-summary {
-      display: none !important;
-    }
-
-    @media (max-width: 640px) {
-      .blog-pagination-nav {
-        flex-wrap: nowrap !important;
-        gap: 8px !important;
-      }
-
-      .blog-pagination-page,
-      .blog-pagination-ellipsis {
-        display: none !important;
-      }
-
-      .blog-pagination-mobile-summary {
-        display: inline-flex !important;
-      }
-    }
-  </style>
 
   <header
     style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
@@ -145,8 +120,8 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
       <p
         style="font-size: 1.15rem; color: #95d5b2; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;"
       >
-        Practical Florida tree care guides for homeowners, HOAs, and property
-        managers.
+        Page {currentPage} of {totalPages}. Practical Florida tree care guides
+        for homeowners, HOAs, and property managers.
       </p>
     </div>
   </header>
@@ -195,7 +170,7 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
               <a
                 href="/blog/"
-                style="background: #1b4332; color: white; padding: 10px 14px; border-radius: 999px; text-decoration: none; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;"
+                style="background: #f8fafc; color: #1b4332; border: 1px solid #e2e8f0; padding: 10px 14px; border-radius: 999px; text-decoration: none; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;"
               >
                 All Posts
               </a>
@@ -217,152 +192,136 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     </section>
 
     <section style="max-width: 1100px; margin: 0 auto;">
-      {
-        posts.length === 0 ? (
-          <div style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2rem; text-align: center;">
-            <h2 style="margin-top: 0; color: #1b4332;">No blog posts yet</h2>
-            <p style="color: #475569; margin-bottom: 0;">
-              Add your first article inside <strong>src/content/blog/</strong>.
-            </p>
-          </div>
-        ) : (
-          <>
-            <div
-              id="blogNoResults"
-              style="display: none; background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
-            >
-              <h2 style="margin-top: 0; color: #1b4332;">
-                No matching articles found
-              </h2>
-              <p style="color: #475569; margin-bottom: 1rem;">
-                No posts matched your search across the full blog.
-              </p>
-              <button
-                id="clearBlogSearchBtn"
-                type="button"
-                style="background: #ea580c; color: white; border: none; padding: 12px 18px; border-radius: 12px; font-weight: 800; cursor: pointer;"
-              >
-                Clear search
-              </button>
-            </div>
+      <div
+        id="blogNoResults"
+        style="display: none; background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+      >
+        <h2 style="margin-top: 0; color: #1b4332;">
+          No matching articles found
+        </h2>
+        <p style="color: #475569; margin-bottom: 1rem;">
+          No posts matched your search across the full blog.
+        </p>
+        <button
+          id="clearBlogSearchBtn"
+          type="button"
+          style="background: #ea580c; color: white; border: none; padding: 12px 18px; border-radius: 12px; font-weight: 800; cursor: pointer;"
+        >
+          Clear search
+        </button>
+      </div>
 
-            <div id="blogGlobalResults" style="display: none;">
-              <div style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                <h2 style="margin: 0 0 0.5rem; color: #1b4332; font-size: 1.4rem;">
-                  Search results across the full blog
-                </h2>
-                <p
-                  id="blogGlobalResultsCount"
-                  style="margin: 0; color: #64748b;"
-                />
+      <div id="blogGlobalResults" style="display: none;">
+        <div
+          style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+        >
+          <h2 style="margin: 0 0 0.5rem; color: #1b4332; font-size: 1.4rem;">
+            Search results across the full blog
+          </h2>
+          <p id="blogGlobalResultsCount" style="margin: 0; color: #64748b;"></p>
+        </div>
+
+        <div
+          id="blogGlobalResultsGrid"
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
+        >
+        </div>
+      </div>
+
+      <div
+        id="blogPostGrid"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
+      >
+        {
+          posts.map((post) => (
+            <article style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+              <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                <a
+                  href={`/blog/category/${slugifyCategory(post.data.category)}/`}
+                  style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none;"
+                >
+                  {normalizeCategory(post.data.category)}
+                </a>
+                <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
+                  {post.data.pubDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
               </div>
 
-              <div
-                id="blogGlobalResultsGrid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
-              />
-            </div>
+              <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
+                <a
+                  href={`/blog/${post.slug}/`}
+                  style="color: #1b4332; text-decoration: none; font-weight: 900;"
+                >
+                  {post.data.title}
+                </a>
+              </h2>
 
-            <div
-              id="blogPostGrid"
-              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
-            >
-              {posts.map((post) => (
-                <article style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                  <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
-                    <a
-                      href={`/blog/category/${slugifyCategory(post.data.category)}/`}
-                      style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-decoration: none;"
-                    >
-                      {normalizeCategory(post.data.category)}
-                    </a>
-                    <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
-                      {post.data.pubDate.toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </span>
-                  </div>
+              <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
+                {post.data.description}
+              </p>
 
-                  <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
-                    <a
-                      href={`/blog/${post.slug}/`}
-                      style="color: #1b4332; text-decoration: none; font-weight: 900;"
-                    >
-                      {post.data.title}
-                    </a>
-                  </h2>
-
-                  <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
-                    {post.data.description}
-                  </p>
-
-                  <a
-                    href={`/blog/${post.slug}/`}
-                    style="display: inline-block; background: #ea580c; color: white; text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 800;"
-                  >
-                    Read article
-                  </a>
-                </article>
-              ))}
-            </div>
-
-            {totalPages > 1 && (
-              <nav
-                id="blogPagination"
-                class="blog-pagination-nav"
-                aria-label="Blog pagination"
-                style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 2.25rem;"
+              <a
+                href={`/blog/${post.slug}/`}
+                style="display: inline-block; background: #ea580c; color: white; text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 800;"
               >
-                <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; color: #94a3b8; font-weight: 800;">
-                  ← Prev
-                </span>
+                Read article
+              </a>
+            </article>
+          ))
+        }
+      </div>
 
-                <span
-                  class="blog-pagination-mobile-summary"
-                  style="display: none; align-items: center; justify-content: center; min-width: 132px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; font-weight: 900;"
-                >
-                  Page {currentPage} of {totalPages}
-                </span>
+      {
+        totalPages > 1 && (
+          <nav
+            id="blogPagination"
+            aria-label="Blog pagination"
+            style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 2.25rem;"
+          >
+            <a
+              href={
+                currentPage - 1 === 1
+                  ? "/blog/"
+                  : `/blog/page/${currentPage - 1}/`
+              }
+              style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+            >
+              ← Prev
+            </a>
 
-                {paginationItems.map((item, index) =>
-              item === "ellipsis" ? (
-                <span
-                  class="blog-pagination-ellipsis"
-                  aria-hidden="true"
-                  style="display: inline-flex; align-items: center; justify-content: center; min-width: 34px; height: 46px; color: #94a3b8; font-weight: 900;"
-                >
-                  …
-                </span>
-              ) : item === currentPage ? (
-                <span
-                  class="blog-pagination-page"
-                  aria-current="page"
-                  style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; background: #1b4332; color: white; font-weight: 900;"
-                >
-                  {item}
-                </span>
-              ) : (
-                <a
-                  class="blog-pagination-page"
-                  href={item === 1 ? "/blog/" : `/blog/page/${item}/`}
-                  style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
-                >
-                  {item}
-                </a>
-              ),
+            {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+              (page) =>
+                page === currentPage ? (
+                  <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; background: #1b4332; color: white; font-weight: 900;">
+                    {page}
+                  </span>
+                ) : (
+                  <a
+                    href={page === 1 ? "/blog/" : `/blog/page/${page}/`}
+                    style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+                  >
+                    {page}
+                  </a>
+                ),
             )}
 
-                <a
-                  href="/blog/page/2/"
-                  style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
-                >
-                  Next →
-                </a>
-              </nav>
+            {currentPage < totalPages ? (
+              <a
+                href={`/blog/page/${currentPage + 1}/`}
+                style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; color: #1b4332; text-decoration: none; font-weight: 800;"
+              >
+                Next →
+              </a>
+            ) : (
+              <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; color: #94a3b8; font-weight: 800;">
+                Next →
+              </span>
             )}
-          </>
+          </nav>
         )
       }
     </section>
