@@ -100,69 +100,247 @@ const communityStyle =
       ? "established suburban"
       : "rural and residential";
 
+const rawCityDescription = String(cityData.Description || "").trim();
+const cityDescription = rawCityDescription
+  .replace(/\s*\([^)]*service area\)\s*/gi, "")
+  .replace(/\s+/g, " ")
+  .trim();
+
+const localContextSummary =
+  cityDescription ||
+  `${cityName} properties in ${countyName} County need tree work decisions that reflect local access, storm exposure, dominant tree species, and the way residential lots are used near ${landmark}.`;
+
 const serviceProfiles = {
   "tree-removal": {
     shortLabel: "tree removal",
     urgencyLabel: "planned and hazardous removals",
     serviceFolder: "removal",
     richTextSource: cityRemoval,
-    description: `Professional tree removal in ${cityName}, FL for hazardous trees, storm-damaged trees, crane picks, and tight-access removals near ${landmark}. Licensed local crews serving ${countyName} County.`,
-    intro: `When a tree in ${cityName} becomes unsafe, overcrowded, storm-damaged, or structurally compromised, the goal is not just cutting it down. The goal is removing it without damaging roofs, driveways, utilities, fences, irrigation, or the long-term usability of the property near ${landmark}.`,
-    summaryTitle: `Tree Removal Planning in ${cityName}`,
-    summaryText: `Our local removal workflow focuses on sectional dismantling, target protection, rigging control, and safe debris handling for ${mainTree}. In ${countyName} County, removal work must account for access constraints, storm exposure, and property protection from the first cut to the final cleanup.`,
+    heroKicker: `Tree Removal Planning • Risk Review • Controlled Dismantling`,
+    heroLead: `Tree removal in ${cityName} is a risk decision first and a cutting job second. The page is focused on unsafe, declining, storm-damaged, or poorly placed trees where removal may protect roofs, driveways, utilities, fences, and usable yard space near ${landmark}.`,
+    description: `Tree removal in ${cityName}, FL for hazardous trees, storm-damaged trees, tight-access removals, structural defects, and property protection near ${landmark}. Local dispatch coordination for ${countyName} County homeowners.`,
+    intro: `When a tree in ${cityName} becomes unsafe, overcrowded, storm-damaged, or structurally compromised, the goal is not simply cutting it down. The better question is whether removal is safer than retention, and how the work can be planned without damaging roofs, driveways, utilities, fences, irrigation, or the long-term usability of the property near ${landmark}.`,
+    summaryTitle: `Tree Removal Decision Factors in ${cityName}`,
+    summaryText: `Removal planning in ${countyName} County focuses on target protection, sectional dismantling, rigging control, debris handling, and whether the tree can realistically remain in place. For ${mainTree}, that means looking at structure, lean, root conditions, canopy weight, storm exposure, and nearby hardscape before work begins.`,
     permitFaq: `Do I need a permit for tree removal in ${cityName}?`,
-    permitAnswer: `Permit rules in ${cityName} can depend on tree condition, local rules, and property type. Hazardous residential trees may qualify for removal without a standard permit in some Florida situations when properly documented, but homeowners should always verify current ${countyName} County and city requirements for non-emergency removals.`,
+    permitAnswer: `Permit rules in ${cityName} can depend on tree condition, local ordinances, property type, protected species, and whether the tree is an active hazard. Hazardous residential trees may qualify for a different documentation path in some Florida situations, but homeowners should verify current ${countyName} County and city requirements before non-emergency removals.`,
     costFaq: `What affects tree removal cost in ${cityName}?`,
-    costAnswer: `Tree removal pricing in ${cityName} usually depends on tree size, access, crane need, proximity to structures, debris volume, and whether the tree is storm-damaged or unstable. Tight drop zones near ${landmark} can also increase labor and rigging complexity.`,
+    costAnswer: `Tree removal pricing in ${cityName} usually depends on tree size, access, crane or rigging needs, proximity to structures, debris volume, risk level, and whether the tree is storm-damaged or unstable. Tight drop zones near ${landmark} can increase setup time and labor because sections may need to be lowered instead of dropped.`,
     timingFaq: `When should a tree be removed instead of pruned in ${cityName}?`,
-    timingAnswer: `A tree is more likely to need removal when structural defects, root failure, advanced decay, severe storm damage, or unsafe lean make long-term retention unrealistic. In many ${cityName} cases, pruning reduces risk, but in others removal is the safer and more durable decision.`,
-    residentialNote: `For residential properties in ${cityName}, we prioritize controlled dismantling, lawn protection, and hardscape protection. That matters near patios, fences, pool decks, and driveways where even a routine tree removal can become a technical rigging project.`,
-    ctaTitle: `Get a Tree Removal Estimate in ${cityName}`,
-    ctaText: `Speak with a licensed dispatch team for planned or hazardous tree removal near ${landmark}.`,
-    imageCaption: `Recent tree removal work completed near ${landmark} in ${cityName}.`,
+    timingAnswer: `Removal becomes more likely when a tree has root failure, major decay, severe storm damage, active lean, large dead sections, repeated limb failures, or structural defects that pruning cannot correct. In many ${cityName} cases, pruning is enough; in others, keeping the tree creates ongoing property risk.`,
+    residentialNote: `For residential properties in ${cityName}, tree removal is mainly about controlled dismantling, lawn protection, hardscape protection, and cleanup. Patios, fences, pool decks, driveways, rooflines, and neighboring lots can turn a routine removal into a technical rigging project.`,
+    ctaTitle: `Plan Tree Removal in ${cityName}`,
+    ctaText: `Connect with local tree removal dispatch for risk review, access planning, and estimate coordination near ${landmark}.`,
+    imageCaption: `Tree removal planning and controlled work near ${landmark} in ${cityName}.`,
     finalCta: "REQUEST A TREE REMOVAL ESTIMATE",
+    statOneLabel: "Removal focus",
+    statOneValue: "Risk & access",
+    statTwoLabel: "Site review",
+    statTwoValue: "Targets + rigging",
+    statThreeValue: "Estimate coordination",
+    processTitle: `How Tree Removal Starts in ${cityName}`,
+    processSteps: [
+      {
+        icon: "📞",
+        title: "1. Describe the Risk",
+        text: `Call with the tree location, visible defects, nearby targets, and whether the issue is routine or hazardous near ${landmark}.`,
+      },
+      {
+        icon: "📋",
+        title: "2. Review Access & Targets",
+        text: `A local crew evaluates drop zones, rooflines, utilities, fences, driveways, and whether rigging or crane support may be needed.`,
+      },
+      {
+        icon: "✅",
+        title: "3. Remove, Protect & Clean Up",
+        text: `The work plan focuses on controlled cuts, property protection, debris handling, and leaving the area ready for the next use.`,
+      },
+    ],
+    decisionTitle: `Tree Removal Decision Guide for ${cityName}`,
+    decisionLead: `This section separates removal intent from pruning, trimming, or stump work. It focuses on the signs that make full removal the safer or more practical option.`,
+    decisionCards: [
+      {
+        title: "Removal trigger",
+        text: `Advanced decay, root movement, severe lean, major deadwood, split trunks, storm damage, or repeated limb failure can shift a tree from maintainable to removal candidate.`,
+      },
+      {
+        title: "Property protection",
+        text: `Removal planning should account for rooflines, driveways, irrigation, pool cages, fences, parked vehicles, and nearby homes before the first cut.`,
+      },
+      {
+        title: "Documentation",
+        text: `For protected or hazardous trees, photos, condition notes, and local rule checks can matter before work starts, especially outside true emergency conditions.`,
+      },
+    ],
+    reviewTitle: "Removal Site Review",
+    reviewCards: [
+      { label: "Primary question", value: "Can this tree remain safely?" },
+      { label: "Main constraints", value: "Targets, access, rigging, debris" },
+      { label: "Desired result", value: "Safe removal + clean usable space" },
+    ],
+    localOperationsTitle: "Removal Logistics",
+    distinctSupport: `This ${cityName} page is intentionally written around tree removal decisions: whether the tree should stay, what could be damaged during removal, and what planning is needed before cutting starts.`,
+    longFormTitle: `When Tree Removal Makes Sense in ${cityName}`,
+    localNoteLabel: "Removal note",
+    fallbackTemplates: [
+      `In ${cityName}, tree removal projects need a plan that considers ${mainTree}, local storm exposure, access around ${landmark}, and the targets below the canopy. The work is different from pruning because the full tree, debris, stump decision, and final site condition all have to be considered before the job begins.`,
+      `Property owners in ${cityName} usually consider tree removal when risk, placement, or decline makes ongoing maintenance impractical. Near ${landmark}, removal planning should account for driveways, fences, rooflines, utility awareness, and how the yard will be used after the tree is gone.`,
+      `Tree removal in ${countyName} County is strongest when it starts with a site-specific risk review. For ${mainTree} in ${cityName}, that means looking at lean, decay, canopy load, root conditions, and whether controlled dismantling is safer than standard cutting.`,
+    ],
   },
   "stump-grinding": {
     shortLabel: "stump grinding",
     urgencyLabel: "stump removal and grade restoration",
     serviceFolder: "stump",
     richTextSource: cityStump,
-    description: `Professional stump grinding in ${cityName}, FL for old stumps, trip hazards, regrading, replanting prep, and landscape restoration near ${landmark}. Local crews serving ${countyName} County.`,
-    intro: `A stump left behind in ${cityName} does more than look unfinished. It can interfere with mowing, attract moisture and pests, limit replanting, and create trip hazards in active yards. Near ${landmark}, proper stump grinding is really about restoring the usable surface of the property.`,
+    heroKicker: `Stump Grinding • Surface Restoration • Replanting Prep`,
+    heroLead: `Stump grinding in ${cityName} is about reclaiming usable ground after a tree is gone. This page focuses on stump diameter, root flare, grinding depth, chips, soil level, mowing hazards, replanting plans, and landscape restoration near ${landmark}.`,
+    description: `Stump grinding in ${cityName}, FL for old stumps, trip hazards, root flare cleanup, regrading, sod preparation, and landscape restoration near ${landmark}. Local dispatch coordination for ${countyName} County.`,
+    intro: `A stump left behind in ${cityName} does more than look unfinished. It can interfere with mowing, hold moisture, attract pests, block replanting, create trip hazards, or prevent a clean grade. Near ${landmark}, proper stump grinding is really about restoring the usable surface of the property.`,
     summaryTitle: `Stump Grinding Conditions in ${cityName}`,
-    summaryText: `Our stump grinding approach in ${countyName} County focuses on depth control, root flare management, chip removal strategy, and clean grade restoration for ${mainTree}. We account for soil conditions, nearby utilities, irrigation, and the intended future use of the area.`,
+    summaryText: `Stump grinding in ${countyName} County focuses on stump diameter, root flare spread, access width, grinding depth, chip handling, irrigation awareness, and whether the area will become sod, mulch, pavers, or a planting bed. ${mainTree} can influence wood hardness, root spread, and cleanup expectations.`,
     permitFaq: `Do you usually need a permit for stump grinding in ${cityName}?`,
-    permitAnswer: `In many cases, stump grinding itself is more straightforward than full tree removal, but local rules in ${cityName} can still matter depending on site conditions, protected trees, utility conflicts, or larger landscape work. It is smart to confirm local requirements before work begins.`,
+    permitAnswer: `Stump grinding itself is often more straightforward than full tree removal, but local rules in ${cityName} can still matter if protected trees, utilities, right-of-way areas, or larger landscape work are involved. Homeowners should verify local requirements when the stump is tied to a regulated removal or public-facing area.`,
     costFaq: `What affects stump grinding cost in ${cityName}?`,
-    costAnswer: `Stump grinding cost in ${cityName} usually depends on stump diameter, root flare spread, wood hardness, access, cleanup needs, and whether the area needs regrading or backfill after grinding. Tight access near ${landmark} can also affect equipment choice and labor.`,
+    costAnswer: `Stump grinding cost in ${cityName} usually depends on stump diameter, root flare spread, wood hardness, access, cleanup needs, chip removal, and whether the area needs backfill or regrading after grinding. Tight gates, slopes, pavers, or irrigation near ${landmark} can also affect equipment choice.`,
     timingFaq: `Should I grind a stump or leave it in place in ${cityName}?`,
-    timingAnswer: `If the stump is in the way, holds moisture, creates a trip hazard, attracts pests, or blocks replanting or sod work, grinding is usually the better choice. In active yards across ${cityName}, leaving it rarely improves the long-term usability of the space.`,
-    residentialNote: `For homes in ${cityName}, stump grinding is often the fastest way to reclaim lawn space without major excavation. We plan the work around irrigation, edging, pavers, and the final grade so the area is ready for cleanup, sod, or replanting.`,
-    ctaTitle: `Get a Stump Grinding Estimate in ${cityName}`,
-    ctaText: `Connect with local stump grinding crews for clean removal and grade restoration near ${landmark}.`,
-    imageCaption: `Recent stump grinding work completed near ${landmark} in ${cityName}.`,
+    timingAnswer: `Grinding is usually the better choice when a stump is in the way, holds moisture, creates a trip hazard, attracts insects, blocks mowing, prevents sod installation, or limits replanting. Leaving a stump may be acceptable only when it is away from use areas and not interfering with the landscape plan.`,
+    residentialNote: `For homes in ${cityName}, stump grinding is often the fastest way to reclaim lawn space without major excavation. The work should be planned around irrigation, edging, pavers, root flare spread, and the final grade so the area is ready for cleanup, sod, mulch, or replanting.`,
+    ctaTitle: `Plan Stump Grinding in ${cityName}`,
+    ctaText: `Connect with local stump grinding dispatch for access review, grinding depth, chip handling, and grade restoration near ${landmark}.`,
+    imageCaption: `Stump grinding and yard restoration work near ${landmark} in ${cityName}.`,
     finalCta: "REQUEST A STUMP GRINDING ESTIMATE",
+    statOneLabel: "Grinding focus",
+    statOneValue: "Depth + access",
+    statTwoLabel: "Aftercare",
+    statTwoValue: "Chips + grade",
+    statThreeValue: "Estimate coordination",
+    processTitle: `How Stump Grinding Starts in ${cityName}`,
+    processSteps: [
+      {
+        icon: "📏",
+        title: "1. Measure the Stump",
+        text: `Share stump diameter, height, root flare spread, and whether access near ${landmark} is through a gate, side yard, or open lawn.`,
+      },
+      {
+        icon: "🧭",
+        title: "2. Choose the Finish",
+        text: `The crew reviews whether you want chips left, chips hauled, backfill, sod preparation, mulch bed conversion, or replanting space.`,
+      },
+      {
+        icon: "🌱",
+        title: "3. Grind & Restore Grade",
+        text: `Grinding focuses on usable surface restoration while protecting irrigation, edging, pavers, and nearby landscape features.`,
+      },
+    ],
+    decisionTitle: `Stump Grinding Decision Guide for ${cityName}`,
+    decisionLead: `This section separates stump grinding from tree removal. The tree is already gone or being removed; the question is how to make the ground usable again.`,
+    decisionCards: [
+      {
+        title: "Grinding depth",
+        text: `Depth depends on whether the area will become lawn, mulch, a planting bed, or a construction surface. A shallow grind may not be enough for replanting or sod.`,
+      },
+      {
+        title: "Chip handling",
+        text: `Wood chips can be reused as mulch, left to settle, or hauled away depending on the final landscape plan and how clean the finished area needs to be.`,
+      },
+      {
+        title: "Access risks",
+        text: `Narrow gates, pool decks, irrigation heads, pavers, slopes, and tight side yards can change equipment choice and cleanup expectations.`,
+      },
+    ],
+    reviewTitle: "Stump & Grade Review",
+    reviewCards: [
+      { label: "Primary question", value: "What should this area become?" },
+      { label: "Main constraints", value: "Diameter, root flare, gates, irrigation" },
+      { label: "Desired result", value: "Smooth grade + usable yard space" },
+    ],
+    localOperationsTitle: "Stump Grinding Logistics",
+    distinctSupport: `This ${cityName} page is intentionally written around stump grinding decisions: stump size, access, grinding depth, chips, backfill, sod, replanting, and final grade.`,
+    longFormTitle: `What Stump Grinding Solves in ${cityName}`,
+    localNoteLabel: "Stump note",
+    fallbackTemplates: [
+      `In ${cityName}, stump grinding is mainly a surface restoration job. Around ${landmark}, the right plan should consider stump diameter, root flare spread, irrigation, gate access, and whether the finished area will be lawn, mulch, pavers, or a new planting bed.`,
+      `A stump can keep a ${cityName} yard from being usable even after the tree is gone. Grinding helps remove mowing obstacles, trip hazards, moisture pockets, and replanting conflicts without the disruption of full root excavation.`,
+      `For ${mainTree} in ${countyName} County, stump grinding should be planned around wood hardness, root spread, chip volume, and final grade. The best result is not just a lower stump; it is a cleaner area that matches the homeowner's next landscape step.`,
+    ],
   },
   "emergency-service": {
     shortLabel: "emergency tree service",
     urgencyLabel: "storm response and urgent hazard mitigation",
     serviceFolder: "emergency",
     richTextSource: cityEmergency,
-    description: `24/7 emergency tree service in ${cityName}, FL for storm-damaged trees, fallen limbs, blocked driveways, dangerous lean, and urgent hazard mitigation near ${landmark}. Rapid dispatch across ${countyName} County.`,
-    intro: `Emergency tree service in ${cityName} is about stabilizing risk fast. When a storm-damaged tree threatens a roof, driveway, fence, access road, or utility corridor near ${landmark}, the first objective is not appearance. It is immediate hazard control, safe access, and damage containment.`,
+    heroKicker: `Emergency Tree Service • Storm Damage • Hazard Triage`,
+    heroLead: `Emergency tree service in ${cityName} is about reducing immediate danger. This page focuses on storm-damaged trees, blocked driveways, roof impact, hanging limbs, split trunks, unsafe lean, utility awareness, and urgent access restoration near ${landmark}.`,
+    description: `Emergency tree service in ${cityName}, FL for storm-damaged trees, fallen limbs, blocked driveways, dangerous lean, roof impact, and urgent hazard mitigation near ${landmark}. Local dispatch coordination across ${countyName} County.`,
+    intro: `Emergency tree service in ${cityName} is about stabilizing risk fast. When a storm-damaged tree threatens a roof, driveway, fence, access road, vehicle, or utility corridor near ${landmark}, the first objective is not appearance. It is immediate hazard control, safe access, and damage containment.`,
     summaryTitle: `Emergency Tree Risk in ${cityName}`,
-    summaryText: `Our emergency response model in ${countyName} County focuses on scene safety, exclusion zones, loaded limb control, rigging, and storm-driven defect recognition for ${mainTree}. In urgent conditions, the right first steps reduce secondary damage and make the property safer while long-term decisions are made.`,
+    summaryText: `Emergency response in ${countyName} County focuses on scene safety, exclusion zones, loaded limb control, roofline risk, access restoration, utility awareness, and storm-driven defect recognition for ${mainTree}. In urgent conditions, the right first steps reduce secondary damage while long-term removal or pruning decisions are made.`,
     permitFaq: `Can emergency tree work start quickly in ${cityName}?`,
-    permitAnswer: `When a tree creates an active hazard in ${cityName}, emergency work can often begin much faster than routine scheduled service. Exact documentation and permit expectations may vary by municipality, but real safety threats near homes, access points, or utilities are treated differently from standard maintenance.`,
+    permitAnswer: `When a tree creates an active hazard in ${cityName}, emergency mitigation can often begin faster than routine scheduled service. Documentation and permit expectations may vary by municipality, but safety threats near homes, access points, vehicles, or utilities are treated differently from standard maintenance.`,
     costFaq: `Why does emergency tree service cost more in ${cityName}?`,
-    costAnswer: `Emergency tree service in ${cityName} may involve after-hours dispatch, unstable wood, storm conditions, blocked access, complex rigging, utility awareness, and immediate risk mitigation. Those factors can make emergency response more labor-intensive than a routine scheduled job.`,
+    costAnswer: `Emergency tree service in ${cityName} may involve after-hours coordination, unstable wood, storm conditions, blocked access, roof protection, complex rigging, utility awareness, and immediate risk mitigation. Those factors can make emergency response more labor-intensive than routine scheduled work.`,
     timingFaq: `What counts as a tree emergency in ${cityName}?`,
-    timingAnswer: `A tree emergency in ${cityName} usually means immediate danger: a tree or limb on a structure, a blocked driveway, a split trunk, an unstable lean, storm-damaged hanging limbs, or a condition that threatens people, vehicles, or utility access near the property.`,
-    residentialNote: `For homeowners in ${cityName}, emergency response is about making the site safer before the damage spreads. We focus on access restoration, roofline risk, suspended limbs, and controlled removal of unstable sections without turning an emergency into a larger loss.`,
-    ctaTitle: `Request Emergency Tree Service in ${cityName}`,
-    ctaText: `Rapid local dispatch for storm-damaged trees and urgent hazards near ${landmark}.`,
-    imageCaption: `Recent emergency tree service completed near ${landmark} in ${cityName}.`,
+    timingAnswer: `A tree emergency in ${cityName} usually means immediate danger: a tree or limb on a structure, blocked driveway, split trunk, unstable lean, storm-damaged hanging limbs, or any condition that threatens people, vehicles, rooflines, fences, or utility access.`,
+    residentialNote: `For homeowners in ${cityName}, emergency response is about making the site safer before damage spreads. The first priorities are access restoration, roofline risk, suspended limbs, exclusion zones, and controlled removal of unstable sections without turning an emergency into a larger loss.`,
+    ctaTitle: `Request Emergency Tree Help in ${cityName}`,
+    ctaText: `Connect with local emergency tree dispatch for hazard triage and urgent site review near ${landmark}.`,
+    imageCaption: `Emergency tree hazard response near ${landmark} in ${cityName}.`,
     finalCta: "REQUEST EMERGENCY TREE SERVICE",
+    statOneLabel: "Emergency focus",
+    statOneValue: "Hazard triage",
+    statTwoLabel: "Priority review",
+    statTwoValue: "Access + rooflines",
+    statThreeValue: "Urgent coordination",
+    processTitle: `How Emergency Tree Service Starts in ${cityName}`,
+    processSteps: [
+      {
+        icon: "🚨",
+        title: "1. Identify Immediate Danger",
+        text: `Call with the hazard location, whether access is blocked, whether a structure is hit, and whether limbs are hanging or under tension.`,
+      },
+      {
+        icon: "🛑",
+        title: "2. Stabilize the Scene",
+        text: `The crew prioritizes exclusion zones, roofline risk, loaded limbs, utility awareness, and safe access before cosmetic cleanup.`,
+      },
+      {
+        icon: "🌪️",
+        title: "3. Mitigate & Plan Next Steps",
+        text: `Emergency work focuses on reducing immediate risk, then deciding whether full removal, pruning, debris cleanup, or documentation is needed.`,
+      },
+    ],
+    decisionTitle: `Emergency Tree Decision Guide for ${cityName}`,
+    decisionLead: `This section separates urgent hazard response from routine trimming or planned removal. The question is what must be made safe first.`,
+    decisionCards: [
+      {
+        title: "Immediate hazard",
+        text: `Roof impact, blocked driveways, split trunks, hanging limbs, leaning trees, or broken limbs over walkways can justify urgent response.`,
+      },
+      {
+        title: "Do not DIY",
+        text: `Storm-damaged limbs can be under tension. Cutting loaded wood without rigging experience can cause sudden movement and secondary damage.`,
+      },
+      {
+        title: "Documentation",
+        text: `Photos, time stamps, access notes, and damage details can help homeowners explain the emergency and support insurance or permit conversations.`,
+      },
+    ],
+    reviewTitle: "Emergency Hazard Review",
+    reviewCards: [
+      { label: "Primary question", value: "What must be made safe first?" },
+      { label: "Main constraints", value: "Loaded limbs, structures, access, utilities" },
+      { label: "Desired result", value: "Hazard reduced + access restored" },
+    ],
+    localOperationsTitle: "Emergency Response Logistics",
+    distinctSupport: `This ${cityName} page is intentionally written around emergency intent: immediate hazard control, access, roofline risk, storm damage, hanging limbs, and what should not wait.`,
+    longFormTitle: `When a Tree Problem Becomes an Emergency in ${cityName}`,
+    localNoteLabel: "Emergency note",
+    fallbackTemplates: [
+      `In ${cityName}, emergency tree service is different from routine tree care because the first priority is site safety. Near ${landmark}, crews may need to address blocked access, roofline exposure, unstable limbs, and storm-driven defects before full cleanup can begin.`,
+      `A tree issue becomes urgent in ${countyName} County when it threatens people, structures, access, or utilities. For ${mainTree} in ${cityName}, storm stress, saturated soils, and hanging limbs can create risks that are not obvious from the ground.`,
+      `Emergency response near ${landmark} should start with hazard triage: what is under tension, what is blocking access, what is touching a structure, and what could move if cut incorrectly. That is what separates emergency service from scheduled trimming.`,
+    ],
   },
 };
 
@@ -178,10 +356,10 @@ const finalDynamicTip = selectedTemplate
   .replaceAll("[MainTreeType]", mainTree)
   .replaceAll("[FocusService]", serviceInfo.name);
 
-const genericCityTemplates = [
-  `In ${cityName}, our crews approach ${serviceProfile.shortLabel} with a strong focus on safety, property protection, and practical Florida decision-making. Projects near ${landmark} often require extra planning because ${mainTree} can respond unpredictably to saturated soils, wind exposure, and tight residential access.`,
-  `Property owners in ${cityName} often need more than a generic tree crew. They need teams who understand how ${mainTree} behaves in ${countyName} County conditions and how to execute ${serviceProfile.shortLabel} without creating new risks for roofs, driveways, utilities, and neighboring structures.`,
-  `Near ${landmark}, tree work in ${cityName} has to balance biology, rigging, and real property constraints. Our local approach to ${serviceProfile.shortLabel} is built around controlled execution, clear site planning, and Florida-specific risk reduction for residential and commercial properties.`,
+const genericCityTemplates = serviceProfile.fallbackTemplates || [
+  `In ${cityName}, ${serviceProfile.shortLabel} should be planned around local access, storm exposure, dominant tree species, and the way properties are used near ${landmark}.`,
+  `Property owners in ${cityName} need ${serviceProfile.shortLabel} guidance that reflects ${countyName} County conditions, not a one-size-fits-all tree care template.`,
+  `Near ${landmark}, ${serviceProfile.shortLabel} should account for ${mainTree}, property layout, cleanup expectations, and realistic Florida weather risk.`,
 ];
 
 const templateChoiceIndex =
@@ -228,11 +406,11 @@ const finalFaqs = [
 ];
 
 const titleTemplates = [
-  `#1 ${serviceInfo.name} in ${cityName}, FL | ${currentMonth} ${currentYear} Quotes`,
-  `Expert ${serviceInfo.name} ${cityName} | Certified Arborist near ${landmark}`,
-  `Top Rated ${serviceInfo.name} in ${cityName} | Licensed & Insured ${currentYear}`,
-  `Trusted ${serviceInfo.name} Specialists in ${cityName}, FL (${currentMonth})`,
-  `Affordable ${serviceInfo.name} in ${cityName} | Free Estimates ${currentYear}`,
+  `${serviceInfo.name} in ${cityName}, FL | Local Tree Service Dispatch`,
+  `${cityName} ${serviceInfo.name} | Property Risk & Site Review`,
+  `${serviceInfo.name} Near ${landmark} in ${cityName}, FL`,
+  `${cityName}, FL ${serviceInfo.name} | Estimate Coordination`,
+  `${serviceInfo.name} for ${cityName} Homes | ${countyName} County`,
 ];
 const titleIndex =
   Math.abs(cityName.length + serviceInfo.name.length) % titleTemplates.length;
@@ -240,11 +418,19 @@ const finalPageTitle = titleTemplates[titleIndex];
 const finalPageDescription = serviceProfile.description;
 
 const seed = cityName.length + countyName.length;
-const activeCrews = (seed % 5) + 3;
-const avgResponse = (seed % 15) + 25;
+const planningPriority =
+  serviceInfo.prefix === "emergency-service"
+    ? "Urgent hazard review"
+    : serviceInfo.prefix === "stump-grinding"
+      ? "Surface restoration"
+      : "Risk-based removal";
 
 const nearbyCitiesList = cityData.NearbyCities || "";
-const serviceAreaNote = `Our dispatch model keeps crews moving through ${cityName}, nearby areas like ${nearbyCitiesList}, and the wider ${countyName} County region. That helps us respond faster for ${serviceProfile.urgencyLabel} while keeping work quality consistent across residential and commercial properties near ${landmark}.`;
+const serviceAreaNote = `Our dispatch model connects ${cityName}, nearby areas like ${nearbyCitiesList}, and the wider ${countyName} County region with local provider coordination for ${serviceProfile.urgencyLabel}. Scheduling and availability can vary by storm volume, access conditions, and the complexity of work near ${landmark}.`;
+
+const processSteps = serviceProfile.processSteps || [];
+const decisionCards = serviceProfile.decisionCards || [];
+const reviewCards = serviceProfile.reviewCards || [];
 
 const speciesMap = {
   "Live Oaks":
@@ -359,8 +545,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
       <div
         style="font-size: 0.85rem; margin-bottom: 1rem; color: #ffb703; font-weight: 800; text-transform: uppercase;"
       >
-        Verified Arborist Service • {currentMonth}
-        {currentYear}
+        {serviceProfile.heroKicker}
       </div>
       <h1
         style="margin: 0; font-size: clamp(2rem, 7vw, 3.5rem); font-weight: 900; line-height: 1.1;"
@@ -371,10 +556,9 @@ const structuredFaqs = finalFaqs.map((faq) => ({
       <p
         style="font-size: 1.25rem; margin-top: 1.2rem; color: #95d5b2; max-width: 850px; margin-left: auto; margin-right: auto; line-height: 1.45;"
       >
-        Specialized {serviceProfile.shortLabel} in the <strong
-          >{communityStyle}</strong
-        > areas of {cityName}. {treeRiskNote} Our local crews are currently active
-        near <strong>{landmark}</strong>.
+        {serviceProfile.heroLead}
+        <br /><br />
+        <strong>{treeRiskNote}</strong>
       </p>
     </div>
   </header>
@@ -385,7 +569,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         <li><a href="/">Home</a></li>
         <li>Florida</li>
         <li>
-          <a href={`/county/${countySlug}`}>{countyName}</a>
+          <a href={`/county/${countySlug}/`}>{countyName}</a>
         </li>
         {
           serviceInfo.prefix === "tree-removal" ? (
@@ -393,7 +577,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
           ) : (
             <>
               <li>
-                <a href={`/tree-removal-${citySlugClean}`}>{cityName}</a>
+                <a href={`/tree-removal-${citySlugClean}/`}>{cityName}</a>
               </li>
               <li class="active">{serviceInfo.name}</li>
             </>
@@ -431,19 +615,19 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         <div style="text-align: left;">
           <small
             style="display:block; color:#94a3b8; font-weight:700; font-size:0.65rem; text-transform:uppercase;"
-            >Crews in {cityName}</small
+            >{serviceProfile.statOneLabel}</small
           >
           <span style="font-weight:800; color:#1b4332;"
-            >{activeCrews} Active</span
+            >{serviceProfile.statOneValue}</span
           >
         </div>
         <div style="text-align: left;">
           <small
             style="display:block; color:#94a3b8; font-weight:700; font-size:0.65rem; text-transform:uppercase;"
-            >Response Time</small
+            >{serviceProfile.statTwoLabel}</small
           >
           <span style="font-weight:800; color:#1b4332;"
-            >~{avgResponse} Mins</span
+            >{serviceProfile.statTwoValue}</span
           >
         </div>
         <div style="text-align: left;">
@@ -451,7 +635,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
             style="display:block; color:#94a3b8; font-weight:700; font-size:0.65rem; text-transform:uppercase;"
             >Status</small
           >
-          <span style="font-weight:800; color:#16a34a;">Dispatch Open</span>
+          <span style="font-weight:800; color:#16a34a;">{serviceProfile.statThreeValue}</span>
         </div>
       </div>
     </div>
@@ -467,44 +651,57 @@ const structuredFaqs = finalFaqs.map((faq) => ({
       >
         {serviceProfile.summaryText}
         <br /><br />
-        <em>Local note:</em>
+        <em>Local context:</em>
+        {localContextSummary}
+        <br /><br />
+        <em>{serviceProfile.localNoteLabel}:</em>
         {selectedRichText.split(".").slice(0, 2).join(".").trim()}.
       </p>
     </div>
 
     <section style="margin-top: 4rem;">
       <h2
+        style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 0.8rem;"
+      >
+        {serviceProfile.decisionTitle}
+      </h2>
+      <p
+        style="max-width: 760px; margin: 0 auto 2rem; text-align: center; color: #4b5563; line-height: 1.7; font-size: 1.05rem;"
+      >
+        {serviceProfile.decisionLead}
+      </p>
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;"
+      >
+        {
+          decisionCards.map((card) => (
+            <div class="info-card-base decision-card">
+              <h4>{card.title}</h4>
+              <p>{card.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section style="margin-top: 4rem;">
+      <h2
         style="color: #064e3b; font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 2rem;"
       >
-        How to Start Your {serviceInfo.name} Project
+        {serviceProfile.processTitle}
       </h2>
       <div
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"
       >
-        <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #e0f2fe;">📞</div>
-          <h4>1. Immediate Contact</h4>
-          <p>
-            Call our {cityName} dispatch line and explain the property conditions
-            near {landmark}.
-          </p>
-        </div>
-        <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #fef3c7;">📋</div>
-          <h4>2. Site Review</h4>
-          <p>
-            A local crew reviews risk, access, tree condition, and the safest
-            path for {serviceProfile.shortLabel}.
-          </p>
-        </div>
-        <div class="info-card-base step-card">
-          <div class="icon-box" style="background: #dcfce7;">✅</div>
-          <h4>3. Work & Cleanup</h4>
-          <p>
-            Licensed work is completed with debris handling, protection
-            planning, and final cleanup.
-          </p>
-        </div>
+        {
+          processSteps.map((step) => (
+            <div class="info-card-base step-card">
+              <div class="icon-box" style="background: #f0fdf4;">{step.icon}</div>
+              <h4>{step.title}</h4>
+              <p>{step.text}</p>
+            </div>
+          ))
+        }
       </div>
     </section>
 
@@ -515,44 +712,37 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         <h4
           style="font-size: 1.2rem; display: flex; align-items: center; gap: 8px;"
         >
-          <span style="font-size: 1.5rem;">📋</span> Local Arborist Report
+          <span style="font-size: 1.5rem;">📋</span> {serviceProfile.reviewTitle}
         </h4>
         <div
           style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;"
         >
-          <div
-            style="background: #f8fafc; padding: 12px; border-radius: 12px; border: 1px solid #f1f5f9;"
-          >
-            <strong
-              style="display: block; font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;"
-              >Neighborhood Character</strong
-            >
-            <span style="font-size: 0.95rem; color: #1b4332; font-weight: 700;"
-              >{toTitleCase(communityStyle)} Area</span
-            >
-          </div>
-          <div
-            style="background: #f8fafc; padding: 12px; border-radius: 12px; border: 1px solid #f1f5f9;"
-          >
-            <strong
-              style="display: block; font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;"
-              >Regional Tree Profile</strong
-            >
-            <span style="font-size: 0.95rem; color: #1b4332; font-weight: 700;"
-              >{mainTree}</span
-            >
-          </div>
+          {
+            reviewCards.map((card) => (
+              <div
+                style="background: #f8fafc; padding: 12px; border-radius: 12px; border: 1px solid #f1f5f9;"
+              >
+                <strong
+                  style="display: block; font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;"
+                  >{card.label}</strong
+                >
+                <span style="font-size: 0.95rem; color: #1b4332; font-weight: 700;"
+                  >{card.value}</span
+                >
+              </div>
+            ))
+          }
           <div
             style="background: #fffbeb; padding: 12px; border-radius: 12px; border: 1px solid #fef3c7;"
           >
             <strong
               style="display: block; font-size: 0.7rem; color: #b45309; text-transform: uppercase;"
-              >Technical Site Note</strong
+              >Local tree profile</strong
             >
             <p
               style="font-size: 0.85rem; color: #92400e; font-weight: 600; margin: 5px 0 0;"
             >
-              {treeRiskNote}
+              {mainTree} • {treeRiskNote}
             </p>
           </div>
         </div>
@@ -562,7 +752,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         <h4
           style="font-size: 1.2rem; display: flex; align-items: center; gap: 8px;"
         >
-          <span style="font-size: 1.5rem;">📍</span> Area Operations
+          <span style="font-size: 1.5rem;">📍</span> {serviceProfile.localOperationsTitle}
         </h4>
         <div
           style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;"
@@ -640,7 +830,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
             allServices
               .filter((s) => s.name !== serviceInfo.name)
               .map((s) => (
-                <a href={`/${s.prefix}-${citySlugClean}`} class="hub-link-item">
+                <a href={`/${s.prefix}-${citySlugClean}/`} class="hub-link-item">
                   <span>{s.icon}</span> {s.name} in {cityName} →
                 </a>
               ))
@@ -685,7 +875,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         <p
           style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #4ade80;"
         >
-          ● Active in {cityName}
+          {planningPriority}
         </p>
       </div>
     </section>
@@ -700,7 +890,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
           <h2
             style="color: #064e3b; font-size: 1.8rem; font-weight: 900; margin-bottom: 1.5rem;"
           >
-            Professional {serviceInfo.name} Solutions for {cityName}
+            {serviceProfile.longFormTitle}
           </h2>
           <p
             style="font-size: 1.1rem; color: #1b4332; line-height: 1.8; font-weight: 700; background: #f0fdf4; padding: 15px; border-radius: 12px; border-left: 4px solid #16a34a; margin-bottom: 1.5rem;"
@@ -711,6 +901,11 @@ const structuredFaqs = finalFaqs.map((faq) => ({
             style="font-size: 1.1rem; color: #4b5563; line-height: 1.8; margin-top: 1rem;"
           >
             {serviceProfile.intro}
+          </p>
+          <p
+            style="font-size: 1.05rem; color: #475569; line-height: 1.8; margin-top: 1rem; background: #fff7ed; padding: 14px; border-radius: 12px; border-left: 4px solid #ea580c;"
+          >
+            {serviceProfile.distinctSupport}
           </p>
           <p
             style="font-size: 1.1rem; color: #4b5563; line-height: 1.8; margin-top: 1rem;"
@@ -758,7 +953,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
       <h2
         style="color: #064e3b; font-size: 2.2rem; font-weight: 900; text-align: center; margin-bottom: 3rem;"
       >
-        {cityName} Property Owner FAQs
+        {cityName} {serviceInfo.name} FAQs
       </h2>
       <div style="display: flex; flex-direction: column; gap: 20px;">
         {
@@ -831,7 +1026,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
             const nearbyCitySlug = slugify(city.City);
             return (
               <a
-                href={`/${serviceInfo.prefix}-${nearbyCitySlug}`}
+                href={`/${serviceInfo.prefix}-${nearbyCitySlug}/`}
                 class="nearby-link-card"
               >
                 <strong>{nearbyCityName}</strong>
@@ -845,7 +1040,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
 
     <section style="margin-top: 4rem; text-align: center;">
       <a
-        href={`/county/${countySlug}`}
+        href={`/county/${countySlug}/`}
         style="display: inline-flex; align-items: center; gap: 10px; background: #f0fdf4; color: #166534; padding: 14px 22px; border-radius: 999px; text-decoration: none; font-weight: 800; border: 1px solid #dcfce7;"
       >
         Browse all service areas in {countyName} County
@@ -863,9 +1058,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
       <p
         style="color: #4b5563; max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.7; font-size: 1.1rem;"
       >
-        ProTreeTrim provides certified tree care and emergency response across
-        the state, connecting Florida property owners with local crews for safe,
-        professional service.
+        ProTreeTrim connects Florida property owners with local independent providers for tree removal, stump grinding, emergency response, and related tree service coordination across the state.
       </p>
 
       <div
@@ -943,6 +1136,21 @@ const structuredFaqs = finalFaqs.map((faq) => ({
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   }
 
+
+
+  .decision-card h4 {
+    margin: 0 0 0.65rem;
+    color: #064e3b;
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+
+  .decision-card p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.7;
+    font-size: 0.98rem;
+  }
   .step-card h4 {
     margin: 0 0 0.5rem;
     color: #1b4332;
@@ -1019,4 +1227,3 @@ const structuredFaqs = finalFaqs.map((faq) => ({
     }
   }
 </style>
-
