@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../../config.js";
 import { getCollection } from "astro:content";
+import { getBlogMoneyLinks } from "../../data/internal-links.js";
 
 const slugifyCategory = (value) =>
   value
@@ -34,6 +35,12 @@ const relatedPosts = allPosts
 
 const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/${post.slug}/`;
 const categoryUrl = `/blog/category/${slugifyCategory(post.data.category)}/`;
+const moneyPageLinks = getBlogMoneyLinks({
+  slug: post.slug,
+  title: post.data.title,
+  category: post.data.category,
+  tags: post.data.tags || [],
+});
 ---
 
 <MainLayout
@@ -121,6 +128,51 @@ const categoryUrl = `/blog/category/${slugifyCategory(post.data.category)}/`;
         <Content />
       </div>
     </article>
+
+    {
+      moneyPageLinks.length > 0 && (
+        <section style="margin-top: 2rem;">
+          <div
+            style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 28px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
+          >
+            <div style="margin-bottom: 1.2rem;">
+              <span
+                style="display: inline-block; background: white; color: #166534; border: 1px solid #bbf7d0; padding: 5px 12px; border-radius: 999px; font-size: 0.72rem; font-weight: 900; text-transform: uppercase;"
+              >
+                Local service pages
+              </span>
+              <h2 style="margin: 0.8rem 0 0.4rem; color: #1b4332; font-size: 1.5rem;">
+                Related Florida service areas
+              </h2>
+              <p style="margin: 0; color: #4b5563; line-height: 1.7;">
+                Use these local pages to compare service availability, estimate factors, and planning notes for high-intent Florida tree work.
+              </p>
+            </div>
+
+            <div
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px;"
+            >
+              {moneyPageLinks.map((link) => (
+                <a
+                  href={link.href}
+                  style="display: block; background: white; border: 1px solid #dcfce7; border-radius: 18px; padding: 1rem; text-decoration: none; color: inherit;"
+                >
+                  <div style="color: #16a34a; font-size: 0.72rem; font-weight: 900; text-transform: uppercase; margin-bottom: 0.45rem;">
+                    {link.eyebrow}
+                  </div>
+                  <strong style="display: block; color: #1b4332; font-size: 1rem; line-height: 1.35;">
+                    {link.title}
+                  </strong>
+                  <span style="display: block; color: #64748b; font-size: 0.85rem; line-height: 1.5; margin-top: 0.45rem;">
+                    {link.reason}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
 
     {
       relatedPosts.length > 0 && (
