@@ -1,0 +1,456 @@
+---
+const questions = [
+  {
+    id: 'structure',
+    label: 'Tree or large limb is on a roof, vehicle, pool cage, fence, or other structure',
+    helper: 'Do not stand under or near the load. Keep people away from the area.',
+    points: 5,
+    emergency: true,
+  },
+  {
+    id: 'access',
+    label: 'Tree is blocking a driveway, road, sidewalk, gate, or building access',
+    helper: 'Blocked access can affect emergency response, tenants, guests, or family members.',
+    points: 4,
+    emergency: true,
+  },
+  {
+    id: 'utility',
+    label: 'Power lines, service drops, or utility equipment are nearby',
+    helper: 'Stay away from any tree touching or near electrical lines and call the utility/emergency services when needed.',
+    points: 6,
+    emergency: true,
+  },
+  {
+    id: 'leaning',
+    label: 'Tree is newly leaning, uprooted, cracked, split, or moving after weather',
+    helper: 'Recent movement after wind or rain can mean the root plate or trunk is compromised.',
+    points: 5,
+    emergency: true,
+  },
+  {
+    id: 'hanging',
+    label: 'Large hanging limbs are over a roof, driveway, walkway, fence, or pool area',
+    helper: 'Hanging limbs can fall without warning, especially after storms or during cleanup.',
+    points: 4,
+    emergency: false,
+  },
+  {
+    id: 'storm',
+    label: 'The damage happened after recent heavy rain, tropical weather, or strong winds',
+    helper: 'Storm-damaged trees can continue failing after the weather passes.',
+    points: 2,
+    emergency: false,
+  },
+  {
+    id: 'soft-soil',
+    label: 'Soil is saturated, lifted, cracked, or pulling away near the tree base',
+    helper: 'Soil movement near roots can be a warning sign after heavy rain or flooding.',
+    points: 3,
+    emergency: false,
+  },
+  {
+    id: 'insurance',
+    label: 'You may need photos, access notes, or documentation for insurance or an estimate',
+    helper: 'Take photos only from a safe distance; do not walk under damaged limbs.',
+    points: 1,
+    emergency: false,
+  },
+];
+---
+
+<section class="emergency-tool-shell" data-emergency-tool>
+  <aside class="emergency-tool-panel">
+    <p class="panel-kicker">Safety checklist</p>
+    <h2>Check what applies right now.</h2>
+    <p>
+      Select any conditions you see. This tool gives general guidance only and
+      is not a diagnosis, inspection, or emergency-services substitute.
+    </p>
+
+    <div class="question-list">
+      {questions.map((question) => (
+        <label class="question-item" for={`check-${question.id}`}>
+          <input
+            id={`check-${question.id}`}
+            type="checkbox"
+            data-points={question.points}
+            data-emergency={question.emergency ? 'true' : 'false'}
+          />
+          <span>
+            <strong>{question.label}</strong>
+            <em>{question.helper}</em>
+          </span>
+        </label>
+      ))}
+    </div>
+
+    <button type="button" class="reset-button" data-reset-checklist>
+      Reset checklist
+    </button>
+  </aside>
+
+  <div class="emergency-result-card" aria-live="polite">
+    <p class="result-kicker" data-result-kicker>Start here</p>
+    <h2 data-result-title>Answer the checklist to see the attention level.</h2>
+    <p data-result-copy>
+      If a tree is cracked, leaning, uprooted, blocking access, on a structure,
+      or near utility lines, keep people away from the hazard area and request
+      local guidance.
+    </p>
+
+    <div class="result-meter" aria-hidden="true">
+      <span data-meter-bar></span>
+    </div>
+
+    <div class="result-badges">
+      <span data-result-badge>Not scored yet</span>
+      <span data-score-label>0 selected</span>
+    </div>
+
+    <div class="next-step-box">
+      <h3 data-next-title>Before you do anything else</h3>
+      <ul data-next-steps>
+        <li>Stay away from cracked, leaning, uprooted, or hanging tree sections.</li>
+        <li>Take photos only from a safe distance.</li>
+        <li>Do not cut trees near utility lines or unstable limbs.</li>
+      </ul>
+    </div>
+
+    <div class="result-actions">
+      <a class="primary-action" href="tel:+18554982578">Call Dispatch</a>
+      <a class="secondary-action" href="/services/emergency-response/">Emergency Tree Service</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const tool = document.querySelector('[data-emergency-tool]');
+
+  if (tool) {
+    const checkboxes = Array.from(tool.querySelectorAll('input[type="checkbox"]'));
+    const resetButton = tool.querySelector('[data-reset-checklist]');
+    const resultKicker = tool.querySelector('[data-result-kicker]');
+    const resultTitle = tool.querySelector('[data-result-title]');
+    const resultCopy = tool.querySelector('[data-result-copy]');
+    const resultBadge = tool.querySelector('[data-result-badge]');
+    const scoreLabel = tool.querySelector('[data-score-label]');
+    const nextTitle = tool.querySelector('[data-next-title]');
+    const nextSteps = tool.querySelector('[data-next-steps]');
+    const meterBar = tool.querySelector('[data-meter-bar]');
+
+    const levels = {
+      start: {
+        kicker: 'Start here',
+        title: 'Answer the checklist to see the attention level.',
+        copy: 'If a tree is cracked, leaning, uprooted, blocking access, on a structure, or near utility lines, keep people away from the hazard area and request local guidance.',
+        badge: 'Not scored yet',
+        title2: 'Before you do anything else',
+        width: '8%',
+        steps: [
+          'Stay away from cracked, leaning, uprooted, or hanging tree sections.',
+          'Take photos only from a safe distance.',
+          'Do not cut trees near utility lines or unstable limbs.',
+        ],
+      },
+      monitor: {
+        kicker: 'Monitor / plan',
+        title: 'This sounds like a planning or monitoring situation.',
+        copy: 'Based on the selected items, the issue may not require urgent dispatch, but it is worth documenting and comparing the next step before trimming, removal, or stump work.',
+        badge: 'Monitor',
+        title2: 'Suggested next steps',
+        width: '34%',
+        steps: [
+          'Take photos from a safe distance and note when the issue appeared.',
+          'Check whether the tree is near a fence, driveway, pool, roof, or utility area.',
+          'Use the Tree Care Advisor if you are deciding between trimming, monitoring, stump work, or removal planning.',
+        ],
+      },
+      priority: {
+        kicker: 'Priority attention',
+        title: 'This should be reviewed before the situation worsens.',
+        copy: 'Several risk signals are present. Avoid last-minute cutting, keep people away from suspicious limbs or shifting soil, and request local guidance before the next storm or access issue.',
+        badge: 'Priority',
+        title2: 'Priority steps',
+        width: '68%',
+        steps: [
+          'Keep people, vehicles, and pets away from the affected area.',
+          'Take photos from a safe distance for estimate or insurance documentation.',
+          'Request guidance before the next heavy rain or wind event if the tree is near a structure, driveway, or fence.',
+        ],
+      },
+      emergency: {
+        kicker: 'Emergency / do not wait',
+        title: 'This may need emergency tree service guidance.',
+        copy: 'One or more high-risk conditions are selected. Do not stand beneath the tree, do not attempt cutting near wires or unstable limbs, and keep the hazard area clear.',
+        badge: 'Emergency',
+        title2: 'Immediate safety steps',
+        width: '100%',
+        steps: [
+          'Move people, vehicles, and pets away from the tree and any hanging limbs.',
+          'If utility lines are involved, stay away and contact the utility or emergency services when appropriate.',
+          'Call dispatch if the tree blocks access, threatens a structure, or creates an active hazard.',
+        ],
+      },
+    };
+
+    function renderSteps(items) {
+      nextSteps.innerHTML = '';
+      for (const item of items) {
+        const li = document.createElement('li');
+        li.textContent = item;
+        nextSteps.appendChild(li);
+      }
+    }
+
+    function updateResult() {
+      const selected = checkboxes.filter((checkbox) => checkbox.checked);
+      const score = selected.reduce((total, checkbox) => total + Number(checkbox.dataset.points || 0), 0);
+      const hasEmergency = selected.some((checkbox) => checkbox.dataset.emergency === 'true');
+      let level = 'start';
+
+      if (hasEmergency) level = 'emergency';
+      else if (score >= 6) level = 'priority';
+      else if (score > 0) level = 'monitor';
+
+      const data = levels[level];
+      resultKicker.textContent = data.kicker;
+      resultTitle.textContent = data.title;
+      resultCopy.textContent = data.copy;
+      resultBadge.textContent = data.badge;
+      scoreLabel.textContent = `${selected.length} selected`;
+      nextTitle.textContent = data.title2;
+      meterBar.style.width = data.width;
+      renderSteps(data.steps);
+
+      resultBadge.className = '';
+      resultBadge.classList.add(`level-${level}`);
+    }
+
+    checkboxes.forEach((checkbox) => checkbox.addEventListener('change', updateResult));
+    resetButton?.addEventListener('click', () => {
+      checkboxes.forEach((checkbox) => { checkbox.checked = false; });
+      updateResult();
+    });
+
+    updateResult();
+  }
+</script>
+
+<style>
+  .emergency-tool-shell {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr);
+    border: 1px solid #dbe4df;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(15, 63, 42, 0.08);
+    background: #fff;
+  }
+
+  .emergency-tool-panel {
+    background: linear-gradient(180deg, #082d20 0%, #0a3b2a 100%);
+    color: #d1fae5;
+    padding: clamp(2rem, 4vw, 3.2rem);
+  }
+
+  .panel-kicker,
+  .result-kicker {
+    margin: 0 0 1rem;
+    color: #ffb703;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.82rem;
+  }
+
+  .emergency-tool-panel h2,
+  .emergency-result-card h2 {
+    margin: 0;
+    font-size: clamp(2.1rem, 4vw, 3.4rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+
+  .emergency-tool-panel p {
+    margin: 1rem 0 0;
+    color: #bbf7d0;
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+
+  .question-list {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .question-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.8rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(187, 247, 208, 0.24);
+    background: rgba(255, 255, 255, 0.065);
+    cursor: pointer;
+    transition: background 180ms ease, border-color 180ms ease;
+  }
+
+  .question-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(187, 247, 208, 0.45);
+  }
+
+  .question-item input {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 0.2rem;
+    accent-color: #f25a06;
+  }
+
+  .question-item strong {
+    display: block;
+    color: #fff;
+    line-height: 1.35;
+    font-size: 0.98rem;
+  }
+
+  .question-item em {
+    display: block;
+    margin-top: 0.35rem;
+    color: #bbf7d0;
+    font-style: normal;
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+
+  .reset-button {
+    margin-top: 1.4rem;
+    border: 1px solid rgba(187, 247, 208, 0.3);
+    color: #fff;
+    background: transparent;
+    border-radius: 999px;
+    padding: 0.85rem 1.15rem;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .emergency-result-card {
+    padding: clamp(2rem, 4.5vw, 4rem);
+  }
+
+  .result-kicker {
+    color: #f25a06;
+  }
+
+  .emergency-result-card h2 {
+    color: #0f3f2a;
+  }
+
+  .emergency-result-card > p:not(.result-kicker) {
+    color: #475569;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    margin: 1.2rem 0 0;
+  }
+
+  .result-meter {
+    height: 0.8rem;
+    background: #e5eee9;
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 2rem 0 1rem;
+  }
+
+  .result-meter span {
+    display: block;
+    height: 100%;
+    width: 8%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #22c55e, #f25a06);
+    transition: width 220ms ease;
+  }
+
+  .result-badges {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+  }
+
+  .result-badges span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.45rem;
+    padding: 0 0.95rem;
+    border-radius: 999px;
+    background: #eff6f2;
+    color: #0f3f2a;
+    font-weight: 900;
+  }
+
+  .result-badges .level-start { background: #eff6f2; }
+  .result-badges .level-monitor { background: #e8fff1; }
+  .result-badges .level-priority { background: #fff7ed; color: #9a3412; }
+  .result-badges .level-emergency { background: #fee2e2; color: #991b1b; }
+
+  .next-step-box {
+    background: #fff7ed;
+    border: 1px solid #fdba74;
+    border-radius: 1.4rem;
+    padding: 1.6rem;
+  }
+
+  .next-step-box h3 {
+    margin: 0 0 0.9rem;
+    color: #0f3f2a;
+    font-size: 1.25rem;
+  }
+
+  .next-step-box ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #334155;
+    line-height: 1.75;
+  }
+
+  .result-actions {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin-top: 1.7rem;
+  }
+
+  .result-actions a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3.25rem;
+    padding: 0 1.25rem;
+    border-radius: 0.9rem;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  .primary-action {
+    background: #f25a06;
+    color: #fff;
+    box-shadow: 0 16px 32px rgba(242, 90, 6, 0.22);
+  }
+
+  .secondary-action {
+    background: #e8fff1;
+    color: #0f3f2a;
+    border: 1px solid #b7f7ca;
+  }
+
+  @media (max-width: 900px) {
+    .emergency-tool-shell {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

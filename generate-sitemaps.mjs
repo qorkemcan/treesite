@@ -218,6 +218,7 @@ async function generate() {
       '/tools/',
       '/tools/florida-tree-care-advisor/',
       '/tools/florida-problem-tree-guide/',
+      '/tools/emergency-tree-safety-checklist/',
       '/services/tree-removal/',
       '/services/tree-trimming/',
       '/services/stump-grinding/',

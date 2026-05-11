@@ -1,0 +1,236 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import EmergencyTreeSafetyChecklist from "../../components/EmergencyTreeSafetyChecklist.astro";
+---
+
+<MainLayout
+  title="Emergency Tree Safety Checklist | Florida Tree Service Tool | ProTreeTrim"
+  description="Use this Florida emergency tree safety checklist to decide whether a cracked, leaning, storm-damaged, blocked-access, or utility-adjacent tree issue may need urgent local guidance."
+>
+  <section class="checklist-hero">
+    <div>
+      <p>Florida homeowner tool</p>
+      <h1>Emergency Tree Safety Checklist</h1>
+      <span>
+        Check whether a storm-damaged, leaning, cracked, blocked-access, or
+        utility-adjacent tree situation should be treated as emergency,
+        priority, or monitor-and-plan.
+      </span>
+    </div>
+  </section>
+
+  <section class="checklist-intro">
+    <div class="intro-copy">
+      <p class="eyebrow">Use this before walking near a damaged tree</p>
+      <h2>Some tree problems should not wait for a normal estimate.</h2>
+      <p>
+        Florida storms, saturated soil, brittle limbs, tight side yards, pool
+        cages, fences, driveways, and utility areas can turn a tree issue into a
+        safety or access problem. This checklist helps homeowners organize the
+        first safety questions before calling dispatch or reading a deeper guide.
+      </p>
+    </div>
+    <aside class="notice-card">
+      <strong>Not an emergency-services substitute.</strong>
+      <p>
+        This tool is general homeowner guidance only. If someone may be injured,
+        utility lines are involved, fire or flooding is present, or access for
+        emergency responders is blocked, contact the appropriate emergency or
+        utility service first.
+      </p>
+    </aside>
+  </section>
+
+  <section class="tool-section" aria-label="Emergency tree safety checklist">
+    <EmergencyTreeSafetyChecklist />
+  </section>
+
+  <section class="support-section">
+    <div class="support-card dark">
+      <p>Safety first</p>
+      <h2>Do not inspect from under the tree.</h2>
+      <ul>
+        <li>Do not stand beneath cracked, hanging, or storm-damaged limbs.</li>
+        <li>Do not touch trees or limbs near electrical lines.</li>
+        <li>Do not climb, pull, or cut unstable trees yourself.</li>
+        <li>Take photos only from a safe distance.</li>
+      </ul>
+    </div>
+    <div class="support-card">
+      <p>Next planning step</p>
+      <h2>Need a broader tree care starting point?</h2>
+      <span>
+        Use the Florida Tree Care Advisor to compare region, season, and issue
+        type, or use the Problem Tree Guide to review invasive, brittle, root,
+        messy, or permit-sensitive tree concerns.
+      </span>
+      <div class="support-actions">
+        <a href="/tools/florida-tree-care-advisor/">Open Tree Care Advisor</a>
+        <a href="/tools/florida-problem-tree-guide/">Open Problem Tree Guide</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .checklist-hero {
+    background: radial-gradient(circle at center, #164b34 0%, #082d20 72%);
+    color: #fff;
+    text-align: center;
+    padding: clamp(5rem, 10vw, 8rem) 1.5rem;
+    border-bottom: 6px solid #f25a06;
+  }
+
+  .checklist-hero > div {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .checklist-hero p,
+  .eyebrow,
+  .support-card p {
+    margin: 0 0 1rem;
+    color: #ffb703;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.82rem;
+  }
+
+  .checklist-hero h1 {
+    margin: 0;
+    font-size: clamp(3.1rem, 8vw, 6.4rem);
+    line-height: 0.94;
+    letter-spacing: -0.065em;
+  }
+
+  .checklist-hero span {
+    display: block;
+    max-width: 860px;
+    margin: 1.5rem auto 0;
+    color: #bbf7d0;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    line-height: 1.65;
+  }
+
+  .checklist-intro,
+  .tool-section,
+  .support-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: clamp(4rem, 7vw, 6rem) 1.5rem 0;
+  }
+
+  .checklist-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .intro-copy h2,
+  .support-card h2 {
+    margin: 0;
+    color: #0f3f2a;
+    font-size: clamp(2.1rem, 4.6vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+
+  .intro-copy > p:last-child,
+  .notice-card p,
+  .support-card span,
+  .support-card li {
+    color: #475569;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .intro-copy > p:last-child,
+  .support-card span {
+    display: block;
+    margin-top: 1.25rem;
+  }
+
+  .notice-card {
+    background: #fff7ed;
+    border: 1px solid #fdba74;
+    color: #9a3412;
+    border-radius: 1.5rem;
+    padding: 2rem;
+  }
+
+  .notice-card strong {
+    display: block;
+    color: #9a3412;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .notice-card p {
+    color: #9a3412;
+    margin: 0;
+  }
+
+  .support-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 1.5rem;
+    padding-bottom: 7rem;
+  }
+
+  .support-card {
+    background: #fff;
+    border: 1px solid #dbe4df;
+    border-radius: 2rem;
+    padding: clamp(2rem, 4vw, 3rem);
+    box-shadow: 0 18px 50px rgba(15, 63, 42, 0.06);
+  }
+
+  .support-card.dark {
+    background: #082d20;
+  }
+
+  .support-card.dark h2,
+  .support-card.dark li {
+    color: #fff;
+  }
+
+  .support-card ul {
+    margin: 1.4rem 0 0;
+    padding-left: 1.2rem;
+  }
+
+  .support-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.6rem;
+  }
+
+  .support-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.2rem;
+    padding: 0 1.1rem;
+    border-radius: 0.9rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: #fff;
+    background: #f25a06;
+  }
+
+  .support-actions a:nth-child(2) {
+    background: #e8fff1;
+    color: #0f3f2a;
+    border: 1px solid #b7f7ca;
+  }
+
+  @media (max-width: 900px) {
+    .checklist-intro,
+    .support-section {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
