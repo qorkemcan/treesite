@@ -215,6 +215,7 @@ async function generate() {
       '/privacy/',
       '/join-network/',
       '/blog/',
+      '/tools/florida-tree-care-advisor/',
       '/services/tree-removal/',
       '/services/tree-trimming/',
       '/services/stump-grinding/',
