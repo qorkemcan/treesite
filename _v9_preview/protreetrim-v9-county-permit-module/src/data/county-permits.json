@@ -1,0 +1,170 @@
+{
+  "fallback": {
+    "summary": "Tree removal and trimming requirements may vary by city, property type, tree condition, species, HOA rules, and regulated areas. Florida law may limit local permit requirements for certain documented high-risk residential trees, but the required professional assessment and local context still matter.",
+    "localContext": "Before planning non-emergency tree work, property owners should verify current local rules, HOA expectations, protected tree status, and whether the tree is near wetlands, mangroves, easements, utilities, or public right-of-way.",
+    "riskNote": "For cracked, leaning, uprooted, storm-damaged, or access-blocking trees, keep people away from the hazard area and contact a qualified local provider.",
+    "sourceLabel": "Florida Statute 163.045 and current local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "broward": {
+    "summary": "Broward County tree work can be affected by municipal rules, HOA communities, palms, canopy trees, drainage conditions, and tight urban lots. City rules may differ even when properties are close together.",
+    "localContext": "Fort Lauderdale, Cooper City, Hollywood, Miramar, and nearby communities often involve pavers, pool decks, fences, palms, and roofline access constraints.",
+    "riskNote": "Confirm city requirements before non-emergency removal, especially when a tree may be protected, near a right-of-way, or part of an HOA landscape.",
+    "sourceLabel": "Florida Statute 163.045 plus city-level Broward requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "palm-beach": {
+    "summary": "Palm Beach County properties may face local tree preservation rules, HOA review, coastal exposure, palms, and mature shade tree concerns depending on the municipality.",
+    "localContext": "Boca Raton, West Palm Beach, Delray Beach, and nearby areas often combine ornamental palms, large canopy trees, irrigation, pavers, and storm-season preparation.",
+    "riskNote": "Verify city and HOA requirements before non-emergency removal or major pruning, especially when protected or specimen trees may be involved.",
+    "sourceLabel": "Florida Statute 163.045 plus Palm Beach municipal rules",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "miami-dade": {
+    "summary": "Miami-Dade tree work can involve municipal permits, palms, tropical species, storm exposure, and regulated coastal or environmental areas. Local city rules and protected tree provisions may be especially important.",
+    "localContext": "Dense neighborhoods, waterfront lots, palms, ficus, and mature tropical canopies often make access, documentation, and cleanup planning important.",
+    "riskNote": "Do not assume a countywide answer applies to every city or property type. Verify local rules before removal, especially near coastal, mangrove, or protected areas.",
+    "sourceLabel": "Florida Statute 163.045 plus Miami-Dade/city requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "orange": {
+    "summary": "Orange County tree work may be affected by municipal rules, subdivision requirements, older oaks, storm exposure, and development-related root or canopy stress.",
+    "localContext": "Orlando-area properties often involve shade trees near roofs, driveways, sidewalks, pool screens, and older neighborhoods where access planning matters.",
+    "riskNote": "Confirm city requirements and HOA rules before non-emergency removal, especially when mature oaks or protected trees may be involved.",
+    "sourceLabel": "Florida Statute 163.045 plus Orange County/city requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "hillsborough": {
+    "summary": "Hillsborough County tree decisions can depend on city jurisdiction, protected tree rules, storm risk, root conflicts, and whether work is tied to residential safety or property improvements.",
+    "localContext": "Tampa-area lots often include mature oaks, palms, fences, pavers, and tight side-yard access that can affect removal or stump grinding plans.",
+    "riskNote": "Review local requirements before non-emergency removal and document visible hazards from a safe distance when a tree appears unstable.",
+    "sourceLabel": "Florida Statute 163.045 plus Hillsborough/city requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "pinellas": {
+    "summary": "Pinellas County tree work often involves city-level rules, coastal exposure, palms, limited access, and dense residential lots. Permit expectations can vary by municipality.",
+    "localContext": "St. Petersburg, Clearwater, Largo, and nearby communities often have tight yards, pavers, pool cages, and salt/wind exposure that affect tree work planning.",
+    "riskNote": "Verify city rules and protected tree status before non-emergency removal, especially on coastal or highly developed lots.",
+    "sourceLabel": "Florida Statute 163.045 plus Pinellas municipal requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "volusia": {
+    "summary": "Volusia County tree work may involve city rules, storm exposure, coastal wind, older oaks, palms, and access planning. DeLand, Deltona, Daytona Beach, and coastal communities can have different local expectations.",
+    "localContext": "Older shade trees, sandy soils, fences, driveways, pool screens, and storm-season cleanup are common considerations across Volusia service zones.",
+    "riskNote": "Verify city and HOA requirements before non-emergency removal. If a tree is cracked, leaning, uprooted, blocking access, or threatening a structure, keep people away and contact a qualified local provider.",
+    "sourceLabel": "Florida Statute 163.045 plus Volusia city requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "walton": {
+    "summary": "Walton County tree work can involve coastal lots, vacation rentals, pines, palms, access restrictions, and local rules that differ between beach communities and inland properties.",
+    "localContext": "Dune Allen Beach, Santa Rosa Beach, and nearby coastal areas often require careful planning around rentals, pool decks, fences, sand, and storm exposure.",
+    "riskNote": "Verify current local and HOA expectations before removal, especially near dunes, coastal areas, or protected environmental features.",
+    "sourceLabel": "Florida Statute 163.045 plus Walton local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "okaloosa": {
+    "summary": "Okaloosa County tree projects may involve coastal wind exposure, vacation properties, pines, palms, city rules, and access limitations near rentals, fences, and pool areas.",
+    "localContext": "Destin and surrounding communities often combine sandy soils, tight side yards, pools, pavers, and storm-season cleanup concerns.",
+    "riskNote": "Check city, HOA, and protected area considerations before non-emergency tree removal or major trimming.",
+    "sourceLabel": "Florida Statute 163.045 plus Okaloosa local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "sarasota": {
+    "summary": "Sarasota County tree work may involve city rules, mature oaks, palms, coastal exposure, protected trees, and neighborhood association review.",
+    "localContext": "Residential lots often involve pavers, pool cages, irrigation, and ornamental landscape elements that should be protected during tree work.",
+    "riskNote": "Confirm current local requirements before non-emergency removal and keep distance from storm-damaged or unstable trees.",
+    "sourceLabel": "Florida Statute 163.045 plus Sarasota local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "lee": {
+    "summary": "Lee County tree projects may involve hurricane recovery concerns, palms, large oaks, canal or waterfront properties, and municipal requirements that vary by city.",
+    "localContext": "Fort Myers, Cape Coral, and nearby areas often require attention to drainage, access, pools, fences, and storm-damaged canopy conditions.",
+    "riskNote": "Verify city and HOA requirements before non-emergency removal, especially on waterfront or storm-affected properties.",
+    "sourceLabel": "Florida Statute 163.045 plus Lee local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "collier": {
+    "summary": "Collier County tree work can involve coastal exposure, palms, protected landscapes, HOA expectations, and environmental restrictions depending on the property location.",
+    "localContext": "Naples-area properties often require careful access planning around pools, pavers, irrigation, ornamental palms, and mature shade trees.",
+    "riskNote": "Verify local requirements before non-emergency removal, particularly near coastal, wetland, or environmentally sensitive areas.",
+    "sourceLabel": "Florida Statute 163.045 plus Collier local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "duval": {
+    "summary": "Duval County and Jacksonville-area tree work may involve mature oaks, pines, storm exposure, protected tree considerations, and residential access constraints.",
+    "localContext": "Large shade trees near roofs, driveways, sidewalks, fences, and drainage areas are common planning factors in Duval service zones.",
+    "riskNote": "Confirm current city requirements before non-emergency removal and document visible hazards from a safe distance.",
+    "sourceLabel": "Florida Statute 163.045 plus Duval/Jacksonville requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "baker": {
+    "summary": "Baker County tree work often involves rural lots, driveways, fences, pines, oaks, and storm-damaged trees where access and cleanup planning can be as important as the cut itself.",
+    "localContext": "Macclenny and Glen St. Mary properties may involve larger lots, older trees, limited equipment access, and debris staging needs.",
+    "riskNote": "Verify current local expectations before non-emergency removal and keep away from trees that are leaning, cracked, or blocking access after storms.",
+    "sourceLabel": "Florida Statute 163.045 plus Baker local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "columbia": {
+    "summary": "Columbia County tree projects may involve rural access, pines, oaks, storm cleanup, driveways, fences, and larger properties where staging and hauling matter.",
+    "localContext": "Lake City-area homeowners often need to consider access lanes, septic or utility locations, and storm-damaged limbs before scheduling tree work.",
+    "riskNote": "Confirm local requirements before non-emergency removal and prioritize safety when trees are cracked, leaning, or blocking driveways.",
+    "sourceLabel": "Florida Statute 163.045 plus Columbia local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "alachua": {
+    "summary": "Alachua County tree work may involve mature oaks, protected canopy considerations, storm exposure, and local rules that vary by city and property type.",
+    "localContext": "Gainesville-area properties often include large shade trees, root conflicts, older neighborhoods, and access limitations near fences, sidewalks, and roofs.",
+    "riskNote": "Verify current local rules before removal or major pruning, especially when mature canopy trees may be involved.",
+    "sourceLabel": "Florida Statute 163.045 plus Alachua local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "pasco": {
+    "summary": "Pasco County tree projects may involve oaks, pines, palms, subdivision rules, rural lots, and storm-related access or cleanup issues.",
+    "localContext": "Properties may range from suburban HOA lots to larger rural parcels, so equipment access, stump grinding, and debris hauling can vary widely.",
+    "riskNote": "Confirm local or HOA rules before non-emergency tree work and prioritize professional guidance for unstable or storm-damaged trees.",
+    "sourceLabel": "Florida Statute 163.045 plus Pasco local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "polk": {
+    "summary": "Polk County tree work may involve oaks, pines, palms, lakefront lots, storm cleanup, and city-level requirements that differ across service areas.",
+    "localContext": "Residential properties often require planning around driveways, fences, pools, drainage, and stump grinding after removal.",
+    "riskNote": "Verify local requirements before non-emergency removal and keep away from cracked, leaning, or storm-damaged trees.",
+    "sourceLabel": "Florida Statute 163.045 plus Polk local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "lake": {
+    "summary": "Lake County tree work may involve older oaks, pines, lakefront exposure, storm risk, and municipal or HOA requirements that vary by community.",
+    "localContext": "Driveways, fences, drainage areas, and mature shade trees are common planning factors for removal, pruning, and stump grinding.",
+    "riskNote": "Confirm current rules before non-emergency removal and document visible hazards safely when a tree shows signs of instability.",
+    "sourceLabel": "Florida Statute 163.045 plus Lake local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  },
+  "manatee": {
+    "summary": "Manatee County tree projects may involve palms, mature oaks, coastal wind exposure, HOA expectations, and city-level rules that vary by property location.",
+    "localContext": "Properties near pools, pavers, fences, irrigation, and coastal exposure often need careful access and cleanup planning.",
+    "riskNote": "Verify local rules before non-emergency removal, especially near coastal, protected, or HOA-managed landscapes.",
+    "sourceLabel": "Florida Statute 163.045 plus Manatee local requirements",
+    "officialUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html",
+    "lastReviewed": "2026-05-11"
+  }
+}
