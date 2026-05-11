@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "mode": "storm",
+  "severity": "high",
+  "headline": "Florida Storm Tree Safety Advisory",
+  "message": "Strong weather may increase tree failure risk. Stay away from cracked, leaning, or storm-damaged trees. If a tree is blocking access or threatening a structure, call dispatch.",
+  "areas": ["Broward County", "Volusia County", "Walton County"],
+  "source": "manual-test",
+  "updatedAt": "2026-05-11T12:00:00.000Z",
+  "ctaText": "Call Dispatch",
+  "ctaHref": "tel:+18554982578"
+}
