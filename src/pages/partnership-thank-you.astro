@@ -1,0 +1,139 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Partnership Inquiry Received"
+  description="Your ProTreeTrim partnership inquiry has been received."
+  robots="noindex,follow"
+>
+  <main class="container thank-you-wrap">
+    <section class="thank-you-card">
+      <div class="icon">🤝</div>
+      <p class="eyebrow">Inquiry received</p>
+      <h1>Thank you for reaching out.</h1>
+      <p class="lead">
+        Your ProTreeTrim™ partnership inquiry has been submitted. We will review the
+        opportunity for fit, timing, and relevance to the platform before deciding on next steps.
+      </p>
+      <div class="next-step">
+        <strong>Submitted for review</strong>
+        <span>
+          This form is for sponsorship, territory, content, growth-asset, and broader partnership discussions.
+          Tree-service operators may also review the dedicated Join Network page.
+        </span>
+      </div>
+      <div class="actions">
+        <a href="/partnerships/">Return to Partnerships</a>
+        <a href="/join-network/">Visit Join Network</a>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .thank-you-wrap {
+    max-width: 920px;
+    padding: clamp(5rem, 10vw, 8rem) 1.5rem 12rem;
+  }
+
+  .thank-you-card {
+    background: #fff;
+    border: 1px solid #dbe7df;
+    border-radius: 36px;
+    padding: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    box-shadow: 0 24px 60px rgba(8, 45, 32, 0.1);
+  }
+
+  .icon {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 1.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: #e8fff1;
+    font-size: 2.9rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    color: #f25a06;
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    color: #0f3f2a;
+    font-size: clamp(2.5rem, 5vw, 4.6rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+  }
+
+  .lead {
+    max-width: 720px;
+    margin: 1.35rem auto 0;
+    color: #405443;
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+
+  .next-step {
+    max-width: 720px;
+    margin: 2rem auto 0;
+    padding: 1.35rem;
+    border: 1px solid #c9efd4;
+    border-radius: 24px;
+    background: #f2fff5;
+    text-align: left;
+  }
+
+  .next-step strong,
+  .next-step span {
+    display: block;
+  }
+
+  .next-step strong {
+    color: #0f3f2a;
+    font-weight: 900;
+    margin-bottom: 0.45rem;
+  }
+
+  .next-step span {
+    color: #526253;
+    line-height: 1.65;
+  }
+
+  .actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.3rem;
+    padding: 0 1.4rem;
+    border-radius: 999px;
+    background: #f25a06;
+    color: #fff;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: 0 16px 35px rgba(242, 90, 6, 0.24);
+  }
+
+  .actions a:nth-child(2) {
+    background: #e8fff1;
+    color: #0f3f2a;
+    border: 1px solid #b7f7ca;
+    box-shadow: none;
+  }
+</style>
