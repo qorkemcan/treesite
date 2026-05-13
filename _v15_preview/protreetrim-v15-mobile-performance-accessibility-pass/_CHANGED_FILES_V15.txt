@@ -1,0 +1,2 @@
+src/layouts/MainLayout.astro
+src/pages/index.astro
