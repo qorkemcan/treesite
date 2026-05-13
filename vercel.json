@@ -1,0 +1,135 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/blog/native-florida-trees-vs-invasive-species-what-to-know (1)",
+      "destination": "/blog/native-florida-trees-vs-invasive-species-what-to-know/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/native-florida-trees-vs-invasive-species-what-to-know (1)/",
+      "destination": "/blog/native-florida-trees-vs-invasive-species-what-to-know/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/native-florida-trees-vs-invasive-species-what-to-know%20(1)",
+      "destination": "/blog/native-florida-trees-vs-invasive-species-what-to-know/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/native-florida-trees-vs-invasive-species-what-to-know%20(1)/",
+      "destination": "/blog/native-florida-trees-vs-invasive-species-what-to-know/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-plant-a-new-tree-for-long-term-success (1)",
+      "destination": "/blog/how-to-plant-a-new-tree-for-long-term-success/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-plant-a-new-tree-for-long-term-success (1)/",
+      "destination": "/blog/how-to-plant-a-new-tree-for-long-term-success/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-plant-a-new-tree-for-long-term-success%20(1)",
+      "destination": "/blog/how-to-plant-a-new-tree-for-long-term-success/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-plant-a-new-tree-for-long-term-success%20(1)/",
+      "destination": "/blog/how-to-plant-a-new-tree-for-long-term-success/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-jacksonville-beach",
+      "destination": "/tree-removal-jacksonville/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-jacksonville-beach/",
+      "destination": "/tree-removal-jacksonville/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-st.-cloud",
+      "destination": "/tree-removal-st-cloud/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-st.-cloud/",
+      "destination": "/tree-removal-st-cloud/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-port-st.-lucie",
+      "destination": "/tree-removal-port-st-lucie/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-port-st.-lucie/",
+      "destination": "/tree-removal-port-st-lucie/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-port-st.-joe",
+      "destination": "/tree-removal-port-st-joe/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-port-st.-joe/",
+      "destination": "/tree-removal-port-st-joe/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-st.-augustine",
+      "destination": "/tree-removal-st-augustine/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-st.-augustine/",
+      "destination": "/tree-removal-st-augustine/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-port-st.-lucie",
+      "destination": "/stump-grinding-port-st-lucie/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-port-st.-lucie/",
+      "destination": "/stump-grinding-port-st-lucie/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-st.-petersburg",
+      "destination": "/tree-removal-st-petersburg/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-st.-petersburg/",
+      "destination": "/tree-removal-st-petersburg/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-port-st.-john",
+      "destination": "/stump-grinding-port-st-john/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-port-st.-john/",
+      "destination": "/stump-grinding-port-st-john/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-port-st.-john",
+      "destination": "/tree-removal-port-st-john/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-port-st.-john/",
+      "destination": "/tree-removal-port-st-john/",
+      "permanent": true
+    }
+  ]
+}
