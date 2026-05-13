@@ -27,3 +27,5 @@ pnpm-debug.log*
 .astro/
 node_modules/
 dist/
+# Local transfer / patch archives
+*.zip
