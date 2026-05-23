@@ -1,90 +1,124 @@
 ---
 const questions = [
   {
-    id: 'structure',
-    label: 'Tree or large limb is on a roof, vehicle, pool cage, fence, or other structure',
-    helper: 'Do not stand under or near the load. Keep people away from the area.',
+    id: "structure",
+    label:
+      "Tree or large limb is on a roof, vehicle, pool cage, fence, or other structure",
+    helper:
+      "Do not stand under or near the load. Keep people away from the area.",
     points: 5,
     emergency: true,
   },
   {
-    id: 'access',
-    label: 'Tree is blocking a driveway, road, sidewalk, gate, or building access',
-    helper: 'Blocked access can affect emergency response, tenants, guests, or family members.',
+    id: "access",
+    label:
+      "Tree is blocking a driveway, road, sidewalk, gate, or building access",
+    helper:
+      "Blocked access can affect emergency response, tenants, guests, or family members.",
     points: 4,
     emergency: true,
   },
   {
-    id: 'utility',
-    label: 'Power lines, service drops, or utility equipment are nearby',
-    helper: 'Stay away from any tree touching or near electrical lines and call the utility/emergency services when needed.',
+    id: "utility",
+    label: "Power lines, service drops, or utility equipment are nearby",
+    helper:
+      "Stay away from any tree touching or near electrical lines and call the utility/emergency services when needed.",
     points: 6,
     emergency: true,
   },
   {
-    id: 'leaning',
-    label: 'Tree is newly leaning, uprooted, cracked, split, or moving after weather',
-    helper: 'Recent movement after wind or rain can mean the root plate or trunk is compromised.',
+    id: "leaning",
+    label:
+      "Tree is newly leaning, uprooted, cracked, split, or moving after weather",
+    helper:
+      "Recent movement after wind or rain can mean the root plate or trunk is compromised.",
     points: 5,
     emergency: true,
   },
   {
-    id: 'hanging',
-    label: 'Large hanging limbs are over a roof, driveway, walkway, fence, or pool area',
-    helper: 'Hanging limbs can fall without warning, especially after storms or during cleanup.',
+    id: "hanging",
+    label:
+      "Large hanging limbs are over a roof, driveway, walkway, fence, or pool area",
+    helper:
+      "Hanging limbs can fall without warning, especially after storms or during cleanup.",
     points: 4,
     emergency: false,
   },
   {
-    id: 'storm',
-    label: 'The damage happened after recent heavy rain, tropical weather, or strong winds',
-    helper: 'Storm-damaged trees can continue failing after the weather passes.',
+    id: "storm",
+    label:
+      "The damage happened after recent heavy rain, tropical weather, or strong winds",
+    helper:
+      "Storm-damaged trees can continue failing after the weather passes.",
     points: 2,
     emergency: false,
   },
   {
-    id: 'soft-soil',
-    label: 'Soil is saturated, lifted, cracked, or pulling away near the tree base',
-    helper: 'Soil movement near roots can be a warning sign after heavy rain or flooding.',
+    id: "soft-soil",
+    label:
+      "Soil is saturated, lifted, cracked, or pulling away near the tree base",
+    helper:
+      "Soil movement near roots can be a warning sign after heavy rain or flooding.",
     points: 3,
     emergency: false,
   },
   {
-    id: 'insurance',
-    label: 'You may need photos, access notes, or documentation for insurance or an estimate',
-    helper: 'Take photos only from a safe distance; do not walk under damaged limbs.',
+    id: "insurance",
+    label:
+      "You may need photos, access notes, or documentation for insurance or an estimate",
+    helper:
+      "Take photos only from a safe distance; do not walk under damaged limbs.",
     points: 1,
     emergency: false,
   },
 ];
 ---
 
-
-<section class="emergency-audio-guide" aria-labelledby="emergency-audio-guide-title">
+<section
+  class="emergency-audio-guide"
+  aria-labelledby="emergency-audio-guide-title"
+>
   <div class="emergency-audio-copy">
     <p class="audio-kicker">Audio guide</p>
-    <h2 id="emergency-audio-guide-title">Listen to the 50-second safety guide.</h2>
+    <h2 id="emergency-audio-guide-title">
+      Listen to the 50-second safety guide.
+    </h2>
     <p>
-      A quick audio summary for Florida homeowners before calling a tree service after
-      storm damage, leaning trees, blocked access, or visible tree hazards.
+      A quick audio summary for Florida homeowners before calling a tree service
+      after storm damage, leaning trees, blocked access, or visible tree
+      hazards.
     </p>
   </div>
 
   <div class="emergency-audio-player">
-    <audio controls preload="none" aria-label="Emergency tree safety checklist audio guide">
-      <source src="/audio/emergency-tree-safety-checklist-audio-guide.mp3" type="audio/mpeg" />
+    <audio
+      controls
+      preload="none"
+      aria-label="Emergency tree safety checklist audio guide"
+    >
+      <source
+        src="/audio/emergency-tree-safety-checklist-audio-guide.mp3"
+        type="audio/mpeg"
+      />
       Your browser does not support the audio element.
     </audio>
     <p>
-      Prefer to talk now? Call ProTreeTrim dispatch at
-      <a href="tel:+18554982578" aria-label="Call ProTreeTrim dispatch at 1 855 498 2578">
+      Prefer to talk? Call ProTreeTrim dispatch at
+      <a
+        href="tel:+18554982578"
+        aria-label="Call ProTreeTrim dispatch at 1 855 498 2578"
+      >
         +1 855 498 2578
       </a>.
     </p>
   </div>
 </section>
 
-<section class="emergency-tool-shell" data-emergency-tool aria-labelledby="emergency-checklist-title">
+<section
+  class="emergency-tool-shell"
+  data-emergency-tool
+  aria-labelledby="emergency-checklist-title"
+>
   <aside class="emergency-tool-panel">
     <p class="panel-kicker">Safety checklist</p>
     <h2 id="emergency-checklist-title">Check what applies right now.</h2>
@@ -94,23 +128,30 @@ const questions = [
     </p>
 
     <div class="question-list">
-      {questions.map((question) => (
-        <label class="question-item" for={`check-${question.id}`}>
-          <input
-            id={`check-${question.id}`}
-            type="checkbox"
-            data-points={question.points}
-            data-emergency={question.emergency ? 'true' : 'false'}
-          />
-          <span>
-            <strong>{question.label}</strong>
-            <em>{question.helper}</em>
-          </span>
-        </label>
-      ))}
+      {
+        questions.map((question) => (
+          <label class="question-item" for={`check-${question.id}`}>
+            <input
+              id={`check-${question.id}`}
+              type="checkbox"
+              data-points={question.points}
+              data-emergency={question.emergency ? "true" : "false"}
+            />
+            <span>
+              <strong>{question.label}</strong>
+              <em>{question.helper}</em>
+            </span>
+          </label>
+        ))
+      }
     </div>
 
-    <button type="button" class="reset-button" data-reset-checklist aria-label="Reset emergency tree safety checklist">
+    <button
+      type="button"
+      class="reset-button"
+      data-reset-checklist
+      aria-label="Reset emergency tree safety checklist"
+    >
       Reset checklist
     </button>
   </aside>
@@ -136,93 +177,103 @@ const questions = [
     <div class="next-step-box">
       <h3 data-next-title>Before you do anything else</h3>
       <ul data-next-steps>
-        <li>Stay away from cracked, leaning, uprooted, or hanging tree sections.</li>
+        <li>
+          Stay away from cracked, leaning, uprooted, or hanging tree sections.
+        </li>
         <li>Take photos only from a safe distance.</li>
         <li>Do not cut trees near utility lines or unstable limbs.</li>
       </ul>
     </div>
 
     <div class="result-actions">
-      <a class="primary-action" href="tel:+18554982578" aria-label="Call ProTreeTrim dispatch">Call Dispatch</a>
-      <a class="secondary-action" href="/services/emergency-response/">Emergency Tree Service</a>
+      <a
+        class="primary-action"
+        href="tel:+18554982578"
+        aria-label="Call ProTreeTrim dispatch">Call Dispatch</a
+      >
+      <a class="secondary-action" href="/services/emergency-response/"
+        >Emergency Tree Service</a
+      >
     </div>
   </div>
 </section>
 
 <script>
-  const tool = document.querySelector('[data-emergency-tool]');
+  const tool = document.querySelector("[data-emergency-tool]");
 
   if (tool) {
-    const checkboxes = Array.from(tool.querySelectorAll('input[type="checkbox"]'));
-    const resetButton = tool.querySelector('[data-reset-checklist]');
-    const resultKicker = tool.querySelector('[data-result-kicker]');
-    const resultTitle = tool.querySelector('[data-result-title]');
-    const resultCopy = tool.querySelector('[data-result-copy]');
-    const resultBadge = tool.querySelector('[data-result-badge]');
-    const scoreLabel = tool.querySelector('[data-score-label]');
-    const nextTitle = tool.querySelector('[data-next-title]');
-    const nextSteps = tool.querySelector('[data-next-steps]');
-    const meterBar = tool.querySelector('[data-meter-bar]');
+    const checkboxes = Array.from(
+      tool.querySelectorAll('input[type="checkbox"]'),
+    );
+    const resetButton = tool.querySelector("[data-reset-checklist]");
+    const resultKicker = tool.querySelector("[data-result-kicker]");
+    const resultTitle = tool.querySelector("[data-result-title]");
+    const resultCopy = tool.querySelector("[data-result-copy]");
+    const resultBadge = tool.querySelector("[data-result-badge]");
+    const scoreLabel = tool.querySelector("[data-score-label]");
+    const nextTitle = tool.querySelector("[data-next-title]");
+    const nextSteps = tool.querySelector("[data-next-steps]");
+    const meterBar = tool.querySelector("[data-meter-bar]");
 
     const levels = {
       start: {
-        kicker: 'Start here',
-        title: 'Answer the checklist to see the attention level.',
-        copy: 'If a tree is cracked, leaning, uprooted, blocking access, on a structure, or near utility lines, keep people away from the hazard area and request local guidance.',
-        badge: 'Not scored yet',
-        title2: 'Before you do anything else',
-        width: '8%',
+        kicker: "Start here",
+        title: "Answer the checklist to see the attention level.",
+        copy: "If a tree is cracked, leaning, uprooted, blocking access, on a structure, or near utility lines, keep people away from the hazard area and request local guidance.",
+        badge: "Not scored yet",
+        title2: "Before you do anything else",
+        width: "8%",
         steps: [
-          'Stay away from cracked, leaning, uprooted, or hanging tree sections.',
-          'Take photos only from a safe distance.',
-          'Do not cut trees near utility lines or unstable limbs.',
+          "Stay away from cracked, leaning, uprooted, or hanging tree sections.",
+          "Take photos only from a safe distance.",
+          "Do not cut trees near utility lines or unstable limbs.",
         ],
       },
       monitor: {
-        kicker: 'Monitor / plan',
-        title: 'This sounds like a planning or monitoring situation.',
-        copy: 'Based on the selected items, the issue may not require urgent dispatch, but it is worth documenting and comparing the next step before trimming, removal, or stump work.',
-        badge: 'Monitor',
-        title2: 'Suggested next steps',
-        width: '34%',
+        kicker: "Monitor / plan",
+        title: "This sounds like a planning or monitoring situation.",
+        copy: "Based on the selected items, the issue may not require urgent dispatch, but it is worth documenting and comparing the next step before trimming, removal, or stump work.",
+        badge: "Monitor",
+        title2: "Suggested next steps",
+        width: "34%",
         steps: [
-          'Take photos from a safe distance and note when the issue appeared.',
-          'Check whether the tree is near a fence, driveway, pool, roof, or utility area.',
-          'Use the Tree Care Advisor if you are deciding between trimming, monitoring, stump work, or removal planning.',
+          "Take photos from a safe distance and note when the issue appeared.",
+          "Check whether the tree is near a fence, driveway, pool, roof, or utility area.",
+          "Use the Tree Care Advisor if you are deciding between trimming, monitoring, stump work, or removal planning.",
         ],
       },
       priority: {
-        kicker: 'Priority attention',
-        title: 'This should be reviewed before the situation worsens.',
-        copy: 'Several risk signals are present. Avoid last-minute cutting, keep people away from suspicious limbs or shifting soil, and request local guidance before the next storm or access issue.',
-        badge: 'Priority',
-        title2: 'Priority steps',
-        width: '68%',
+        kicker: "Priority attention",
+        title: "This should be reviewed before the situation worsens.",
+        copy: "Several risk signals are present. Avoid last-minute cutting, keep people away from suspicious limbs or shifting soil, and request local guidance before the next storm or access issue.",
+        badge: "Priority",
+        title2: "Priority steps",
+        width: "68%",
         steps: [
-          'Keep people, vehicles, and pets away from the affected area.',
-          'Take photos from a safe distance for estimate or insurance documentation.',
-          'Request guidance before the next heavy rain or wind event if the tree is near a structure, driveway, or fence.',
+          "Keep people, vehicles, and pets away from the affected area.",
+          "Take photos from a safe distance for estimate or insurance documentation.",
+          "Request guidance before the next heavy rain or wind event if the tree is near a structure, driveway, or fence.",
         ],
       },
       emergency: {
-        kicker: 'Emergency / do not wait',
-        title: 'This may need emergency tree service guidance.',
-        copy: 'One or more high-risk conditions are selected. Do not stand beneath the tree, do not attempt cutting near wires or unstable limbs, and keep the hazard area clear.',
-        badge: 'Emergency',
-        title2: 'Immediate safety steps',
-        width: '100%',
+        kicker: "Emergency / do not wait",
+        title: "This may need emergency tree service guidance.",
+        copy: "One or more high-risk conditions are selected. Do not stand beneath the tree, do not attempt cutting near wires or unstable limbs, and keep the hazard area clear.",
+        badge: "Emergency",
+        title2: "Immediate safety steps",
+        width: "100%",
         steps: [
-          'Move people, vehicles, and pets away from the tree and any hanging limbs.',
-          'If utility lines are involved, stay away and contact the utility or emergency services when appropriate.',
-          'Call dispatch if the tree blocks access, threatens a structure, or creates an active hazard.',
+          "Move people, vehicles, and pets away from the tree and any hanging limbs.",
+          "If utility lines are involved, stay away and contact the utility or emergency services when appropriate.",
+          "Call dispatch if the tree blocks access, threatens a structure, or creates an active hazard.",
         ],
       },
     };
 
     function renderSteps(items) {
-      nextSteps.innerHTML = '';
+      nextSteps.innerHTML = "";
       for (const item of items) {
-        const li = document.createElement('li');
+        const li = document.createElement("li");
         li.textContent = item;
         nextSteps.appendChild(li);
       }
@@ -230,13 +281,18 @@ const questions = [
 
     function updateResult() {
       const selected = checkboxes.filter((checkbox) => checkbox.checked);
-      const score = selected.reduce((total, checkbox) => total + Number(checkbox.dataset.points || 0), 0);
-      const hasEmergency = selected.some((checkbox) => checkbox.dataset.emergency === 'true');
-      let level = 'start';
+      const score = selected.reduce(
+        (total, checkbox) => total + Number(checkbox.dataset.points || 0),
+        0,
+      );
+      const hasEmergency = selected.some(
+        (checkbox) => checkbox.dataset.emergency === "true",
+      );
+      let level = "start";
 
-      if (hasEmergency) level = 'emergency';
-      else if (score >= 6) level = 'priority';
-      else if (score > 0) level = 'monitor';
+      if (hasEmergency) level = "emergency";
+      else if (score >= 6) level = "priority";
+      else if (score > 0) level = "monitor";
 
       const data = levels[level];
       resultKicker.textContent = data.kicker;
@@ -248,13 +304,17 @@ const questions = [
       meterBar.style.width = data.width;
       renderSteps(data.steps);
 
-      resultBadge.className = '';
+      resultBadge.className = "";
       resultBadge.classList.add(`level-${level}`);
     }
 
-    checkboxes.forEach((checkbox) => checkbox.addEventListener('change', updateResult));
-    resetButton?.addEventListener('click', () => {
-      checkboxes.forEach((checkbox) => { checkbox.checked = false; });
+    checkboxes.forEach((checkbox) =>
+      checkbox.addEventListener("change", updateResult),
+    );
+    resetButton?.addEventListener("click", () => {
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = false;
+      });
       updateResult();
     });
 
@@ -263,7 +323,6 @@ const questions = [
 </script>
 
 <style>
-
   .emergency-audio-guide {
     max-width: 1180px;
     margin: 0 auto 1.5rem;
@@ -380,7 +439,9 @@ const questions = [
     border: 1px solid rgba(187, 247, 208, 0.24);
     background: rgba(255, 255, 255, 0.065);
     cursor: pointer;
-    transition: background 180ms ease, border-color 180ms ease;
+    transition:
+      background 180ms ease,
+      border-color 180ms ease;
   }
 
   .question-item:hover {
@@ -476,10 +537,20 @@ const questions = [
     font-weight: 900;
   }
 
-  .result-badges .level-start { background: #eff6f2; }
-  .result-badges .level-monitor { background: #e8fff1; }
-  .result-badges .level-priority { background: #fff7ed; color: #9a3412; }
-  .result-badges .level-emergency { background: #fee2e2; color: #991b1b; }
+  .result-badges .level-start {
+    background: #eff6f2;
+  }
+  .result-badges .level-monitor {
+    background: #e8fff1;
+  }
+  .result-badges .level-priority {
+    background: #fff7ed;
+    color: #9a3412;
+  }
+  .result-badges .level-emergency {
+    background: #fee2e2;
+    color: #991b1b;
+  }
 
   .next-step-box {
     background: #fff7ed;
