@@ -66,7 +66,7 @@ import { SITE_CONFIG } from "../config.js";
       <aside class="b2b-sidebar">
         <div class="form-wrapper">
           <h3 style="margin-top: 0; margin-bottom: 1.5rem; color: #1b4332; font-size: 1.4rem; font-weight: 800;">Inquiry Form</h3>
-          <form action="/api/contact" method="POST" style="display: grid; gap: 15px;">
+          <form action="/api/contact" method="POST" aria-label="Tree service partner inquiry form" style="display: grid; gap: 15px;">
             <!-- TUZAK -->
             <div style="display:none;" aria-hidden="true">
               <input type="text" name="fax_number" tabindex="-1" autocomplete="off" />
@@ -75,31 +75,31 @@ import { SITE_CONFIG } from "../config.js";
             <input type="hidden" name="service" value="B2B-Partner-Application" />
             
             <div>
-              <label class="form-label">Company Name</label>
-              <input type="text" name="name" placeholder="Extreme Tree Services LLC" required class="form-input"/>
+              <label class="form-label" for="partner-company">Company Name</label>
+              <input id="partner-company" type="text" name="name" autocomplete="organization" placeholder="Extreme Tree Services LLC" required class="form-input"/>
             </div>
 
             <div>
-              <label class="form-label">Business Email</label>
-              <input type="email" name="email" placeholder="owner@company.com" required class="form-input"/>
+              <label class="form-label" for="partner-email">Business Email</label>
+              <input id="partner-email" type="email" name="email" autocomplete="email" placeholder="owner@company.com" required class="form-input"/>
             </div>
 
             <div>
-              <label class="form-label">Primary Service Area</label>
-              <input type="text" name="city" placeholder="e.g. Tampa / Hillsborough" required class="form-input"/>
+              <label class="form-label" for="partner-service-area">Primary Service Area</label>
+              <input id="partner-service-area" type="text" name="city" autocomplete="address-level2" placeholder="e.g. Tampa / Hillsborough" required class="form-input"/>
             </div>
 
             <div>
-              <label class="form-label">Phone Number</label>
-              <input type="tel" name="phone" placeholder="(555) 000-0000" required class="form-input"/>
+              <label class="form-label" for="partner-phone">Phone Number</label>
+              <input id="partner-phone" type="tel" name="phone" autocomplete="tel" placeholder="(555) 000-0000" required class="form-input"/>
             </div>
 
             <div>
-              <label class="form-label">Equipment & Crew Size</label>
-              <textarea name="message" rows="4" placeholder="Describe your trucks, cranes, and crew capacity..." class="form-input" style="resize: vertical;"></textarea>
+              <label class="form-label" for="partner-message">Equipment & Crew Size</label>
+              <textarea id="partner-message" name="message" rows="4" placeholder="Describe your trucks, cranes, and crew capacity..." class="form-input" style="resize: vertical;"></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">SUBMIT PARTNERSHIP REQUEST</button>
+            <button type="submit" class="submit-btn" aria-label="Submit tree service partnership request">SUBMIT PARTNERSHIP REQUEST</button>
           </form>
           <p style="text-align: center; font-size: 0.75rem; color: #94a3b8; margin-top: 15px; font-weight: 600;">
             ✓ Secure Data Transmission

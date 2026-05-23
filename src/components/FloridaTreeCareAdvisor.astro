@@ -3,9 +3,9 @@ import advisorData from "../data/florida-tree-care-advisor.json";
 import { SITE_CONFIG } from "../config.js";
 ---
 
-<section class="advisor-card" data-tree-care-advisor>
+<section class="advisor-card" data-tree-care-advisor aria-labelledby="tree-care-advisor-title">
   <div class="advisor-grid">
-    <form class="advisor-form" id="treeCareAdvisorForm">
+    <form class="advisor-form" id="treeCareAdvisorForm" aria-describedby="tree-care-advisor-note">
       <div class="field-group">
         <label for="region">Florida area</label>
         <select id="region" name="region" required>
@@ -39,7 +39,7 @@ import { SITE_CONFIG } from "../config.js";
         </select>
       </div>
 
-      <button type="submit">Get Florida Tree Care Guidance</button>
+      <button type="submit" aria-controls="advisorResult">Get Florida Tree Care Guidance</button>
       <div class="advisor-prep-list" aria-label="Information to prepare before calling">
         <strong>Before calling, note:</strong>
         <ul>
@@ -50,12 +50,12 @@ import { SITE_CONFIG } from "../config.js";
         </ul>
       </div>
 
-      <p class="form-note">This tool offers general homeowner guidance, not a diagnosis or legal permit determination.</p>
+      <p class="form-note" id="tree-care-advisor-note">This tool offers general homeowner guidance, not a diagnosis or legal permit determination.</p>
     </form>
 
-    <div class="advisor-result" id="advisorResult" aria-live="polite">
+    <div class="advisor-result" id="advisorResult" aria-live="polite" aria-atomic="true">
       <div class="result-kicker">Florida Tree Care Advisor</div>
-      <h2>Choose your area and concern to get practical next steps.</h2>
+      <h2 id="tree-care-advisor-title">Choose your area and concern to get practical next steps.</h2>
       <p>Use this tool before calling a crew, comparing estimates, or deciding whether a tree issue can wait.</p>
     </div>
   </div>
@@ -74,7 +74,7 @@ import { SITE_CONFIG } from "../config.js";
 
   const renderList = (items = []) => items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   const renderLinks = (items = []) => items.map((item) => (
-    `<a class="guide-link" href="${escapeHtml(item.href)}">
+    `<a class="guide-link" href="${escapeHtml(item.href)}" aria-label="Read guide: ${escapeHtml(item.title)}">
       <span>${escapeHtml(item.title)}</span>
       <strong>Read guide →</strong>
     </a>`
@@ -125,7 +125,7 @@ import { SITE_CONFIG } from "../config.js";
       </div>
 
       <div class="advisor-cta-row">
-        <a class="advisor-primary-cta" href="${phoneHref}">Call Dispatch</a>
+        <a class="advisor-primary-cta" href="${phoneHref}" aria-label="Call ProTreeTrim dispatch">Call Dispatch</a>
         <a class="advisor-secondary-cta" href="${escapeHtml(concern.serviceLink.href)}">${escapeHtml(concern.serviceLink.title)}</a>
       </div>
     `;

@@ -59,10 +59,10 @@ const questions = [
 ];
 ---
 
-<section class="emergency-tool-shell" data-emergency-tool>
+<section class="emergency-tool-shell" data-emergency-tool aria-labelledby="emergency-checklist-title">
   <aside class="emergency-tool-panel">
     <p class="panel-kicker">Safety checklist</p>
-    <h2>Check what applies right now.</h2>
+    <h2 id="emergency-checklist-title">Check what applies right now.</h2>
     <p>
       Select any conditions you see. This tool gives general guidance only and
       is not a diagnosis, inspection, or emergency-services substitute.
@@ -85,12 +85,12 @@ const questions = [
       ))}
     </div>
 
-    <button type="button" class="reset-button" data-reset-checklist>
+    <button type="button" class="reset-button" data-reset-checklist aria-label="Reset emergency tree safety checklist">
       Reset checklist
     </button>
   </aside>
 
-  <div class="emergency-result-card" aria-live="polite">
+  <div class="emergency-result-card" aria-live="polite" aria-atomic="true">
     <p class="result-kicker" data-result-kicker>Start here</p>
     <h2 data-result-title>Answer the checklist to see the attention level.</h2>
     <p data-result-copy>
@@ -118,7 +118,7 @@ const questions = [
     </div>
 
     <div class="result-actions">
-      <a class="primary-action" href="tel:+18554982578">Call Dispatch</a>
+      <a class="primary-action" href="tel:+18554982578" aria-label="Call ProTreeTrim dispatch">Call Dispatch</a>
       <a class="secondary-action" href="/services/emergency-response/">Emergency Tree Service</a>
     </div>
   </div>

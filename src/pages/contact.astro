@@ -45,36 +45,36 @@ import { SITE_CONFIG } from "../config.js";
       <div style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 15px 35px rgba(0,0,0,0.05);">
         <h2 style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0; margin-bottom: 1.5rem;">Request a Quote</h2>
 
-        <form action="/api/contact" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+        <form action="/api/contact" method="POST" aria-label="Request a tree service quote" style="display: flex; flex-direction: column; gap: 15px;">
           <!-- TUZAK -->
           <div style="display:none;" aria-hidden="true"><input type="text" name="fax_number" tabindex="-1" autocomplete="off" /></div>
 
           <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Your Name</label>
-            <input type="text" name="name" placeholder="John Doe" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
+            <label for="contact-name" style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Your Name</label>
+            <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="John Doe" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
           </div>
 
           <!-- YENİ: E-mail ve Phone yan yana -->
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
             <div>
-              <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Email Address</label>
-              <input type="email" name="email" placeholder="john@example.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
+              <label for="contact-email" style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Email Address</label>
+              <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="john@example.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
             </div>
             <div>
-              <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Phone</label>
-              <input type="tel" name="phone" placeholder="(555) 000-0000" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
+              <label for="contact-phone" style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Phone</label>
+              <input id="contact-phone" type="tel" name="phone" autocomplete="tel" placeholder="(555) 000-0000" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
             </div>
           </div>
 
           <!-- City ve Service yan yana -->
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
             <div>
-              <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">City</label>
-              <input type="text" name="city" placeholder="e.g. Miami" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
+              <label for="contact-city" style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">City</label>
+              <input id="contact-city" type="text" name="city" autocomplete="address-level2" placeholder="e.g. Miami" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;" required />
             </div>
             <div>
-              <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Service Needed</label>
-              <select name="service" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; background: white;">
+              <label for="contact-service" style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Service Needed</label>
+              <select id="contact-service" name="service" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; background: white;">
                 <option>Tree Removal</option>
                 <option>Stump Grinding</option>
                 <option>Emergency Service</option>
@@ -84,17 +84,17 @@ import { SITE_CONFIG } from "../config.js";
           </div>
 
           <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Message</label>
-            <textarea name="message" rows="4" placeholder="Tell us about your project..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; resize: vertical;"></textarea>
+            <label for="contact-message" style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Message</label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="Tell us about your project..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; resize: vertical;"></textarea>
           </div>
-          <button type="submit" style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;">SEND REQUEST</button>
+          <button type="submit" aria-label="Send tree service request" style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;">SEND REQUEST</button>
         </form>
       </div>
       <!-- [Harita kısmı aynı kaldı] -->
       <div>
         <h2 style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0;">Statewide Coverage</h2>
         <p style="color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">ProTreeTrim™ manages a distributed network of certified experts across all <strong>67 Florida counties</strong>.</p>
-        <div style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"><iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=Florida&t=&z=6&ie=UTF8&iwloc=&output=embed"></iframe></div>
+        <div style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"><iframe title="Map showing Florida statewide coverage" width="100%" height="450" style="border:0" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=Florida&t=&z=6&ie=UTF8&iwloc=&output=embed"></iframe></div>
       </div>
     </div>
   </main>

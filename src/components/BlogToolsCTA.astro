@@ -209,7 +209,7 @@ if (includesAny(emergencyTerms)) {
   </div>
   <div class="blog-tools-cta__grid">
     {profile.tools.map((tool) => (
-      <a class:list={["blog-tools-cta__tool", `blog-tools-cta__tool--${tool.tone}`]} href={tool.href}>
+      <a class:list={["blog-tools-cta__tool", `blog-tools-cta__tool--${tool.tone}`]} href={tool.href} aria-label={`${tool.label}: ${tool.note}`}>
         <strong>{tool.label} →</strong>
         <small>{tool.note}</small>
       </a>
