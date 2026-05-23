@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import AudioGuideBlock from "../../components/AudioGuideBlock.astro";
 import FloridaProblemTreeGuide from "../../components/FloridaProblemTreeGuide.astro";
 ---
 
@@ -19,6 +20,13 @@ import FloridaProblemTreeGuide from "../../components/FloridaProblemTreeGuide.as
   </section>
 
   <FloridaProblemTreeGuide />
+
+    <AudioGuideBlock
+      title="Listen to the 55-second problem tree guide"
+      description="A quick audio summary for Florida homeowners reviewing tree risks, access issues, cleanup concerns, and permit questions."
+      audioSrc="/audio/florida-problem-tree-guide-audio-guide.mp3"
+      audioLabel="Florida Problem Tree Guide audio guide"
+    />
 
   <section class="problem-bottom">
     <div class="bottom-card dark">

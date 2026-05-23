@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import AudioGuideBlock from "../../components/AudioGuideBlock.astro";
 import FloridaTreeCareAdvisor from "../../components/FloridaTreeCareAdvisor.astro";
 ---
 
@@ -37,6 +38,13 @@ import FloridaTreeCareAdvisor from "../../components/FloridaTreeCareAdvisor.astr
     </section>
 
     <FloridaTreeCareAdvisor />
+
+    <AudioGuideBlock
+      title="Listen to the 55-second tree care guide"
+      description="A quick audio summary to help Florida homeowners organize tree care questions before requesting local guidance."
+      audioSrc="/audio/florida-tree-care-advisor-audio-guide.mp3"
+      audioLabel="Florida Tree Care Advisor audio guide"
+    />
 
     <section class="after-tool-grid">
       <div>
