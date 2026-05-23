@@ -1,0 +1,111 @@
+---
+const {
+  kicker = "Audio Guide",
+  title,
+  description,
+  audioSrc,
+  audioLabel = "ProTreeTrim audio guide",
+  ctaText = "Prefer to talk now? Call ProTreeTrim dispatch at",
+  phoneDisplay = "+1 855 498 2578",
+  phoneHref = "tel:+18554982578",
+} = Astro.props;
+---
+
+<section class="audio-guide-block" aria-labelledby={`${audioLabel.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}-title`}>
+  <div class="audio-guide-copy">
+    <p class="audio-guide-kicker">{kicker}</p>
+    <h2 id={`${audioLabel.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}-title`}>{title}</h2>
+    <p>{description}</p>
+  </div>
+
+  <div class="audio-guide-player">
+    <audio controls preload="none" aria-label={audioLabel}>
+      <source src={audioSrc} type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <p>
+      {ctaText}
+      <a href={phoneHref}>{phoneDisplay}</a>.
+    </p>
+  </div>
+</section>
+
+<style>
+  .audio-guide-block {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: center;
+    margin: 2rem 0 2.5rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid #d9eadf;
+    border-radius: 28px;
+    background: #f7fffa;
+    box-shadow: 0 18px 50px rgba(15, 63, 42, 0.04);
+  }
+
+  .audio-guide-copy {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .audio-guide-kicker {
+    margin: 0;
+    color: #f05a00 !important;
+    font-size: 0.78rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.2 !important;
+  }
+
+  .audio-guide-copy h2 {
+    margin: 0;
+    color: #0b3d2e;
+    font-size: clamp(1.55rem, 4vw, 2.65rem);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: -0.045em;
+  }
+
+  .audio-guide-copy p:not(.audio-guide-kicker) {
+    margin: 0;
+    color: #475569;
+    font-size: 1.02rem;
+    line-height: 1.7;
+  }
+
+  .audio-guide-player {
+    background: #fff;
+    border: 1px solid #d9eadf;
+    border-radius: 22px;
+    padding: 1.15rem;
+  }
+
+  .audio-guide-player audio {
+    display: block;
+    width: 100%;
+  }
+
+  .audio-guide-player p {
+    margin: 1rem 0 0;
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .audio-guide-player a {
+    color: #0b3d2e;
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 760px) {
+    .audio-guide-block {
+      grid-template-columns: 1fr;
+      border-radius: 22px;
+    }
+  }
+</style>
