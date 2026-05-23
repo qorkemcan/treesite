@@ -6,6 +6,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { SITE_CONFIG } from "../../config.js";
 import { getCountyGuideLinks, getCountyMoneyLinkGroups } from "../../data/internal-links.js";
 import countyPermitData from "../../data/county-permits.json";
+import AudioGuideBlock from "../../components/AudioGuideBlock.astro";
 
 export async function getStaticPaths() {
   const filePath = path.resolve("./src/data/cities.csv");
@@ -173,6 +174,19 @@ Dispatch guidance across {cityCount} listed service zones.
         </p>
       </div>
     </div>
+
+
+    {
+      countySlug === "volusia" && (
+        <AudioGuideBlock
+          kicker="Audio Guide"
+          title="Listen to the Volusia County tree service guide."
+          description="A short audio summary for Volusia County homeowners comparing tree removal, stump grinding, emergency response, access, and permit planning questions before calling a tree service."
+          audioSrc="/audio/volusia-county-tree-service-audio-guide.mp3"
+          audioLabel="Volusia County tree service audio guide"
+        />
+      )
+    }
 
     {
       countyMoneyGroups.length > 0 && (
