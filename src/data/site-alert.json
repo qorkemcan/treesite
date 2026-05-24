@@ -1,12 +1,18 @@
 {
-  "enabled": false,
-  "mode": "normal",
-  "severity": "none",
-  "headline": "",
-  "message": "",
-  "areas": [],
+  "enabled": true,
+  "mode": "storm",
+  "severity": "high",
+  "headline": "Saturated Soil Tree Risk Notice",
+  "message": "Flooding and saturated soil can reduce tree stability. Watch for new leaning, lifted soil, or cracks around large trees after heavy rain.",
+  "areas": [
+    "Citrus, FL",
+    "Sumter, FL"
+  ],
   "source": "NWS API",
-  "updatedAt": "2026-05-23T19:39:02.949Z",
+  "events": [
+    "Flash Flood Warning"
+  ],
+  "updatedAt": "2026-05-24T04:39:58.328Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
