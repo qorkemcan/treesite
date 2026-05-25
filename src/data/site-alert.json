@@ -1,12 +1,24 @@
 {
-  "enabled": false,
-  "mode": "normal",
-  "severity": "none",
-  "headline": "",
-  "message": "",
-  "areas": [],
+  "enabled": true,
+  "mode": "watch",
+  "severity": "medium",
+  "headline": "Saturated Soil Tree Risk Notice",
+  "message": "Flooding and saturated soil can reduce tree stability. Watch for new leaning, lifted soil, or cracks around large trees after heavy rain.",
+  "areas": [
+    "Choctaw",
+    "Washington",
+    "Clarke",
+    "Wilcox",
+    "Monroe",
+    "Conecuh",
+    "Butler",
+    "Crenshaw"
+  ],
   "source": "NWS API",
-  "updatedAt": "2026-05-25T10:50:03.485Z",
+  "events": [
+    "Flood Watch"
+  ],
+  "updatedAt": "2026-05-25T15:29:10.649Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
