@@ -1,24 +1,25 @@
 {
   "enabled": true,
-  "mode": "watch",
-  "severity": "medium",
+  "mode": "storm",
+  "severity": "high",
   "headline": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce tree stability. Watch for new leaning, lifted soil, or cracks around large trees after heavy rain.",
   "areas": [
+    "Gadsden, FL",
+    "Liberty, FL",
     "Choctaw",
     "Washington",
     "Clarke",
     "Wilcox",
     "Monroe",
-    "Conecuh",
-    "Butler",
-    "Crenshaw"
+    "Conecuh"
   ],
   "source": "NWS API",
   "events": [
+    "Flash Flood Warning",
     "Flood Watch"
   ],
-  "updatedAt": "2026-05-25T15:29:10.649Z",
+  "updatedAt": "2026-05-25T20:00:13.561Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
