@@ -5,21 +5,21 @@
   "headline": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce tree stability. Watch for new leaning, lifted soil, or cracks around large trees after heavy rain.",
   "areas": [
+    "Okaloosa, FL",
     "Choctaw",
     "Washington",
     "Clarke",
     "Wilcox",
     "Monroe",
     "Conecuh",
-    "Butler",
-    "Crenshaw"
+    "Butler"
   ],
   "source": "NWS API",
   "events": [
-    "Flood Watch",
-    "Flood Warning"
+    "Flood Warning",
+    "Flood Watch"
   ],
-  "updatedAt": "2026-05-26T20:26:32.014Z",
+  "updatedAt": "2026-05-27T04:50:09.751Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
