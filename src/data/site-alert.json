@@ -1,18 +1,12 @@
 {
-  "enabled": true,
-  "mode": "watch",
-  "severity": "medium",
-  "headline": "Severe Weather Tree Safety Notice",
-  "message": "Strong weather is active in parts of Florida. Keep people, pets, and vehicles away from leaning, cracked, or storm-damaged trees until conditions improve.",
-  "areas": [
-    "Volusia, FL",
-    "Flagler, FL"
-  ],
+  "enabled": false,
+  "mode": "normal",
+  "severity": "none",
+  "headline": "",
+  "message": "",
+  "areas": [],
   "source": "NWS API",
-  "events": [
-    "Severe Thunderstorm Warning"
-  ],
-  "updatedAt": "2026-06-02T21:24:32.657Z",
+  "updatedAt": "2026-06-03T05:18:12.573Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
