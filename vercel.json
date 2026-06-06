@@ -2,6 +2,36 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/county/st.-lucie",
+      "destination": "/county/st-lucie/",
+      "permanent": true
+    },
+    {
+      "source": "/county/st.-lucie/",
+      "destination": "/county/st-lucie/",
+      "permanent": true
+    },
+    {
+      "source": "/county/st.-johns",
+      "destination": "/county/st-johns/",
+      "permanent": true
+    },
+    {
+      "source": "/county/st.-johns/",
+      "destination": "/county/st-johns/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-county-st.-lucie.xml",
+      "destination": "/sitemap-county-st-lucie.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-county-st.-johns.xml",
+      "destination": "/sitemap-county-st-johns.xml",
+      "permanent": true
+    },
+    {
       "source": "/blog/category/emergency-storm",
       "destination": "/blog/category/emergency-and-storm/",
       "permanent": true

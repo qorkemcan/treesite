@@ -9,10 +9,11 @@ const PUBLIC_PATH = path.join(process.cwd(), 'public');
 const TODAY = new Date().toISOString().split('T')[0];
 const POSTS_PER_PAGE = 12;
 
-// Default: keep current city/service coverage in sitemap, only normalize URL format.
-// Later, if we decide to tighten crawl signals, build with:
-// SITEMAP_ONLY_RICH_PAGES=true npm run build
-const ONLY_RICH_CITY_SERVICE_PAGES = process.env.SITEMAP_ONLY_RICH_PAGES === 'true';
+// Default: tighten crawl signals by listing only richer city/service pages in the sitemap.
+// Pages still exist and remain indexable; they are simply not all submitted in XML sitemaps.
+// To submit every generated city/service URL again, build with:
+// SITEMAP_ONLY_RICH_PAGES=false npm run build
+const ONLY_RICH_CITY_SERVICE_PAGES = process.env.SITEMAP_ONLY_RICH_PAGES === 'false' ? false : true;
 
 function escapeXml(value = '') {
   return String(value)
@@ -80,19 +81,41 @@ function slugifyCategory(value = '') {
     .replace(/\s+/g, '-');
 }
 
-function slugifyCity(value = '') {
+function slugifyLocation(value = '') {
   return String(value)
     .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
     .trim()
     .replace(/\./g, '')
-    .replace(/\s+/g, '-');
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function slugifyCity(value = '') {
+  return slugifyLocation(value);
 }
 
 function slugifyCounty(value = '') {
-  return String(value)
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-');
+  return slugifyLocation(value);
+}
+
+function cleanupGeneratedSitemaps() {
+  if (!fs.existsSync(PUBLIC_PATH)) {
+    fs.mkdirSync(PUBLIC_PATH, { recursive: true });
+    return;
+  }
+
+  const generatedSitemapPattern = /^(sitemap-index|sitemap-main|sitemap-blog|sitemap-county-.+)\.xml$/;
+
+  fs.readdirSync(PUBLIC_PATH)
+    .filter((file) => generatedSitemapPattern.test(file))
+    .forEach((file) => {
+      fs.unlinkSync(path.join(PUBLIC_PATH, file));
+    });
 }
 
 function stripMarkdownExtension(fileName = '') {
@@ -196,6 +219,7 @@ async function generate() {
   console.log('🚀 Public klasörüne sitemap oluşturuluyor...');
 
   try {
+    cleanupGeneratedSitemaps();
     const fileContent = fs.readFileSync(CSV_PATH, 'utf-8');
     const records = parse(fileContent, {
       columns: true,

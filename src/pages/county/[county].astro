@@ -20,7 +20,14 @@ export async function getStaticPaths() {
   const counties = [...new Set(records.map((r) => r.County))];
 
   return counties.map((county) => {
-    const countySlug = county.toLowerCase().trim().replace(/\s+/g, "-");
+    const countySlug = String(county ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/\./g, "")
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
     const citiesInCounty = records.filter((r) => r.County === county);
 
     return {
@@ -35,7 +42,14 @@ export async function getStaticPaths() {
 
 const { countyName, cities } = Astro.props;
 const displayCounty = countyName + " County";
-const countySlug = countyName.toLowerCase().trim().replace(/\s+/g, "-");
+const countySlug = String(countyName ?? "")
+  .trim()
+  .toLowerCase()
+  .replace(/&/g, " and ")
+  .replace(/\./g, "")
+  .replace(/[’']/g, "")
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-+|-+$/g, "");
 const countyCanonicalUrl = `${SITE_CONFIG.siteUrl}/county/${countySlug}/`;
 
 // SEO İÇİN GÜNCEL TARİH VE İSTATİSTİK
