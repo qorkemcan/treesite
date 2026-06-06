@@ -440,6 +440,180 @@ const relatedBlogLinks = getServiceRelatedBlogLinks({
   servicePrefix: serviceInfo.prefix,
 });
 
+
+const coastalCounties = new Set([
+  "Bay",
+  "Brevard",
+  "Broward",
+  "Charlotte",
+  "Citrus",
+  "Collier",
+  "Dixie",
+  "Duval",
+  "Escambia",
+  "Flagler",
+  "Franklin",
+  "Gulf",
+  "Hernando",
+  "Hillsborough",
+  "Indian River",
+  "Lee",
+  "Levy",
+  "Manatee",
+  "Martin",
+  "Miami-Dade",
+  "Monroe",
+  "Nassau",
+  "Okaloosa",
+  "Palm Beach",
+  "Pasco",
+  "Pinellas",
+  "Santa Rosa",
+  "Sarasota",
+  "St Johns",
+  "St Lucie",
+  "Taylor",
+  "Volusia",
+  "Wakulla",
+  "Walton",
+]);
+const denseMetroCounties = new Set([
+  "Broward",
+  "Duval",
+  "Hillsborough",
+  "Miami-Dade",
+  "Orange",
+  "Palm Beach",
+  "Pinellas",
+  "Seminole",
+]);
+const ruralCounties = new Set([
+  "Baker",
+  "Bradford",
+  "Calhoun",
+  "Dixie",
+  "Franklin",
+  "Gadsden",
+  "Gilchrist",
+  "Glades",
+  "Gulf",
+  "Hamilton",
+  "Hardee",
+  "Hendry",
+  "Holmes",
+  "Jackson",
+  "Jefferson",
+  "Lafayette",
+  "Levy",
+  "Liberty",
+  "Madison",
+  "Okeechobee",
+  "Suwannee",
+  "Taylor",
+  "Union",
+  "Wakulla",
+  "Washington",
+]);
+
+const isCoastalCounty = coastalCounties.has(countyName);
+const isDenseMetro = population > 100000 || denseMetroCounties.has(countyName);
+const isRuralSetting = population < 20000 || ruralCounties.has(countyName);
+const settingLabel = isCoastalCounty
+  ? "coastal Florida setting"
+  : isDenseMetro
+    ? "metro Florida setting"
+    : isRuralSetting
+      ? "rural Florida setting"
+      : "inland residential setting";
+const accessPattern = isDenseMetro
+  ? "tighter driveways, nearby homes, fences, pool decks, parked vehicles, and limited drop zones"
+  : isRuralSetting
+    ? "longer driveways, wider lots, uneven ground, rural access routes, and debris-hauling distance"
+    : isCoastalCounty
+      ? "wind exposure, salt-air wear, rental-property schedules, pavers, pools, and compact side yards"
+      : "suburban lots, older trees, sidewalks, irrigation, fences, and driveway access";
+const stormPattern = isCoastalCounty
+  ? "wind-driven storms, saturated soils, salt exposure, and quick access needs after tropical weather"
+  : isDenseMetro
+    ? "summer thunderstorms, crowded target zones, roofline exposure, and access constraints around neighboring properties"
+    : isRuralSetting
+      ? "longer response routes, storm debris volume, driveway access, and trees falling across open or semi-rural lots"
+      : "thunderstorm damage, wet soil, canopy weight, and gradual defects that become more visible after heavy rain";
+const afterWorkPriority = serviceInfo.prefix === "stump-grinding"
+  ? "deciding whether the area should become lawn, mulch, pavers, or a replanting space after grinding"
+  : serviceInfo.prefix === "emergency-service"
+    ? "making the site safer first, then separating temporary hazard mitigation from permanent removal or cleanup"
+    : "deciding whether stump work, grading, debris handling, or replacement planting should be planned with the removal";
+
+const qualityDifferentiators = [
+  {
+    label: "Local setting",
+    title: `${cityName} is treated as a ${settingLabel}`,
+    text: `This page uses ${countyName} County context, ${landmark}, population scale, and local tree profile details so the guidance is not just a copied Florida city template.`,
+  },
+  {
+    label: "Site constraints",
+    title: `What crews should check before work starts`,
+    text: `Planning in ${cityName} should account for ${accessPattern}. Those constraints affect scheduling, equipment choice, cleanup, and how safely the work can be staged.`,
+  },
+  {
+    label: "Weather and aftercare",
+    title: `Why timing matters here`,
+    text: `The most useful plan considers ${stormPattern}. After the immediate job, the next decision is usually ${afterWorkPriority}.`,
+  },
+];
+
+const serviceDecisionMatrix = {
+  "tree-removal": {
+    checkTitle: "Check before removal",
+    checkText: `Look for lean direction, trunk cracks, root movement, canopy weight, nearby rooflines, utilities, and whether ${mainTree} can be retained safely with pruning instead of full removal.`,
+    callTitle: "Call sooner when",
+    callText: `A tree is leaning toward a structure, dropping large limbs, showing decay near the base, pressing into a roofline, or creating repeated storm-season risk near ${landmark}.`,
+    avoidTitle: "Avoid this mistake",
+    avoidText: `Do not treat a risky removal like simple trimming. Controlled dismantling, target protection, and cleanup planning matter when homes, fences, driveways, or pool cages are nearby.`,
+    prepFaq: `What should I photograph before tree removal in ${cityName}?`,
+    prepAnswer: `Before tree removal in ${cityName}, photograph the whole tree, trunk base, lean direction, canopy, nearby structures, visible decay, roots, and any storm damage. Those photos can help with estimate coordination, permit questions, and insurance conversations when damage or hazard claims are involved.`,
+  },
+  "stump-grinding": {
+    checkTitle: "Check before grinding",
+    checkText: `Measure the stump width, note exposed root flare, mark irrigation heads, check gate width, and decide whether the finished area should become sod, mulch, pavers, or a new planting space.`,
+    callTitle: "Call sooner when",
+    callText: `The stump is creating a trip hazard, blocking mowing, holding water, interfering with pavers or a driveway edge, or preventing clean use of the yard near ${landmark}.`,
+    avoidTitle: "Avoid this mistake",
+    avoidText: `Do not choose grinding depth without a final surface plan. Lawn repair, replanting, and hardscape prep may require different chip handling and backfill expectations.`,
+    prepFaq: `How should I prepare my yard before stump grinding in ${cityName}?`,
+    prepAnswer: `Before stump grinding in ${cityName}, clear loose items, mark irrigation or lighting lines if known, measure narrow gates, decide whether chips should stay or be hauled, and explain whether the area will become lawn, mulch, pavers, or a planting bed.`,
+  },
+  "emergency-service": {
+    checkTitle: "Check from a safe distance",
+    checkText: `Look for blocked access, roof contact, hanging limbs, split trunks, downed wires, leaning trees, and limbs under tension. Stay away from unstable wood until the site is assessed.`,
+    callTitle: "Call immediately when",
+    callText: `A tree or large limb is on a structure, blocking a driveway, threatening a roofline, touching wires, or creating a hazard that could move suddenly after storm damage.`,
+    avoidTitle: "Avoid this mistake",
+    avoidText: `Do not cut loaded or storm-bent limbs yourself. Tensioned wood can release suddenly and turn a cleanup problem into a serious injury or property-damage event.`,
+    prepFaq: `What details help emergency tree dispatch in ${cityName}?`,
+    prepAnswer: `For emergency tree service in ${cityName}, share whether a structure, driveway, vehicle, fence, or utility area is affected; send clear photos from a safe distance; mention access limits; and explain whether the hazard changed after wind or rain.`,
+  },
+};
+const serviceDecision = serviceDecisionMatrix[serviceInfo.prefix] || serviceDecisionMatrix["tree-removal"];
+const cityActionCards = [
+  {
+    label: "First check",
+    title: serviceDecision.checkTitle,
+    text: serviceDecision.checkText,
+  },
+  {
+    label: "Call threshold",
+    title: serviceDecision.callTitle,
+    text: serviceDecision.callText,
+  },
+  {
+    label: "Avoid",
+    title: serviceDecision.avoidTitle,
+    text: serviceDecision.avoidText,
+  },
+];
+
 const speciesMap = {
   "Live Oaks":
     "Large-canopy Live Oaks often need structural planning before Florida storm pressure turns weight and leverage into property risk.",
@@ -666,6 +840,76 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         {selectedRichText.split(".").slice(0, 2).join(".").trim()}.
       </p>
     </div>
+
+    <section style="margin-top: 3rem;">
+      <div
+        style="display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:1.4rem;"
+      >
+        <div>
+          <span
+            style="display:inline-block; background:#ecfdf5; color:#166534; border:1px solid #bbf7d0; padding:5px 12px; border-radius:999px; font-size:0.72rem; font-weight:900; text-transform:uppercase;"
+          >
+            City-specific planning layer
+          </span>
+          <h2
+            style="margin:0.8rem 0 0.35rem; color:#064e3b; font-size:1.75rem; font-weight:900;"
+          >
+            Why {cityName} {serviceInfo.name} needs a local review
+          </h2>
+          <p style="margin:0; color:#4b5563; line-height:1.7; max-width:820px;">
+            These notes add city, county, access, weather, and aftercare context so this page works as a homeowner decision guide rather than a generic service-area listing.
+          </p>
+        </div>
+      </div>
+      <div
+        style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px;"
+      >
+        {
+          qualityDifferentiators.map((item) => (
+            <div class="info-card-base local-differentiator-card">
+              <span>{item.label}</span>
+              <h4>{item.title}</h4>
+              <p>{item.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section style="margin-top: 3rem;">
+      <div
+        style="background:#fff7ed; border:1px solid #fed7aa; border-radius:28px; padding:2rem;"
+      >
+        <div style="text-align:center; max-width:820px; margin:0 auto 1.6rem;">
+          <span
+            style="display:inline-block; background:white; color:#c2410c; border:1px solid #fed7aa; padding:5px 12px; border-radius:999px; font-size:0.72rem; font-weight:900; text-transform:uppercase;"
+          >
+            Homeowner first-step guide
+          </span>
+          <h2
+            style="margin:0.8rem 0 0.5rem; color:#7c2d12; font-size:1.7rem; font-weight:900;"
+          >
+            What to check before scheduling in {cityName}
+          </h2>
+          <p style="margin:0; color:#7c2d12; line-height:1.7; font-weight:600;">
+            The right next step depends on whether this is a routine planning issue, a property-protection concern, or an urgent hazard. Use the guide below before requesting dispatch help.
+          </p>
+        </div>
+        <div
+          style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:16px;"
+        >
+          {
+            cityActionCards.map((card) => (
+              <div class="info-card-base city-action-card">
+                <span>{card.label}</span>
+                <h4>{card.title}</h4>
+                <p>{card.text}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
 
     <section style="margin-top: 4rem;">
       <h2
@@ -1276,4 +1520,33 @@ const structuredFaqs = finalFaqs.map((faq) => ({
       box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
     }
   }
+
+  .local-differentiator-card span,
+  .city-action-card span {
+    display: inline-block;
+    color: #ea580c;
+    font-size: 0.72rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.55rem;
+  }
+
+  .local-differentiator-card h4,
+  .city-action-card h4 {
+    margin: 0 0 0.65rem;
+    color: #064e3b;
+    font-size: 1.08rem;
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  .local-differentiator-card p,
+  .city-action-card p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.7;
+    font-size: 0.98rem;
+  }
+
 </style>
