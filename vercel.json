@@ -2,6 +2,26 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/blog/category/emergency-storm",
+      "destination": "/blog/category/emergency-and-storm/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/emergency-storm/",
+      "destination": "/blog/category/emergency-and-storm/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/florida-tree-removal-cost-guidemd",
+      "destination": "/blog/florida-tree-removal-cost-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/florida-tree-removal-cost-guidemd/",
+      "destination": "/blog/florida-tree-removal-cost-guide/",
+      "permanent": true
+    },
+    {
       "source": "/blog/native-florida-trees-vs-invasive-species-what-to-know (1)",
       "destination": "/blog/native-florida-trees-vs-invasive-species-what-to-know/",
       "permanent": true
