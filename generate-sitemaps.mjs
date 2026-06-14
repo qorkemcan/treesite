@@ -299,17 +299,22 @@ async function generate() {
 
       countyGroups[countySlug].forEach((city) => {
         if (!city.City) return;
-        const citySlug = slugifyCity(city.City);
+        const citySlug = String(city.City)
+          .toLowerCase()
+          .trim()
+          .replace(/\./g, '')
+          .replace(/\s+/g, '-');
+        const cityContentSlug = slugifyLocation(city.City);
 
         services.forEach((svc) => {
-          if (ONLY_RICH_CITY_SERVICE_PAGES && !svc.richTextSource[citySlug]) {
+          if (ONLY_RICH_CITY_SERVICE_PAGES && !svc.richTextSource[cityContentSlug]) {
             return;
           }
 
           entries.push({
             loc: pageUrl(`/${svc.prefix}-${citySlug}/`),
             lastmod: TODAY,
-            priority: svc.richTextSource[citySlug] ? '0.75' : '0.6',
+            priority: svc.richTextSource[cityContentSlug] ? '0.75' : '0.6',
           });
         });
       });
