@@ -1,21 +1,12 @@
 {
-  "enabled": true,
-  "mode": "watch",
-  "severity": "medium",
-  "headline": "Severe Weather Tree Safety Notice",
-  "message": "Strong weather is active in parts of Florida. Keep people, pets, and vehicles away from leaning, cracked, or storm-damaged trees until conditions improve.",
-  "areas": [
-    "Duval, FL",
-    "St. Johns, FL",
-    "Bay, FL",
-    "Walton, FL",
-    "Washington, FL"
-  ],
+  "enabled": false,
+  "mode": "normal",
+  "severity": "none",
+  "headline": "",
+  "message": "",
+  "areas": [],
   "source": "NWS API",
-  "events": [
-    "Severe Thunderstorm Warning"
-  ],
-  "updatedAt": "2026-06-13T19:55:02.364Z",
+  "updatedAt": "2026-06-14T05:09:34.707Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
