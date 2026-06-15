@@ -1,20 +1,12 @@
 {
-  "enabled": true,
-  "mode": "watch",
-  "severity": "medium",
-  "headline": "Severe Weather Tree Safety Notice",
-  "message": "Strong weather is active in parts of Florida. Keep people, pets, and vehicles away from leaning, cracked, or storm-damaged trees until conditions improve.",
-  "areas": [
-    "Houston, AL",
-    "Jackson, FL",
-    "Decatur, GA",
-    "Seminole, GA"
-  ],
+  "enabled": false,
+  "mode": "normal",
+  "severity": "none",
+  "headline": "",
+  "message": "",
+  "areas": [],
   "source": "NWS API",
-  "events": [
-    "Severe Thunderstorm Warning"
-  ],
-  "updatedAt": "2026-06-14T19:58:54.415Z",
+  "updatedAt": "2026-06-15T05:29:17.539Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
