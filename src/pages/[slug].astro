@@ -8,6 +8,13 @@ import { Image } from "astro:assets";
 import arboristTips from "../data/arborist-tips.json";
 import PriceCalculator from "../components/PriceCalculator.astro";
 import { getServiceRelatedBlogLinks } from "../data/internal-links.js";
+import {
+  canUseSharedCityContent,
+  cityServicePath,
+  cityServiceSlug,
+  contentKeySlug,
+  countySlug as makeCountySlug,
+} from "../lib/slugs.js";
 
 import cityEmergency from "../data/city-emergency.json";
 import cityRemoval from "../data/city-removal.json";
@@ -33,14 +40,9 @@ export async function getStaticPaths() {
   records.forEach((row) => {
     if (!row.City) return;
 
-    const citySlug = row.City.toLowerCase()
-      .trim()
-      .replace(/\./g, "")
-      .replace(/\s+/g, "-");
-
     services.forEach((service) => {
       paths.push({
-        params: { slug: `${service.prefix}-${citySlug}` },
+        params: { slug: cityServiceSlug(service.prefix, row.City, row.County) },
         props: {
           cityData: row,
           serviceInfo: service,
@@ -67,13 +69,6 @@ const toTitleCase = (str) => {
     .join(" ");
 };
 
-const slugify = (value) =>
-  String(value || "")
-    .toLowerCase()
-    .trim()
-    .replace(/\./g, "")
-    .replace(/\s+/g, "-");
-
 const cityName = toTitleCase(cityData.City);
 const countyName = toTitleCase(cityData.County);
 const landmark = toTitleCase(cityData.Landmark) || "the local area";
@@ -89,9 +84,10 @@ const displayDate = new Date().toLocaleDateString("en-US", {
   year: "numeric",
 });
 
-const citySlugClean = slugify(cityData.City);
-const countySlug = slugify(cityData.County);
+const citySlugClean = contentKeySlug(cityData.City);
+const countySlug = makeCountySlug(cityData.County);
 const currentFullUrl = `${SITE_CONFIG.siteUrl}/${Astro.params.slug}/`;
+const currentTreeRemovalPath = cityServicePath("tree-removal", cityData.City, cityData.County);
 const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
 
 const communityStyle =
@@ -368,9 +364,11 @@ const templateChoiceIndex =
   genericCityTemplates.length;
 
 const richTextSource = serviceProfile.richTextSource || {};
-const hasCustomRichText = Boolean(richTextSource[citySlugClean]);
+const canUseRichText = canUseSharedCityContent(cityData.City, cityData.County);
+const hasCustomRichText = canUseRichText && Boolean(richTextSource[citySlugClean]);
 const selectedRichText =
-  richTextSource[citySlugClean] || genericCityTemplates[templateChoiceIndex];
+  (hasCustomRichText ? richTextSource[citySlugClean] : null) ||
+  genericCityTemplates[templateChoiceIndex];
 
 const allImages = import.meta.glob(
   "../assets/gallery/fl/**/*.{jpeg,jpg,png,gif,webp}",
@@ -759,7 +757,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
           ) : (
             <>
               <li>
-                <a href={`/tree-removal-${citySlugClean}/`}>{cityName}</a>
+                <a href={currentTreeRemovalPath}>{cityName}</a>
               </li>
               <li class="active">{serviceInfo.name}</li>
             </>
@@ -1082,7 +1080,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
             allServices
               .filter((s) => s.name !== serviceInfo.name)
               .map((s) => (
-                <a href={`/${s.prefix}-${citySlugClean}/`} class="hub-link-item">
+                <a href={cityServicePath(s.prefix, cityData.City, cityData.County)} class="hub-link-item">
                   <span>{s.icon}</span> {s.name} in {cityName} →
                 </a>
               ))
@@ -1317,10 +1315,9 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         {
           nearby.map((city) => {
             const nearbyCityName = toTitleCase(city.City);
-            const nearbyCitySlug = slugify(city.City);
             return (
               <a
-                href={`/${serviceInfo.prefix}-${nearbyCitySlug}/`}
+                href={cityServicePath(serviceInfo.prefix, city.City, city.County)}
                 class="nearby-link-card"
               >
                 <strong>{nearbyCityName}</strong>

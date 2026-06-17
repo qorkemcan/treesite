@@ -1,12 +1,8 @@
-const slugify = (value) =>
-  String(value || "")
-    .toLowerCase()
-    .trim()
-    .replace(/\./g, "")
-    .replace(/&/g, "and")
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
+import {
+  cityServicePath,
+  countySlug as makeCountySlug,
+  routeSlug,
+} from "../lib/slugs.js";
 
 const serviceLabels = {
   "tree-removal": "Tree Removal",
@@ -22,7 +18,7 @@ const serviceDescriptions = {
 
 const priorityCities = [
   { city: "DeLand", county: "Volusia", slug: "deland" },
-  { city: "Glen St. Mary", county: "Baker", slug: "glen-saint-mary" },
+  { city: "Glen Saint Mary", county: "Baker", slug: "glen-saint-mary" },
   { city: "Macclenny", county: "Baker", slug: "macclenny" },
   { city: "Masaryktown", county: "Hernando", slug: "masaryktown" },
   { city: "Dune Allen Beach", county: "Walton", slug: "dune-allen-beach" },
@@ -298,7 +294,7 @@ const inferServiceIntent = ({ slug = "", title = "", category = "", tags = [] } 
 
 const buildServiceTarget = (city, servicePrefix, reason = "Priority local service page") => ({
   title: `${serviceLabels[servicePrefix]} in ${city.city}, FL`,
-  href: `/${servicePrefix}-${city.slug}/`,
+  href: city.href || cityServicePath(servicePrefix, city.city, city.county),
   eyebrow: serviceLabels[servicePrefix],
   reason,
 });
@@ -350,11 +346,12 @@ export const getServiceRelatedBlogLinks = ({ citySlug = "", servicePrefix = "tre
 };
 
 export const getCountyMoneyLinkGroups = (countyName, cities = []) => {
-  const countySlug = slugify(countyName);
-  const countyPriority = priorityCities.filter((city) => slugify(city.county) === countySlug);
+  const countySlug = makeCountySlug(countyName);
+  const countyPriority = priorityCities.filter((city) => makeCountySlug(city.county) === countySlug);
   const cityRecords = cities.map((city) => ({
     city: city.City,
-    slug: slugify(city.City),
+    county: city.County,
+    slug: routeSlug(city.City),
     population: Number(String(city.Population || "0").replace(/,/g, "")) || 0,
     focus: city.FocusService || "Tree service",
   }));
@@ -362,15 +359,16 @@ export const getCountyMoneyLinkGroups = (countyName, cities = []) => {
   const fallbackCities = cityRecords
     .sort((a, b) => b.population - a.population)
     .slice(0, 4)
-    .map((city) => ({ city: city.city, slug: city.slug, focus: city.focus }));
+    .map((city) => ({ city: city.city, county: city.county, slug: city.slug, focus: city.focus }));
 
   const merged = [...countyPriority, ...fallbackCities];
   const seen = new Set();
 
   return merged
     .filter((city) => {
-      if (!city.slug || seen.has(city.slug)) return false;
-      seen.add(city.slug);
+      const key = `${routeSlug(city.city)}:${makeCountySlug(city.county)}`;
+      if (!city.slug || seen.has(key)) return false;
+      seen.add(key);
       return true;
     })
     .slice(0, 4)
@@ -386,7 +384,7 @@ export const getCountyMoneyLinkGroups = (countyName, cities = []) => {
 };
 
 export const getCountyGuideLinks = (countyName) => {
-  const countySlug = slugify(countyName);
+  const countySlug = makeCountySlug(countyName);
   return countyGuideMap[countySlug] || defaultCountyGuides;
 };
 
