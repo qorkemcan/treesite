@@ -5,21 +5,20 @@
   "headline": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce tree stability. Watch for new leaning, lifted soil, or cracks around large trees after heavy rain.",
   "areas": [
-    "Houston, AL",
-    "Gadsden, FL",
-    "Jackson, FL",
-    "Liberty, FL",
-    "Decatur, GA",
-    "Seminole, GA",
-    "Jefferson, FL",
-    "Leon, FL"
+    "Choctaw",
+    "Washington",
+    "Clarke",
+    "Wilcox",
+    "Monroe",
+    "Conecuh",
+    "Butler",
+    "Crenshaw"
   ],
   "source": "NWS API",
   "events": [
-    "Severe Thunderstorm Warning",
     "Flood Watch"
   ],
-  "updatedAt": "2026-06-16T21:20:06.575Z",
+  "updatedAt": "2026-06-17T05:17:23.150Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
