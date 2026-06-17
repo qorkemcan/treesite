@@ -1,6 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import { parse } from 'csv-parse/sync';
+import {
+  canUseSharedCityContent,
+  cityServiceSlug,
+  contentKeySlug,
+  countySlug as makeCountySlug,
+} from './src/lib/slugs.js';
 
 const SITE_URL = 'https://www.protreetrim.com';
 const CSV_PATH = path.join(process.cwd(), 'src/data/cities.csv');
@@ -79,28 +85,6 @@ function slugifyCategory(value = '') {
     .replace(/&/g, 'and')
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-');
-}
-
-function slugifyLocation(value = '') {
-  return String(value)
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .trim()
-    .replace(/\./g, '')
-    .replace(/&/g, 'and')
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-+|-+$/g, '');
-}
-
-function slugifyCity(value = '') {
-  return slugifyLocation(value);
-}
-
-function slugifyCounty(value = '') {
-  return slugifyLocation(value);
 }
 
 function cleanupGeneratedSitemaps() {
@@ -202,8 +186,12 @@ function loadBlogEntries() {
 
 function buildUrlSet(urlEntries) {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+  const seenLocs = new Set();
 
   urlEntries.forEach((entry) => {
+    if (seenLocs.has(entry.loc)) return;
+    seenLocs.add(entry.loc);
+
     xml += `\n  <url>`;
     xml += `\n    <loc>${escapeXml(entry.loc)}</loc>`;
     xml += `\n    <lastmod>${escapeXml(entry.lastmod || TODAY)}</lastmod>`;
@@ -266,7 +254,7 @@ async function generate() {
     const countyGroups = {};
     records.forEach((row) => {
       if (!row.County) return;
-      const county = slugifyCounty(row.County);
+      const county = makeCountySlug(row.County);
       if (!countyGroups[county]) countyGroups[county] = [];
       countyGroups[county].push(row);
     });
@@ -299,22 +287,21 @@ async function generate() {
 
       countyGroups[countySlug].forEach((city) => {
         if (!city.City) return;
-        const citySlug = String(city.City)
-          .toLowerCase()
-          .trim()
-          .replace(/\./g, '')
-          .replace(/\s+/g, '-');
-        const cityContentSlug = slugifyLocation(city.City);
+        const cityContentSlug = contentKeySlug(city.City);
 
         services.forEach((svc) => {
-          if (ONLY_RICH_CITY_SERVICE_PAGES && !svc.richTextSource[cityContentSlug]) {
+          const hasRichText =
+            canUseSharedCityContent(city.City, city.County) &&
+            Boolean(svc.richTextSource[cityContentSlug]);
+
+          if (ONLY_RICH_CITY_SERVICE_PAGES && !hasRichText) {
             return;
           }
 
           entries.push({
-            loc: pageUrl(`/${svc.prefix}-${citySlug}/`),
+            loc: pageUrl(`/${cityServiceSlug(svc.prefix, city.City, city.County)}/`),
             lastmod: TODAY,
-            priority: svc.richTextSource[cityContentSlug] ? '0.75' : '0.6',
+            priority: hasRichText ? '0.75' : '0.6',
           });
         });
       });
@@ -343,11 +330,17 @@ async function generate() {
       });
     }
 
-    const categories = [...new Set(blogEntries.map((post) => post.category).filter(Boolean))];
+    const categoryMap = new Map();
+    blogEntries.forEach((post) => {
+      if (!post.category) return;
+      const slug = slugifyCategory(post.category);
+      if (!categoryMap.has(slug)) {
+        categoryMap.set(slug, normalizeCategory(post.category));
+      }
+    });
 
-    categories.forEach((category) => {
-      const categorySlug = slugifyCategory(category);
-      const categoryPosts = blogEntries.filter((post) => post.category === category);
+    categoryMap.forEach((category, categorySlug) => {
+      const categoryPosts = blogEntries.filter((post) => slugifyCategory(post.category) === categorySlug);
       const totalCategoryPages = Math.ceil(categoryPosts.length / POSTS_PER_PAGE);
       const categoryLastMod =
         categoryPosts[0]?.updatedDate || categoryPosts[0]?.pubDate || TODAY;

@@ -180,6 +180,156 @@
       "source": "/tree-removal-port-st.-john/",
       "destination": "/tree-removal-port-st-john/",
       "permanent": true
+    },
+    {
+      "source": "/tree-removal-land-o'-lakes",
+      "destination": "/tree-removal-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-land-o'-lakes/",
+      "destination": "/tree-removal-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-land-o%27-lakes",
+      "destination": "/tree-removal-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-land-o%27-lakes/",
+      "destination": "/tree-removal-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-land-o'-lakes",
+      "destination": "/stump-grinding-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-land-o'-lakes/",
+      "destination": "/stump-grinding-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-land-o%27-lakes",
+      "destination": "/stump-grinding-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-land-o%27-lakes/",
+      "destination": "/stump-grinding-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-land-o'-lakes",
+      "destination": "/emergency-service-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-land-o'-lakes/",
+      "destination": "/emergency-service-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-land-o%27-lakes",
+      "destination": "/emergency-service-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-land-o%27-lakes/",
+      "destination": "/emergency-service-land-o-lakes/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-town-'n'-country",
+      "destination": "/tree-removal-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-town-'n'-country/",
+      "destination": "/tree-removal-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-town-%27n%27-country",
+      "destination": "/tree-removal-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-town-%27n%27-country/",
+      "destination": "/tree-removal-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-town-'n'-country",
+      "destination": "/stump-grinding-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-town-'n'-country/",
+      "destination": "/stump-grinding-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-town-%27n%27-country",
+      "destination": "/stump-grinding-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-town-%27n%27-country/",
+      "destination": "/stump-grinding-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-town-'n'-country",
+      "destination": "/emergency-service-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-town-'n'-country/",
+      "destination": "/emergency-service-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-town-%27n%27-country",
+      "destination": "/emergency-service-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-town-%27n%27-country/",
+      "destination": "/emergency-service-town-n-country/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-glen-st-mary",
+      "destination": "/tree-removal-glen-saint-mary/",
+      "permanent": true
+    },
+    {
+      "source": "/tree-removal-glen-st-mary/",
+      "destination": "/tree-removal-glen-saint-mary/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-glen-st-mary",
+      "destination": "/stump-grinding-glen-saint-mary/",
+      "permanent": true
+    },
+    {
+      "source": "/stump-grinding-glen-st-mary/",
+      "destination": "/stump-grinding-glen-saint-mary/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-glen-st-mary",
+      "destination": "/emergency-service-glen-saint-mary/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-service-glen-st-mary/",
+      "destination": "/emergency-service-glen-saint-mary/",
+      "permanent": true
     }
   ]
 }

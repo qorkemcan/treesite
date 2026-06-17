@@ -7,6 +7,7 @@ import { SITE_CONFIG } from "../../config.js";
 import { getCountyGuideLinks, getCountyMoneyLinkGroups } from "../../data/internal-links.js";
 import countyPermitData from "../../data/county-permits.json";
 import AudioGuideBlock from "../../components/AudioGuideBlock.astro";
+import { cityServicePath, countySlug as makeCountySlug } from "../../lib/slugs.js";
 
 export async function getStaticPaths() {
   const filePath = path.resolve("./src/data/cities.csv");
@@ -20,14 +21,7 @@ export async function getStaticPaths() {
   const counties = [...new Set(records.map((r) => r.County))];
 
   return counties.map((county) => {
-    const countySlug = String(county ?? "")
-    .trim()
-    .toLowerCase()
-    .replace(/&/g, " and ")
-    .replace(/\./g, "")
-    .replace(/[’']/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    const countySlug = makeCountySlug(county);
     const citiesInCounty = records.filter((r) => r.County === county);
 
     return {
@@ -42,14 +36,7 @@ export async function getStaticPaths() {
 
 const { countyName, cities } = Astro.props;
 const displayCounty = countyName + " County";
-const countySlug = String(countyName ?? "")
-  .trim()
-  .toLowerCase()
-  .replace(/&/g, " and ")
-  .replace(/\./g, "")
-  .replace(/[’']/g, "")
-  .replace(/[^a-z0-9]+/g, "-")
-  .replace(/^-+|-+$/g, "");
+const countySlug = makeCountySlug(countyName);
 const countyCanonicalUrl = `${SITE_CONFIG.siteUrl}/county/${countySlug}/`;
 
 // SEO İÇİN GÜNCEL TARİH VE İSTATİSTİK
@@ -88,14 +75,10 @@ const countyPermit = countyPermitData[countySlug] || countyPermitData.fallback;
         name: `Top Rated Tree Services in ${displayCounty}`,
         description: `Comprehensive directory of tree care specialists serving ${displayCounty}, Florida.`,
         itemListElement: cities.slice(0, 20).map((city, index) => {
-          const cSlug = city.City.toLowerCase()
-            .trim()
-            .replace(/\./g, "")
-            .replace(/\s+/g, "-");
           return {
             "@type": "ListItem",
             position: index + 1,
-            url: `${SITE_CONFIG.siteUrl}/tree-removal-${cSlug}/`,
+            url: `${SITE_CONFIG.siteUrl}${cityServicePath("tree-removal", city.City, city.County)}`,
             name: `Tree Removal in ${city.City}`,
           };
         }),
@@ -287,10 +270,6 @@ Dispatch guidance across {cityCount} listed service zones.
     >
       {
         cities.map((city) => {
-          const citySlug = city.City.toLowerCase()
-            .trim()
-            .replace(/\./g, "")
-            .replace(/\s+/g, "-");
           return (
             <div
               style="background: white; padding: 1.8rem; border-radius: 20px; border: 1px solid #e5e7eb; transition: 0.3s; position: relative; overflow: hidden;"
@@ -301,15 +280,15 @@ Dispatch guidance across {cityCount} listed service zones.
                 {toTitleCase(city.City)}
               </h3>
               <div style="display: flex; flex-direction: column; gap: 12px;">
-                <a href={`/tree-removal-${citySlug}/`} class="service-link">
+                <a href={cityServicePath("tree-removal", city.City, city.County)} class="service-link">
                   <span style="opacity: 0.8;">🌳</span> Tree Removal Service →
                 </a>
-                <a href={`/stump-grinding-${citySlug}/`} class="service-link">
+                <a href={cityServicePath("stump-grinding", city.City, city.County)} class="service-link">
                   <span style="opacity: 0.8;">🏗️</span> Stump Grinding & Removal
                   →
                 </a>
                 <a
-                  href={`/emergency-service-${citySlug}/`}
+                  href={cityServicePath("emergency-service", city.City, city.County)}
                   class="service-link-emergency"
                 >
                   <span style="filter: grayscale(0);">🌪️</span> Emergency
