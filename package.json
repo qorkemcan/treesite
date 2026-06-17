@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "node generate-sitemaps.mjs && astro build",
+    "generate:sitemaps": "node generate-sitemaps.mjs",
     "validate:city-routes": "node scripts/validate-city-route-integrity.mjs",
+    "validate:sitemaps": "node scripts/validate-sitemaps.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

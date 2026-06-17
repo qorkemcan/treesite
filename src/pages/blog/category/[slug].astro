@@ -60,25 +60,28 @@ export async function getStaticPaths() {
 
   const posts = await getCollection("blog", ({ data, slug }) => !data.draft && !/\s\(\d+\)$/.test(slug));
 
-  const categories = [
-    ...new Set(
-      posts
-        .map((post) => localNormalizeCategory(post.data.category))
-        .filter(Boolean),
-    ),
-  ] as string[];
+  const categoryMap = new Map<string, { name: string; posts: typeof posts }>();
+  posts.forEach((post) => {
+    const category = localNormalizeCategory(post.data.category);
+    if (!category) return;
 
-  return categories.map((category) => {
-    const categoryPosts = posts
-      .filter((post) => localNormalizeCategory(post.data.category) === category)
+    const slug = localSlugifyCategory(category);
+    if (!categoryMap.has(slug)) {
+      categoryMap.set(slug, { name: category, posts: [] });
+    }
+    categoryMap.get(slug)?.posts.push(post);
+  });
+
+  return [...categoryMap.entries()].map(([categorySlug, group]) => {
+    const categoryPosts = group.posts
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
     return {
       params: {
-        slug: localSlugifyCategory(category),
+        slug: categorySlug,
       },
       props: {
-        categoryName: category,
+        categoryName: group.name,
         posts: categoryPosts.slice(0, POSTS_PER_PAGE),
         totalPosts: categoryPosts.length,
         totalPages: Math.ceil(categoryPosts.length / POSTS_PER_PAGE),

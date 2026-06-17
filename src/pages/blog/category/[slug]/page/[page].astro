@@ -58,19 +58,22 @@ export async function getStaticPaths() {
 
   const posts = await getCollection("blog", ({ data, slug }) => !data.draft && !/\s\(\d+\)$/.test(slug));
 
-  const categories = [
-    ...new Set(
-      posts
-        .map((post) => localNormalizeCategory(post.data.category))
-        .filter(Boolean),
-    ),
-  ] as string[];
+  const categoryMap = new Map<string, { name: string; posts: typeof posts }>();
+  posts.forEach((post) => {
+    const category = localNormalizeCategory(post.data.category);
+    if (!category) return;
+
+    const slug = localSlugifyCategory(category);
+    if (!categoryMap.has(slug)) {
+      categoryMap.set(slug, { name: category, posts: [] });
+    }
+    categoryMap.get(slug)?.posts.push(post);
+  });
 
   const paths = [];
 
-  for (const category of categories) {
-    const categoryPosts = posts
-      .filter((post) => localNormalizeCategory(post.data.category) === category)
+  for (const [categorySlug, group] of categoryMap.entries()) {
+    const categoryPosts = group.posts
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
     const totalPages = Math.ceil(categoryPosts.length / POSTS_PER_PAGE);
@@ -78,7 +81,7 @@ export async function getStaticPaths() {
     for (let page = 2; page <= totalPages; page++) {
       paths.push({
         params: {
-          slug: localSlugifyCategory(category),
+          slug: categorySlug,
           page: String(page),
         },
       });
@@ -92,27 +95,29 @@ const POSTS_PER_PAGE = 12;
 
 const allPosts = await getCollection("blog", ({ data, slug }) => !data.draft && !/\s\(\d+\)$/.test(slug));
 
-const categories = [
-  ...new Set(
-    allPosts
-      .map((post) => normalizeCategory(post.data.category))
-      .filter(Boolean),
-  ),
-] as string[];
+const categoryMap = new Map<string, { name: string; posts: typeof allPosts }>();
+allPosts.forEach((post) => {
+  const category = normalizeCategory(post.data.category);
+  if (!category) return;
+
+  const slug = slugifyCategory(category);
+  if (!categoryMap.has(slug)) {
+    categoryMap.set(slug, { name: category, posts: [] });
+  }
+  categoryMap.get(slug)?.posts.push(post);
+});
 
 const currentCategorySlug = Astro.params.slug ?? "";
 const currentPage = Number(Astro.params.page);
 
-const categoryName = categories.find(
-  (category) => slugifyCategory(category) === currentCategorySlug,
-);
+const categoryGroup = categoryMap.get(currentCategorySlug);
+const categoryName = categoryGroup?.name;
 
 if (!categoryName) {
   throw new Error(`Invalid category slug: ${currentCategorySlug}`);
 }
 
-const categoryPosts = allPosts
-  .filter((post) => normalizeCategory(post.data.category) === categoryName)
+const categoryPosts = (categoryGroup?.posts ?? [])
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const totalPosts = categoryPosts.length;
