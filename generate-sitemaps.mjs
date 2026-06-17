@@ -12,8 +12,9 @@ const SITE_URL = 'https://www.protreetrim.com';
 const CSV_PATH = path.join(process.cwd(), 'src/data/cities.csv');
 const BLOG_PATH = path.join(process.cwd(), 'src/content/blog');
 const PUBLIC_PATH = path.join(process.cwd(), 'public');
-const TODAY = new Date().toISOString().split('T')[0];
+const LASTMOD_MANIFEST_PATH = path.join(process.cwd(), 'src/data/sitemap-lastmod.json');
 const POSTS_PER_PAGE = 12;
+const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
 // Default: tighten crawl signals by listing only richer city/service pages in the sitemap.
 // Pages still exist and remain indexable; they are simply not all submitted in XML sitemaps.
@@ -30,11 +31,34 @@ function escapeXml(value = '') {
     .replace(/>/g, '&gt;');
 }
 
-function normalizeDate(value) {
-  if (!value) return TODAY;
+function assertIsoDate(value, label) {
+  if (!DATE_PATTERN.test(String(value))) {
+    throw new Error(`${label} must be YYYY-MM-DD, got ${JSON.stringify(value)}`);
+  }
+
+  return value;
+}
+
+function normalizeFrontmatterDate(value, label) {
+  if (!value) {
+    throw new Error(`${label} is required`);
+  }
+
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return TODAY;
+  if (Number.isNaN(date.getTime())) {
+    throw new Error(`${label} is invalid: ${value}`);
+  }
+
   return date.toISOString().split('T')[0];
+}
+
+function maxDate(values) {
+  const dates = values.filter(Boolean);
+  if (dates.length === 0) {
+    throw new Error('Cannot calculate max date from an empty list');
+  }
+
+  return dates.sort().at(-1);
 }
 
 function pageUrl(pathname = '/') {
@@ -56,9 +80,29 @@ function loadJson(relativePath) {
   try {
     return JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
   } catch (error) {
-    console.warn(`⚠️ Could not parse ${relativePath}: ${error.message}`);
-    return {};
+    throw new Error(`Could not parse ${relativePath}: ${error.message}`);
   }
+}
+
+function loadLastmodManifest() {
+  if (!fs.existsSync(LASTMOD_MANIFEST_PATH)) {
+    throw new Error('Missing src/data/sitemap-lastmod.json');
+  }
+
+  const manifest = JSON.parse(fs.readFileSync(LASTMOD_MANIFEST_PATH, 'utf-8'));
+  if (!manifest.staticUrls || !manifest.serviceSourceFallbacks || !manifest.countyHubFallback) {
+    throw new Error('sitemap-lastmod.json must define staticUrls, serviceSourceFallbacks, and countyHubFallback');
+  }
+
+  Object.entries(manifest.staticUrls).forEach(([urlPath, date]) => {
+    assertIsoDate(date, `staticUrls.${urlPath}`);
+  });
+  Object.entries(manifest.serviceSourceFallbacks).forEach(([service, date]) => {
+    assertIsoDate(date, `serviceSourceFallbacks.${service}`);
+  });
+  assertIsoDate(manifest.countyHubFallback, 'countyHubFallback');
+
+  return manifest;
 }
 
 function normalizeCategory(value = '') {
@@ -85,21 +129,6 @@ function slugifyCategory(value = '') {
     .replace(/&/g, 'and')
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-');
-}
-
-function cleanupGeneratedSitemaps() {
-  if (!fs.existsSync(PUBLIC_PATH)) {
-    fs.mkdirSync(PUBLIC_PATH, { recursive: true });
-    return;
-  }
-
-  const generatedSitemapPattern = /^(sitemap-index|sitemap-main|sitemap-blog|sitemap-county-.+)\.xml$/;
-
-  fs.readdirSync(PUBLIC_PATH)
-    .filter((file) => generatedSitemapPattern.test(file))
-    .forEach((file) => {
-      fs.unlinkSync(path.join(PUBLIC_PATH, file));
-    });
 }
 
 function stripMarkdownExtension(fileName = '') {
@@ -170,11 +199,14 @@ function loadBlogEntries() {
       if (seenSlugs.has(slug)) return null;
       seenSlugs.add(slug);
 
+      const pubDate = normalizeFrontmatterDate(frontmatter.pubDate, `${file}.pubDate`);
+      const updatedDate = normalizeFrontmatterDate(frontmatter.updatedDate || frontmatter.pubDate, `${file}.updatedDate`);
+
       return {
         slug,
         category: normalizeCategory(frontmatter.category || ''),
-        pubDate: normalizeDate(frontmatter.pubDate),
-        updatedDate: normalizeDate(frontmatter.updatedDate || frontmatter.pubDate),
+        pubDate,
+        updatedDate,
       };
     })
     .filter(Boolean);
@@ -184,17 +216,42 @@ function loadBlogEntries() {
   return entries;
 }
 
-function buildUrlSet(urlEntries) {
+function getRichEntryLastmod(sourceEntry, fallbackDate, label) {
+  if (
+    sourceEntry &&
+    typeof sourceEntry === 'object' &&
+    !Array.isArray(sourceEntry) &&
+    sourceEntry.updatedDate
+  ) {
+    return assertIsoDate(sourceEntry.updatedDate, `${label}.updatedDate`);
+  }
+
+  return fallbackDate;
+}
+
+function assertNoDuplicateLocs(entries, fileName) {
+  const seen = new Set();
+  for (const entry of entries) {
+    if (seen.has(entry.loc)) {
+      throw new Error(`${fileName} contains duplicate loc: ${entry.loc}`);
+    }
+    seen.add(entry.loc);
+  }
+}
+
+function buildUrlSet(urlEntries, fileName) {
+  if (urlEntries.length === 0) {
+    throw new Error(`${fileName} cannot be empty`);
+  }
+  assertNoDuplicateLocs(urlEntries, fileName);
+
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
-  const seenLocs = new Set();
 
   urlEntries.forEach((entry) => {
-    if (seenLocs.has(entry.loc)) return;
-    seenLocs.add(entry.loc);
-
+    assertIsoDate(entry.lastmod, `${fileName}:${entry.loc}`);
     xml += `\n  <url>`;
     xml += `\n    <loc>${escapeXml(entry.loc)}</loc>`;
-    xml += `\n    <lastmod>${escapeXml(entry.lastmod || TODAY)}</lastmod>`;
+    xml += `\n    <lastmod>${escapeXml(entry.lastmod)}</lastmod>`;
     xml += `\n    <priority>${escapeXml(entry.priority || '0.7')}</priority>`;
     xml += `\n  </url>`;
   });
@@ -203,11 +260,65 @@ function buildUrlSet(urlEntries) {
   return xml;
 }
 
+function writeFileIfChanged(filePath, content, stats) {
+  if (fs.existsSync(filePath)) {
+    const existing = fs.readFileSync(filePath, 'utf-8');
+    if (existing === content) {
+      stats.unchanged += 1;
+      return;
+    }
+
+    fs.writeFileSync(filePath, content);
+    stats.updated += 1;
+    return;
+  }
+
+  fs.writeFileSync(filePath, content);
+  stats.created += 1;
+}
+
+function removeUnexpectedGeneratedSitemaps(expectedFiles, stats) {
+  if (!fs.existsSync(PUBLIC_PATH)) {
+    fs.mkdirSync(PUBLIC_PATH, { recursive: true });
+    return;
+  }
+
+  const generatedSitemapPattern = /^(sitemap-index|sitemap-main|sitemap-blog|sitemap-county-.+)\.xml$/;
+
+  fs.readdirSync(PUBLIC_PATH)
+    .filter((file) => generatedSitemapPattern.test(file))
+    .filter((file) => !expectedFiles.has(file))
+    .forEach((file) => {
+      fs.unlinkSync(path.join(PUBLIC_PATH, file));
+      stats.removed += 1;
+    });
+}
+
+function assertStaticManifestCoverage(staticPages, manifest) {
+  const staticSet = new Set(staticPages);
+  const manifestSet = new Set(Object.keys(manifest.staticUrls));
+
+  const missing = [...staticSet].filter((page) => !manifestSet.has(page));
+  const unused = [...manifestSet].filter((page) => !staticSet.has(page));
+
+  if (missing.length > 0) {
+    throw new Error(`Missing static lastmod manifest entries: ${missing.join(', ')}`);
+  }
+  if (unused.length > 0) {
+    throw new Error(`Unused static lastmod manifest entries: ${unused.join(', ')}`);
+  }
+}
+
+function getPagePosts(entries, page) {
+  const start = (page - 1) * POSTS_PER_PAGE;
+  return entries.slice(start, start + POSTS_PER_PAGE);
+}
+
 async function generate() {
   console.log('🚀 Public klasörüne sitemap oluşturuluyor...');
 
   try {
-    cleanupGeneratedSitemaps();
+    const manifest = loadLastmodManifest();
     const fileContent = fs.readFileSync(CSV_PATH, 'utf-8');
     const records = parse(fileContent, {
       columns: true,
@@ -227,7 +338,6 @@ async function generate() {
       '/privacy/',
       '/join-network/',
       '/partnerships/',
-      '/blog/',
       '/tools/',
       '/tools/florida-tree-care-advisor/',
       '/tools/florida-problem-tree-guide/',
@@ -239,17 +349,19 @@ async function generate() {
       '/services/land-clearing/',
       '/services/commercial-services/',
     ];
+    assertStaticManifestCoverage(staticPages, manifest);
 
     const mainEntries = staticPages.map((page) => ({
       loc: pageUrl(page),
-      lastmod: TODAY,
-      priority: page === '/' ? '1.0' : page === '/blog/' ? '0.9' : '0.8',
+      lastmod: manifest.staticUrls[page],
+      priority: page === '/' ? '1.0' : '0.8',
     }));
 
-    fs.writeFileSync(
-      path.join(PUBLIC_PATH, 'sitemap-main.xml'),
-      buildUrlSet(mainEntries),
-    );
+    const sitemapOutputs = new Map();
+    sitemapOutputs.set('sitemap-main.xml', {
+      entries: mainEntries,
+      xml: buildUrlSet(mainEntries, 'sitemap-main.xml'),
+    });
 
     const countyGroups = {};
     records.forEach((row) => {
@@ -274,114 +386,162 @@ async function generate() {
       },
     ];
 
-    const sitemapFiles = ['sitemap-main.xml'];
+    services.forEach((service) => {
+      if (!manifest.serviceSourceFallbacks[service.prefix]) {
+        throw new Error(`Missing service source fallback lastmod for ${service.prefix}`);
+      }
+    });
 
     Object.keys(countyGroups).forEach((countySlug) => {
-      const entries = [];
-
-      entries.push({
-        loc: pageUrl(`/county/${countySlug}/`),
-        lastmod: TODAY,
-        priority: '0.9',
-      });
+      const cityServiceEntries = [];
 
       countyGroups[countySlug].forEach((city) => {
         if (!city.City) return;
         const cityContentSlug = contentKeySlug(city.City);
 
         services.forEach((svc) => {
+          const sourceEntry = svc.richTextSource[cityContentSlug];
           const hasRichText =
             canUseSharedCityContent(city.City, city.County) &&
-            Boolean(svc.richTextSource[cityContentSlug]);
+            Boolean(sourceEntry);
 
           if (ONLY_RICH_CITY_SERVICE_PAGES && !hasRichText) {
             return;
           }
 
-          entries.push({
+          const lastmod = hasRichText
+            ? getRichEntryLastmod(
+                sourceEntry,
+                manifest.serviceSourceFallbacks[svc.prefix],
+                `${svc.prefix}.${cityContentSlug}`,
+              )
+            : manifest.serviceSourceFallbacks[svc.prefix];
+
+          cityServiceEntries.push({
             loc: pageUrl(`/${cityServiceSlug(svc.prefix, city.City, city.County)}/`),
-            lastmod: TODAY,
+            lastmod,
             priority: hasRichText ? '0.75' : '0.6',
           });
         });
       });
 
+      const countyLastmod = maxDate([
+        manifest.countyHubFallback,
+        ...cityServiceEntries.map((entry) => entry.lastmod),
+      ]);
+      const entries = [
+        {
+          loc: pageUrl(`/county/${countySlug}/`),
+          lastmod: countyLastmod,
+          priority: '0.9',
+        },
+        ...cityServiceEntries,
+      ];
+
       const fileName = `sitemap-county-${countySlug}.xml`;
-      fs.writeFileSync(path.join(PUBLIC_PATH, fileName), buildUrlSet(entries));
-      sitemapFiles.push(fileName);
+      sitemapOutputs.set(fileName, {
+        entries,
+        xml: buildUrlSet(entries, fileName),
+      });
     });
 
     const blogSitemapEntries = [];
+    const totalBlogPages = Math.ceil(blogEntries.length / POSTS_PER_PAGE);
+
+    for (let page = 1; page <= totalBlogPages; page++) {
+      const pagePosts = getPagePosts(blogEntries, page);
+      blogSitemapEntries.push({
+        loc: pageUrl(page === 1 ? '/blog/' : `/blog/page/${page}/`),
+        lastmod: maxDate(pagePosts.map((post) => post.updatedDate || post.pubDate)),
+        priority: page === 1 ? '0.9' : '0.6',
+      });
+    }
 
     blogEntries.forEach((post) => {
       blogSitemapEntries.push({
         loc: pageUrl(`/blog/${post.slug}/`),
-        lastmod: post.updatedDate || post.pubDate || TODAY,
+        lastmod: post.updatedDate || post.pubDate,
         priority: '0.7',
       });
     });
-
-    const totalBlogPages = Math.ceil(blogEntries.length / POSTS_PER_PAGE);
-    for (let page = 2; page <= totalBlogPages; page++) {
-      blogSitemapEntries.push({
-        loc: pageUrl(`/blog/page/${page}/`),
-        lastmod: TODAY,
-        priority: '0.6',
-      });
-    }
 
     const categoryMap = new Map();
     blogEntries.forEach((post) => {
       if (!post.category) return;
       const slug = slugifyCategory(post.category);
       if (!categoryMap.has(slug)) {
-        categoryMap.set(slug, normalizeCategory(post.category));
+        categoryMap.set(slug, {
+          category: normalizeCategory(post.category),
+          posts: [],
+        });
       }
+      categoryMap.get(slug).posts.push(post);
     });
 
-    categoryMap.forEach((category, categorySlug) => {
-      const categoryPosts = blogEntries.filter((post) => slugifyCategory(post.category) === categorySlug);
+    categoryMap.forEach(({ posts }, categorySlug) => {
+      const categoryPosts = [...posts].sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
       const totalCategoryPages = Math.ceil(categoryPosts.length / POSTS_PER_PAGE);
-      const categoryLastMod =
-        categoryPosts[0]?.updatedDate || categoryPosts[0]?.pubDate || TODAY;
 
       blogSitemapEntries.push({
         loc: pageUrl(`/blog/category/${categorySlug}/`),
-        lastmod: categoryLastMod,
+        lastmod: maxDate(categoryPosts.map((post) => post.updatedDate || post.pubDate)),
         priority: '0.6',
       });
 
       for (let page = 2; page <= totalCategoryPages; page++) {
+        const pagePosts = getPagePosts(categoryPosts, page);
         blogSitemapEntries.push({
           loc: pageUrl(`/blog/category/${categorySlug}/page/${page}/`),
-          lastmod: categoryLastMod,
+          lastmod: maxDate(pagePosts.map((post) => post.updatedDate || post.pubDate)),
           priority: '0.5',
         });
       }
     });
 
     if (blogSitemapEntries.length > 0) {
-      fs.writeFileSync(
-        path.join(PUBLIC_PATH, 'sitemap-blog.xml'),
-        buildUrlSet(blogSitemapEntries),
-      );
-      sitemapFiles.push('sitemap-blog.xml');
+      sitemapOutputs.set('sitemap-blog.xml', {
+        entries: blogSitemapEntries,
+        xml: buildUrlSet(blogSitemapEntries, 'sitemap-blog.xml'),
+      });
     }
 
+    const childSitemapFiles = [...sitemapOutputs.keys()];
+    const expectedFiles = new Set([...childSitemapFiles, 'sitemap-index.xml']);
     let indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-    sitemapFiles.forEach((file) => {
+    childSitemapFiles.forEach((file) => {
+      const output = sitemapOutputs.get(file);
+      const childLastmod = maxDate(output.entries.map((entry) => entry.lastmod));
       indexXml += `\n  <sitemap>`;
       indexXml += `\n    <loc>${escapeXml(fileUrl(file))}</loc>`;
-      indexXml += `\n    <lastmod>${TODAY}</lastmod>`;
+      indexXml += `\n    <lastmod>${childLastmod}</lastmod>`;
       indexXml += `\n  </sitemap>`;
     });
 
     indexXml += `\n</sitemapindex>`;
+    sitemapOutputs.set('sitemap-index.xml', {
+      entries: [],
+      xml: indexXml,
+    });
 
-    fs.writeFileSync(path.join(PUBLIC_PATH, 'sitemap-index.xml'), indexXml);
+    const stats = {
+      created: 0,
+      updated: 0,
+      unchanged: 0,
+      removed: 0,
+    };
 
-    console.log(`✅ TAMAMLANDI: Toplam ${sitemapFiles.length} sitemap dosyası PUBLIC klasörüne yazıldı.`);
+    removeUnexpectedGeneratedSitemaps(expectedFiles, stats);
+    sitemapOutputs.forEach((output, fileName) => {
+      writeFileIfChanged(path.join(PUBLIC_PATH, fileName), output.xml, stats);
+    });
+
+    console.log(
+      `✅ TAMAMLANDI: ${childSitemapFiles.length} child sitemap + 1 index = ${expectedFiles.size} XML dosyası kontrol edildi.`,
+    );
+    console.log(
+      `ℹ️ Sitemap write summary: created=${stats.created}, updated=${stats.updated}, unchanged=${stats.unchanged}, removed=${stats.removed}`,
+    );
     if (ONLY_RICH_CITY_SERVICE_PAGES) {
       console.log('ℹ️ SITEMAP_ONLY_RICH_PAGES=true: only rich city/service pages were included.');
     }

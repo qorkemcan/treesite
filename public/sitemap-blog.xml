@@ -1,6 +1,241 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.protreetrim.com/blog/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/2/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/3/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/4/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/5/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/6/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/7/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/8/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/9/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/10/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/11/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/12/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/13/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/14/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/15/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/16/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/17/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/18/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/19/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/20/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/21/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/22/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/23/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/24/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/25/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/26/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/27/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/28/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/29/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/30/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/31/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/32/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/33/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/34/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/35/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/36/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/37/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/38/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/39/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/40/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/41/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/42/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/43/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/44/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/45/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/46/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.protreetrim.com/blog/page/47/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.protreetrim.com/blog/alachua-county-tree-removal-guide-gainesville-large-oaks-permits-and-storm-damaged-trees/</loc>
     <lastmod>2026-06-07</lastmod>
     <priority>0.7</priority>
@@ -2821,236 +3056,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.protreetrim.com/blog/page/2/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/3/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/4/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/5/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/6/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/7/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/8/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/9/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/10/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/11/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/12/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/13/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/14/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/15/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/16/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/17/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/18/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/19/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/20/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/21/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/22/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/23/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/24/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/25/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/26/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/27/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/28/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/29/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/30/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/31/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/32/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/33/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/34/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/35/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/36/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/37/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/38/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/39/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/40/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/41/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/42/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/43/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/44/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/45/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/46/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/page/47/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.protreetrim.com/blog/category/florida-county-tree-removal-guides/</loc>
     <lastmod>2026-06-07</lastmod>
     <priority>0.6</priority>
@@ -3092,7 +3097,7 @@
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-health-and-disease/page/2/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
@@ -3102,17 +3107,17 @@
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-removal/page/2/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-removal/page/3/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-removal/page/4/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
@@ -3142,11 +3147,6 @@
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/emergency-tree-service/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.protreetrim.com/blog/category/tree-health-and-disease/</loc>
     <lastmod>2026-06-07</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3247,32 +3247,32 @@
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-care-and-cleanup/page/9/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-care-and-cleanup/page/10/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-care-and-cleanup/page/11/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-care-and-cleanup/page/12/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-care-and-cleanup/page/13/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/tree-care-and-cleanup/page/14/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
@@ -3287,7 +3287,7 @@
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/storm-prep-and-recovery/page/3/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
@@ -3302,12 +3302,12 @@
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/landscaping-and-planting/page/3/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/landscaping-and-planting/page/4/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
@@ -3322,12 +3322,12 @@
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/local-florida-guides/page/2/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/local-florida-guides/page/3/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
@@ -3337,12 +3337,12 @@
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/florida-laws-and-property-risk/page/2/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/florida-laws-and-property-risk/page/3/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
@@ -3352,12 +3352,12 @@
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/emergency-and-storm/page/2/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.protreetrim.com/blog/category/emergency-and-storm/page/3/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <priority>0.5</priority>
   </url>
 </urlset>

@@ -1,0 +1,29 @@
+{
+  "staticUrls": {
+    "/": "2026-06-17",
+    "/about/": "2026-01-21",
+    "/contact/": "2026-05-23",
+    "/services/": "2026-01-18",
+    "/gallery/": "2026-05-01",
+    "/trust-safety/": "2026-01-21",
+    "/privacy/": "2026-01-18",
+    "/join-network/": "2026-05-23",
+    "/partnerships/": "2026-05-13",
+    "/tools/": "2026-05-11",
+    "/tools/florida-tree-care-advisor/": "2026-05-23",
+    "/tools/florida-problem-tree-guide/": "2026-05-23",
+    "/tools/emergency-tree-safety-checklist/": "2026-05-11",
+    "/services/tree-removal/": "2026-05-23",
+    "/services/tree-trimming/": "2026-01-18",
+    "/services/stump-grinding/": "2026-05-23",
+    "/services/emergency-response/": "2026-05-23",
+    "/services/land-clearing/": "2026-01-18",
+    "/services/commercial-services/": "2026-01-18"
+  },
+  "serviceSourceFallbacks": {
+    "tree-removal": "2026-05-09",
+    "stump-grinding": "2026-05-09",
+    "emergency-service": "2026-05-09"
+  },
+  "countyHubFallback": "2026-06-17"
+}
