@@ -1,26 +1,27 @@
 {
   "enabled": true,
-  "mode": "watch",
-  "severity": "medium",
+  "mode": "storm",
+  "severity": "high",
   "headline": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce tree stability. Watch for new leaning, lifted soil, or cracks around large trees after heavy rain.",
   "areas": [
-    "Choctaw",
-    "Washington",
-    "Clarke",
-    "Wilcox",
-    "Monroe",
-    "Conecuh",
-    "Butler",
-    "Crenshaw"
+    "Baldwin, AL",
+    "Escambia, AL",
+    "Escambia, FL",
+    "Santa Rosa, FL",
+    "Covington, AL",
+    "Crenshaw, AL",
+    "Mobile, AL",
+    "Okaloosa, FL"
   ],
   "source": "NWS API",
   "events": [
+    "Flash Flood Warning",
+    "Tornado Watch",
     "Flood Watch",
-    "Flood Warning",
-    "Tornado Watch"
+    "Flood Warning"
   ],
-  "updatedAt": "2026-06-18T15:53:33.080Z",
+  "updatedAt": "2026-06-18T20:39:04.413Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
