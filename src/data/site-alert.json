@@ -17,9 +17,10 @@
   "source": "NWS API",
   "events": [
     "Flood Watch",
-    "Flood Warning"
+    "Flood Warning",
+    "Tornado Watch"
   ],
-  "updatedAt": "2026-06-18T10:48:54.764Z",
+  "updatedAt": "2026-06-18T15:53:33.080Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
