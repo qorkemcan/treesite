@@ -29,3 +29,9 @@ node_modules/
 dist/
 # Local transfer / patch archives
 *.zip
+
+# Generated SEO audit reports
+reports/generic-route-quality.csv
+reports/generic-route-quality-summary.json
+reports/generic-route-wrong-language.csv
+reports/generic-route-pilot-30.csv
