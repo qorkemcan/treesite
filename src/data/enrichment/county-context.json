@@ -1,0 +1,1382 @@
+{
+  "alachua": {
+    "county": "Alachua",
+    "countySlug": "alachua",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "alachua"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (alachua).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "baker": {
+    "county": "Baker",
+    "countySlug": "baker",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "baker"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (baker).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "bay": {
+    "county": "Bay",
+    "countySlug": "bay",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "bradford": {
+    "county": "Bradford",
+    "countySlug": "bradford",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "brevard": {
+    "county": "Brevard",
+    "countySlug": "brevard",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "broward": {
+    "county": "Broward",
+    "countySlug": "broward",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "broward"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (broward).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "calhoun": {
+    "county": "Calhoun",
+    "countySlug": "calhoun",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "charlotte": {
+    "county": "Charlotte",
+    "countySlug": "charlotte",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "citrus": {
+    "county": "Citrus",
+    "countySlug": "citrus",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "clay": {
+    "county": "Clay",
+    "countySlug": "clay",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "collier": {
+    "county": "Collier",
+    "countySlug": "collier",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "collier"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (collier).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "columbia": {
+    "county": "Columbia",
+    "countySlug": "columbia",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "columbia"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (columbia).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "desoto": {
+    "county": "DeSoto",
+    "countySlug": "desoto",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "dixie": {
+    "county": "Dixie",
+    "countySlug": "dixie",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "duval": {
+    "county": "Duval",
+    "countySlug": "duval",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "duval"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (duval).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "escambia": {
+    "county": "Escambia",
+    "countySlug": "escambia",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "flagler": {
+    "county": "Flagler",
+    "countySlug": "flagler",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "franklin": {
+    "county": "Franklin",
+    "countySlug": "franklin",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "gadsden": {
+    "county": "Gadsden",
+    "countySlug": "gadsden",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "gilchrist": {
+    "county": "Gilchrist",
+    "countySlug": "gilchrist",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "glades": {
+    "county": "Glades",
+    "countySlug": "glades",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "gulf": {
+    "county": "Gulf",
+    "countySlug": "gulf",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "hamilton": {
+    "county": "Hamilton",
+    "countySlug": "hamilton",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "hardee": {
+    "county": "Hardee",
+    "countySlug": "hardee",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "hendry": {
+    "county": "Hendry",
+    "countySlug": "hendry",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "hernando": {
+    "county": "Hernando",
+    "countySlug": "hernando",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "highlands": {
+    "county": "Highlands",
+    "countySlug": "highlands",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "hillsborough": {
+    "county": "Hillsborough",
+    "countySlug": "hillsborough",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "hillsborough"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (hillsborough).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "holmes": {
+    "county": "Holmes",
+    "countySlug": "holmes",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "indian-river": {
+    "county": "Indian River",
+    "countySlug": "indian-river",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "jackson": {
+    "county": "Jackson",
+    "countySlug": "jackson",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "jefferson": {
+    "county": "Jefferson",
+    "countySlug": "jefferson",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "lafayette": {
+    "county": "Lafayette",
+    "countySlug": "lafayette",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "lake": {
+    "county": "Lake",
+    "countySlug": "lake",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "lake"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (lake).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "lee": {
+    "county": "Lee",
+    "countySlug": "lee",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "lee"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (lee).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "leon": {
+    "county": "Leon",
+    "countySlug": "leon",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "levy": {
+    "county": "Levy",
+    "countySlug": "levy",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "liberty": {
+    "county": "Liberty",
+    "countySlug": "liberty",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "madison": {
+    "county": "Madison",
+    "countySlug": "madison",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "manatee": {
+    "county": "Manatee",
+    "countySlug": "manatee",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "manatee"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (manatee).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "marion": {
+    "county": "Marion",
+    "countySlug": "marion",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "martin": {
+    "county": "Martin",
+    "countySlug": "martin",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "miami-dade": {
+    "county": "Miami-Dade",
+    "countySlug": "miami-dade",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "miami-dade"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (miami-dade).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "monroe": {
+    "county": "Monroe",
+    "countySlug": "monroe",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "nassau": {
+    "county": "Nassau",
+    "countySlug": "nassau",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "okaloosa": {
+    "county": "Okaloosa",
+    "countySlug": "okaloosa",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "okaloosa"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (okaloosa).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "okeechobee": {
+    "county": "Okeechobee",
+    "countySlug": "okeechobee",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "orange": {
+    "county": "Orange",
+    "countySlug": "orange",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "orange"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (orange).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "osceola": {
+    "county": "Osceola",
+    "countySlug": "osceola",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "palm-beach": {
+    "county": "Palm Beach",
+    "countySlug": "palm-beach",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "palm-beach"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (palm-beach).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "pasco": {
+    "county": "Pasco",
+    "countySlug": "pasco",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "pasco"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (pasco).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "pinellas": {
+    "county": "Pinellas",
+    "countySlug": "pinellas",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "pinellas"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (pinellas).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "polk": {
+    "county": "Polk",
+    "countySlug": "polk",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "polk"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (polk).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "putnam": {
+    "county": "Putnam",
+    "countySlug": "putnam",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "santa-rosa": {
+    "county": "Santa Rosa",
+    "countySlug": "santa-rosa",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "sarasota": {
+    "county": "Sarasota",
+    "countySlug": "sarasota",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "sarasota"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (sarasota).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "seminole": {
+    "county": "Seminole",
+    "countySlug": "seminole",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "st-johns": {
+    "county": "St. Johns",
+    "countySlug": "st-johns",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "st-lucie": {
+    "county": "St. Lucie",
+    "countySlug": "st-lucie",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "sumter": {
+    "county": "Sumter",
+    "countySlug": "sumter",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "suwannee": {
+    "county": "Suwannee",
+    "countySlug": "suwannee",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "taylor": {
+    "county": "Taylor",
+    "countySlug": "taylor",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "union": {
+    "county": "Union",
+    "countySlug": "union",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "volusia": {
+    "county": "Volusia",
+    "countySlug": "volusia",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "volusia"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (volusia).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "wakulla": {
+    "county": "Wakulla",
+    "countySlug": "wakulla",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "walton": {
+    "county": "Walton",
+    "countySlug": "walton",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": {
+      "dataKey": "walton"
+    },
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "Permit context is referenced by key from src/data/county-permits.json (walton).",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "washington": {
+    "county": "Washington",
+    "countySlug": "washington",
+    "regionType": null,
+    "coastalContext": "unknown",
+    "stormExposure": "unknown",
+    "floodContext": "unknown",
+    "soilContexts": [],
+    "vegetationContexts": [],
+    "commonAccessContexts": [],
+    "permitContext": null,
+    "propertyContexts": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "County identity is derived from src/data/cities.csv.",
+      "No county-specific permit record exists in src/data/county-permits.json.",
+      "Unverified county context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  }
+}
