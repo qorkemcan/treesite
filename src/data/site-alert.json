@@ -5,21 +5,21 @@
   "headline": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce tree stability. Watch for new leaning, lifted soil, or cracks around large trees after heavy rain.",
   "areas": [
-    "Covington, AL",
-    "Okaloosa, FL",
-    "Santa Rosa, FL",
     "Baldwin, AL",
     "Escambia, FL",
+    "Okaloosa, FL",
+    "Santa Rosa, FL",
+    "Covington, AL",
     "Escambia, AL",
-    "Coffee",
-    "Dale"
+    "Choctaw",
+    "Washington"
   ],
   "source": "NWS API",
   "events": [
     "Flood Warning",
     "Flood Watch"
   ],
-  "updatedAt": "2026-06-19T10:57:35.838Z",
+  "updatedAt": "2026-06-19T15:43:16.967Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
