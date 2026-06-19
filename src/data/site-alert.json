@@ -11,15 +11,15 @@
     "Baldwin, AL",
     "Escambia, FL",
     "Escambia, AL",
-    "Choctaw",
-    "Washington"
+    "Coffee",
+    "Dale"
   ],
   "source": "NWS API",
   "events": [
     "Flood Warning",
     "Flood Watch"
   ],
-  "updatedAt": "2026-06-19T05:26:01.255Z",
+  "updatedAt": "2026-06-19T10:57:35.838Z",
   "ctaText": "Call Dispatch",
   "ctaHref": "tel:+18554982578"
 }
