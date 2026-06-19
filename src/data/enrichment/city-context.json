@@ -1,0 +1,1172 @@
+{
+  "alderene-park": {
+    "city": "Alderene Park",
+    "county": "Seminole",
+    "countySlug": "seminole",
+    "cityRouteSlug": "alderene-park",
+    "cityContentSlug": "alderene-park",
+    "identityKey": "alderene-park",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Bald Cypress",
+      "Slash Pines",
+      "Live Oaks"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "LAKEMONT PARK"
+    ],
+    "nearbyAreas": [
+      "Sanford",
+      "Altamonte Springs",
+      "Oviedo"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "alva": {
+    "city": "Alva",
+    "county": "Lee",
+    "countySlug": "lee",
+    "cityRouteSlug": "alva",
+    "cityContentSlug": "alva",
+    "identityKey": "alva",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Sabal Palms",
+      "Sea Grapes",
+      "Gumbo Limbo"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "SUN SPLASH FAMILY WATERPARK"
+    ],
+    "nearbyAreas": [
+      "Bayshore",
+      "Bayshore Manor",
+      "Cape Coral"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "angel-city": {
+    "city": "Angel City",
+    "county": "Brevard",
+    "countySlug": "brevard",
+    "cityRouteSlug": "angel-city",
+    "cityContentSlug": "angel-city",
+    "identityKey": "angel-city",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Slash Pines",
+      "Southern Magnolias",
+      "Longleaf Pines"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "ARCHIE CARR NATIONAL WILDLIFE REFUGE"
+    ],
+    "nearbyAreas": [
+      "Aurantia",
+      "Palm Bay",
+      "Melbourne"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "araquey": {
+    "city": "Araquey",
+    "county": "St. Johns",
+    "countySlug": "st-johns",
+    "cityRouteSlug": "araquey",
+    "cityContentSlug": "araquey",
+    "identityKey": "araquey",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Bald Cypress",
+      "Longleaf Pines",
+      "Mangroves"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "CASTILLO DE SAN MARCOS NATIONAL MONUMENT"
+    ],
+    "nearbyAreas": [
+      "Armstrong",
+      "Bakersville",
+      "Fruit Cove"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "arcadia": {
+    "city": "Arcadia",
+    "county": "DeSoto",
+    "countySlug": "desoto",
+    "cityRouteSlug": "arcadia",
+    "cityContentSlug": "arcadia",
+    "identityKey": "arcadia",
+    "population": 7571,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Sabal Palms",
+      "Slash Pines",
+      "Live Oaks"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "MYAKKA HEAD PARK"
+    ],
+    "nearbyAreas": [
+      "Brownville",
+      "Fort Ogden",
+      "Hull"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "arlington-duval": {
+    "city": "Arlington",
+    "county": "Duval",
+    "countySlug": "duval",
+    "cityRouteSlug": "arlington-duval",
+    "cityContentSlug": "arlington",
+    "identityKey": "arlington-duval",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Slash Pines",
+      "Mangroves",
+      "Bald Cypress"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "SPRINGFIELD PARK"
+    ],
+    "nearbyAreas": [
+      "Atlantic Beach",
+      "Avondale",
+      "Baldwin"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "ballentine-manor": {
+    "city": "Ballentine Manor",
+    "county": "Manatee",
+    "countySlug": "manatee",
+    "cityRouteSlug": "ballentine-manor",
+    "cityContentSlug": "ballentine-manor",
+    "identityKey": "ballentine-manor",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Longleaf Pines",
+      "Mangroves"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "LAKE MANATEE STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Braden Castle",
+      "Bradenton Beach",
+      "Cortez"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "bayshore": {
+    "city": "Bayshore",
+    "county": "Lee",
+    "countySlug": "lee",
+    "cityRouteSlug": "bayshore",
+    "cityContentSlug": "bayshore",
+    "identityKey": "bayshore",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Gumbo Limbo",
+      "Sea Grapes",
+      "Cabbage Palms"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "CALOOSAHATCHEE RIVER STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Bayshore Manor",
+      "Cape Coral",
+      "Lehigh Acres"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "beacon-hills": {
+    "city": "Beacon Hills",
+    "county": "Duval",
+    "countySlug": "duval",
+    "cityRouteSlug": "beacon-hills",
+    "cityContentSlug": "beacon-hills",
+    "identityKey": "beacon-hills",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Southern Magnolias",
+      "Red Maples",
+      "Mangroves"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "SPRINGFIELD PARK"
+    ],
+    "nearbyAreas": [
+      "Beauclerc Gardens",
+      "Beverly Hills",
+      "Biltmore"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "belle-meade": {
+    "city": "Belle Meade",
+    "county": "Collier",
+    "countySlug": "collier",
+    "cityRouteSlug": "belle-meade",
+    "cityContentSlug": "belle-meade",
+    "identityKey": "belle-meade",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Mangroves",
+      "Live Oaks",
+      "Sea Grapes"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "CARIBBEAN GARDENS"
+    ],
+    "nearbyAreas": [
+      "East Naples",
+      "Everglades City",
+      "Goodland"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "carrabelle": {
+    "city": "Carrabelle",
+    "county": "Franklin",
+    "countySlug": "franklin",
+    "cityRouteSlug": "carrabelle",
+    "cityContentSlug": "carrabelle",
+    "identityKey": "carrabelle",
+    "population": 3145,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Sabal Palms",
+      "Slash Pines"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "DR JULIAN G BRUCE SAINT GEORGE ISLAND STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Apalachicola",
+      "Carrabelle Beach",
+      "Eastpoint"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "chuluota": {
+    "city": "Chuluota",
+    "county": "Seminole",
+    "countySlug": "seminole",
+    "cityRouteSlug": "chuluota",
+    "cityContentSlug": "chuluota",
+    "identityKey": "chuluota",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Southern Magnolias",
+      "Longleaf Pines",
+      "Bald Cypress"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "FORT MELLON PARK"
+    ],
+    "nearbyAreas": [
+      "Alderene Park",
+      "Sanford",
+      "Altamonte Springs"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "clewiston": {
+    "city": "Clewiston",
+    "county": "Hendry",
+    "countySlug": "hendry",
+    "cityRouteSlug": "clewiston",
+    "cityContentSlug": "clewiston",
+    "identityKey": "clewiston",
+    "population": 7257,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Sabal Palms",
+      "Live Oaks",
+      "Cypress"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "SUGARLAND PARK"
+    ],
+    "nearbyAreas": [
+      "Harlem",
+      "Hooker Point",
+      "LaBelle"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "crawfordville": {
+    "city": "Crawfordville",
+    "county": "Wakulla",
+    "countySlug": "wakulla",
+    "cityRouteSlug": "crawfordville",
+    "cityContentSlug": "crawfordville",
+    "identityKey": "crawfordville",
+    "population": 5892,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Red Maples",
+      "Slash Pines"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "EDWARD BALL WAKULLA SPRINGS STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Newport",
+      "Saint Marks",
+      "Wakulla"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "cross-city": {
+    "city": "Cross City",
+    "county": "Dixie",
+    "countySlug": "dixie",
+    "cityRouteSlug": "cross-city",
+    "cityContentSlug": "cross-city",
+    "identityKey": "cross-city",
+    "population": 2260,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Sabal Palms",
+      "Slash Pines"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "STEINHATCHEE WILDLIFE MANAGEMENT AREA"
+    ],
+    "nearbyAreas": [
+      "Hines",
+      "Horseshoe Beach",
+      "Old Town"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "east-naples": {
+    "city": "East Naples",
+    "county": "Collier",
+    "countySlug": "collier",
+    "cityRouteSlug": "east-naples",
+    "cityContentSlug": "east-naples",
+    "identityKey": "east-naples",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Royal Palms",
+      "Sea Grapes",
+      "Gumbo Limbo"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "NORTH SPORTS PARK"
+    ],
+    "nearbyAreas": [
+      "Everglades City",
+      "Goodland",
+      "Isles of Capri"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "eden": {
+    "city": "Eden",
+    "county": "St. Lucie",
+    "countySlug": "st-lucie",
+    "cityRouteSlug": "eden",
+    "cityContentSlug": "eden",
+    "identityKey": "eden",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Sea Grapes",
+      "Royal Palms"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "NORTH FORK SAINT LUCIE RIVER AQUATIC PRESERVE"
+    ],
+    "nearbyAreas": [
+      "Glidden Park",
+      "Indrio",
+      "Paradise Park"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "live-oak": {
+    "city": "Live Oak",
+    "county": "Suwannee",
+    "countySlug": "suwannee",
+    "cityRouteSlug": "live-oak",
+    "cityContentSlug": "live-oak",
+    "identityKey": "live-oak",
+    "population": 6901,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Red Maples",
+      "Slash Pines"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "GIBSON COUNTY PARK"
+    ],
+    "nearbyAreas": [
+      "Beachville",
+      "Branford",
+      "Dowling Park"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "marianna": {
+    "city": "Marianna",
+    "county": "Jackson",
+    "countySlug": "jackson",
+    "cityRouteSlug": "marianna",
+    "cityContentSlug": "marianna",
+    "identityKey": "marianna",
+    "population": 6815,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Sand Pines",
+      "Live Oaks",
+      "Bald Cypress"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "FLORIDA CAVERNS STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Alford",
+      "Bascom",
+      "Campbellton"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "miramar-beach": {
+    "city": "Miramar Beach",
+    "county": "Walton",
+    "countySlug": "walton",
+    "cityRouteSlug": "miramar-beach",
+    "cityContentSlug": "miramar-beach",
+    "identityKey": "miramar-beach",
+    "population": 8587,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Longleaf Pines",
+      "Live Oaks",
+      "Slash Pines"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "TOPSAIL HILL PRESERVE STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Alpine Heights",
+      "Argyle",
+      "Blue Gulf Beach"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "okeechobee": {
+    "city": "Okeechobee",
+    "county": "Okeechobee",
+    "countySlug": "okeechobee",
+    "cityRouteSlug": "okeechobee",
+    "cityContentSlug": "okeechobee",
+    "identityKey": "okeechobee",
+    "population": 5376,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Royal Palms",
+      "Live Oaks",
+      "Gumbo-Limbo"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "BIG BEAR BEACH"
+    ],
+    "nearbyAreas": [
+      "Barber Quarters",
+      "Basswood Estates",
+      "Cypress Quarters"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "on-top-of-the-world": {
+    "city": "On Top of the World",
+    "county": "Marion",
+    "countySlug": "marion",
+    "cityRouteSlug": "on-top-of-the-world",
+    "cityContentSlug": "on-top-of-the-world",
+    "identityKey": "on-top-of-the-world",
+    "population": 13772,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Sand Pines",
+      "Sabal Palms"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "CLASSIC MILE RACE TRACK"
+    ],
+    "nearbyAreas": [
+      "Anthony",
+      "Belleview",
+      "Camp Roosevelt"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "orange-city": {
+    "city": "Orange City",
+    "county": "Volusia",
+    "countySlug": "volusia",
+    "cityRouteSlug": "orange-city",
+    "cityContentSlug": "orange-city",
+    "identityKey": "orange-city",
+    "population": 13768,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Sand Pines",
+      "Sabal Palms"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "BLUE SPRING STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Allandale",
+      "Deltona",
+      "Daytona Beach"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "palatka": {
+    "city": "Palatka",
+    "county": "Putnam",
+    "countySlug": "putnam",
+    "cityRouteSlug": "palatka",
+    "cityContentSlug": "palatka",
+    "identityKey": "palatka",
+    "population": 10558,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Sabal Palms",
+      "Slash Pines"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "SHAW BUCK PARK"
+    ],
+    "nearbyAreas": [
+      "Bostwick",
+      "Bridgeport",
+      "Buffalo Bluff"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "perry": {
+    "city": "Perry",
+    "county": "Taylor",
+    "countySlug": "taylor",
+    "cityRouteSlug": "perry",
+    "cityContentSlug": "perry",
+    "identityKey": "perry",
+    "population": 6965,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Bald Cypress",
+      "Slash Pines"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "FOREST CAPITAL MUSEUM STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Boyd",
+      "Dekle Beach",
+      "Eridu"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "port-st-joe": {
+    "city": "Port St. Joe",
+    "county": "Gulf",
+    "countySlug": "gulf",
+    "cityRouteSlug": "port-st-joe",
+    "cityContentSlug": "port-st-joe",
+    "identityKey": "port-st-joe",
+    "population": 3499,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Slash Pines",
+      "Live Oaks",
+      "Sweetgums"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "CONSTITUTION CONVENTION MUSEUM STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Beacon Hill",
+      "Gaskins Still",
+      "Lake Grove"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "quincy": {
+    "city": "Quincy",
+    "county": "Gadsden",
+    "countySlug": "gadsden",
+    "cityRouteSlug": "quincy",
+    "cityContentSlug": "quincy",
+    "identityKey": "quincy",
+    "population": 7818,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Southern Magnolias",
+      "Bald Cypress"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "LAKE TALQUIN STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Chattahoochee",
+      "Concord",
+      "Darsey"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "sebring": {
+    "city": "Sebring",
+    "county": "Highlands",
+    "countySlug": "highlands",
+    "cityRouteSlug": "sebring",
+    "cityContentSlug": "sebring",
+    "identityKey": "sebring",
+    "population": 11185,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Royal Palms",
+      "Live Oaks",
+      "Gumbo-Limbo"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "LAKE WALES RIDGE NATIONAL WILDLIFE REFUGE"
+    ],
+    "nearbyAreas": [
+      "Alpine",
+      "Avon Park",
+      "Avon Park Lakes"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "wauchula": {
+    "city": "Wauchula",
+    "county": "Hardee",
+    "countySlug": "hardee",
+    "cityRouteSlug": "wauchula",
+    "cityContentSlug": "wauchula",
+    "identityKey": "wauchula",
+    "population": 4910,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Sabal Palms",
+      "Live Oaks",
+      "Cypress"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "PAYNES CREEK HISTORIC STATE PARK"
+    ],
+    "nearbyAreas": [
+      "Bowling Green",
+      "Fort Green Springs",
+      "Limestone"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "williston-highlands": {
+    "city": "Williston Highlands",
+    "county": "Levy",
+    "countySlug": "levy",
+    "cityRouteSlug": "williston-highlands",
+    "cityContentSlug": "williston-highlands",
+    "identityKey": "williston-highlands",
+    "population": 3213,
+    "populationStatus": "known",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Laurel Oaks",
+      "Live Oaks",
+      "Sabal Palms"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "HENRY BECK COUNTY PARK"
+    ],
+    "nearbyAreas": [
+      "Bronson",
+      "Cedar Key",
+      "Crackertown"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  }
+}

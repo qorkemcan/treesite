@@ -1,0 +1,827 @@
+[
+  {
+    "publicUrl": "/emergency-service-alva/",
+    "cityIdentityKey": "alva",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/emergency-service-araquey/",
+    "cityIdentityKey": "araquey",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/emergency-service-arlington-duval/",
+    "cityIdentityKey": "arlington-duval",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/emergency-service-ballentine-manor/",
+    "cityIdentityKey": "ballentine-manor",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/emergency-service-bayshore/",
+    "cityIdentityKey": "bayshore",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/emergency-service-beacon-hills/",
+    "cityIdentityKey": "beacon-hills",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/emergency-service-belle-meade/",
+    "cityIdentityKey": "belle-meade",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/emergency-service-east-naples/",
+    "cityIdentityKey": "east-naples",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/emergency-service-eden/",
+    "cityIdentityKey": "eden",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/emergency-service-wauchula/",
+    "cityIdentityKey": "wauchula",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-alderene-park/",
+    "cityIdentityKey": "alderene-park",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting",
+      "pavers-and-pools"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-angel-city/",
+    "cityIdentityKey": "angel-city",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting",
+      "pavers-and-pools"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-arcadia/",
+    "cityIdentityKey": "arcadia",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-clewiston/",
+    "cityIdentityKey": "clewiston",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting",
+      "pavers-and-pools"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-live-oak/",
+    "cityIdentityKey": "live-oak",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-marianna/",
+    "cityIdentityKey": "marianna",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-okeechobee/",
+    "cityIdentityKey": "okeechobee",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-palatka/",
+    "cityIdentityKey": "palatka",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-quincy/",
+    "cityIdentityKey": "quincy",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting",
+      "pavers-and-pools"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/stump-grinding-sebring/",
+    "cityIdentityKey": "sebring",
+    "service": "stump-grinding",
+    "enabledModules": [
+      "machine-access",
+      "grinding-depth",
+      "root-zone",
+      "replanting"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-carrabelle/",
+    "cityIdentityKey": "carrabelle",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-chuluota/",
+    "cityIdentityKey": "chuluota",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-crawfordville/",
+    "cityIdentityKey": "crawfordville",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-cross-city/",
+    "cityIdentityKey": "cross-city",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-miramar-beach/",
+    "cityIdentityKey": "miramar-beach",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-on-top-of-the-world/",
+    "cityIdentityKey": "on-top-of-the-world",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-orange-city/",
+    "cityIdentityKey": "orange-city",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-perry/",
+    "cityIdentityKey": "perry",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-port-st-joe/",
+    "cityIdentityKey": "port-st-joe",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-williston-highlands/",
+    "cityIdentityKey": "williston-highlands",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "targets-and-rigging",
+      "permit-check",
+      "debris-and-cleanup",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
+      "No route content paragraph has been authored in Paket 3B."
+    ],
+    "reviewedAt": null
+  }
+]

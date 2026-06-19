@@ -9,6 +9,7 @@
     "validate:city-routes": "node scripts/validate-city-route-integrity.mjs",
     "validate:sitemaps": "node scripts/validate-sitemaps.mjs",
     "audit:generic-routes": "node scripts/score-generic-routes.mjs",
+    "validate:enrichment-data": "node scripts/validate-enrichment-data.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
