@@ -10,6 +10,7 @@ import {
   countySlug,
 } from "../src/lib/slugs.js";
 import {
+  getRenderableGenericRouteEnrichment,
   resolveGenericRouteContext,
   validateServiceModuleCompatibility,
 } from "../src/lib/generic-route-enrichment.js";
@@ -311,6 +312,7 @@ assert(duplicateValues(routeUrls).length === 0, "duplicate public URL in route-c
 
 let serviceModuleMismatchCount = 0;
 let identityLeakageCount = 0;
+let renderableRouteContexts = 0;
 
 for (const context of routeContexts) {
   assertRequiredKeys(context, routeRequiredFields, `route ${context.publicUrl || "<unknown>"}`);
@@ -360,11 +362,19 @@ for (const context of routeContexts) {
     assert(Boolean(cityContexts[context.cityIdentityKey]), `route has no matching pilot city context: ${context.publicUrl}`);
 
     try {
-      resolveGenericRouteContext({
+      const resolvedContext = resolveGenericRouteContext({
         city: modeledRoute.row.City,
         county: modeledRoute.row.County,
         service: context.service,
       });
+      const renderableBlocks = getRenderableGenericRouteEnrichment(resolvedContext);
+      if (renderableBlocks.length > 0) renderableRouteContexts += 1;
+      if (context.sourceStatus !== "manually-verified") {
+        assert(
+          renderableBlocks.length === 0,
+          `unverified route context must not render: ${context.publicUrl}`,
+        );
+      }
     } catch (error) {
       fail(error.message);
     }
@@ -426,6 +436,7 @@ const summary = {
   duplicatePilotUrls: duplicateValues(pilotUrls).length,
   genericPilotRoutes: pilotRoutes.filter((pilot) => !routesByUrl.get(pilot.publicUrl)?.rich).length,
   productionBehaviorFields: forbiddenFields.length,
+  renderableRouteContexts,
 };
 
 if (failures.length > 0) {
