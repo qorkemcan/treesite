@@ -11,6 +11,7 @@ interface Props {
   canonical?: string;
   robots?: string;
   ogType?: string;
+  weatherCounty?: string;
 }
 
 const {
@@ -21,6 +22,7 @@ const {
   canonical,
   robots = "index,follow",
   ogType = "website",
+  weatherCounty,
 } = Astro.props;
 
 function normalizeCanonicalPath(pathname) {
@@ -442,7 +444,7 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
       </div>
     </div>
 
-    <WeatherAlertBanner />
+    <WeatherAlertBanner county={weatherCounty} />
 
     <div id="main-content" tabindex="-1">
       <slot />

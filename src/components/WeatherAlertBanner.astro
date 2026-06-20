@@ -1,23 +1,24 @@
 ---
-import { SITE_CONFIG } from "../config.js";
 import siteAlert from "../data/site-alert.json";
+import { getWeatherAlertEligibility } from "../lib/weather-alert.js";
 
+interface Props {
+  county?: string;
+}
+
+const { county } = Astro.props;
 const alert = siteAlert || {};
-const enabled = alert.enabled === true && alert.mode !== "normal";
+const eligibility = getWeatherAlertEligibility(alert, county);
 const severity = alert.severity || "medium";
 const tone = severity === "high" ? "high" : severity === "medium" ? "medium" : "low";
 const headline = alert.headline || "Florida Tree Safety Advisory";
 const message = alert.message || "Weather conditions may affect tree safety in parts of Florida.";
-const areas = Array.isArray(alert.areas) ? alert.areas.filter(Boolean).slice(0, 5) : [];
-const updatedAt = alert.updatedAt ? new Date(alert.updatedAt) : null;
-const updatedLabel = updatedAt && !Number.isNaN(updatedAt.getTime())
-  ? updatedAt.toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })
-  : "recently";
-const ctaHref = alert.ctaHref || SITE_CONFIG.phoneHref;
-const ctaText = alert.ctaText || "Call Dispatch";
+const sourceNote = alert.source === "NWS API"
+  ? "Source: National Weather Service alert data."
+  : null;
 ---
 
-{enabled && (
+{eligibility.eligible && (
   <section class={`weather-alert weather-alert--${tone}`} aria-label="Florida tree safety weather advisory">
     <div class="weather-alert__inner">
       <div class="weather-alert__icon" aria-hidden="true">⚠️</div>
@@ -25,12 +26,10 @@ const ctaText = alert.ctaText || "Call Dispatch";
         <div class="weather-alert__eyebrow">Florida weather-aware tree safety</div>
         <strong>{headline}</strong>
         <p>{message}</p>
-        {areas.length > 0 && (
-          <p class="weather-alert__areas">Affected areas noted: {areas.join(", ")}</p>
-        )}
-        <p class="weather-alert__meta">Updated {updatedLabel}. Always follow official local weather and emergency guidance.</p>
+        <p class="weather-alert__areas">Local alert area: {eligibility.matchedCounty} County</p>
+        <p class="weather-alert__meta">Alert data checked {eligibility.formattedCheckedTime}. Always follow official local weather and emergency guidance.</p>
+        {sourceNote && <p class="weather-alert__source">{sourceNote}</p>}
       </div>
-      <a class="weather-alert__cta" href={ctaHref}>{ctaText}</a>
     </div>
   </section>
 )}
@@ -54,7 +53,7 @@ const ctaText = alert.ctaText || "Call Dispatch";
     margin: 0 auto;
     padding: 14px 1.2rem;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr;
     gap: 14px;
     align-items: center;
   }
@@ -104,30 +103,15 @@ const ctaText = alert.ctaText || "Call Dispatch";
     opacity: 0.72;
     font-size: 0.7rem !important;
   }
-  .weather-alert__cta {
-    white-space: nowrap;
-    background: #ea580c;
-    color: white !important;
-    text-decoration: none;
-    font-weight: 900;
-    border-radius: 999px;
-    padding: 10px 15px;
-    font-size: 0.78rem;
-    box-shadow: 0 8px 20px rgba(234, 88, 12, 0.22);
-  }
-  .weather-alert--high .weather-alert__cta {
-    background: #ffb703;
-    color: #1b1b1b !important;
+  .weather-alert__source {
+    margin-top: 2px !important;
+    opacity: 0.72;
+    font-size: 0.7rem !important;
   }
   @media (max-width: 760px) {
     .weather-alert__inner {
       grid-template-columns: auto 1fr;
       align-items: start;
-    }
-    .weather-alert__cta {
-      grid-column: 1 / -1;
-      text-align: center;
-      width: 100%;
     }
   }
 </style>
