@@ -11,6 +11,7 @@ import {
   contentKeySlug,
   countySlug,
 } from "../src/lib/slugs.js";
+import { validateGenericSitemapEligibility } from "../src/lib/generic-route-enrichment.js";
 
 const SITE_URL = "https://www.protreetrim.com";
 const checkPublicSitemaps = process.argv.includes("--check-public-sitemaps");
@@ -30,6 +31,7 @@ const richSources = {
   "stump-grinding": readJson("src/data/city-stump.json"),
   "emergency-service": readJson("src/data/city-emergency.json"),
 };
+const routeContexts = readJson("src/data/enrichment/route-context.json");
 
 const failures = [];
 const assertEqual = (label, actual, expected) => {
@@ -68,6 +70,22 @@ const routeSlugSet = new Set(routeSlugs);
 const routeDuplicates = routeSlugs.filter((slug, index) => routeSlugs.indexOf(slug) !== index);
 const richRoutes = routes.filter((route) => route.hasRich);
 const genericRoutes = routes.filter((route) => !route.hasRich);
+const eligibleGenericRoutes = [];
+
+for (const context of routeContexts) {
+  const eligibility = validateGenericSitemapEligibility(context);
+  assertTrue(
+    `Valid sitemap eligibility for ${context.publicUrl}: ${eligibility.errors.join("; ")}`,
+    eligibility.ok,
+  );
+  if (!eligibility.eligible) continue;
+
+  const fullUrl = new URL(context.publicUrl, SITE_URL).href;
+  const route = routes.find((item) => item.url === fullUrl);
+  assertTrue(`Sitemap-eligible route exists ${context.publicUrl}`, Boolean(route));
+  assertTrue(`Sitemap-eligible route is generic ${context.publicUrl}`, route ? !route.hasRich : false);
+  if (route && !route.hasRich) eligibleGenericRoutes.push(route);
+}
 
 assertEqual("CSV city row count", records.length, 800);
 assertEqual("Collision-aware city identity count", cityIdentities.size, 800);
@@ -131,14 +149,18 @@ for (const [citySlug, secondaryCounties] of Object.entries(EXPECTED_COLLISION_SE
   }
 }
 
-const modeledSitemapLocs = richRoutes.map((route) => route.url);
+const modeledSitemapLocs = [...richRoutes, ...eligibleGenericRoutes].map((route) => route.url);
 const duplicateModeledSitemapLocs = modeledSitemapLocs.filter(
   (loc, index) => modeledSitemapLocs.indexOf(loc) !== index,
 );
 const modeledSitemapOutsideRoutes = modeledSitemapLocs.filter(
   (loc) => !routes.some((route) => route.url === loc),
 );
-assertEqual("Modeled city/service sitemap loc count", modeledSitemapLocs.length, 819);
+assertEqual(
+  "Modeled city/service sitemap loc count",
+  modeledSitemapLocs.length,
+  richRoutes.length + eligibleGenericRoutes.length,
+);
 assertEqual("Modeled sitemap duplicate service loc count", duplicateModeledSitemapLocs.length, 0);
 assertEqual("Modeled sitemap service loc outside route count", modeledSitemapOutsideRoutes.length, 0);
 
@@ -159,7 +181,7 @@ if (checkPublicSitemaps) {
 
   const duplicatePublicLocs = locs.filter((loc, index) => locs.indexOf(loc) !== index);
   const publicOutsideRoutes = locs.filter((loc) => !routeSlugSet.has(loc.replace(`${SITE_URL}/`, "").replace(/\/$/, "")));
-  assertEqual("Public sitemap city/service loc count", locs.length, 819);
+  assertEqual("Public sitemap city/service loc count", locs.length, modeledSitemapLocs.length);
   assertEqual("Public sitemap duplicate service loc count", duplicatePublicLocs.length, 0);
   assertEqual("Public sitemap service loc outside route count", publicOutsideRoutes.length, 0);
 }
@@ -171,6 +193,7 @@ const summary = {
   uniqueRoutes: routeSlugSet.size,
   richRoutes: richRoutes.length,
   genericRoutes: genericRoutes.length,
+  sitemapEligibleGenericRoutes: eligibleGenericRoutes.length,
   modeledSitemapLocs: modeledSitemapLocs.length,
   checkedPublicSitemaps: checkPublicSitemaps,
 };

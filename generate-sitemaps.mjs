@@ -3,10 +3,12 @@ import path from 'path';
 import { parse } from 'csv-parse/sync';
 import {
   canUseSharedCityContent,
+  cityIdentitySlug,
   cityServiceSlug,
   contentKeySlug,
   countySlug as makeCountySlug,
 } from './src/lib/slugs.js';
+import { validateGenericSitemapEligibility } from './src/lib/generic-route-enrichment.js';
 
 const SITE_URL = 'https://www.protreetrim.com';
 const CSV_PATH = path.join(process.cwd(), 'src/data/cities.csv');
@@ -16,11 +18,8 @@ const LASTMOD_MANIFEST_PATH = path.join(process.cwd(), 'src/data/sitemap-lastmod
 const POSTS_PER_PAGE = 12;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
-// Default: tighten crawl signals by listing only richer city/service pages in the sitemap.
-// Pages still exist and remain indexable; they are simply not all submitted in XML sitemaps.
-// To submit every generated city/service URL again, build with:
-// SITEMAP_ONLY_RICH_PAGES=false npm run build
-const ONLY_RICH_CITY_SERVICE_PAGES = process.env.SITEMAP_ONLY_RICH_PAGES === 'false' ? false : true;
+// Generic city/service pages remain excluded unless their enrichment record passes
+// the explicit, manually verified sitemap eligibility contract.
 
 function escapeXml(value = '') {
   return String(value)
@@ -392,6 +391,27 @@ async function generate() {
       }
     });
 
+    const routeContexts = loadJson('src/data/enrichment/route-context.json');
+    if (!Array.isArray(routeContexts)) {
+      throw new Error('src/data/enrichment/route-context.json must be an array');
+    }
+
+    const eligibleGenericRoutes = new Map();
+    routeContexts.forEach((routeContext) => {
+      const eligibility = validateGenericSitemapEligibility(routeContext);
+      if (!eligibility.ok) {
+        throw new Error(
+          `Invalid generic sitemap eligibility for ${routeContext.publicUrl || '<unknown>'}: ${eligibility.errors.join('; ')}`,
+        );
+      }
+      if (!eligibility.eligible) return;
+      if (eligibleGenericRoutes.has(routeContext.publicUrl)) {
+        throw new Error(`Duplicate eligible generic route: ${routeContext.publicUrl}`);
+      }
+      eligibleGenericRoutes.set(routeContext.publicUrl, routeContext);
+    });
+    const consumedEligibleGenericRoutes = new Set();
+
     Object.keys(countyGroups).forEach((countySlug) => {
       const cityServiceEntries = [];
 
@@ -400,13 +420,31 @@ async function generate() {
         const cityContentSlug = contentKeySlug(city.City);
 
         services.forEach((svc) => {
+          const routeSlug = cityServiceSlug(svc.prefix, city.City, city.County);
+          const publicPath = `/${routeSlug}/`;
           const sourceEntry = svc.richTextSource[cityContentSlug];
           const hasRichText =
             canUseSharedCityContent(city.City, city.County) &&
             Boolean(sourceEntry);
+          const eligibleGenericRoute = eligibleGenericRoutes.get(publicPath);
 
-          if (ONLY_RICH_CITY_SERVICE_PAGES && !hasRichText) {
+          if (hasRichText && eligibleGenericRoute) {
+            throw new Error(`Eligible generic route conflicts with rich content: ${publicPath}`);
+          }
+
+          if (!hasRichText && !eligibleGenericRoute) {
             return;
+          }
+
+          if (eligibleGenericRoute) {
+            const expectedIdentity = cityIdentitySlug(city.City, city.County);
+            if (
+              eligibleGenericRoute.service !== svc.prefix ||
+              eligibleGenericRoute.cityIdentityKey !== expectedIdentity
+            ) {
+              throw new Error(`Eligible generic route identity mismatch: ${publicPath}`);
+            }
+            consumedEligibleGenericRoutes.add(publicPath);
           }
 
           const lastmod = hasRichText
@@ -415,10 +453,10 @@ async function generate() {
                 manifest.serviceSourceFallbacks[svc.prefix],
                 `${svc.prefix}.${cityContentSlug}`,
               )
-            : manifest.serviceSourceFallbacks[svc.prefix];
+            : eligibleGenericRoute.contentUpdatedAt;
 
           cityServiceEntries.push({
-            loc: pageUrl(`/${cityServiceSlug(svc.prefix, city.City, city.County)}/`),
+            loc: pageUrl(publicPath),
             lastmod,
             priority: hasRichText ? '0.75' : '0.6',
           });
@@ -444,6 +482,13 @@ async function generate() {
         xml: buildUrlSet(entries, fileName),
       });
     });
+
+    const unconsumedEligibleRoutes = [...eligibleGenericRoutes.keys()].filter(
+      (publicPath) => !consumedEligibleGenericRoutes.has(publicPath),
+    );
+    if (unconsumedEligibleRoutes.length > 0) {
+      throw new Error(`Eligible generic routes are outside the route inventory: ${unconsumedEligibleRoutes.join(', ')}`);
+    }
 
     const blogSitemapEntries = [];
     const totalBlogPages = Math.ceil(blogEntries.length / POSTS_PER_PAGE);
@@ -542,9 +587,9 @@ async function generate() {
     console.log(
       `ℹ️ Sitemap write summary: created=${stats.created}, updated=${stats.updated}, unchanged=${stats.unchanged}, removed=${stats.removed}`,
     );
-    if (ONLY_RICH_CITY_SERVICE_PAGES) {
-      console.log('ℹ️ SITEMAP_ONLY_RICH_PAGES=true: only rich city/service pages were included.');
-    }
+    console.log(
+      `ℹ️ City/service sitemap policy: rich routes plus ${eligibleGenericRoutes.size} verified generic opt-in route(s).`,
+    );
   } catch (err) {
     console.error('❌ HATA:', err.message);
     process.exit(1);

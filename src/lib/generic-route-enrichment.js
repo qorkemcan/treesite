@@ -60,6 +60,15 @@ const routeContextByUrl = new Map(
   routeContexts.map((context) => [context.publicUrl, context]),
 );
 
+const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+
+function isValidIsoDate(value) {
+  if (!ISO_DATE_PATTERN.test(String(value || ""))) return false;
+
+  const date = new Date(`${value}T00:00:00.000Z`);
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}
+
 export function getCountyContext(slug) {
   return countyContexts[String(slug || "")] ?? null;
 }
@@ -120,6 +129,63 @@ export function getRenderableGenericRouteEnrichment(context) {
       ? [{ module, title: modulePresentation.title, notes }]
       : [];
   });
+}
+
+export function validateGenericSitemapEligibility(routeContext, today = new Date().toISOString().slice(0, 10)) {
+  const hasEligibilityField = Object.hasOwn(routeContext || {}, "sitemapEligible");
+  if (!hasEligibilityField) {
+    return { ok: true, eligible: false, errors: [], blocks: [] };
+  }
+
+  if (typeof routeContext.sitemapEligible !== "boolean") {
+    return {
+      ok: false,
+      eligible: false,
+      errors: ["sitemapEligible must be a boolean"],
+      blocks: [],
+    };
+  }
+
+  if (!routeContext.sitemapEligible) {
+    return { ok: true, eligible: false, errors: [], blocks: [] };
+  }
+
+  const errors = [];
+  const modules = Array.isArray(routeContext.enabledModules)
+    ? routeContext.enabledModules
+    : [];
+  const compatibility = validateServiceModuleCompatibility(routeContext.service, modules);
+  const uniqueModules = new Set(modules);
+
+  if (routeContext.sourceStatus !== "manually-verified") {
+    errors.push("sourceStatus must be manually-verified");
+  }
+  if (modules.length !== 2 || uniqueModules.size !== 2) {
+    errors.push("enabledModules must contain exactly two unique modules");
+  }
+  if (!compatibility.ok) {
+    errors.push(`enabledModules are not service-compatible: ${compatibility.invalidModules.join(", ")}`);
+  }
+  if (!isValidIsoDate(routeContext.contentUpdatedAt)) {
+    errors.push("contentUpdatedAt must be a valid YYYY-MM-DD date");
+  } else if (routeContext.contentUpdatedAt > today) {
+    errors.push("contentUpdatedAt must not be in the future");
+  }
+
+  let blocks = [];
+  if (routeContext.sourceStatus === "manually-verified" && compatibility.ok) {
+    blocks = getRenderableGenericRouteEnrichment({ route: routeContext });
+    if (blocks.length !== 2) {
+      errors.push("exactly two enabled modules must render non-empty content blocks");
+    }
+  }
+
+  return {
+    ok: errors.length === 0,
+    eligible: errors.length === 0,
+    errors,
+    blocks,
+  };
 }
 
 export function resolveGenericRouteContext({ city, county, service }) {

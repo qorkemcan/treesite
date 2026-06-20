@@ -205,6 +205,8 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
+    "sitemapEligible": true,
+    "contentUpdatedAt": "2026-06-20",
     "sourceStatus": "manually-verified",
     "sourceNotes": [
       "Human-reviewed for the three-route Paket 3D pilot on 2026-06-20.",
@@ -483,6 +485,8 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
+    "sitemapEligible": true,
+    "contentUpdatedAt": "2026-06-20",
     "sourceStatus": "manually-verified",
     "sourceNotes": [
       "Human-reviewed for the three-route Paket 3D pilot on 2026-06-20.",
@@ -680,6 +684,8 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
+    "sitemapEligible": true,
+    "contentUpdatedAt": "2026-06-20",
     "sourceStatus": "manually-verified",
     "sourceNotes": [
       "Human-reviewed for the three-route Paket 3D pilot on 2026-06-20.",
