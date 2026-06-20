@@ -2,13 +2,13 @@
   "schemaVersion": 2,
   "enabled": true,
   "mode": "watch",
-  "title": "Severe Weather Tree Safety Notice",
-  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
+  "title": "Saturated Soil Tree Risk Notice",
+  "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Broward, FL"
+    "Escambia, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c5bfe615954492a85d2ea709614d0d776f94699.001.1",
-  "updatedAt": "2026-06-20T21:29:00.000Z",
-  "expiresAt": "2026-06-20T22:00:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.96cbd80f3a2a3694524aa51726f8fd9bb557b87d.001.1",
+  "updatedAt": "2026-06-20T19:10:00.000Z",
+  "expiresAt": "2026-06-21T07:15:00.000Z"
 }
