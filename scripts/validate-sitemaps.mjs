@@ -8,6 +8,7 @@ import {
   contentKeySlug,
   countySlug,
 } from "../src/lib/slugs.js";
+import { validateGenericSitemapEligibility } from "../src/lib/generic-route-enrichment.js";
 
 const SITE_URL = "https://www.protreetrim.com";
 const POSTS_PER_PAGE = 12;
@@ -170,6 +171,7 @@ const richSources = {
   "stump-grinding": readJson("src/data/city-stump.json"),
   "emergency-service": readJson("src/data/city-emergency.json"),
 };
+const routeContexts = readJson("src/data/enrichment/route-context.json");
 
 const staticPages = [
   "/",
@@ -232,6 +234,38 @@ for (const row of records) {
 const routeSet = new Set(routes.map((route) => route.loc));
 const richRouteSet = new Set(routes.filter((route) => route.hasRich).map((route) => route.loc));
 const genericRouteSet = new Set(routes.filter((route) => !route.hasRich).map((route) => route.loc));
+const routeByLoc = new Map(routes.map((route) => [route.loc, route]));
+const eligibleGenericRoutes = new Map();
+const cityRouteSource = fs.readFileSync(path.join(root, "src/pages/[slug].astro"), "utf8");
+const mainLayoutSource = fs.readFileSync(path.join(root, "src/layouts/MainLayout.astro"), "utf8");
+const cityRoutesUseSelfCanonical = /canonical=\{currentFullUrl\}/.test(cityRouteSource);
+const cityRoutesDefaultToIndexFollow = /robots\s*=\s*["']index,follow["']/.test(mainLayoutSource);
+
+for (const context of routeContexts) {
+  const eligibility = validateGenericSitemapEligibility(context, today);
+  assertTrue(
+    `Valid sitemap eligibility for ${context.publicUrl}: ${eligibility.errors.join("; ")}`,
+    eligibility.ok,
+  );
+  if (!eligibility.eligible) continue;
+
+  const loc = pageUrl(context.publicUrl);
+  const route = routeByLoc.get(loc);
+  assertTrue(`Eligible generic route exists ${context.publicUrl}`, Boolean(route));
+  assertTrue(`Eligible generic route remains generic ${context.publicUrl}`, route ? !route.hasRich : false);
+  assertTrue(
+    `Eligible generic route service matches ${context.publicUrl}`,
+    route ? route.servicePrefix === context.service : false,
+  );
+  assertTrue(`Eligible generic route has self canonical contract ${context.publicUrl}`, cityRoutesUseSelfCanonical);
+  assertTrue(`Eligible generic route has index,follow contract ${context.publicUrl}`, cityRoutesDefaultToIndexFollow);
+  if (route && !route.hasRich) {
+    eligibleGenericRoutes.set(loc, {
+      context,
+      expectedFile: `sitemap-county-${countySlug(route.county)}.xml`,
+    });
+  }
+}
 
 const blogFiles = fs
   .readdirSync(path.join(root, "src/content/blog"))
@@ -323,11 +357,40 @@ const serviceLocs = allLocs.filter((loc) => {
 const duplicateServiceLocs = serviceLocs.filter((loc, index) => serviceLocs.indexOf(loc) !== index);
 const outsideRouteLocs = serviceLocs.filter((loc) => !routeSet.has(loc));
 const genericLocs = serviceLocs.filter((loc) => genericRouteSet.has(loc));
-assertEqual("City/service sitemap URL count", serviceLocs.length, 819);
+const expectedServiceLocCount = richRouteSet.size + eligibleGenericRoutes.size;
+assertEqual("City/service sitemap URL count", serviceLocs.length, expectedServiceLocCount);
 assertEqual("Duplicate city/service loc count", duplicateServiceLocs.length, 0);
 assertEqual("Route set outside city/service loc count", outsideRouteLocs.length, 0);
-assertEqual("Generic city/service sitemap URL count", genericLocs.length, 0);
-for (const loc of serviceLocs) assertTrue(`City/service loc is rich ${loc}`, richRouteSet.has(loc));
+assertEqual("Generic city/service sitemap URL count", genericLocs.length, eligibleGenericRoutes.size);
+for (const loc of serviceLocs) {
+  assertTrue(
+    `City/service loc is rich or explicitly eligible ${loc}`,
+    richRouteSet.has(loc) || eligibleGenericRoutes.has(loc),
+  );
+}
+for (const loc of genericLocs) {
+  assertTrue(`Generic sitemap loc is explicitly eligible ${loc}`, eligibleGenericRoutes.has(loc));
+}
+for (const [loc, { context, expectedFile }] of eligibleGenericRoutes) {
+  const matches = allUrlEntries.filter((entry) => entry.loc === loc);
+  assertEqual(`Eligible generic loc count ${context.publicUrl}`, matches.length, 1);
+  if (matches.length === 1) {
+    assertEqual(`Eligible generic county sitemap ${context.publicUrl}`, matches[0].file, expectedFile);
+    assertEqual(
+      `Eligible generic lastmod ${context.publicUrl}`,
+      matches[0].lastmod,
+      context.contentUpdatedAt,
+    );
+  }
+}
+
+const expectedAllLocCount =
+  staticPages.length +
+  expectedBlogLastmods.size +
+  countyFiles.length +
+  richRouteSet.size +
+  eligibleGenericRoutes.size;
+assertEqual("Total child sitemap URL count", allLocs.length, expectedAllLocCount);
 
 const blogCategoryLocs = allLocs.filter((loc) => loc.includes("/blog/category/"));
 const duplicateBlogCategoryLocs = blogCategoryLocs.filter((loc, index) => blogCategoryLocs.indexOf(loc) !== index);
@@ -375,7 +438,10 @@ const summary = {
   countySitemaps: countyFiles.length,
   childSitemaps: childFiles.length,
   indexEntries: indexEntries.length,
+  totalLocs: allLocs.length,
   cityServiceLocs: serviceLocs.length,
+  eligibleGenericRoutes: eligibleGenericRoutes.size,
+  genericRoutesOutsideSitemaps: genericRouteSet.size - eligibleGenericRoutes.size,
   duplicateCityServiceLocs: duplicateServiceLocs.length,
   outsideRouteLocs: outsideRouteLocs.length,
   duplicateAllLocs: duplicateAllLocs.length,

@@ -12,11 +12,13 @@ import {
 import {
   getRenderableGenericRouteEnrichment,
   resolveGenericRouteContext,
+  validateGenericSitemapEligibility,
   validateServiceModuleCompatibility,
 } from "../src/lib/generic-route-enrichment.js";
 
 const root = process.cwd();
 const failures = [];
+const today = new Date().toISOString().slice(0, 10);
 
 const fail = (message) => failures.push(message);
 const assert = (condition, message) => {
@@ -189,6 +191,10 @@ const countyContexts = countyFile.value || {};
 const cityContexts = cityFile.value || {};
 const routeContexts = routeFile.value || [];
 const pilotRoutes = pilotFile.value || [];
+const cityRouteSource = fs.readFileSync(path.join(root, "src/pages/[slug].astro"), "utf8");
+const mainLayoutSource = fs.readFileSync(path.join(root, "src/layouts/MainLayout.astro"), "utf8");
+const cityRoutesUseSelfCanonical = /canonical=\{currentFullUrl\}/.test(cityRouteSource);
+const cityRoutesDefaultToIndexFollow = /robots\s*=\s*["']index,follow["']/.test(mainLayoutSource);
 
 assert(!Array.isArray(countyContexts), "county-context.json must be keyed by county slug");
 assert(!Array.isArray(cityContexts), "city-context.json must be keyed by city identity");
@@ -313,6 +319,7 @@ assert(duplicateValues(routeUrls).length === 0, "duplicate public URL in route-c
 let serviceModuleMismatchCount = 0;
 let identityLeakageCount = 0;
 let renderableRouteContexts = 0;
+let sitemapEligibleRouteContexts = 0;
 
 for (const context of routeContexts) {
   assertRequiredKeys(context, routeRequiredFields, `route ${context.publicUrl || "<unknown>"}`);
@@ -350,6 +357,13 @@ for (const context of routeContexts) {
   if (!compatibility.ok) serviceModuleMismatchCount += 1;
   assert(compatibility.ok, `wrong service module for ${context.publicUrl}: ${compatibility.invalidModules.join(", ")}`);
 
+  const sitemapEligibility = validateGenericSitemapEligibility(context, today);
+  assert(
+    sitemapEligibility.ok,
+    `invalid sitemap eligibility for ${context.publicUrl}: ${sitemapEligibility.errors.join("; ")}`,
+  );
+  if (sitemapEligibility.eligible) sitemapEligibleRouteContexts += 1;
+
   if (modeledRoute) {
     if (
       modeledRoute.service !== context.service ||
@@ -360,6 +374,21 @@ for (const context of routeContexts) {
     assert(modeledRoute.service === context.service, `route service leakage for ${context.publicUrl}`);
     assert(modeledRoute.identityKey === context.cityIdentityKey, `route identity leakage for ${context.publicUrl}`);
     assert(Boolean(cityContexts[context.cityIdentityKey]), `route has no matching pilot city context: ${context.publicUrl}`);
+
+    if (sitemapEligibility.eligible) {
+      const expectedPublicUrl = cityServicePath(
+        context.service,
+        modeledRoute.row.City,
+        modeledRoute.row.County,
+      );
+      assert(!modeledRoute.rich, `sitemap-eligible route must remain generic: ${context.publicUrl}`);
+      assert(
+        context.publicUrl === expectedPublicUrl,
+        `sitemap-eligible route URL mismatch: ${context.publicUrl} !== ${expectedPublicUrl}`,
+      );
+      assert(cityRoutesUseSelfCanonical, "sitemap-eligible city routes must use currentFullUrl as canonical");
+      assert(cityRoutesDefaultToIndexFollow, "sitemap-eligible city routes must default to index,follow");
+    }
 
     try {
       const resolvedContext = resolveGenericRouteContext({
@@ -420,6 +449,13 @@ for (const service of SERVICE_PREFIXES) {
 
 const forbiddenFields = findForbiddenKeys({ countyContexts, cityContexts, routeContexts, pilotRoutes });
 assert(forbiddenFields.length === 0, `production behavior fields are not allowed: ${forbiddenFields.join(", ")}`);
+const eligibleRouteUrls = routeContexts
+  .filter((context) => context.sitemapEligible === true)
+  .map((context) => context.publicUrl);
+assert(
+  duplicateValues(eligibleRouteUrls).length === 0,
+  "duplicate sitemap-eligible public URL found",
+);
 
 const summary = {
   countyContexts: Object.keys(countyContexts).length,
@@ -437,6 +473,9 @@ const summary = {
   genericPilotRoutes: pilotRoutes.filter((pilot) => !routesByUrl.get(pilot.publicUrl)?.rich).length,
   productionBehaviorFields: forbiddenFields.length,
   renderableRouteContexts,
+  sitemapEligibleRouteContexts,
+  cityRoutesUseSelfCanonical,
+  cityRoutesDefaultToIndexFollow,
 };
 
 if (failures.length > 0) {
