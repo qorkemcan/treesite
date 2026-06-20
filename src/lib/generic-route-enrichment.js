@@ -32,6 +32,30 @@ export const SERVICE_MODULES = Object.freeze({
   ]),
 });
 
+const SERVICE_MODULE_PRESENTATION = Object.freeze({
+  "tree-removal": Object.freeze({
+    "risk-review": Object.freeze({ title: "Risk review", noteField: "riskNotes" }),
+    "targets-and-rigging": Object.freeze({ title: "Targets and rigging", noteField: "accessNotes" }),
+    "permit-check": Object.freeze({ title: "Permit check", noteField: "permitNotes" }),
+    "debris-and-cleanup": Object.freeze({ title: "Debris and cleanup", noteField: "cleanupNotes" }),
+    "property-protection": Object.freeze({ title: "Property protection", noteField: "serviceDecisionNotes" }),
+  }),
+  "stump-grinding": Object.freeze({
+    "machine-access": Object.freeze({ title: "Machine access", noteField: "accessNotes" }),
+    "grinding-depth": Object.freeze({ title: "Grinding depth", noteField: "stumpNotes" }),
+    "root-zone": Object.freeze({ title: "Root-zone review", noteField: "riskNotes" }),
+    replanting: Object.freeze({ title: "Replanting plan", noteField: "cleanupNotes" }),
+    "pavers-and-pools": Object.freeze({ title: "Pavers and pools", noteField: "serviceDecisionNotes" }),
+  }),
+  "emergency-service": Object.freeze({
+    "active-hazard": Object.freeze({ title: "Active hazard", noteField: "riskNotes" }),
+    "storm-access": Object.freeze({ title: "Storm access", noteField: "accessNotes" }),
+    "utility-risk": Object.freeze({ title: "Utility risk", noteField: "emergencyNotes" }),
+    documentation: Object.freeze({ title: "Documentation", noteField: "serviceDecisionNotes" }),
+    "temporary-safety": Object.freeze({ title: "Temporary safety", noteField: "cleanupNotes" }),
+  }),
+});
+
 const routeContextByUrl = new Map(
   routeContexts.map((context) => [context.publicUrl, context]),
 );
@@ -65,6 +89,37 @@ export function validateServiceModuleCompatibility(service, modules = []) {
     ok: SERVICE_PREFIXES.includes(service) && invalidModules.length === 0,
     invalidModules,
   };
+}
+
+export function getRenderableGenericRouteEnrichment(context) {
+  const routeContext = context?.route;
+  if (!routeContext || routeContext.sourceStatus !== "manually-verified") return [];
+
+  const compatibility = validateServiceModuleCompatibility(
+    routeContext.service,
+    routeContext.enabledModules,
+  );
+  if (!compatibility.ok) {
+    throw new Error(
+      `Incompatible enrichment modules for ${routeContext.publicUrl}: ${compatibility.invalidModules.join(", ")}`,
+    );
+  }
+
+  const presentation = SERVICE_MODULE_PRESENTATION[routeContext.service] || {};
+  return routeContext.enabledModules.flatMap((module) => {
+    const modulePresentation = presentation[module];
+    if (!modulePresentation) return [];
+
+    const notes = Array.isArray(routeContext[modulePresentation.noteField])
+      ? routeContext[modulePresentation.noteField]
+          .map((note) => String(note || "").trim())
+          .filter(Boolean)
+      : [];
+
+    return notes.length > 0
+      ? [{ module, title: modulePresentation.title, notes }]
+      : [];
+  });
 }
 
 export function resolveGenericRouteContext({ city, county, service }) {

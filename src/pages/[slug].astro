@@ -7,7 +7,12 @@ import { SITE_CONFIG } from "../config.js";
 import { Image } from "astro:assets";
 import arboristTips from "../data/arborist-tips.json";
 import PriceCalculator from "../components/PriceCalculator.astro";
+import GenericRouteEnrichment from "../components/GenericRouteEnrichment.astro";
 import { getServiceRelatedBlogLinks } from "../data/internal-links.js";
+import {
+  getRenderableGenericRouteEnrichment,
+  resolveGenericRouteContext,
+} from "../lib/generic-route-enrichment.js";
 import {
   canUseSharedCityContent,
   cityServicePath,
@@ -366,6 +371,16 @@ const templateChoiceIndex =
 const richTextSource = serviceProfile.richTextSource || {};
 const canUseRichText = canUseSharedCityContent(cityData.City, cityData.County);
 const hasCustomRichText = canUseRichText && Boolean(richTextSource[citySlugClean]);
+const genericEnrichmentContext = hasCustomRichText
+  ? null
+  : resolveGenericRouteContext({
+      city: cityData.City,
+      county: cityData.County,
+      service: serviceInfo.prefix,
+    });
+const genericEnrichmentBlocks = genericEnrichmentContext
+  ? getRenderableGenericRouteEnrichment(genericEnrichmentContext)
+  : [];
 const selectedRichText =
   (hasCustomRichText ? richTextSource[citySlugClean] : null) ||
   genericCityTemplates[templateChoiceIndex];
@@ -837,7 +852,15 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         <em>{serviceProfile.localNoteLabel}:</em>
         {selectedRichText.split(".").slice(0, 2).join(".").trim()}.
       </p>
-    </div>
+    </div>{
+      genericEnrichmentBlocks.length > 0 && (
+        <GenericRouteEnrichment
+          blocks={genericEnrichmentBlocks}
+          cityName={cityName}
+          serviceName={serviceInfo.name}
+        />
+      )
+    }
 
     <section style="margin-top: 3rem;">
       <div
