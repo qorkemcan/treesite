@@ -188,12 +188,15 @@
     "service": "emergency-service",
     "enabledModules": [
       "active-hazard",
-      "storm-access",
       "documentation"
     ],
-    "serviceDecisionNotes": [],
+    "serviceDecisionNotes": [
+      "After the immediate area is controlled, create a simple record before cleanup changes the scene. For the East Naples property, capture wide photos showing the tree's position, closer images of visible damage, the date and approximate time, weather conditions observed by the homeowner, and any blocked access or affected structure. List actions already taken and keep invoices, estimates, and written recommendations together. Avoid stating a cause that has not been established; describe what can be seen instead. If an insurer, property manager, utility, or public agency becomes involved, ask what documentation it requires rather than assuming one standard applies. Organized records help separate emergency stabilization from later decisions about removal, repairs, debris, and site restoration."
+    ],
     "accessNotes": [],
-    "riskNotes": [],
+    "riskNotes": [
+      "For an East Naples tree emergency, first decide whether the condition is actively changing or exposing someone to immediate harm. From a safe distance, note fresh movement, cracking sounds, a split attachment, suspended wood, contact with a structure, or a route that can no longer be used safely. Keep people away from the potential fall area and avoid moving branches that may be carrying hidden load. If power lines, service drops, or other electrical equipment may be involved, do not approach the tree; contact the appropriate utility or emergency authority. A photograph can help describe the scene, but it should never require entering the hazard area. This triage is for choosing the urgency of response, not diagnosing the tree from the ground."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -202,12 +205,12 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed for the three-route Paket 3D pilot on 2026-06-20.",
+      "The copy uses general homeowner decision guidance and makes no unverified location-specific operational, permit, weather, soil, property-pattern, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-20"
   },
   {
     "publicUrl": "/emergency-service-eden/",
@@ -463,13 +466,15 @@
     "service": "stump-grinding",
     "enabledModules": [
       "machine-access",
-      "grinding-depth",
-      "root-zone",
-      "replanting"
+      "root-zone"
     ],
     "serviceDecisionNotes": [],
-    "accessNotes": [],
-    "riskNotes": [],
+    "accessNotes": [
+      "Before scheduling stump grinding in Palatka, measure the narrowest opening between the street and the stump rather than only the gate itself. Include turns, steps, slopes, low branches, air-conditioning equipment, edging, and soft ground along the travel path. Photograph the route from both directions and record any surface that should not carry machine weight. The grinder selected for an open front yard may not fit a side yard or reach a rear stump without a different plan. Homeowners can use these measurements to ask whether the proposed machine fits, how the work area will be protected, and whether chip removal requires a separate path. Do not assume access from a citywide property description."
+    ],
+    "riskNotes": [
+      "Grinding the visible stump does not remove the entire root system, so the desired use of the Palatka site should guide the scope. Mark irrigation components, edging, nearby plantings, and any known buried features before work begins. If the area will become lawn or mulch, the treatment may differ from a location intended for a new tree, footing, or hardscape. Ask which surface roots are included, how far the operator will chase them, and what material will fill the resulting voids. Remaining roots normally decay over time, but the schedule and settlement are not predictable from the city record. The decision should be based on the homeowner's next use for that exact area."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -478,12 +483,12 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed for the three-route Paket 3D pilot on 2026-06-20.",
+      "The copy uses general homeowner decision guidance and makes no unverified location-specific operational, permit, weather, soil, property-pattern, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-20"
   },
   {
     "publicUrl": "/stump-grinding-quincy/",
@@ -659,14 +664,15 @@
     "service": "tree-removal",
     "enabledModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
       "property-protection"
     ],
-    "serviceDecisionNotes": [],
+    "serviceDecisionNotes": [
+      "A removal estimate is more useful when the homeowner identifies protection priorities before equipment is positioned. For a Miramar Beach property, note fragile paving, irrigation controls, gates, roof edges, parked vehicles, outdoor furnishings, and any area that cannot support heavy traffic. These are inspection prompts, not claims that every local property has those features. Ask how limbs and trunk sections would be lowered, where debris would be staged, and which surfaces need mats or another agreed protection method. Also decide what must remain accessible during the work. A written walk-through of these constraints makes competing proposals easier to compare and reduces surprises about cleanup, minor surface disturbance, or restoration responsibilities."
+    ],
     "accessNotes": [],
-    "riskNotes": [],
+    "riskNotes": [
+      "Before deciding on full removal at a Miramar Beach property, separate observable defects from assumptions about the tree. Record the direction of lean, visible cavities, dead sections, root disturbance, and any recent change in the canopy. Then map what would be struck if the tree or a major limb moved: people, buildings, vehicles, fences, or neighboring property. A defect alone does not determine the work plan; its location and the consequences of failure matter. Homeowners should use this review to decide whether the next step is a prompt on-site assessment, temporary isolation of the area, or a planned removal discussion. Do not rely on species or coastal location alone as proof that a tree is unsafe."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -674,12 +680,12 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed for the three-route Paket 3D pilot on 2026-06-20.",
+      "The copy uses general homeowner decision guidance and makes no unverified location-specific operational, permit, weather, soil, property-pattern, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-20"
   },
   {
     "publicUrl": "/tree-removal-on-top-of-the-world/",
