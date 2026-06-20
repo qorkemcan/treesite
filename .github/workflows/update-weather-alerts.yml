@@ -3,10 +3,14 @@ name: Update Florida weather alert banner
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 */2 * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: weather-alert-update
+  cancel-in-progress: false
 
 jobs:
   update-weather-alerts:
@@ -14,6 +18,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Use Node.js
         uses: actions/setup-node@v4
@@ -23,14 +30,56 @@ jobs:
       - name: Update weather alert data
         run: node scripts/update-weather-alerts.mjs
 
-      - name: Commit changes if alert changed
+      - name: Validate weather alert snapshot
+        run: node scripts/validate-weather-alert.mjs
+
+      - name: Check weather snapshot scope
+        id: weather-change
         run: |
-          if git diff --quiet src/data/site-alert.json; then
-            echo "No weather alert data changes."
+          status="$(git status --porcelain)"
+          if [ -z "$status" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Weather alert result: no semantic change"
             exit 0
           fi
+
+          unexpected="$(printf '%s\n' "$status" | grep -v '^ M src/data/site-alert.json$' || true)"
+          if [ -n "$unexpected" ]; then
+            echo "Unexpected workflow changes detected:" >&2
+            printf '%s\n' "$unexpected" >&2
+            exit 1
+          fi
+
+          if git diff --quiet -- src/data/site-alert.json; then
+            echo "Weather snapshot status changed without a matching file diff." >&2
+            exit 1
+          fi
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          if grep -q '"enabled": false' src/data/site-alert.json; then
+            echo "Weather alert result: disabled"
+          else
+            echo "Weather alert result: updated"
+          fi
+
+      - name: Commit verified weather snapshot
+        if: steps.weather-change.outputs.changed == 'true'
+        run: |
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo "origin/main advanced during this run; refusing to create a stale weather commit." >&2
+            exit 1
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/site-alert.json
-          git commit -m "Update Florida weather alert banner"
-          git push
+          git add -- src/data/site-alert.json
+
+          staged="$(git diff --cached --name-only)"
+          if [ "$staged" != "src/data/site-alert.json" ]; then
+            echo "Refusing to commit unexpected staged files: $staged" >&2
+            exit 1
+          fi
+
+          git commit -m "chore(weather): update verified Florida alert snapshot"
+          git push origin HEAD:main
