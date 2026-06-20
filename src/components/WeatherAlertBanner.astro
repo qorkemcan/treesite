@@ -9,9 +9,9 @@ interface Props {
 const { county } = Astro.props;
 const alert = siteAlert || {};
 const eligibility = getWeatherAlertEligibility(alert, county);
-const severity = alert.severity || "medium";
+const severity = alert.severity || (alert.mode === "storm" ? "high" : "medium");
 const tone = severity === "high" ? "high" : severity === "medium" ? "medium" : "low";
-const headline = alert.headline || "Florida Tree Safety Advisory";
+const headline = alert.title || alert.headline || "Florida Tree Safety Advisory";
 const message = alert.message || "Weather conditions may affect tree safety in parts of Florida.";
 const sourceNote = alert.source === "NWS API"
   ? "Source: National Weather Service alert data."
@@ -27,7 +27,7 @@ const sourceNote = alert.source === "NWS API"
         <strong>{headline}</strong>
         <p>{message}</p>
         <p class="weather-alert__areas">Local alert area: {eligibility.matchedCounty} County</p>
-        <p class="weather-alert__meta">Alert data checked {eligibility.formattedCheckedTime}. Always follow official local weather and emergency guidance.</p>
+        <p class="weather-alert__meta">NWS alert updated {eligibility.formattedUpdatedTime}. Always follow official local weather and emergency guidance.</p>
         {sourceNote && <p class="weather-alert__source">{sourceNote}</p>}
       </div>
     </div>
