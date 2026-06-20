@@ -3,9 +3,10 @@
 // Bu bileşen hem ana sayfada hem de [slug] sayfalarında çalışır.
 interface Props {
   city?: string;
+  defaultService?: "removal" | "stump" | "emergency";
 }
 
-const { city = "" } = Astro.props;
+const { city = "", defaultService } = Astro.props;
 const isGeneral = city === "" || city === "Florida";
 ---
 
@@ -66,16 +67,16 @@ const isGeneral = city === "" || city === "Florida";
           <label for="svc-type">{isGeneral ? "2" : "1"}. Service Required</label
           >
           <select id="svc-type" class="styled-select">
-            <option value="removal" data-base="850"
+            <option value="removal" data-base="850" selected={defaultService === "removal"}
               >Professional Tree Removal</option
             >
             <option value="trimming" data-base="450"
               >Trimming & Maintenance</option
             >
-            <option value="stump" data-base="250"
+            <option value="stump" data-base="250" selected={defaultService === "stump"}
               >Stump Grinding & Removal</option
             >
-            <option value="emergency" data-base="1400"
+            <option value="emergency" data-base="1400" selected={defaultService === "emergency"}
               >Emergency Storm Response</option
             >
           </select>

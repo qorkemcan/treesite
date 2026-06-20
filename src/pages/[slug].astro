@@ -108,7 +108,7 @@ const cityDescription = rawCityDescription
   .replace(/\s+/g, " ")
   .trim();
 
-const localContextSummary =
+const legacyLocalContextSummary =
   cityDescription ||
   `${cityName} properties in ${countyName} County need tree work decisions that reflect local access, storm exposure, dominant tree species, and the way residential lots are used across local neighborhoods.`;
 
@@ -381,6 +381,49 @@ const genericEnrichmentContext = hasCustomRichText
 const genericEnrichmentBlocks = genericEnrichmentContext
   ? getRenderableGenericRouteEnrichment(genericEnrichmentContext)
   : [];
+const pilotPolishByUrl = {
+  "/tree-removal-miramar-beach/": {
+    localSummary:
+      "For a Miramar Beach property, confirm the requested service, observable tree condition, nearby targets, access path, and cleanup goals before scheduling.",
+    treeProfileNote:
+      "Tree removal planning should be based on observable condition, nearby targets, access, and the intended result for the site.",
+    serviceStatusNote:
+      "Before scheduling tree removal in Miramar Beach, identify observable defects, nearby targets, access constraints, and property-protection priorities.",
+    imageDescription: "Illustrative tree removal planning image.",
+    estimatorService: "removal",
+  },
+  "/stump-grinding-palatka/": {
+    localSummary:
+      "For stump grinding in Palatka, confirm stump dimensions, the machine path, nearby surfaces, and the intended use of the area after grinding.",
+    treeProfileNote:
+      "Stump scope should be based on the visible stump, root flare, nearby surfaces, and the homeowner's intended next use.",
+    serviceStatusNote:
+      "Before stump grinding in Palatka, confirm the access path, stump dimensions, nearby utilities, and intended finished surface.",
+    imageDescription:
+      "Illustrative stump grinding and surface restoration image.",
+    estimatorService: "stump",
+  },
+  "/emergency-service-east-naples/": {
+    localSummary:
+      "For an East Naples tree emergency, document observable hazards from a safe distance and separate immediate stabilization from later cleanup decisions.",
+    treeProfileNote:
+      "Emergency planning should be based on observable movement, damage, nearby targets, blocked access, and potential utility involvement.",
+    serviceStatusNote:
+      "If conditions are actively changing or electrical equipment may be involved, keep people away, document from a safe distance, and contact the appropriate utility or emergency authority.",
+    imageDescription:
+      "Illustrative emergency tree hazard response image.",
+    estimatorService: "emergency",
+  },
+} as const;
+const pilotPublicUrl = genericEnrichmentContext?.publicUrl;
+const pilotPolish =
+  genericEnrichmentBlocks.length > 0 &&
+  pilotPublicUrl &&
+  pilotPublicUrl in pilotPolishByUrl
+    ? pilotPolishByUrl[pilotPublicUrl as keyof typeof pilotPolishByUrl]
+    : null;
+const localContextSummary =
+  pilotPolish?.localSummary || legacyLocalContextSummary;
 const selectedRichText =
   (hasCustomRichText ? richTextSource[citySlugClean] : null) ||
   genericCityTemplates[templateChoiceIndex];
@@ -641,8 +684,15 @@ const primaryTreeMatch =
   Object.keys(speciesMap).find((key) => mainTree.includes(key)) ||
   "native Florida species";
 const treeRiskNote =
+  pilotPolish?.treeProfileNote ||
   speciesMap[primaryTreeMatch] ||
   `Managing ${mainTree} in ${cityName} requires decisions that reflect local growth patterns, storm exposure, and property layout.`;
+const serviceStatusNote = pilotPolish?.serviceStatusNote || finalDynamicTip;
+const imageCaption =
+  pilotPolish?.imageDescription || serviceProfile.imageCaption;
+const imageAlt =
+  pilotPolish?.imageDescription ||
+  `${serviceInfo.name} project near ${landmark} in ${cityName} Florida - ${currentMonth} ${currentYear}`;
 
 const landmarkContext = `Across ${cityName} and nearby ${countyName} County neighborhoods, local crews focus on safe clearance, controlled execution, and strong property protection for ${serviceProfile.urgencyLabel}.`;
 const serviceLineage = `Service coverage includes ${cityName} and extends to ${cityData.NearbyCities}, helping dispatch partners coordinate ${serviceProfile.urgencyLabel} without overpromising exact arrival times.`;
@@ -862,7 +912,9 @@ const structuredFaqs = finalFaqs.map((faq) => ({
       )
     }
 
-    <section style="margin-top: 3rem;">
+    {
+      genericEnrichmentBlocks.length === 0 && (
+        <section style="margin-top: 3rem;">
       <div
         style="display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:1.4rem;"
       >
@@ -895,7 +947,9 @@ const structuredFaqs = finalFaqs.map((faq) => ({
           ))
         }
       </div>
-    </section>
+        </section>
+      )
+    }
 
     <section style="margin-top: 3rem;">
       <div
@@ -1085,7 +1139,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
           <p
             style="margin: 12px 0 0; font-size: 0.9rem; color: #4b5563; line-height: 1.5; font-weight: 700; font-style: italic;"
           >
-            {finalDynamicTip}
+            {serviceStatusNote}
           </p>
         </div>
       </div>
@@ -1153,7 +1207,10 @@ const structuredFaqs = finalFaqs.map((faq) => ({
       </div>
     </section>
 
-    <PriceCalculator city={cityName} />
+    <PriceCalculator
+      city={cityName}
+      defaultService={pilotPolish?.estimatorService}
+    />
 
     <section style="margin-top: 5rem;">
       <div
@@ -1191,14 +1248,14 @@ const structuredFaqs = finalFaqs.map((faq) => ({
             <div style="position: relative;">
               <Image
                 src={selectedImage}
-                alt={`${serviceInfo.name} project near ${landmark} in ${cityName} Florida - ${currentMonth} ${currentYear}`}
+                alt={imageAlt}
                 width={600}
                 height={450}
                 format="webp"
                 style="width: 100%; height: auto; border-radius: 24px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);"
               />
               <div style="position: absolute; bottom: 15px; left: 15px; right: 15px; background: rgba(0,0,0,0.7); color: white; padding: 8px 15px; border-radius: 12px; font-size: 0.8rem; backdrop-filter: blur(5px); font-weight: 600;">
-                {serviceProfile.imageCaption}
+                {imageCaption}
               </div>
             </div>
           )
