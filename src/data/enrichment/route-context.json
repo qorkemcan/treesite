@@ -48,7 +48,7 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sitemapEligible": false,
+    "sitemapEligible": true,
     "contentUpdatedAt": "2026-06-21",
     "sourceStatus": "manually-verified",
     "sourceNotes": [
@@ -79,7 +79,7 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sitemapEligible": false,
+    "sitemapEligible": true,
     "contentUpdatedAt": "2026-06-21",
     "sourceStatus": "manually-verified",
     "sourceNotes": [
@@ -420,7 +420,7 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sitemapEligible": false,
+    "sitemapEligible": true,
     "contentUpdatedAt": "2026-06-21",
     "sourceStatus": "manually-verified",
     "sourceNotes": [
@@ -567,7 +567,7 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sitemapEligible": false,
+    "sitemapEligible": true,
     "contentUpdatedAt": "2026-06-21",
     "sourceStatus": "manually-verified",
     "sourceNotes": [
@@ -745,7 +745,7 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sitemapEligible": false,
+    "sitemapEligible": true,
     "contentUpdatedAt": "2026-06-21",
     "sourceStatus": "manually-verified",
     "sourceNotes": [
@@ -777,7 +777,7 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sitemapEligible": false,
+    "sitemapEligible": true,
     "contentUpdatedAt": "2026-06-21",
     "sourceStatus": "manually-verified",
     "sourceNotes": [
