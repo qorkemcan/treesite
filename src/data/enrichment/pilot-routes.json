@@ -28,8 +28,7 @@
     "targetQualityScore": 80,
     "plannedModules": [
       "active-hazard",
-      "storm-access",
-      "documentation"
+      "temporary-safety"
     ],
     "mainProblem": [
       "wrong-service-language",
@@ -47,8 +46,7 @@
     "opportunityScore": 62,
     "targetQualityScore": 80,
     "plannedModules": [
-      "active-hazard",
-      "storm-access",
+      "utility-risk",
       "documentation"
     ],
     "mainProblem": [
@@ -280,10 +278,8 @@
     "opportunityScore": 59,
     "targetQualityScore": 80,
     "plannedModules": [
-      "machine-access",
-      "grinding-depth",
       "root-zone",
-      "replanting"
+      "pavers-and-pools"
     ],
     "mainProblem": [
       "wrong-service-language",
@@ -383,9 +379,7 @@
     "targetQualityScore": 80,
     "plannedModules": [
       "machine-access",
-      "grinding-depth",
-      "root-zone",
-      "replanting"
+      "grinding-depth"
     ],
     "mainProblem": [
       "wrong-service-language",
@@ -503,10 +497,7 @@
     "targetQualityScore": 80,
     "plannedModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
-      "property-protection"
+      "targets-and-rigging"
     ],
     "mainProblem": [
       "wrong-service-language",
@@ -525,9 +516,6 @@
     "targetQualityScore": 80,
     "plannedModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
       "property-protection"
     ],
     "mainProblem": [

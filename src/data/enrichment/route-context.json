@@ -31,13 +31,16 @@
     "service": "emergency-service",
     "enabledModules": [
       "active-hazard",
-      "storm-access",
-      "documentation"
+      "temporary-safety"
     ],
     "serviceDecisionNotes": [],
     "accessNotes": [],
-    "riskNotes": [],
-    "cleanupNotes": [],
+    "riskNotes": [
+      "For an active tree hazard in Araquey, first decide where people, pets, and vehicles can remain without passing beneath damaged or suspended material. From a protected position, note whether a tree or limb is moving, resting on a structure, blocking essential access, or creating a changing failure path. Do not step under the canopy for a closer photo, pull on branches, cut loaded wood, or move an object that requires entering the danger area. When calling, describe what can be seen, what is occupied, and which approach remains usable. Those facts help distinguish an immediate hazard from stable work that can be scheduled normally. Do not label a routine concern as an emergency solely to seek faster service, and do not rely on unverified species, landmark, storm-frequency, or response-time claims."
+    ],
+    "cleanupNotes": [
+      "Temporary safety measures should reduce exposure while qualified help is being arranged, not attempt the tree work itself. Keep doors, walkways, parking areas, and yard sections closed when they lead into the potential drop zone. Use clear instructions for occupants and visitors, and choose an alternate route that does not pass beneath hanging limbs or a damaged trunk. If material is resting on a roof, fence, or vehicle, leave it undisturbed because removing support can cause additional movement. Share a safe callback number, the property address, occupancy information, and the access point responders can use without entering the hazard from the wrong side. Do not climb, use a ladder, attach a rope, or make temporary cuts. If utilities may be involved, remain back and contact the appropriate utility or emergency authority."
+    ],
     "permitNotes": [],
     "emergencyNotes": [],
     "stumpNotes": [],
@@ -45,38 +48,45 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the third generic enrichment batch audit on 2026-06-21.",
+      "The copy uses only route identity and general homeowner decision guidance; it makes no landmark, species, soil, storm, permit, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21"
   },
   {
     "publicUrl": "/emergency-service-arlington-duval/",
     "cityIdentityKey": "arlington-duval",
     "service": "emergency-service",
     "enabledModules": [
-      "active-hazard",
-      "storm-access",
+      "utility-risk",
       "documentation"
     ],
-    "serviceDecisionNotes": [],
+    "serviceDecisionNotes": [
+      "Useful emergency documentation helps explain the condition without putting anyone in danger. From outside the exclusion zone, take wide photos that show the affected tree, nearby structure or access point, and the direction of any fallen or suspended material. Record when the condition was first observed, whether it appears to be changing, which areas are occupied, and which entrance remains safe. Note calls made to utilities, emergency authorities, property management, or an insurer, but do not state that a permit, coverage decision, or response time is guaranteed. Provide the same concise facts to dispatch so the request can be classified accurately. Documentation should support safe coordination, not delay an urgent safety call. Do not climb, cross barriers, stand beneath damaged wood, or move debris merely to create a clearer photograph."
+    ],
     "accessNotes": [],
     "riskNotes": [],
     "cleanupNotes": [],
     "permitNotes": [],
-    "emergencyNotes": [],
+    "emergencyNotes": [
+      "Treat any tree or branch touching, pulling, or resting near a utility line in Arlington as a utility hazard first. Stay back and keep other people away from the tree, connected fencing, vehicles, tools, and standing water. Do not touch the line or assume it is de-energized because it is quiet or no longer sparking. Contact the appropriate utility or emergency authority when a line is down or an immediate public-safety risk exists; a tree-service request does not replace that call. From a safe location, report the address, what appears to be involved, whether access is blocked, and any instructions already provided by the utility. Do not cut, drag, or reposition tree material around the line. Dispatch information should describe observed conditions without claiming that a crew can control electrical hazards."
+    ],
     "stumpNotes": [],
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the third generic enrichment batch audit on 2026-06-21.",
+      "The copy uses only route identity and general homeowner decision guidance; it makes no landmark, species, soil, storm, permit, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21"
   },
   {
     "publicUrl": "/emergency-service-ballentine-manor/",
@@ -392,14 +402,16 @@
     "cityIdentityKey": "live-oak",
     "service": "stump-grinding",
     "enabledModules": [
-      "machine-access",
-      "grinding-depth",
       "root-zone",
-      "replanting"
+      "pavers-and-pools"
     ],
-    "serviceDecisionNotes": [],
+    "serviceDecisionNotes": [
+      "Hard surfaces and constructed features require a tighter stump-grinding scope. Record the distance from the stump and visible flare roots to pavers, slabs, walls, pool structures, fencing, and irrigation lines, even if some features are not present at the property. Ask how the machine will approach the stump, where chips will be directed, and what barrier or clearance will protect nearby finishes. If roots appear to pass beneath a surface, the proposal should state whether they are excluded rather than promising removal without disturbance. Confirm who will restore displaced soil, reset edging, or prepare the area for a separate repair contractor. A clean grinding result does not guarantee that an adjacent surface will settle evenly. Do not treat cracking, lifting, or drainage problems as proof of root causation without an appropriate site assessment."
+    ],
     "accessNotes": [],
-    "riskNotes": [],
+    "riskNotes": [
+      "Stump grinding lowers the visible stump but does not remove every root. Before work in Live Oak, mark the area where surface roots, irrigation components, edging, buried lighting, or drainage features may intersect the proposed grinding zone. Explain what the space must support afterward and ask which visible roots are included in the estimate. The operator should distinguish between flare roots that can be addressed with the stump and roots that extend beyond the practical grinding area. If a new tree, footing, or hardscape is planned, obtain the required clearance from the person responsible for that next step. Remaining roots can decay gradually and may affect settling, but their behavior should not be predicted from an unsupported species assumption. Do not authorize broad root chasing without understanding the effect on nearby surfaces and utilities."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -408,12 +420,14 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the third generic enrichment batch audit on 2026-06-21.",
+      "The copy uses only route identity and general homeowner decision guidance; it makes no landmark, species, soil, storm, permit, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21"
   },
   {
     "publicUrl": "/stump-grinding-marianna/",
@@ -536,27 +550,31 @@
     "service": "stump-grinding",
     "enabledModules": [
       "machine-access",
-      "grinding-depth",
-      "root-zone",
-      "replanting"
+      "grinding-depth"
     ],
     "serviceDecisionNotes": [],
-    "accessNotes": [],
+    "accessNotes": [
+      "Before scheduling stump grinding in Sebring, measure the stump at its widest point, including the visible root flare, and then measure every opening the machine would need to pass through. The narrowest gate, turn, step, or side-yard section controls access, not the width of the driveway. Mark irrigation heads, valve boxes, edging, lighting, drainage features, and any surface hidden by grass or chips. Photograph the route from the street to the stump so an estimator can evaluate both clearance and ground protection. Ask what machine width is proposed, whether the travel surface can support it, and how nearby features will be protected. Do not assume that a machine suitable for an open front yard can reach a rear stump or cross paving without a separate access plan."
+    ],
     "riskNotes": [],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
-    "stumpNotes": [],
+    "stumpNotes": [
+      "Grinding depth should follow the intended use of the finished area. Tell the estimator whether the space will become lawn, mulch, a planting bed, or part of a later hardscape project. Ask how far below surrounding grade the stump can be ground, which visible flare roots are included, and whether roots extending beyond the main stump require a separate scope. Confirm whether chips will remain in the cavity, be spread elsewhere, or be removed, and what material will be used to establish the final grade. Wood chips settle differently from soil, so a cavity filled only with grindings may not support the planned surface. If another contractor will use the area, obtain that contractor's clearance requirements first. Do not assume that ordinary stump grinding removes the entire root system or prepares the site for construction."
+    ],
     "exclusions": [
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the third generic enrichment batch audit on 2026-06-21.",
+      "The copy uses only route identity and general homeowner decision guidance; it makes no landmark, species, soil, storm, permit, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21"
   },
   {
     "publicUrl": "/tree-removal-carrabelle/",
@@ -710,14 +728,15 @@
     "service": "tree-removal",
     "enabledModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
-      "property-protection"
+      "targets-and-rigging"
     ],
     "serviceDecisionNotes": [],
-    "accessNotes": [],
-    "riskNotes": [],
+    "accessNotes": [
+      "Once removal is supported, the next decision is how material can be controlled within the available work area. Show the estimator the full route from the street to the tree, including gates, turns, slopes, soft surfaces, low clearances, and places where equipment cannot travel. List fixed targets beneath and beside the canopy, then ask which sections could be handled in an open area and which would need to be cut smaller and lowered under control. The answer should connect the proposed method to actual site constraints rather than defaulting to specialized equipment. Confirm where workers will maintain an exclusion area, where wood will be staged, and whether access depends on a neighbor or shared surface. Do not move barriers or authorize cross-property access until responsibility and restoration expectations are documented."
+    ],
+    "riskNotes": [
+      "For a tree-removal decision in On Top of the World, begin with a simple question: can the tree remain without exposing people or property to an unacceptable failure path? Record visible changes such as a widening crack, a newly exposed root plate, a broken leader, extensive dead wood, or decay near a major union. Note whether the concern affects one branch, one stem, or the entire structure. The location matters as much as the defect, so map the tree's distance from occupied areas, roofs, walkways, vehicles, and utility corridors. Ask the estimator to describe alternatives to full removal when they are reasonable and to explain which observations make retention impractical. Do not use an unverified species label, neighborhood assumption, or generalized storm claim as the deciding evidence."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -726,12 +745,14 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the third generic enrichment batch audit on 2026-06-21.",
+      "The copy uses only route identity and general homeowner decision guidance; it makes no landmark, species, soil, storm, permit, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21"
   },
   {
     "publicUrl": "/tree-removal-orange-city/",
@@ -739,14 +760,15 @@
     "service": "tree-removal",
     "enabledModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
       "property-protection"
     ],
-    "serviceDecisionNotes": [],
+    "serviceDecisionNotes": [
+      "A removal plan should account for the property before cutting begins. Walk the likely work zone and record roof edges, windows, fences, irrigation controls, paving, landscape beds, overhead lines, and any surface that should not carry heavy equipment. Measure the narrowest access point and identify where trunk sections and branches could be staged without blocking a required exit. Ask the estimator which areas need mats, barriers, controlled lowering, or a different equipment approach, and who is responsible for moving outdoor items before the appointment. The proposal should also state how debris will leave the site and what final cleanup is included. Do not assume that every tree requires a crane or that a clear-looking yard provides a safe drop zone; those decisions require an on-site review."
+    ],
     "accessNotes": [],
-    "riskNotes": [],
+    "riskNotes": [
+      "Before requesting tree removal in Orange City, separate the condition of the tree from the inconvenience it creates. From a safe position, note any new lean, trunk separation, large dead sections, root movement, cavities, or repeated branch failures. Then identify what the tree could reach, including the home, driveway, fence, service lines, parked vehicles, and neighboring property. Photos from several angles can help an estimator understand the concern, but they should not require anyone to stand beneath damaged wood. Ask whether the observed defect affects the whole tree or can be managed without full removal. A useful proposal should explain why removal is recommended, what uncertainty remains, and how the condition changes the work plan. Avoid treating species, weather history, or appearance alone as proof that a tree must be removed."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -755,12 +777,14 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the third generic enrichment batch audit on 2026-06-21.",
+      "The copy uses only route identity and general homeowner decision guidance; it makes no landmark, species, soil, storm, permit, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21"
   },
   {
     "publicUrl": "/tree-removal-perry/",

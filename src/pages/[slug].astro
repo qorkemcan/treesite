@@ -491,7 +491,7 @@ const pilotPolish =
     ? pilotPolishByUrl[pilotPublicUrl as keyof typeof pilotPolishByUrl]
     : null;
 const localContextSummary =
-  pilotPolish?.localSummary || legacyLocalContextSummary;
+  pilotPolish?.localSummary || verifiedGenericCopy?.profile || legacyLocalContextSummary;
 const selectedRichText =
   (hasCustomRichText ? richTextSource[citySlugClean] : null) ||
   genericCityTemplates[templateChoiceIndex];
@@ -779,7 +779,8 @@ const treeRiskNote =
 const treeProfileDisplay = hasVerifiedGenericBody
   ? treeRiskNote
   : `${mainTree} • ${treeRiskNote}`;
-const serviceStatusNote = pilotPolish?.serviceStatusNote || finalDynamicTip;
+const serviceStatusNote =
+  pilotPolish?.serviceStatusNote || verifiedGenericCopy?.detail || finalDynamicTip;
 const verifiedImageDescription = `Illustrative ${serviceInfo.name} planning image for ${cityName} homeowners.`;
 const imageCaption = hasVerifiedGenericBody
   ? verifiedImageDescription
