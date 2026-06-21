@@ -247,25 +247,30 @@
     "service": "emergency-service",
     "enabledModules": [
       "active-hazard",
-      "storm-access",
-      "documentation"
+      "utility-risk"
     ],
     "serviceDecisionNotes": [],
     "accessNotes": [],
-    "riskNotes": [],
+    "riskNotes": [
+      "For an active tree hazard in Wauchula, the first decision is where people and vehicles can remain safely while help is arranged. Keep everyone away from a fallen tree, a split trunk, suspended limbs, and any area beneath material that could shift. Do not walk under the canopy to take better photos, pull on branches, cut loaded wood, or move a vehicle that requires passing through the danger zone. From a protected location, note whether a structure is occupied, a driveway is blocked, a limb is hanging, or the tree is still moving. Those details help distinguish an immediate safety problem from routine work that can be scheduled normally. If there is no active threat and the condition is stable, request a standard assessment rather than describing it as an emergency solely to seek faster service."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
-    "emergencyNotes": [],
+    "emergencyNotes": [
+      "Treat any tree or branch touching, pulling, or resting near a utility line as a utility hazard first. Stay back, keep others away, and do not touch the tree, fence, vehicle, tools, or standing water that may be connected to the line. Contact the appropriate utility or emergency authority when a line is down, sparking, or creating an immediate public-safety risk; a tree-service request does not replace that call. For dispatch, provide the Wauchula address, a safe callback number, whether the site is occupied, which access point remains usable, and what can be seen without entering the hazard area. State clearly if utilities have been contacted and whether responders have given any instructions. Do not report a line as de-energized unless the utility has confirmed it, and do not attempt cutting or debris movement around the line."
+    ],
     "stumpNotes": [],
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed for the second three-route enrichment batch on 2026-06-21.",
+      "The copy uses general homeowner decision guidance and makes no unverified location-specific operational, permit, weather, soil, property-pattern, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21"
   },
   {
     "publicUrl": "/stump-grinding-alderene-park/",
@@ -356,28 +361,31 @@
     "service": "stump-grinding",
     "enabledModules": [
       "machine-access",
-      "grinding-depth",
-      "root-zone",
-      "replanting",
-      "pavers-and-pools"
+      "grinding-depth"
     ],
     "serviceDecisionNotes": [],
-    "accessNotes": [],
+    "accessNotes": [
+      "Before requesting stump grinding in Clewiston, measure the stump at its widest point, including the visible root flare, then measure every gate and passage the grinder would need to use. The narrowest opening matters more than the driveway width. Mark sprinkler heads, valve boxes, edging, low lighting, shallow drainage, pavers, and other features that could be hidden by grass or chips. Also note slopes, soft areas, steps, and tight turns between the access point and the stump. Send the estimator both measurements and photos that show the full travel path, not just a close-up of the stump. Do not assume a machine can cross a lawn or paved edge without protection. Access limits may change equipment choice, setup time, and whether nearby roots can be reached without disturbing surfaces that should remain intact."
+    ],
     "riskNotes": [],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
-    "stumpNotes": [],
+    "stumpNotes": [
+      "Grinding depth should follow the surface you want after the work, not a single default number. Tell the estimator whether the area will become lawn, mulch, a planting bed, a new tree location, or part of a hardscape project. Ask how far below the surrounding grade the stump can be ground, which visible roots are included, and whether deeper or spreading roots require a separate decision. Confirm where the resulting chips will go: left in the cavity, spread elsewhere, or removed. Chips settle differently from soil, so filling a deep void entirely with grindings may not produce a firm final grade. If replanting or construction is planned, obtain the next contractor's clearance requirements before grinding. Do not promise that grinding removes the entire root system or makes the spot immediately ready for paving."
+    ],
     "exclusions": [
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed for the second three-route enrichment batch on 2026-06-21.",
+      "The copy uses general homeowner decision guidance and makes no unverified location-specific operational, permit, weather, soil, property-pattern, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21"
   },
   {
     "publicUrl": "/stump-grinding-live-oak/",
@@ -612,14 +620,15 @@
     "service": "tree-removal",
     "enabledModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
-      "property-protection"
+      "targets-and-rigging"
     ],
     "serviceDecisionNotes": [],
-    "accessNotes": [],
-    "riskNotes": [],
+    "accessNotes": [
+      "The work area should be planned before any cutting method is chosen. Walk the property and list the fixed targets around the tree: roof edges, service lines, fences, sheds, paving, irrigation controls, gates, and the route debris would take to the street. Measure the narrowest access point and flag anything that cannot carry equipment or falling material. A wide, clear drop zone may allow a simpler approach; a confined yard may require the tree to be dismantled in smaller sections and lowered under control. Ask the estimator to explain where workers and equipment would enter, how the exclusion area would be maintained, and where limbs and trunk sections would be staged. Do not move fences, disconnect utilities, or approve access across neighboring property until responsibility and restoration expectations are clear."
+    ],
+    "riskNotes": [
+      "Before scheduling tree removal in Crawfordville, start by identifying what the tree could strike and whether the concern can be reduced without removing the entire tree. Look from several angles for a changing lean, a split trunk, large dead sections, lifted soil, exposed roots, or branches already contacting a roof or fence. Note the distance to the home, driveway, utility lines, neighboring property, and areas people use every day. Photos taken from a safe distance can help explain the condition, but they do not replace an on-site review. If the tree is stable and the concern is limited to individual limbs, ask whether pruning is a reasonable alternative. If the whole structure appears compromised or its location leaves no acceptable failure zone, a removal estimate becomes the more useful next step."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -627,12 +636,14 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed for the second three-route enrichment batch on 2026-06-21.",
+      "The copy uses general homeowner decision guidance and makes no unverified location-specific operational, permit, weather, soil, property-pattern, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21"
   },
   {
     "publicUrl": "/tree-removal-cross-city/",

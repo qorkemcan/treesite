@@ -182,8 +182,7 @@
     "targetQualityScore": 80,
     "plannedModules": [
       "active-hazard",
-      "storm-access",
-      "documentation"
+      "utility-risk"
     ],
     "mainProblem": [
       "identical-paragraph-collision"
@@ -263,10 +262,7 @@
     "targetQualityScore": 80,
     "plannedModules": [
       "machine-access",
-      "grinding-depth",
-      "root-zone",
-      "replanting",
-      "pavers-and-pools"
+      "grinding-depth"
     ],
     "mainProblem": [
       "wrong-service-language",
@@ -450,10 +446,7 @@
     "targetQualityScore": 80,
     "plannedModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
-      "property-protection"
+      "targets-and-rigging"
     ],
     "mainProblem": [
       "identical-paragraph-collision"
