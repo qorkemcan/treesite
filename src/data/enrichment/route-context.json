@@ -4,12 +4,15 @@
     "cityIdentityKey": "alva",
     "service": "emergency-service",
     "enabledModules": [
-      "active-hazard",
       "storm-access",
       "documentation"
     ],
-    "serviceDecisionNotes": [],
-    "accessNotes": [],
+    "serviceDecisionNotes": [
+      "Build a concise record from outside the Alva exclusion area so urgent coordination is not delayed. Take wide photographs only from safe positions, showing the affected tree or material in relation to the blocked route, occupied structure, or other target. Record when the condition was first observed, whether it appears to be changing, which areas are closed, and what safe access remains. Note contacts with utilities, emergency authorities, property management, or an insurer without predicting coverage, response time, or permit outcome. Keep estimates, invoices, written instructions, and later cleanup records together, but describe observed facts rather than assigning an unconfirmed cause. Dispatch should receive the address, callback number, occupancy information, visible hazard, and access status in a short consistent summary. Do not cross the boundary, move supporting debris, or stand beneath damaged material merely to improve a photograph."
+    ],
+    "accessNotes": [
+      "An emergency access description should tell dispatch how to reach the Alva property without directing anyone through the hazard. Identify the normal entrance, any blocked segment, the nearest safe stopping point, and whether occupants can leave by another route. From a protected location, describe fallen or suspended material, unstable supports, limited turning space, and any utility concern visible along the approach. State which surfaces or structures must not be crossed and whether emergency authorities or a utility have already given instructions. Ask the responder to confirm the intended approach before anyone moves barriers or debris. Access planning should separate the route needed for immediate hazard assessment from the route that may later be used for equipment and cleanup. Do not drive under hanging material, walk around a barricade for photographs, or clear branches by hand to create an opening. Keep the safe approach available for responders and occupants."
+    ],
     "riskNotes": [],
     "cleanupNotes": [],
     "permitNotes": [],
@@ -18,12 +21,14 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/emergency-service-araquey/",
@@ -94,12 +99,15 @@
     "service": "emergency-service",
     "enabledModules": [
       "active-hazard",
-      "storm-access",
       "documentation"
     ],
-    "serviceDecisionNotes": [],
+    "serviceDecisionNotes": [
+      "Document the Ballentine Manor scene in a way that supports safe handoffs between dispatch, property contacts, and any public or utility response. From outside the restricted area, capture a few wide views that show the location of damaged material, nearby occupied space, and the usable approach. Write down the observation time, visible changes, closed areas, and instructions received from authorities or utilities. Separate the immediate stabilization request from later removal, debris, and repair decisions so each scope can be reviewed on its own. Ask what records a property manager or insurer wants rather than assuming one universal requirement, and never promise a coverage result. Keep estimates and invoices with the original observations, using neutral descriptions instead of an unsupported cause. Do not move material, enter a structure made unsafe by the event, or cross a barrier simply to obtain a closer image."
+    ],
     "accessNotes": [],
-    "riskNotes": [],
+    "riskNotes": [
+      "Classify the Ballentine Manor request by present exposure, not by the size or appearance of the tree alone. Without entering the potential drop zone, observe whether a trunk or limb is moving, split, suspended, resting on a structure, or preventing safe use of an essential route. Determine which rooms, vehicles, walkways, and outdoor areas can be kept unoccupied. Give dispatch the address, a safe callback number, what can be seen, and whether the condition has changed since it was first noticed. Ask whether the reported facts indicate immediate hazard assessment or stable follow-up work. Do not shake branches, reposition debris, climb, or cut wood that may be carrying load. Avoid standing beneath the canopy for photographs or measurements. If a utility line or electrical component may be involved, increase distance and contact the appropriate utility or emergency authority before seeking tree work near it."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -107,12 +115,14 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/emergency-service-bayshore/",
@@ -145,26 +155,31 @@
     "cityIdentityKey": "beacon-hills",
     "service": "emergency-service",
     "enabledModules": [
-      "active-hazard",
-      "storm-access",
+      "utility-risk",
       "documentation"
     ],
-    "serviceDecisionNotes": [],
+    "serviceDecisionNotes": [
+      "Keep the Beacon Hills emergency record factual, brief, and safe to collect. Note when the condition was observed, whether it is changing, which areas are occupied or closed, and which approach remains outside the exclusion zone. Photographs may be useful when taken from that safe approach, but no image is worth moving closer to suspended wood or possible electrical involvement. Record calls to the utility, emergency authorities, property representatives, and service dispatch, including instructions received and the time of each contact. Organize later estimates, invoices, and written recommendations separately from the initial observation record. Avoid predicting insurance coverage, permit requirements, arrival time, or the cause of failure. A consistent summary should help each recipient understand the visible condition and current access controls. Do not move debris to improve the view or cross a barrier after another party has established it."
+    ],
     "accessNotes": [],
     "riskNotes": [],
     "cleanupNotes": [],
     "permitNotes": [],
-    "emergencyNotes": [],
+    "emergencyNotes": [
+      "Possible electrical involvement changes the response sequence. At the Beacon Hills property, establish distance before collecting details and prevent anyone from approaching woody material, metal fencing, vehicles, tools, or wet surfaces connected to the affected area. A quiet line must still be treated as energized until the responsible utility says otherwise. Report a downed line or immediate public-safety concern to the appropriate utility or emergency authority before arranging tree work around it. From a remote position, provide the address, describe the visible relationship between the tree and electrical equipment, identify blocked access, and repeat any instructions already issued. Ask tree-service dispatch what information is useful while the utility controls the electrical side of the scene. Never test the line, touch nearby objects, move branches, or begin cutting. Avoid telling others that power is off unless that status came directly from the utility."
+    ],
     "stumpNotes": [],
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/emergency-service-belle-meade/",
@@ -230,13 +245,16 @@
     "service": "emergency-service",
     "enabledModules": [
       "active-hazard",
-      "storm-access",
-      "documentation"
+      "temporary-safety"
     ],
     "serviceDecisionNotes": [],
     "accessNotes": [],
-    "riskNotes": [],
-    "cleanupNotes": [],
+    "riskNotes": [
+      "Decide first whether the Eden condition is changing or exposing people to immediate harm. From outside the possible fall area, note movement, cracking sounds, suspended wood, a split attachment, contact with a structure, or access that can no longer be used safely. Keep occupants, visitors, pets, and vehicles away from the affected zone and choose an alternate route that does not pass beneath damaged material. When calling, describe only what can be observed safely, what is occupied, and what remains blocked or usable. Those facts help dispatch distinguish an active hazard from stable work that belongs in normal scheduling. Do not enter the area for a close photograph, pull branches, cut loaded wood, or move an object whose retrieval requires crossing the exclusion boundary. If electrical equipment may be involved, remain back and contact the appropriate utility or emergency authority rather than approaching the tree."
+    ],
+    "cleanupNotes": [
+      "Temporary safety controls should reduce exposure while help is coordinated; they are not a homeowner repair plan. At the Eden property, close doors, parking spaces, walkways, or yard areas that lead into the potential movement zone. Give occupants and expected visitors one clear alternate route, and communicate which areas must remain unused. If material rests on a building, vehicle, fence, or another object, leave it in place because changing its support may trigger movement. Provide dispatch with the address, a safe callback number, occupancy details, and an approach that does not require entering beneath damaged wood. Ask whether any additional separation or public-safety contact is appropriate for the observed condition. Do not climb, use a ladder, attach a rope, place yourself beneath suspended material, or make temporary cuts. Maintain the boundary until a qualified on-site assessment changes it."
+    ],
     "permitNotes": [],
     "emergencyNotes": [],
     "stumpNotes": [],
@@ -244,12 +262,14 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/emergency-service-wauchula/",
@@ -343,27 +363,31 @@
     "cityIdentityKey": "arcadia",
     "service": "stump-grinding",
     "enabledModules": [
-      "machine-access",
-      "grinding-depth",
       "root-zone",
       "replanting"
     ],
     "serviceDecisionNotes": [],
     "accessNotes": [],
-    "riskNotes": [],
-    "cleanupNotes": [],
+    "riskNotes": [
+      "The visible stump and flare roots establish the starting scope, but they do not reveal every root below the surface. For the Arcadia site, mark the intended grinding boundary and identify known irrigation, lighting, drainage, edging, paving, utilities, or planting areas near it. Explain what the space must support afterward so the professional can distinguish roots that should be addressed with the stump from roots that extend beyond a practical or safe grinding zone. Ask the proposal to list included surface roots, excluded areas, and the method for handling an unexpected obstruction. Remaining roots may decay and settle over time, but their behavior should not be predicted from a species assumption. Do not request broad root chasing simply to make the area look clear. Before expanding the scope, consider the effect on nearby surfaces and confirm that known buried features have been located and protected."
+    ],
+    "cleanupNotes": [
+      "If the Arcadia area is intended for replanting, coordinate the grinding scope with the next planting decision rather than treating cleanup as the final step. Clarify the proposed planting location, required opening, desired finished grade, and whether the new plant must occupy the exact former stump position. Ask the planting professional what clearance and soil preparation are needed, then have the grinding estimate state whether that preparation is included. Decide how chips will be removed or separated, what material will refill the cavity, and who will correct settlement before planting. A deeper grind can create more debris without guaranteeing a suitable planting space, while remaining roots may limit placement even after the visible stump is gone. Do not promise immediate replanting readiness or assume grindings are an appropriate growing medium. Keep the planting plan flexible until the exposed work area can be evaluated safely."
+    ],
     "permitNotes": [],
     "emergencyNotes": [],
     "stumpNotes": [],
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/stump-grinding-clewiston/",
@@ -435,12 +459,14 @@
     "service": "stump-grinding",
     "enabledModules": [
       "machine-access",
-      "grinding-depth",
-      "root-zone",
-      "replanting"
+      "pavers-and-pools"
     ],
-    "serviceDecisionNotes": [],
-    "accessNotes": [],
+    "serviceDecisionNotes": [
+      "Nearby hard surfaces and constructed features need explicit boundaries in the stump-grinding scope. At the Marianna site, measure the distance from the stump and visible roots to paving, slabs, walls, fencing, water-related structures, irrigation, and other finishes that should remain undisturbed. Ask how the grinder will be positioned, where chips will discharge, and what shielding or clearance will protect surrounding materials. If roots appear to continue beneath a surface, require the proposal to identify them as excluded unless a separate, reviewed method is agreed. Confirm who removes grindings, restores displaced soil, resets edging, or prepares the area for a repair contractor. Grinding can lower visible wood without proving that roots caused existing lifting, cracking, or drainage concerns. Do not authorize work under a structure or finished surface based on an assumption. A useful estimate distinguishes achievable grinding from repair, excavation, and restoration tasks."
+    ],
+    "accessNotes": [
+      "Sketch the machine route from the unloading area to the stump before comparing grinding estimates. For a Marianna property, include opening widths, turning points, elevation changes, overhead clearance, and every surface that the machine may cross. Measure the stump at the widest visible flare rather than only the cut face. Identify known irrigation controls, buried lighting, drainage features, edging, and utility areas, and tell the estimator which finishes require protection. Ask for the proposed machine dimensions, how it will turn and position at the stump, and whether chips and equipment leave by the same route. The scope should state any inaccessible roots or surfaces and any homeowner preparation required before arrival. Do not remove a gate, drive over an unreviewed surface, or assume that a compact machine can navigate the path solely because it fits through one opening. Access is a sequence of clearances, not a single number."
+    ],
     "riskNotes": [],
     "cleanupNotes": [],
     "permitNotes": [],
@@ -449,40 +475,46 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/stump-grinding-okeechobee/",
     "cityIdentityKey": "okeechobee",
     "service": "stump-grinding",
     "enabledModules": [
-      "machine-access",
       "grinding-depth",
-      "root-zone",
-      "replanting"
+      "root-zone"
     ],
     "serviceDecisionNotes": [],
     "accessNotes": [],
-    "riskNotes": [],
+    "riskNotes": [
+      "Map the proposed root work as a defined zone around the Okeechobee stump instead of asking for every visible root to disappear. Mark known irrigation, drainage, lighting, utilities, edging, paving, and planting features before the machine is positioned. Tell the estimator how the area will be used afterward and ask which flare roots can be addressed within the normal setup. Roots that extend beyond the work zone or beneath finished surfaces should be identified separately, with a clear reason for inclusion or exclusion. Discuss what happens if metal, concrete, utility material, or another obstruction is uncovered. Stump grinding does not remove the complete root system, and future decay or settlement cannot be timed precisely. Do not chase roots broadly without understanding the effect on adjacent surfaces or buried infrastructure. The final scope should balance the desired surface result with a controlled, observable grinding boundary."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
-    "stumpNotes": [],
+    "stumpNotes": [
+      "Set a target depth only after deciding what the Okeechobee work area must become. Lawn restoration, mulch, a planting bed, and future hardscape each call for different clearance, material, and grading discussions. Measure from the surrounding finished grade and ask which parts of the visible root flare are included in the quoted depth. The estimate should distinguish the main stump from spreading roots, list chip removal or retention, and explain who supplies backfill and establishes the final surface. If a later contractor needs the area, obtain that person's depth and clearance requirements before approving the grind. More depth is not automatically better when buried features or protected surfaces are nearby, and it can increase the volume of material to manage. Do not assume that grindings compact like soil or that an ordinary scope prepares the location for construction. Confirm exclusions and restoration responsibilities in writing."
+    ],
     "exclusions": [
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/stump-grinding-palatka/",
@@ -522,27 +554,30 @@
     "service": "stump-grinding",
     "enabledModules": [
       "machine-access",
-      "grinding-depth",
-      "root-zone",
-      "replanting",
-      "pavers-and-pools"
+      "grinding-depth"
     ],
     "serviceDecisionNotes": [],
-    "accessNotes": [],
+    "accessNotes": [
+      "Machine access should be verified as a continuous path rather than reduced to one gate measurement. At the Quincy property, measure the stump and visible root flare, then record the narrowest opening, tightest turn, overhead obstruction, step, slope, and finished surface between the unloading point and work area. Mark irrigation parts, drainage components, lighting, edging, and other known features that may be difficult to see. Send photographs that show the route in sequence so the estimator can compare machine width, turning space, and ground protection needs. Ask whether chip removal uses the same path and whether any feature must be temporarily moved by the homeowner. The scope should identify surfaces excluded from machine travel and any access limitation that changes the reachable grinding area. Do not assume a machine can cross paving, soft ground, or a utility corridor safely because its listed width fits the narrowest opening."
+    ],
     "riskNotes": [],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
-    "stumpNotes": [],
+    "stumpNotes": [
+      "Define depth by the intended finished use instead of requesting the deepest available grind. Tell the Quincy estimator whether the area will become lawn, mulch, planting space, or part of a later hardscape or construction project. Ask where surrounding grade will be measured, which visible flare roots are included, and whether roots extending beyond the main stump require separate pricing or exclusion. The proposal should state the approximate target depth, chip-handling choice, backfill responsibility, and expected final surface condition. If another contractor will use the site, obtain that contractor's clearance and material requirements before grinding begins. Chips may settle differently from soil, so decide whether they remain, are spread, or are removed rather than assuming they create a firm finish. Do not treat normal grinding as complete root-system removal, and do not authorize deeper work around known buried features without a reviewed protection plan."
+    ],
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/stump-grinding-sebring/",
@@ -582,14 +617,15 @@
     "service": "tree-removal",
     "enabledModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
       "property-protection"
     ],
-    "serviceDecisionNotes": [],
+    "serviceDecisionNotes": [
+      "Compare removal proposals by how clearly they protect the property as well as by the cutting plan. For the Carrabelle route, prepare a list of fixed features and finished surfaces around the tree and along the expected access and debris paths. Tell the estimator which entrances must remain available and which areas cannot support equipment, staged wood, or repeated foot traffic. Ask where sections will be controlled, how loose debris will be contained, and what measures are proposed around roofs, windows, fences, utilities, paving, and landscaping. The scope should assign responsibility for moving personal items, protecting surfaces, hauling material, and completing final cleanup. It should also state any exclusions instead of leaving restoration assumptions unresolved. Do not infer that a large machine, crane, or open drop is necessary before an on-site review. Avoid approving work across a boundary until access, protection, and restoration terms are confirmed by the responsible parties."
+    ],
     "accessNotes": [],
-    "riskNotes": [],
+    "riskNotes": [
+      "Removal becomes a defensible choice when the observed condition, potential target, and consequence of failure are considered together. At a Carrabelle property, describe what can be seen from a safe location: trunk damage, an altered lean, lifted soil, broken structural parts, substantial dead sections, or recent branch loss. Separate long-standing appearance from a feature that is new or changing. Mark where people normally spend time and what buildings, vehicles, utilities, access routes, or neighboring areas could be affected. Ask the professional to explain whether the problem is limited, whether retention options remain practical, and what finding would shift the recommendation toward removal. A proposal should document the decision basis without relying on unverified local conditions. Do not strike the trunk, excavate roots, climb, or move hanging material to test stability. When the likely fall area cannot be isolated, address immediate exposure before discussing routine scheduling."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -597,12 +633,14 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/tree-removal-chuluota/",
@@ -792,14 +830,15 @@
     "service": "tree-removal",
     "enabledModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
       "property-protection"
     ],
-    "serviceDecisionNotes": [],
+    "serviceDecisionNotes": [
+      "Property protection begins with a shared map of the work zone, not with a generic promise to be careful. Identify surfaces, structures, utilities, landscaping, and access points that must remain protected at the Perry site. Confirm where workers and equipment may travel, where cut material could be staged, and which exits must stay open. A useful proposal should explain whether barriers, mats, controlled lowering, or hand movement are anticipated and should state who moves vehicles, furniture, or other removable items. It should also define debris handling, final cleanup, and responsibility for any agreed surface preparation after the work. Ask how the plan changes if the actual access or target layout differs from the initial description. Do not assume an open-looking area is an acceptable drop zone or authorize use of adjacent property without documented permission. Photograph existing vulnerable surfaces from a safe position before work starts."
+    ],
     "accessNotes": [],
-    "riskNotes": [],
+    "riskNotes": [
+      "Start the removal decision by separating a correctable branch concern from a condition that may affect the whole tree. At the Perry property, observe from ordinary occupied areas and note visible trunk separation, a changing lean, newly exposed roots, large dead sections, or repeated failures. Then list what could be reached if the affected part moved, including people, buildings, vehicles, utilities, and neighboring property. Ask the on-site professional which observations support full removal, which uncertainties require closer assessment, and whether a narrower treatment could reasonably reduce the concern. The written scope should connect the recommendation to the observed condition and its potential targets rather than to appearance alone. Do not probe cavities, pull loose material, climb for a better view, or stand beneath suspect limbs. If movement is active or an occupied area cannot be kept clear, treat access control as the first decision."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -807,12 +846,14 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/tree-removal-port-st-joe/",
@@ -820,14 +861,15 @@
     "service": "tree-removal",
     "enabledModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
-      "property-protection"
+      "targets-and-rigging"
     ],
     "serviceDecisionNotes": [],
-    "accessNotes": [],
-    "riskNotes": [],
+    "accessNotes": [
+      "The removal method should follow from target clearance, access, and the space available to control each section. Show the Port St. Joe estimator the full approach to the tree and identify surfaces, structures, utilities, vehicles, fences, and neighboring areas that must be protected. Ask where the working exclusion zone would begin, how personnel would maintain it, and where branches and trunk pieces could be staged before leaving the property. Have the proposal distinguish material that may be handled in an open area from sections that require controlled lowering. It should describe the intended control method without guaranteeing specialized equipment before field measurements are complete. Confirm who will manage movable obstacles and whether any approved access depends on another owner or shared area. Do not shift a fence, enter adjacent property, or place ropes and equipment near utilities yourself. Resolve debris routing and final cleanup before accepting the operational scope."
+    ],
+    "riskNotes": [
+      "Begin with a decision record that another person could understand without seeing the tree. For the Port St. Joe property, list visible changes, when they were noticed, and whether they involve a branch, one stem, the root area, or the full structure. Identify the people and property within reach, including neighboring space and required access routes. Photographs from normal safe positions can support the record, but they should not require standing under damaged wood or entering a suspected failure zone. Ask the evaluator what can be confirmed on site, what remains uncertain, and whether an alternative to full removal would adequately reduce the concern. The recommendation should connect observed defects to likely consequences, not to species, location, or assumed weather history. Do not perform a pull test, expose roots, climb, or cut sample material. Restrict the area first if active movement or suspended material changes the immediate risk."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -835,12 +877,14 @@
     "exclusions": [
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   },
   {
     "publicUrl": "/tree-removal-williston-highlands/",
@@ -848,14 +892,15 @@
     "service": "tree-removal",
     "enabledModules": [
       "risk-review",
-      "targets-and-rigging",
-      "permit-check",
-      "debris-and-cleanup",
-      "property-protection"
+      "targets-and-rigging"
     ],
     "serviceDecisionNotes": [],
-    "accessNotes": [],
-    "riskNotes": [],
+    "accessNotes": [
+      "Controlled dismantling should be matched to the real target layout and available work space. Walk the Williston Highlands site with the estimator and point out roofs, utilities, fences, paving, irrigation components, neighboring property, and any area that cannot receive falling or suspended material. Show the complete route from the public access point to the tree, including turns, overhead clearance, and surfaces that should not carry equipment. Ask which portions could be handled in an open zone, which would need to be cut into smaller sections, and how those sections would be controlled. The scope should identify the exclusion zone, equipment position, material staging area, and debris exit path without promising a specific machine before site review. Do not remove barriers, disconnect utilities, or grant cross-property access on an informal assumption. Clarify restoration responsibility if access requires temporary changes to an approved surface or feature."
+    ],
+    "riskNotes": [
+      "A useful risk review asks what has changed, what could be struck, and whether the concern can be managed without removing the entire tree. For Williston Highlands, record observable features such as a fresh crack, separated stems, root-plate movement, a newly altered lean, or major dead wood. Note when each item was first noticed without guessing at its cause. Next, identify occupied rooms, driveways, walkways, vehicles, service lines, fences, and neighboring areas within the apparent reach of the tree or affected section. Ask the evaluator to distinguish defects that can be monitored or treated from those that make retention unreasonable. The estimate should explain why removal is proposed and what site observations control urgency. Stay outside any suspected fall area while taking notes or photographs. Do not use species, weather assumptions, or a routine pruning objective as evidence that full removal is required."
+    ],
     "cleanupNotes": [],
     "permitNotes": [],
     "emergencyNotes": [],
@@ -864,11 +909,13 @@
       "wrong-service-language",
       "identical-paragraph-collision"
     ],
-    "sourceStatus": "repo-derived",
+    "sourceStatus": "manually-verified",
     "sourceNotes": [
-      "Module selection and exclusions are derived from reports/generic-route-pilot-30.csv.",
-      "No route content paragraph has been authored in Paket 3B."
+      "Human-reviewed in the fourth generic enrichment batch audit on 2026-06-21.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
-    "reviewedAt": null
+    "reviewedAt": "2026-06-21",
+    "sitemapEligible": false,
+    "contentUpdatedAt": "2026-06-21"
   }
 ]
