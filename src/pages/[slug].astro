@@ -381,7 +381,15 @@ const genericEnrichmentContext = hasCustomRichText
 const genericEnrichmentBlocks = genericEnrichmentContext
   ? getRenderableGenericRouteEnrichment(genericEnrichmentContext)
   : [];
-const pilotPolishByUrl = {
+type PilotPolish = {
+  localSummary: string;
+  localNote?: string;
+  treeProfileNote: string;
+  serviceStatusNote: string;
+  imageDescription: string;
+};
+
+const pilotPolishByUrl: Record<string, PilotPolish> = {
   "/tree-removal-miramar-beach/": {
     localSummary:
       "For a Miramar Beach property, confirm the requested service, observable tree condition, nearby targets, access path, and cleanup goals before scheduling.",
@@ -390,7 +398,6 @@ const pilotPolishByUrl = {
     serviceStatusNote:
       "Before scheduling tree removal in Miramar Beach, identify observable defects, nearby targets, access constraints, and property-protection priorities.",
     imageDescription: "Illustrative tree removal planning image.",
-    estimatorService: "removal",
   },
   "/stump-grinding-palatka/": {
     localSummary:
@@ -401,7 +408,6 @@ const pilotPolishByUrl = {
       "Before stump grinding in Palatka, confirm the access path, stump dimensions, nearby utilities, and intended finished surface.",
     imageDescription:
       "Illustrative stump grinding and surface restoration image.",
-    estimatorService: "stump",
   },
   "/emergency-service-east-naples/": {
     localSummary:
@@ -412,9 +418,43 @@ const pilotPolishByUrl = {
       "If conditions are actively changing or electrical equipment may be involved, keep people away, document from a safe distance, and contact the appropriate utility or emergency authority.",
     imageDescription:
       "Illustrative emergency tree hazard response image.",
-    estimatorService: "emergency",
   },
-} as const;
+  "/tree-removal-crawfordville/": {
+    localSummary:
+      "For a Crawfordville tree removal review, identify observable defects, nearby targets, access limits, and the area needed to control material before choosing a work plan.",
+    localNote:
+      "Removal planning should compare the tree's observable condition with what it could strike and whether a confined work area requires smaller sections to be lowered under control.",
+    treeProfileNote:
+      "Tree removal decisions should be based on observable condition, nearby targets, access, and the consequences of failure rather than unverified species or weather assumptions.",
+    serviceStatusNote:
+      "Before scheduling tree removal in Crawfordville, document visible changes, map nearby targets, and confirm the available work and access areas.",
+    imageDescription: "Illustrative tree removal planning image.",
+  },
+  "/stump-grinding-clewiston/": {
+    localSummary:
+      "For stump grinding in Clewiston, confirm the stump and root-flare dimensions, the narrowest machine access, protected surfaces, and the intended use of the finished area.",
+    localNote:
+      "Stump grinding scope should connect equipment access and grinding depth to chip handling, final grade, and whether the area will become lawn, mulch, planting space, or hardscape.",
+    treeProfileNote:
+      "Stump scope should be based on the visible stump, root flare, access path, nearby surfaces, and the homeowner's intended next use.",
+    serviceStatusNote:
+      "Before stump grinding in Clewiston, measure the full root flare and access path, mark protected features, and choose the intended finished surface.",
+    imageDescription:
+      "Illustrative stump grinding and surface restoration image.",
+  },
+  "/emergency-service-wauchula/": {
+    localSummary:
+      "For a Wauchula tree emergency, keep people outside the potential fall area, describe observable hazards from a safe location, and report possible utility involvement clearly.",
+    localNote:
+      "Emergency response begins with exclusion and accurate dispatch details; routine work can be scheduled normally when the condition is stable and no immediate threat is present.",
+    treeProfileNote:
+      "Emergency planning should be based on observable movement, suspended material, blocked access, occupied areas, and possible utility involvement.",
+    serviceStatusNote:
+      "If a Wauchula tree hazard is actively changing or may involve a utility line, stay back and contact the appropriate utility or emergency authority before tree work is considered.",
+    imageDescription:
+      "Illustrative emergency tree hazard response image.",
+  },
+};
 const pilotPublicUrl = genericEnrichmentContext?.publicUrl;
 const pilotPolish =
   genericEnrichmentBlocks.length > 0 &&
@@ -427,6 +467,14 @@ const localContextSummary =
 const selectedRichText =
   (hasCustomRichText ? richTextSource[citySlugClean] : null) ||
   genericCityTemplates[templateChoiceIndex];
+const selectedLocalNote = pilotPolish?.localNote || selectedRichText;
+
+const estimatorServiceByPrefix = {
+  "tree-removal": "removal",
+  "stump-grinding": "stump",
+  "emergency-service": "emergency",
+} as const;
+const defaultEstimatorService = estimatorServiceByPrefix[serviceInfo.prefix];
 
 const allImages = import.meta.glob(
   "../assets/gallery/fl/**/*.{jpeg,jpg,png,gif,webp}",
@@ -901,7 +949,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         {localContextSummary}
         <br /><br />
         <em>{serviceProfile.localNoteLabel}:</em>
-        {selectedRichText.split(".").slice(0, 2).join(".").trim()}.
+        {selectedLocalNote.split(".").slice(0, 2).join(".").trim()}.
       </p>
     </div>{
       genericEnrichmentBlocks.length > 0 && (
@@ -1210,7 +1258,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
 
     <PriceCalculator
       city={cityName}
-      defaultService={pilotPolish?.estimatorService}
+      defaultService={defaultEstimatorService}
     />
 
     <section style="margin-top: 5rem;">
@@ -1241,7 +1289,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
           <p
             style="font-size: 1.1rem; color: #4b5563; line-height: 1.8; margin-top: 1rem;"
           >
-            {selectedRichText}
+            {selectedLocalNote}
           </p>
         </div>
         {
