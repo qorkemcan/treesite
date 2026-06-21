@@ -8,7 +8,7 @@
     "Escambia, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.96cbd80f3a2a3694524aa51726f8fd9bb557b87d.001.1",
-  "updatedAt": "2026-06-20T19:10:00.000Z",
-  "expiresAt": "2026-06-21T07:15:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bdce7128456bb78db00f9c70944270a228fa94b6.001.1",
+  "updatedAt": "2026-06-21T03:18:00.000Z",
+  "expiresAt": "2026-06-21T14:15:00.000Z"
 }
