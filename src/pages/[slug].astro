@@ -381,6 +381,34 @@ const genericEnrichmentContext = hasCustomRichText
 const genericEnrichmentBlocks = genericEnrichmentContext
   ? getRenderableGenericRouteEnrichment(genericEnrichmentContext)
   : [];
+const hasVerifiedGenericBody =
+  genericEnrichmentContext?.route?.sourceStatus === "manually-verified" &&
+  genericEnrichmentBlocks.length === 2;
+
+const verifiedGenericCopyByService = {
+  "tree-removal": {
+    summary: `Tree removal planning in ${cityName} should begin with the tree's condition, the objects it could reach, crew access, and how material can leave the property. An on-site review is needed to decide whether full removal is appropriate and how the work area should be protected.`,
+    detail: `Use the on-site review to compare observable defects, nearby targets, access limits, and the available work area before choosing a removal method. The plan should also explain how cut material will be controlled and moved off the property.`,
+    cta: `Describe the tree, what it could reach, and the available access so the next step can be reviewed for your ${cityName} property.`,
+    profile: "Base tree removal decisions on observable condition, nearby targets, access, and the consequences of failure.",
+  },
+  "stump-grinding": {
+    summary: `Stump grinding planning in ${cityName} depends on stump width, visible root flare, machine access, nearby surfaces, the intended grinding depth, and how chips will be handled. Confirm the planned use of the area before defining the scope.`,
+    detail: `The finished surface should guide the grinding plan. Confirm access measurements, protected features, included roots, chip handling, and whether the area will become lawn, mulch, planting space, or hardscape.`,
+    cta: `Share the stump width, the narrowest access point, and how you plan to use the area after grinding at your ${cityName} property.`,
+    profile: "Base stump grinding scope on the visible stump, root flare, access path, nearby surfaces, and the intended next use.",
+  },
+  "emergency-service": {
+    summary: `Emergency tree service in ${cityName} begins with keeping people away from unstable trees, suspended limbs, and utility hazards. Share only observations made from a safe location so the condition can be prioritized without entering the danger area.`,
+    detail: `Separate an active safety threat from routine work by describing movement, suspended material, blocked access, occupied areas, and possible utility involvement from a safe location. Do not enter the potential fall area to collect more detail.`,
+    cta: `From a safe location, describe what is moving, blocked, hanging, or near a utility line at the ${cityName} property.`,
+    profile: "Base emergency decisions on observable movement, suspended material, blocked access, occupied areas, and possible utility involvement.",
+  },
+} as const;
+const verifiedGenericCopy = hasVerifiedGenericBody
+  ? verifiedGenericCopyByService[serviceInfo.prefix]
+  : null;
+
 type PilotPolish = {
   localSummary: string;
   localNote?: string;
@@ -467,7 +495,8 @@ const localContextSummary =
 const selectedRichText =
   (hasCustomRichText ? richTextSource[citySlugClean] : null) ||
   genericCityTemplates[templateChoiceIndex];
-const selectedLocalNote = pilotPolish?.localNote || selectedRichText;
+const selectedLocalNote =
+  verifiedGenericCopy?.detail || pilotPolish?.localNote || selectedRichText;
 
 const estimatorServiceByPrefix = {
   "tree-removal": "removal",
@@ -519,7 +548,9 @@ const titleTemplates = [
 ];
 const titleIndex =
   Math.abs(cityName.length + serviceInfo.name.length) % titleTemplates.length;
-const finalPageTitle = titleTemplates[titleIndex];
+const finalPageTitle = verifiedGenericCopy
+  ? `${serviceInfo.name} in ${cityName}, FL | Local Tree Service Dispatch`
+  : titleTemplates[titleIndex];
 const finalPageDescription = serviceProfile.description;
 
 const seed = cityName.length + countyName.length;
@@ -699,7 +730,16 @@ const serviceDecisionMatrix = {
     prepAnswer: `For emergency tree service in ${cityName}, share whether a structure, driveway, vehicle, fence, or utility area is affected; send clear photos from a safe distance; mention access limits; and explain whether the hazard changed after wind or rain.`,
   },
 };
-const serviceDecision = serviceDecisionMatrix[serviceInfo.prefix] || serviceDecisionMatrix["tree-removal"];
+const baseServiceDecision =
+  serviceDecisionMatrix[serviceInfo.prefix] || serviceDecisionMatrix["tree-removal"];
+const serviceDecision =
+  hasVerifiedGenericBody && serviceInfo.prefix === "tree-removal"
+    ? {
+        ...baseServiceDecision,
+        checkText:
+          "Look for lean direction, trunk cracks, root movement, canopy weight, nearby rooflines, utilities, and whether the concern can be reduced without full removal.",
+      }
+    : baseServiceDecision;
 const cityActionCards = [
   {
     label: "First check",
@@ -732,15 +772,22 @@ const primaryTreeMatch =
   Object.keys(speciesMap).find((key) => mainTree.includes(key)) ||
   "native Florida species";
 const treeRiskNote =
+  verifiedGenericCopy?.profile ||
   pilotPolish?.treeProfileNote ||
   speciesMap[primaryTreeMatch] ||
   `Managing ${mainTree} in ${cityName} requires decisions that reflect local growth patterns, storm exposure, and property layout.`;
+const treeProfileDisplay = hasVerifiedGenericBody
+  ? treeRiskNote
+  : `${mainTree} • ${treeRiskNote}`;
 const serviceStatusNote = pilotPolish?.serviceStatusNote || finalDynamicTip;
-const imageCaption =
-  pilotPolish?.imageDescription || serviceProfile.imageCaption;
-const imageAlt =
-  pilotPolish?.imageDescription ||
-  `${serviceInfo.name} project near ${landmark} in ${cityName} Florida - ${currentMonth} ${currentYear}`;
+const verifiedImageDescription = `Illustrative ${serviceInfo.name} planning image for ${cityName} homeowners.`;
+const imageCaption = hasVerifiedGenericBody
+  ? verifiedImageDescription
+  : pilotPolish?.imageDescription || serviceProfile.imageCaption;
+const imageAlt = hasVerifiedGenericBody
+  ? verifiedImageDescription
+  : pilotPolish?.imageDescription ||
+    `${serviceInfo.name} project near ${landmark} in ${cityName} Florida - ${currentMonth} ${currentYear}`;
 
 const landmarkContext = `Across ${cityName} and nearby ${countyName} County neighborhoods, local crews focus on safe clearance, controlled execution, and strong property protection for ${serviceProfile.urgencyLabel}.`;
 const serviceLineage = `Service coverage includes ${cityName} and extends to ${cityData.NearbyCities}, helping dispatch partners coordinate ${serviceProfile.urgencyLabel} without overpromising exact arrival times.`;
@@ -894,7 +941,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         {serviceProfile.ctaTitle}
       </h3>
       <p style="color: #6b7280; margin-bottom: 1.5rem; font-size: 1rem;">
-        {serviceProfile.ctaText}
+        {verifiedGenericCopy?.cta || serviceProfile.ctaText}
       </p>
       <a
         href={SITE_CONFIG.phoneHref}
@@ -943,7 +990,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
       <p
         style="color: #166534; font-size: 0.95rem; line-height: 1.6; font-weight: 600; margin: 0;"
       >
-        {serviceProfile.summaryText}
+        {verifiedGenericCopy?.summary || serviceProfile.summaryText}
         <br /><br />
         <em>Local context:</em>
         {localContextSummary}
@@ -1118,7 +1165,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
             <p
               style="font-size: 0.85rem; color: #92400e; font-weight: 600; margin: 5px 0 0;"
             >
-              {mainTree} • {treeRiskNote}
+              {treeProfileDisplay}
             </p>
           </div>
         </div>
@@ -1230,18 +1277,22 @@ const structuredFaqs = finalFaqs.map((faq) => ({
           {countyName} County
         </p>
       </div>
-      <div class="status-item-middle">
-        <p
-          style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
-        >
-          Local Landmark
-        </p>
-        <p
-          style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #ffffff;"
-        >
-          {landmark}
-        </p>
-      </div>
+      {
+        !hasVerifiedGenericBody && (
+          <div class="status-item-middle">
+            <p
+              style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
+            >
+              Local Landmark
+            </p>
+            <p
+              style="margin: 5px 0 0; font-weight: 900; font-size: 1.1rem; color: #ffffff;"
+            >
+              {landmark}
+            </p>
+          </div>
+        )
+      }
       <div style="text-align: center;">
         <p
           style="margin: 0; color: #95d5b2; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;"
