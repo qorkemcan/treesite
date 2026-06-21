@@ -5,10 +5,10 @@
   "title": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Escambia, FL"
+    "Okaloosa, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bdce7128456bb78db00f9c70944270a228fa94b6.001.1",
-  "updatedAt": "2026-06-21T03:18:00.000Z",
-  "expiresAt": "2026-06-21T14:15:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7b108a3400c74a1a478a6eaed22144de231159fd.001.1",
+  "updatedAt": "2026-06-21T15:29:00.000Z",
+  "expiresAt": "2026-06-22T03:30:00.000Z"
 }
