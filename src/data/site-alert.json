@@ -2,14 +2,13 @@
   "schemaVersion": 2,
   "enabled": true,
   "mode": "watch",
-  "title": "Saturated Soil Tree Risk Notice",
-  "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
+  "title": "Severe Weather Tree Safety Notice",
+  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
   "areas": [
-    "Escambia, FL",
-    "Santa Rosa, FL"
+    "Osceola, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b640b514df8f909d287c6f4b5f610d8823d32ad8.001.1",
-  "updatedAt": "2026-06-22T14:34:00.000Z",
-  "expiresAt": "2026-06-23T02:45:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ef74ed1eb481db3134030888e29c73ab4be14ad7.001.1",
+  "updatedAt": "2026-06-22T23:38:00.000Z",
+  "expiresAt": "2026-06-23T00:00:00.000Z"
 }
