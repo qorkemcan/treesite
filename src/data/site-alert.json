@@ -2,13 +2,13 @@
   "schemaVersion": 2,
   "enabled": true,
   "mode": "watch",
-  "title": "Severe Weather Tree Safety Notice",
-  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
+  "title": "Saturated Soil Tree Risk Notice",
+  "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Glades, FL"
+    "Okaloosa, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8ec5d075692eddb4f5bf91b74ba717aa42e2bafa.001.1",
-  "updatedAt": "2026-06-24T21:46:00.000Z",
-  "expiresAt": "2026-06-24T22:30:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4bb0a0503e828ca8fbce364a38bf46f55a114979.001.1",
+  "updatedAt": "2026-06-24T15:12:00.000Z",
+  "expiresAt": "2026-06-25T03:15:00.000Z"
 }
