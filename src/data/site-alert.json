@@ -5,11 +5,10 @@
   "title": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Walton, FL",
-    "Washington, FL"
+    "Okaloosa, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3ca06d60624ee5a2f0cdd2f0548544d6ecc16a90.001.1",
-  "updatedAt": "2026-06-23T15:30:00.000Z",
-  "expiresAt": "2026-06-24T03:00:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8600f67f794e9d22830ea5fa7f4eb86147e56c46.001.1",
+  "updatedAt": "2026-06-24T01:25:00.000Z",
+  "expiresAt": "2026-06-24T13:30:00.000Z"
 }
