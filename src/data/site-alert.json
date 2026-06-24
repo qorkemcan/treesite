@@ -5,11 +5,10 @@
   "title": "Severe Weather Tree Safety Notice",
   "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
   "areas": [
-    "Broward, FL",
-    "Miami-Dade, FL"
+    "Glades, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.013215a1c0c62f5b8bf501ebfae8d3a9e8c287d1.001.1",
-  "updatedAt": "2026-06-24T20:07:00.000Z",
-  "expiresAt": "2026-06-24T20:30:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8ec5d075692eddb4f5bf91b74ba717aa42e2bafa.001.1",
+  "updatedAt": "2026-06-24T21:46:00.000Z",
+  "expiresAt": "2026-06-24T22:30:00.000Z"
 }
