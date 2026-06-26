@@ -104,6 +104,12 @@ const findForbiddenKeys = (value, currentPath = "root") => {
 };
 
 const sourceStatuses = new Set(["repo-derived", "manually-verified", "unverified"]);
+const EXPECTED_ENRICHMENT_CONTEXTS = 35;
+const EXPECTED_PILOT_SERVICE_COUNTS = Object.freeze({
+  "tree-removal": 11,
+  "stump-grinding": 10,
+  "emergency-service": 14,
+});
 const regionTypes = new Set(["coastal", "inland", "metro", "rural", "mixed", null]);
 const stormExposures = new Set(["low", "moderate", "high", "unknown"]);
 const populationStatuses = new Set(["known", "unknown", "verified-zero", "invalid"]);
@@ -244,8 +250,14 @@ assert(records.length === 800, `expected 800 city rows, got ${records.length}`);
 assert(cityRowsByIdentity.size === 800, `expected 800 city identities, got ${cityRowsByIdentity.size}`);
 assert(routesByUrl.size === 2400, `expected 2400 route identities, got ${routesByUrl.size}`);
 assert(Object.keys(countyContexts).length === 67, `expected 67 county contexts, got ${Object.keys(countyContexts).length}`);
-assert(Object.keys(cityContexts).length === 30, `expected 30 city contexts, got ${Object.keys(cityContexts).length}`);
-assert(routeContexts.length === 30, `expected 30 route contexts, got ${routeContexts.length}`);
+assert(
+  Object.keys(cityContexts).length === EXPECTED_ENRICHMENT_CONTEXTS,
+  `expected ${EXPECTED_ENRICHMENT_CONTEXTS} city contexts, got ${Object.keys(cityContexts).length}`,
+);
+assert(
+  routeContexts.length === EXPECTED_ENRICHMENT_CONTEXTS,
+  `expected ${EXPECTED_ENRICHMENT_CONTEXTS} route contexts, got ${routeContexts.length}`,
+);
 
 for (const [key, context] of Object.entries(countyContexts)) {
   assertRequiredKeys(context, countyRequiredFields, `county ${key}`);
@@ -440,11 +452,20 @@ for (const pilot of pilotRoutes) {
   );
 }
 
-assert(pilotRoutes.length === 30, `expected 30 pilot routes, got ${pilotRoutes.length}`);
+assert(
+  pilotRoutes.length === EXPECTED_ENRICHMENT_CONTEXTS,
+  `expected ${EXPECTED_ENRICHMENT_CONTEXTS} pilot routes, got ${pilotRoutes.length}`,
+);
 assert(duplicateValues(pilotUrls).length === 0, "duplicate pilot URL found");
-assert(new Set(pilotIdentities).size === 30, `expected 30 pilot city identities, got ${new Set(pilotIdentities).size}`);
+assert(
+  new Set(pilotIdentities).size === EXPECTED_ENRICHMENT_CONTEXTS,
+  `expected ${EXPECTED_ENRICHMENT_CONTEXTS} pilot city identities, got ${new Set(pilotIdentities).size}`,
+);
 for (const service of SERVICE_PREFIXES) {
-  assert(pilotServiceCounts[service] === 10, `expected 10 ${service} pilot routes, got ${pilotServiceCounts[service]}`);
+  assert(
+    pilotServiceCounts[service] === EXPECTED_PILOT_SERVICE_COUNTS[service],
+    `expected ${EXPECTED_PILOT_SERVICE_COUNTS[service]} ${service} pilot routes, got ${pilotServiceCounts[service]}`,
+  );
 }
 
 const forbiddenFields = findForbiddenKeys({ countyContexts, cityContexts, routeContexts, pilotRoutes });

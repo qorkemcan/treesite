@@ -18,6 +18,24 @@
     "pilotStatus": "planned"
   },
   {
+    "publicUrl": "/emergency-service-anastasia/",
+    "city": "Anastasia",
+    "county": "St. Johns",
+    "service": "emergency-service",
+    "currentQualityScore": 57,
+    "opportunityScore": 59,
+    "targetQualityScore": 80,
+    "plannedModules": [
+      "active-hazard",
+      "temporary-safety"
+    ],
+    "mainProblem": [
+      "identical-paragraph-collision"
+    ],
+    "implementationRisk": "medium",
+    "pilotStatus": "planned"
+  },
+  {
     "publicUrl": "/emergency-service-araquey/",
     "city": "Araquey",
     "county": "St. Johns",
@@ -129,6 +147,24 @@
     "pilotStatus": "planned"
   },
   {
+    "publicUrl": "/emergency-service-callahan/",
+    "city": "Callahan",
+    "county": "Nassau",
+    "service": "emergency-service",
+    "currentQualityScore": 57,
+    "opportunityScore": 44,
+    "targetQualityScore": 80,
+    "plannedModules": [
+      "storm-access",
+      "documentation"
+    ],
+    "mainProblem": [
+      "identical-paragraph-collision"
+    ],
+    "implementationRisk": "medium",
+    "pilotStatus": "planned"
+  },
+  {
     "publicUrl": "/emergency-service-east-naples/",
     "city": "East Naples",
     "county": "Collier",
@@ -161,6 +197,42 @@
     ],
     "mainProblem": [
       "wrong-service-language",
+      "identical-paragraph-collision"
+    ],
+    "implementationRisk": "medium",
+    "pilotStatus": "planned"
+  },
+  {
+    "publicUrl": "/emergency-service-heilbronn/",
+    "city": "Heilbronn",
+    "county": "Bradford",
+    "service": "emergency-service",
+    "currentQualityScore": 61,
+    "opportunityScore": 40,
+    "targetQualityScore": 80,
+    "plannedModules": [
+      "active-hazard",
+      "storm-access"
+    ],
+    "mainProblem": [
+      "identical-paragraph-collision"
+    ],
+    "implementationRisk": "medium",
+    "pilotStatus": "planned"
+  },
+  {
+    "publicUrl": "/emergency-service-jerome/",
+    "city": "Jerome",
+    "county": "Collier",
+    "service": "emergency-service",
+    "currentQualityScore": 57,
+    "opportunityScore": 59,
+    "targetQualityScore": 80,
+    "plannedModules": [
+      "utility-risk",
+      "documentation"
+    ],
+    "mainProblem": [
       "identical-paragraph-collision"
     ],
     "implementationRisk": "medium",
@@ -445,6 +517,24 @@
       "targets-and-rigging",
       "permit-check",
       "debris-and-cleanup",
+      "property-protection"
+    ],
+    "mainProblem": [
+      "identical-paragraph-collision"
+    ],
+    "implementationRisk": "medium",
+    "pilotStatus": "planned"
+  },
+  {
+    "publicUrl": "/tree-removal-felda/",
+    "city": "Felda",
+    "county": "Hendry",
+    "service": "tree-removal",
+    "currentQualityScore": 53,
+    "opportunityScore": 40,
+    "targetQualityScore": 80,
+    "plannedModules": [
+      "risk-review",
       "property-protection"
     ],
     "mainProblem": [

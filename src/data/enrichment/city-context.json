@@ -77,6 +77,46 @@
     ],
     "reviewedAt": null
   },
+  "anastasia": {
+    "city": "Anastasia",
+    "county": "St. Johns",
+    "countySlug": "st-johns",
+    "cityRouteSlug": "anastasia",
+    "cityContentSlug": "anastasia",
+    "identityKey": "anastasia",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Red Maples",
+      "Southern Magnolias"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "HUGUENOT PARK"
+    ],
+    "nearbyAreas": [
+      "Araquey",
+      "Armstrong",
+      "Bakersville"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty.",
+      "Verified route copy does not use unverified species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
+    ],
+    "reviewedAt": null
+  },
   "angel-city": {
     "city": "Angel City",
     "county": "Brevard",
@@ -389,6 +429,46 @@
     ],
     "reviewedAt": null
   },
+  "callahan": {
+    "city": "Callahan",
+    "county": "Nassau",
+    "countySlug": "nassau",
+    "cityRouteSlug": "callahan",
+    "cityContentSlug": "callahan",
+    "identityKey": "callahan",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Live Oaks",
+      "Southern Magnolias",
+      "Longleaf Pines"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "HALFMOON PARK"
+    ],
+    "nearbyAreas": [
+      "Chester",
+      "Hedges",
+      "Hilliard"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty.",
+      "Verified route copy does not use unverified species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
+    ],
+    "reviewedAt": null
+  },
   "carrabelle": {
     "city": "Carrabelle",
     "county": "Franklin",
@@ -659,6 +739,126 @@
     "sourceNotes": [
       "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
       "Unverified local context fields are intentionally left unknown or empty."
+    ],
+    "reviewedAt": null
+  },
+  "felda": {
+    "city": "Felda",
+    "county": "Hendry",
+    "countySlug": "hendry",
+    "cityRouteSlug": "felda",
+    "cityContentSlug": "felda",
+    "identityKey": "felda",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Gumbo Limbo",
+      "Sea Grapes",
+      "Sabal Palms"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "SUGARLAND PARK"
+    ],
+    "nearbyAreas": [
+      "Keri",
+      "Sears",
+      "South Clewiston"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty.",
+      "Verified route copy does not use unverified species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
+    ],
+    "reviewedAt": null
+  },
+  "heilbronn": {
+    "city": "Heilbronn",
+    "county": "Bradford",
+    "countySlug": "bradford",
+    "cityRouteSlug": "heilbronn",
+    "cityContentSlug": "heilbronn",
+    "identityKey": "heilbronn",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Slash Pines",
+      "Longleaf Pines",
+      "Live Oaks"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "HAMPTON PARK"
+    ],
+    "nearbyAreas": [
+      "Lawtey",
+      "Sampson",
+      "Clayno"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty.",
+      "Verified route copy does not use unverified species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
+    ],
+    "reviewedAt": null
+  },
+  "jerome": {
+    "city": "Jerome",
+    "county": "Collier",
+    "countySlug": "collier",
+    "cityRouteSlug": "jerome",
+    "cityContentSlug": "jerome",
+    "identityKey": "jerome",
+    "population": null,
+    "populationStatus": "unknown",
+    "propertyContexts": [],
+    "accessConstraints": [],
+    "dominantTreeSpecies": [
+      "Sabal Palms",
+      "Royal Palms",
+      "Live Oaks"
+    ],
+    "soilContexts": [],
+    "stormContexts": [],
+    "coastalContext": "unknown",
+    "acreageContext": "unknown",
+    "hoaContext": "unknown",
+    "poolContext": "unknown",
+    "utilityContexts": [],
+    "landmarks": [
+      "MARCO BEACH"
+    ],
+    "nearbyAreas": [
+      "Lee Cypress",
+      "Golden Gate",
+      "Immokalee"
+    ],
+    "localNotes": [],
+    "sourceStatus": "repo-derived",
+    "sourceNotes": [
+      "Identity, population, tree species, landmark, and nearby areas are derived from src/data/cities.csv.",
+      "Unverified local context fields are intentionally left unknown or empty.",
+      "Verified route copy does not use unverified species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims."
     ],
     "reviewedAt": null
   },

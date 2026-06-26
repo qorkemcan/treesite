@@ -31,6 +31,37 @@
     "contentUpdatedAt": "2026-06-21"
   },
   {
+    "publicUrl": "/emergency-service-anastasia/",
+    "cityIdentityKey": "anastasia",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "temporary-safety"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [],
+    "riskNotes": [
+      "For an active tree hazard in Anastasia, first decide what area must stay empty while help is arranged. From a safe position, observe whether a trunk or limb is moving, suspended, split, resting on a structure, blocking access, or creating a changing failure path. Keep people, pets, and vehicles outside that zone and avoid standing under damaged material for a closer look. Dispatch needs the address, a safe callback number, what is occupied or blocked, and what can be seen without entering the hazard area. If the condition is stable and no immediate exposure exists, describe it as routine follow-up rather than an emergency request."
+    ],
+    "cleanupNotes": [
+      "Temporary safety steps should reduce exposure without attempting the tree work itself. Close doors, walkways, parking spaces, or yard sections that lead into the possible fall area, and choose an alternate route that does not pass beneath hanging wood. If material is resting on a roof, fence, vehicle, or other support, leave it undisturbed because movement can change the load. Share photos only from a protected location and explain which access point remains safe for responders. Do not climb, pull branches, use a ladder, attach ropes, or make relief cuts. If electrical equipment may be involved, increase distance and contact the appropriate utility or emergency authority."
+    ],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sitemapEligible": false,
+    "sourceStatus": "manually-verified",
+    "sourceNotes": [
+      "Human-reviewed in the fifth generic enrichment batch audit on 2026-06-26.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims.",
+      "Sitemap opt-in is intentionally disabled for this implementation step."
+    ],
+    "reviewedAt": "2026-06-26"
+  },
+  {
     "publicUrl": "/emergency-service-araquey/",
     "cityIdentityKey": "araquey",
     "service": "emergency-service",
@@ -208,6 +239,37 @@
     "reviewedAt": null
   },
   {
+    "publicUrl": "/emergency-service-callahan/",
+    "cityIdentityKey": "callahan",
+    "service": "emergency-service",
+    "enabledModules": [
+      "storm-access",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [
+      "Useful emergency documentation for a Callahan property is brief, factual, and collected from outside the danger area. Record when the condition was first noticed, whether it appears to be changing, which spaces are occupied or closed, and which entrance remains usable. Wide photos can help show the affected tree, nearby structure, blocked route, or suspended material, but no photo is worth crossing into the hazard area. Note any instructions from a utility, emergency authority, property manager, or insurer without predicting coverage, permit outcome, or response time. Keep estimates, invoices, and written recommendations together after the initial safety issue is controlled."
+    ],
+    "accessNotes": [
+      "A storm-access description should help responders reach the Callahan site without sending anyone through unstable material. Identify the normal entrance, any blocked driveway or walkway, the nearest safe stopping point, and whether occupants can leave by another route. From a protected location, describe fallen or hanging limbs, blocked access, limited turning space, and any possible utility concern visible along the approach. Ask dispatch what information is needed before barriers or debris are moved. Access planning should separate immediate hazard assessment from later cleanup logistics. Do not drive under suspended limbs, walk past a closed area for photographs, or clear branches by hand to create an opening."
+    ],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sitemapEligible": false,
+    "sourceStatus": "manually-verified",
+    "sourceNotes": [
+      "Human-reviewed in the fifth generic enrichment batch audit on 2026-06-26.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims.",
+      "Sitemap opt-in is intentionally disabled for this implementation step."
+    ],
+    "reviewedAt": "2026-06-26"
+  },
+  {
     "publicUrl": "/emergency-service-east-naples/",
     "cityIdentityKey": "east-naples",
     "service": "emergency-service",
@@ -270,6 +332,68 @@
     "reviewedAt": "2026-06-21",
     "sitemapEligible": true,
     "contentUpdatedAt": "2026-06-21"
+  },
+  {
+    "publicUrl": "/emergency-service-heilbronn/",
+    "cityIdentityKey": "heilbronn",
+    "service": "emergency-service",
+    "enabledModules": [
+      "active-hazard",
+      "storm-access"
+    ],
+    "serviceDecisionNotes": [],
+    "accessNotes": [
+      "Access notes for a Heilbronn emergency should tell dispatch how to approach without crossing the hazard. Identify the normal entrance, any blocked segment, the nearest safe parking or stopping point, and whether people can leave by another route. From a protected position, describe fallen material, hanging limbs, damaged supports, limited turnaround space, and any visible utility concern. Keep the route for responders clear and avoid moving branches by hand before the scene is assessed. Access planning should distinguish the path needed for immediate hazard review from the route that may later be used for equipment and debris handling. Do not walk around a barrier or drive under suspended material to inspect from the other side."
+    ],
+    "riskNotes": [
+      "Classify a Heilbronn tree emergency by current exposure, not by tree size alone. From a safe location, observe whether a trunk or limb is moving, split, suspended, leaning into an occupied area, or blocking essential access. Keep people, vehicles, and pets away from the possible fall path while the condition is being reported. Dispatch should receive the address, callback number, what is occupied or blocked, whether the condition is changing, and which approach remains usable. Do not shake branches, climb, cut loaded wood, or step beneath damaged material to get a better view. If utility equipment may be involved, increase distance and contact the appropriate utility or emergency authority first."
+    ],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sitemapEligible": false,
+    "sourceStatus": "manually-verified",
+    "sourceNotes": [
+      "Human-reviewed in the fifth generic enrichment batch audit on 2026-06-26.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims.",
+      "Sitemap opt-in is intentionally disabled for this implementation step."
+    ],
+    "reviewedAt": "2026-06-26"
+  },
+  {
+    "publicUrl": "/emergency-service-jerome/",
+    "cityIdentityKey": "jerome",
+    "service": "emergency-service",
+    "enabledModules": [
+      "utility-risk",
+      "documentation"
+    ],
+    "serviceDecisionNotes": [
+      "For a Jerome emergency request, documentation should support safe coordination rather than delay a safety call. From outside the exclusion area, take a few wide photos that show the affected tree or limb in relation to the blocked route, occupied structure, vehicle, fence, or other target. Write down the observation time, whether the condition appears to be changing, which areas are closed, and which access point remains safe. Record contacts with utilities, emergency authorities, property representatives, or an insurer, but avoid predicting coverage, response time, or permit requirements. Use neutral descriptions of visible conditions instead of assigning an unconfirmed cause."
+    ],
+    "accessNotes": [],
+    "riskNotes": [],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [
+      "Possible utility involvement changes the first step at a Jerome property. Keep distance from any tree, limb, fence, vehicle, tool, or standing water that could be connected to electrical equipment. Do not assume a quiet line is safe, and do not touch or move branches near a line. Contact the appropriate utility or emergency authority when a line is down, pulled, sparking, or creating an immediate public-safety risk; a tree-service request does not replace that call. From a safe location, report the address, what appears to be involved, blocked access, occupancy, and any instructions already received. Do not cut, drag, or reposition material around the utility area."
+    ],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sitemapEligible": false,
+    "sourceStatus": "manually-verified",
+    "sourceNotes": [
+      "Human-reviewed in the fifth generic enrichment batch audit on 2026-06-26.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims.",
+      "Sitemap opt-in is intentionally disabled for this implementation step."
+    ],
+    "reviewedAt": "2026-06-26"
   },
   {
     "publicUrl": "/emergency-service-wauchula/",
@@ -728,6 +852,37 @@
       "No route content paragraph has been authored in Paket 3B."
     ],
     "reviewedAt": null
+  },
+  {
+    "publicUrl": "/tree-removal-felda/",
+    "cityIdentityKey": "felda",
+    "service": "tree-removal",
+    "enabledModules": [
+      "risk-review",
+      "property-protection"
+    ],
+    "serviceDecisionNotes": [
+      "Property protection for a Felda tree removal should be discussed before equipment, lowering lines, or debris staging are chosen. Identify roofs, fences, gates, irrigation controls, parked vehicles, soft ground, and any route that must stay open while work is underway. Ask how limbs and trunk sections would be controlled, where material would be placed temporarily, and which surfaces may need mats or hand-carry methods. The scope should explain cleanup expectations and what the homeowner needs to move before work begins. Do not assume a clear-looking yard is a safe drop zone, and do not rely on unverified species, landmark, soil, or access claims when comparing proposals."
+    ],
+    "accessNotes": [],
+    "riskNotes": [
+      "A tree removal decision in Felda should start with what can be observed from safe, ordinary use areas. Note whether the tree has a changing lean, visible cracks, large dead sections, root movement, recent limb failure, or contact with a structure or utility area. Then list what could be hit if the tree or a major limb moved: people, buildings, vehicles, fences, driveways, or neighboring property. Ask the estimator to connect any removal recommendation to those observations and targets. If only a limited branch issue is visible, ask whether a narrower treatment is reasonable. Do not probe cavities, pull loose limbs, climb, or stand beneath suspect material to collect more detail."
+    ],
+    "cleanupNotes": [],
+    "permitNotes": [],
+    "emergencyNotes": [],
+    "stumpNotes": [],
+    "exclusions": [
+      "identical-paragraph-collision"
+    ],
+    "sitemapEligible": false,
+    "sourceStatus": "manually-verified",
+    "sourceNotes": [
+      "Human-reviewed in the fifth generic enrichment batch audit on 2026-06-26.",
+      "The approved copy uses only city, county, service, and route identity as local facts; it makes no species, landmark, soil, coastal, storm-frequency, permit, insurance, project-experience, or response-time claims.",
+      "Sitemap opt-in is intentionally disabled for this implementation step."
+    ],
+    "reviewedAt": "2026-06-26"
   },
   {
     "publicUrl": "/tree-removal-miramar-beach/",
