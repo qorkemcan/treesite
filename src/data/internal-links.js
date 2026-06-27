@@ -32,6 +32,72 @@ const priorityCities = [
   { city: "Miramar", county: "Broward", slug: "miramar" },
 ];
 
+export const protectedCoreMoneyUrls = [
+  "/tree-removal-dune-allen-beach/",
+  "/tree-removal-fort-lauderdale/",
+  "/tree-removal-masaryktown/",
+  "/stump-grinding-dune-allen-beach/",
+  "/stump-grinding-fort-lauderdale/",
+  "/tree-removal-deland/",
+  "/tree-removal-glen-saint-mary/",
+  "/tree-removal-macclenny/",
+  "/emergency-service-deland/",
+  "/emergency-service-glen-saint-mary/",
+  "/emergency-service-macclenny/",
+  "/emergency-service-masaryktown/",
+  "/stump-grinding-deland/",
+  "/stump-grinding-glen-saint-mary/",
+  "/stump-grinding-macclenny/",
+  "/stump-grinding-masaryktown/",
+  "/emergency-service-lake-city/",
+  "/stump-grinding-cooper-city/",
+  "/stump-grinding-destin/",
+  "/emergency-service-dune-allen-beach/",
+  "/emergency-service-lutz/",
+  "/stump-grinding-homosassa/",
+  "/stump-grinding-miramar/",
+  "/tree-removal-tallahassee/",
+];
+
+export const phaseOneExpansionCandidates = [
+  { city: "Jacksonville", county: "Duval", slug: "jacksonville", servicePrefix: "tree-removal" },
+  { city: "Miami", county: "Miami-Dade", slug: "miami", servicePrefix: "tree-removal" },
+  { city: "Tampa", county: "Hillsborough", slug: "tampa", servicePrefix: "tree-removal" },
+  { city: "Orlando", county: "Orange", slug: "orlando", servicePrefix: "tree-removal" },
+  { city: "Cape Coral", county: "Lee", slug: "cape-coral", servicePrefix: "tree-removal" },
+  { city: "Hollywood", county: "Broward", slug: "hollywood", servicePrefix: "tree-removal" },
+  { city: "Lakeland", county: "Polk", slug: "lakeland", servicePrefix: "tree-removal" },
+  { city: "Bradenton", county: "Manatee", slug: "bradenton", servicePrefix: "tree-removal" },
+  { city: "Ocala", county: "Marion", slug: "ocala", servicePrefix: "tree-removal" },
+  { city: "Stuart", county: "Martin", slug: "stuart", servicePrefix: "tree-removal" },
+  { city: "Vero Beach", county: "Indian River", slug: "vero-beach", servicePrefix: "tree-removal" },
+  { city: "North Fort Myers", county: "Lee", slug: "north-fort-myers", servicePrefix: "tree-removal" },
+  { city: "Gainesville", county: "Alachua", slug: "gainesville", servicePrefix: "stump-grinding" },
+  { city: "Clearwater", county: "Pinellas", slug: "clearwater", servicePrefix: "stump-grinding" },
+  { city: "Fort Myers", county: "Lee", slug: "fort-myers", servicePrefix: "stump-grinding" },
+  { city: "Pensacola", county: "Escambia", slug: "pensacola", servicePrefix: "stump-grinding" },
+  { city: "Clermont", county: "Lake", slug: "clermont", servicePrefix: "stump-grinding" },
+  { city: "Panama City", county: "Bay", slug: "panama-city", servicePrefix: "stump-grinding" },
+  { city: "Leesburg", county: "Lake", slug: "leesburg", servicePrefix: "stump-grinding" },
+  { city: "Naples", county: "Collier", slug: "naples", servicePrefix: "stump-grinding" },
+  { city: "Brooksville", county: "Hernando", slug: "brooksville", servicePrefix: "stump-grinding" },
+  { city: "St. Petersburg", county: "Pinellas", slug: "st-petersburg", servicePrefix: "stump-grinding" },
+  { city: "Hialeah", county: "Miami-Dade", slug: "hialeah", servicePrefix: "stump-grinding" },
+  { city: "Daytona Beach", county: "Volusia", slug: "daytona-beach", servicePrefix: "stump-grinding" },
+  { city: "Port St. Lucie", county: "St. Lucie", slug: "port-st-lucie", servicePrefix: "emergency-service" },
+  { city: "Spring Hill", county: "Hernando", slug: "spring-hill", servicePrefix: "emergency-service" },
+  { city: "Boca Raton", county: "Palm Beach", slug: "boca-raton", servicePrefix: "emergency-service" },
+  { city: "Deltona", county: "Volusia", slug: "deltona", servicePrefix: "emergency-service" },
+  { city: "Kissimmee", county: "Osceola", slug: "kissimmee", servicePrefix: "emergency-service" },
+  { city: "St. Cloud", county: "Osceola", slug: "st-cloud", servicePrefix: "emergency-service" },
+  { city: "Sarasota", county: "Sarasota", slug: "sarasota", servicePrefix: "emergency-service" },
+  { city: "Clearwater", county: "Pinellas", slug: "clearwater", servicePrefix: "emergency-service" },
+  { city: "Fort Myers", county: "Lee", slug: "fort-myers", servicePrefix: "emergency-service" },
+  { city: "Panama City", county: "Bay", slug: "panama-city", servicePrefix: "emergency-service" },
+  { city: "Naples", county: "Collier", slug: "naples", servicePrefix: "emergency-service" },
+  { city: "Daytona Beach", county: "Volusia", slug: "daytona-beach", servicePrefix: "emergency-service" },
+];
+
 const localBlogGuides = [
   {
     citySlug: "deland",
@@ -299,6 +365,32 @@ const buildServiceTarget = (city, servicePrefix, reason = "Priority local servic
   reason,
 });
 
+const stableIndex = (value = "", length = 1) => {
+  let hash = 0;
+  for (const char of String(value)) {
+    hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+  }
+  return length > 0 ? hash % length : 0;
+};
+
+const getPhaseOneExpansionLink = (post, servicePrefix, existingLinks) => {
+  const candidates = phaseOneExpansionCandidates.filter((candidate) => candidate.servicePrefix === servicePrefix);
+  if (candidates.length === 0) return null;
+
+  const seed = `${post.slug || ""}:${post.title || ""}:${servicePrefix}`;
+  const start = stableIndex(seed, candidates.length);
+
+  for (let offset = 0; offset < candidates.length; offset += 1) {
+    const candidate = candidates[(start + offset) % candidates.length];
+    const link = buildServiceTarget(candidate, candidate.servicePrefix, "Related local service page");
+    if (!existingLinks.some((existing) => existing.href === link.href)) {
+      return link;
+    }
+  }
+
+  return null;
+};
+
 export const getBlogMoneyLinks = (post = {}) => {
   const servicePrefix = inferServiceIntent(post);
   const text = `${post.slug || ""} ${post.title || ""}`.toLowerCase();
@@ -321,10 +413,12 @@ export const getBlogMoneyLinks = (post = {}) => {
 
   const secondaryLinks = priorityCities
     .filter((city) => !primaryLinks.some((link) => link.href.includes(`-${city.slug}/`)))
-    .slice(0, 2)
+    .slice(0, 1)
     .map((city) => buildServiceTarget(city, secondaryPrefix, "Related high-intent service page"));
 
-  return [...primaryLinks, ...secondaryLinks].slice(0, 6);
+  const expansionLink = getPhaseOneExpansionLink(post, servicePrefix, [...primaryLinks, ...secondaryLinks]);
+
+  return [...primaryLinks, ...secondaryLinks, expansionLink].filter(Boolean).slice(0, 6);
 };
 
 export const getServiceRelatedBlogLinks = ({ citySlug = "", servicePrefix = "tree-removal" } = {}) => {
