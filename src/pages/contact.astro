@@ -5,33 +5,119 @@ import { SITE_CONFIG } from "../config.js";
 ---
 
 <MainLayout
-  title="Contact Us | ProTreeTrim™ Florida Dispatch"
-  description="Contact ProTreeTrim™ for service coordination, free estimates, or partnership opportunities across Florida."
+  title="Contact Florida Tree Service Dispatch"
+  description="Request tree service dispatch help in Florida, ask a tree concern question, or discuss storm damage, removal, stump grinding, permits, and callback timing."
 >
-  <!-- [Header kısmı aynı kaldı] -->
-  <header style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 5rem 1.5rem; text-align: center;">
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        name: "Contact Florida Tree Service Dispatch",
+        description:
+          "Request Florida tree service dispatch help, ask questions, or discuss tree concerns with ProTreeTrim.",
+        url: `${SITE_CONFIG.siteUrl}/contact/`,
+        mainEntity: {
+          "@type": "Organization",
+          name: SITE_CONFIG.brandName,
+          telephone: SITE_CONFIG.phoneHref.replace("tel:", ""),
+          email: SITE_CONFIG.email,
+          areaServed: {
+            "@type": "State",
+            name: "Florida",
+          },
+        },
+      })}
+    />
+  </Fragment>
+
+  <header class="contact-hero">
     <div class="container">
-      <h1 style="font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; font-weight: 900;">Get In Touch</h1>
-      <p style="font-size: 1.2rem; color: #95d5b2; margin-top: 1rem;">Professional Tree Care Coordination Across Florida</p>
+      <p class="contact-eyebrow">Florida dispatch and estimate coordination</p>
+      <h1>Discuss Your Tree Concern With Our Dispatch Team</h1>
+      <p>
+        Request help, ask a question, or share details about a tree concern. We
+        review the information and help route eligible requests toward an
+        appropriate local provider when applicable.
+      </p>
+      <div class="hero-actions" aria-label="Contact options">
+        <a href={SITE_CONFIG.phoneHref}>Speak With Our Dispatch Team</a>
+        <a href="#request-form">Request Local Assistance</a>
+      </div>
     </div>
   </header>
 
-  <main class="container" style="max-width: 1100px; padding: 4rem 1.5rem 12rem;">
-    <!-- [Badges kısmı aynı kaldı] -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 5rem;">
+  <main class="container contact-main">
+    <section class="contact-methods" aria-label="Contact options">
+        <h2 class="sr-only">Contact options</h2>
         <div style="background: #fff7ed; border: 2px solid #ea580c; padding: 2.5rem; border-radius: 24px; text-align: center;">
           <div style="font-size: 2.5rem; margin-bottom: 15px;">📞</div>
           <h3 style="color: #9a3412; margin: 0; font-size: 1.5rem; font-weight: 800;">24/7 Dispatch</h3>
-          <p style="color: #7c2d12; font-size: 0.95rem; margin-bottom: 1.5rem;">For estimates and storm emergencies.</p>
-          <a href={SITE_CONFIG.phoneHref} style="background: #ea580c; color: white !important; padding: 12px 24px; text-decoration: none; border-radius: 12px; font-weight: 900; font-size: 1.2rem; display: block;">{SITE_CONFIG.phone}</a>
+          <p style="color: #7c2d12; font-size: 0.95rem; margin-bottom: 1.5rem;">For urgent tree concerns, storm damage questions, and estimate coordination.</p>
+          <a href={SITE_CONFIG.phoneHref} aria-label={`Speak with ProTreeTrim dispatch at ${SITE_CONFIG.phone}`} style="background: #ea580c; color: white !important; padding: 12px 24px; text-decoration: none; border-radius: 12px; font-weight: 900; font-size: 1.2rem; display: block;">{SITE_CONFIG.phone}</a>
         </div>
         <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 24px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.02);">
           <div style="font-size: 2.5rem; margin-bottom: 15px;">📧</div>
           <h3 style="color: #1b4332; margin: 0; font-size: 1.5rem; font-weight: 800;">Email Support</h3>
-          <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1.5rem;">For business and partnership inquiries.</p>
+          <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1.5rem;">For non-urgent questions, business inquiries, and partnership conversations.</p>
           <a href={`mailto:${SITE_CONFIG.email}`} style="color: #ea580c; font-weight: 800; text-decoration: none; font-size: 1.1rem;">{SITE_CONFIG.email}</a>
         </div>
-    </div>
+    </section>
+
+    <section class="next-steps" aria-labelledby="next-steps-title">
+      <div class="section-intro">
+        <p>What happens next</p>
+        <h2 id="next-steps-title">A simple dispatch review process</h2>
+      </div>
+      <ol>
+        <li>
+          <span>Step 1</span>
+          <strong>Submit a request or call.</strong>
+          <p>Share the city, service need, and what is happening on the property.</p>
+        </li>
+        <li>
+          <span>Step 2</span>
+          <strong>Your information is reviewed.</strong>
+          <p>Dispatch checks the request details, timing, and service category.</p>
+        </li>
+        <li>
+          <span>Step 3</span>
+          <strong>A local provider may be matched.</strong>
+          <p>When applicable, the request is routed toward an appropriate local provider.</p>
+        </li>
+        <li>
+          <span>Step 4</span>
+          <strong>The provider contacts you.</strong>
+          <p>You can discuss availability, scope, photos, access, and any next steps.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="trust-reasons" aria-labelledby="trust-reasons-title">
+      <div class="section-intro">
+        <p>Why homeowners contact us</p>
+        <h2 id="trust-reasons-title">Helpful routing for common tree concerns</h2>
+      </div>
+      <div class="reason-grid">
+        <article>
+          <strong>Storm damage questions</strong>
+          <span>Leaning trees, broken limbs, roof contact, blocked access, and cleanup timing.</span>
+        </article>
+        <article>
+          <strong>Tree removal guidance</strong>
+          <span>Dead, hazardous, crowded, or poorly located trees that need review.</span>
+        </article>
+        <article>
+          <strong>Palm and pruning issues</strong>
+          <span>Overgrown palms, hanging fronds, canopy clearance, and seasonal trimming questions.</span>
+        </article>
+        <article>
+          <strong>Permit and documentation concerns</strong>
+          <span>HOA notes, insurance photos, city questions, and property-specific constraints.</span>
+        </article>
+      </div>
+    </section>
 
     <section class="partnership-bridge" aria-label="Partnership opportunities">
       <div>
@@ -41,11 +127,15 @@ import { SITE_CONFIG } from "../config.js";
       <a href="/partnerships/">Explore Partnerships →</a>
     </section>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: start;">
-      <div style="background: white; padding: 2.5rem; border-radius: 24px; border: 1px solid #eee; box-shadow: 0 15px 35px rgba(0,0,0,0.05);">
-        <h2 style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0; margin-bottom: 1.5rem;">Request a Quote</h2>
+    <div class="request-layout">
+      <section id="request-form" class="form-panel" aria-labelledby="request-form-title">
+        <h2 id="request-form-title">Request Local Assistance</h2>
+        <p class="privacy-note">
+          Your information is used only to handle this request. There is no
+          obligation, and ProTreeTrim does not use this form for spam outreach.
+        </p>
 
-        <form action="/api/contact" method="POST" aria-label="Request a tree service quote" style="display: flex; flex-direction: column; gap: 15px;">
+        <form class="contact-form" action="/api/contact" method="POST" aria-label="Request local tree service assistance" style="display: flex; flex-direction: column; gap: 15px;">
           <!-- TUZAK -->
           <div style="display:none;" aria-hidden="true"><input type="text" name="fax_number" tabindex="-1" autocomplete="off" /></div>
 
@@ -85,22 +175,223 @@ import { SITE_CONFIG } from "../config.js";
 
           <div>
             <label for="contact-message" style="display: block; font-size: 0.85rem; font-weight: 700; color: #4b5563; margin-bottom: 5px;">Message</label>
-            <textarea id="contact-message" name="message" rows="4" placeholder="Tell us about your project..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; resize: vertical;"></textarea>
+            <textarea id="contact-message" name="message" rows="4" placeholder="Tell us what happened, where the tree is located, and when you prefer a callback." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; resize: vertical;"></textarea>
           </div>
-          <button type="submit" aria-label="Send tree service request" style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;">SEND REQUEST</button>
+          <button type="submit" aria-label="Request local tree service assistance" style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;">Request Local Assistance</button>
         </form>
-      </div>
-      <!-- [Harita kısmı aynı kaldı] -->
-      <div>
+      </section>
+
+      <aside class="contact-prep" aria-labelledby="prep-title">
+        <h2 id="prep-title">Before You Contact Us</h2>
+        <p>These details help dispatch understand the situation faster.</p>
+        <ul>
+          <li>Property address or nearest cross street</li>
+          <li>Tree location on the property</li>
+          <li>Whether storm damage is involved</li>
+          <li>Photos, if available and safe to take</li>
+          <li>HOA or permit concerns, if applicable</li>
+          <li>Preferred callback time</li>
+        </ul>
         <h2 style="color: #1b4332; font-size: 1.8rem; font-weight: 800; margin-top: 0;">Statewide Coverage</h2>
-        <p style="color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">ProTreeTrim™ manages a distributed network of certified experts across all <strong>67 Florida counties</strong>.</p>
+        <p style="color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">ProTreeTrim™ coordinates dispatch requests across all <strong>67 Florida counties</strong> through a local provider network.</p>
         <div style="overflow: hidden; border-radius: 24px; border: 1px solid #e2e8f0; line-height: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"><iframe title="Map showing Florida statewide coverage" width="100%" height="450" style="border:0" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=Florida&t=&z=6&ie=UTF8&iwloc=&output=embed"></iframe></div>
-      </div>
+      </aside>
     </div>
   </main>
 </MainLayout>
 
 <style>
+  .contact-hero {
+    background: linear-gradient(135deg, #1b4332 0%, #081c15 100%);
+    color: white;
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(2.15rem, 7vw, 3.65rem);
+    margin: 0 auto;
+    font-weight: 900;
+    max-width: 880px;
+    line-height: 1.05;
+  }
+
+  .contact-hero p:not(.contact-eyebrow) {
+    font-size: 1.13rem;
+    color: #c7f9d4;
+    margin: 1rem auto 0;
+    max-width: 760px;
+    line-height: 1.7;
+  }
+
+  .contact-eyebrow {
+    color: #ffb703;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.9rem;
+    text-transform: uppercase;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .hero-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.15rem;
+    padding: 0 1.2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 900;
+  }
+
+  .hero-actions a:first-child {
+    background: #ea580c;
+    color: white;
+  }
+
+  .hero-actions a:last-child {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: white;
+  }
+
+  .contact-main {
+    max-width: 1100px;
+    padding: 4rem 1.5rem 12rem;
+  }
+
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 4rem;
+  }
+
+  .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .section-intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 1.8rem;
+  }
+
+  .section-intro p {
+    color: #c2410c;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.55rem;
+    text-transform: uppercase;
+  }
+
+  .section-intro h2 {
+    color: #1b4332;
+    font-size: clamp(1.65rem, 4vw, 2.25rem);
+    margin: 0;
+  }
+
+  .next-steps {
+    margin-bottom: 4rem;
+  }
+
+  .next-steps ol {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: dispatch-step;
+  }
+
+  .next-steps li {
+    position: relative;
+    background: white;
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    padding: 1.3rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+  }
+
+  .next-steps li:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-weight: 900;
+  }
+
+  .next-steps span {
+    display: inline-block;
+    color: #c2410c;
+    font-size: 0.72rem;
+    font-weight: 900;
+    margin-bottom: 0.65rem;
+    text-transform: uppercase;
+  }
+
+  .next-steps strong {
+    display: block;
+    color: #123729;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .next-steps p {
+    color: #526253;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin: 0.55rem 0 0;
+  }
+
+  .trust-reasons {
+    margin-bottom: 4rem;
+  }
+
+  .reason-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .reason-grid article {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 1.25rem;
+  }
+
+  .reason-grid strong {
+    display: block;
+    color: #1b4332;
+    margin-bottom: 0.45rem;
+  }
+
+  .reason-grid span {
+    color: #526253;
+    line-height: 1.55;
+    font-size: 0.95rem;
+  }
+
   .partnership-bridge {
     display: flex;
     justify-content: space-between;
@@ -144,11 +435,121 @@ import { SITE_CONFIG } from "../config.js";
     box-shadow: 0 14px 28px rgba(242, 90, 6, 0.18);
   }
 
+  .request-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 60px;
+    align-items: start;
+  }
+
+  .form-panel {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid #eee;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  }
+
+  .form-panel h2,
+  .contact-prep h2 {
+    color: #1b4332;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .privacy-note {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 14px;
+    color: #166534;
+    line-height: 1.6;
+    margin: 0 0 1.35rem;
+    padding: 1rem;
+  }
+
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus,
+  .contact-form button:focus,
+  .hero-actions a:focus,
+  .partnership-bridge a:focus {
+    outline: 3px solid #ffb703 !important;
+    outline-offset: 3px;
+    border-color: #1b4332 !important;
+  }
+
+  .contact-form button:hover,
+  .hero-actions a:hover,
+  .partnership-bridge a:hover {
+    transform: translateY(-1px);
+  }
+
+  .contact-prep {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  }
+
+  .contact-prep > p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-top: 0;
+  }
+
+  .contact-prep ul {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contact-prep li {
+    color: #334155;
+    line-height: 1.55;
+    padding-left: 1.7rem;
+    position: relative;
+  }
+
+  .contact-prep li::before {
+    content: "✓";
+    color: #16a34a;
+    font-weight: 900;
+    left: 0;
+    position: absolute;
+  }
+
   @media (max-width: 760px) {
     .partnership-bridge {
       flex-direction: column;
       align-items: flex-start;
       margin-top: 0;
+    }
+
+    .next-steps ol {
+      grid-template-columns: 1fr;
+    }
+
+    .next-steps li:not(:last-child)::after {
+      content: "↓";
+      left: 50%;
+      right: auto;
+      top: auto;
+      bottom: -1.1rem;
+      transform: translateX(-50%);
+    }
+
+    .request-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-form > div[style*="grid-template-columns"] {
+      grid-template-columns: 1fr !important;
     }
   }
 </style>
