@@ -43,6 +43,38 @@ const toTitleCase = (str) => {
     .join(" ");
 };
 
+const searchEntries = [
+  ...records
+    .filter((city) => city.City && city.County)
+    .filter((city, index, list) => {
+      const key = `${city.City.trim().toLowerCase()}|${city.County.trim().toLowerCase()}`;
+      return (
+        list.findIndex(
+          (item) =>
+            `${item.City.trim().toLowerCase()}|${item.County.trim().toLowerCase()}` === key,
+        ) === index
+      );
+    })
+    .map((city) => ({
+      type: "City",
+      matchName: toTitleCase(city.City),
+      label: `${toTitleCase(city.City)}, ${toTitleCase(city.County)} County`,
+      title: `${toTitleCase(city.City)} Tree Service`,
+      subtitle: `${toTitleCase(city.County)} County service area`,
+      href: cityServicePath("tree-removal", city.City, city.County),
+      searchText: `${city.City} ${city.County} county tree service`.toLowerCase(),
+    })),
+  ...counties.map((county) => ({
+    type: "County",
+    matchName: `${toTitleCase(county)} County`,
+    label: `${toTitleCase(county)} County`,
+    title: `${toTitleCase(county)} County Guide`,
+    subtitle: "Browse county service areas",
+    href: `/county/${makeCountySlug(county)}/`,
+    searchText: `${county} county`.toLowerCase(),
+  })),
+].sort((a, b) => a.label.localeCompare(b.label));
+
 const featuredCities = [
   { name: "Miami", slug: "miami", desc: "Miami-Dade" },
   { name: "Orlando", slug: "orlando", desc: "Central Florida" },
@@ -215,7 +247,21 @@ const situations = [
               id="citySearch"
               aria-label="Search Florida cities and counties"
               placeholder="Search city or county"
+              autocomplete="off"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="searchResults"
+              aria-activedescendant=""
             />
+          </div>
+          <div
+            id="searchResults"
+            class="search-results"
+            role="listbox"
+            aria-label="Search suggestions"
+            hidden
+          >
           </div>
         </div>
       </div>
@@ -496,6 +542,7 @@ const situations = [
     border-radius: var(--radius-panel);
     box-shadow: var(--shadow-panel);
     padding: 2rem;
+    position: relative;
   }
 
   .search-panel h2 {
@@ -517,6 +564,7 @@ const situations = [
     display: flex;
     gap: 0.75rem;
     padding: 0.85rem 1rem;
+    position: relative;
   }
 
   .search-box input {
@@ -526,6 +574,72 @@ const situations = [
     font-weight: 700;
     outline: none;
     width: 100%;
+  }
+
+  .search-results {
+    background: white;
+    border: var(--border-soft);
+    border-radius: 16px;
+    box-shadow: var(--shadow-panel);
+    display: grid;
+    gap: 0.35rem;
+    left: 2rem;
+    margin-top: 0.65rem;
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 0.55rem;
+    position: absolute;
+    right: 2rem;
+    z-index: 20;
+  }
+
+  .search-results[hidden] {
+    display: none;
+  }
+
+  .search-result {
+    background: white;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: inherit;
+    cursor: pointer;
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.85rem 0.95rem;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .search-result:hover,
+  .search-result.is-active {
+    background: #fff7ed;
+    border-color: #fed7aa;
+  }
+
+  .search-result strong {
+    color: #1b4332;
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  .search-result span {
+    color: #64748b;
+    font-size: 0.82rem;
+    font-weight: 750;
+    line-height: 1.35;
+  }
+
+  .search-result small {
+    color: #c2410c;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .search-no-match {
+    color: #526253;
+    line-height: 1.55;
+    padding: 0.85rem 0.95rem;
   }
 
   .page-flow {
@@ -885,12 +999,21 @@ const situations = [
     .soft-cta {
       padding: 1.35rem;
     }
+
+    .search-results {
+      left: 1.2rem;
+      right: 1.2rem;
+    }
   }
 </style>
 
-<script is:inline>
+<script define:vars={{ searchEntries }}>
   const searchInput = document.getElementById("citySearch");
+  const searchResults = document.getElementById("searchResults");
   const countyCards = document.querySelectorAll(".county-card");
+  const normalizeSearchTerm = (value) => value.toLowerCase().replace(/\s+/g, " ").trim();
+  let activeSearchIndex = -1;
+  let currentMatches = [];
 
   countyCards.forEach((card) => {
     const btn = card.querySelector(".county-toggle");
@@ -901,8 +1024,99 @@ const situations = [
     });
   });
 
-  searchInput.addEventListener("input", (e) => {
-    const term = e.target.value.toLowerCase().trim();
+  const getMatchScore = (entry, term) => {
+    const name = normalizeSearchTerm(entry.matchName || "");
+    const label = normalizeSearchTerm(entry.label || "");
+    const title = normalizeSearchTerm(entry.title || "");
+    const searchText = normalizeSearchTerm(entry.searchText || "");
+
+    if (name === term || label === term || title === term) return 0;
+    if (name.startsWith(term)) return 1;
+    if (label.startsWith(term)) return 2;
+    if (title.startsWith(term)) return 3;
+    if (name.includes(term)) return 4;
+    if (label.includes(term)) return 5;
+    if (title.includes(term)) return 6;
+    if (searchText.includes(term)) return 7;
+    return 99;
+  };
+
+  const getMatches = (term) => {
+    if (!term) return [];
+    return searchEntries
+      .map((entry) => ({ ...entry, score: getMatchScore(entry, term) }))
+      .filter((entry) => entry.score < 99)
+      .sort((a, b) => a.score - b.score || a.label.localeCompare(b.label))
+      .slice(0, 8);
+  };
+
+  const setActiveSearchItem = (index) => {
+    activeSearchIndex = index;
+    const items = searchResults.querySelectorAll(".search-result");
+    items.forEach((item, itemIndex) => {
+      const isActive = itemIndex === activeSearchIndex;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-selected", String(isActive));
+    });
+
+    const activeItem = items[activeSearchIndex];
+    searchInput.setAttribute("aria-activedescendant", activeItem?.id || "");
+    activeItem?.scrollIntoView({ block: "nearest" });
+  };
+
+  const closeSearchResults = () => {
+    searchResults.hidden = true;
+    searchResults.innerHTML = "";
+    searchInput.setAttribute("aria-expanded", "false");
+    searchInput.setAttribute("aria-activedescendant", "");
+    activeSearchIndex = -1;
+    currentMatches = [];
+  };
+
+  const goToSearchEntry = (entry) => {
+    if (!entry?.href) return;
+    window.location.href = entry.href;
+  };
+
+  const renderSearchResults = (term) => {
+    currentMatches = getMatches(term);
+    activeSearchIndex = -1;
+    searchResults.innerHTML = "";
+
+    if (!term) {
+      closeSearchResults();
+      return;
+    }
+
+    searchResults.hidden = false;
+    searchInput.setAttribute("aria-expanded", "true");
+
+    if (currentMatches.length === 0) {
+      const noMatch = document.createElement("div");
+      noMatch.className = "search-no-match";
+      noMatch.textContent = "No matching Florida city or county found. Try a nearby city or county name.";
+      searchResults.appendChild(noMatch);
+      return;
+    }
+
+    currentMatches.forEach((entry, index) => {
+      const option = document.createElement("a");
+      option.href = entry.href;
+      option.className = "search-result";
+      option.id = `search-result-${index}`;
+      option.setAttribute("role", "option");
+      option.setAttribute("aria-selected", "false");
+      option.innerHTML = `<small>${entry.type}</small><strong>${entry.title}</strong><span>${entry.subtitle}</span>`;
+      option.addEventListener("mouseenter", () => setActiveSearchItem(index));
+      option.addEventListener("mousedown", (event) => {
+        event.preventDefault();
+        goToSearchEntry(entry);
+      });
+      searchResults.appendChild(option);
+    });
+  };
+
+  const updateDirectoryFilter = (term) => {
     countyCards.forEach((card) => {
       const countyName = card.getAttribute("data-county");
       const cityItems = card.querySelectorAll(".city-item");
@@ -936,5 +1150,61 @@ const situations = [
         card.querySelector(".county-toggle")?.setAttribute("aria-expanded", "false");
       }
     });
+  };
+
+  searchInput.addEventListener("input", (e) => {
+    const term = normalizeSearchTerm(e.target.value);
+    renderSearchResults(term);
+    updateDirectoryFilter(term);
+  });
+
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeSearchResults();
+      return;
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      if (searchResults.hidden) renderSearchResults(normalizeSearchTerm(searchInput.value));
+      if (currentMatches.length > 0) {
+        setActiveSearchItem((activeSearchIndex + 1) % currentMatches.length);
+      }
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      if (currentMatches.length > 0) {
+        setActiveSearchItem(
+          activeSearchIndex <= 0 ? currentMatches.length - 1 : activeSearchIndex - 1,
+        );
+      }
+      return;
+    }
+
+    if (event.key === "Enter") {
+      const term = normalizeSearchTerm(searchInput.value);
+      const selectedEntry = currentMatches[activeSearchIndex];
+      const exactEntry =
+        currentMatches.find((entry) => normalizeSearchTerm(entry.label) === term) ||
+        currentMatches.find((entry) => normalizeSearchTerm(entry.title) === term) ||
+        (currentMatches.length === 1 ? currentMatches[0] : null);
+
+      if (selectedEntry || exactEntry) {
+        event.preventDefault();
+        goToSearchEntry(selectedEntry || exactEntry);
+      }
+    }
+  });
+
+  searchInput.addEventListener("focus", () => {
+    renderSearchResults(normalizeSearchTerm(searchInput.value));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".search-panel")) {
+      closeSearchResults();
+    }
   });
 </script>
