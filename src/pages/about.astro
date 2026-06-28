@@ -352,12 +352,13 @@ const principles = [
   }
 
   .work-flow li:not(:last-child)::after {
-    color: #94a3b8;
-    content: "→";
-    font-weight: 900;
+    background: #d9e5dc;
+    content: "";
+    height: 1px;
     position: absolute;
     right: -0.85rem;
     top: 50%;
+    width: 0.85rem;
     transform: translateY(-50%);
   }
 
@@ -490,12 +491,7 @@ const principles = [
     }
 
     .work-flow li:not(:last-child)::after {
-      bottom: -1.15rem;
-      content: "↓";
-      left: 50%;
-      right: auto;
-      top: auto;
-      transform: translateX(-50%);
+      display: none;
     }
 
     .cta-actions {

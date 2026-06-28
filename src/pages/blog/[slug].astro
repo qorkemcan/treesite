@@ -308,9 +308,23 @@ const decisionTip = getDecisionTip(post.data.category);
     color: #1b4332;
   }
 
-  .blog-prose a {
-    color: #ea580c;
-    font-weight: 700;
+  :global(.blog-prose a) {
+    color: #166534;
+    font-weight: 800;
+    text-decoration-color: rgba(22, 101, 52, 0.35);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+
+  :global(.blog-prose a:hover) {
+    color: #c2410c;
+    text-decoration-color: currentColor;
+  }
+
+  :global(.blog-prose a:focus) {
+    border-radius: 4px;
+    outline: 3px solid #ffb703;
+    outline-offset: 3px;
   }
 
   .blog-prose strong {

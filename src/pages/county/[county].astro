@@ -248,6 +248,7 @@ Dispatch guidance across {cityCount} listed service zones.
       {countyGuideLinks.map((guide) => (
         <a
           href={guide.href}
+          class="related-guide-card"
           style="display:block; background:white; border:1px solid #e5e7eb; border-radius:24px; padding:1.4rem; text-decoration:none; color:inherit; box-shadow:0 8px 22px rgba(0,0,0,0.03);"
         >
           <span style="display:block; color:#16a34a; font-size:0.72rem; font-weight:900; text-transform:uppercase; margin-bottom:0.5rem;">
@@ -380,6 +381,17 @@ Dispatch guidance across {cityCount} listed service zones.
   .city-hub-card:hover {
     border-color: #ea580c !important;
     box-shadow: var(--shadow-card-hover);
+  }
+  .related-guide-card {
+    min-height: 0 !important;
+    padding: 1.1rem 1.2rem !important;
+  }
+  .related-guide-card strong {
+    font-size: 0.98rem;
+  }
+  .related-guide-card:hover {
+    border-color: #ea580c !important;
+    box-shadow: var(--shadow-card-hover) !important;
   }
   .service-link {
     text-decoration: none;

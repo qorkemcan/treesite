@@ -488,12 +488,13 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     }
 
     .decision-steps li:not(:last-child)::after {
-      color: #c2410c;
-      content: "→";
-      font-weight: 900;
+      background: #fed7aa;
+      content: "";
+      height: 1px;
       position: absolute;
       right: -0.75rem;
       top: 50%;
+      width: 0.75rem;
       transform: translateY(-50%);
     }
 
@@ -621,12 +622,7 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
       }
 
       .decision-steps li:not(:last-child)::after {
-        bottom: -1.05rem;
-        content: "↓";
-        left: 50%;
-        right: auto;
-        top: auto;
-        transform: translateX(-50%);
+        display: none;
       }
     }
 

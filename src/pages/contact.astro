@@ -334,13 +334,13 @@ import { SITE_CONFIG } from "../config.js";
   }
 
   .next-steps li:not(:last-child)::after {
-    content: "→";
+    background: #d9e5dc;
+    content: "";
+    height: 1px;
     position: absolute;
-    right: -0.85rem;
+    right: -1rem;
     top: 50%;
-    transform: translateY(-50%);
-    color: #94a3b8;
-    font-weight: 900;
+    width: 1rem;
   }
 
   .next-steps span {
@@ -545,12 +545,7 @@ import { SITE_CONFIG } from "../config.js";
     }
 
     .next-steps li:not(:last-child)::after {
-      content: "↓";
-      left: 50%;
-      right: auto;
-      top: auto;
-      bottom: -1.1rem;
-      transform: translateX(-50%);
+      display: none;
     }
 
     .request-layout {

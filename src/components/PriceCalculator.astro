@@ -16,7 +16,7 @@ const isGeneral = city === "" || city === "Florida";
     <div class="calculator-header">
       <div class="badge-row">
         <span class="status-dot"></span>
-        <span class="badge-text">2026 FLORIDA COST ESTIMATOR</span>
+        <span class="badge-text">FLORIDA COST ESTIMATOR</span>
       </div>
       <h2 class="calc-main-title">
         {
@@ -28,7 +28,7 @@ const isGeneral = city === "" || city === "Florida";
       <p class="calc-subtitle">
         {
           isGeneral
-            ? "Select your Florida region and service details for a 2026 market-rate estimate."
+            ? "Select your Florida region and service details for a local market-rate estimate."
             : `Get a location-specific baseline quote for tree services in ${city}, FL.`
         }
       </p>
@@ -118,7 +118,7 @@ const isGeneral = city === "" || city === "Florida";
       </div>
 
       <button id="trigger-calc" class="main-calc-btn">
-        CALCULATE 2026 ESTIMATE
+        CALCULATE LOCAL ESTIMATE
       </button>
 
       <!-- SONUÇ ALANI -->

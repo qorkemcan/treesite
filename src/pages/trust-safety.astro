@@ -392,18 +392,19 @@ const safetyQuestions = [
   }
 
   .responsibility {
-    align-items: start;
+    align-items: center;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: var(--radius-panel);
     display: grid;
     gap: 2rem;
-    grid-template-columns: 0.95fr 1.05fr;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     padding: 2rem;
   }
 
   .responsibility > div > p {
     margin-top: 1rem;
+    max-width: 34rem;
   }
 
   .responsibility ul {
