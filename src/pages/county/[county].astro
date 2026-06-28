@@ -231,10 +231,8 @@ Dispatch guidance across {cityCount} listed service zones.
       )
     }
 
-    <section
-      style="margin-bottom: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;"
-    >
-      <div style="background:#081c15; color:white; border-radius:24px; padding:2rem;">
+    <section class="related-guides-section">
+      <div class="related-guides-intro">
         <span style="display:inline-block; color:#ffb703; font-weight:900; font-size:0.72rem; text-transform:uppercase; margin-bottom:0.7rem;">
           County research paths
         </span>
@@ -245,20 +243,15 @@ Dispatch guidance across {cityCount} listed service zones.
           These guides support the county hub with permit, emergency, stump, and risk-assessment context before users choose a city page.
         </p>
       </div>
-      {countyGuideLinks.map((guide) => (
-        <a
-          href={guide.href}
-          class="related-guide-card"
-          style="display:block; background:white; border:1px solid #e5e7eb; border-radius:24px; padding:1.4rem; text-decoration:none; color:inherit; box-shadow:0 8px 22px rgba(0,0,0,0.03);"
-        >
-          <span style="display:block; color:#16a34a; font-size:0.72rem; font-weight:900; text-transform:uppercase; margin-bottom:0.5rem;">
-            Related guide
-          </span>
-          <strong style="display:block; color:#1b4332; line-height:1.35;">
-            {guide.title}
-          </strong>
-        </a>
-      ))}
+      <div class="related-guide-list">
+        {countyGuideLinks.map((guide) => (
+          <a href={guide.href} class="related-guide-card">
+            <span class="related-guide-kicker">Related guide</span>
+            <strong>{guide.title}</strong>
+            <span class="related-guide-cta">Read guide →</span>
+          </a>
+        ))}
+      </div>
     </section>
 
     <h2
@@ -382,13 +375,62 @@ Dispatch guidance across {cityCount} listed service zones.
     border-color: #ea580c !important;
     box-shadow: var(--shadow-card-hover);
   }
+  .related-guides-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.15fr);
+    margin-bottom: 4rem;
+  }
+  .related-guides-intro {
+    align-content: center;
+    background: #081c15;
+    border-radius: var(--radius-panel);
+    color: white;
+    display: grid;
+    padding: 1.65rem;
+  }
+  .related-guide-list {
+    align-self: center;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .related-guide-card {
-    min-height: 0 !important;
-    padding: 1rem 1.1rem !important;
+    align-content: start;
+    background: var(--surface-card);
+    border: var(--border-soft);
+    border-radius: 18px;
+    box-shadow: var(--shadow-card);
+    color: inherit;
+    display: grid;
+    gap: 0.45rem;
+    min-height: 0;
+    min-width: 0;
+    padding: 0.95rem 1rem;
+    text-decoration: none;
   }
   .related-guide-card strong {
+    color: #1b4332;
+    display: block;
     font-size: 0.98rem;
     line-height: 1.35;
+  }
+  .related-guide-kicker {
+    color: #16a34a;
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .related-guide-cta {
+    color: #c2410c;
+    display: inline-flex;
+    font-size: 0.82rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: 0.1rem;
   }
   .related-guide-card:hover {
     border-color: #ea580c !important;
@@ -435,6 +477,19 @@ Dispatch guidance across {cityCount} listed service zones.
     line-height: var(--reading-line-height) !important;
   }
   @media (max-width: 760px) {
+    .related-guides-section,
+    .related-guide-list {
+      grid-template-columns: 1fr;
+    }
+
+    .related-guides-intro {
+      padding: 1.35rem;
+    }
+
+    .related-guide-card {
+      padding: 0.95rem 1rem;
+    }
+
     header h1,
     main.container h2,
     main.container h3 {
