@@ -246,6 +246,8 @@ const decisionTip = getDecisionTip(post.data.category);
     font-size: 1.05rem;
     line-height: 1.78;
     max-width: var(--reading-width);
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .blog-prose h2,
@@ -259,7 +261,7 @@ const decisionTip = getDecisionTip(post.data.category);
 
   .blog-prose h2 {
     font-size: 1.8rem;
-    margin-top: 2rem;
+    margin-top: 1.85rem;
   }
 
   .blog-prose h3 {
@@ -270,16 +272,17 @@ const decisionTip = getDecisionTip(post.data.category);
   .blog-prose p,
   .blog-prose ul,
   .blog-prose ol {
-    margin: 0 0 1rem;
+    margin: 0 0 1.15rem;
   }
 
   .blog-prose ul,
   .blog-prose ol {
+    line-height: 1.72;
     padding-left: 1.4rem;
   }
 
   .blog-prose li {
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.6rem;
   }
 
   .blog-prose li > ul,
@@ -293,6 +296,7 @@ const decisionTip = getDecisionTip(post.data.category);
     line-height: 1.55;
     margin: 1.35rem 0;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
   }
 
@@ -311,9 +315,29 @@ const decisionTip = getDecisionTip(post.data.category);
   :global(.blog-prose a) {
     color: #166534;
     font-weight: 800;
+    overflow-wrap: anywhere;
     text-decoration-color: rgba(22, 101, 52, 0.35);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
+    word-break: break-word;
+  }
+
+  :global(.blog-prose img),
+  :global(.blog-prose iframe) {
+    height: auto;
+    max-width: 100%;
+  }
+
+  :global(.blog-prose pre) {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: pre;
+  }
+
+  :global(.blog-prose code) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   :global(.blog-prose a:hover) {
@@ -418,6 +442,7 @@ const decisionTip = getDecisionTip(post.data.category);
     color: inherit;
     display: block;
     min-height: 100%;
+    min-width: 0;
     padding: 1.1rem;
     text-decoration: none;
   }
@@ -480,6 +505,7 @@ const decisionTip = getDecisionTip(post.data.category);
     font-weight: 900;
     justify-content: center;
     min-height: 3rem;
+    min-width: 0;
     padding: 0.85rem 1.1rem;
     text-decoration: none;
   }
@@ -545,11 +571,16 @@ const decisionTip = getDecisionTip(post.data.category);
     }
 
     .blog-prose h2 {
-      margin-top: 1.7rem;
+      margin-top: 1.55rem;
     }
 
     .blog-prose h3 {
       margin-top: 1.35rem;
+    }
+
+    .blog-prose ul,
+    .blog-prose ol {
+      padding-left: 1.15rem;
     }
 
     .ending-actions {

@@ -190,8 +190,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
 
   .tools-hero h1 {
     margin: 0;
-    font-size: clamp(2.55rem, 6.5vw, 4.6rem);
-    line-height: 1.02;
+    font-size: clamp(2.25rem, 5.8vw, 4.1rem);
+    line-height: var(--heading-line-height);
     letter-spacing: 0;
   }
 
@@ -218,6 +218,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
     align-items: center;
     justify-content: center;
     min-height: 3.3rem;
+    max-width: 100%;
     padding: 0 1.4rem;
     border-radius: 999px;
     background: #f25a06;
@@ -256,7 +257,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   .quick-check h2 {
     margin: 0;
     color: #0f3f2a;
-    font-size: clamp(1.8rem, 3.6vw, 2.7rem);
+    font-size: clamp(1.65rem, 3.2vw, 2.35rem);
     line-height: var(--heading-line-height);
     letter-spacing: 0;
   }
@@ -328,6 +329,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
     color: #475569;
     box-shadow: 0 18px 50px rgba(15, 63, 42, 0.08);
     min-height: 440px;
+    min-width: 0;
     transition: transform 180ms ease, box-shadow 180ms ease;
   }
 
@@ -381,6 +383,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
     border: 1px solid #dbe4df;
     border-radius: 2rem;
     padding: clamp(2rem, 4vw, 3rem);
+    min-width: 0;
     box-shadow: 0 18px 50px rgba(15, 63, 42, 0.06);
   }
 
@@ -482,6 +485,10 @@ import MainLayout from "../../layouts/MainLayout.astro";
 
     .county-link-grid {
       grid-template-columns: 1fr;
+    }
+
+    .tools-hero h1 {
+      font-size: clamp(2rem, 11vw, 3rem);
     }
   }
 </style>

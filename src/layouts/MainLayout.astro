@@ -210,6 +210,35 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
         margin: 0 auto;
         padding: 0 1.2rem;
       }
+      main :where(p, li, a, span, strong),
+      article :where(p, li, a, span, strong) {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+      main :where(img, video, canvas, svg),
+      article :where(img, video, canvas, svg) {
+        height: auto;
+        max-width: 100%;
+      }
+      main :where(pre, code),
+      article :where(pre, code) {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+      main pre,
+      article pre {
+        overflow-x: auto;
+        white-space: pre;
+      }
+      main table,
+      article table {
+        max-width: 100%;
+      }
+      main :where(a, button),
+      article :where(a, button) {
+        max-width: 100%;
+      }
       .nav-links-desktop {
         display: flex;
         gap: 20px;

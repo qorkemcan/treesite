@@ -263,12 +263,12 @@ For tree removal, emergency tree service, trimming, or stump grinding help in Fl
 
 ## Sources Reviewed
 
-- OSHA Tree Care Industry Hazards and Solutions: https://www.osha.gov/tree-care/hazards-solutions
-- OSHA Inspection Guidance for Tree Care and Tree Removal Operations: https://www.osha.gov/memos/2021-06-30/inspection-guidance-for-tree-care-and-tree-removal-operations
-- Florida Division of Workers' Compensation Coverage Requirements: https://www.myfloridacfo.com/division/wc/employer/coverage-requirements
-- Florida Division of Corporations Sunbiz Search: https://dos.fl.gov/sunbiz/search
-- Florida DBPR License Search: https://www.myfloridalicense.com/wl11.asp
-- Florida Statute 163.045: https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html
+- [OSHA Tree Care Industry Hazards and Solutions](https://www.osha.gov/tree-care/hazards-solutions)
+- [OSHA Inspection Guidance for Tree Care and Tree Removal Operations](https://www.osha.gov/memos/2021-06-30/inspection-guidance-for-tree-care-and-tree-removal-operations)
+- [Florida Division of Workers' Compensation Coverage Requirements](https://www.myfloridacfo.com/division/wc/employer/coverage-requirements)
+- [Florida Division of Corporations Sunbiz Search](https://dos.fl.gov/sunbiz/search)
+- [Florida DBPR License Search](https://www.myfloridalicense.com/wl11.asp)
+- [Florida Statute 163.045](https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html)
 
 ## FAQ
 
