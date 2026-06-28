@@ -292,6 +292,112 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
         background: var(--secondary);
         transform: translateY(-3px);
       }
+      .site-footer {
+        background: var(--primary-dark);
+        border-top: 6px solid var(--secondary);
+        color: #d1fae5;
+        padding: 4.5rem 1.5rem 5.5rem;
+      }
+      .footer-intro {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+        margin-bottom: 2.5rem;
+      }
+      .footer-brand {
+        text-align: left;
+      }
+      .footer-brand p:first-child {
+        color: white;
+        font-size: 1.45rem;
+        font-weight: 900;
+        margin: 0 0 0.75rem;
+      }
+      .footer-brand p:last-child {
+        color: #bbf7d0;
+        line-height: 1.7;
+        margin: 0;
+        max-width: 620px;
+      }
+      .footer-social {
+        align-items: center;
+        display: flex;
+        gap: 0.75rem;
+        justify-content: flex-end;
+      }
+      .footer-journey {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin: 0 0 2.75rem;
+      }
+      .footer-column {
+        background: rgba(255, 255, 255, 0.045);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 18px;
+        padding: 1.25rem;
+        text-align: left;
+      }
+      .footer-column h2 {
+        color: #ffb703;
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        margin: 0 0 0.9rem;
+        text-transform: uppercase;
+      }
+      .footer-column ul {
+        display: grid;
+        gap: 0.65rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .footer-column a {
+        color: #f8fafc;
+        font-size: 0.92rem;
+        font-weight: 750;
+        line-height: 1.35;
+        text-decoration: none;
+      }
+      .footer-column a:hover,
+      .footer-legal a:hover {
+        color: #ffb703;
+      }
+      .footer-column a:focus,
+      .footer-legal a:focus,
+      .social-link:focus {
+        outline: 3px solid #ffb703;
+        outline-offset: 3px;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+        text-align: center;
+      }
+      .footer-legal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: center;
+        margin-bottom: 1.2rem;
+      }
+      .footer-legal a {
+        color: #d1fae5;
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .footer-bottom p {
+        font-size: 0.75rem;
+        margin: 0 auto 0.9rem;
+        max-width: 880px;
+      }
+      .footer-disclaimer {
+        color: rgba(209, 250, 229, 0.55);
+        line-height: 1.65;
+      }
 
       @keyframes pulse-animation {
         0% {
@@ -342,6 +448,15 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
         }
         .sticky-call-btn {
           animation: none;
+        }
+      }
+      @media (max-width: 900px) {
+        .footer-intro,
+        .footer-journey {
+          grid-template-columns: 1fr;
+        }
+        .footer-social {
+          justify-content: flex-start;
         }
       }
     </style>
@@ -450,114 +565,101 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
       <slot />
     </div>
 
-    <footer
-      style="background: var(--primary-dark); color: #d1fae5; padding: 4rem 1.5rem 5rem; text-align: center; border-top: 6px solid var(--secondary);"
-    >
+    <footer class="site-footer" aria-labelledby="footer-title">
       <div class="container">
-        <div
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 50px;"
-        >
-          <div class="trust-badge-footer">
-            <span style="font-size: 1.8rem;">🛡️</span><span
-              style="font-size: 0.8rem; font-weight: 700;"
-              >LOCAL PROVIDER NETWORK<br /><small
-                style="opacity: 0.7; font-weight: 400;"
-                >Independent Florida Crews</small
-              ></span
-            >
+        <div class="footer-intro">
+          <div class="footer-brand">
+            <p id="footer-title">ProTreeTrim™ Florida</p>
+            <p>
+              Helping Florida homeowners make informed tree care decisions through practical educational resources and local guidance.
+            </p>
           </div>
-          <div class="trust-badge-footer">
-            <span style="font-size: 1.8rem;">⚡</span><span
-              style="font-size: 0.8rem; font-weight: 700;"
-              >EMERGENCY REQUESTS<br /><small style="opacity: 0.7; font-weight: 400;"
-                >Storm Dispatch Support</small
-              ></span
+          <div class="footer-social" aria-label="ProTreeTrim social links">
+            <a
+              href="https://www.facebook.com/ProTreeTrimUSA/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="ProTreeTrim on Facebook">FB</a
             >
-          </div>
-          <div class="trust-badge-footer">
-            <span style="font-size: 1.8rem;">💰</span><span
-              style="font-size: 0.8rem; font-weight: 700;"
-              >FREE ESTIMATES<br /><small
-                style="opacity: 0.7; font-weight: 400;"
-                >No-Obligation Quotes</small
-              ></span
+            <a
+              href="https://x.com/protreetrim"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="ProTreeTrim on X">X</a
+            >
+            <a
+              href="https://www.linkedin.com/company/protreetrim/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="ProTreeTrim on LinkedIn">IN</a
             >
           </div>
         </div>
 
-        <p
-          style="font-weight: 900; font-size: 1.4rem; margin-bottom: 15px; color: white;"
-        >
-          ProTreeTrim™ Florida
-        </p>
+        <nav class="footer-journey" aria-label="Footer homeowner journey map">
+          <section class="footer-column" aria-labelledby="footer-problems">
+            <h2 id="footer-problems">Tree Problems</h2>
+            <ul>
+              <li><a href="/blog/category/storm-prep-and-recovery/">Storm Damage</a></li>
+              <li><a href="/blog/category/palm-tree-care/">Palm Problems</a></li>
+              <li><a href="/services/tree-removal/">Tree Removal</a></li>
+              <li><a href="/blog/category/stump-and-root/">Stump Issues</a></li>
+              <li><a href="/blog/category/tree-risk-and-property-maintenance/">Tree Risk</a></li>
+              <li><a href="/blog/category/tree-health-and-disease/">Tree Health</a></li>
+            </ul>
+          </section>
 
-        <div
-          style="display: flex; justify-content: center; gap: 15px; margin-bottom: 30px;"
-        >
-          <a
-            href="https://www.facebook.com/ProTreeTrimUSA/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link">FB</a
-          >
-          <a
-            href="https://x.com/protreetrim"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link">X</a
-          >
-          <a
-            href="https://www.linkedin.com/company/protreetrim/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link">IN</a
-          >
-        </div>
+          <section class="footer-column" aria-labelledby="footer-learn">
+            <h2 id="footer-learn">Learn Before You Decide</h2>
+            <ul>
+              <li><a href="/blog/category/hiring-a-tree-service/">Hiring a Tree Service</a></li>
+              <li><a href="/blog/emergency-tree-removal-florida/">Emergency Tree Removal</a></li>
+              <li><a href="/blog/florida-tree-removal-permit-guide/">Permits</a></li>
+              <li><a href="/blog/category/palm-tree-care/">Palm Care</a></li>
+              <li><a href="/blog/common-pests-attacking-florida-oak-trees/">Oak Tree Guides</a></li>
+              <li><a href="/blog/florida-tree-removal-cost-guide/">Cost Guides</a></li>
+            </ul>
+          </section>
 
-        <nav
-          aria-label="Footer navigation"
-          style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 40px;"
-        >
-          <a href="/" style="color: white; text-decoration: none;">Directory</a>
-          <a href="/services/" style="color: white; text-decoration: none;"
-            >Services</a
-          >
-          <a href="/tools/" style="color: white; text-decoration: none;"
-            >Tools</a
-          >
-          <a href="/gallery/" style="color: white; text-decoration: none;"
-            >Gallery</a
-          >
-          <a href="/trust-safety/" style="color: #ffb703; text-decoration: none;"
-            >Trust & Safety</a
-          >
-          <a href="/join-network/" style="color: white; text-decoration: none;"
-            >Join Network</a
-          >
-          <a href="/partnerships/" style="color: white; text-decoration: none;"
-            >Partnerships</a
-          >
-          <a href="/about/" style="color: white; text-decoration: none;">About</a
-          >
-          <a href="/privacy" style="color: white; text-decoration: none;"
-            >Privacy</a
-          >
-          <a href="/contact/" style="color: white; text-decoration: none;"
-            >Contact</a
-          >
+          <section class="footer-column" aria-labelledby="footer-local">
+            <h2 id="footer-local">Find Local Help</h2>
+            <ul>
+              <li><a href="/#directory">Browse Counties</a></li>
+              <li><a href="/">Browse Cities</a></li>
+              <li><a href="/services/tree-removal/">Tree Removal Services</a></li>
+              <li><a href="/services/emergency-response/">Emergency Services</a></li>
+              <li><a href="/services/stump-grinding/">Stump Grinding</a></li>
+              <li><a href="/tools/">Decision Tools</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column" aria-labelledby="footer-about">
+            <h2 id="footer-about">About ProTreeTrim</h2>
+            <ul>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/trust-safety/">Trust & Safety</a></li>
+              <li><a href="/contact/">Contact</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/partnerships/">Partnerships</a></li>
+              <li><a href="/join-network/">Join Network</a></li>
+            </ul>
+          </section>
         </nav>
-        <div
-          style="max-width: 850px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center;"
-        >
-          <p
-            style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 15px; font-weight: 600;"
-          >
-            © {SITE_CONFIG.year} ProTreeTrim™ Florida. Independent Florida Tree Service
-            Provider Network.
+
+        <div class="footer-bottom">
+          <nav class="footer-legal" aria-label="Footer utility links">
+            <a href="/services/">Services</a>
+            <a href="/blog/">Blog</a>
+            <a href="/gallery/">Gallery</a>
+            <a href="/tools/">Tools</a>
+          </nav>
+          <p>
+            © {SITE_CONFIG.year} ProTreeTrim™ Florida. Independent Florida Tree Service Provider Network.
           </p>
-          <p
-            style="font-size: 0.7rem; opacity: 0.5; line-height: 1.6; text-align: justify; text-align-last: center;"
-          >
+          <p class="footer-disclaimer">
             <strong>Disclaimer:</strong> ProTreeTrim™ operates as a professional referral
             and dispatch network. We connect Florida homeowners and businesses with
             local, independently owned and operated tree service professionals. ProTreeTrim™
