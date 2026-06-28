@@ -339,10 +339,10 @@ const safetyQuestions = [
   .principle-grid article,
   .expect-grid article,
   .faq-list article {
-    background: white;
-    border: 1px solid #e2e8f0;
+    background: var(--surface-card);
+    border: var(--border-soft);
     border-radius: var(--radius-card);
-    padding: 1.35rem;
+    padding: var(--card-padding);
     box-shadow: var(--shadow-card);
   }
 
@@ -415,9 +415,10 @@ const safetyQuestions = [
   }
 
   .responsibility li {
-    background: white;
-    border: 1px solid #e2e8f0;
+    background: var(--surface-card);
+    border: var(--border-soft);
     border-radius: 14px;
+    box-shadow: var(--shadow-card);
     padding: 1rem;
   }
 
@@ -456,8 +457,10 @@ const safetyQuestions = [
   }
 
   .soft-cta {
-    border: 1px solid #e2e8f0;
+    background: var(--surface-card);
+    border: var(--border-soft);
     border-radius: var(--radius-panel);
+    box-shadow: var(--shadow-card);
     padding: 2.5rem;
     text-align: center;
   }
@@ -486,7 +489,7 @@ const safetyQuestions = [
   }
 
   .soft-cta a:hover {
-    transform: translateY(-1px);
+    box-shadow: var(--shadow-cta);
   }
 
   @media (max-width: 760px) {

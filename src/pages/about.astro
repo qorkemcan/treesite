@@ -343,10 +343,11 @@ const principles = [
   }
 
   .work-flow li {
-    background: white;
-    border: 1px solid #e2e8f0;
+    background: var(--surface-card);
+    border: var(--border-soft);
     border-radius: var(--radius-card);
-    padding: 1.35rem;
+    box-shadow: var(--shadow-card);
+    padding: var(--card-padding);
     position: relative;
   }
 
@@ -383,9 +384,10 @@ const principles = [
 
   .resource-grid article,
   .belief-grid article {
-    background: white;
-    border: 1px solid #e2e8f0;
+    background: var(--surface-card);
+    border: var(--border-soft);
     border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
     padding: 1.25rem;
   }
 
@@ -440,8 +442,10 @@ const principles = [
   }
 
   .soft-cta {
-    border: 1px solid #e2e8f0;
+    background: var(--surface-card);
+    border: var(--border-soft);
     border-radius: var(--radius-panel);
+    box-shadow: var(--shadow-card);
     padding: 2.5rem;
     text-align: center;
   }
@@ -473,7 +477,7 @@ const principles = [
 
   .transparency-links a:hover,
   .cta-actions a:hover {
-    transform: translateY(-1px);
+    box-shadow: var(--shadow-card-hover);
   }
 
   @media (max-width: 900px) {

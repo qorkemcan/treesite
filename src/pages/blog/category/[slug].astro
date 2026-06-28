@@ -377,7 +377,7 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     }
 
     .section-block {
-      margin-bottom: 3rem;
+      margin-bottom: 3.25rem;
     }
 
     .section-heading {
@@ -418,13 +418,14 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     .start-card,
     .next-step-card,
     .article-card {
-      background: white;
-      border: 1px solid #e5e7eb;
+      background: var(--surface-card);
+      border: var(--border-soft);
       border-radius: var(--radius-card);
+      box-shadow: var(--shadow-card);
       color: inherit;
       display: block;
       min-height: 100%;
-      padding: 1.35rem;
+      padding: var(--card-padding);
       text-decoration: none;
     }
 
@@ -476,9 +477,10 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     }
 
     .decision-steps li {
-      background: white;
+      background: var(--surface-card);
       border: 1px solid #fed7aa;
       border-radius: 16px;
+      box-shadow: var(--shadow-card);
       color: #7c2d12;
       font-weight: 900;
       padding: 1rem;
@@ -518,8 +520,8 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     }
 
     .category-count {
-      background: white;
-      border: 1px solid #e5e7eb;
+      background: var(--surface-card);
+      border: var(--border-soft);
       border-radius: var(--radius-card);
       box-shadow: var(--shadow-card);
       margin-bottom: 1.5rem;

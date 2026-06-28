@@ -1601,11 +1601,11 @@ const structuredFaqs = finalFaqs.map((faq) => ({
   }
 
   .info-card-base {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 24px;
+    background: var(--surface-card);
+    border: var(--border-soft);
+    border-radius: var(--radius-card);
     padding: 1.5rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-card);
   }
 
   main.container h2,
@@ -1673,13 +1673,13 @@ const structuredFaqs = finalFaqs.map((faq) => ({
   }
 
   .nearby-link-card {
-    background: #ffffff;
+    background: var(--surface-card);
     color: #1b4332;
     text-decoration: none;
     padding: 1rem 1.1rem;
-    border-radius: 18px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+    border-radius: var(--radius-card);
+    border: var(--border-soft);
+    box-shadow: var(--shadow-card);
     display: flex;
     flex-direction: column;
     gap: 0.4rem;

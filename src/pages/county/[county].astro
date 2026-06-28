@@ -379,8 +379,7 @@ Dispatch guidance across {cityCount} listed service zones.
 <style>
   .city-hub-card:hover {
     border-color: #ea580c !important;
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-card-hover);
   }
   .service-link {
     text-decoration: none;
@@ -403,6 +402,15 @@ Dispatch guidance across {cityCount} listed service zones.
   .service-link-emergency:hover {
     color: #c2410c;
     padding-left: 5px;
+  }
+  .city-hub-card,
+  main.container a[style*="display:block; background:white"],
+  main.container div[style*="background:white; border:1px solid #e5e7eb"] {
+    box-shadow: var(--shadow-card) !important;
+  }
+  .city-hub-card,
+  main.container div[style*="background:white; border:1px solid #e5e7eb"] {
+    border-radius: var(--radius-card) !important;
   }
   main.container h2,
   main.container h3 {

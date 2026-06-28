@@ -157,8 +157,15 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
         --bg-light: #fcfcfc;
         --radius-card: 18px;
         --radius-panel: 24px;
+        --border-soft: 1px solid #e5e7eb;
+        --surface-card: #ffffff;
+        --surface-muted: #f8fafc;
+        --card-padding: 1.35rem;
         --shadow-card: 0 10px 24px rgba(15, 23, 42, 0.04);
         --shadow-card-hover: 0 14px 28px rgba(15, 23, 42, 0.07);
+        --shadow-panel: 0 16px 36px rgba(15, 23, 42, 0.06);
+        --shadow-cta: 0 14px 28px rgba(234, 88, 12, 0.18);
+        --section-gap: 5.5rem;
         --reading-width: 760px;
         --reading-line-height: 1.72;
         --heading-line-height: 1.12;
@@ -297,7 +304,7 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
       }
       .social-link:hover {
         background: var(--secondary);
-        transform: translateY(-3px);
+        box-shadow: 0 10px 22px rgba(234, 88, 12, 0.22);
       }
       .site-footer {
         background: var(--primary-dark);
@@ -341,8 +348,8 @@ const schemaPhone = SITE_CONFIG.phoneHref.replace("tel:", "");
       .footer-column {
         background: rgba(255, 255, 255, 0.045);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 18px;
-        padding: 1.35rem;
+        border-radius: var(--radius-card);
+        padding: var(--card-padding);
         text-align: left;
       }
       .footer-column h2 {

@@ -326,11 +326,11 @@ import { SITE_CONFIG } from "../config.js";
 
   .next-steps li {
     position: relative;
-    background: white;
-    border: 1px solid #dbeafe;
-    border-radius: 18px;
-    padding: 1.3rem;
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+    background: var(--surface-card);
+    border: var(--border-soft);
+    border-radius: var(--radius-card);
+    padding: var(--card-padding);
+    box-shadow: var(--shadow-card);
   }
 
   .next-steps li:not(:last-child)::after {
@@ -377,10 +377,11 @@ import { SITE_CONFIG } from "../config.js";
   }
 
   .reason-grid article {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 18px;
-    padding: 1.25rem;
+    background: var(--surface-muted);
+    border: var(--border-soft);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: var(--card-padding);
   }
 
   .reason-grid strong {
@@ -405,6 +406,7 @@ import { SITE_CONFIG } from "../config.js";
     border-radius: 24px;
     border: 1px solid #c9efd4;
     background: #f2fff5;
+    box-shadow: var(--shadow-card);
   }
 
   .partnership-bridge div {
@@ -435,7 +437,7 @@ import { SITE_CONFIG } from "../config.js";
     color: white;
     text-decoration: none;
     font-weight: 900;
-    box-shadow: 0 14px 28px rgba(242, 90, 6, 0.18);
+    box-shadow: var(--shadow-cta);
   }
 
   .request-layout {
@@ -449,7 +451,7 @@ import { SITE_CONFIG } from "../config.js";
     background: white;
     padding: 2.35rem;
     border-radius: var(--radius-panel);
-    border: 1px solid #eee;
+    border: var(--border-soft);
     box-shadow: var(--shadow-card);
   }
 
@@ -491,7 +493,7 @@ import { SITE_CONFIG } from "../config.js";
   .contact-form button:hover,
   .hero-actions a:hover,
   .partnership-bridge a:hover {
-    transform: translateY(-1px);
+    box-shadow: var(--shadow-card-hover);
   }
 
   .contact-prep {

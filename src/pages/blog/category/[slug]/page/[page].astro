@@ -308,3 +308,25 @@ const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${currentCategorySlug
     }
   </main>
 </MainLayout>
+
+<style>
+  main.container article {
+    border: var(--border-soft) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: var(--shadow-card) !important;
+  }
+
+  main.container article:hover {
+    border-color: #ea580c !important;
+    box-shadow: var(--shadow-card-hover) !important;
+  }
+
+  main.container article > a:last-child {
+    box-shadow: var(--shadow-cta);
+  }
+
+  main.container nav a,
+  main.container nav span {
+    border-radius: 12px !important;
+  }
+</style>
