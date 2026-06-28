@@ -96,8 +96,175 @@ const { categoryName, posts, totalPosts, totalPages, currentPage } =
 
 const categorySlug = slugifyCategory(categoryName);
 
-const pageTitle = `${categoryName} Articles | ProTreeTrim Blog`;
-const pageDescription = `Read ${categoryName.toLowerCase()} articles from the ProTreeTrim blog.`;
+const categoryProfiles: Record<string, {
+  description: string;
+  decisionFocus: string;
+  path: [string, string, string];
+  nextSteps: { label: string; href: string }[];
+}> = {
+  "storm-prep-and-recovery": {
+    description:
+      "Practical Florida storm guidance for homeowners reviewing damaged limbs, leaning trees, cleanup timing, documentation, and safer next steps after severe weather.",
+    decisionFocus: "Storm situations often need safety triage before cleanup or service scheduling.",
+    path: ["Check the hazard", "Document damage safely", "Request emergency guidance when needed"],
+    nextSteps: [
+      { label: "Emergency Tree Service", href: "/services/emergency-response/" },
+      { label: "Emergency Tree Removal", href: "/blog/emergency-tree-removal-florida/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+    ],
+  },
+  "emergency-and-storm": {
+    description:
+      "Emergency and storm articles help Florida homeowners understand urgent tree hazards, blocked access, hanging limbs, roof impact, and safer response timing.",
+    decisionFocus: "The first decision is whether the situation is actively unsafe or can wait for a planned review.",
+    path: ["Stay clear of risk", "Compare urgency", "Contact local guidance if needed"],
+    nextSteps: [
+      { label: "Emergency Tree Service", href: "/services/emergency-response/" },
+      { label: "Emergency Checklist", href: "/tools/emergency-tree-safety-checklist/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+    ],
+  },
+  "tree-risk-and-emergency-help": {
+    description:
+      "Tree risk and emergency help guides explain warning signs, storm defects, leaning trees, and the difference between monitoring, priority review, and urgent action.",
+    decisionFocus: "Risk decisions should separate observable warning signs from assumptions or panic.",
+    path: ["Identify the risk", "Compare urgency", "Ask for guidance when risk is unclear"],
+    nextSteps: [
+      { label: "Emergency Checklist", href: "/tools/emergency-tree-safety-checklist/" },
+      { label: "Trust & Safety", href: "/trust-safety/" },
+      { label: "Emergency Services", href: "/services/emergency-response/" },
+    ],
+  },
+  "palm-and-oak": {
+    description:
+      "Palm and oak guides focus on two common Florida homeowner concerns: palm condition, oak canopy risk, pests, pruning timing, and long-term property decisions.",
+    decisionFocus: "Species-specific concerns are easier to handle when health, structure, and timing are reviewed together.",
+    path: ["Understand the species", "Review visible symptoms", "Choose monitoring, pruning, or help"],
+    nextSteps: [
+      { label: "Palm Care", href: "/blog/category/palm-tree-care/" },
+      { label: "Tree Health Guides", href: "/blog/category/tree-health-and-disease/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+    ],
+  },
+  "palm-tree-care": {
+    description:
+      "Palm care guides help Florida homeowners understand trimming timing, yellowing fronds, storm preparation, pests, and when a palm concern deserves review.",
+    decisionFocus: "Palm decisions should avoid over-trimming and start with crown condition, timing, and symptoms.",
+    path: ["Review palm symptoms", "Compare trimming or monitoring", "Ask for local guidance if needed"],
+    nextSteps: [
+      { label: "Tree Health Guides", href: "/blog/category/tree-health-and-disease/" },
+      { label: "Tree Care Advisor", href: "/tools/florida-tree-care-advisor/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+    ],
+  },
+  "stump-and-root": {
+    description:
+      "Stump and root guides help homeowners plan around old stumps, root conflicts, hardscape issues, grinding depth, chips, and yard restoration.",
+    decisionFocus: "Stump and root choices should start with how the area will be used after cleanup.",
+    path: ["Understand the obstacle", "Compare grinding or repair options", "Plan the finished surface"],
+    nextSteps: [
+      { label: "Stump Grinding", href: "/services/stump-grinding/" },
+      { label: "Stump Grinding Guides", href: "/blog/category/stump-grinding/" },
+      { label: "Tree Care Advisor", href: "/tools/florida-tree-care-advisor/" },
+    ],
+  },
+  "stump-grinding": {
+    description:
+      "Stump grinding articles explain cleanup, root flare, access, chip handling, yard restoration, and when grinding is better than leaving a stump in place.",
+    decisionFocus: "The best stump decision connects grinding depth, access, cleanup, and the homeowner's next use for the area.",
+    path: ["Measure the stump", "Compare cleanup needs", "Plan restoration"],
+    nextSteps: [
+      { label: "Stump Grinding", href: "/services/stump-grinding/" },
+      { label: "Root Guides", href: "/blog/category/stump-and-root/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+    ],
+  },
+  "permit-and-insurance": {
+    description:
+      "Permit and insurance guides help Florida homeowners understand documentation, local rules, protected-tree questions, storm claims, and safer planning before work begins.",
+    decisionFocus: "Documentation and local requirements matter before non-emergency tree removal or regulated work.",
+    path: ["Document the condition", "Check local requirements", "Ask before authorizing work"],
+    nextSteps: [
+      { label: "Trust & Safety", href: "/trust-safety/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+      { label: "Tree Removal Guides", href: "/blog/category/tree-removal/" },
+    ],
+  },
+  "permits-and-regulations": {
+    description:
+      "Permit and regulation articles explain how Florida city, county, HOA, protected-tree, and documentation questions can affect tree work decisions.",
+    decisionFocus: "The safest permit path starts with the property, tree condition, local rules, and documentation.",
+    path: ["Understand the rule question", "Gather documentation", "Confirm before work"],
+    nextSteps: [
+      { label: "Florida Permit Guide", href: "/blog/florida-tree-removal-permit-guide/" },
+      { label: "Trust & Safety", href: "/trust-safety/" },
+      { label: "Tree Removal Guides", href: "/blog/category/tree-removal/" },
+    ],
+  },
+  "tree-risk-and-property-maintenance": {
+    description:
+      "Property maintenance guides help homeowners think through risk, seasonal care, inspection timing, documentation, and practical planning before problems become urgent.",
+    decisionFocus: "Property maintenance is strongest when risk, timing, and homeowner goals are reviewed before scheduling work.",
+    path: ["Review the concern", "Compare maintenance options", "Plan local help if needed"],
+    nextSteps: [
+      { label: "Tree Care Advisor", href: "/tools/florida-tree-care-advisor/" },
+      { label: "Tree Health Guides", href: "/blog/category/tree-health-and-disease/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+    ],
+  },
+  "hiring-a-tree-service": {
+    description:
+      "Hiring guides help Florida homeowners compare estimates, insurance questions, contractor red flags, communication, and what to ask before authorizing tree work.",
+    decisionFocus: "A better hiring decision starts with clear scope, verification, documentation, and realistic expectations.",
+    path: ["Know what to ask", "Compare estimates carefully", "Choose local help with context"],
+    nextSteps: [
+      { label: "Trust & Safety", href: "/trust-safety/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+      { label: "Tree Removal Services", href: "/services/tree-removal/" },
+    ],
+  },
+  "tree-removal": {
+    description:
+      "Tree removal guides help homeowners compare risk, permits, access, estimates, cleanup, and when removal may be safer than pruning or monitoring.",
+    decisionFocus: "Removal decisions should be based on condition, targets, access, documentation, and whether the tree can safely remain.",
+    path: ["Understand removal triggers", "Compare alternatives", "Find local guidance when needed"],
+    nextSteps: [
+      { label: "Tree Removal Services", href: "/services/tree-removal/" },
+      { label: "Florida Permit Guide", href: "/blog/florida-tree-removal-permit-guide/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+    ],
+  },
+  "tree-removal-decision-guides": {
+    description:
+      "Tree removal decision guides help homeowners slow down and compare removal, pruning, documentation, access, risk, and estimate factors before choosing a next step.",
+    decisionFocus: "The best removal decision weighs risk, alternatives, site constraints, and local requirements.",
+    path: ["Review the reason", "Compare removal with alternatives", "Plan local service if needed"],
+    nextSteps: [
+      { label: "Tree Removal Services", href: "/services/tree-removal/" },
+      { label: "Trust & Safety", href: "/trust-safety/" },
+      { label: "Contact Dispatch", href: "/contact/" },
+    ],
+  },
+};
+
+const fallbackCategoryProfile = {
+  description: `${categoryName} guides help Florida homeowners understand practical tree care questions, compare safer next steps, and decide when local guidance may be useful.`,
+  decisionFocus:
+    "Use these guides to move from general research toward a clearer tree care decision.",
+  path: ["Learn the issue", "Compare your options", "Find local guidance when needed"] as [string, string, string],
+  nextSteps: [
+    { label: "Tree Care Advisor", href: "/tools/florida-tree-care-advisor/" },
+    { label: "Trust & Safety", href: "/trust-safety/" },
+    { label: "Contact Dispatch", href: "/contact/" },
+  ],
+};
+
+const categoryProfile =
+  categoryProfiles[categorySlug] || fallbackCategoryProfile;
+const startHerePosts = posts.slice(0, 3);
+
+const pageTitle = `${categoryName} Guides for Florida Homeowners`;
+const pageDescription = categoryProfile.description;
 const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${categorySlug}/`;
 
 const startPost = totalPosts === 0 ? 0 : 1;
@@ -159,8 +326,278 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
 
 
   <style>
+    .category-hero {
+      background: linear-gradient(135deg, #1b4332 0%, #081c15 100%);
+      border-bottom: 5px solid #ea580c;
+      color: white;
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    .category-hero__eyebrow,
+    .section-heading p,
+    .decision-path p,
+    .next-step-card span {
+      color: #ffb703;
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      margin: 0 0 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .category-hero h1 {
+      font-size: clamp(2.25rem, 6vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.08;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    .category-hero__copy {
+      color: #c7f9d4;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      margin: 1.2rem auto 0;
+      max-width: 820px;
+    }
+
+    .category-main {
+      max-width: 1100px;
+      padding: 3rem 1.5rem 10rem;
+    }
+
+    .back-link {
+      color: #166534;
+      display: inline-block;
+      font-weight: 800;
+      margin-bottom: 1.75rem;
+      text-decoration: none;
+    }
+
+    .section-block {
+      margin-bottom: 3rem;
+    }
+
+    .section-heading {
+      margin: 0 0 1.5rem;
+      max-width: 780px;
+    }
+
+    .section-heading h2,
+    .decision-path h2,
+    .article-list-heading h2 {
+      color: #064e3b;
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin: 0 0 0.65rem;
+    }
+
+    .section-heading span,
+    .decision-path span,
+    .article-list-heading span {
+      color: #526253;
+      display: block;
+      line-height: 1.7;
+    }
+
+    .start-grid,
+    .next-step-grid,
+    .article-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .start-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .start-card,
+    .next-step-card,
+    .article-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      color: inherit;
+      display: block;
+      min-height: 100%;
+      padding: 1.25rem;
+      text-decoration: none;
+    }
+
+    .start-card small,
+    .article-card small {
+      color: #94a3b8;
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+    }
+
+    .start-card strong,
+    .article-card h3 {
+      color: #1b4332;
+      display: block;
+      font-size: 1.08rem;
+      font-weight: 900;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .start-card span,
+    .article-card p {
+      color: #526253;
+      display: block;
+      line-height: 1.65;
+      margin: 0.75rem 0 0;
+    }
+
+    .decision-path {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 24px;
+      padding: 1.75rem;
+    }
+
+    .decision-path p {
+      color: #c2410c;
+    }
+
+    .decision-steps {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      list-style: none;
+      margin: 1.5rem 0 0;
+      padding: 0;
+    }
+
+    .decision-steps li {
+      background: white;
+      border: 1px solid #fed7aa;
+      border-radius: 16px;
+      color: #7c2d12;
+      font-weight: 900;
+      padding: 1rem;
+      position: relative;
+    }
+
+    .decision-steps li:not(:last-child)::after {
+      color: #c2410c;
+      content: "→";
+      font-weight: 900;
+      position: absolute;
+      right: -0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .next-step-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .next-step-card {
+      background: #f0fdf4;
+      border-color: #dcfce7;
+    }
+
+    .next-step-card span {
+      color: #16a34a;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .next-step-card strong {
+      color: #1b4332;
+      display: block;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .category-count {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      margin-bottom: 1.5rem;
+      padding: 1.1rem 1.25rem;
+    }
+
+    .category-count strong {
+      color: #1b4332;
+    }
+
+    .category-count span {
+      color: #64748b;
+    }
+
+    .article-list-heading {
+      align-items: end;
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .article-card h3 a {
+      color: #1b4332;
+      text-decoration: none;
+    }
+
+    .read-link {
+      align-items: center;
+      background: #ea580c;
+      border-radius: 12px;
+      color: white;
+      display: inline-flex;
+      font-weight: 900;
+      margin-top: 1.25rem;
+      min-height: 2.75rem;
+      padding: 0 1rem;
+      text-decoration: none;
+    }
+
     .blog-pagination-mobile-summary {
       display: none !important;
+    }
+
+    .back-link:focus,
+    .start-card:focus,
+    .next-step-card:focus,
+    .article-card h3 a:focus,
+    .read-link:focus,
+    .blog-pagination-page:focus,
+    .blog-pagination-next:focus {
+      outline: 3px solid #ffb703;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 800px) {
+      .start-grid,
+      .next-step-grid,
+      .article-list-heading,
+      .decision-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .article-list-heading {
+        align-items: start;
+        display: grid;
+      }
+
+      .decision-steps li:not(:last-child)::after {
+        bottom: -1.05rem;
+        content: "↓";
+        left: 50%;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+      }
     }
 
     @media (max-width: 640px) {
@@ -180,85 +617,107 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     }
   </style>
 
-  <header
-    style="background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; padding: 4.5rem 1.5rem; text-align: center; border-bottom: 5px solid #ea580c;"
-  >
+  <header class="category-hero">
     <div class="container">
-      <div
-        style="font-size: 0.85rem; margin-bottom: 1rem; color: #ffb703; font-weight: 800; text-transform: uppercase;"
-      >
-        Blog Category Archive
-      </div>
-      <h1
-        style="font-size: clamp(2.2rem, 6vw, 3.6rem); margin: 0; font-weight: 900;"
-      >
-        {categoryName}
-      </h1>
-      <p
-        style="font-size: 1.05rem; color: #95d5b2; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;"
-      >
-        Browse all posts filed under {categoryName}.
-      </p>
+      <p class="category-hero__eyebrow">Florida homeowner guide hub</p>
+      <h1>{categoryName}</h1>
+      <p class="category-hero__copy">{categoryProfile.description}</p>
     </div>
   </header>
 
-  <main
-    class="container"
-    style="padding: 3rem 1.5rem 10rem; max-width: 1100px;"
-  >
-    <div style="margin-bottom: 1.75rem;">
-      <a
-        href="/blog/"
-        style="display: inline-block; color: #166534; text-decoration: none; font-weight: 800;"
-      >
-        ← Back to all blog posts
-      </a>
+  <main class="container category-main">
+    <a href="/blog/" class="back-link">← Back to all blog posts</a>
+
+    {
+      startHerePosts.length > 0 && (
+        <section class="section-block" aria-labelledby="start-here-title">
+          <div class="section-heading">
+            <p>Start Here</p>
+            <h2 id="start-here-title">Good places to begin</h2>
+            <span>If you're new to this topic, these guides are a good place to begin.</span>
+          </div>
+
+          <div class="start-grid">
+            {startHerePosts.map((post) => (
+              <a href={`/blog/${post.slug}/`} class="start-card">
+                <small>
+                  {post.data.pubDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </small>
+                <strong>{post.data.title}</strong>
+                <span>{post.data.description}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <section class="section-block decision-path" aria-labelledby="decision-path-title">
+      <p>Category decision path</p>
+      <h2 id="decision-path-title">How this topic supports the next decision</h2>
+      <span>{categoryProfile.decisionFocus}</span>
+      <ol class="decision-steps">
+        {categoryProfile.path.map((step) => <li>{step}</li>)}
+      </ol>
+    </section>
+
+    <section class="section-block" aria-labelledby="next-steps-title">
+      <div class="section-heading">
+        <p>Related next steps</p>
+        <h2 id="next-steps-title">Where homeowners often go next</h2>
+        <span>Use these existing resources when this category raises a service, safety, permit, or local guidance question.</span>
+      </div>
+      <div class="next-step-grid">
+        {categoryProfile.nextSteps.map((step) => (
+          <a href={step.href} class="next-step-card">
+            <span>Next step</span>
+            <strong>{step.label}</strong>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <div class="article-list-heading">
+      <div>
+        <h2>All Guides in This Category</h2>
+        <span>Browse every guide currently filed under {categoryName}.</span>
+      </div>
+      <div class="category-count">
+        <strong>{startPost}-{endPost}</strong>
+        <span> of {totalPosts} article(s)</span>
+      </div>
     </div>
 
-    <div
-      style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"
-    >
-      <strong style="color: #1b4332;">{startPost}-{endPost}</strong>
-      <span style="color: #64748b;">
-        of {totalPosts} article(s) in this category</span
-      >
-    </div>
-
-    <div
-      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;"
-    >
+    <div class="article-grid">
       {
         posts.map((post) => (
-          <article style="background: white; border: 1px solid #e5e7eb; border-radius: 24px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+          <article class="article-card">
             <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
               <span style="background: #f0fdf4; color: #166534; padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">
                 {normalizeCategory(post.data.category)}
               </span>
-              <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 700;">
+              <small>
                 {post.data.pubDate.toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
                 })}
-              </span>
+              </small>
             </div>
 
-            <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
-              <a
-                href={`/blog/${post.slug}/`}
-                style="color: #1b4332; text-decoration: none; font-weight: 900;"
-              >
-                {post.data.title}
-              </a>
-            </h2>
+            <h3>
+              <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+            </h3>
 
-            <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
-              {post.data.description}
-            </p>
+            <p>{post.data.description}</p>
 
             <a
               href={`/blog/${post.slug}/`}
-              style="display: inline-block; background: #ea580c; color: white; text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 800;"
+              class="read-link"
             >
               Read article
             </a>
