@@ -79,7 +79,7 @@ Before searching for a permit form:
 
 Two homes a few miles apart can fall under different rules.
 
-The [Florida tree-removal county guide](/blog/florida-tree-removal-by-county-permits-storm-risk-and-local-homeowner-guides/) can help homeowners begin with the correct local area, but the governing agency remains the final source.
+County-level guides can help provide local context, but the governing city or county agency remains the final source.
 
 ## When Florida Statute 163.045 may remove the local permit requirement
 
