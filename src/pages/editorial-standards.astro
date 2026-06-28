@@ -1,0 +1,465 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { SITE_CONFIG } from "../config.js";
+
+const researchFactors = [
+  "Practical homeowner questions",
+  "Florida property context",
+  "City and county permit considerations",
+  "Storm, HOA, insurance, access, and safety factors",
+  "Authoritative sources when needed",
+];
+
+const reviewStandards = [
+  "Clarity",
+  "Usefulness",
+  "Source quality",
+  "Local relevance",
+  "Decision support",
+];
+
+const limits = [
+  "We do not diagnose individual trees remotely.",
+  "We do not replace local permit review.",
+  "We do not directly perform tree work.",
+  "We do not present paid placement as independent editorial guidance.",
+];
+---
+
+<MainLayout
+  title="Editorial Standards"
+  description="Learn how ProTreeTrim researches, reviews, updates, and presents homeowner-focused Florida tree care guidance."
+  canonical={`${SITE_CONFIG.siteUrl}/editorial-standards/`}
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Editorial Standards",
+        description:
+          "How ProTreeTrim reviews, researches, and maintains homeowner-focused tree care guidance.",
+        url: `${SITE_CONFIG.siteUrl}/editorial-standards/`,
+        about: {
+          "@type": "Organization",
+          name: SITE_CONFIG.brandName,
+          areaServed: {
+            "@type": "State",
+            name: "Florida",
+          },
+        },
+      })}
+    />
+  </Fragment>
+
+  <header class="editorial-hero">
+    <div class="container">
+      <p class="eyebrow">Editorial process</p>
+      <h1>Editorial Standards</h1>
+      <p>
+        How ProTreeTrim reviews, researches, and maintains homeowner-focused
+        tree care guidance.
+      </p>
+    </div>
+  </header>
+
+  <main class="container editorial-main">
+    <section class="purpose-panel" aria-labelledby="purpose-title">
+      <div>
+        <p class="eyebrow-dark">Our purpose</p>
+        <h2 id="purpose-title">Education before tree-care decisions</h2>
+      </div>
+      <p>
+        ProTreeTrim helps Florida homeowners and property managers make more
+        informed tree-care decisions before requesting service. Our content is
+        designed to clarify what questions to ask, what local factors may
+        matter, and when a homeowner may need qualified local review.
+      </p>
+    </section>
+
+    <section class="standards-section" aria-labelledby="research-title">
+      <div class="section-heading">
+        <p>How we research</p>
+        <h2 id="research-title">Guidance shaped around real homeowner context</h2>
+      </div>
+      <div class="standards-grid">
+        {
+          researchFactors.map((item) => (
+            <article>
+              <strong>{item}</strong>
+              <p>
+                We consider how the topic may affect everyday Florida property
+                decisions, including timing, safety, documentation, and local
+                requirements.
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="review-panel" aria-labelledby="review-title">
+      <div>
+        <p class="eyebrow-dark">Editorial review</p>
+        <h2 id="review-title">Reviewed for practical decision support</h2>
+        <p>
+          Content is reviewed for clarity, usefulness, source quality, local
+          relevance, and decision support. The goal is to help readers
+          understand a situation more clearly without overstating what can be
+          known from general guidance.
+        </p>
+      </div>
+      <ul aria-label="Editorial review standards">
+        {reviewStandards.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+
+    <section class="limits-section" aria-labelledby="limits-title">
+      <div class="section-heading">
+        <p>What we do not do</p>
+        <h2 id="limits-title">Clear limits are part of trustworthy guidance</h2>
+      </div>
+      <div class="limits-grid">
+        {
+          limits.map((item) => (
+            <article>
+              <p>{item}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="updates-panel" aria-labelledby="updates-title">
+      <div>
+        <p class="eyebrow-dark">Updates and corrections</p>
+        <h2 id="updates-title">Information can change</h2>
+      </div>
+      <p>
+        Content may be updated when laws, sources, service context, or
+        homeowner questions change. When a topic is uncertain or local review is
+        needed, we aim to make that uncertainty clear instead of presenting a
+        broad statement as a universal answer.
+      </p>
+    </section>
+
+    <section class="independence-panel" aria-labelledby="independence-title">
+      <div>
+        <p class="eyebrow-dark">Independence and referrals</p>
+        <h2 id="independence-title">How ProTreeTrim fits into the service process</h2>
+      </div>
+      <div>
+        <p>
+          ProTreeTrim is a referral and dispatch network, not a licensed
+          contractor. Field work is performed by independent local providers.
+        </p>
+        <p>
+          Homeowners should verify licensing, insurance, permits, and local
+          requirements before authorizing work. Editorial guidance is intended
+          to support better questions and clearer decisions, not replace local
+          professional review.
+        </p>
+      </div>
+    </section>
+
+    <section class="leadership-card" aria-labelledby="leadership-title">
+      <div>
+        <p class="eyebrow-dark">Editorial leadership</p>
+        <h2 id="leadership-title">Accountability for publishing standards</h2>
+      </div>
+      <article>
+        <h3>Görkem CAN</h3>
+        <p><strong>Founder & Editorial Director</strong></p>
+        <p>
+          Communications and journalism background. Oversees editorial quality,
+          homeowner education, research standards, and publishing strategy.
+        </p>
+      </article>
+    </section>
+
+    <section class="promise-panel" aria-labelledby="promise-title">
+      <p class="eyebrow-dark">Our promise</p>
+      <h2 id="promise-title">Accuracy matters more than forced certainty</h2>
+      <p>
+        If we cannot verify a claim with confidence, we would rather explain
+        the uncertainty than present it as fact.
+      </p>
+      <div class="promise-actions">
+        <a href="/trust-safety/">Read Trust & Safety</a>
+        <a href="/about/">About ProTreeTrim</a>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .editorial-hero {
+    background: linear-gradient(135deg, #081c15 0%, #1b4332 100%);
+    color: white;
+    padding: 6rem 1.5rem;
+    text-align: center;
+  }
+
+  .editorial-hero h1 {
+    font-size: clamp(2.2rem, 7vw, 3.8rem);
+    font-weight: 900;
+    line-height: var(--heading-line-height);
+    margin: 0 auto;
+    max-width: 900px;
+    text-wrap: balance;
+  }
+
+  .editorial-hero p:not(.eyebrow) {
+    color: #c7f9d4;
+    font-size: 1.18rem;
+    line-height: 1.75;
+    margin: 1.35rem auto 0;
+    max-width: 780px;
+  }
+
+  .editorial-main {
+    max-width: 1000px;
+    padding: 5rem 1.5rem 10rem;
+  }
+
+  .eyebrow,
+  .eyebrow-dark,
+  .section-heading p {
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.65rem;
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    color: #ffb703;
+  }
+
+  .eyebrow-dark,
+  .section-heading p {
+    color: #c2410c;
+  }
+
+  .section-heading {
+    margin: 0 auto 1.8rem;
+    max-width: 760px;
+    text-align: center;
+  }
+
+  .purpose-panel,
+  .review-panel,
+  .updates-panel,
+  .independence-panel,
+  .leadership-card,
+  .promise-panel {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-panel);
+    box-shadow: var(--shadow-panel);
+    margin-bottom: 4.5rem;
+    padding: clamp(1.5rem, 4vw, 2.4rem);
+  }
+
+  .purpose-panel,
+  .updates-panel,
+  .independence-panel,
+  .leadership-card {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  }
+
+  .purpose-panel h2,
+  .section-heading h2,
+  .review-panel h2,
+  .updates-panel h2,
+  .independence-panel h2,
+  .leadership-card h2,
+  .promise-panel h2 {
+    color: #064e3b;
+    font-size: clamp(1.7rem, 4vw, 2.35rem);
+    font-weight: 900;
+    line-height: var(--heading-line-height);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .purpose-panel p,
+  .review-panel p,
+  .updates-panel p,
+  .independence-panel p,
+  .leadership-card p,
+  .promise-panel p {
+    color: #374151;
+    font-size: 1.02rem;
+    line-height: 1.76;
+    margin: 0;
+  }
+
+  .standards-section,
+  .limits-section {
+    margin-bottom: 4.5rem;
+  }
+
+  .standards-grid,
+  .limits-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .standards-grid article,
+  .limits-grid article,
+  .review-panel li,
+  .leadership-card article {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-card);
+    padding: 1.25rem;
+  }
+
+  .standards-grid article:hover,
+  .limits-grid article:hover,
+  .review-panel li:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .standards-grid strong {
+    color: #064e3b;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .standards-grid p,
+  .limits-grid p {
+    color: #4b5563;
+    line-height: 1.68;
+    margin: 0;
+  }
+
+  .review-panel {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.8fr);
+  }
+
+  .review-panel p {
+    margin-top: 1rem;
+  }
+
+  .review-panel ul {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .review-panel li {
+    color: #064e3b;
+    font-weight: 850;
+  }
+
+  .leadership-card article h3 {
+    color: #064e3b;
+    font-size: 1.25rem;
+    margin: 0 0 0.45rem;
+  }
+
+  .leadership-card article p + p {
+    margin-top: 0.75rem;
+  }
+
+  .promise-panel {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+    text-align: center;
+  }
+
+  .promise-panel p:not(.eyebrow-dark) {
+    margin: 1rem auto 0;
+    max-width: 720px;
+  }
+
+  .promise-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .promise-actions a {
+    align-items: center;
+    border-radius: 999px;
+    display: inline-flex;
+    font-weight: 900;
+    min-height: 2.75rem;
+    padding: 0 1.1rem;
+    text-decoration: none;
+  }
+
+  .promise-actions a:first-child {
+    background: #064e3b;
+    color: white;
+  }
+
+  .promise-actions a:last-child {
+    background: white;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+  }
+
+  .promise-actions a:hover {
+    transform: translateY(-1px);
+  }
+
+  .promise-actions a:focus {
+    outline: 3px solid #ffb703;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 760px) {
+    .editorial-hero {
+      padding: 4.5rem 1.2rem;
+    }
+
+    .editorial-main {
+      padding: 3.5rem 1.1rem 8rem;
+    }
+
+    .purpose-panel,
+    .review-panel,
+    .updates-panel,
+    .independence-panel,
+    .leadership-card,
+    .standards-grid,
+    .limits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .purpose-panel,
+    .review-panel,
+    .updates-panel,
+    .independence-panel,
+    .leadership-card,
+    .promise-panel,
+    .standards-section,
+    .limits-section {
+      margin-bottom: 3rem;
+    }
+
+    .promise-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .promise-actions a {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>
