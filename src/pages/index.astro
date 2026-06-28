@@ -532,7 +532,7 @@ const situations = [
   }
 
   .section-block {
-    margin-bottom: 5.75rem;
+    margin-bottom: 5.5rem;
   }
 
   .section-heading {
@@ -583,19 +583,19 @@ const situations = [
   .region-card {
     background: white;
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border-radius: var(--radius-card);
     color: inherit;
     display: block;
     min-height: 100%;
-    padding: 1.25rem;
+    padding: 1.35rem;
     text-decoration: none;
   }
 
   .reason-grid article {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 1.25rem;
+    border-radius: var(--radius-card);
+    padding: 1.35rem;
   }
 
   .decision-card strong,
@@ -638,7 +638,7 @@ const situations = [
   .calculator-band {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-radius: 24px;
+    border-radius: var(--radius-panel);
     padding: 2rem;
   }
 
@@ -657,7 +657,7 @@ const situations = [
   .county-card {
     background: white;
     border: 1px solid #e5e7eb;
-    border-radius: 14px;
+    border-radius: var(--radius-card);
     height: fit-content;
     overflow: hidden;
   }
@@ -774,7 +774,7 @@ const situations = [
     align-items: center;
     background: #ecfdf5;
     border: 1px solid #bbf7d0;
-    border-radius: 24px;
+    border-radius: var(--radius-panel);
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr auto;
@@ -800,7 +800,7 @@ const situations = [
 
   .soft-cta {
     border: 1px solid #e2e8f0;
-    border-radius: 24px;
+    border-radius: var(--radius-panel);
     padding: 2.5rem;
     text-align: center;
   }
@@ -823,7 +823,7 @@ const situations = [
   .region-card:hover,
   .county-card:hover {
     border-color: #ea580c;
-    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+    box-shadow: var(--shadow-card-hover);
   }
 
   @media (max-width: 1050px) {
@@ -847,7 +847,11 @@ const situations = [
     }
 
     .page-flow {
-      padding-top: 4rem;
+      padding: 4rem 1.2rem 10rem;
+    }
+
+    .section-block {
+      margin-bottom: 4rem;
     }
 
     .decision-grid,

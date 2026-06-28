@@ -438,16 +438,16 @@ import { SITE_CONFIG } from "../config.js";
   .request-layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 60px;
+    gap: 3.5rem;
     align-items: start;
   }
 
   .form-panel {
     background: white;
-    padding: 2.5rem;
-    border-radius: 24px;
+    padding: 2.35rem;
+    border-radius: var(--radius-panel);
     border: 1px solid #eee;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-card);
   }
 
   .form-panel h2,
@@ -467,6 +467,10 @@ import { SITE_CONFIG } from "../config.js";
     line-height: 1.6;
     margin: 0 0 1.35rem;
     padding: 1rem;
+  }
+
+  .contact-form {
+    gap: 1rem !important;
   }
 
   .contact-form input:focus,
@@ -489,9 +493,9 @@ import { SITE_CONFIG } from "../config.js";
   .contact-prep {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 24px;
+    border-radius: var(--radius-panel);
     padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    box-shadow: var(--shadow-card);
   }
 
   .contact-prep > p {
@@ -546,6 +550,15 @@ import { SITE_CONFIG } from "../config.js";
     .request-layout {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+
+    .contact-main {
+      padding: 3.5rem 1.2rem 10rem;
+    }
+
+    .form-panel,
+    .contact-prep {
+      padding: 1.4rem;
     }
 
     .contact-form > div[style*="grid-template-columns"] {

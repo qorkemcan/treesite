@@ -339,9 +339,9 @@ const safetyQuestions = [
   .faq-list article {
     background: white;
     border: 1px solid #e2e8f0;
-    border-radius: 18px;
+    border-radius: var(--radius-card);
     padding: 1.35rem;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+    box-shadow: var(--shadow-card);
   }
 
   .principle-grid span {
@@ -393,7 +393,7 @@ const safetyQuestions = [
     align-items: start;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-radius: 24px;
+    border-radius: var(--radius-panel);
     display: grid;
     gap: 2rem;
     grid-template-columns: 0.95fr 1.05fr;
@@ -422,7 +422,7 @@ const safetyQuestions = [
   .storm-response {
     background: #fff7ed;
     border: 1px solid #fed7aa;
-    border-radius: 24px;
+    border-radius: var(--radius-panel);
     padding: 2rem;
   }
 
@@ -443,7 +443,7 @@ const safetyQuestions = [
   .why-exists {
     background: #ecfdf5;
     border: 1px solid #bbf7d0;
-    border-radius: 24px;
+    border-radius: var(--radius-panel);
     padding: 2rem;
     text-align: center;
   }
@@ -455,7 +455,7 @@ const safetyQuestions = [
 
   .soft-cta {
     border: 1px solid #e2e8f0;
-    border-radius: 24px;
+    border-radius: var(--radius-panel);
     padding: 2.5rem;
     text-align: center;
   }
@@ -494,6 +494,26 @@ const safetyQuestions = [
 
     .trust-hero {
       padding: 4.5rem 1.5rem;
+    }
+
+    .trust-main {
+      padding: 4rem 1.2rem 10rem;
+    }
+
+    .principles,
+    .expectations,
+    .responsibility,
+    .storm-response,
+    .questions,
+    .why-exists {
+      margin-bottom: 4rem;
+    }
+
+    .responsibility,
+    .storm-response,
+    .why-exists,
+    .soft-cta {
+      padding: 1.4rem;
     }
   }
 </style>
