@@ -1,8 +1,8 @@
 ---
 title: "Do You Need an Arborist Report to Remove a Hazardous Tree in Florida?"
-description: "A practical Florida guide to when an arborist or landscape-architect report matters for hazardous tree removal, what Florida Statute 163.045 actually requires, and why local rules can still matter outside that framework."
+description: "Learn when Florida homeowners need signed onsite tree-risk documentation, what Statute 163.045 requires, and when local permits or special rules may still apply."
 pubDate: 2026-04-22
-updatedDate: 2026-04-22
+updatedDate: 2026-06-28
 author: "Gorkem Can"
 category: "Florida Laws & Property Risk"
 tags:
@@ -13,143 +13,205 @@ tags:
 draft: false
 ---
 
-One of the most common tree-law questions in Florida sounds simple, but it almost never stays that way:
+# Do You Need an Arborist Report to Remove a Hazardous Tree in Florida?
 
-**Do I need an arborist report to remove a hazardous tree?**
+Sometimes. An arborist report is not automatically required for every tree removal in Florida. It becomes especially important when a homeowner wants to rely on the residential hazardous-tree protection in **Florida Statute 163.045**, when a local permit process asks for professional documentation, or when an HOA, insurer, buyer, or neighboring property owner may later question why the tree was removed.
 
-A lot of homeowners hear a short version of the answer and stop there. Someone says Florida law lets you remove dangerous trees on residential property without a permit. Someone else says you need an arborist report no matter what. Another person says a contractor’s opinion is enough. Those answers get mixed together until the owner is left with the worst kind of legal guidance: confident, incomplete, and probably wrong.
+For the state-law pathway, a contractor’s verbal opinion is not enough. The statute defines the required documentation as a signed onsite assessment completed under recognized tree-risk procedures by either an **ISA Certified Arborist** or a **Florida-licensed landscape architect**.
 
-The practical answer is this:
+That distinction matters. A paper labeled “tree report” is not automatically the documentation the law describes.
 
-**In the specific residential risk-based framework of Florida Statute 163.045, proper documentation is central. But outside that exact framework, local rules and property context can still matter.**
+## The fastest way to decide whether you need a report
 
-## Why this question gets misunderstood
+Start with the reason for removal.
 
-Homeowners usually blur together three different questions:
+### You may need formal risk documentation when:
 
-- What does state law allow in certain hazardous-tree situations?
-- What kind of documentation does that state-law pathway require?
-- What happens if my property or my tree does not fit that exact statutory framework?
+- you plan to rely on Florida Statute 163.045 rather than an ordinary local permit
+- a city or county asks for an arborist assessment
+- the tree is protected, significant, or part of a development review
+- an HOA requires written justification
+- the tree is close to a shared boundary or neighboring structure
+- an insurance claim or property sale may make the decision part of a later record
+- the tree is being described as hazardous rather than removed for preference or construction convenience
 
-Those are not the same thing.
+### You may not need an arborist report when:
 
-A homeowner may correctly hear that some residential hazardous-tree removals do not require a local permit if the statute is satisfied. But if the homeowner never checks whether the statute actually applies—or what the statute means by documentation—they can make a very expensive mistake.
+- the local jurisdiction confirms that no permit or professional documentation is required
+- the tree is being removed through a routine permit process that does not call for an arborist report
+- the tree is small, unregulated, and clearly outside any special local, environmental, HOA, or right-of-way rules
+- emergency responders or a utility are directing immediate work within their authority
 
-## What Florida Statute 163.045 actually says about documentation
+Even in those cases, photos and a clear written scope are still useful.
 
-The 2025 Florida Statutes define “documentation” for purposes of section 163.045 as an onsite assessment performed in accordance with the tree risk assessment procedures outlined in **Best Management Practices - Tree Risk Assessment, Second Edition (2017)** by an **arborist certified by the International Society of Arboriculture (ISA)** or a **Florida licensed landscape architect**, and signed by that certified arborist or licensed landscape architect. The statute also says a local government may not require notice, application, approval, permit, fee, or mitigation for the pruning, trimming, or removal of a tree on residential property if the owner possesses documentation from one of those professionals that the tree poses an unacceptable risk to persons or property. citeturn340104search1turn340104search3
+## What Florida Statute 163.045 actually requires
 
-That is a much more specific requirement than “someone looked at the tree and said it was dangerous.”
+Florida Statute 163.045 limits what a local government may require for pruning, trimming, or removing a tree on qualifying residential property when the owner possesses the documentation described by the law and that documentation shows the tree poses an **unacceptable risk to persons or property**.
 
-## So do you need an arborist report?
+The statute’s definition of documentation is specific:
 
-Under the section 163.045 residential statutory-exemption pathway, you need the kind of **documentation** the statute describes.
+- the assessment must occur onsite
+- it must follow the tree-risk procedures referenced in the statute
+- it must be completed by an ISA Certified Arborist or Florida-licensed landscape architect
+- it must be signed by that professional
 
-That means the practical answer is often yes: you need an onsite, signed risk assessment from the type of professional the statute recognizes if you want to rely on that specific state-law protection. Tampa’s published explanation of the statute says the documentation must include an onsite assessment and a signature from a certified arborist or Florida-licensed landscape architect, and warns that if those elements are missing, a notice of violation may be issued. citeturn150084search9turn150084search1
+The law also defines the kind of residential property it covers. It is not a universal rule for every commercial parcel, condominium property, apartment site, vacant lot, or HOA common area.
 
-So while homeowners often use the phrase **arborist report**, the safer way to say it is:
+Read the broader explanation in [Florida Statute 163.045: What Homeowners Should Understand Before Tree Removal](/blog/florida-statute-163-045-what-homeowners-should-understand-before-tree-removal/).
 
-**You need the exact kind of signed onsite risk documentation the statute requires if you want to rely on section 163.045.**
+## “Hazardous” is not simply another word for unwanted
 
-## Why “hazardous” is not just whatever the owner says it is
+A tree can be inconvenient without meeting a professional risk threshold.
 
-This is another major misunderstanding.
+Common reasons homeowners dislike a tree include:
 
-The statute does not revolve around casual homeowner opinion. It revolves around whether the tree poses an **unacceptable risk**, and it ties that concept to the tree-risk assessment procedures in the cited best-management-practices framework. It also defines “unacceptable risk” as a situation where removal is the only means of practically mitigating the risk below moderate. citeturn340104search1
+- leaf or fruit drop
+- shade over a lawn
+- roots near hardscape
+- blocked views
+- planned construction
+- concern that the tree might become dangerous someday
 
-That is why a tree that feels messy, inconvenient, too shady, or even generally worrying to the owner is not automatically the same thing as a tree that meets the statutory standard.
+Those concerns may still justify evaluation or removal through the normal local process. They do not automatically prove that removal is the only practical way to reduce an unacceptable risk.
 
-## Why “arborist report” and “local permit” are not always the same conversation
+A meaningful risk assessment considers the tree, the likelihood of failure, the part likely to fail, what it could strike, and whether pruning, restriction of the target area, cabling, or another measure can reduce the risk. The report should connect the condition of the tree to a real target—not merely say the tree “looks bad.”
 
-This is where homeowners get tripped up.
+## What a useful arborist report should identify
 
-They hear that an arborist report matters and assume the report always replaces the permit. That is only true if the property and tree actually fall within the section 163.045 framework.
+A homeowner should be able to match the report to the exact tree and property. A useful document commonly includes:
 
-If they do not, the local city or county may still regulate the tree through ordinary permit, protected-tree, or preservation rules. Tampa’s tree resources and self-certified arborist materials show how local systems can still require risk assessments and arborist reports in city permitting contexts for protected, specimen, and grand trees, and for pruning permits in some circumstances. citeturn150084search17turn150084search7
+- property address
+- date of onsite inspection
+- tree species or best available identification
+- tree location, number, or marked photograph
+- relevant defects or failure indicators
+- the people or property exposed to the risk
+- the assessor’s conclusion and recommended action
+- explanation of why removal is necessary if removal is recommended
+- assessor’s name, credential, credential number, and signature
+- photographs supporting the observations
 
-That is why the homeowner’s real question should be:
+If the report is intended for a permit, statutory exemption, HOA review, or insurance file, ask what that specific recipient expects before paying for the assessment.
 
-**Am I using the state-law residential exemption, or am I in a local permit framework where documentation is still part of the city process?**
+## Confirm the professional’s credential
 
-## The property type matters
+“Arborist” can be used casually in conversation. The statute, however, refers to an arborist certified by the International Society of Arboriculture.
 
-Section 163.045 defines “residential property” in a specific way: a single-family, detached building on a lot actively used for single-family residential purposes that is either a conforming use or a legally recognized nonconforming use under local land-development regulations. citeturn340104search3
+Before relying on a report:
 
-That means homeowners should not casually assume the statute works the same way for:
+1. Ask for the professional’s full name and credential number.
+2. Confirm the credential is current.
+3. Make sure the person signing the report is the person responsible for the onsite assessment.
+4. Check that the report identifies the correct tree and property.
+5. Keep the signed report and supporting photographs with your property records.
 
-- multifamily sites
-- commercial property
-- common HOA areas
-- nonconforming property situations they have not verified
-- other landscapes outside the statute’s defined residential setting
+A Florida-licensed landscape architect is the other professional category named in the statute. Florida’s official license search can help verify state-issued professional credentials.
 
-The cleaner the homeowner thinks the answer is, the more important that definition becomes.
+## A report does not replace every other rule
 
-## Why mangroves are not part of this shortcut
+This is where many homeowners make an expensive assumption.
 
-This deserves its own reminder.
+The state-law protection applies only when its conditions are met. A report does not automatically eliminate every question involving:
 
-Section 163.045 specifically says it does not apply to delegated mangrove protection authority. So if mangroves are involved, the hazardous-tree exemption conversation changes entirely. citeturn340104search1turn340104search7
+- commercial or multifamily property
+- HOA common areas
+- trees in public rights-of-way
+- utility easements
+- development or construction permits
+- wetlands or conservation areas
+- mangroves
+- work on a neighbor’s tree
+- private covenants or architectural-review rules
 
-That is why owners should never use the ordinary hazardous-tree documentation logic as a substitute for the mangrove rules.
+Mangroves are governed through a separate Florida regulatory framework. Do not treat an ordinary hazardous-tree report as permission to trim or remove mangroves.
 
-## A common mistake: thinking a tree company’s verbal opinion is enough
+For the wider permit decision, use [Do You Need a Permit to Remove a Tree in Florida?](/blog/florida-tree-removal-permit-guide/).
 
-A contractor may have real field experience, but that is not the same thing as the signed documentation the statute describes.
+## What to do before the arborist arrives
 
-If the owner plans to rely on section 163.045, the safer standard is not:
+A little preparation makes the visit more useful.
 
-**“A crew told me the tree was bad.”**
+Collect:
 
-It is:
+- photos showing the entire tree and nearby targets
+- close photos of cracks, cavities, mushrooms, broken unions, or root movement
+- notes about when the lean or damage first appeared
+- dates of recent storms or heavy rain
+- prior pruning or construction history
+- the city or county that regulates the property
+- any HOA notice or permit instructions already received
 
-**“I possess the onsite signed documentation from the kind of professional the statute names.”**
+Do not stand beneath hanging limbs or enter an unsafe area to take a better photograph. Document only from a safe location.
 
-That difference matters a lot if the removal is later questioned.
+## What to do after receiving the report
 
-## Another common mistake: assuming documentation is optional if the tree obviously looks dangerous
+Do not stop at the recommendation line.
 
-Sometimes the tree really does look terrible.
+Check these five points:
 
-Even then, homeowners should be careful. The point of the documentation is not to create bureaucracy for its own sake. It is to connect the removal to the statutory standard in a way that can be defended later if needed.
+### 1. Does the report recommend removal or further evaluation?
 
-The more obvious the danger feels, the more important it may actually be to document it correctly rather than rely on memory and confidence.
+Some reports identify a concern but recommend monitoring, pruning, target restriction, or additional testing rather than immediate removal.
 
-## What homeowners should verify before relying on the report
+### 2. Does it explain the target?
 
-Before removing a hazardous tree under the state-law framework, verify:
+A defect matters most when the likely failure could reach a person, home, driveway, pool enclosure, vehicle, utility area, or neighboring property.
 
-- that the property fits the statute’s residential-property definition
-- that the documentation is based on an onsite assessment
-- that the assessment follows the statute’s referenced tree-risk framework
-- that the document is signed by an ISA-certified arborist or Florida licensed landscape architect
-- that the tree truly poses the kind of unacceptable risk the statute describes
-- that the situation does not involve mangroves or another separately regulated category
+### 3. Is removal the only practical risk-reduction option?
 
-These questions matter much more than “Do I have a paper?”
+That question is especially important when the report will support reliance on the statutory “unacceptable risk” standard.
 
-## Why local interpretation still matters in the real world
+### 4. Have local and private-property rules been checked?
 
-Even when the state-law pathway exists, local governments and code-enforcement systems may still scrutinize whether the owner actually qualified for it. Tampa’s public guidance makes that practical point very clearly by emphasizing the need for both onsite assessment and proper signature, and by explaining that deficiencies can lead to a notice of violation. citeturn150084search9turn150084search1
+Confirm the property jurisdiction, HOA requirements, and any special environmental or right-of-way issue.
 
-That is why homeowners should think in terms of **meeting the standard**, not just possessing a document with a title on it.
+### 5. Is the removal scope separate and clear?
 
-## A practical mindset for homeowners
+The risk report explains why work may be needed. The tree-service estimate should separately explain how the work will be performed, what will be hauled away, whether stump grinding is included, and what will remain afterward.
 
-The safest way to approach a hazardous-tree removal is:
+See [What Should Be in a Written Tree Removal Estimate?](/blog/what-should-be-in-a-written-tree-removal-estimate/) before approving the work.
 
-1. determine whether the property fits section 163.045  
-2. determine whether the tree truly presents the kind of unacceptable risk the statute contemplates  
-3. obtain the exact type of signed onsite documentation the statute requires if relying on that pathway  
-4. do not assume local permit rules disappear unless the statutory conditions are actually met  
-5. remember that outside this framework, city or county tree rules may still apply  
+## Keep a defensible record
 
-That is slower than guessing—but much cheaper than defending the wrong removal later.
+Before removal, save:
 
-## Final takeaway
+- the signed report
+- credential verification
+- full-tree and defect photographs
+- local permit correspondence or confirmation
+- HOA approval, if applicable
+- the written tree-service estimate
+- final invoice and after-work photographs
 
-Do you need an arborist report to remove a hazardous tree in Florida?
+The goal is not to create unnecessary paperwork. It is to preserve the facts that supported the decision while the tree was still standing.
 
-If you are relying on the residential statutory-exemption pathway in section 163.045, you need the specific kind of signed onsite documentation the statute requires from an ISA-certified arborist or Florida licensed landscape architect. Tampa’s own public interpretation reinforces that this documentation is not optional under that pathway. But if the property or tree falls outside that exact framework, local rules may still control how removal is handled. citeturn340104search1turn340104search3turn150084search9turn150084search17
+Our guide to [documenting a hazardous tree before removal](/blog/what-to-document-before-removing-a-hazardous-tree-in-florida/) provides a more complete photo and record checklist.
 
-The best rule of thumb is simple: do not ask only whether you need a report. Ask whether you are actually in the statutory pathway that makes that report the key to removing the tree without local permit review.
+## When the condition is urgent
+
+A report question should not cause someone to stand near an actively failing tree.
+
+Keep people away and seek immediate help when there is:
+
+- a fresh lean toward an occupied structure
+- lifting soil or root-plate movement
+- a split trunk opening under load
+- a large suspended limb
+- a tree resting on a roof or another tree
+- contact with or proximity to downed electrical lines
+
+For line involvement, stay away and contact 911 or the utility as appropriate. A tree-service company should not be treated as a substitute for emergency responders or the electric utility.
+
+## Getting local tree-service help
+
+Once the risk, documentation, and permit path are clear, ProTreeTrim can connect Florida homeowners with independently owned local tree-service providers for removal, trimming, emergency response, and stump-grinding requests.
+
+Call **(855) 498-2578** or review [tree removal service options](/services/tree-removal/). Before scheduling, confirm that the written scope matches the tree identified in the report.
+
+## Official sources reviewed
+
+- [Florida Statute 163.045 — Tree pruning, trimming, or removal on residential property](https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html)
+- [City of Tampa — Tree Removal Statutory Exemption](https://www.tampa.gov/construction-services/tree-information/interpretation-tree-removal-statutory-exemption)
+- [Florida Department of Environmental Protection — Mangrove Frequently Asked Questions](https://floridadep.gov/water/submerged-lands-environmental-resources-coordination/content/mangrove-frequently-asked)
+
+This article provides general homeowner information, not legal advice. Verify current requirements with the governing city, county, HOA, utility, or qualified Florida professional before work begins.
