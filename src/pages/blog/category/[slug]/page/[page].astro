@@ -175,12 +175,12 @@ const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${currentCategorySlug
         Blog Category Archive
       </div>
       <h1
-        style="font-size: clamp(2.2rem, 6vw, 3.6rem); margin: 0; font-weight: 900;"
+        style="font-size: clamp(2.2rem, 6vw, 3.6rem); margin: 0; font-weight: 900; line-height: var(--heading-line-height); text-wrap: balance;"
       >
         {categoryName}
       </h1>
       <p
-        style="font-size: 1.05rem; color: #95d5b2; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;"
+        style="font-size: 1.05rem; color: #95d5b2; line-height: var(--reading-line-height); margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;"
       >
         Page {currentPage} of {totalPages}. Browse all posts filed under {
           categoryName
@@ -230,7 +230,7 @@ const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${currentCategorySlug
               </span>
             </div>
 
-            <h2 style="margin: 0 0 0.75rem; font-size: 1.55rem; line-height: 1.2;">
+            <h2 style="margin: 0 0 0.7rem; font-size: 1.55rem; line-height: var(--heading-line-height); text-wrap: balance;">
               <a
                 href={`/blog/${post.slug}/`}
                 style="color: #1b4332; text-decoration: none; font-weight: 900;"
@@ -239,7 +239,7 @@ const canonicalUrl = `${SITE_CONFIG.siteUrl}/blog/category/${currentCategorySlug
               </a>
             </h2>
 
-            <p style="color: #475569; line-height: 1.75; margin-bottom: 1.25rem;">
+            <p style="color: #475569; line-height: var(--reading-line-height); margin-bottom: 1.2rem;">
               {post.data.description}
             </p>
 

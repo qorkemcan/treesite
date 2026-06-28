@@ -349,9 +349,10 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     .category-hero h1 {
       font-size: clamp(2.25rem, 6vw, 3.8rem);
       font-weight: 900;
-      line-height: 1.08;
+      line-height: var(--heading-line-height);
       margin: 0 auto;
       max-width: 900px;
+      text-wrap: balance;
     }
 
     .category-hero__copy {
@@ -390,8 +391,9 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
       color: #064e3b;
       font-size: clamp(1.65rem, 4vw, 2.25rem);
       font-weight: 900;
-      line-height: 1.15;
+      line-height: var(--heading-line-height);
       margin: 0 0 0.65rem;
+      text-wrap: balance;
     }
 
     .section-heading span,
@@ -591,6 +593,13 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
 
       .category-main {
         padding: 3.5rem 1.2rem 9rem;
+      }
+
+      .category-hero h1,
+      .section-heading h2,
+      .decision-path h2,
+      .article-list-heading h2 {
+        line-height: var(--mobile-heading-line-height);
       }
 
       .section-block {

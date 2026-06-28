@@ -139,7 +139,7 @@ const decisionTip = getDecisionTip(post.data.category);
       </div>
 
       <h1
-        style="font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.08; color: #1b4332; margin: 0 0 1rem; font-weight: 900;"
+        style="font-size: clamp(2rem, 5vw, 3.3rem); line-height: var(--heading-line-height); color: #1b4332; margin: 0 0 1rem; font-weight: 900;"
       >
         {post.data.title}
       </h1>
@@ -244,35 +244,68 @@ const decisionTip = getDecisionTip(post.data.category);
   .blog-prose {
     color: #374151;
     font-size: 1.05rem;
-    line-height: 1.9;
+    line-height: 1.78;
+    max-width: var(--reading-width);
   }
 
   .blog-prose h2,
   .blog-prose h3 {
     color: #1b4332;
-    line-height: 1.2;
-    margin-top: 2.2rem;
-    margin-bottom: 0.9rem;
+    line-height: var(--heading-line-height);
+    margin-bottom: 0.75rem;
     font-weight: 900;
+    text-wrap: balance;
   }
 
   .blog-prose h2 {
     font-size: 1.8rem;
+    margin-top: 2rem;
   }
 
   .blog-prose h3 {
     font-size: 1.35rem;
+    margin-top: 1.6rem;
   }
 
   .blog-prose p,
   .blog-prose ul,
   .blog-prose ol {
-    margin: 0 0 1.1rem;
+    margin: 0 0 1rem;
   }
 
   .blog-prose ul,
   .blog-prose ol {
     padding-left: 1.4rem;
+  }
+
+  .blog-prose li {
+    margin-bottom: 0.45rem;
+  }
+
+  .blog-prose li > ul,
+  .blog-prose li > ol {
+    margin-top: 0.45rem;
+  }
+
+  .blog-prose table {
+    border-collapse: collapse;
+    display: block;
+    line-height: 1.55;
+    margin: 1.35rem 0;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .blog-prose th,
+  .blog-prose td {
+    border: 1px solid #e5e7eb;
+    padding: 0.8rem;
+    vertical-align: top;
+  }
+
+  .blog-prose th {
+    background: #f8fafc;
+    color: #1b4332;
   }
 
   .blog-prose a {
@@ -285,7 +318,7 @@ const decisionTip = getDecisionTip(post.data.category);
   }
 
   .blog-prose blockquote {
-    margin: 1.5rem 0;
+    margin: 1.35rem 0;
     padding: 1rem 1.25rem;
     border-left: 4px solid #ea580c;
     background: #fff7ed;
@@ -341,8 +374,9 @@ const decisionTip = getDecisionTip(post.data.category);
     color: #1b4332;
     font-size: 1.5rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: var(--heading-line-height);
     margin: 0 0 0.45rem;
+    text-wrap: balance;
   }
 
   .ending-heading span,
@@ -483,6 +517,23 @@ const decisionTip = getDecisionTip(post.data.category);
     article {
       border-radius: var(--radius-panel) !important;
       padding: 1.4rem !important;
+    }
+
+    article h1 {
+      line-height: var(--mobile-heading-line-height) !important;
+    }
+
+    .blog-prose {
+      font-size: 1rem;
+      line-height: 1.72;
+    }
+
+    .blog-prose h2 {
+      margin-top: 1.7rem;
+    }
+
+    .blog-prose h3 {
+      margin-top: 1.35rem;
     }
 
     .ending-actions {

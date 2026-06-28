@@ -890,7 +890,7 @@ const structuredFaqs = finalFaqs.map((faq) => ({
         {serviceProfile.heroKicker}
       </div>
       <h1
-        style="margin: 0; font-size: clamp(2rem, 7vw, 3.5rem); font-weight: 900; line-height: 1.1;"
+        style="margin: 0; font-size: clamp(2rem, 7vw, 3.5rem); font-weight: 900; line-height: var(--heading-line-height);"
       >
         {cityName}
         {serviceInfo.name}
@@ -1608,7 +1608,21 @@ const structuredFaqs = finalFaqs.map((faq) => ({
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   }
 
+  main.container h2,
+  main.container h3,
+  main.container h4 {
+    line-height: var(--heading-line-height) !important;
+    text-wrap: balance;
+  }
 
+  main.container p,
+  main.container li {
+    line-height: var(--reading-line-height) !important;
+  }
+
+  main.container section {
+    scroll-margin-top: 6rem;
+  }
 
   .decision-card h4 {
     margin: 0 0 0.65rem;
@@ -1716,15 +1730,32 @@ const structuredFaqs = finalFaqs.map((faq) => ({
     color: #064e3b;
     font-size: 1.08rem;
     font-weight: 900;
-    line-height: 1.35;
+    line-height: var(--heading-line-height);
   }
 
   .local-differentiator-card p,
   .city-action-card p {
     margin: 0;
     color: #475569;
-    line-height: 1.7;
+    line-height: var(--reading-line-height);
     font-size: 0.98rem;
+  }
+
+  @media (max-width: 760px) {
+    header h1,
+    main.container h2,
+    main.container h3,
+    main.container h4 {
+      line-height: var(--mobile-heading-line-height) !important;
+    }
+
+    main.container {
+      margin-top: 1.1rem !important;
+    }
+
+    main.container section[style*="margin-top: 6rem"] {
+      margin-top: 4rem !important;
+    }
   }
 
 </style>

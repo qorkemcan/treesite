@@ -213,7 +213,8 @@ import { SITE_CONFIG } from "../config.js";
     margin: 0 auto;
     font-weight: 900;
     max-width: 880px;
-    line-height: 1.05;
+    line-height: var(--heading-line-height);
+    text-wrap: balance;
   }
 
   .contact-hero p:not(.contact-eyebrow) {
@@ -304,7 +305,9 @@ import { SITE_CONFIG } from "../config.js";
   .section-intro h2 {
     color: #1b4332;
     font-size: clamp(1.65rem, 4vw, 2.25rem);
+    line-height: var(--heading-line-height);
     margin: 0;
+    text-wrap: balance;
   }
 
   .next-steps {
@@ -455,6 +458,7 @@ import { SITE_CONFIG } from "../config.js";
     color: #1b4332;
     font-size: 1.8rem;
     font-weight: 800;
+    line-height: var(--heading-line-height);
     margin-top: 0;
     margin-bottom: 1rem;
   }

@@ -229,9 +229,10 @@ const principles = [
   .about-hero h1 {
     font-size: clamp(2.25rem, 7vw, 3.85rem);
     font-weight: 900;
-    line-height: 1.06;
+    line-height: var(--heading-line-height);
     margin: 0 auto;
     max-width: 940px;
+    text-wrap: balance;
   }
 
   .about-hero p:not(.eyebrow) {
@@ -283,8 +284,9 @@ const principles = [
     color: #064e3b;
     font-size: clamp(1.75rem, 4vw, 2.35rem);
     font-weight: 900;
-    line-height: 1.15;
+    line-height: var(--heading-line-height);
     margin: 0;
+    text-wrap: balance;
   }
 
   .intro-grid p,
@@ -293,7 +295,7 @@ const principles = [
   .soft-cta p,
   .work-flow li p {
     color: #4b5563;
-    line-height: 1.75;
+    line-height: var(--reading-line-height);
     margin: 1rem 0 0;
   }
 
