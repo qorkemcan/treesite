@@ -111,14 +111,57 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      max-height: 6.4rem;
-      overflow-y: auto;
+      overflow: visible;
       padding: 0.1rem 0.2rem 0.25rem 0;
-      scrollbar-color: #b7cdbd transparent;
+      position: relative;
+    }
+
+    .blog-category-pills.is-collapsible {
+      overflow: hidden;
+      transition: max-height 180ms ease;
+    }
+
+    .blog-category-pills.is-collapsible:not(.is-expanded) {
+      max-height: 5.7rem;
+    }
+
+    .blog-category-pills.is-expanded {
+      max-height: none;
     }
 
     .blog-category-pill {
       line-height: 1.15;
+    }
+
+    .blog-category-toggle {
+      align-items: center;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 999px;
+      color: #166534;
+      cursor: pointer;
+      display: none;
+      font-size: 0.78rem;
+      font-weight: 900;
+      justify-content: center;
+      margin-top: 0.8rem;
+      min-height: 2.65rem;
+      padding: 0 1rem;
+    }
+
+    .blog-category-toggle.is-visible {
+      display: inline-flex;
+    }
+
+    .blog-category-toggle:hover {
+      background: #fff7ed;
+      border-color: #fed7aa;
+      color: #c2410c;
+    }
+
+    .blog-category-toggle:focus {
+      outline: 3px solid #ffb703;
+      outline-offset: 3px;
     }
 
     .blog-pagination-mobile-summary {
@@ -128,7 +171,14 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     @media (max-width: 640px) {
       .blog-category-pills {
         gap: 7px;
-        max-height: 7.5rem;
+      }
+
+      .blog-category-pills.is-collapsible:not(.is-expanded) {
+        max-height: 7.1rem;
+      }
+
+      .blog-category-toggle {
+        width: 100%;
       }
 
       .blog-pagination-nav {
@@ -211,7 +261,7 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
             >
               Browse by category
             </div>
-            <div class="blog-category-pills">
+            <div id="blogCategoryPills" class="blog-category-pills">
               <a
                 href="/blog/"
                 class="blog-category-pill"
@@ -232,6 +282,16 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
                 ))
               }
             </div>
+            <button
+              id="blogCategoryToggle"
+              class="blog-category-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="blogCategoryPills"
+              hidden
+            >
+              Show all categories
+            </button>
           </div>
         </div>
       </div>
@@ -406,9 +466,34 @@ const paginationItems = getCompactPaginationItems(currentPage, totalPages);
     const globalResultsCount = document.getElementById(
       "blogGlobalResultsCount",
     );
+    const categoryPills = document.getElementById("blogCategoryPills");
+    const categoryToggle = document.getElementById("blogCategoryToggle");
 
     let cachedSearchIndex = null;
     let lastSearchToken = 0;
+
+    const setupCategoryToggle = () => {
+      if (!categoryPills || !categoryToggle) return;
+
+      categoryPills.classList.add("is-collapsible");
+      categoryToggle.hidden = false;
+      categoryToggle.classList.add("is-visible");
+
+      const setExpanded = (expanded) => {
+        categoryPills.classList.toggle("is-expanded", expanded);
+        categoryToggle.setAttribute("aria-expanded", String(expanded));
+        categoryToggle.textContent = expanded
+          ? "Show fewer categories"
+          : "Show all categories";
+      };
+
+      setExpanded(false);
+      categoryToggle.addEventListener("click", () => {
+        setExpanded(categoryToggle.getAttribute("aria-expanded") !== "true");
+      });
+    };
+
+    setupCategoryToggle();
 
     const escapeHtml = (value = "") =>
       String(value)
