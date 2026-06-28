@@ -1,8 +1,8 @@
 ---
 title: "Should You Call Insurance or a Tree Service First After Storm Damage?"
-description: "A practical Florida homeowner guide to deciding whether to call insurance, emergency services, or a tree service first after storm-related tree damage."
+description: "A Florida decision path for calling 911, the utility, insurance, or a tree service after storm-related tree damage—based on immediate danger, stability, access, and documentation."
 pubDate: 2026-05-09
-updatedDate: 2026-05-09
+updatedDate: 2026-06-28
 author: "Gorkem Can"
 category: "Storm Prep & Recovery"
 tags:
@@ -13,227 +13,251 @@ tags:
 draft: false
 ---
 
-## Short Answer
+# Should You Call Insurance or a Tree Service First After Storm Damage?
 
-If there is an immediate safety hazard, call emergency services or the appropriate utility first. If a tree is on the home, blocking safe access, or creating a risk of further damage, a tree service may need to help stabilize or remove the hazard quickly. If the situation is safe and stable, call your insurance company early so you understand documentation, coverage, and next steps before major cleanup begins.
+Use this order:
 
-In many Florida storm situations, the practical answer is not either insurance or a tree service. It is the right order: make the area safe, document the damage, contact your insurer, and schedule tree work based on the urgency of the hazard.
+1. **Call 911 or the utility first** for injury, fire, trapped people, downed lines, or tree contact with electrical equipment.
+2. **Call an emergency tree provider first** when an unstable tree threatens additional damage or blocks essential access and cannot safely wait for the claim process.
+3. **Call the insurer first** when the condition is stable and there is time to ask what documentation or inspection the policy requires before cleanup.
+4. In many cases, document safely and make both calls close together.
 
-## Start With Safety, Not Paperwork
+A tree company can explain and price tree work. It cannot guarantee insurance coverage. The insurer can explain the claim process. It cannot make an active tree hazard safe.
 
-After a hurricane, tropical storm, or severe thunderstorm, it is easy to focus on the claim first. But safety comes before paperwork.
+## Path 1: 911 or utility before everyone else
 
-Do not walk under a hanging limb, climb on a damaged roof, touch a downed line, or try to cut a storm-loaded tree yourself.
+Do not begin with an estimate when there is:
+
+- injury
+- person trapped
+- fire or smoke
+- downed electrical line
+- tree touching a line or service equipment
+- sparking or arcing
+- immediate collapse into an occupied area
+- blocked emergency response
 
-Call emergency services or the appropriate utility first if:
+Stay away from the tree and anything it touches. Follow emergency and utility instructions.
+
+## Path 2: Tree service before a full claim review
+
+An emergency tree response may be needed when:
+
+- tree is resting on the home
+- limb is pushing into roof
+- trunk continues to split
+- root plate is lifting
+- tree blocks the only driveway or entry
+- major wood hangs over an occupied target
+- additional wind is expected
+- delaying work is likely to increase damage
+
+Take photographs first only when they can be taken from a safe position.
+
+The first scope may be limited to:
+
+- removing weight
+- clearing access
+- stabilizing a failed section
+- eliminating one suspended limb
+- preventing further movement
+- preparing for a later full removal
+
+Ask for an itemized invoice and preserve photographs and receipts.
+
+## Path 3: Insurance before non-emergency cleanup
+
+Call the insurer or agent early when:
+
+- tree is fully down and stable
+- no line is involved
+- no structure is carrying tree weight
+- area can be isolated
+- no essential access is blocked
+- damage is not actively worsening
+- you need claim instructions
+- an adjuster may need to view the condition
+- you are unsure whether filing is practical
 
-- A power line is down or tangled in the tree
-- A tree is blocking emergency access
-- Someone is injured
-- A tree has created an immediate fire, electrical, or structural hazard
-- A limb or trunk is actively shifting
-- A tree is resting on a home and making the area unsafe
+Ask what the insurer needs before debris is moved.
 
-A tree service should not be expected to handle live electrical hazards. Utility-related hazards need the proper utility response.
+Florida’s Department of Financial Services advises policyholders to file storm claims promptly and document damage and emergency repairs.
+
+## A one-minute decision table
+
+| Condition | First call |
+|---|---|
+| Injury, fire, trapped person | 911 |
+| Downed line or tree touching line | 911 and utility |
+| Tree moving toward occupied home | Emergency tree response after emergency channels |
+| Tree on roof with active danger | Emergency channels/tree response; insurer promptly |
+| Stable debris in open yard | Insurer/agent, then scheduled tree service |
+| Tree blocks only driveway | Emergency tree response; insurer if property damage |
+| Minor stable limb damage | Insurer if claim considered; scheduled assessment |
+| Uncertain stability | Keep area clear; request professional guidance |
 
-## When to Call a Tree Service First
+## What to do before either call
 
-Call a tree service first when the tree damage creates an urgent physical hazard that cannot wait for a full claim review.
+When safe:
 
-Examples include:
+- keep people and pets away
+- photograph wide, medium, and close views
+- note time and storm conditions
+- show tree and damaged item together
+- document access and debris
+- prevent further damage only through safe measures
+- locate policy information
+- avoid signing unclear emergency contracts
+- save all receipts
 
-- A large tree on the roof
-- A limb pressing into the home
-- A tree blocking the driveway or entrance
-- A split trunk leaning toward the house
-- A broken limb hanging over a walkway
-- A tree threatening a pool cage, fence, or neighboring structure
-- A root plate lifting and the tree continuing to lean
+Use [What Photos Help After a Storm-Damaged Tree Claim?](/blog/what-photos-help-after-a-storm-damaged-tree-claim/) for a shot list.
 
-In these cases, the goal is often to prevent further damage and restore safe access. You should still take photos before work begins if it is safe.
+## What to tell the tree provider
 
-For urgent tree hazards, ProTreeTrim’s dispatch line at (855) 498-2578 can help homeowners get connected with tree removal support.
+Provide:
 
-## When to Call Insurance First
+- exact address and ZIP
+- line status
+- what the tree struck
+- whether it is moving
+- occupied targets
+- driveway or entry blockage
+- visible root movement
+- gate and equipment access
+- ground condition
+- photographs from a safe position
+- whether an insurance file is being created
+- whether emergency stabilization or full cleanup is requested
 
-Call insurance first when the property is stable and there is time to understand the claim process before work starts.
+Be clear when the priority is one safe access lane rather than complete cleanup.
 
-This may be the better first step when:
+## What to ask the tree provider
 
-- The tree fell in the yard but did not hit a structure
-- Damage is minor and not getting worse
-- You are unsure whether removal is covered
-- You need guidance on documentation
-- You want to confirm whether an adjuster should inspect before cleanup
-- You are deciding whether the damage is worth filing as a claim
+- Is this emergency stabilization or full removal?
+- What work must happen now?
+- What can safely wait?
+- Is the tree safe to climb?
+- Is utility clearance required?
+- Is crane or lift use included?
+- Will all logs be hauled?
+- Is stump grinding included?
+- Will the invoice separate the phases?
+- What will remain when the crew leaves?
+- Can before-and-after photographs be provided?
+- What could change the price?
 
-Insurance policies vary. Deductibles, exclusions, named storm deductibles, debris removal limits, and coverage rules can differ from one homeowner to another.
+A clear scope helps both the claim record and the homeowner.
 
-That is why a tree crew can estimate tree work, but it cannot guarantee what insurance will pay.
+## What to ask the insurer
 
-## The Best First Step in Most Non-Emergency Situations
+- What photographs are required?
+- Should an adjuster inspect before stable cleanup?
+- What emergency work may proceed immediately?
+- How should I document steps taken to prevent further damage?
+- Are multiple estimates required?
+- How should the tree invoice be itemized?
+- Are debris removal limits relevant?
+- How is the deductible applied?
+- Are fences, pool cages, sheds, or vehicles handled differently?
+- What deadlines apply?
+- How should receipts and photographs be submitted?
 
-In a non-emergency situation, the best first step is usually:
+Write down the date, time, representative’s name, and reference number.
 
-1. Take photos and video from a safe distance.
-2. Prevent obvious further damage if you can do so safely.
-3. Contact your insurance company or agent.
-4. Ask what documentation they need.
-5. Get a written tree service estimate.
-6. Keep all invoices, notes, and photos.
+## Do not delay necessary protection just for paperwork
 
-This sequence helps avoid one of the biggest homeowner mistakes: removing everything before the damage is documented.
+Insurance processes matter, but an active hazard can worsen.
 
-Related reading: [What Photos Help After a Storm-Damaged Tree Claim?](/blog/what-photos-help-after-a-storm-damaged-tree-claim/)
+Florida DFS guidance recognizes that policyholders may need to make and document emergency repairs to prevent further damage. That does not mean a homeowner should perform dangerous tree work. It means qualified emergency measures may proceed while the record is preserved.
 
-## What If the Tree Is on the House?
+Photograph before and after when safe. Keep estimates, invoices, and receipts.
 
-If a tree is on the house, roof, garage, or attached structure, do not wait around in an unsafe area.
+## Do not assume tree removal equals covered damage
 
-Take photos only if it is safe. Then contact the parties needed to prevent further damage and make the property safe.
+Possible coverage depends on:
 
-This may include:
+- policy language
+- cause of loss
+- damaged property
+- deductible
+- exclusions
+- debris-removal provisions
+- access blockage
+- maintenance condition
+- timing and documentation
 
-- Emergency services
-- Utility company
-- Insurance company
-- Tree removal service
-- Roofing or tarp contractor
-- Property manager or HOA contact if applicable
+A tree that falls in an open yard may be treated differently from a tree that damages a covered structure.
 
-If rain is entering the home, temporary protection may be needed. Your insurer may have guidance on reasonable emergency measures, but the situation may not allow long delays.
+A provider who promises “insurance will pay” is overstepping.
 
-Keep receipts and document each step.
+## When the tree was already dead or declining
 
-## What If the Tree Only Fell in the Yard?
+Pre-existing condition can affect risk, maintenance decisions, and the claim discussion.
 
-A tree that falls in the yard without hitting a structure may not be as urgent. It may still need removal, but the insurance question can be more complicated.
+Preserve:
 
-Before assuming it is covered or not covered, check your policy or call your insurer.
+- older photographs
+- prior estimates
+- arborist reports
+- HOA or neighbor notices
+- maintenance records
+- storm photographs
+- current invoices
 
-Ask:
+Do not alter or hide the condition. Give the insurer accurate information.
 
-- Does my policy cover tree removal if no covered structure was damaged?
-- Is debris removal limited?
-- Does the deductible make a claim practical?
-- Do I need photos before cleanup?
-- Do I need a written estimate?
-- Should I wait for an adjuster before removal?
+## When a contractor pressures you after a storm
 
-A tree service can tell you what removal will likely involve. Your insurer can tell you how your policy may respond.
+Pause when someone:
 
-## What to Tell the Tree Service
+- demands immediate full cash payment
+- claims to work for the insurer without proof
+- discourages contacting the insurer
+- asks you not to photograph
+- refuses an itemized estimate
+- combines roofing, public adjusting, and tree work without explaining roles
+- asks you to sign rights away without understanding the document
 
-When calling a tree service after storm damage, be clear and factual.
+Florida DFS provides consumer resources for reviewing post-storm contracts and fraud concerns.
 
-Helpful details include:
+## A practical call sequence
 
-- Where the tree is located
-- Whether it hit a structure
-- Whether it is blocking access
-- Whether power lines are nearby
-- Whether the tree is leaning, split, or uprooted
-- Whether the yard is wet or soft
-- Whether there is equipment access
-- Whether you need hauling, cleanup, or stump grinding
-- Whether you are gathering documentation for insurance
+### Active hazard
 
-Send photos if possible. Good photos can help a tree service understand urgency and access before arrival.
+1. 911/utility if needed
+2. keep area clear
+3. photograph safely
+4. emergency tree response
+5. insurer promptly
+6. preserve invoices and before/after photos
 
-Related reading: [Tree Removal Estimate vs Final Invoice: What Can Change the Price?](/blog/tree-removal-estimate-vs-final-invoice-what-can-change-the-price/)
+### Stable damage
 
-## What to Ask Your Insurance Company
+1. keep area isolated
+2. photograph
+3. call insurer/agent
+4. obtain written tree estimate
+5. confirm documentation requirements
+6. schedule work
+7. retain records
 
-When you call your insurer or agent, ask practical questions.
+## Related guides
 
-Good questions include:
+- [Emergency Tree Service at Night: What Can Safely Wait Until Morning?](/blog/emergency-tree-service-at-night-what-can-safely-wait-until-morning/)
+- [Storm-Damaged Tree Removal: What Changes the Price and Timeline?](/blog/storm-damaged-tree-removal-what-changes-the-price-and-timeline/)
+- [Tree Removal Estimate vs Final Invoice](/blog/tree-removal-estimate-vs-final-invoice-what-can-change-the-price/)
 
-- What photos or documents do you need?
-- Should I prevent further damage before an adjuster visits?
-- Can I remove a hazardous tree before inspection?
-- Do I need multiple estimates?
-- Are there coverage limits for debris removal?
-- Does my deductible apply differently for hurricanes or named storms?
-- Should invoices separate tree removal, hauling, cleanup, and stump grinding?
-- Is damage to fences, pool cages, sheds, or driveways treated differently?
-- How should I submit photos and receipts?
+## Requesting Florida storm-tree help
 
-Write down the answers, including the date, time, and name of the person you spoke with.
+ProTreeTrim is a referral and dispatch network connecting Florida property owners with independently owned local tree-service providers.
 
-## Do Not Assume Every Tree Cost Is Covered
+Call **(855) 498-2578** or visit [emergency response services](/services/emergency-response/) after addressing immediate electrical and life-safety danger. Insurance and coverage questions should be confirmed with the policy and insurer.
 
-This is where homeowners can get frustrated.
+## Official sources reviewed
 
-Tree work after storms may involve removal, cutting, hauling, stump grinding, yard protection, crane work, roof access, and cleanup. Insurance coverage may not treat every part of that work the same way.
+- [Florida Department of Financial Services — Storm Resources](https://www.myfloridacfo.com/division/ica/storm)
+- [Florida Department of Financial Services — Protect Your Property](https://myfloridacfo.com/division/ica/planprepareprotect/Protect)
+- [Florida Department of Financial Services — Homeowners Insurance](https://myfloridacfo.com/division/ica/fullcoverage/homeowners)
+- [OSHA — Tree Care Industry Hazards and Solutions](https://www.osha.gov/tree-care/hazards-solutions)
 
-Coverage can depend on:
-
-- Whether the tree damaged a covered structure
-- The cause of the loss
-- The policy language
-- The deductible
-- Whether the tree was already dead or visibly neglected
-- Whether the work was emergency mitigation or optional cleanup
-- Whether there are sublimits for debris removal
-
-This article is not legal, insurance, or coverage advice. It is a practical homeowner guide. For claim-specific answers, rely on your policy, your insurer, and qualified professional guidance.
-
-## Common Mistakes After Storm Tree Damage
-
-Homeowners often run into trouble when they move too fast without documentation or wait too long on an unsafe hazard.
-
-Common mistakes include:
-
-- Removing debris before taking photos
-- Assuming the cheapest cleanup option is best
-- Waiting to call anyone while damage worsens
-- Entering unsafe areas to take pictures
-- Not asking whether power lines are involved
-- Failing to separate tree removal from stump grinding
-- Not saving invoices and receipts
-- Assuming insurance will cover every tree-related cost
-- Letting a verbal estimate replace a written scope
-
-A calm, documented process is usually better than rushed decisions made under stress.
-
-## Better Questions to Ask Before Scheduling Work
-
-Before scheduling storm-related tree work, ask:
-
-- Is this emergency removal or standard removal?
-- What will be removed today?
-- Is hauling included?
-- Is stump grinding included or separate?
-- Will the crew protect the driveway, lawn, pavers, or pool deck?
-- Are mats, cranes, or special equipment needed?
-- Will I receive a written estimate or invoice?
-- Can I photograph the area before work begins?
-- Should any part of the tree remain until insurance reviews it?
-
-Related reading: [Should Cleanup, Hauling, and Stump Grinding Be Included in a Tree Quote?](/blog/should-cleanup-hauling-and-stump-grinding-be-included-in-a-tree-quote/)
-
-## When Professional Help Is Worth It
-
-Professional help is worth it when the tree damage involves risk, access problems, or potential claim documentation.
-
-This includes:
-
-- Trees on structures
-- Split trunks
-- Leaning trees after saturated soil
-- Large limbs over driveways or roofs
-- Trees near power lines
-- Pool cage or screen enclosure damage
-- Tight side yards
-- Large debris volumes
-- Crane or rigging needs
-
-A qualified tree crew can help remove the hazard. Your insurance company can help explain the claim process. Those roles overlap, but they are not the same.
-
-## Final Takeaway
-
-After storm damage, the first call depends on the situation.
-
-If there is danger, deal with safety first. If the tree is creating an urgent hazard, a tree service may need to respond quickly. If the property is stable, call insurance early so you know what to document before cleanup.
-
-For Florida homeowners, the smartest approach is simple: stay safe, take photos, get guidance, use written estimates, and avoid assuming coverage until your policy and insurer confirm the next steps.
+This article is general information, not insurance, legal, electrical, or coverage advice.
