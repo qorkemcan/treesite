@@ -1,8 +1,8 @@
 ---
 title: "Do You Need to Call 811 Before Tree Planting or Stump Grinding in Florida?"
-description: "A practical Florida guide to when property owners should call 811 before tree planting or stump grinding, what the law generally requires, and why even small yard projects can hit buried utilities if the site is not marked first."
+description: "A current Florida guide to 811 tickets before planting or stump grinding, two-full-business-day notice, positive responses, the 24-inch tolerance zone, the narrow homeowner exemption, and private utility locating."
 pubDate: 2026-05-03
-updatedDate: 2026-05-03
+updatedDate: 2026-06-29
 author: "Gorkem Can"
 category: "Florida Laws & Property Risk"
 tags:
@@ -13,196 +13,276 @@ tags:
 draft: false
 ---
 
-A lot of homeowners think 811 is only for major digging jobs.
+# Do You Need to Call 811 Before Tree Planting or Stump Grinding in Florida?
 
-A pool project, a new driveway, trenching, or a big construction site? Sure.
+For practical safety, Florida homeowners should notify Sunshine 811 before planting a tree or grinding or pulling a stump.
 
-But tree planting and stump grinding?
+Sunshine 811 specifically tells homeowners to call before stump work because buried facilities can run beneath or through a root zone.
 
-That is where people get caught off guard.
+Florida law contains a narrow exemption for certain shallow work by the owner of a qualifying single-family residential property. That exemption should not be treated as a general permission to guess about depth, easements, or buried lines.
 
-In Florida, those smaller yard projects can still hit buried electric, gas, communications, water, sewer, irrigation, or other underground lines if the site is not located and marked first. And once you are disturbing the ground, the risk is not based on how “small” the project feels. It is based on what is underground and how much the ground is being disturbed.
+This guide explains the workflow. It is not legal advice.
 
-## The short answer
+## The safe-digging workflow
 
-As a practical rule, **yes — Florida property owners should call 811 before both tree planting and stump grinding**.
+| Step | What to do |
+|---|---|
+| 1. Define the project | Mark the planting or grinding area and describe the work accurately |
+| 2. Notify Sunshine 811 | Submit the ticket at least two full business days before work |
+| 3. Preserve the ticket number | Give it to the person or company performing the excavation |
+| 4. Wait for responses | Check positive responses and compare them with field marks |
+| 5. Identify private facilities | Locate irrigation, pool lines, lighting, septic, and owner-maintained systems separately |
+| 6. Review conflicts | Move the project or use required increased caution near marked facilities |
+| 7. Protect the marks | Stop and request remarking if marks are lost or no longer visible |
+| 8. Report contact or damage | Notify the facility operator; call 911 for escaping gas or another regulated hazardous substance |
 
-That is the safest answer, and it is also the answer Sunshine 811 pushes directly in its homeowner safety guidance for planting and for grinding or pulling stumps.
+Do not begin merely because the calendar has advanced. Verify the responses associated with the ticket.
 
-The legal framework matters too. Florida’s Underground Facility Damage Prevention and Safety Act generally requires notice at least **2 full business days** before excavation or demolition, and the statutory definition of excavation is broad enough to cover many ordinary digging activities. There are some narrow exemptions, but they do not make it smart to guess. The safest rule is still: **call before you disturb the ground**.
+## Two full business days
 
-## Why 811 matters for tree planting
+Florida Statute 556.105 generally requires notification at least **two full business days** before excavation or demolition outside state waters.
 
-Homeowners often underestimate how much planting disturbs the ground.
+A notification submitted outside Sunshine 811 business hours is treated as received at the beginning of the next business day.
 
-A tree-planting job can involve:
+Sunshine 811’s homeowner guidance uses the same two-full-business-day instruction.
 
-- digging the planting hole
-- widening the hole to fit root flare or container width
-- cutting through sod and soil
-- removing soil around utility corridors
-- staking or anchoring
-- digging near irrigation, lighting, or service lines
+Business days exclude weekends and specified holidays.
 
-That is why Sunshine 811 specifically tells Florida residents to call before landscaping and planting work. Buried utilities are often damaged during initial planting because people assume a simple shovel job cannot cause a serious hit.
+Use Sunshine 811’s current calendar and ticket system rather than calculating from memory.
 
-## Why stump grinding matters even more than people expect
+## What the 811 ticket does
 
-Stump grinding creates a different kind of danger.
+Sunshine 811 notifies member operators with underground facilities in the described work area.
 
-Homeowners often think the risk is only the wood.
+The system provides:
 
-It is not.
+- ticket or notification number
+- list of notified member operators
+- positive-response communication
+- status information
+- marking coordination
 
-The real problem is that buried lines can run **under** or **through** the root zone. Sunshine 811’s own safety guidance tells people to call 811 before grinding or pulling a stump because utilities can be located under the stump just like irrigation, gas, electric, or communications lines.
+Member operators may:
 
-That is why stump grinding should never be treated like a no-risk cleanup step just because the tree is already gone.
+- mark the approximate horizontal route
+- report no conflict
+- provide another response code
+- communicate a delay or special condition
 
-## What Florida law says in broad terms
+The marks indicate approximate facility location. They do not authorize careless mechanized work beside the line.
 
-Florida’s Underground Facility Damage Prevention and Safety Act says an excavator generally must provide notice **not less than 2 full business days** before starting excavation or demolition that is not beneath state waters.
+## Check positive responses
 
-The statute also defines “excavate” or “excavation” broadly as a manmade cut, cavity, trench, or depression in the earth intended to change grade or level or intended to penetrate or disturb the earth’s surface.
+Florida law requires member operators to provide a positive response, and the excavator must verify the system’s positive responses before beginning.
 
-That is why ordinary homeowners should be cautious about assuming a digging project is “too small to count.”
+Sunshine 811 advises checking:
 
-## The limited homeowner-depth exception
+- which utilities were notified
+- whether each response says clear, marked, or another status
+- whether the response matches what is visible at the site
+- whether a known facility appears unmarked
 
-This is the part many homeowners hear about and oversimplify.
+When a known facility is present but no matching mark or response exists, contact the member operator rather than improvising.
 
-Florida law includes a narrow exemption for certain excavation or demolition by the owner of a single-family residential property, entirely on that land, **only up to a depth of 10 inches**, so long as due care is used and there is no encroachment on a member operator’s right-of-way, easement, or permitted use.
+## The tolerance zone
 
-That exception is real.
+Sunshine 811 describes Florida’s tolerance zone as **24 inches from each outside edge of the underground facility**.
 
-But it is not a good reason to start guessing.
+Within the tolerance zone, Florida law requires increased caution and identifies methods such as:
 
-Why not?
+- hand digging
+- potholing
+- soft digging
+- vacuum excavation
+- other similar procedures used to identify the facility
 
-Because homeowners often do **not** know with confidence:
+Mechanized equipment within the tolerance zone must be supervised by the excavator.
 
-- whether they will stay under 10 inches
-- whether roots or grinding will disturb deeper soil
-- whether there is an easement or utility corridor involved
-- whether the stump or planting location sits directly over buried service
+A stump grinder is mechanized equipment. A mark passing through or close to the stump zone changes the work plan.
 
-So even where an exemption might arguably apply, the safer and more practical answer is still to call 811 first.
+## The narrow single-family homeowner exemption
 
-## Why small yard jobs still hit utilities
+Florida Statute 556.108 exempts certain work from the notification requirement when all key conditions are met.
 
-A lot of underground-facility damage happens during “minor” projects because people assume the site is obvious.
+The excavation must be:
 
-It often is not.
+- performed by the owner of qualifying single-family residential property, or in the specified circumstances for that owner
+- entirely on that land
+- no deeper than 10 inches
+- performed with due care
+- outside any encroachment on a member operator’s right-of-way, easement, or permitted use
 
-Tree planting and stump grinding can hit:
+The exemption does **not** mean:
 
-- electric service lines
-- gas lines
-- communications lines
-- water lines
-- sewer laterals
-- irrigation systems
-- landscape lighting wire runs
+- every homeowner project is exempt
+- a contractor automatically shares the exemption
+- the root zone will remain under 10 inches
+- the property has no easement
+- stump grinding is merely surface cleanup
+- private lines do not matter
 
-And once a stump is involved, the root system may have already wrapped around or grown near underground infrastructure in ways the homeowner cannot see from the surface.
+When any condition is uncertain, notify 811.
 
-## What 811 does — and what it does not do
+## Why planting can conflict with buried facilities
 
-Calling 811 does **not** mean Sunshine 811 itself comes out and marks every line.
+Tree planting may involve:
 
-The system takes your notice and notifies member utility operators so they can identify and mark their underground facilities.
+- a wide hole
+- depth below the root ball
+- removal of soil and roots
+- stakes or anchors
+- work near meters or utility boxes
+- future root growth
+- side-yard service routes
 
-That helps homeowners see approximate locations before the digging or grinding begins.
+Sunshine 811 warns that buried utilities are frequently damaged during initial planting.
 
-It is also important to remember that visible markers and flags are there for a reason. If the marks are unclear, incomplete, or missing near the work area, that is not the moment to “just be careful and keep going.”
+Avoid planting where the mature tree would obstruct required access to utility equipment.
 
-## Why tree planting deserves more caution than people think
+## Why stump grinding deserves special attention
 
-Homeowners often think of planting as gentle.
+A stump sits within the former root zone.
 
-But planting a tree often means a fairly wide hole, especially for larger container stock. Even if the depth does not seem extreme, the width of the dig can still intersect buried lines.
+Possible conflicts include:
 
-And in Florida yards, planting often happens in exactly the places utilities tend to run:
+- electric
+- gas
+- communications
+- water
+- sewer
+- irrigation
+- pool plumbing
+- private electrical
+- landscape lighting
 
-- along side yards
-- near front landscape beds
-- near meter lines
-- near irrigation zones
-- near service routes from the street to the house
+Sunshine 811 specifically instructs homeowners to call before grinding or pulling a stump.
 
-That is why a tree hole can create a much bigger problem than the homeowner expected.
+The grinder can move beyond the visible trunk into flare roots, soil, and hidden material.
 
-## Why stump grinding is often the higher-risk project
+## Public/member facilities versus private facilities
 
-Stump grinding tends to be riskier than homeowners assume because the stump sits where the old root system developed — and roots and utilities often cross paths.
+A normal 811 ticket does not guarantee that every buried line on private property will be marked.
 
-That is also why Sunshine 811 highlights stump grinding specifically in homeowner safety content.
+Member operators generally respond for facilities they own and maintain.
 
-A property owner may think:
+Private or customer-owned systems may include:
 
-**“The tree is gone, so the dangerous part is over.”**
+- irrigation after the meter
+- pool plumbing
+- pool electrical
+- landscape lighting
+- private water or sewer
+- septic components
+- drainage
+- invisible pet fence
+- lines serving detached buildings
 
-But the underground part of the job may be exactly where the utility risk begins.
+A private locator or appropriate specialist may be needed.
 
-## Common homeowner mistakes
+Tell the provider what is known and what remains uncertain.
 
-### Assuming 811 is only for contractors
+## Mark the work area accurately
 
-It is not.
+Before creating the ticket:
 
-### Thinking a shovel-sized planting job is too small to matter
+- identify the address
+- choose the correct side of the property
+- describe planting versus stump grinding
+- define the proposed area
+- note nearby landmarks
+- white-line or otherwise premark when required or useful
+- avoid a ticket so broad that the actual work zone is unclear
 
-Planting still disturbs the ground.
+The ticket should match the location where excavation will occur.
 
-### Treating stump grinding like ordinary surface cleanup
+## Ticket life and changed work
 
-The utilities may run directly under the stump zone.
+Florida Statute 556.105 states that the provided information is valid for 30 calendar days under the statute’s counting rules.
 
-### Relying on memory instead of markings
+A new or updated ticket may be required when:
 
-A homeowner who “thinks the line is farther over” is still guessing.
+- work moves outside the described area
+- the ticket expires
+- marks disappear
+- project scope changes
+- a second phase occurs later
+- the operator response requires follow-up
 
-### Forgetting about easements and frontage areas
+Do not reuse an old ticket for a different stump or planting location.
 
-The site may feel like ordinary yard space and still overlap with buried utility routes.
+## If marks are missing or unclear
 
-## Better questions to ask before starting
+Before work:
 
-Before planting or grinding, it helps to ask:
+1. check positive responses
+2. compare response codes with field conditions
+3. identify any known facility with no mark
+4. contact the member operator when needed
+5. request remarking when marks are lost
+6. delay or relocate the work when conflict is unresolved
 
-- Am I definitely staying shallow, or am I assuming?
-- Could buried lines reasonably be in this area?
-- Is this near a service route, meter, or landscape bed?
-- Does this stump sit where roots may have grown around utilities?
-- Is there any reason to take a risk when 811 marking is free?
+A nearby utility box or permanent marker can indicate that buried facilities are present even when temporary paint or flags are not immediately visible.
 
-Those questions usually make the answer obvious.
+## If a facility is contacted or damaged
 
-## What homeowners should realistically do
+Stop excavation.
 
-The most practical homeowner rule is simple:
+Florida law requires immediate notice to the member operator after contact or damage.
 
-- **Call 811 before tree planting**
-- **Call 811 before stump grinding**
-- Wait for the marks
-- Review the marked area before the work starts
-- Do not improvise if the markings raise questions about the planned dig or grind location
+Call 911 immediately when contact or damage causes the release of natural gas or another regulated hazardous substance.
 
-This is one of those situations where the “extra step” is almost always cheaper than a damaged line, an emergency repair, or a dangerous strike.
+Do not:
 
-## When professional help is worth it
+- cover the damage
+- continue grinding
+- touch exposed electrical material
+- attempt a repair
+- restart until the responsible operator addresses the condition
 
-Professional help is especially useful when:
+## Who should create the ticket?
 
-- the planting hole will be large
-- the stump sits near utilities, irrigation, or hardscape
-- the work area is near the street, meter side, or a known service route
-- the property owner is unsure where easements or buried lines run
-- the stump is large enough that grinding may disturb more than homeowners expect
+Confirm whether the ticket is created by:
 
-If you need help thinking through whether a tree planting or stump-grinding project is likely to disturb buried lines — or how to approach the site more safely before the work starts — you can contact ProTreeTrim’s dispatch line at **(855) 498-2578**.
+- homeowner
+- tree-service provider
+- landscaper
+- stump-grinding provider
+- other excavator
 
-## Final takeaway
+The person performing the excavation needs accurate ticket information and must follow the marked-site and positive-response requirements.
 
-Yes, Florida homeowners should generally call 811 before both tree planting and stump grinding.
+Do not assume that requesting an estimate means a ticket has been created.
 
-The law broadly covers excavation and requires notice before most digging work, even though there are limited residential exceptions. More importantly, Sunshine 811 itself specifically warns people to call before planting and before grinding or pulling stumps. The safest answer is not to gamble on depth or memory. It is to get the site marked first.
+## Before scheduling stump grinding
+
+Ask:
+
+- Who creates the 811 ticket?
+- What exact area is included?
+- Who checks positive responses?
+- What private lines may exist?
+- Who arranges private locating?
+- Does the grinder enter the tolerance zone?
+- What happens if a mark crosses the stump?
+- What part of the stump may remain?
+- Is a new visit required after locating?
+- Are delays or changed scope priced separately?
+
+Utility uncertainty can limit depth or prevent part of the grind.
+
+## Florida stump-grinding service path
+
+Start with Sunshine 811 and any private locating needed.
+
+After the area is ready for a provider review, call **(855) 498-2578** or visit [stump grinding services](/services/stump-grinding/).
+
+ProTreeTrim is a referral and dispatch network, not the utility locator. Property owners and excavators remain responsible for the applicable ticket, response, marking, locating, and safe-excavation process.
+
+## Official sources
+
+- [Florida Legislature — Section 556.105, Procedures](https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0556/Sections/0556.105.html)
+- [Florida Legislature — Section 556.108, Exemptions](https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0556/Sections/0556.108.html)
+- [Sunshine 811 — Safe Planting and Stump Grinding](https://sunshine811.com/safe-planting)
+- [Sunshine 811 — When Can I Dig?](https://sunshine811.com/when-can-i-dig)
+- [Sunshine 811 — About Positive Response](https://sunshine811.com/about-responses)
+- [Sunshine 811 — Private Utility Locators](https://sunshine811.com/private-locators)
