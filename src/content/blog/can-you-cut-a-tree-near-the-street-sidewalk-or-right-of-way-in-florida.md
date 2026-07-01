@@ -1,8 +1,8 @@
 ---
 title: "Can You Cut a Tree Near the Street, Sidewalk, or Right-of-Way in Florida?"
-description: "A practical Florida guide to why trees near the street, sidewalk, swale, or right-of-way are more complicated than backyard trees, and what homeowners should understand before cutting, trimming, or removing them."
+description: "A Florida guide to confirming property lines, road ownership, swale and right-of-way control, utilities, drainage, visibility, permits, and written authorization before trimming or removing a street-edge tree."
 pubDate: 2026-05-02
-updatedDate: 2026-05-02
+updatedDate: 2026-07-01
 author: "Gorkem Can"
 category: "Florida Laws & Property Risk"
 tags:
@@ -13,209 +13,193 @@ tags:
 draft: false
 ---
 
-A tree near the street can look like your tree.
+# Can You Cut a Tree Near the Street, Sidewalk, or Right-of-Way in Florida?
 
-That is exactly what causes trouble.
+Maybe—but the first question is not whether the tree looks like it belongs to your yard.
 
-Homeowners see a tree in the swale, close to the sidewalk, or near the road edge and assume it falls under the same rules as a tree in the back yard. Sometimes that is true. Sometimes it is absolutely not.
+The first question is:
 
-That is why cutting or removing a tree near the street, sidewalk, or right-of-way in Florida is one of the easiest ways for a homeowner to create an unexpected permit or compliance problem.
+**Who controls the exact location where the trunk, roots, and proposed work sit?**
 
-## The short answer
+A tree near a street may involve:
 
-Maybe.
+- private property
+- city or county right-of-way
+- state road right-of-way
+- utility easement
+- drainage easement or swale
+- HOA common area
+- private road
+- sidewalk or driveway-apron rules
+- protected-tree or landscape requirements
 
-You may be able to cut, trim, or remove the tree — but you should not assume the answer is yes just because the tree is close to your lot.
+Do not authorize major pruning or removal until the responsible authority and work boundary are confirmed in writing.
 
-The issue usually depends on questions like:
+## Use this location-and-authority table
 
-- who actually controls the area
-- whether the tree is in a public right-of-way
-- whether the tree is in a swale
-- whether local code treats it as a regulated tree
-- whether utility, sidewalk, drainage, or public-access issues are involved
-- whether the work is minor pruning or full removal
+| Tree location or feature | What to verify | Who may control the decision |
+|---|---|---|
+| Between curb and sidewalk | Right-of-way width, streetscape rules, tree ownership | City, county, HOA, or another road owner |
+| In a swale | Drainage function and right-of-way status | Local public works or drainage authority |
+| Beside a state road | FDOT right-of-way map and permit requirements | Florida Department of Transportation |
+| Near a county or city road | Local right-of-way and tree code | County or municipality |
+| Near a private road | Recorded easement and community documents | Road owner, HOA, or parcel owners |
+| Near sidewalk or driveway apron | Pedestrian access, sight line, and construction standards | Local transportation, engineering, or public works office |
+| Near overhead or underground utilities | Utility ownership and clearance | Utility plus property or road authority |
+| On a parcel boundary | Survey and title documents | Affected owners and controlling authority |
+| Near mangroves or shoreline | State mangrove law and delegated local program | Florida DEP or delegated local government |
+| Clearly inside private yard | Local protected-tree and permit rules may still apply | Property owner and local government |
 
-That is why location matters as much as ownership.
+## Begin with evidence, not appearance
 
-## Why the right-of-way changes everything
+Useful records include:
 
-A right-of-way is not just “space near the road.”
+- boundary survey
+- plat
+- deed and legal description
+- recorded easements
+- FDOT or local right-of-way map
+- utility map or locate marks
+- HOA plan
+- approved landscape plan
+- local permit map
+- photographs showing the trunk relative to curb, sidewalk, and swale
 
-It is a legally important area tied to public access, utilities, drainage, sidewalks, road maintenance, and municipal control. Trees in or near that space may be treated very differently from trees that are clearly and fully inside the private landscape area of the lot.
+A property-appraiser map can be useful for orientation, but it may not replace a survey or official right-of-way record.
 
-So even if the tree is in front of your house, that does not automatically make it a simple homeowner decision.
+FDOT provides right-of-way mapping for state transportation facilities. Local roads require the city, county, or other road owner.
 
-## Trees that often create confusion
+## Identify the road owner
 
-These are the trees most likely to cause homeowner confusion:
+A street may be maintained or controlled by:
 
-- trees in the swale
-- trees between the sidewalk and curb
-- trees near the driveway apron
-- trees near utility corridors
-- trees close to public sidewalks
-- trees planted at the street edge by previous owners or developers
-- trees that appear to sit “on your side” but are actually in a regulated frontage area
+- municipality
+- county
+- FDOT
+- special district
+- HOA
+- private road association
+- developer or another entity
 
-These are exactly the trees people remove too casually.
+Do not assume the nearest government office is the correct one.
 
-## Why local rules matter so much here
+Ask in writing:
 
-Florida does not have one universal statewide answer that resolves every street-edge tree question.
+1. Who owns or controls this right-of-way?
+2. Is the tree public, private, or uncertain?
+3. Is written authorization required?
+4. Is a tree permit required?
+5. Is a right-of-way use permit required?
+6. Does public works or transportation need to review the work?
+7. Does the utility need to perform or approve pruning?
+8. Are replacement, restoration, or traffic-control conditions required?
 
-Local governments often control the details.
+## Swales and drainage
 
-That means the rule may depend on:
+A swale is not simply unused lawn.
 
-- the specific city or county
-- whether the tree is on private property or in the right-of-way
-- whether the tree is protected or regulated
-- whether the work affects a public facility or access route
-- whether drainage or visibility is involved
-- whether the tree is hazardous and how that hazard is documented
+Tree work can affect:
 
-The same type of tree can be treated differently in different jurisdictions depending on location and local code structure.
+- drainage grade
+- culverts
+- sight distance
+- driveway access
+- underground utilities
+- maintenance equipment
+- stormwater flow
+- future public work
 
-## Why swales and sidewalk strips are so risky from a compliance standpoint
+Root grinding, stump excavation, fill, or regrading may be more sensitive than ordinary branch pruning.
 
-These spaces create a false sense of ownership.
+The work order should state whether stump removal and grade restoration are permitted.
 
-Homeowners mow them, edge them, and often maintain them visually. That leads many people to believe they can also remove or heavily prune trees in those areas whenever they want.
+## Sidewalks, driveways, and visibility
 
-But those locations often overlap with public interests such as:
+Before pruning or removal, consider:
 
-- drainage
-- public access
-- line of sight
-- roadway function
-- utility access
-- municipal landscape standards
+- pedestrian clearance
+- sidewalk lifting
+- accessible route
+- driveway sight triangle
+- intersection visibility
+- sign visibility
+- vehicle clearance
+- traffic-control needs
+- roots beneath pavement
+- replacement requirements
 
-That is why a tree in the swale can become a much bigger issue than a tree in the back corner of the lot.
+A tree problem and a sidewalk problem may require separate contractors and approvals.
 
-## When cutting may be especially risky
+## Utilities
 
-Cutting, trimming, or removing a tree near the street, sidewalk, or right-of-way is more legally sensitive when:
+Do not prune or remove a tree in contact with energized conductors.
 
-- the tree is in a swale or frontage strip
-- the tree affects sidewalk alignment or shade
-- the tree is close to a utility line
-- the work changes visibility at an intersection or driveway
-- the tree may be part of required streetscape or landscape compliance
-- the work is substantial enough to qualify as removal rather than maintenance
-- the tree is alleged to be hazardous but not documented properly
+Contact the utility when:
 
-In those situations, the safest assumption is usually **not** “it’s probably fine.”
+- branches touch or may fall into lines
+- the trunk is within the utility work area
+- service drops cross the canopy
+- storm damage changed the tree
+- work requires equipment near conductors
 
-## Minor pruning vs major alteration
+For underground work, use Sunshine 811 and identify private facilities that the public locate may not mark.
 
-A lot of problems start because homeowners treat all cutting the same.
+Use [What to Do If a Tree Is Touching Power Lines](/blog/what-to-do-if-a-tree-is-touching-power-lines-after-a-storm/) for the utility-first process.
 
-It is not.
+## State hazardous-tree documentation has limits
 
-Minor maintenance pruning is one thing.
+Florida Statute 163.045 restricts what a local government may require for qualifying work on defined residential property when the owner possesses the statute’s required documentation that the tree poses an unacceptable risk.
 
-Removing major structure, over-pruning, topping, root cutting, or full removal is another. The larger and more visible the change, the more likely the work attracts attention and triggers questions about whether the tree was in a regulated area to begin with.
+That does not turn every street-edge tree into a private removal decision.
 
-## Why hazard claims do not always solve the problem automatically
+Confirm whether:
 
-Homeowners often say:
+- the property meets the statutory definition
+- the documentation meets the statute
+- the tree is actually on the residential property
+- the tree is in public right-of-way
+- another state law applies
+- a mangrove or another specially regulated resource is involved
 
-**“The tree was dangerous, so I had to deal with it.”**
+Use [Florida Tree Removal Statute 163.045](/blog/florida-statute-163-045-what-homeowners-should-understand-before-tree-removal/) for the documentation framework.
 
-That may be true. But if the tree is near the right-of-way, the hazard issue still may need documentation, and the local government may still want to know exactly where the tree stood and why the work was done.
+## Mangroves are a separate legal category
 
-That is especially true when:
+Florida DEP states that mangrove trimming and alteration are governed by the Mangrove Trimming and Preservation Act. Some work may require a professional mangrove trimmer and a permit.
 
-- the tree was not clearly on private interior landscape area
-- no photos were taken
-- no assessment exists
-- the work was not obviously emergency work
-- the tree is already gone before the issue is reviewed
+Do not apply ordinary right-of-way or residential-tree advice to shoreline mangroves.
 
-Once the tree is removed, proving the situation becomes harder.
+## Document a claimed emergency
 
-## Common homeowner mistakes
+If the tree appears immediately dangerous:
 
-### Assuming front-yard maintenance equals removal authority
+- photograph the full location
+- show curb, sidewalk, road, swale, and utilities
+- record root movement, crack, split, hanging wood, or structure contact
+- contact the road owner, utility, and local emergency or permit office as appropriate
+- preserve names, times, and written instructions
+- define the minimum make-safe work
+- photograph the site after work
 
-It does not.
+Use [What to Document Before Removing a Hazardous Tree](/blog/what-to-document-before-removing-a-hazardous-tree-in-florida/) before evidence disappears.
 
-### Treating swale trees like backyard trees
+## Service paths
 
-That is one of the most common errors.
+After written authority is established:
 
-### Letting a contractor remove a street-edge tree without confirming jurisdiction
+- visit [tree trimming services](/services/tree-trimming/) for a defined pruning scope
+- visit [tree removal services](/services/tree-removal/) for authorized removal
+- visit [emergency response services](/services/emergency-response/) for active failure after public-safety and utility coordination
 
-Verbal reassurance in the field is not the same as legal clarity.
+Call **(855) 498-2578** for Florida physical tree-work routing.
 
-### Believing that if the tree is close to your driveway, it must be yours to cut
+ProTreeTrim does not establish property boundaries, issue permits, authorize right-of-way work, or provide legal advice.
 
-Not necessarily.
+## Sources reviewed
 
-### Ignoring the sidewalk or visibility component
-
-A tree near public pedestrian space often brings different rules into play.
-
-## What homeowners should check before cutting
-
-Before cutting or removing a tree near the street, sidewalk, or swale, it is smart to ask:
-
-- Is the tree fully inside private property or in a frontage/right-of-way area?
-- Does the local city or county regulate trees in that location?
-- Is this routine pruning or major structural cutting?
-- Does the tree affect drainage, sidewalk access, or line of sight?
-- Is the tree near utilities?
-- If the tree is hazardous, do I have documentation?
-
-Even one wrong assumption here can create a compliance problem after the work is done.
-
-## What to document if the tree may truly be hazardous
-
-If the tree is near the right-of-way and appears dangerous, document the condition carefully before anything changes.
-
-That usually means:
-
-- wide shots showing location relative to the road and sidewalk
-- photos of the base
-- the lean if any
-- trunk cracks
-- root movement
-- hanging limbs
-- the tree’s relationship to the driveway, sidewalk, curb, or swale
-- any risk to vehicles, pedestrians, or structures
-
-This becomes especially important if the tree later becomes part of a permit, notice, or after-the-fact review issue.
-
-## Why the safest question is not “Can I cut it?”
-
-The better question is:
-
-**“Whose tree decision is this, and what rules apply to this exact location?”**
-
-That is the question that keeps homeowners out of avoidable trouble.
-
-Because the biggest risk here is not always the chainsaw. Sometimes it is making the wrong assumption about jurisdiction.
-
-## When professional guidance is worth it
-
-Professional guidance is especially useful when:
-
-- the tree is near the road or sidewalk
-- the tree is in a swale or frontage strip
-- the tree appears hazardous
-- the tree is near utilities
-- the work may go beyond light pruning
-- the tree is large and visible
-- you want documentation before making a removal decision that could turn into a code issue
-
-If you need help evaluating a street-edge tree, documenting a hazardous condition, or understanding how to approach a risky tree before a removal becomes a local compliance problem, you can contact ProTreeTrim’s dispatch line at **(855) 498-2578**.
-
-## Final takeaway
-
-Yes, you may be able to cut or remove a tree near the street, sidewalk, or right-of-way in Florida — but only after understanding whether that tree is really in a location you control and what local rules apply.
-
-The biggest mistake homeowners make is assuming that because the tree is in front of their house, it is automatically theirs to handle like any other yard tree. Near roads, sidewalks, swales, and public-access areas, that assumption can get expensive fast.
-
-The safest first move is to confirm location, jurisdiction, and hazard documentation before the tree work happens — not after.
+- [Florida Legislature — Section 163.045, Florida Statutes](https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html)
+- [Florida Department of Transportation — Right of Way Mapping](https://www.fdot.gov/geospatial/rowmap.shtm)
+- [Florida Department of Transportation — Office of Right of Way](https://www.fdot.gov/RightOfWay/default.shtm)
+- [Sunshine 811 — Safe Digging](https://sunshine811.com/)
+- [Florida DEP — Mangrove Frequently Asked Questions](https://floridadep.gov/water/submerged-lands-environmental-resources-coordination/content/mangrove-frequently-asked)
+- [Miami-Dade County — Planting Trees in the Right-of-Way or Swale](https://www.miamidade.gov/global/economy/permits/new-tree-planting.page)
