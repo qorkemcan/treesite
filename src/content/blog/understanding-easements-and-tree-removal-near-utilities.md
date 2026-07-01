@@ -1,8 +1,8 @@
 ---
 title: "Understanding Easements and Tree Removal Near Utilities"
-description: "A practical Florida guide to how utility easements can affect tree removal decisions, why access and vegetation management matter, and what homeowners should verify before acting."
+description: "A Florida homeowner guide to recorded utility easements, overhead and underground facilities, line-clearance safety, utility vegetation rights, Sunshine 811, private lines, permits, access, and authorized tree-removal scope."
 pubDate: 2026-04-22
-updatedDate: 2026-04-22
+updatedDate: 2026-07-01
 author: "Gorkem Can"
 category: "Florida Laws & Property Risk"
 tags:
@@ -13,222 +13,229 @@ tags:
 draft: false
 ---
 
-Utility easements create one of the most misunderstood tree-removal situations on Florida property.
+# Tree Removal Near a Florida Utility Easement: Who Should Act First?
 
-Homeowners often assume the question is simple: **the tree is on my land, so the decision is mine.** Then the easement comes up, the utility starts talking about vegetation management, someone mentions access rights, and suddenly the whole issue feels much less straightforward.
+Owning the land does not always mean the homeowner is the only party with rights in that part of the property.
 
-That confusion is normal.
+A recorded utility easement may allow access, installation, inspection, maintenance, repair, replacement, and vegetation management. Overhead lines, underground facilities, service drops, transformers, and private lines also create different safety and authorization questions.
 
-A utility easement does not necessarily mean you lose ownership of the land. But it often does mean that another party has legal rights tied to access, infrastructure, and vegetation conditions inside that easement area. That is why tree removal near utilities is not just a landscaping decision. It can also become a property-rights, access, and infrastructure-protection issue at the same time.
+Before hiring a tree crew, identify the facility, easement, utility contact, local tree rules, underground locate, and the exact private scope.
 
-## Why easements matter so much in Florida
+## Start with the utility condition
 
-Florida properties often sit near:
+| Condition | First contact | Private tree work |
+|---|---|---|
+| Tree or limb touching an energized line | Utility or 911 for immediate life danger | Do not begin until utility makes the scene safe |
+| Tree near distribution lines | Utility vegetation-management program | Only appropriately qualified line-clearance work near conductors |
+| Branch near the service drop to the home | Utility for ownership/safety instructions | Follow utility direction before pruning |
+| Tree near underground facilities | Sunshine 811 before covered excavation | Private locate may also be needed |
+| Tree blocks transformer, pole, or easement access | Utility/easement holder | Work must preserve required access |
+| Tree is inside recorded easement but away from active facilities | Review easement and utility requirements | Local permit and tree scope may still apply |
+| Tree outside easement but could fall into lines | Utility guidance and qualified assessment | Plan removal with line and rigging controls |
+| Storm-damaged tree across lines | Utility emergency channel | Stay away; ordinary tree service should not enter |
 
-- overhead electric lines
-- underground utility corridors
-- drainage and service easements
-- rear-lot or side-yard utility access strips
-- areas where vegetation management affects storm reliability
+## Confirm whether an easement exists
 
-That matters because trees near those corridors can create more than one concern at once:
+Review:
 
-- utility access problems
-- outage risk
-- conflict over who can trim or remove what
-- uncertainty about whether the owner needs approval before acting
-- safety issues if the tree is close to energized equipment or service routes
+- title policy
+- deed
+- recorded easement
+- survey
+- plat
+- utility map
+- HOA documents
+- subdivision records
+- recorded amendments
+- utility correspondence
 
-In other words, a tree near utilities is rarely just “a tree in the yard.”
+Identify:
 
-## What an easement usually means in practical terms
+- easement width
+- location
+- named holder
+- facilities covered
+- access rights
+- vegetation language
+- restrictions on structures or planting
+- restoration obligations
+- notice procedures
 
-Homeowners often hear the word **easement** and assume it means one of two extremes:
+Do not assume that a pole, transformer, or utility visit proves the exact legal boundaries of the easement.
 
-- “The utility owns that part of my property.”
-- “The easement changes nothing because I still own the land.”
+## Separate ownership from utility rights
 
-In real life, the answer is usually somewhere in the middle.
+The homeowner may own the underlying parcel while the utility holds defined rights over the easement area.
 
-An easement often means the property owner still owns the underlying land, but another entity has certain rights to use that area for a specific purpose. In the utility context, that purpose may include:
+That can affect:
 
-- access
-- maintenance
-- repair
-- replacement
-- vegetation management affecting utility operations
+- access gates
+- fences
+- trees
+- sheds
+- pools
+- retaining walls
+- grading
+- planting
+- excavation
+- parking
+- storage
+- restoration after utility work
 
-That is why tree questions near easements should be approached with more care than ordinary backyard landscaping.
+The easement document and utility rules control more than general neighborhood custom.
 
-## Why trees near utilities create a different kind of removal question
+## Overhead lines require utility-first safety
 
-The main issue is not only whether the tree is healthy or unhealthy.
+Assume every overhead wire is energized.
 
-It is also whether the tree affects:
+Do not:
 
-- clearance around lines
-- access to utility equipment
-- vegetation-management obligations
-- storm-hardening and outage-prevention work
-- safe maintenance of the system
+- touch the tree or branch when it contacts a line
+- use ladders, pole saws, lifts, ropes, or cranes near lines without proper qualification
+- pull a line-contact tree with a vehicle
+- approach a downed conductor
+- rely on cable appearance to identify voltage
+- allow an ordinary tree crew to “just be careful”
 
-That means a homeowner may be focused on shade, roots, or appearance while the utility is focused on reliability, access, and safety.
+FPL publicly states that only specially trained line-clearing professionals should work around power lines. Other utilities have their own programs and contractor requirements.
 
-Both perspectives may matter at the same time.
+Call the utility named on the bill or equipment. In an immediate life-safety emergency, call 911.
 
-## The first question homeowners should ask
+## Distribution line, service drop, and communications are different
 
-Before planning removal or major trimming near a utility area, ask:
+The correct contact may depend on the facility.
 
-**Is this tree simply near a utility, or is it within an actual easement or utility-maintained corridor?**
+Document photographs from a safe distance and ask:
 
-That distinction matters because “close to utilities” and “inside a utility easement” are not always the same thing.
+- Is this the utility’s distribution line?
+- Is it the service drop?
+- Is it a communication cable?
+- Who owns the pole?
+- Who is responsible for vegetation clearance?
+- Does the utility need to de-energize or temporarily remove a line?
+- Is a vegetation request required?
+- Which contractor qualifications apply?
+- Will the utility remove debris?
+- What part remains the owner’s responsibility?
 
-The legal and practical answer can change depending on:
+Do not identify wires by guesswork.
 
-- whether the tree is in a recorded easement
-- whether the utility has vegetation-management rights there
-- whether the issue involves overhead or underground infrastructure
-- whether the work would affect access or system safety
+## Underground work: use Sunshine 811
 
-## Why utility vegetation management matters
+Florida’s underground-facility law establishes procedures for excavation notice. For covered land excavation, notice is generally required at least two full business days before work begins.
 
-Florida utilities do not treat vegetation as a minor issue.
+Stump grinding, root cutting, excavation, crane outrigger placement, grading, and replacement planting may affect underground facilities.
 
-Storm-reliability and restoration planning in the state often emphasizes vegetation management in rights-of-way and easements because trees and limbs are a major source of weather-related outages. That is why homeowners should not assume a tree near utility infrastructure is only a private landscaping concern. Utility vegetation programs are built around keeping lines and access areas workable during normal operations and storm response. citeturn412340search8turn412340search16turn412340search12
+The locate request should accurately describe:
 
-## A common misunderstanding: “If it’s in my yard, I can remove it however I want”
+- address
+- work area
+- type of work
+- start date
+- depth and equipment when requested
+- contact person
+- special access
+- white-lining or marking area when applicable
 
-This is one of the biggest mistakes homeowners make around easements.
+Keep the ticket number and positive responses.
 
-The better practical question is:
+## 811 does not mark every private facility
 
-**What rights do I have here, and what rights does the utility or easement holder also have?**
+Sunshine 811 notifies member operators. The property may also contain private:
 
-That matters because a tree near utility infrastructure may involve several overlapping issues:
+- irrigation
+- landscape lighting
+- gate power
+- pool equipment
+- septic components
+- propane
+- private water
+- private electric after the meter
+- communication lines
+- dock or seawall utilities
 
-- land ownership
-- recorded easement rights
-- utility access
-- vegetation-management standards
-- safety restrictions on who should perform the work
-- local permit or tree-protection rules
+Ask whether a private locate is needed before digging or grinding.
 
-This is exactly the kind of situation where “my yard, my tree” may be too simple to be reliable guidance.
+## Preserve easement access
 
-## Why the utility side of the issue is not only legal—it is also safety-related
+A tree-removal plan should not leave:
 
-Homeowners sometimes think the only reason to slow down is paperwork.
+- logs in the corridor
+- stump height that blocks equipment
+- chips against cabinets or transformers
+- damaged gate access
+- ruts that prevent service vehicles
+- replacement trees that recreate the conflict
+- fences or landscaping that violate clearance
 
-That is not the whole problem.
+Ask the utility what final condition it requires.
 
-If a tree is near a utility corridor, the issue may also involve:
+## Local tree rules may still apply
 
-- line clearance
-- unpredictable movement during cutting
-- access to energized equipment
-- service drop hazards
-- storm damage near infrastructure
-- the risk of interfering with vegetation-management work already planned
+A utility easement does not automatically eliminate:
 
-That is why many trees near utilities should never be treated like ordinary DIY trimming or casual removal projects.
+- city or county tree permits
+- protected-tree rules
+- replacement planting
+- HOA approval
+- right-of-way permits
+- mangrove regulation
+- conservation restrictions
+- nesting or wildlife obligations
+- debris rules
 
-## What if the tree is causing a problem now?
+At the same time, a local permit does not authorize unsafe work around energized facilities.
 
-Sometimes the tree is not just “near a utility.” It is actually creating concern because it is:
+## Build a written scope after utility review
 
-- overhanging service lines
-- leaning toward utility infrastructure
-- storm-damaged near a corridor
-- blocking access to equipment
-- close enough that future growth will create recurring problems
+The tree estimate should identify:
 
-That does not automatically answer who should act first or how. But it does mean the homeowner should think about the tree as part of a larger utility-access or utility-safety issue, not just a private landscape preference.
-
-## Why recorded easements matter more than assumptions
-
-A lot of homeowners rely on informal logic:
-
-- “There’s a pole nearby, so I guess this is an easement.”
-- “The utility came through here once, so it must be theirs.”
-- “No one has touched this strip in years, so I can probably do what I want.”
-
-Those assumptions are exactly what create avoidable mistakes.
-
-The better approach is to verify what the property records, survey, plat, or related documents actually show. Easement issues are usually much easier to understand when the owner knows whether there is a real recorded corridor and where it sits.
-
-## A common mistake: solving the landscaping problem but ignoring the access problem
-
-A homeowner may want to remove a tree because of roots, debris, or visual clutter. But if the tree also sits in a utility-access area, the bigger long-term question may be:
-
-**What does the easement require this area to remain usable for?**
-
-That matters because even a healthy tree can become the wrong tree if it interferes with a corridor that needs to stay accessible or clear.
-
-## Another common mistake: thinking local permits are the only question
-
-They may still matter, especially if the city regulates tree removal or protected trees. But a local permit answer does not automatically settle the easement answer.
-
-A homeowner may still need to think about:
-
-- the easement holder’s rights
-- whether utility access is affected
-- whether line-adjacent or corridor-adjacent safety concerns limit who should perform the work
-- whether the tree is in a place where a utility may have its own vegetation-management role
-
-That is why utility-tree issues are usually multi-layered, not single-layered.
-
-## What homeowners should verify before acting
-
-Before removing or heavily trimming a tree near utility infrastructure, check:
-
-- whether the property has a recorded easement
-- whether the tree is actually inside that easement area
-- whether the issue involves overhead or underground utilities
-- whether the tree is affecting access or line clearance
-- whether local tree rules still apply
-- whether the work creates safety issues that make DIY action a bad idea
-
-These questions usually matter more than trying to rely on general neighborhood assumptions.
-
-## Why utilities and homeowners sometimes approach the same tree differently
-
-This is important to understand.
-
-A homeowner may see:
-
-- shade
-- beauty
+- tree and easement location
+- utility facility
+- utility contact or work order
+- de-energization or line-drop plan
+- qualified line-clearance provider
+- crane or rigging plan
+- underground locate
+- private locate
+- access protection
+- stump treatment
 - debris
-- roots
-- storm worry
+- restoration
+- exclusions
+- permits
+- utility hold points
 
-The utility may see:
+Do not accept a scope that treats utility coordination as an afterthought.
 
-- outage risk
-- clearance problems
-- access restrictions
-- vegetation management needs
-- restoration complications after major weather events
+## Emergency conditions
 
-Neither perspective makes the other irrelevant. But it explains why tree disputes near easements often feel like people are talking past each other.
+Keep everyone away when a tree:
 
-## A practical mindset for homeowners
+- contacts a conductor
+- hangs from wires
+- pulls a service mast
+- rests on a transformer
+- blocks a pole or utility crew
+- has a root plate lifting near underground equipment
+- may fall into lines
+- is burning or arcing
 
-The safest approach is:
+Do not wait under the tree for a contractor. Contact the utility and emergency services.
 
-1. confirm whether an easement exists and where  
-2. figure out whether the tree is actually inside or affecting that easement  
-3. separate ownership from access rights  
-4. treat utility-adjacent work as a safety question as well as a property question  
-5. avoid assuming a private landscaping decision stays purely private once utility access is involved  
+## Requesting private tree work after utility clearance
 
-That is a much more stable way to think about the issue than guessing based on where the tree happens to stand.
+ProTreeTrim connects Florida homeowners and businesses with independently owned local tree-service providers.
 
-## Final takeaway
+Call **(855) 498-2578** after receiving utility instructions and confirming the private scope. Use [tree removal services](/services/tree-removal/) for an authorized removal or [emergency tree-removal services](/services/emergency-tree-removal/) after the utility has made an energized-line scene safe.
 
-Understanding easements and tree removal near utilities in Florida starts with one key idea: owning the land does not always mean you are the only party with rights or interests affecting that strip of property.
+## Official sources reviewed
 
-A utility easement can change the practical tree-removal question by introducing access, vegetation-management, and safety concerns that go beyond ordinary landscape decisions. That is why the smartest first move is not assuming the answer. It is verifying whether the tree sits in or affects a utility corridor and whether the issue involves both property rights and infrastructure protection at the same time.
+- [Florida Statutes Chapter 556 — Underground Facility Damage Prevention and Safety](https://leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0556/0556.html)
+- [Florida Statutes §556.105 — Excavation Notice Procedures](https://leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0556/Sections/0556.105.html)
+- [Sunshine 811](https://sunshine811.com/)
+- [FPL — Trees and Power Line Safety](https://www.fpl.com/reliability/trees/power-line-safety.html)
+- [FPL — Line Clearing Program](https://www.fpl.com/reliability/trees/line-clearing.html)
+- [FPL — Easement Facts](https://www.fpl.com/partner/pdf/easement-facts.pdf)
 
-The closer a tree sits to utilities, the less reliable “common sense” usually becomes as a legal guide.
+This article provides general information, not easement interpretation, legal, utility, excavation, electrical-safety, or tree-risk advice.
