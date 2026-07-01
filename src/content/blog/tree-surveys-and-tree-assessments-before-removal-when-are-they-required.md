@@ -1,8 +1,8 @@
 ---
 title: "Tree Surveys and Tree Assessments Before Removal: When Are They Required?"
-description: "A practical Florida guide to when tree surveys, tree inventories, and tree assessments are required before removal, why local permit systems matter, and when a homeowner should document a tree even if no formal survey is mandated."
+description: "A Florida decision guide to tree surveys, inventories, condition assessments, risk documentation, permit packages, development plans, boundary evidence, and the professionals who prepare each record before removal."
 pubDate: 2026-05-03
-updatedDate: 2026-05-03
+updatedDate: 2026-07-01
 author: "Gorkem Can"
 category: "Florida Laws & Property Risk"
 tags:
@@ -13,251 +13,293 @@ tags:
 draft: false
 ---
 
-A lot of Florida property owners assume that if a tree needs to come down, the only real question is whether someone can cut it safely.
+# Tree Survey or Tree Assessment Before Removal: Which Document Do You Need?
 
-Sometimes that is true.
+A tree survey and a tree assessment answer different questions.
 
-Other times, the more important question comes first:
+A **tree survey or inventory** usually records where trees are located and what is present on a site. A **tree assessment** evaluates condition, defects, risk, preservation potential, or the reason for proposed work.
 
-**Do I need a tree survey, a tree assessment, or both before anything is removed?**
+Some Florida removals need neither formal document. Others require one, both, or a larger permit and development package.
 
-That is where people get confused.
+The correct document depends on the property, jurisdiction, tree, project, and reason for removal.
 
-Because a **tree survey** and a **tree assessment** are not the same thing, and Florida does not have one single statewide rule that applies to every tree on every property the same way.
+## Start with the document-purpose matrix
 
-Some removals are simple. Some need documentation. Some are permit-driven. Some are tied to development. Some involve protected trees. And some are not about permits at all — they are about proving why the removal made sense before the tree is gone.
+| Document | Main question answered | Common preparer | Typical use |
+|---|---|---|---|
+| Boundary survey | Where is the legal property line? | Florida-licensed surveyor and mapper | Boundary tree, encroachment, easement, construction |
+| Tree survey or inventory | Where are the trees and what are their species and sizes? | Professional required by the local application; sometimes surveyor, arborist, landscape architect, or design team | Development, protected-tree review, site plan |
+| Tree condition assessment | What is the tree’s health and structural condition? | Qualified tree professional acceptable to the reviewer | Maintenance, preservation, removal justification |
+| Tree risk assessment | What is the likelihood and consequence of failure over a stated time frame? | Qualified assessor using an accepted method | Hazard decision, documentation, insurer or local review |
+| Florida §163.045 documentation | Does a qualifying tree on qualifying residential property pose an unacceptable risk? | ISA-certified arborist or Florida-licensed landscape architect using the statutory process | State residential hazardous-tree pathway |
+| Site plan with tree overlay | How do trees relate to construction, grading, utilities, access, and preservation areas? | Project design team under local requirements | Building or development application |
+| Permit application package | What does the local authority require before approving work? | Owner and required professionals | Protected-tree removal, relocation, mitigation |
+| Photo and work record | What did the tree and site look like before work? | Owner and contractor | Ordinary documentation, claim, HOA, dispute |
 
-## The short answer
+A document with the wrong purpose may be accurate and still be unusable for the decision.
 
-No, Florida property owners do **not** always need a formal tree survey or tree assessment before removing a tree.
+## Tree survey: location and inventory
 
-But one or both may be required or strongly advisable when the removal involves:
+A tree survey or inventory may record:
 
-- a local permit application
-- protected or regulated trees
-- development or site-plan review
-- larger projects with environmental review
-- hazardous-tree documentation
-- disputes with neighbors, HOAs, insurers, or local government
-- construction near trees that may be preserved or removed
-
-So the better question is not:
-
-**“Are surveys always required?”**
-
-It is:
-
-**“What kind of tree, what kind of property, and what kind of process am I actually dealing with?”**
-
-## Tree survey vs tree assessment: what is the difference?
-
-This is where the confusion usually begins.
-
-### Tree survey
-
-A tree survey is usually about **location and inventory**.
-
-It may document things like:
-
-- where the trees are on the site
+- tree number
 - species
-- size
-- number of trees proposed for removal
-- which trees are protected
-- which trees are to be preserved
-- how the trees relate to site boundaries, improvements, and future construction
-
-In other words, a tree survey is often a **site-planning document**.
-
-### Tree assessment
-
-A tree assessment is usually about **condition and judgment**.
-
-It may address things like:
-
-- health
-- structural defects
-- lean
-- cracks
-- decay
-- hazard level
-- whether removal is justified
-- whether pruning or monitoring could work instead
-
-In other words, a tree assessment is often a **tree-condition document**.
-
-Some projects need one. Some need both.
-
-## When a tree survey is more likely to be required
-
-A tree survey is more likely to matter when the removal is part of a broader site or permit process.
-
-That often includes:
-
-- development review
-- redevelopment of an existing site
-- larger landscape or construction projects
-- removal of protected trees
-- plans showing preservation vs removal
-- projects where tree credits, debits, or mitigation are part of local review
-
-This is not usually about proving one tree is hazardous. It is about showing the local government or reviewer how the trees fit into the site plan.
-
-## When a tree assessment is more likely to be required
-
-A tree assessment is more likely to matter when the key issue is **why** a particular tree should come down.
-
-That often includes:
-
-- a tree claimed to be hazardous
-- a tree with visible defects
-- a removal being justified before permitting staff, an HOA, or an insurer
-- a dispute over whether a tree is actually dangerous
-- a storm-damaged tree where documentation matters before the site changes
-- a situation where the owner wants stronger proof before making a costly decision
-
-This is not mainly a mapping question. It is a judgment question.
-
-## Why Florida does not have one simple statewide rule
-
-This is one of the most important things property owners need to understand.
-
-Florida does have one major statewide rule that affects residential hazardous-tree removals. But Florida also leaves a lot of tree regulation to local governments, local permit systems, and project-review processes.
-
-That is why one property owner may only need good documentation from the right professional, while another may need a permit package with maps, species lists, and tree-specific reports.
-
-The process changes based on:
-
-- property type
+- trunk diameter
 - location
-- local code
-- whether the project is stand-alone or part of development
-- whether the tree is protected or regulated
-- whether the tree is being removed for hazard reasons or site-planning reasons
+- dripline or canopy
+- condition category
+- proposed preservation, relocation, or removal
+- protected status
+- relationship to property lines
+- structures
+- utilities
+- grading
+- access
+- construction limits
+- replacement or mitigation credit
 
-## A major statewide example: hazardous-tree documentation on residential property
+Local application instructions determine the required format and who may certify it.
 
-Florida Statute 163.045 matters here.
+Do not assume a contractor sketch is equivalent to a survey, inventory, or site plan accepted by the jurisdiction.
 
-For qualifying residential property, a local government may not require notice, application, approval, permit, fee, or mitigation for pruning, trimming, or removing a tree if the owner has documentation from an **ISA-certified arborist** or a **Florida-licensed landscape architect** stating that the tree poses an unacceptable risk to persons or property.
+## Tree assessment: condition and judgment
 
-That is not the same thing as a tree survey.
+A condition or risk assessment may address:
 
-It is much closer to a tree-risk assessment or professional condition determination.
+- live crown
+- dieback
+- trunk defects
+- branch unions
+- decay indicators
+- roots and root plate
+- recent movement
+- lean
+- storm damage
+- targets
+- likelihood of failure
+- consequence of failure
+- mitigation options
+- inspection limitations
+- recommended monitoring interval
 
-So in this kind of residential hazardous-tree situation, the critical pre-removal document is often not a survey at all. It is the right **professional assessment**.
+A good assessment states what was inspected, when it was inspected, what method was used, and what could not be seen.
 
-## A major local example: permit-driven tree documentation
+It should not promise that a tree is “safe.”
 
-Local permit systems can require more than a simple opinion letter.
+## Florida Statute 163.045 is a specific documentation pathway
 
-For example, Tallahassee’s tree-permit process says stand-alone removals for smaller projects typically require key information including a **site map with tree locations**, species, size, number of trees proposed for removal, and compensation method.
+Florida Statute 163.045 applies to defined residential property and defined documentation.
 
-That is clearly tree-survey-style information.
+The current statute describes documentation as an onsite assessment performed under the tree-risk-assessment procedures identified by the statute and signed by either:
 
-Tampa’s published tree permit checklist goes even further for certain applications, calling for a **site plan with tree survey overlay**, a **Tree Evaluation Report**, and a **Tree Table**.
+- an arborist certified by the International Society of Arboriculture, or
+- a Florida-licensed landscape architect
 
-That is a strong example of a Florida reality property owners often miss:
+When the statutory conditions are met and the documentation states that the tree poses an unacceptable risk to persons or property, the statute limits what a local government may require for that pruning, trimming, or removal.
 
-Some removals require **mapping plus evaluation**, not just one or the other.
+That does not mean:
 
-## When development projects push the process further
+- every property qualifies
+- every tree qualifies
+- an owner’s photographs are enough
+- an ordinary estimate is statutory documentation
+- every arborist letter uses the required process
+- HOA approval disappears
+- utility, easement, mangrove, wildlife, or property-right issues disappear
+- a development project may ignore its approved site plan
 
-Once a removal is tied to a larger project, the documentation usually becomes more detailed.
+Keep the signed documentation with the property records.
 
-Environmental and site-development review processes often need:
+## Determine the property and project type
 
-- tree inventories
-- protected-tree analysis
-- preservation plans
-- mitigation planning
-- construction drawings showing how regulated trees are handled
-- natural-features review
+Use this screen before ordering a report.
 
-That means the question is no longer, “Can I remove this tree?”
+### Stand-alone single-family tree decision
 
-The question becomes, “How is this site documenting all affected trees as part of the larger approval process?”
+Possible needs:
 
-## Situations where a formal survey may not be required but documentation is still smart
+- local permit or exemption review
+- tree condition assessment
+- statutory risk documentation
+- HOA approval
+- photographs
+- utility coordination
+- written removal estimate
 
-Even when a permit office is not demanding a tree survey, property owners are often better off documenting the site before removal when:
+A full site tree survey may be unnecessary unless the local authority or boundary question requires one.
 
-- the tree appears hazardous
-- a neighbor may complain later
-- the tree is near the property line
-- the tree is large and visible
-- the HOA may ask why it was removed
-- storm damage changed the tree
-- insurance questions may follow
-- the owner wants proof of what the tree looked like before it disappeared
+### Development, addition, pool, driveway, or major site work
 
-This may not rise to the level of a full tree survey, but it still matters.
+Possible needs:
 
-Photos, condition notes, defect images, and a written evaluation can make a huge difference later.
+- boundary and topographic survey
+- tree inventory
+- tree table
+- site-plan overlay
+- preservation plan
+- root-protection area
+- grading and utility coordination
+- removal and relocation plan
+- mitigation schedule
+- professional evaluation
 
-## Common situations where homeowners usually do not need a full tree survey
+The tree documents become part of a larger approval package.
 
-A full tree survey is usually less likely to be necessary when:
+### Boundary or neighbor dispute
 
-- it is one ordinary backyard tree
-- no local permit or protected-tree question applies
-- no development project is involved
-- the tree is clearly hazardous and the owner has proper qualifying documentation
-- the site is not part of a broader regulated review
+Possible needs:
 
-In those cases, a formal survey may be overkill.
+- boundary survey
+- tree location relative to the line
+- photographs
+- tree assessment
+- legal review
 
-But even then, a good assessment or documentation file may still be the smart move.
+A tree condition assessment does not establish ownership. A survey does not decide every property-law dispute.
 
-## Common homeowner mistakes
+### Insurance or damage claim
 
-### Thinking a tree survey and a tree assessment are the same thing
+Possible needs:
 
-They usually serve different purposes.
+- photographs before cleanup
+- date and storm records
+- tree condition assessment
+- scope of emergency work
+- repair estimates
+- insurer-requested documents
 
-### Assuming one statewide Florida rule answers every local permit question
+Ask the insurer what it needs before the site changes, when safety permits.
 
-It does not.
+## Check the local application, not a generic Florida checklist
 
-### Removing first and trying to build the documentation later
+Tree requirements vary by city and county.
 
-That is almost always the harder path.
+Official local applications may specify:
 
-### Believing one quick phone photo is enough
+- tree-size threshold
+- protected species
+- exempt species
+- tree table fields
+- site-plan scale
+- survey overlay
+- photograph format
+- evaluator qualifications
+- mitigation
+- replacement location
+- inspection
+- posting
+- permit expiration
+- development-plan revision
 
-It often is not if the tree was large, regulated, or controversial.
+Use the current official page for the exact address. Save the instructions and submission receipt.
 
-### Treating hazard documentation like site-plan documentation
+## Who should prepare the document?
 
-A risk report is not the same thing as a tree map.
+| Need | Professional to contact first |
+|---|---|
+| Legal boundary | Florida-licensed surveyor and mapper |
+| Tree inventory for development | Professional specified by the jurisdiction and design team |
+| Tree condition or pruning plan | Qualified arborist or other accepted tree professional |
+| §163.045 documentation | ISA-certified arborist or Florida-licensed landscape architect |
+| Landscape and site design | Florida-licensed landscape architect when the scope requires it |
+| Structural, retaining-wall, or foundation question | Appropriate engineer |
+| Title, ownership, easement, or legal authority | Florida attorney |
+| Physical removal estimate | Tree-service provider after authority is established |
 
-## Better questions to ask before removal
+Verify credentials directly with the issuing organization or Florida licensing system.
 
-Before moving forward, it helps to ask:
+## Ask the reviewer before paying for the wrong report
 
-- Is this a hazard-driven removal or a permit-driven removal?
-- Do I need a location/inventory document, a condition assessment, or both?
-- Is the tree part of a larger site or development process?
-- Is the tree protected, visible, or likely to be questioned later?
-- Am I trying to prove where the tree is, why it should come down, or both?
+Send the jurisdiction:
 
-Those questions usually reveal what kind of documentation actually matters.
+- address
+- parcel number
+- tree species if known
+- trunk diameter
+- photographs
+- project description
+- proposed action
+- whether construction is involved
+- whether the tree is claimed to be hazardous
+- whether an HOA or easement is involved
 
-## When professional help is worth it
+Ask:
 
-Professional help is especially useful when:
+1. Is a permit, exemption record, or development revision required?
+2. Is a tree survey, inventory, assessment, or risk report required?
+3. Who may prepare and sign it?
+4. Is a boundary or topographic survey required?
+5. Is there a current template?
+6. Is mitigation or replacement required?
+7. Must the tree remain until inspection?
+8. What records should be posted or kept onsite?
 
-- the tree may be protected or locally regulated
-- the removal is part of a development or renovation project
-- the owner wants to rely on Florida’s hazardous-tree residential documentation pathway
-- the tree is large, visible, or disputed
-- local permit instructions seem to require maps, overlays, or tree reports
-- the property owner wants to avoid an after-the-fact documentation problem
+Request the answer in writing.
 
-If you need help deciding whether a tree removal situation calls for a tree survey, a tree assessment, or simply stronger documentation before the work begins, you can contact ProTreeTrim’s dispatch line at **(855) 498-2578**.
+## Build a useful pre-removal record
 
-## Final takeaway
+Even without a formal survey, preserve:
 
-Tree surveys and tree assessments before removal are not automatically required for every Florida tree job.
+- full tree
+- trunk and root flare
+- crown
+- defects
+- targets
+- property line context
+- utility context
+- measurements
+- recent change
+- storm date
+- prior failures
+- HOA correspondence
+- local determination
+- professional report
+- written estimate
+- permit or exemption record
+- before-and-after photographs
 
-But they can become very important when local permits, protected-tree rules, development review, or hazardous-tree documentation are involved. A tree survey usually answers **where and what**. A tree assessment usually answers **why**. The smarter the owner is about that distinction before removal, the less likely the project turns into a paperwork or proof problem later.
+Do not remove the tree first and try to reconstruct the evidence later.
+
+## Common document mistakes
+
+### Ordering a boundary survey to prove a tree is hazardous
+
+A survey locates the tree. It does not assess risk.
+
+### Ordering an arborist report to settle ownership
+
+A tree assessment does not establish the legal line or title.
+
+### Using an estimate as a risk assessment
+
+A proposal may describe work and price without applying a formal assessment method.
+
+### Using §163.045 documentation for a development-plan change
+
+A qualifying residential hazard pathway is not automatically a substitute for construction and site-plan requirements.
+
+### Accepting an unsigned report
+
+Confirm signatures, credentials, date, scope, and intended use.
+
+### Letting the report become stale
+
+Tree condition and site exposure can change. Ask whether an update is required before work.
+
+## Requesting physical work after documentation is complete
+
+ProTreeTrim connects Florida homeowners and businesses with independently owned local tree-service providers.
+
+Call **(855) 498-2578** after the required document, property authority, utility coordination, permit or exemption record, and work scope are clear. Use [tree removal services](/services/tree-removal/) for an authorized removal.
+
+For local protection systems, see [Tree Preservation Orders in Florida Cities](/blog/tree-preservation-orders-in-florida-cities/). For enforcement exposure, see [Can a City Fine You for Unauthorized Tree Removal in Florida?](/blog/can-a-city-fine-you-for-unauthorized-tree-removal-in-florida/).
+
+## Official sources reviewed
+
+- [Florida Statutes §163.045 — Tree Pruning, Trimming, or Removal on Residential Property](https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html)
+- [City of Tampa — Self-Certified Private Arborist Program](https://www.tampa.gov/construction-services/tree-information/scpa)
+- [City of Tampa — Tree Removal Statutory Exemption](https://www.tampa.gov/construction-services/tree-information/interpretation-tree-removal-statutory-exemption)
+- [City of Miami — Obtain a Standalone Tree Permit](https://www.miami.gov/Permits-Construction/Trees/Get-a-Standalone-Tree-Permit-No-Construction)
+- [ISA — Find an Arborist](https://www.treesaregood.org/findanarborist)
+
+This article provides general information, not a permit determination, survey, tree-risk assessment, design service, insurance opinion, or legal advice.

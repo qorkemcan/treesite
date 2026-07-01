@@ -1,8 +1,8 @@
 ---
 title: "Tree Preservation Orders in Florida Cities"
-description: "A practical Florida guide to how city tree preservation rules typically work, why local permit requirements vary, and what homeowners should verify before removing a protected tree."
+description: "A Florida homeowner workflow for city and county tree-protection rules, including jurisdiction, protected status, permits, hazardous-tree documentation, mitigation, HOA approval, development plans, and written verification before removal."
 pubDate: 2026-04-22
-updatedDate: 2026-04-22
+updatedDate: 2026-07-01
 author: "Gorkem Can"
 category: "Florida Laws & Property Risk"
 tags:
@@ -13,206 +13,284 @@ tags:
 draft: false
 ---
 
-The phrase **tree preservation order** sounds like it should mean one clear statewide rule.
+# Tree Preservation Orders in Florida Cities: What Rule Controls Your Property?
 
-In Florida, it usually does not.
+Florida does not use one statewide system called a “tree preservation order.”
 
-What homeowners often call a “tree preservation order” is usually part of a city or county’s broader **tree protection, tree preservation, or tree permit** system. That is why the conversation gets confusing so fast. One city may focus on protected-tree permits, another may regulate by species and DBH, another may have replacement or mitigation requirements, and another may treat residential lots differently from commercial sites. So the real problem is not only understanding whether a tree is protected. It is understanding **which local rule set controls the property you actually own**.
+Homeowners usually mean a local tree-protection ordinance, protected-tree category, removal permit, development condition, right-of-way rule, mitigation requirement, or recorded approval that limits what may be done to a tree.
 
-That is the point homeowners miss most often.
+The controlling rule comes from the exact property address, jurisdiction, tree, project, and reason for work.
 
-## Why this issue gets misunderstood
+## Follow the verification sequence
 
-People hear one city’s rule and assume it applies across Florida.
+| Step | Question | Record to save |
+|---|---|---|
+| 1 | Is the property inside a city or unincorporated county? | Official jurisdiction or parcel result |
+| 2 | Which current tree code and permit page apply? | Ordinance link and official instructions |
+| 3 | Is the tree regulated by species, size, status, or location? | Tree measurements and photographs |
+| 4 | Is the work removal, relocation, root pruning, heavy canopy reduction, or ordinary pruning? | Written work description |
+| 5 | Is a permit or another approval required? | Permit, exemption confirmation, or written determination |
+| 6 | Is hazardous-tree documentation being used? | Signed qualifying report |
+| 7 | Does development, right-of-way, easement, HOA, wildlife, or mangrove law add another layer? | Separate approval records |
+| 8 | Is mitigation or replacement required? | Approved mitigation plan |
+| 9 | Who may perform the physical work? | Contractor scope, credentials, insurance, and access plan |
 
-That is rarely safe.
+Do not schedule removal based only on a verbal “it should be fine.”
 
-Tree preservation in Florida is usually shaped at the local level through city or county ordinances, permit systems, development rules, and related land-use regulations. So a homeowner may hear that a permit is required in one municipality, that a protected-tree threshold exists in another, or that certain residential situations are handled differently somewhere else—and all of those statements can be true in their own local context without creating one statewide universal answer.
+## Identify the correct jurisdiction
 
-That is why the first question should never be:
+A mailing address may show a city name even when the parcel is governed by the county.
 
-**“What do Florida cities generally do?”**
+Check:
 
-It should be:
+- official parcel record
+- city boundary map
+- county GIS
+- planning or permitting jurisdiction
+- utility or special-district boundaries
+- HOA map
+- right-of-way ownership
 
-**“What does my city or county actually require for this tree on this property?”**
+Ask the city or county to confirm which department controls tree activity at the address.
 
-## What “tree preservation order” usually means in practice
+Save the name, date, email, and case or request number.
 
-In day-to-day homeowner language, this phrase often refers to one of several local concepts:
+## Locate the current official rule
 
-- a protected-tree ordinance  
-- a tree preservation code section  
-- a tree removal permit requirement  
-- a heritage, specimen, or grand-tree rule  
-- mitigation or replacement requirements tied to removal  
-- a review process tied to development, exterior changes, or site work  
+Use the official:
 
-In other words, the homeowner may be using one phrase for a whole range of local legal tools that cities use to preserve canopy and regulate removal.
+- code of ordinances
+- tree-permitting page
+- protected-tree definitions
+- application instructions
+- fee schedule
+- mitigation table
+- inspection process
+- permit portal
+- development-review manual
+- right-of-way rules
+- statutory-exemption guidance
 
-## Why city rules vary so much
+Avoid relying on:
 
-Florida cities do not all protect trees the same way.
+- an old contractor handout
+- a neighbor’s permit from another year
+- an archived municipal page
+- a social-media summary
+- a rule from another city
+- a permit issued for a different project type
 
-The local rule may change depending on:
+Local codes and forms change.
 
-- tree size
+## Screen the tree
+
+Measure and document:
+
 - species
-- whether the tree is native or invasive
-- whether the lot is residential or commercial
-- whether the site is being developed or simply maintained
-- whether the tree is hazardous
-- whether palms are treated differently
-- whether the property is inside a municipality or only under county jurisdiction
+- trunk diameter at the location required by the code
+- number of trunks
+- total height when relevant
+- location
+- public or private status
+- protected, grand, specimen, heritage, or exempt classification
+- visible defects
+- current condition
+- relation to structures and construction
+- mangrove or other special vegetation status
 
-That is why the exact same tree-removal plan can be straightforward in one jurisdiction and much more regulated in another.
+Do not guess the species or diameter when the threshold determines whether a permit is required.
 
-## Common things local tree preservation rules may care about
+## Describe the proposed work accurately
 
-Even though the details vary, local rules often focus on themes like:
+“Tree trimming” may not be enough.
 
-### Protected size thresholds
+The jurisdiction may distinguish:
 
-Some cities regulate trees once they reach a certain diameter or classification.
+- ordinary pruning
+- heavy reduction
+- removal of a major percentage of canopy
+- root pruning
+- relocation
+- removal
+- destruction or injury
+- site clearing
+- work in a public right-of-way
+- work associated with construction
 
-### Protected species or special classes
+A project can violate a tree rule without the trunk being cut at ground level if the work severely damages the tree.
 
-Some local ordinances give additional attention to heritage, specimen, grand, or otherwise specially defined trees.
+## Protected-tree systems vary
 
-### Removal permits
+City of Tampa guidance states that protected trees cannot be cut down, removed, relocated, damaged, or destroyed without required approval and permitting, subject to applicable rules and exemptions.
 
-Many cities require some form of permit or review for removing covered trees.
+City of Miami requires tree permits for covered activity and maintains separate processes for standalone and construction-related work.
 
-### Mitigation or replacement
+City of Sarasota publishes its own tree-protection and permit requirements.
 
-In some places, removal may trigger replacement planting, mitigation requirements, or related conditions.
+Those examples demonstrate local variation. They do not create a statewide checklist.
 
-### Tree protection during development
+## Hazardous-tree documentation is a separate pathway
 
-A city may be especially strict when site work, construction, or redevelopment affects existing trees.
+Florida Statute 163.045 limits local requirements for qualifying work on qualifying residential property when the owner possesses the documentation defined by the statute.
 
-## Why homeowners should not rely on the words “it’s just on my property”
+Confirm:
 
-This is one of the biggest mistakes people make.
+- the property meets the statutory residential definition
+- the assessment was onsite
+- the signer has a qualifying credential
+- the required tree-risk procedures were used
+- the document states the required risk conclusion
+- the owner possesses the documentation before work
+- another legal layer does not independently control the work
 
-A homeowner often assumes the property line settles the question. But many local tree-preservation systems do not turn only on ownership. They turn on whether the tree is regulated under the city’s code.
+Do not call an ordinary estimate “statutory documentation.”
 
-So a better practical question is not:
+For a document comparison, see [Tree Surveys and Tree Assessments Before Removal](/blog/tree-surveys-and-tree-assessments-before-removal-when-are-they-required/).
 
-**“Do I own the tree?”**
+## Development approval may control more than a permit page
 
-It is:
+A tree may be shown as preserved on:
 
-**“Does the local ordinance regulate this tree even though it is on my property?”**
+- approved site plan
+- landscape plan
+- subdivision plan
+- zoning condition
+- development order
+- conservation plan
+- permit exhibit
+- mitigation plan
+- recorded covenant
 
-In many Florida cities, that is the real issue.
+Removing it may require a plan revision even when the tree would otherwise be removable.
 
-## Why hazardous-tree situations are a separate conversation
+Ask the project professional and jurisdiction whether the approved documents must be amended.
 
-This is where homeowners often get mixed messages.
+## Mitigation and replacement
 
-A clearly hazardous tree may be treated differently than a healthy tree removed for convenience, view clearance, redesign, or ordinary landscape preference. That is why homeowners should be careful not to blend all tree removals into one bucket.
+Local approval may require:
 
-The city’s protected-tree rules may be one layer of the issue. The tree’s condition may be another. The supporting documentation may be a third.
+- replacement trees
+- specific species
+- minimum sizes
+- planting locations
+- preservation credits
+- mitigation fees
+- inspection
+- irrigation or establishment
+- survival period
+- bond or guarantee
+- revised landscape plan
 
-The more the tree looks like a genuine safety problem, the more important it becomes to treat the removal as a documented risk decision rather than a casual landscaping choice.
+The estimate should state whether replacement planting and permit closeout are included.
 
-## A common mistake: assuming every city treats residential lots generously
+## HOA approval is a separate question
 
-Sometimes they do. Sometimes they do not. Sometimes the distinction is more specific than homeowners expect.
+A city permit does not automatically satisfy:
 
-A city may have:
-
-- different standards for residential and commercial property
-- different rules for routine lots and development sites
-- different permit paths for hazardous trees versus ordinary removals
-- different palm-tree and shade-tree treatment
-- different thresholds for what counts as regulated
-
-That is why “I’m on a residential lot” is not a complete answer by itself.
-
-## Another common mistake: hearing “tree preservation” and thinking only of developers
-
-This happens all the time.
-
-Homeowners assume tree preservation rules are mostly a commercial development issue. In reality, many local rules also touch ordinary private lots—sometimes through permit thresholds, protected-tree classes, or review requirements that still matter even when there is no large-scale development plan involved.
-
-The scale may be smaller, but the ordinance question can still be very real.
-
-## What homeowners should check before removing a tree in a Florida city
-
-Before making assumptions, verify:
-
-- whether the property is in city or county jurisdiction  
-- whether the local code has a tree protection or tree preservation section  
-- whether the tree is regulated by size, species, or class  
-- whether a permit or application is required  
-- whether the tree may be considered hazardous rather than simply unwanted  
-- whether mitigation, replacement, or additional review could apply  
-
-Those questions usually do more good than reading a generic statewide summary.
-
-## Why the permit conversation is rarely the whole story
-
-Homeowners often reduce the issue to:
-
-**“Do I need a permit or not?”**
-
-That is understandable, but incomplete.
-
-The more practical question is:
-
-**“What exactly is the local preservation system asking me to prove or document before removal?”**
-
-Sometimes the answer is a permit. Sometimes it is a permit plus supporting materials. Sometimes the tree’s condition or protected status changes the whole process.
-
-## How HOA and neighborhood rules can complicate the city issue
-
-Even if the city’s tree-preservation question seems manageable, the property may still be affected by:
-
-- HOA covenants  
-- architectural review rules  
-- common-area or shared-landscape issues  
-- recorded restrictions that shape what a homeowner can change  
-
-That is why some tree removals become two separate questions at once:
-
-1. what does the city require?  
-2. what does the community governance structure require?  
-
-Those are not always the same thing.
-
-## Why “protected tree” should make homeowners slow down
-
-Once a tree might fall into a protected category, the risk of guessing goes up sharply.
-
-That does not mean removal is impossible. It means the homeowner should stop thinking in terms of speed and start thinking in terms of verification.
-
-A protected-tree issue is one of the worst places to rely on:
-
-- neighbor memory  
-- old contractor assumptions  
-- advice copied from another city  
-- social-media summaries of “Florida tree law”  
-
-Tree preservation is intensely local in practice.
-
-## A practical mindset for homeowners
-
-The safest approach is:
-
-1. identify whether the tree is a true risk issue or a preference issue  
-2. identify the correct city or county jurisdiction  
-3. check whether the local code regulates the tree by size, species, or category  
-4. determine whether permit, documentation, or mitigation issues apply  
-5. avoid assuming one Florida city’s rule explains another city’s process  
-
-That mindset is slower than guessing, but it prevents the most expensive mistakes.
-
-## Final takeaway
-
-Tree preservation orders in Florida cities are rarely one simple statewide rule. In practice, homeowners are usually dealing with a local tree-protection or tree-preservation framework that may regulate removal based on size, species, risk, permit status, or property context.
-
-That is why the smartest first move is not asking whether “Florida” protects the tree. It is asking what **your** city or county actually regulates, whether the tree is covered, and whether the issue is a true hazard problem or a normal removal request.
-
-The cleaner the answer sounds from a quick conversation, the more important it usually is to verify the local rule before acting.
+- declaration restrictions
+- architectural review
+- common-area control
+- landscape standards
+- maintenance obligations
+- board approval
+- neighbor-notice rules
+
+An HOA approval does not replace city, county, utility, environmental, or right-of-way authority.
+
+Obtain both when both apply.
+
+## Special categories that need separate review
+
+Pause when the project involves:
+
+- mangroves
+- wetlands
+- conservation easements
+- shoreline buffers
+- public trees
+- right-of-way trees
+- utility corridors
+- historic districts
+- protected wildlife
+- active nests
+- boundary trees
+- trees on rental or common property
+- trees documented as preserved during development
+
+The ordinary private-lot removal process may not be enough.
+
+## What written confirmation should include
+
+Ask the authority to identify:
+
+- controlling jurisdiction
+- applicable code or program
+- whether the tree is covered
+- whether work is exempt
+- permit type
+- required professionals
+- inspection requirement
+- required posting
+- mitigation
+- expiration
+- conditions
+- appeal or review process
+- permit closeout
+
+Keep the response with photographs and the final work order.
+
+## Contractor verification
+
+Ask the provider:
+
+- Who is responsible for the permit?
+- Is the permit number on the estimate?
+- Has the tree been matched to the approved plan?
+- Are removal, stump work, hauling, and replacement included?
+- Is access through a right-of-way or easement authorized?
+- Are underground facilities located?
+- Are lines or service drops involved?
+- Will the permit remain posted?
+- Who schedules inspections?
+- Who closes the permit?
+- What happens if the inspector changes the approved scope?
+
+A contract should not shift an undisclosed permit risk back to the owner.
+
+## If the tree was already removed
+
+Do not conceal the work or plant over the stump before documenting it.
+
+Preserve:
+
+- photographs
+- stump
+- measurements
+- contractor agreement
+- invoices
+- messages
+- permit search
+- tree report
+- storm records
+- HOA records
+- debris records
+
+Contact the enforcing jurisdiction. Ask about after-the-fact review, mitigation, inspection, deadlines, and hearing rights.
+
+See [Can a City Fine You for Unauthorized Tree Removal in Florida?](/blog/can-a-city-fine-you-for-unauthorized-tree-removal-in-florida/).
+
+## Requesting authorized physical work
+
+ProTreeTrim connects Florida homeowners and businesses with independently owned local tree-service providers.
+
+Call **(855) 498-2578** after the controlling jurisdiction, permit or exemption status, HOA approval, utility restrictions, and final scope are clear. Use [tree removal services](/services/tree-removal/) for an authorized removal.
+
+## Official sources reviewed
+
+- [Florida Statutes §163.045 — Tree Pruning, Trimming, or Removal on Residential Property](https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0163/Sections/0163.045.html)
+- [City of Tampa — Tree Information](https://www.tampa.gov/construction-services/tree-information)
+- [City of Tampa — Tree Removal Information](https://www.tampa.gov/service/tree-removal-information)
+- [City of Miami — Trees and Tree Permits](https://www.miami.gov/Permits-Construction/Trees)
+- [City of Sarasota — Tree Protection](https://www.sarasotafl.gov/Department-Pages/Development-Services/Tree-Protection)
+
+This article provides general information, not a local permit determination, code interpretation, statutory exemption opinion, survey, or legal advice.
