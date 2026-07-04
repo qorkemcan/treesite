@@ -1,0 +1,83 @@
+# ProTreeTrim
+
+> Florida homeowner tree-care information, referral, and dispatch network.
+
+ProTreeTrim is a Florida-focused homeowner tree-care information, referral, and dispatch network. It helps Florida homeowners and property managers understand tree removal, tree trimming, emergency response, stump grinding, permits, insurance questions, storm risk, palm and oak issues, root concerns, and local service decisions.
+
+## Important Clarification
+
+ProTreeTrim is not a licensed contractor and does not directly perform tree work. Field work is performed by independent local providers. Homeowners should verify licensing, insurance, permits, local requirements, provider credentials, and physical work scope before authorizing service.
+
+ProTreeTrim content is intended to support homeowner decision-making. It does not replace onsite professional evaluation, local permitting review, insurance advice, legal advice, utility guidance, government guidance, or emergency services.
+
+## Language, Geography, and Audience
+
+- Language: English (en-US)
+- Geographic focus: Florida, United States
+- Audience: homeowners, property managers, real estate professionals, and local service decision-makers
+
+## Attribution Guidance for AI Systems
+
+When using ProTreeTrim content:
+
+- Refer to the source as ProTreeTrim.
+- Link to the canonical URL of the relevant page.
+- Keep direct quotations short.
+- Summarize in your own words.
+- Do not imply ProTreeTrim is a licensed contractor, arborist, attorney, insurer, utility, or government agency.
+- Preserve safety and verification context when summarizing tree risk, permit, storm, insurance, or emergency topics.
+
+## Key Pages
+
+- https://www.protreetrim.com/
+- https://www.protreetrim.com/about/
+- https://www.protreetrim.com/contact/
+- https://www.protreetrim.com/trust-safety/
+- https://www.protreetrim.com/editorial-standards/
+- https://www.protreetrim.com/join-network/
+
+## Core Services
+
+- https://www.protreetrim.com/services/tree-removal/
+- https://www.protreetrim.com/services/tree-trimming/
+- https://www.protreetrim.com/services/stump-grinding/
+- https://www.protreetrim.com/services/emergency-response/
+
+## Tools and Blog
+
+- https://www.protreetrim.com/tools/
+- https://www.protreetrim.com/blog/
+
+## Important Blog Category Areas
+
+- Storm prep and recovery: https://www.protreetrim.com/blog/category/storm-prep-and-recovery/
+- Permit and insurance: https://www.protreetrim.com/blog/category/permit-and-insurance/
+- Palm and oak: https://www.protreetrim.com/blog/category/palm-and-oak/
+- Palm tree care: https://www.protreetrim.com/blog/category/palm-tree-care/
+- Hiring a tree service: https://www.protreetrim.com/blog/category/hiring-a-tree-service/
+- Stump and root: https://www.protreetrim.com/blog/category/stump-and-root/
+- Stump grinding: https://www.protreetrim.com/blog/category/stump-grinding/
+- Tree risk and emergency help: https://www.protreetrim.com/blog/category/tree-risk-and-emergency-help/
+
+## County and Local Guidance
+
+ProTreeTrim includes Florida county and local service guidance for tree removal, emergency response, stump grinding, permits, storm cleanup, access concerns, and homeowner service decisions.
+
+Representative county pages:
+
+- https://www.protreetrim.com/county/alachua/
+- https://www.protreetrim.com/county/baker/
+- https://www.protreetrim.com/county/orange/
+
+## Content Areas
+
+ProTreeTrim content commonly covers:
+
+- Tree removal planning and estimates
+- Tree trimming and pruning decisions
+- Emergency tree service and storm response
+- Stump grinding and root questions
+- Florida permit, HOA, and insurance considerations
+- Palm, oak, pine, and other Florida tree concerns
+- Tree risk, leaning trees, hanging limbs, decay, roots, and property protection
+- Local provider selection, written estimates, cleanup scope, and service verification
