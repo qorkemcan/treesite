@@ -1,217 +1,112 @@
 ---
 title: "What Is Included Bark, and Why Can It Make a Florida Tree Split?"
-description: "A focused Florida homeowner guide to included bark, branch-union anatomy, visible clues, crack progression, pruning and support-system options, and removal thresholds."
-pubDate: 2026-05-09
-updatedDate: 2026-06-29
+description: "A Florida homeowner guide to included bark, weak tree unions, codominant stems, cracks, storm risk, cabling and bracing limits, trimming decisions, removal thresholds, and fall-zone safety."
+pubDate: 2026-05-10
+updatedDate: 2026-07-04
 author: "Gorkem Can"
 category: "Arborist Services"
 tags:
   - included bark
-  - tree splitting
-  - Florida tree risk
-  - weak branch union
+  - tree split
+  - codominant stems
+  - tree risk
 draft: false
 ---
 
 # What Is Included Bark, and Why Can It Make a Florida Tree Split?
 
-Included bark is bark trapped inside a union between two stems or between a branch and the trunk.
+Included bark forms when bark becomes trapped between two stems or branches instead of allowing strong wood attachment.
 
-The problem is not that bark is “bad.” The concern is that trapped bark can occupy space where a stronger wood connection would otherwise develop.
+This often creates a tight V-shaped union. The tree may look normal for years, then split during wind, heavy rain, limb weight, or storm stress.
 
-Included bark is one feature in a structural assessment. It is not a same-day removal order.
+Do not stand under a union that is opening, cracking, or dropping bark.
 
-## Normal branch union versus included bark
+## What included bark looks like
 
-A branch union may show:
+| Sign | Why it matters |
+|---|---|
+| Tight V-shaped union | weaker attachment may be present |
+| Two similar main stems | codominant structure can split |
+| Bark seam between stems | wood may not be strongly connected |
+| Crack below the union | failure risk rises |
+| One stem leaning away | load may be increasing |
+| Old pruning wounds nearby | decay may be involved |
+| Heavy canopy on both stems | wind load can be high |
+| Recent storm damage | union may have changed |
 
-- branch-bark ridge
-- swelling around the attachment
-- wood growth that wraps around the union
-- an open attachment angle
+A wide U-shaped union is often stronger than a tight V, but every tree needs context.
 
-A union suspected of included bark may show:
+## Why it matters in Florida
 
-- compressed narrow seam
-- bark folding inward
-- two stems pressing together
-- crack extending below the union
-- bulging on each side
-- trapped debris or moisture
+Florida wind, rain, and storm seasons can test weak unions.
 
-A homeowner cannot confirm the internal attachment from shape alone.
+A tree with included bark may hold for years in calm weather and still fail when load changes. That is why structural pruning is easier and more effective when trees are young.
 
-## Why the seam can become a problem
+Use [the partial removal guide](/blog/can-you-remove-part-of-a-tree-instead-of-the-whole-tree/) if one stem appears to be the main concern.
 
-As stems increase in diameter, included bark may:
+## Do not rely on canopy color
 
-- limit normal wood connection
-- create outward pressure
-- concentrate stress
-- hold moisture and debris
-- conceal decay
-- begin to separate under canopy load
+A tree with included bark can still have a full green canopy.
 
-The failure may occur at the union even while both stems remain green.
+The weakness is structural, not always a leaf-color problem.
 
-## Included bark and codominant stems
+Use [the green-canopy risk guide](/blog/can-a-tree-be-unsafe-even-if-it-still-has-a-full-green-canopy/) when the tree looks healthy but has a risky union.
 
-Included bark is often associated with codominant stems, but the terms are not identical.
+## When pruning may help
 
-- **Codominant stems** describe the overall tree structure: two similar primary stems.
-- **Included bark** describes a feature of the attachment.
+Pruning may help when the tree is young or the defect is manageable.
 
-A tree can have codominant stems without obvious included bark. Included bark can also occur at a large branch union that is not the main trunk.
+Good structural pruning may:
 
-Use [Codominant Stem Warning Signs](/blog/when-a-florida-tree-has-two-main-trunks-codominant-stem-warning-signs/) for whole-tree management.
+- reduce competing leaders,
+- reduce end weight,
+- improve spacing,
+- reduce storm leverage,
+- guide future growth.
 
-## Visible clues that raise concern
+Late heavy cuts on a mature tree can create large wounds and may not solve the union problem.
 
-Prompt review is more appropriate when the union has:
+## Cabling and bracing are not DIY fixes
 
-- fresh crack
-- exposed wood
-- one stem moving differently
-- fungal growth
-- cavity
-- deadwood above the union
-- previous failure
-- heavy end weight
-- a roof, driveway, pool cage, road, or line beneath it
+Support systems may be considered in some cases, but they are not a cure.
 
-A dark seam that has not changed is different from an opening crack after wind.
+They require proper design, installation, inspection, and maintenance. A poor support system can create a false sense of security or new damage.
 
-## Why Florida weather matters
+Do not install straps, chains, or hardware casually.
 
-Florida conditions can add load through:
+Use [the old hardware guide](/blog/can-nails-screws-or-old-hardware-hurt-a-florida-tree/) before attaching anything to a tree.
 
-- long growing season
-- broad canopy development
-- frequent thunderstorms
-- tropical systems
-- repeated wetting
-- prior storm wounds
+## When removal may be safer
 
-Weather does not make every included-bark union fail. It is one part of the exposure history.
+Removal may be safer when included bark is paired with:
 
-## Young trees: prevent the large defect
+- active crack,
+- trunk split,
+- base decay,
+- root instability,
+- major lean,
+- repeated limb failure,
+- heavy targets below,
+- severe storm damage,
+- limited pruning options.
 
-Structural pruning on young trees can often subordinate a competing stem before it becomes a large leader.
+If removal is chosen, ask whether follow-up [stump grinding](/services/stump-grinding/) is included.
 
-A plan may:
+## Stay out of the fall zone
 
-- select a dominant leader
-- reduce the competing leader
-- improve branch spacing
-- avoid removing a large limb later
-- revisit the tree over several pruning cycles
+If a union is cracking or moving, keep people, vehicles, pets, and outdoor furniture away from the likely fall area.
 
-Early correction is usually more practical than trying to remove half of a mature tree.
+Do not pull, wedge, climb, or cut the stem yourself.
 
-## Mature trees: reduce load without topping
+## Route the work
 
-For a mature tree, a professional may consider:
+ProTreeTrim can help connect Florida property owners with local providers for structural [tree trimming](/services/tree-trimming/), authorized [tree removal](/services/tree-removal/), follow-up [stump grinding](/services/stump-grinding/), or urgent [emergency response](/services/emergency-response/) when a split union creates an active hazard. Call [(855) 498-2578](tel:+18554982578).
 
-- selective end-weight reduction
-- shortening a specific leader
-- reducing an overextended limb
-- removing a smaller poorly attached branch
-- monitoring
-- support-system assessment
-- removal
+ProTreeTrim is a referral and dispatch network, not a tree-risk assessor, engineer, cabling designer, insurer, permit office, or licensed contractor. Verify structure, residual risk, credentials, insurance, permits, and written scope with the responsible professionals.
 
-Topping is not structural correction.
+## Sources and further reading
 
-It can create:
-
-- large wounds
-- weak sprouts
-- decay
-- rapid regrowth
-- future maintenance
-- altered wind response
-
-## Cabling and bracing
-
-Support systems may be considered when the objective is specific and the tree is suitable.
-
-A designed system should address:
-
-- defect
-- anchor locations
-- load
-- movement
-- hardware type
-- installation
-- inspection
-- maintenance
-- replacement or adjustment
-
-Do not install:
-
-- chains
-- hardware-store straps
-- rope left around stems
-- bolts without a design
-
-Support systems reduce risk; they do not convert a defective union into a normal one.
-
-## When removal becomes more realistic
-
-Removal may be the practical option when:
-
-- the union is actively splitting
-- decay is present at the attachment
-- one leader partly failed
-- the affected stems are very large
-- pruning would create unacceptable damage
-- support installation cannot address the defect
-- the base or roots are also compromised
-- high-value targets cannot be restricted
-- ongoing inspection is not realistic
-
-The recommendation should explain why other options do not provide a reasonable path.
-
-## What homeowners should photograph
-
-Take:
-
-- full tree
-- union from two or more sides
-- crack or seam
-- canopy above each stem
-- trunk base
-- targets under the stems
-- old hardware
-- prior limb-loss areas
-- changes after wind
-
-Do not enter the fall zone of an opening union.
-
-## Questions to ask
-
-- Is included bark visible, suspected, or confirmed?
-- Are these stems codominant?
-- Is a crack developing?
-- Is decay present?
-- What part is likely to fail?
-- Can pruning reduce load meaningfully?
-- Would a support system address this defect?
-- How often would it be inspected?
-- What condition would trigger removal?
-- What targets change the recommendation?
-
-## Service path
-
-For stable trees where structural pruning may help, call **(855) 498-2578** or visit [tree trimming services](/services/tree-trimming/).
-
-For active separation, advanced decay, or an impractical retention plan, visit [tree removal services](/services/tree-removal/).
-
-For a stem that is currently opening or dropping wood, keep clear and use [emergency response services](/services/emergency-response/) after 911 and utility actions as appropriate.
-
-## Sources reviewed
-
-- [UF/IFAS — Pruning Shade Trees in Landscapes](https://edis.ifas.ufl.edu/publication/EP276)
-- [UF/IFAS — Tree Risk Assessment](https://gardeningsolutions.ifas.ufl.edu/plants/trees-and-shrubs/trees/tree-risk-assessment/)
-- [UF/IFAS — Assessing Hurricane-Damaged Trees](https://edis.ifas.ufl.edu/publication/FR172)
-- [OSHA — Tree Care Industry Hazards and Solutions](https://www.osha.gov/tree-care/hazards-solutions)
+- [UF/IFAS: Developing Preventive Pruning and Structural Pruning](https://hort.ifas.ufl.edu/woody/structural-pruning-flash.shtml)
+- [UF/IFAS: Pruning Shade Trees in Landscapes](https://edis.ifas.ufl.edu/publication/EP276)
+- [UF/IFAS: Is My Tree Safe?](https://edis.ifas.ufl.edu/publication/EP507/pdf)
+- [OSHA: Tree Care Industry Hazards and Solutions](https://www.osha.gov/tree-care/hazards-solutions)
