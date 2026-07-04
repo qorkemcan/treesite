@@ -1,0 +1,11 @@
+Contact: mailto:info@protreetrim.com
+
+Preferred-Languages: en
+
+Canonical: https://www.protreetrim.com/.well-known/security.txt
+
+Policy:
+https://www.protreetrim.com/trust-safety/
+
+Expires:
+2030-12-31T23:59:59Z
