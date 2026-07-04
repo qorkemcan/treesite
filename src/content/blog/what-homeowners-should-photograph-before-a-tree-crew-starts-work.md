@@ -2,7 +2,7 @@
 title: "What Homeowners Should Photograph Before a Tree Crew Starts Work"
 description: "A practical Florida homeowner checklist for photographing trees, yards, driveways, fences, irrigation, and access areas before tree work begins."
 pubDate: 2026-05-09
-updatedDate: 2026-05-09
+updatedDate: 2026-07-04
 author: "Gorkem Can"
 category: "Tree Care & Cleanup"
 tags:
@@ -13,293 +13,170 @@ tags:
 draft: false
 ---
 
-## Short Answer
+# What Homeowners Should Photograph Before a Tree Crew Starts Work
 
 Before a tree crew starts work, photograph the tree, the surrounding yard, the access path, nearby structures, fences, gates, driveways, irrigation, landscape beds, and any existing damage. Take wide shots, medium shots, close-ups, and a short video walkthrough.
 
 These photos are not about expecting a problem. They are about clarity. Florida tree work often involves heavy limbs, wet soil, tight side yards, pool cages, pavers, palms, oaks, and storm-stressed trees. A few minutes of documentation can prevent confusion later.
 
-## Why Pre-Job Photos Matter
+Pre-job photos are useful before [tree removal services](/services/tree-removal/), [tree trimming services](/services/tree-trimming/), [stump grinding services](/services/stump-grinding/), or storm cleanup.
+
+## Why pre-job photos matter
 
 Tree work can change a yard quickly. Branches come down, logs are moved, equipment crosses turf, debris is hauled away, and the work area may look completely different by the end of the day.
 
 Pre-job photos help show:
 
-- What the tree looked like before work
-- Where the crew needed access
-- Whether cracks, ruts, or damaged plants already existed
-- Whether a fence, gate, driveway, or patio was already worn
-- How close the work area was to the home, roof, pool cage, or utility lines
-- Whether any nearby trees or shrubs were already stressed
+- what the tree looked like before work,
+- where the crew needed access,
+- whether cracks, ruts, or damaged plants already existed,
+- whether a fence, gate, driveway, or patio was already worn,
+- how close the work area was to the home, roof, pool cage, or utility lines,
+- whether nearby trees or shrubs were already stressed.
 
 Most tree jobs end without a serious issue. But if a question comes up later, photos are much more useful than memory.
 
-## Start With Wide Photos of the Whole Work Area
+## Start with wide photos
 
 Begin with wide photos that show the full scene.
 
-Stand back and capture:
-
-- The tree from the street or driveway
-- The tree from the house side
-- The yard area under the canopy
-- The route from the street to the tree
-- Nearby structures like the roof, garage, fence, patio, or pool cage
-
-Wide photos give context. A close-up of a cracked paver or scraped trunk does not show where it was, what equipment path was used, or whether the area was part of the work zone.
-
-If possible, take photos from the same general angles you might want to compare later after the job is complete.
-
-## Photograph the Tree From Multiple Angles
-
-Take several photos of the tree itself. This is especially important if the crew is pruning, removing storm-damaged limbs, or working on a mature tree close to the house.
-
 Capture:
 
-- The full canopy
-- The trunk from all accessible sides
-- The base of the tree
-- Large limbs over the roof, driveway, patio, or pool cage
-- Existing cracks, cavities, peeling bark, fungal growth, or dead branches
-- Any lean or uneven canopy weight
-- Visible root flare and surface roots
+- the entire tree,
+- the house or structure near it,
+- driveway or street access,
+- side yard and gate,
+- pool cage or patio,
+- fence lines,
+- neighboring property line if relevant,
+- large limbs over roofs, sidewalks, or vehicles.
 
-For palms, photograph the trunk, crown, old boot scars, fronds, seed pods, and distance from the house. For oaks and pines, include large branch unions, visible defects, and the area where limbs extend over structures.
+Stand far enough back that the relationship between the tree and the property is clear. Close-up photos alone do not show context.
 
-## Photograph Existing Damage Before Work Begins
+## Photograph the access path
 
-This is one of the most important steps.
+The access path is where crews, logs, branches, machines, and debris may travel.
 
-If something is already cracked, leaning, loose, stained, rutted, or broken, photograph it clearly. That protects both you and the crew from confusion later.
+Photograph:
 
-Look for existing issues with:
+| Area | Why it matters |
+|---|---|
+| Driveway | Trucks, trailers, and chippers may use it. |
+| Side gate | Gate width and condition affect equipment access. |
+| Lawn path | Turf can rut after rain or heavy movement. |
+| Pavers | Edges and cracks should be documented. |
+| Pool deck | Screens, frames, and surface condition matter. |
+| Fence line | Existing wear or loose panels should be visible. |
+| Irrigation zones | Heads and valve boxes are easy to miss. |
 
-- Driveway cracks
-- Loose pavers
-- Damaged fence panels
-- Sagging gates
-- Worn turf
-- Broken edging
-- Cracked patio slabs
-- Torn screen enclosures
-- Damaged shrubs
-- Irrigation heads
-- Old stump holes
-- Exposed roots
-- Mulch washed away from beds
+If the crew needs to move through a tight side yard, take extra photos from both directions.
 
-If you already know an area is fragile, mention it to the crew before they start. A photo is helpful, but a direct conversation is better.
+For preparation, see [what to move before a tree crew arrives at your home](/blog/what-to-move-before-a-tree-crew-arrives-at-your-home/).
 
-## Photograph the Access Route
+## Photograph existing damage
 
-Tree work is often priced and planned around access. A small tree in a tight backyard may be more complicated than a larger tree with easy driveway access.
-
-Photograph the path the crew may use from the street to the work area.
-
-Include:
-
-- Driveway and apron
-- Side yard
-- Gate opening
-- Fence line
-- Walkways
-- Turf path
-- Paver areas
-- Drainage swales
-- Septic or drainfield areas, if known
-- Narrow turns or low overhangs
-- Steps, slopes, or soft ground
-
-In Florida, access can be affected by rain, sandy soil, irrigation, landscape beds, pool enclosures, and drainage patterns. If the ground is already soft or muddy, photograph it before equipment arrives.
-
-## Photograph Fences, Gates, and Pool Cages
-
-Fences and pool cages are common concern points during tree work. Limbs may need to be lowered near them, and workers may need to carry debris through gates.
+This protects both the homeowner and the crew.
 
 Take photos of:
 
-- Gate hinges and latches
-- Fence panels near the access route
-- Posts that are already leaning
-- Screen panels near the tree
-- Pool cage beams and corners
-- Any existing tears or dents
-- Tight clearance areas
+- cracked pavers,
+- broken sprinkler heads,
+- old fence damage,
+- leaning gates,
+- existing lawn ruts,
+- damaged shrubs,
+- roof or gutter damage near the tree,
+- old trunk wounds,
+- existing driveway cracks,
+- broken landscape lighting.
 
-If a gate is narrow or difficult to open, tell the crew before work starts. Do not assume they will notice every existing issue while unloading equipment.
+Do not hide existing damage. Good documentation makes the job cleaner for everyone.
 
-## Photograph Irrigation and Landscape Beds
+## Photograph the tree condition
 
-Irrigation systems are easy to overlook because many parts are shallow or hidden. Tree crews may not know where every head, line, or valve box is located.
+Take photos of the tree itself before work starts.
 
-Before the job, photograph:
+Include:
 
-- Sprinkler heads near the work area
-- Valve boxes
-- Drip lines
-- Irrigation controls, if relevant
-- Landscape lighting
-- Low-voltage wires
-- Edging
-- New plantings
-- Mulch beds
-- Decorative stones or borders
+- canopy shape,
+- dead limbs,
+- broken limbs,
+- trunk cracks,
+- mushrooms or conks,
+- cavities,
+- lean direction,
+- soil cracks,
+- exposed roots,
+- old pruning wounds,
+- branches over targets.
 
-If you know where lines run, mark them or tell the crew. Photos help, but visible marking is even better when the area is busy.
+If the tree is storm-damaged, take photos from a safe distance. Do not stand under hanging limbs to get a better angle.
 
-## Photograph Driveways, Pavers, and Hard Surfaces
+If the tree is near power lines, stay away and contact the utility or emergency services first.
 
-If equipment, logs, or workers will cross hard surfaces, document them first.
+## Photograph irrigation and hidden property features
 
-Capture:
+Florida yards often have systems that are not obvious from the street.
 
-- Existing driveway cracks
-- Paver seams and loose sections
-- Patio corners
-- Walkway edges
-- Stains, chips, or uneven areas
-- Garage apron
-- Curb edge
-- Any area where heavy wood may be staged
+Photograph or mark:
 
-A mature tree removal can involve large logs, rigging, trailers, loaders, or stump grinding equipment. Even when heavy equipment is not used, large sections of wood can damage surfaces if they are dropped or rolled carelessly.
+- sprinkler heads,
+- valve boxes,
+- pool equipment,
+- septic lids,
+- drainfield areas,
+- landscape lighting,
+- shallow edging,
+- drainage grates,
+- low-voltage wiring paths,
+- paver borders.
 
-## Take a Short Video Walkthrough
+A tree crew cannot protect what nobody knows is there. Point these features out before work starts.
 
-A video is useful because it connects all the photos into one clear story.
+For related damage concerns, see [can tree work damage pavers, irrigation, or septic lines?](/blog/can-tree-work-damage-pavers-irrigation-or-septic-lines/).
 
-Start at the street, walk toward the tree, and slowly show:
+## Take a short video walkthrough
 
-- Access path
-- Yard condition
-- The tree
-- Nearby structures
-- Existing damage
-- Soft ground or wet areas
-- Fences, gates, and hardscape
+A 30- to 60-second video can be very useful.
 
-Speak naturally while recording. For example:
+Walk slowly and describe:
 
-"Today is the morning before the oak removal. The crew will be accessing through the left side gate. These pavers already have one cracked corner. The irrigation head is here near the bed. The ground is wet from rain last night."
+- the date,
+- the tree being worked on,
+- where the crew will access,
+- existing damage you can see,
+- items you moved,
+- property features you want noted.
 
-This does not need to be dramatic. It just needs to be clear.
+Do not narrate accusations. Keep it factual: “This is the side gate. These pavers already have two cracks. This is the irrigation valve box near the oak.”
 
-## What to Send to the Tree Company Before Work
+## What to do after taking photos
 
-You do not need to send every photo, but it can help to share anything that affects the job.
+Save the photos in one folder. Keep the estimate, text messages, and invoice with them.
 
-Consider sending photos of:
+Before work starts, also:
 
-- Tight access points
-- Fragile pavers or driveway sections
-- Irrigation heads near the work zone
-- Fences or gates the crew must use
-- Pool cages or rooflines near the tree
-- Existing defects in the tree
-- Any area where you want extra caution
+- move vehicles,
+- move patio furniture and grills,
+- secure pets,
+- unlock gates,
+- clear hoses and toys,
+- mark irrigation heads,
+- ask what areas the crew needs open.
 
-A short message can be enough:
+After work, take another set of photos from similar angles. That makes before-and-after comparison easier.
 
-"Before the crew starts tomorrow, I wanted to point out the narrow side gate, the irrigation heads along the left bed, and the loose pavers near the patio. Photos attached."
+## If damage happens
 
-That kind of message makes expectations clearer before equipment is in the yard.
+If something goes wrong, stay calm. Make the area safe, photograph the issue, review the estimate, and contact the company in writing.
 
-## Homeowner Mistakes to Avoid
+For next steps, see [what to do if a tree crew damages your tree or yard](/blog/what-to-do-if-a-tree-crew-damages-your-tree-or-yard/).
 
-Do not rely only on photos taken after the job. They may show damage, but they do not show what the area looked like before work began.
+## Sources consulted
 
-Avoid these common mistakes:
+- [OSHA: Tree Care Industry Hazards and Solutions](https://www.osha.gov/tree-care/hazards-solutions)
+- [EPA: How to Care for Your Septic System](https://www.epa.gov/septic/how-care-your-septic-system)
+- [Sunshine 811: Homeowner Guidance](https://sunshine811.com/homeowner-lp)
+- [OSHA: Tree Trimming Safety](https://www.osha.gov/sites/default/files/publications/trim.pdf)
 
-- Taking only close-ups
-- Forgetting the access path
-- Not photographing existing cracks or broken items
-- Ignoring irrigation heads and valve boxes
-- Forgetting the driveway or pavers
-- Not taking photos from the street side
-- Waiting until the crew has already started
-- Assuming small landscape items are not worth documenting
-
-The best photos are simple, broad, and organized.
-
-## Better Questions to Ask Before the Crew Starts
-
-Photos are helpful, but they work best when paired with clear questions.
-
-Ask the crew or estimator:
-
-- Where will equipment enter the property?
-- Will anything cross the driveway, pavers, or lawn?
-- Do you expect lawn ruts or surface impact?
-- Will mats be used if the soil is soft?
-- Where will logs and debris be staged?
-- Is stump grinding included?
-- Will you protect the pool cage, roofline, or fence?
-- Should I move patio furniture, pots, lighting, or decorations?
-- What should I mark before the crew arrives?
-
-These questions help turn photos into a practical job plan.
-
-## What to Move Before Tree Work Begins
-
-In addition to taking photos, move anything that could be damaged or block access.
-
-This may include:
-
-- Patio furniture
-- Potted plants
-- Garden decor
-- Hoses
-- Outdoor toys
-- Trash bins
-- Landscape lights
-- Bird baths
-- Small planters
-- Vehicles from the driveway
-- Items hanging on fences
-- Loose pool equipment
-
-If you cannot move something, point it out and ask whether it will be safe where it is.
-
-## When Professional Help Is Worth It
-
-If you are preparing for a complicated tree removal, major pruning over a structure, or work near a mature tree you want to preserve, a professional review can be worthwhile before the job starts.
-
-This is especially true when:
-
-- The tree is close to the house
-- Large limbs extend over the roof
-- The ground is soft or access is tight
-- The property has expensive pavers or landscaping
-- A pool cage is near the work zone
-- You are concerned about root damage
-- You are not sure whether removal or pruning is the better option
-
-For Florida homeowners who want help thinking through access, yard protection, or tree risk before scheduling work, ProTreeTrim's dispatch line at (855) 498-2578 can be a useful place to start.
-
-## FAQs
-
-## How many photos should I take before tree work?
-
-Enough to show the tree, the yard, the access path, and nearby structures clearly. For many homes, 15 to 30 photos plus a short video is reasonable. A complicated removal may need more.
-
-## Should I photograph the tree if it is being removed anyway?
-
-Yes. Photos can show the tree's location, size, lean, nearby structures, and pre-existing defects. They may also help explain why the job required certain equipment or access.
-
-## Should I send the photos to the tree company?
-
-Send the most relevant photos, especially if they show tight access, irrigation, pavers, fences, pool cages, or existing damage. You can keep the rest for your own records.
-
-## Do I need photos if the company is insured?
-
-Yes. Insurance does not replace documentation. Clear before-and-after photos make it easier to discuss what happened and whether a repair claim is appropriate.
-
-## When should I take the photos?
-
-Take them before the crew arrives or before any equipment enters the property. If rain changes ground conditions overnight, take updated photos in the morning.
-
-## Final Takeaway
-
-Before a tree crew starts work, take a few minutes to document the property. Photograph the tree, yard, access route, hard surfaces, fences, irrigation, and any existing damage.
-
-This simple step protects everyone. It gives the crew clearer information, gives you a record if questions come up later, and helps prevent misunderstandings about what was already there and what changed during the job.
+Pre-job photos are not about distrust. They are about clarity. Photograph the tree, access path, existing damage, hidden systems, and nearby property before the crew starts. For help preparing a Florida yard for tree work, call ProTreeTrim at (855) 498-2578.
