@@ -2,7 +2,7 @@
 title: "What Is the Florida Tree Removal Statute? What Homeowners Should Know"
 description: "A practical homeowner guide to Florida Statute 163.045, hazardous tree documentation, local permit limits, and why city, county, HOA, and environmental rules still matter."
 pubDate: 2026-05-09
-updatedDate: 2026-05-09
+updatedDate: 2026-07-04
 author: "Gorkem Can"
 category: "Tree Removal"
 tags:
@@ -13,248 +13,104 @@ tags:
 draft: false
 ---
 
-## Short Answer
+# What Is the Florida Tree Removal Statute? What Homeowners Should Know
 
-The Florida tree removal statute homeowners often ask about is Florida Statute 163.045. In general, it limits local government ability to require certain permits, fees, or mitigation for pruning, trimming, or removing a tree on residential property when the owner has documentation from a qualified professional that the tree presents an unacceptable risk.
+The Florida tree removal statute homeowners often ask about is Florida Statute 163.045. In general, it limits local government ability to require certain permits, applications, fees, or mitigation for pruning, trimming, or removing a tree on qualifying residential property when the owner has documentation from an ISA Certified Arborist or Florida licensed landscape architect that the tree poses an unacceptable risk.
 
-But this statute is not a blanket permission slip to cut any tree anywhere. Local rules, HOA requirements, mangrove protections, right-of-way trees, wetland areas, property type, and documentation details can still matter.
+But the statute is not a blanket permission slip to cut any tree anywhere. Local rules, HOA requirements, mangrove protections, right-of-way trees, wetland areas, property type, utility conflicts, and documentation details can still matter.
 
-The safest approach is to check your local rules, document the tree condition, and keep written records before removal.
+This article is not legal advice. It is a homeowner planning guide for deciding what to verify before calling [tree removal services](/services/tree-removal/).
 
-## Why This Statute Matters
+## What the statute generally covers
 
-Florida homeowners often face a practical problem.
+In homeowner terms, the statute is mainly about documented risk on residential property.
 
-A tree may be leaning, cracked, decayed, storm-damaged, or too close to a home. But local tree removal rules may be confusing. Some cities require permits for certain trees. Some counties have protected-tree rules. HOAs may require approval. Storm risk can make waiting feel unsafe.
+The key ideas are:
 
-Florida Statute 163.045 was created to address certain residential tree-risk situations.
+- residential property,
+- tree pruning, trimming, or removal,
+- documentation,
+- qualified professional,
+- unacceptable risk,
+- local government permit and mitigation limits.
 
-It gives homeowners a path when a tree is documented as presenting an unacceptable risk, but it does not remove every responsibility.
+Each of those words matters. A homeowner should not reduce the statute to “no permit needed.”
 
-## What the Statute Generally Covers
+The statute defines documentation as an onsite assessment performed using recognized tree risk assessment procedures and signed by an ISA Certified Arborist or Florida licensed landscape architect. It also describes when a tree poses an unacceptable risk.
 
-In homeowner terms, the statute is mainly about trees on residential property that are documented as presenting an unacceptable risk.
+## What the statute does not automatically solve
 
-When the requirements apply, local government generally may not require certain permits, applications, fees, or mitigation for pruning, trimming, or removal.
+The statute does not automatically answer every tree-removal question in Florida.
 
-The key ideas are residential property, tree risk, documentation, qualified professional, local government limits, pruning, trimming, removal, and unacceptable risk.
+It may not resolve:
 
-Each of those words matters.
+| Issue | Why it still matters |
+|---|---|
+| HOA approval | Private community rules can be separate. |
+| Mangroves | Mangrove protection has separate authority. |
+| Wetlands or conservation areas | Environmental rules may apply. |
+| Right-of-way trees | Public or utility interests may be involved. |
+| Commercial property | The statute is focused on residential property. |
+| Development conditions | Site plans or mitigation requirements may apply. |
+| Boundary trees | Neighbor ownership and civil issues may matter. |
+| Power lines | Utility safety comes first. |
 
-A homeowner should not reduce the statute to “no permit needed.”
+That is why city, county, HOA, and property-specific context still matters.
 
-## Documentation Is the Core Issue
+## Why documentation matters
 
-The statute is built around documentation.
+The documentation is not a formality. It is often the core of the statute.
 
-That documentation should come from a qualified professional recognized by the statute, and it should support the conclusion that the tree presents an unacceptable risk.
+If a tree is leaning, cracked, decayed, storm-damaged, or root-shifted, document the condition before removal when it is safe to do so.
 
-Photos alone may not be enough in many situations.
+Helpful records include:
 
-Useful documentation may include:
+- wide photos of the whole tree,
+- close photos of defects,
+- storm photos,
+- notes from a qualified professional,
+- estimate or work order,
+- city or county communication,
+- HOA correspondence,
+- insurance or claim documentation if relevant.
 
-- tree condition
-- visible defects
-- target risk
-- trunk or root problems
-- decay indicators
-- lean direction
-- storm damage
-- likelihood of failure
-- proximity to structures
-- professional credentials
-- date of assessment
+If the tree is already on a structure or blocking access, safety may come first. If power lines are involved, contact the utility or emergency services first. For non-electrical urgent hazards, [emergency response services](/services/emergency-response/) may be appropriate once the area is safe.
 
-If the tree is removed first and questions come later, the homeowner may have a harder time proving the condition.
+## Common misunderstanding
 
-## What “Unacceptable Risk” Means in Practice
+The most common misunderstanding is this:
 
-A messy or inconvenient tree is not the same as an unacceptable risk.
+> “Florida law says I can remove any tree on my property.”
 
-Risk concerns may involve significant lean toward a structure, lifted root plate, major trunk crack, decay at the base, severe root damage, large dead limbs over a target, conks or structural fungal signs, storm-damaged trunk or crown, repeated major limb failure, or an unstable tree near a home, driveway, road, or pool cage.
+That is not a safe summary.
 
-The professional should connect the visible condition to the risk.
+A better summary is:
 
-If the tree simply drops leaves, blocks a view, shades the lawn, or creates cleanup work, that is usually a different conversation.
+> Florida law may limit local government permit or mitigation requirements for certain documented unacceptable-risk trees on qualifying residential property, but property context and other rules still matter.
 
-## Who Can Provide Documentation?
+That difference can prevent fines, disputes, delays, and documentation problems after the tree is gone.
 
-Homeowners should read the current statute and local guidance carefully because professional qualification language matters.
+## How this affects a tree service estimate
 
-Depending on statute language and local interpretation, documentation may need to come from a qualified arborist or landscape professional meeting specific criteria.
+Before approving work, ask the company:
 
-Do not assume any tree crew estimate equals statutory documentation.
+- Is a permit or local verification needed?
+- Is this tree being removed because of documented risk?
+- Who is responsible for documentation?
+- Is the property residential, commercial, vacant, or under development?
+- Is the tree near a right-of-way, wetland, easement, or utility?
+- Is stump grinding included?
+- Will cleanup and hauling be included?
 
-Ask:
+A tree service can help with the physical work, but the homeowner should understand what approvals and records are part of the job.
 
-- Does this documentation meet Florida Statute 163.045?
-- Does it identify the tree and property?
-- Does it explain the risk?
-- Does it include the professional’s credentials?
-- Should I submit it to the city or county or keep it on file?
-- Does my local government have a form or process?
+For local permit context, see [do you need a permit to remove a tree in Orange County, Florida?](/blog/do-you-need-a-permit-to-remove-a-tree-in-orange-county-florida/) and [what happens if you cut a tree without a permit in Florida?](/blog/what-happens-if-you-cut-a-tree-without-a-permit-in-florida/).
 
-A removal quote and a risk assessment are not always the same document.
+## Sources consulted
 
-## What the Statute Does Not Automatically Solve
+- [Florida Statute 163.045: Tree pruning, trimming, or removal on residential property](https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0100-0199/0163/Sections/0163.045.html)
+- [UF/IFAS: Is My Tree Safe?](https://edis.ifas.ufl.edu/publication/EP507/pdf)
+- [UF/IFAS: Trees and Hurricanes](https://hort.ifas.ufl.edu/treesandhurricanes/)
+- [OSHA: Tree Care Industry Hazards and Solutions](https://www.osha.gov/tree-care/hazards-solutions)
 
-The statute may not solve every issue tied to a tree.
-
-It may not automatically address HOA approval, private covenants, neighbor disputes, insurance claims, mangrove regulations, wetland or conservation restrictions, right-of-way trees, utility safety, non-residential property, trees on vacant land, replacement landscaping required by private rules, or documentation after the fact.
-
-This is why homeowners should check more than one layer of rules.
-
-## Local Governments Still Matter
-
-Even if the statute limits certain local requirements for documented risk trees, local governments may still have information pages, forms, procedures, or guidance for homeowners.
-
-Your city or county may tell you:
-
-- what documentation to keep
-- whether to submit a notice
-- how protected-tree rules interact with risk documentation
-- whether right-of-way trees are different
-- how mangroves or wetlands are handled
-- whether dead-tree removal requires notice
-- how emergency removal is documented
-
-Checking first can prevent disputes later.
-
-## HOA Rules Are Separate
-
-Florida Statute 163.045 addresses local government requirements. It does not necessarily erase private HOA approval rules.
-
-If you live in an HOA community, check architectural review requirements, landscape guidelines, replacement-tree rules, common-area ownership, front-yard tree standards, contractor access rules, debris timing rules, and stump removal expectations.
-
-A tree may be removable under government rules but still trigger HOA paperwork.
-
-## Mangroves, Wetlands, and Shorelines Need Special Care
-
-Florida has unique environmental conditions.
-
-If the tree is near a shoreline, canal, wetland, mangrove area, conservation easement, or protected habitat, do not assume the residential tree statute answers the whole question.
-
-Mangrove trimming and removal can involve special rules. Wetland and conservation areas may involve environmental review.
-
-When water, shoreline, or preserve areas are involved, check the correct agency or local office before cutting.
-
-## Right-of-Way and Utility Trees
-
-Trees near streets, sidewalks, drainage swales, easements, or power lines may involve public agencies or utilities.
-
-A tree near the road may not be treated the same as a tree in the center of a private backyard.
-
-Power line trees require extra caution. If a tree is touching or near energized lines, the first step may be utility coordination, not a regular removal appointment.
-
-Do not treat right-of-way or utility trees as simple private property removals.
-
-## What Homeowners Should Save
-
-If you rely on risk documentation, save:
-
-- the written assessment
-- credentials of the professional
-- date of assessment
-- photos from multiple angles
-- close-up photos of defects
-- local rule screenshots or emails
-- permit exemption correspondence
-- HOA approval if needed
-- tree service quote
-- invoice after removal
-- stump grinding or cleanup documentation
-- storm damage photos if relevant
-
-Good records can matter for city questions, HOA review, insurance, neighbor concerns, or future property sale documentation.
-
-## What to Ask Before Removal
-
-Before cutting, ask:
-
-- Does Florida Statute 163.045 apply to this property?
-- Does my city or county have a local process?
-- Does this tree need professional risk documentation?
-- Is the tree in an HOA community?
-- Is it in a right-of-way, wetland, or conservation area?
-- Are mangroves involved?
-- Is the tree near power lines?
-- Should I keep photos before removal?
-- Is stump grinding allowed and included?
-- Is replacement planting required by any rule?
-
-If you cannot answer these, wait before cutting unless there is an immediate emergency.
-
-## Emergency Situations
-
-If a tree is actively dangerous, safety comes first.
-
-Examples include a tree on a house, a tree blocking emergency access, a tree tangled in power lines, a large broken limb hanging over a doorway, a storm-damaged tree shifting or cracking, or a tree leaning after root plate movement.
-
-Stay out of the danger zone. Contact emergency services or the utility when appropriate. Take photos only from a safe distance.
-
-After emergency work, save all records.
-
-## Common Misunderstandings
-
-### “The state law means no permits ever.”
-
-Not true. The statute is specific. Documentation, property type, tree risk, and local context matter.
-
-### “A quote from any tree company is enough.”
-
-Not always. A quote may not be a statutory risk assessment.
-
-### “Protected trees never come down.”
-
-Not true. Protected trees may be removable when risk or other approved reasons are documented.
-
-### “Dead trees can always be cut with no paperwork.”
-
-Maybe, but check local rules and document the condition first.
-
-### “HOA rules do not matter if the city does not require a permit.”
-
-Not necessarily. HOA rules may still apply.
-
-## A Practical Step-by-Step Process
-
-1. Photograph the tree and visible defects.
-2. Check your city or county tree removal page.
-3. Check HOA rules if applicable.
-4. Determine whether the tree is near right-of-way, wetlands, mangroves, or utilities.
-5. If risk is the reason, get proper documentation before removal.
-6. Save everything.
-7. Ask the tree service what is included: removal, hauling, stump grinding, cleanup.
-8. Keep the final invoice and photos after work.
-
-This process protects the homeowner better than guessing.
-
-## Final Takeaway
-
-Florida Statute 163.045 can be important for homeowners dealing with hazardous residential trees, but it is not a universal “cut anything” rule.
-
-Documentation, local process, HOA rules, environmental protections, right-of-way issues, and utility safety can still matter. When in doubt, check before cutting and save records.
-
-If you need help planning documented tree removal, asking the right permit questions, or scheduling removal and stump grinding, ProTreeTrim’s dispatch line at (855) 498-2578 can help connect you with local tree-service support.
-
-## FAQs
-
-### What is Florida Statute 163.045?
-
-It is the Florida statute commonly discussed for residential tree pruning, trimming, or removal when a tree is documented as presenting an unacceptable risk.
-
-### Does the statute mean I do not need a permit?
-
-Not in every situation. It depends on the property, documentation, tree risk, local process, and whether other rules apply.
-
-### Do I need an arborist report?
-
-If you are relying on a risk-based exemption, professional documentation is important. Check current statute language and local guidance for who qualifies.
-
-### Does the statute apply to HOA rules?
-
-HOA requirements may still apply separately from local government permit rules.
-
-### Does the statute apply to mangroves?
-
-Do not assume that. Mangroves and environmental areas can involve special rules. Check the appropriate agency or local office.
+Florida Statute 163.045 can help homeowners with documented unacceptable-risk trees, but it is not a universal tree-cutting permission slip. Verify property context, document the tree, and keep records before removal. For help routing a Florida tree-service request, call ProTreeTrim at (855) 498-2578.
