@@ -1,12 +1,15 @@
 {
   "schemaVersion": 2,
-  "enabled": false,
-  "mode": "normal",
-  "title": "",
-  "message": "",
-  "areas": [],
+  "enabled": true,
+  "mode": "watch",
+  "title": "Severe Weather Tree Safety Notice",
+  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
+  "areas": [
+    "Duval, FL",
+    "Nassau, FL"
+  ],
   "source": "NWS API",
-  "sourceAlertId": null,
-  "updatedAt": null,
-  "expiresAt": null
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2ef869358ff85d876ecb94a95ba6e62b30629d3a.001.1",
+  "updatedAt": "2026-07-05T19:33:00.000Z",
+  "expiresAt": "2026-07-05T20:00:00.000Z"
 }
