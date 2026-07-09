@@ -55,7 +55,7 @@ Package average: **80.4/100**
 - **Internal-link gap:** All 10 need stronger contextual links to related ProTreeTrim decision guides.
 - **CTA gap:** Several articles have no phone CTA; others have a phone CTA but no direct service-route context.
 - **Boundary gap:** Insurance, legal/permitting, utility, diagnostic, price, safety, arborist, excavation, and contractor-boundary language needs to be more explicit.
-- **Older ending pattern:** All 8 still use older final takeaway structures that should be modernized during revision.
+- **Older ending pattern:** All 10 still use older final takeaway structures that should be modernized during revision.
 
 ## Recommended next action
 
