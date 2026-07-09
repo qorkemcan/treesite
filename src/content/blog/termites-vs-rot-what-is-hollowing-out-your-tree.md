@@ -2,7 +2,7 @@
 title: "Termites vs. Rot: What Is Hollowing Out Your Tree?"
 description: "A practical Florida guide to the difference between termite damage and wood decay in trees, why hollowing often points to rot first, and how to tell when the problem may be structural."
 pubDate: 2026-04-22
-updatedDate: 2026-04-22
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Health & Disease"
 tags:
@@ -12,6 +12,8 @@ tags:
   - tree health and disease
 draft: false
 ---
+
+# Termites vs. Rot: What Is Hollowing Out Your Tree?
 
 When homeowners find a hollow section in a tree, termites usually get blamed first.
 
@@ -217,7 +219,24 @@ A useful rule of thumb is:
 
 That is a much stronger framework than blaming every hollow tree on termites first.
 
-## Final takeaway
+## When this becomes a service decision
+
+A hollow tree is not automatically unsafe, but it is not automatically safe either. Termites, decay, cavities, old wounds, and base defects should be evaluated in relation to sound wood, lean, canopy load, and what the tree could hit.
+
+If the concern is deadwood or clearance, [tree trimming](/services/tree-trimming/) may be part of the plan. If hollowing is low on the trunk, connected to the base, widening, or near a home, driveway, patio, pool, or walkway, the conversation may need to include [tree removal](/services/tree-removal/) and, after removal, [stump grinding](/services/stump-grinding/). If failure risk appears immediate after storm damage, use [emergency tree service](/services/emergency-tree-removal/) rather than probing the cavity yourself.
+
+ProTreeTrim does not diagnose termites, prescribe pest treatment, or determine structural safety from a distance. It can help dispatch a local tree-service provider when hollowing has become a risk, removal, or cleanup decision. Call **(855) 498-2578** for help.
+
+## Sources and local verification
+
+Use these references as starting points, not as a substitute for an onsite diagnosis:
+
+- [UF/IFAS Gardening Solutions](https://gardeningsolutions.ifas.ufl.edu/) for Florida tree, palm, pest, and landscape guidance.
+- [UF/IFAS EDIS](https://edis.ifas.ufl.edu/) for extension publications on plant health, insects, diseases, palms, and tree care.
+- [Florida Department of Agriculture and Consumer Services](https://www.fdacs.gov/) for statewide plant-health, pest, and disease context.
+- Local city, county, HOA, and utility rules may still affect trimming, removal, disposal, access, or work near lines.
+
+## What to do next
 
 When a tree is hollowing out in Florida, rot is often the primary process and termites may be secondary occupants of already compromised wood.
 
