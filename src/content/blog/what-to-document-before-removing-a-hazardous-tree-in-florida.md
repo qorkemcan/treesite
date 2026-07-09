@@ -2,7 +2,7 @@
 title: "What to Document Before Removing a Hazardous Tree in Florida"
 description: "A practical Florida guide to what homeowners should document before removing a hazardous tree, why photos and written records matter, and how good documentation can protect you before the tree is gone."
 pubDate: 2026-05-02
-updatedDate: 2026-05-02
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Florida Laws & Property Risk"
 tags:
@@ -13,6 +13,8 @@ tags:
 draft: false
 ---
 
+# What to Document Before Removing a Hazardous Tree in Florida
+
 By the time a hazardous tree comes down, the strongest evidence is often already gone.
 
 That is what makes documentation so important.
@@ -20,6 +22,10 @@ That is what makes documentation so important.
 A homeowner may be completely right that the tree was dangerous. The trunk may have been split. The roots may have lifted. The canopy may have been hanging over the house. But once the tree is cut, hauled away, and turned into a cleanup job, proving those facts becomes much harder.
 
 That is why the smartest time to document a hazardous tree is **before** it is removed.
+
+## Start before the first cut
+
+The best documentation is created while the hazardous condition is still visible. Once the tree is cut, hauled, or chipped, the evidence becomes weaker. Photograph the whole scene, the defect, the targets, the base, and any storm change before removal begins, as long as you can do so safely.
 
 ## Why documentation matters so much in Florida
 
@@ -253,9 +259,31 @@ Professional help is especially useful when:
 - a neighbor could be affected
 - you want documentation before the tree disappears
 
-If you need help evaluating a hazardous tree, documenting the condition properly, or understanding how to support a removal decision before the tree is gone, you can contact ProTreeTrim’s dispatch line at **(855) 498-2578**.
+For help evaluating a hazardous tree, documenting the condition properly, or understanding how to support a removal decision before the tree is gone, you can contact ProTreeTrim’s dispatch line at **(855) 498-2578**.
 
-## Final takeaway
+## Important boundary
+
+Documentation helps preserve facts, but it does not guarantee a permit outcome, insurance decision, legal result, or neighbor-dispute resolution. ProTreeTrim is a referral and dispatch network, not a licensed contractor, engineering firm, law firm, insurer, or utility provider. Property owners should verify permits, access, utility, insurance, HOA, and local requirements before work begins.
+
+## Helpful ProTreeTrim service routes
+
+Once the condition is safely documented, these routes may help with the work itself:
+
+- [Tree removal](/services/tree-removal/) for planned removal after the hazard is documented
+- [Emergency tree removal](/services/emergency-tree-removal/) when storm damage or active risk changes the timing
+- [Tree trimming](/services/tree-trimming/) when selective reduction or clearance may be part of the risk-control conversation
+
+## Sources and verification notes
+
+Use these resources as starting points and verify current local rules before work begins:
+
+- [Florida Statutes Chapter 163](https://www.leg.state.fl.us/Statutes/)
+- [UF/IFAS tree risk resources](https://edis.ifas.ufl.edu/)
+- [Ready.gov storm documentation and recovery guidance](https://www.ready.gov/)
+
+Local permit offices, HOA documents, utility providers, insurers, and onsite professionals may add requirements that a general article cannot decide for a specific property.
+
+## Practical takeaway
 
 Before removing a hazardous tree in Florida, document the tree like you may have to explain the decision later — because in many cases, you might.
 

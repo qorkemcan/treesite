@@ -2,7 +2,7 @@
 title: "What to Do When a Tree Falls on Your Roof in Florida"
 description: "A practical Florida guide to what homeowners should do when a tree falls on the roof, including immediate safety steps, what not to do, documentation priorities, and when the situation is still actively dangerous."
 pubDate: 2026-05-02
-updatedDate: 2026-05-02
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Emergency Storm"
 tags:
@@ -12,6 +12,8 @@ tags:
   - storm damage roof tree
 draft: false
 ---
+
+# What to Do When a Tree Falls on Your Roof in Florida
 
 When a tree falls on your roof, the damage often feels instant and obvious.
 
@@ -24,6 +26,10 @@ A tree on a roof can involve more than impact damage. The trunk or limbs may sti
 That is why homeowners should think in this order:
 
 **safety, containment, documentation, then removal coordination.**
+
+## Start with safety before cleanup
+
+A tree on a roof is not automatically a finished event. Weight may still be shifting, the roof may be compromised, and electrical or water intrusion hazards may still be developing. Keep people away from the impact zone first, then document from safe locations and coordinate removal only after the scene is safe enough for qualified help.
 
 ## The first question to ask
 
@@ -209,9 +215,31 @@ Professional help is especially important when:
 - there is any question about whether the load is settled
 - the home took a direct hit near occupied space
 
-If you need help with a tree on the roof or post-storm tree damage anywhere in Florida, professional support is available through ProTreeTrim’s dispatch line at **(855) 498-2578**.
+For help with a tree on the roof or post-storm tree damage anywhere in Florida, you can call ProTreeTrim’s dispatch line at **(855) 498-2578** to be connected with available tree-service support.
 
-## Final takeaway
+## Important boundary
+
+Do not access the roof or damaged rooms to confirm conditions. Safety, emergency services, utility control, and qualified evaluation come first. ProTreeTrim is a referral and dispatch network, not a licensed contractor, engineering firm, law firm, insurer, or utility provider. Property owners should verify permits, access, utility, insurance, HOA, and local requirements before work begins.
+
+## Helpful ProTreeTrim service routes
+
+After people are safe and emergency hazards are controlled, these routes may help coordinate the tree side of the recovery:
+
+- [Emergency tree removal](/services/emergency-tree-removal/) for active storm damage, roof impact, and suspended limbs
+- [Tree removal](/services/tree-removal/) when the tree can be removed in a controlled non-emergency sequence
+- [Tree trimming](/services/tree-trimming/) when remaining limbs near the roofline need follow-up clearance after the main hazard is handled
+
+## Sources and verification notes
+
+Use these resources as starting points and verify current local rules before work begins:
+
+- [Ready.gov severe weather and recovery guidance](https://www.ready.gov/)
+- [OSHA tree care hazards and solutions](https://www.osha.gov/tree-care/hazards-solutions)
+- [Sunshine 811 homeowner guidance](https://sunshine811.com/homeowner-lp)
+
+Local permit offices, HOA documents, utility providers, insurers, and onsite professionals may add requirements that a general article cannot decide for a specific property.
+
+## Practical takeaway
 
 When a tree falls on your roof in Florida, the first job is not cleanup. It is safety.
 

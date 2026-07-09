@@ -2,7 +2,7 @@
 title: "What to Do If a Tree Is Touching Power Lines After a Storm"
 description: "A practical Florida guide to what homeowners should do when a tree or limb is touching power lines after a storm, including safety, why distance matters, and what not to do before the hazard is resolved."
 pubDate: 2026-05-02
-updatedDate: 2026-05-02
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Emergency Storm"
 tags:
@@ -12,6 +12,8 @@ tags:
   - dangerous tree near electric line florida
 draft: false
 ---
+
+# What to Do If a Tree Is Touching Power Lines After a Storm
 
 If a tree is touching power lines after a storm, this is not a wait-and-see yard problem.
 
@@ -24,6 +26,10 @@ Storm-damaged trees near electrical lines create one of the most dangerous situa
 So the first rule is simple:
 
 **Do not touch the tree. Do not touch the branch. Do not go near the line.**
+
+## Start with distance and utility control
+
+If a tree or limb is touching a power line, the tree-service question comes later. The first step is to stay away, keep others away, and contact the utility or emergency services as appropriate. Do not cut, pull, push, test, climb, or inspect the contact point. Treat the area as unsafe until utility-qualified personnel say otherwise.
 
 ## Why this situation is more dangerous than it looks
 
@@ -219,9 +225,31 @@ That is especially true when:
 - the tree is close to the house or driveway
 - the tree no longer has reliable structure after the contact event
 
-If you need post-storm help with a damaged tree after utility clearance or need guidance on next-step tree risk anywhere in Florida, professional support is available through ProTreeTrim’s dispatch line at **(855) 498-2578**.
+If you need post-storm help with a damaged tree after utility clearance or need guidance on next-step tree risk anywhere in Florida, you can call ProTreeTrim’s dispatch line at **(855) 498-2578** to be connected with available tree-service support.
 
-## Final takeaway
+## Important boundary
+
+Never cut, move, pull, test, climb, or approach trees or limbs in contact with power lines. Utility or emergency response must come before tree cleanup. ProTreeTrim is a referral and dispatch network, not a licensed contractor, engineering firm, law firm, insurer, or utility provider. Property owners should verify permits, access, utility, insurance, HOA, and local requirements before work begins.
+
+## Helpful ProTreeTrim service routes
+
+Use these only after the utility hazard is controlled and the area is safe for tree work:
+
+- [Emergency tree removal](/services/emergency-tree-removal/) for storm-damaged trees after utility clearance
+- [Tree removal](/services/tree-removal/) when the damaged tree still needs controlled removal
+- [Tree trimming](/services/tree-trimming/) for non-energized clearance questions that a qualified provider can evaluate safely
+
+## Sources and verification notes
+
+Use these resources as starting points and verify current local rules before work begins:
+
+- [Electrical Safety Foundation International storm safety guidance](https://www.esfi.org/)
+- [Ready.gov power outage and storm safety guidance](https://www.ready.gov/)
+- [OSHA tree care hazards and solutions](https://www.osha.gov/tree-care/hazards-solutions)
+
+Local permit offices, HOA documents, utility providers, insurers, and onsite professionals may add requirements that a general article cannot decide for a specific property.
+
+## Practical takeaway
 
 If a tree is touching power lines after a storm, the safest first move is to stay away and keep others away.
 
