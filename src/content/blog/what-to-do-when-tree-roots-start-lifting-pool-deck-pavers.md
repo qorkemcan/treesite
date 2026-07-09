@@ -2,7 +2,7 @@
 title: "What to Do When Tree Roots Start Lifting Pool Deck Pavers"
 description: "A practical Florida guide to tree roots lifting pool deck pavers, including what the movement usually means, why quick fixes often fail, and how homeowners can address the hazard without creating a bigger tree or hardscape problem."
 pubDate: 2026-05-06
-updatedDate: 2026-05-06
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Care & Cleanup"
 tags:
@@ -12,6 +12,8 @@ tags:
   - tree root damage pavers pool area
 draft: false
 ---
+
+# What to Do When Tree Roots Start Lifting Pool Deck Pavers
 
 When pool deck pavers start lifting, a lot of homeowners blame the pavers first.
 
@@ -284,8 +286,30 @@ Professional guidance is especially useful when:
 
 If you need help figuring out what to do when tree roots start lifting pool deck pavers — and whether the smarter answer is paver redesign, root-zone protection, or a bigger site decision — you can contact ProTreeTrim’s dispatch line at **(855) 498-2578**.
 
-## Final takeaway
+## Do not solve the paver problem by blindly cutting roots
 
+The fastest visible fix is often the riskiest tree decision. Cutting a root because it is lifting a paver may reduce the surface pressure in one spot, but it can also affect tree health or stability depending on root size, distance from the trunk, species, soil, and what the tree could hit if it changes later.
+
+Pool areas also complicate the decision because the hardscape may have its own failures. Base settlement, drainage, irrigation, edge restraint, deck design, and prior installation choices can all contribute to the visible lift. In many cases, the tree and the paver system both need to be evaluated before anyone chooses a permanent fix.
+
+Keep the immediate area safe for walking, but avoid grade changes, buried trunks, concrete patching over roots, or DIY root cutting near the pool structure. Those shortcuts may hide the problem while creating a bigger repair later.
+
+## Helpful next-step links
+
+- If the conflict is really about a stump or root mass after removal, review [stump grinding](/services/stump-grinding/).
+- If the tree may no longer fit the pool area, compare the issue with [tree removal services](/services/tree-removal/).
+- For a related poolside service scope, see [stump grinding near pools in Florida](/blog/stump-grinding-near-pools-in-florida-safety-access-and-cleanup/).
+- For broader root handling, see [tree root removal after tree removal](/blog/tree-root-removal-after-tree-removal-what-homeowners-should-expect/).
+
+## Sources and verification notes
+
+These links are for context and homeowner verification; they do not replace an onsite assessment, a local permit review, an insurance decision, or professional engineering advice.
+
+- [Sunshine 811: Homeowner Guidance](https://sunshine811.com/homeowner-lp)
+- [UF/IFAS: Gardening Solutions](https://gardeningsolutions.ifas.ufl.edu/)
+- [OSHA: Tree Care Industry Hazards and Solutions](https://www.osha.gov/tree-care/hazards-solutions)
+
+## How to choose the next step around lifted pool pavers
 When tree roots start lifting pool deck pavers, the pavers are often just the symptom.
 
 The real issue is the relationship between the tree, the root zone, and the hardscape built too close to it. The smartest response is to make the area safe, avoid blind root cutting, and decide whether the better long-term solution is to adapt the deck, intervene carefully around the tree, or admit the two are no longer compatible in the same space.
