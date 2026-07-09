@@ -222,7 +222,7 @@ In many cases, a strong native replacement can give you:
 - better shade
 - better wildlife value
 - better regional fit
-- better long-term peace of mind
+- fewer long-term surprises
 
 ## A practical rule of thumb for Florida homeowners
 

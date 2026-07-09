@@ -2,7 +2,7 @@
 title: "Do I Have a Florida Elm? Shade, Roots, Pruning, and Removal Questions"
 description: "Florida elms can be valuable shade trees, but placement, roots, structure, and storm exposure matter. Learn what homeowners should check before pruning or removal."
 pubDate: 2026-06-07
-updatedDate: 2026-06-07
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Identification"
 tags:
@@ -231,3 +231,12 @@ Seasonal leaf drop may be normal. Sudden thinning, one-sided decline, dead limbs
 ### Should I remove an elm before hurricane season?
 
 Not automatically. A healthy, well-placed elm may only need selective pruning. A leaning, decayed, heavily damaged, or poorly placed elm should be evaluated before storms.
+
+## Sources and Helpful References
+
+- [UF/IFAS Extension — Florida elm and shade-tree resources](https://edis.ifas.ufl.edu/)
+- [Florida Plant Atlas — Plant identification resource](https://florida.plantatlas.usf.edu/)
+- [ISA TreesAreGood — Pruning Trees](https://www.treesaregood.org/treeowner/pruning-your-trees)
+- [ISA TreesAreGood — Tree Risk Assessment](https://www.treesaregood.org/treeowner/tree-risk-assessment)
+
+These references support tree-identification and pruning principles. They do not replace an onsite tree-risk assessment, local permit review, or HOA approval process.

@@ -2,7 +2,7 @@
 title: "Why Tree Crews Use Commands and Hand Signals During Tree Removal"
 description: "A practical Florida homeowner guide to why tree crews use commands, hand signals, and clear work-zone communication during tree removal near homes, roofs, fences, pools, and driveways."
 pubDate: 2026-05-09
-updatedDate: 2026-07-04
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Arborist Services"
 tags:
@@ -104,7 +104,7 @@ The safest way to help is to prepare before the crew arrives:
 - move vehicles,
 - clear patio furniture and planters,
 - put pets indoors,
-- unlock gates,
+- open gates,
 - point out irrigation heads, septic lids, low-voltage lighting, or hidden obstacles,
 - stay reachable by phone but out of the work zone.
 

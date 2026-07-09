@@ -2,7 +2,7 @@
 title: "Do I Have a Cottonwood Tree in Florida? Fluffy Seeds, Roots, Mess, and Removal Questions"
 description: "Cottonwood trees can grow fast and large in wet areas. Learn how Florida homeowners can recognize cottonwood, understand seed and root issues, and decide when pruning or removal may be safer."
 pubDate: 2026-06-07
-updatedDate: 2026-06-07
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Identification"
 tags:
@@ -227,3 +227,12 @@ Not automatically. Mess alone is usually a maintenance issue. Removal becomes mo
 ### Is cottonwood removal expensive?
 
 It can be if the tree is large, close to structures, difficult to access, or requires extensive hauling and stump grinding. Access and risk often affect the quote as much as tree size.
+
+## Sources and Helpful References
+
+- [UF/IFAS Extension — Trees and Shrubs](https://edis.ifas.ufl.edu/topics/trees_and_shrubs)
+- [Florida Plant Atlas — Plant identification resource](https://florida.plantatlas.usf.edu/)
+- [ISA TreesAreGood — Tree Risk Assessment](https://www.treesaregood.org/treeowner/tree-risk-assessment)
+- [Sunshine 811 — Homeowner guidance before digging](https://sunshine811.com/homeowner-lp)
+
+Use these sources as starting points for identification and site planning. Local protected-tree, wetland, HOA, and right-of-way rules should still be verified before pruning or removal.

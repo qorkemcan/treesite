@@ -2,7 +2,7 @@
 title: "Do I Have a Sassafras Tree in Florida? Leaves, Suckers, Roots, and Removal Questions"
 description: "Sassafras can be easy to recognize once you know the mitten-shaped leaves and aromatic bark, but Florida homeowners should also understand suckers, thickets, disease concerns, and when removal may make sense."
 pubDate: 2026-06-07
-updatedDate: 2026-06-07
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Identification"
 tags:
@@ -207,3 +207,12 @@ It depends on the location. Suckers in a natural area may be fine. Suckers under
 ### Can stump grinding stop sassafras from coming back?
 
 Grinding removes the stump and helps restore the surface, but connected roots may still send up shoots in some cases. Ask about the whole root/sucker situation before assuming one cut solves it.
+
+## Sources and Helpful References
+
+- [UF/IFAS Extension — Trees and Shrubs](https://edis.ifas.ufl.edu/topics/trees_and_shrubs)
+- [Florida Plant Atlas — Plant identification resource](https://florida.plantatlas.usf.edu/)
+- [ISA TreesAreGood — Why Hire an Arborist?](https://www.treesaregood.org/treeowner/why-hire-an-arborist)
+- [Sunshine 811 — Homeowner guidance before digging](https://sunshine811.com/homeowner-lp)
+
+These references help with identification and site decisions. Suckering, root conflicts, and removal questions should be evaluated in the context of local rules and the specific yard.

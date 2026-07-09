@@ -2,7 +2,7 @@
 title: "Do I Have a Willow Oak in Florida? Wet Soil, Roots, Pruning, and Removal Questions"
 description: "Willow oak can be a strong shade tree in the right Florida site, but its size, wet-soil preference, roots, and storm exposure can raise pruning or removal questions."
 pubDate: 2026-06-07
-updatedDate: 2026-06-07
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Identification"
 tags:
@@ -207,3 +207,12 @@ Do not cut major roots without guidance. Cutting large roots can damage tree hea
 ### When should a willow oak be removed?
 
 Removal may be safer when the tree has serious decay, root damage, repeated limb failures, severe lean, major canopy dieback, or a location where pruning cannot reasonably reduce risk.
+
+## Sources and Helpful References
+
+- [UF/IFAS Extension — Oak and shade-tree resources](https://edis.ifas.ufl.edu/)
+- [Florida Plant Atlas — Plant identification resource](https://florida.plantatlas.usf.edu/)
+- [ISA TreesAreGood — Pruning Trees](https://www.treesaregood.org/treeowner/pruning-your-trees)
+- [ISA TreesAreGood — Tree Risk Assessment](https://www.treesaregood.org/treeowner/tree-risk-assessment)
+
+These references provide identification and pruning context. Wet-soil trees near homes, driveways, septic areas, or utility corridors still need property-specific review.

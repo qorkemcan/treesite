@@ -2,7 +2,7 @@
 title: "What to Move Before a Tree Crew Arrives at Your Home"
 description: "A practical Florida homeowner checklist for what to move, clear, and photograph before a tree crew arrives for trimming, removal, cleanup, or stump work."
 pubDate: 2026-05-09
-updatedDate: 2026-07-04
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Care & Cleanup"
 tags:
@@ -93,7 +93,7 @@ Many Florida tree jobs are limited by access. A crew may need to carry brush, mo
 
 Before arrival:
 
-- unlock gates,
+- open gates,
 - remove trash bins and planters from the gate area,
 - check whether the gate opens fully,
 - secure pets indoors,

@@ -2,7 +2,7 @@
 title: "Do I Have a Sycamore Tree in Florida? Bark, Roots, Mess, and Removal Questions"
 description: "Learn how Florida homeowners can recognize a sycamore tree, what peeling bark really means, and when roots, limbs, mess, or decline may call for pruning or removal."
 pubDate: 2026-06-07
-updatedDate: 2026-06-07
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Identification"
 tags:
@@ -217,3 +217,12 @@ Not necessarily. Debris alone is usually a maintenance issue. Removal becomes mo
 ### Can a sycamore be topped to make it smaller?
 
 Topping is not a good solution. It can create weak regrowth and future storm-risk problems. Proper pruning or removal planning is safer than trying to shrink a mature tree with severe cuts.
+
+## Sources and Helpful References
+
+- [UF/IFAS Extension — Trees and Shrubs](https://edis.ifas.ufl.edu/topics/trees_and_shrubs)
+- [Florida Plant Atlas — Plant identification resource](https://florida.plantatlas.usf.edu/)
+- [ISA TreesAreGood — Tree Risk Assessment](https://www.treesaregood.org/treeowner/tree-risk-assessment)
+- [Sunshine 811 — Homeowner guidance before digging](https://sunshine811.com/homeowner-lp)
+
+Use these sources for identification and risk-screening context. Large shade trees near structures, utilities, hardscape, or drainage areas should be reviewed on site before major work.

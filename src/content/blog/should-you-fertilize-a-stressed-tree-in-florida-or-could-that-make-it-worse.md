@@ -2,12 +2,14 @@
 title: "Should You Fertilize a Stressed Tree in Florida, or Could That Make It Worse?"
 description: "A Florida homeowner guide to tree fertilization, yellow leaves, slow growth, storm stress, root trouble, and when fertilizer is not the right first step."
 pubDate: "2026-06-07"
-updatedDate: "2026-06-07"
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Health & Disease"
 tags: ["tree fertilization", "stressed tree", "Florida tree care", "tree health", "yellow leaves", "tree risk"]
 draft: false
 ---
+
+# Should You Fertilize a Stressed Tree in Florida, or Could That Make It Worse?
 
 ## Short Answer
 

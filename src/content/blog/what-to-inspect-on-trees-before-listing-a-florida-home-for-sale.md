@@ -2,7 +2,7 @@
 title: "What to Inspect on Trees Before Listing a Florida Home for Sale"
 description: "A Florida pre-listing tree triage guide covering curb appeal, deadwood, roof contact, roots, palms, permits, documentation, buyer concerns, and when to leave, prune, assess, or remove."
 pubDate: 2026-05-09
-updatedDate: 2026-07-01
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Arborist Services"
 tags:
@@ -269,7 +269,7 @@ Call **(855) 498-2578** to describe the listing timeline, major trees, visible c
 
 For the buyer’s perspective, see [Florida Tree Questions to Ask Before Buying a Home With Mature Trees](/blog/florida-tree-questions-to-ask-before-buying-a-home-with-mature-trees/).
 
-## Authoritative sources reviewed
+## Sources and Helpful References
 
 - [UF/IFAS — Is My Tree Safe?](https://ask.ifas.ufl.edu/publication/EP507)
 - [International Society of Arboriculture — Managing Hazards and Risk](https://www.treesaregood.org/Tree-Owner-Resources/Managing-Hazards-and-Risk)

@@ -2,7 +2,7 @@
 title: "How Tree Crews Protect Driveways, Lawns, and Pool Decks During Removal"
 description: "A Florida homeowner guide to tree-removal protection plans for driveways, pavers, lawns, pool decks, screen enclosures, irrigation, septic areas, landing zones, and final walkthroughs."
 pubDate: 2026-05-09
-updatedDate: 2026-06-29
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Care & Cleanup"
 tags:
@@ -266,7 +266,7 @@ When safe:
 - move vehicles
 - clear furniture and grills
 - remove fragile planters
-- unlock gates
+- open gates
 - secure pets
 - pause irrigation if advised
 - mark known systems

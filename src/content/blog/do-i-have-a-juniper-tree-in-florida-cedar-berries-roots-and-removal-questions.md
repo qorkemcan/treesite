@@ -2,7 +2,7 @@
 title: "Do I Have a Juniper Tree in Florida? Cedar, Berries, Roots, and Removal Questions"
 description: "Many Florida homeowners call red cedar a juniper or a cedar. Learn how to identify juniper-type trees, what the blue berries mean, and when pruning or removal becomes a practical question."
 pubDate: 2026-06-07
-updatedDate: 2026-06-07
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Identification"
 tags:
@@ -240,3 +240,12 @@ Interior browning can be normal when older shaded foliage dies. Sudden browning,
 ### Should I remove a juniper that is too close to my house?
 
 Not always, but if repeated pruning cannot keep it off the house, roof, pool cage, or utilities, removal and replacement may be more practical than ongoing severe trimming.
+
+## Sources and Helpful References
+
+- [UF/IFAS Extension — Trees and Shrubs](https://edis.ifas.ufl.edu/topics/trees_and_shrubs)
+- [Florida Plant Atlas — Juniperus / native plant identification](https://florida.plantatlas.usf.edu/)
+- [ISA TreesAreGood — Pruning Trees](https://www.treesaregood.org/treeowner/pruning-your-trees)
+- [Sunshine 811 — Homeowner guidance before digging](https://sunshine811.com/homeowner-lp)
+
+Use these references to confirm plant identity and safe site planning. Local rules, utilities, and HOA documents should be checked before major pruning, root work, or removal.

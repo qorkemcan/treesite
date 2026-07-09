@@ -21,7 +21,7 @@ A lot of people ask for the **best trees for septic areas** assuming there must 
 
 Usually, that is the wrong starting point.
 
-When it comes to drain fields in Florida, the best tree is often the tree that stays far enough away that it does not become part of the septic problem later.
+For drain fields in Florida, the best tree is often the tree that stays far enough away that it does not become part of the septic problem later.
 
 ## The short answer
 

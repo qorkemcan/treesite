@@ -2,7 +2,7 @@
 title: "What Questions Should You Ask Before Scheduling Tree Removal?"
 description: "A practical Florida homeowner guide to the key questions to ask before scheduling tree removal, from permits and access to cleanup and stump grinding."
 pubDate: 2026-05-09
-updatedDate: 2026-07-04
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Care & Cleanup"
 tags:
@@ -163,7 +163,7 @@ Not every price change is unfair. Sometimes conditions are not fully visible unt
 
 ## Ask what to move before the crew arrives
 
-You may need to move vehicles, patio furniture, planters, grills, toys, garden hoses, outdoor decorations, or items near the work area. You may also need to unlock gates, secure pets, notify neighbors, or mark irrigation heads.
+You may need to move vehicles, patio furniture, planters, grills, toys, garden hoses, outdoor decorations, or items near the work area. You may also need to open gates, secure pets, notify neighbors, or mark irrigation heads.
 
 Taking photos before work begins is also smart. Photograph the tree, nearby structures, fences, landscaping, driveway, and any areas where equipment may travel.
 

@@ -2,12 +2,14 @@
 title: "Why Are My Oak Tree Leaves Turning Brown in Florida?"
 description: "A Florida homeowner checklist for brown oak leaves, including seasonal leaf drop, oak leaf blister, drought stress, root damage, and when to call a professional."
 pubDate: "2026-06-07"
-updatedDate: "2026-06-07"
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Palm & Oak"
 tags: ["oak tree leaves turning brown", "Florida oak trees", "live oak", "laurel oak", "tree stress", "tree risk"]
 draft: false
 ---
+
+# Why Are My Oak Tree Leaves Turning Brown in Florida?
 
 ## Short Answer
 
@@ -196,3 +198,12 @@ Treat it as urgent when browning appears with a new lean, cracked soil, large de
 ### Can a brown oak recover?
 
 It depends on the cause. Seasonal leaf drop, temporary leaf disease, or short-term stress may improve. Severe root injury, trunk decay, major storm damage, or advanced decline may not recover safely without professional action.
+
+## Sources and Helpful References
+
+- [UF/IFAS Extension — Oak and tree-health resources](https://edis.ifas.ufl.edu/)
+- [UF/IFAS — Is My Tree Safe?](https://ask.ifas.ufl.edu/publication/EP507)
+- [ISA TreesAreGood — Tree Risk Assessment](https://www.treesaregood.org/treeowner/tree-risk-assessment)
+- [ISA TreesAreGood — Why Hire an Arborist?](https://www.treesaregood.org/treeowner/why-hire-an-arborist)
+
+These references support general tree-health and risk-screening decisions. Leaf symptoms alone do not diagnose tree stability, disease, or removability without site-specific evaluation.

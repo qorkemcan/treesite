@@ -2,7 +2,7 @@
 title: "Do I Have a White Pine Tree in Florida? Needles, Height, and Removal Questions"
 description: "White pine searches often lead Florida homeowners to the wrong tree. Learn how to check needle bundles, compare Florida pines, and decide when a pine needs pruning, monitoring, or removal."
 pubDate: 2026-06-07
-updatedDate: 2026-06-07
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Identification"
 tags:
@@ -232,3 +232,12 @@ Not automatically. But if it is tall, leaning, dead, dropping limbs, or showing 
 ### Can a dead pine be left standing?
 
 A dead pine near a target should be addressed quickly. Dead wood can become more brittle, and removal may become more dangerous the longer it stands.
+
+## Sources and Helpful References
+
+- [UF/IFAS Extension — Trees and Shrubs](https://edis.ifas.ufl.edu/topics/trees_and_shrubs)
+- [Florida Plant Atlas — Plant identification resource](https://florida.plantatlas.usf.edu/)
+- [ISA TreesAreGood — Tree Risk Assessment](https://www.treesaregood.org/treeowner/tree-risk-assessment)
+- [Sunshine 811 — Homeowner guidance before digging](https://sunshine811.com/homeowner-lp)
+
+These references support identification and placement review. Pines and pine-like trees should still be evaluated by site, species, structure, targets, and local rules.

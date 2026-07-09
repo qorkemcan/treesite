@@ -2,7 +2,7 @@
 title: "Do I Have an Ash Tree in Florida? Leaves, Bark, Wet Soil, and Removal Questions"
 description: "Ash trees can be easy to confuse with other shade trees. Learn what Florida homeowners should check before pruning, diagnosing decline, cutting roots, or removing an ash near the home."
 pubDate: 2026-06-07
-updatedDate: 2026-06-07
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Identification"
 tags:
@@ -235,3 +235,12 @@ Do not cut large roots near the trunk without advice. Root cutting can destabili
 ### Should I remove an ash tree before hurricane season?
 
 Not automatically. Removal depends on condition, location, root health, canopy defects, and targets. A large ash with decay, lean, or major dead limbs should be evaluated before storms become a concern.
+
+## Sources and Helpful References
+
+- [UF/IFAS Extension — Trees and Shrubs](https://edis.ifas.ufl.edu/topics/trees_and_shrubs)
+- [Florida Plant Atlas — Plant identification resource](https://florida.plantatlas.usf.edu/)
+- [ISA TreesAreGood — Tree Risk Assessment](https://www.treesaregood.org/treeowner/tree-risk-assessment)
+- [Sunshine 811 — Homeowner guidance before digging](https://sunshine811.com/homeowner-lp)
+
+Use these references to support identification and risk-screening questions. Local pests, site drainage, root conflicts, and protected-tree rules should be verified for the specific property.

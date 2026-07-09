@@ -2,7 +2,7 @@
 title: "What Homeowners Should Photograph Before a Tree Crew Starts Work"
 description: "A practical Florida homeowner checklist for photographing trees, yards, driveways, fences, irrigation, and access areas before tree work begins."
 pubDate: 2026-05-09
-updatedDate: 2026-07-04
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Care & Cleanup"
 tags:
@@ -159,7 +159,7 @@ Before work starts, also:
 - move vehicles,
 - move patio furniture and grills,
 - secure pets,
-- unlock gates,
+- open gates,
 - clear hoses and toys,
 - mark irrigation heads,
 - ask what areas the crew needs open.

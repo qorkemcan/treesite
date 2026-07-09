@@ -2,12 +2,14 @@
 title: "White Spots on Palm Leaves in Florida: Scale, Fungus, or Nutrient Issue?"
 description: "A Florida homeowner guide to white spots on palm leaves, including scale insects, fungal leaf spots, nutrient stress, irrigation problems, and when palm removal may be safer than treatment."
 pubDate: "2026-06-07"
-updatedDate: "2026-06-07"
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Palm & Oak"
 tags: ["white spots on palm leaves", "Florida palms", "palm scale", "palm disease", "palm tree care", "palm removal"]
 draft: false
 ---
+
+# White Spots on Palm Leaves in Florida: Scale, Fungus, or Nutrient Issue?
 
 ## Short Answer
 
