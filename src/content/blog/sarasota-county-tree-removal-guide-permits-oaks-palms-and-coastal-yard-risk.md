@@ -217,6 +217,8 @@ These records can help with HOA questions, enforcement questions, insurance issu
 
 ## When to Call ProTreeTrim
 
+Start with [tree removal](/services/tree-removal/) scope for planned work, then use [emergency response](/services/emergency-response/) guidance only if storm damage or blocked access affects timing.
+
 If you are trying to decide whether a Sarasota County tree needs pruning, removal, emergency service, or stump grinding, ProTreeTrim can help you think through the practical next step. The key is to balance tree condition, property risk, access, and local rules before work begins.
 
 For tree removal, emergency tree service, trimming, palm removal, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

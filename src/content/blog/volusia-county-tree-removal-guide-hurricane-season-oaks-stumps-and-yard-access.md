@@ -228,6 +228,8 @@ This is useful for permitting, HOA records, insurance discussions, and future pr
 
 ## When to Call ProTreeTrim
 
+During hurricane-season planning, start with [tree removal](/services/tree-removal/) scope and use [emergency response](/services/emergency-response/) guidance only when damage or blocked access makes the job urgent.
+
 If you are trying to decide whether a Volusia County tree needs pruning, removal, emergency cleanup, or stump grinding, ProTreeTrim can help you think through the practical next step. The right plan depends on property type, tree condition, permit context, storm exposure, and yard access.
 
 For tree removal, emergency tree service, oak or palm removal, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

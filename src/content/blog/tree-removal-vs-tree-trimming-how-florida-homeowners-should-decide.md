@@ -232,6 +232,8 @@ The answer is rarely based on one clue. It is a combination of condition, locati
 
 ## When to Call ProTreeTrim
 
+For borderline cases, compare [tree trimming](/services/tree-trimming/) against [tree removal](/services/tree-removal/) based on risk, clearance, structure, and long-term value.
+
 If you are not sure whether a Florida tree needs trimming, removal, emergency service, or stump grinding, ProTreeTrim can help you think through the practical next step. The best decision protects the home without removing healthy trees unnecessarily.
 
 For tree removal, trimming, emergency tree service, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

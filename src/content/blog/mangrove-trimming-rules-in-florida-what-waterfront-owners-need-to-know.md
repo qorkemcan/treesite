@@ -223,6 +223,8 @@ For mangroves, contact the [Florida DEP mangrove program](https://floridadep.gov
 
 ## Official sources reviewed
 
+For waterfront work, review [tree trimming](/services/tree-trimming/) rules first; if removal is being considered, compare the scope with [tree removal](/services/tree-removal/) expectations.
+
 - [Florida DEP — Mangrove Frequently Asked Questions](https://floridadep.gov/water/submerged-lands-environmental-resources-coordination/content/mangrove-frequently-asked)
 - [Florida DEP — Mangrove Trimming Guidelines for Homeowners](https://floridadep.gov/water/submerged-lands-environmental-resources-coordination/documents/mangrove-trimming-guidelines)
 - [Florida DEP — Delegated Local Governments](https://floridadep.gov/water/submerged-lands-environmental-resources-coordination/content/mangrove-trimming-delegated)

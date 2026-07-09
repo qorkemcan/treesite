@@ -232,6 +232,8 @@ If trimming would only hide a serious problem, removal may be the safer decision
 
 ## When to Call ProTreeTrim
 
+If trimming only removes fronds, start with [tree trimming](/services/tree-trimming/) expectations; if the palm itself is the risk, compare [tree removal](/services/tree-removal/).
+
 If a Florida palm is leaning, declining, storm-damaged, too close to a pool cage, dropping heavy fronds, or showing crown or trunk problems, ProTreeTrim can help you compare trimming, planned removal, emergency removal, and stump grinding.
 
 For palm removal, tree trimming, emergency tree service, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

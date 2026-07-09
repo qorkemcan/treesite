@@ -275,6 +275,8 @@ These photos help with estimates, permits, HOA questions, and future records.
 
 ## When to Call ProTreeTrim
 
+Before deciding to wait, review [tree removal](/services/tree-removal/) expectations so the estimate, cleanup plan, and timing are clear.
+
 If you are debating whether to remove a tree before it falls, ProTreeTrim can help you think through the practical next step: trimming, monitoring, planned removal, emergency removal, or stump grinding.
 
 For tree removal, emergency tree service, trimming, or stump grinding help in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

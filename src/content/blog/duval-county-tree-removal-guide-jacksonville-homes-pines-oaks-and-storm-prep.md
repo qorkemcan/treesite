@@ -225,6 +225,8 @@ This is useful for city questions, HOA records, insurance discussions, and futur
 
 ## When to Call ProTreeTrim
 
+A county removal project should usually begin with [tree removal](/services/tree-removal/) scope; storm-damaged or access-blocking situations may also need [emergency response](/services/emergency-response/) planning.
+
 If you are trying to decide whether a Duval County tree should be trimmed, removed, documented as hazardous, cleaned up after a storm, or ground out after removal, ProTreeTrim can help you think through the practical next step.
 
 For tree removal, emergency tree service, pine or oak removal, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

@@ -194,6 +194,8 @@ This article is general homeowner guidance. It is not a remote diagnosis of any 
 
 ## Final decision: ask for pruning with a purpose, not cutting for shock value
 
+For corrective pruning decisions, start with [tree trimming](/services/tree-trimming/) standards and review basic [trust and safety](/trust-safety/) checks before hiring.
+
 Professional pruning and topping are not two versions of the same service. Proper pruning is selective, purposeful, and designed to preserve structure while addressing a real property need. Topping is an indiscriminate reduction practice that can stress the tree, create weak regrowth, and turn a manageable tree into a future removal problem.
 
 If you are comparing pruning, trimming, or removal options for a Florida property, ProTreeTrim can connect you with local tree service providers through its referral and dispatch network. Call **(855) 498-2578** or visit [protreetrim.com](https://www.protreetrim.com/) to get started.

@@ -249,6 +249,8 @@ Documentation helps with permitting, HOA questions, insurance, and future proper
 
 ## When to Call ProTreeTrim
 
+Treat routine work as a [tree removal](/services/tree-removal/) scope, but use [emergency response](/services/emergency-response/) guidance when storm damage or blocked access makes timing more urgent.
+
 If you are trying to decide whether an Orange County tree needs trimming, planned removal, emergency service, or stump grinding, ProTreeTrim can help you think through the practical next step. The right answer depends on jurisdiction, tree condition, targets, access, wetland/conservation context, and permit or documentation requirements.
 
 For tree removal, emergency tree service, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

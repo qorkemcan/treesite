@@ -270,6 +270,8 @@ These records can help with permitting, HOA questions, insurance, and future pro
 
 ## When to Call ProTreeTrim
 
+For planned work, use [tree removal](/services/tree-removal/) as the main scope; when storm damage or blocked access changes the situation, compare it with [emergency response](/services/emergency-response/) guidance.
+
 If you are trying to decide whether an Alachua County or Gainesville-area tree needs trimming, planned removal, emergency service, stump grinding, or permit/documentation review, ProTreeTrim can help you think through the practical next step. Large oaks, regulated trees, storm damage, root conflicts, and Gainesville/Alachua County thresholds deserve careful planning.
 
 For tree removal, emergency tree service, trimming, oak removal, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

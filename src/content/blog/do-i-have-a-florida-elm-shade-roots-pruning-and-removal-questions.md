@@ -206,6 +206,8 @@ Before removal, check current local rules and ask whether photos, an arborist le
 
 ## When to Call ProTreeTrim
 
+If pruning can solve clearance or canopy issues, begin with [tree trimming](/services/tree-trimming/); if the location or condition raises bigger concerns, compare [tree removal](/services/tree-removal/).
+
 If you think you have a Florida elm and are deciding between pruning, monitoring, or removal, ProTreeTrim can help you think through the practical next step.
 
 For tree trimming, tree removal, emergency tree service, or stump grinding in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

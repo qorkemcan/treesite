@@ -231,6 +231,8 @@ This is useful for permit records, HOA questions, insurance discussions, and fut
 
 ## When to Call ProTreeTrim
 
+Use [tree removal](/services/tree-removal/) as the planned-work baseline, and bring in [emergency response](/services/emergency-response/) guidance when storm damage or blocked access changes the urgency.
+
 If you are trying to decide whether a Hillsborough County tree needs trimming, planned removal, emergency service, or stump grinding, ProTreeTrim can help you think through the practical next step. Tampa and Hillsborough-area tree work often depends on jurisdiction, tree size, access, storm risk, and whether permit or documentation rules apply.
 
 For tree removal, emergency tree service, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

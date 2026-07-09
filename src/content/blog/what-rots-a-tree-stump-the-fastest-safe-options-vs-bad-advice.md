@@ -190,6 +190,8 @@ Fresh wood chips mixed deeply into soil can affect planting conditions. If the g
 
 ## A Simple Decision Guide
 
+For leftover wood, regrowth, or surface repair, compare [stump grinding](/services/stump-grinding/) with [tree removal](/services/tree-removal/) before choosing a cleanup path.
+
 Choose **grinding** if you need the area usable soon.
 
 Choose **natural decay** if the stump is out of the way, not a trip hazard, not near structures, and you are comfortable waiting.

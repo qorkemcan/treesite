@@ -357,6 +357,8 @@ Better photos help the tree service understand access and risk before the visit.
 
 ## When to Call ProTreeTrim
 
+A higher quote often reflects access, cleanup, and leftover stump work, so review [tree removal](/services/tree-removal/) scope before deciding whether [stump grinding](/services/stump-grinding/) belongs in the same job.
+
 If you are comparing tree removal quotes and trying to understand why one price is higher than another, ProTreeTrim can help you think through the real cost drivers: access, risk, cleanup, stump grinding, and property protection.
 
 For tree removal, emergency tree service, trimming, or stump grinding help in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

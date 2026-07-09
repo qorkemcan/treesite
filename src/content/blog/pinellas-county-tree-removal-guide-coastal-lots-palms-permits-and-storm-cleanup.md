@@ -253,6 +253,8 @@ This helps with city/county questions, HOA records, insurance, and future proper
 
 ## When to Call ProTreeTrim
 
+Coastal cleanup should still start with [tree removal](/services/tree-removal/) scope unless storm damage or blocked access makes [emergency response](/services/emergency-response/) the better first step.
+
 If you are trying to decide whether a Pinellas County tree needs trimming, removal, emergency service, storm cleanup, or stump grinding, ProTreeTrim can help you think through the practical next step. In Pinellas, the right answer depends heavily on location, permit status, coastal exposure, access, and whether the tree creates a real target risk.
 
 For tree removal, emergency tree service, palm removal, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

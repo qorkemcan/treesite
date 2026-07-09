@@ -1,0 +1,5466 @@
+{
+  "generatedAt": "2026-07-09T21:59:07.789Z",
+  "blogDir": "src/content/blog",
+  "totalMarkdownFiles": 564,
+  "auditedRoutes": [
+    "/services/tree-removal/",
+    "/services/tree-trimming/",
+    "/services/stump-grinding/",
+    "/services/emergency-response/",
+    "/trust-safety/",
+    "/contact/"
+  ],
+  "routeTotals": {
+    "/services/tree-removal/": 549,
+    "/services/tree-trimming/": 352,
+    "/services/stump-grinding/": 284,
+    "/services/emergency-response/": 329,
+    "/trust-safety/": 2,
+    "/contact/": 0
+  },
+  "groupTotals": {
+    "treeRemoval": 549,
+    "treeTrimming": 352,
+    "stumpGrinding": 284,
+    "emergencyResponse": 329,
+    "trustSafety": 2,
+    "contact": 0,
+    "county": 3,
+    "city": 0
+  },
+  "zeroInternalMarkdownLinkCount": 3,
+  "zeroAuditedRouteFileCount": 4,
+  "zeroInternalMarkdownLinkFiles": [
+    "src/content/blog/should-you-fertilize-a-stressed-tree-in-florida-or-could-that-make-it-worse.md",
+    "src/content/blog/white-spots-on-palm-leaves-in-florida-scale-fungus-or-nutrient-issue.md",
+    "src/content/blog/why-are-my-oak-tree-leaves-turning-brown-in-florida.md"
+  ],
+  "zeroAuditedRouteFiles": [
+    "src/content/blog/glen-saint-mary-pine-and-oak-cleanup-rural-access-issues-homeowners-should-expect.md",
+    "src/content/blog/should-you-fertilize-a-stressed-tree-in-florida-or-could-that-make-it-worse.md",
+    "src/content/blog/white-spots-on-palm-leaves-in-florida-scale-fungus-or-nutrient-issue.md",
+    "src/content/blog/why-are-my-oak-tree-leaves-turning-brown-in-florida.md"
+  ],
+  "rows": [
+    {
+      "file": "src/content/blog/24-7-emergency-tree-service-what-defines-a-tree-emergency.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/a-large-limb-is-hanging-over-the-driveway-trim-brace-or-remove.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/a-tree-looks-hollow-near-the-base-what-should-a-homeowner-check-first.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/after-the-fact-tree-removal-permits-in-florida-what-happens-next.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/air-spade-root-pruning-in-florida-what-it-is-and-when-it-helps.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/alachua-county-tree-removal-guide-gainesville-large-oaks-permits-and-storm-damaged-trees.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/ambrosia-beetles-in-florida-trees-early-signs-and-why-fast-action-matters.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/ambrosia-beetles-in-florida-trees-toothpick-sawdust-stress-and-when-to-worry.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/apartment-and-multifamily-tree-removal-in-florida-resident-safety-access-and-cleanup-checklist.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/are-mushrooms-on-mulch-dangerous-to-nearby-trees.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/bad-palm-pruning-in-florida-hurricane-cuts-pencil-pointing-and-hidden-costs.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/bagworms-on-florida-trees-what-homeowners-should-check-before-spraying-or-pruning.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/bagworms-on-florida-trees-what-homeowners-should-do-first.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/bark-beetles-in-florida-pines-when-a-brown-pine-becomes-a-removal-risk.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-native-shade-trees-for-north-florida-neighborhood-lots.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-shade-trees-for-florida-backyards.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-small-flowering-trees-for-central-florida-front-yards.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-small-trees-for-patios-pool-decks-and-courtyards-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-small-trees-to-plant-near-a-florida-house-without-root-problems.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-time-to-trim-palm-trees-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-coastal-florida-yards-with-salt-and-wind-exposure.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-driveway-edges-and-narrow-side-yards-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-florida-front-yards-with-lower-mess.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-mailbox-areas-and-small-entry-beds-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-new-home-landscapes-in-florida.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-pet-friendly-florida-yards.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-poolside-landscaping-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-privacy-and-noise-reduction-in-florida.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-rain-gardens-and-drainage-swales-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-septic-areas-and-drain-fields-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-west-facing-florida-yards.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-for-wet-yards-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-not-to-plant-near-a-house-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-to-plant-after-stump-grinding-in-florida.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-trees-to-plant-under-power-lines-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/best-wind-resistant-trees-for-florida-yards-what-homeowners-should-know.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/better-alternatives-to-clusia-for-small-florida-yards.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/black-spot-on-palm-fronds-what-it-may-mean.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/black-spots-on-tree-leaves-in-florida-leaf-spot-anthracnose-or-tree-stress.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/boundary-trees-can-you-trim-your-neighbors-overhanging-limbs.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/brevard-county-tree-removal-guide-coastal-winds-palms-pines-and-cleanup.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/broward-county-tree-removal-guide-permits-storm-risk-and-homeowner-costs.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/bucket-truck-climber-or-crane-why-tree-removal-methods-change-the-quote.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/cabling-and-bracing-for-trees-in-florida-when-does-it-make-sense.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-city-fine-you-for-unauthorized-tree-removal-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-diseased-tree-be-removed-safely-without-spreading-the-problem.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-hollow-tree-be-saved-or-does-it-need-removal.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-mature-tree-be-moved-instead-of-removed-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-split-tree-be-saved-after-a-storm.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-stump-grinder-fit-through-a-backyard-gate-access-issues-homeowners-miss.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-stump-grinder-fit-through-a-backyard-gate.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-tree-be-too-close-to-remove-safely-without-a-crane.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-tree-be-unsafe-even-if-it-still-has-a-full-green-canopy.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-tree-close-over-a-wound-and-still-have-decay-inside.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-tree-recover-from-root-damage.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-tree-rotting-at-the-base-be-saved-or-is-removal-safer.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-tree-service-remove-a-tree-in-a-tight-backyard.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-a-tree-with-girdling-roots-be-saved-or-is-removal-safer.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-an-old-topped-tree-become-a-storm-risk-later.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-an-uprooted-tree-be-saved-in-florida.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-construction-compaction-kill-a-tree-slowly.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-exposed-tree-roots-after-erosion-make-a-florida-tree-unstable.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-flooded-soil-make-trees-fail-later-even-after-the-storm-passes.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-fresh-wood-chips-from-stump-grinding-hurt-new-plants.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-heavy-equipment-over-tree-roots-damage-a-florida-tree-even-if-the-yard-looks-fine.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-heavy-tree-equipment-leave-ruts-in-a-florida-yard.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-lightning-protection-systems-help-trees-in-florida.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-nails-screws-or-old-hardware-hurt-a-florida-tree.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-overmulching-damage-a-tree-in-florida.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-overpruning-make-a-tree-more-dangerous.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-storm-damaged-trees-fail-days-later.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-tree-removal-damage-a-driveway-septic-system-or-irrigation.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-tree-roots-regrow-after-stump-grinding.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-tree-work-damage-pavers-irrigation-or-septic-lines.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-trees-help-reduce-heat-around-a-florida-home.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-trenching-near-tree-roots-make-a-florida-tree-unstable-later.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-vines-or-ivy-damage-a-florida-tree-what-homeowners-should-check-first.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-be-fined-for-improper-pruning-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-be-sued-for-a-falling-tree-in-florida-liability-explained.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-cut-a-tree-near-the-street-sidewalk-or-right-of-way-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-cut-down-a-tree-on-your-own-property-in-florida-what-homeowners-should-check-first.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-install-pavers-or-artificial-turf-over-tree-roots-without-harming-the-tree.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-prune-tree-limbs-in-summer-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-remove-a-tree-during-nesting-season-in-florida-the-legal-answer.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-remove-a-tree-in-an-hoa-without-approval.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-remove-part-of-a-tree-instead-of-the-whole-tree.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-remove-surface-tree-roots-without-hurting-the-tree.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-replant-in-the-same-spot-after-stump-grinding.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-throw-neighbor-tree-branches-back-over-the-fence-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/can-you-trim-a-neighbors-overhanging-tree-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/caring-for-trees-after-a-storm-what-to-inspect-first.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/carpenter-ants-in-a-florida-tree-decay-sign-or-just-an-insect-problem.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/carpenter-ants-in-a-tree-are-they-killing-it-or-finding-decay.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/cedar-vs-cypress-mulch-around-florida-trees-which-is-better-for-homeowners.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/certified-arborist-guide-for-macclenny-and-glen-st-mary.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/charlotte-county-tree-removal-guide-residential-rules-costs-and-common-job-types.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/charlotte-county-tree-trimming-rules-what-property-owners-should-know.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/citrus-greening-managing-fruit-trees-in-your-backyard.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/cold-snap-recovery-for-florida-palms-what-to-prune-what-to-leave-and-when-to-wait.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/collier-county-tree-removal-guide-large-lots-hoas-palms-and-storm-cleanup.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/commercial-property-tree-removal-in-florida-permits-access-liability-and-cleanup-checklist.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/commercial-tree-maintenance-plans-in-florida-what-owners-hoas-and-multifamily-managers-should-expect.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/commercial-tree-removal-for-florida-business-owners.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/common-mistakes-homeowners-make-when-trying-to-remove-a-stump.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/common-pests-attacking-florida-oak-trees.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/common-tree-failures-during-high-winds.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/condo-association-tree-removal-in-florida-common-elements-board-approval-and-storm-cleanup.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/cooper-city-stump-grinding-after-tree-removal-access-cleanup-and-replanting.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/cooper-city-stump-grinding-guide-costs-access-and-landscape-repair.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/cracks-in-tree-bark-heat-stress-lightning-or-structural-risk.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/crane-assisted-tree-removal-when-is-it-necessary.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/dangerous-tree-removal-delay-cost-florida.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/dead-branches-at-the-top-of-a-tree-drought-roots-borers-or-decline.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/dead-tree-removal-cost-in-florida-what-changes-the-price.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/debris-cleanup-after-a-major-storm-hiring-professionals.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/deep-root-fertilization-boosting-florida-tree-health.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/deland-oak-tree-risk-when-shade-trees-become-removal-candidates.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/deland-stump-grinding-guide-costs-access-and-yard-restoration.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/deland-stump-grinding-near-driveways-fences-and-older-lots.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/destin-stump-removal-around-rentals-pools-and-tight-side-yards.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/destin-stump-removal-guide-what-homeowners-should-expect.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/diy-tree-trimming-vs-hiring-a-pro-where-the-line-is-in-florida.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-black-olive-tree-in-florida-staining-shade-roots-and-removal-questions.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-brazilian-pepper-tree-in-florida-invasive-status-removal-and-stump-questions.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-camphor-tree-in-florida-invasive-status-roots-and-removal-questions.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-carrotwood-tree-in-florida-invasive-status-berries-and-removal-questions.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-chinese-tallow-tree-in-florida-invasive-status-popcorn-seeds-and-removal-questions.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-cottonwood-tree-in-florida-fluffy-seeds-roots-mess-and-removal-questions.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-crape-myrtle-in-florida-identification-pruning-mistakes-and-warning-signs.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-ficus-tree-in-florida-roots-hardscape-damage-and-removal-questions.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-florida-elm-shade-roots-pruning-and-removal-questions.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-florida-red-cedar-screening-salt-tolerance-and-removal-questions.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-jacaranda-tree-in-florida-flowers-mess-pruning-and-storm-questions.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-juniper-tree-in-florida-cedar-berries-roots-and-removal-questions.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-melaleuca-tree-in-florida-invasive-status-wet-yards-and-removal-questions.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-norfolk-island-pine-in-florida-height-storm-risk-and-removal-questions.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-sassafras-tree-in-florida-leaves-suckers-roots-and-removal-questions.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-southern-magnolia-in-florida-surface-roots-leaf-drop-and-removal-questions.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-sweetgum-tree-in-florida-seed-balls-shallow-roots-and-removal-questions.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-sycamore-tree-in-florida-bark-roots-mess-and-removal-questions.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-white-pine-tree-in-florida-needles-height-and-removal-questions.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-a-willow-oak-in-florida-wet-soil-roots-pruning-and-removal-questions.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-an-ash-tree-in-florida-leaves-bark-wet-soil-and-removal-questions.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-an-australian-pine-in-florida-invasive-status-coastal-risk-and-removal-questions.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-i-have-an-earleaf-acacia-in-florida-invasive-status-wind-risk-and-removal-questions.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-palms-need-trimming-before-hurricane-season.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-pine-trees-lose-their-needles-in-florida-normal-shedding-vs-warning-signs.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-stump-killers-really-work-or-is-grinding-better.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-tree-watering-bags-work-in-florida-when-they-help-and-when-they-cause-problems.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-trees-really-damage-foundations-in-florida-myth-vs-real-risk.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-you-need-a-permit-to-remove-a-tree-in-orange-county-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-you-need-a-permit-to-trim-a-tree-in-florida.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-you-need-an-arborist-report-before-cutting-large-tree-roots-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-you-need-an-arborist-report-to-remove-a-hazardous-tree-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/do-you-need-to-call-811-before-tree-planting-or-stump-grinding-in-florida.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/does-homeowners-insurance-cover-preventive-tree-removal-in-florida.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/dune-allen-beach-tree-removal-near-vacation-homes-and-coastal-lots.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/duval-county-tree-removal-guide-jacksonville-homes-pines-oaks-and-storm-prep.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/emergency-branch-removal-preventing-roof-damage.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/emergency-tree-removal-after-heavy-rain-what-homeowners-should-check-first.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/emergency-tree-removal-florida.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/emergency-tree-service-at-night-what-can-safely-wait-until-morning.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/emergency-tree-service-costs-why-they-differ-from-standard-rates.md",
+      "internalMarkdownLinkCount": 11,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fall-tree-maintenance-preparing-for-florida-winters.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fallen-tree-neighbor-property-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fast-growing-shade-trees-in-florida-what-to-know-before-you-plant.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fast-growing-trees-that-can-become-a-problem-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fast-growing-trees-that-help-block-noise-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fernandina-beach-tree-permit-fines-what-homeowners-should-know-before-cutting.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fire-safety-and-defensible-space-around-florida-homes-how-trees-affect-risk.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/flooding-and-tree-health-managing-saturated-soil.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/florida-statute-163-045-what-homeowners-should-understand-before-tree-removal.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/florida-tree-identification-for-homeowners-common-yard-trees-and-what-they-can-tell-you.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/florida-tree-questions-to-ask-before-buying-a-home-with-mature-trees.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/florida-tree-removal-cost-guide.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/florida-tree-removal-permit-guide.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/florida-trees-with-less-aggressive-roots-for-homes-patios-and-driveways.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/floridas-7-year-boundary-rule-does-it-apply-to-trees.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fort-lauderdale-stump-grinding-guide-for-homeowners.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fort-lauderdale-stump-grinding-near-pavers-pools-and-tight-side-yards.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/fort-lauderdale-tree-removal-permit-guide.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/gainesville-tree-regulations-what-property-owners-should-know.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/garden-tree-removal-when-a-backyard-tree-becomes-the-wrong-fit.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/glen-saint-mary-pine-and-oak-cleanup-rural-access-issues-homeowners-should-expect.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 0,
+      "auditedRoutes": []
+    },
+    {
+      "file": "src/content/blog/glen-st-mary-stump-grinding-guide-for-rural-properties.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/green-stuff-growing-on-tree-bark-in-florida-lichen-algae-moss-or-disease.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/hernando-tree-clearing-guide-for-larger-lots-and-acreage.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/hillsborough-county-stump-grinding-guide-permits-costs-and-yard-recovery.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/hillsborough-county-tree-removal-guide-tampa-suburban-lots-permits-and-storm-risk.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/hiring-a-tree-removal-company-in-florida.md",
+      "internalMarkdownLinkCount": 12,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/hoa-owned-tree-roots-damaging-a-patio-or-driveway-in-florida-who-usually-pays.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/hoa-tree-removal-in-florida-what-homeowners-and-boards-should-clarify-first.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/hoa-tree-rules-navigating-neighborhood-regulations.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/homosassa-stump-grinding-guide-residential-service-cleanup-and-replanting.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-april-weather-changes-tree-watering-in-florida.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-close-can-a-tree-be-to-a-house-before-removal-is-the-safer-option.md",
+      "internalMarkdownLinkCount": 11,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-close-is-too-close-for-a-tree-near-a-house.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-close-is-too-close-to-cut-tree-roots-near-a-florida-home.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-deep-should-a-stump-be-ground-in-a-florida-yard.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-long-do-roots-live-after-a-tree-is-cut-down.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-long-does-it-take-for-a-stump-to-rot-in-florida.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-long-does-tree-removal-actually-take-a-florida-homeowner-timeline.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-much-does-it-cost-to-remove-a-10-foot-tree-in-florida.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-much-does-it-cost-to-remove-a-100-year-old-tree.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-much-does-it-cost-to-remove-a-large-tree-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-much-does-it-cost-to-remove-a-tree-in-florida-what-changes-the-price.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-often-should-florida-palms-be-inspected.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-often-should-you-trim-trees-in-florida.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-build-backyard-privacy-in-florida-without-overcrowding-the-lot.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-choose-a-tree-for-a-florida-home-that-may-add-a-pool-later.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-choose-the-right-tree-for-the-right-place-in-florida.md",
+      "internalMarkdownLinkCount": 13,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-compare-tree-removal-quotes-without-looking-only-at-price.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-identify-structural-weaknesses-before-hurricane-season.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-make-a-florida-tree-emergency-safer-before-help-arrives.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-make-a-storm-damaged-yard-safer-for-kids-and-pets.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-monitor-a-florida-tree-after-major-root-damage-before-deciding-on-removal.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-plan-a-florida-windbreak-without-planting-the-wrong-trees.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-plant-a-new-tree-for-long-term-success.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-properly-mulch-around-your-florida-trees.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-protect-trees-during-construction-and-hardscape-work.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-protect-trees-from-erosion-during-floridas-rainy-season.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-read-drought-stress-in-florida-trees-before-branches-start-dying.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-read-the-warning-signs-in-a-tree-inspection-report.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-florida-tree-has-girdling-roots.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-florida-tree-is-overwatered-or-underwatered.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-leaning-tree-is-an-emergency.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-palm-tree-is-dying-or-recoverable.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-tree-has-internal-decay-without-cutting-it-open.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-tree-is-dead-dying-or-just-stressed.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-tree-is-likely-to-fall.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-tree-needs-to-be-removed.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-tree-service-quote-is-too-vague.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-tell-if-a-trees-root-flare-is-buried-too-deep.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-to-use-wood-chips-after-stump-grinding-in-florida-landscapes.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/how-tree-crews-protect-driveways-lawns-and-pool-decks-during-removal.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/hurricane-tree-risk-florida.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/identifying-ganoderma-butt-rot-in-florida-landscapes.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/insurance-coverage-for-tree-removal-when-are-you-covered.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/is-a-one-sided-tree-more-likely-to-fail-in-florida-winds.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/is-a-palm-too-close-to-the-house-a-real-problem-in-florida.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/is-ball-moss-on-a-florida-tree-a-problem.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/is-decay-at-the-base-of-an-oak-always-an-emergency-in-florida.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/is-mistletoe-on-a-florida-tree-a-problem.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/is-my-florida-pine-dead-or-just-stressed-what-homeowners-should-check.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/is-there-a-cheapest-time-of-year-for-tree-removal-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 5,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/jacksonville-tree-maintenance-dealing-with-colder-winters.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/lake-city-emergency-tree-service-guide-storm-risks-and-response-timing.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/lake-city-emergency-tree-service-what-homeowners-should-check-after-storms.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/lake-county-tree-removal-guide-clermont-leesburg-large-lots-and-storm-damaged-trees.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/large-tree-removal-near-power-lines-safety-first.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/laurel-wilt-in-florida-trees-signs-risk-and-what-to-do.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/lee-county-tree-removal-guide-hurricane-damage-access-and-stump-grinding.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/lethal-bronzing-in-florida-palms-signs-and-treatment.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/liability-for-falling-branches-who-pays-for-car-damage.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/licensed-and-insured-tree-service-in-florida-what-homeowners-should-check.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/trust-safety/"
+      ]
+    },
+    {
+      "file": "src/content/blog/lightning-struck-trees-can-they-be-saved.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/live-oak-vs-laurel-oak-in-florida-why-the-difference-matters-before-storm-season.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/low-maintenance-trees-for-florida-homeowners.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/low-tree-removal-quote-checklist-what-florida-homeowners-should-confirm-before-saying-yes.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/lutz-emergency-tree-service-guide-for-homeowners.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/macclenny-storm-damaged-trees-driveways-fences-and-rural-lots.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/macclenny-tree-service-guide-removal-stump-grinding-and-arborist-questions.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/manatee-county-tree-removal-guide-bradenton-hoas-street-trees-and-storm-cleanup.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/mangrove-trimming-rules-in-florida-what-waterfront-owners-need-to-know.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/martin-county-tree-removal-guide-stuart-coastal-lots-native-trees-and-storm-cleanup.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/masaryktown-arborist-guide-what-rural-property-owners-should-look-for.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/masaryktown-arborist-questions-for-rural-florida-properties.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/mature-tree-care-in-florida-how-to-protect-and-manage-older-trees.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/miami-dade-tree-service-guide-costs-permits-and-storm-prep.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/miami-tree-permitting-overhaul-what-homeowners-and-contractors-should-watch.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/miramar-stump-grinding-guide-for-homeowners.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/mushroom-growth-at-the-base-of-a-tree-is-it-dangerous.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/naples-and-fort-myers-post-hurricane-tree-recovery-guide.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/native-florida-trees-vs-invasive-species-what-to-know.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/native-palms-for-south-florida-yards-and-common-planting-mistakes.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/north-fort-myers-tree-removal-guide-access-storm-risk-and-cost-factors.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/oak-tree-fungus-in-florida-what-homeowners-should-watch-for.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/oak-tree-removal-cost-in-florida-what-to-expect.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/oak-wilt-vs-other-oak-problems-in-florida-what-homeowners-should-know.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/ocala-tree-removal-guide-permit-free-vs-permit-required-cases.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/old-tree-cables-and-braces-in-florida-when-support-systems-need-a-second-look.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/orange-county-tree-ordinance-update-what-changed-for-property-owners.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/orange-county-tree-removal-guide-orlando-homes-permits-oaks-and-storm-prep.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/orlando-tree-removal-guide-local-regulations-and-costs.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/osceola-county-tree-removal-guide-kissimmee-st-cloud-wetlands-and-storm-damaged-trees.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/palm-beach-county-tree-removal-guide-mature-trees-coastal-lots-and-permit-questions.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/palm-beach-tree-service-guide-for-high-end-landscapes.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/palm-bud-rot-in-florida-early-signs-and-what-homeowners-miss.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/palm-leaves-turning-yellow-in-florida-nutrients-water-stress-or-removal-warning.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/palm-nutrient-deficiency-vs-disease-how-to-tell-the-difference.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/palm-tree-removal-in-florida-signs-it-may-be-time.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/palm-weevils-in-florida-when-a-dying-palm-becomes-a-removal-risk.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/pasco-county-tree-removal-guide-suburban-lots-drainage-and-permit-questions.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/pinellas-county-tree-code-2026-what-homeowners-should-know.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/pinellas-county-tree-removal-guide-coastal-lots-palms-permits-and-storm-cleanup.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/planting-near-your-house-avoiding-root-damage-to-foundations.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/plants-under-trees-in-florida-how-to-landscape-without-smothering-the-root-flare.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/polk-county-tree-removal-guide-large-yards-rural-access-and-storm-damaged-trees.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/post-hurricane-tree-assessment-is-your-tree-still-safe.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/powdery-mildew-on-florida-ornamentals-prevention-tips.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/preparing-your-landscape-for-tropical-storms.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/professional-pruning-vs-topping-why-topping-kills-trees.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/trust-safety/"
+      ]
+    },
+    {
+      "file": "src/content/blog/questions-to-ask-before-hiring-a-tree-removal-service-in-florida.md",
+      "internalMarkdownLinkCount": 13,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/red-flags-before-hiring-a-tree-removal-crew-in-florida-licensing-insurance-and-estimate-clues.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/red-flags-before-hiring-a-tree-removal-crew-in-florida.md",
+      "internalMarkdownLinkCount": 12,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/removing-a-tree-in-a-tight-backyard-what-makes-it-more-complex.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/removing-dead-trees-why-speed-matters-in-florida.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/removing-pine-trees-common-challenges-in-florida.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/rocks-vs-mulch-around-florida-trees-what-homeowners-should-know.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/root-collar-excavation-in-florida-what-it-is-when-it-helps-and-what-it-costs.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/root-pruning-vs-root-damage-what-florida-homeowners-should-know-before-tree-work.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/sabal-palm-vs-queen-palm-in-florida-pruning-storm-risk-and-warning-signs.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/salt-spray-damage-on-coastal-florida-trees-signs-prevention-and-long-term-care.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/same-day-tree-removal-when-it-is-realistic-and-when-it-is-not.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/sarasota-county-tree-removal-guide-permits-oaks-palms-and-coastal-yard-risk.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/scale-insects-on-florida-trees-what-they-look-like-and-why-they-matter.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/scale-insects-on-palm-trees-in-florida-sticky-leaves-sooty-mold-and-decline.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/seasonal-trimming-for-florida-citrus-trees.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/selling-your-home-how-trees-impact-florida-property-value.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/seminole-county-tree-removal-guide-wekiva-area-suburban-lots-permits-and-storm-risk.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-a-tree-crew-use-climbing-spikes-on-a-live-tree-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-cleanup-hauling-and-stump-grinding-be-included-in-a-tree-quote.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-spanish-moss-be-removed-from-florida-trees-demossing-myths-and-real-risks.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-you-call-insurance-or-a-tree-service-first-after-storm-damage.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-you-cut-off-brown-palm-fronds-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-you-fertilize-a-stressed-tree-in-florida-or-could-that-make-it-worse.md",
+      "internalMarkdownLinkCount": 0,
+      "auditedRouteLinkCount": 0,
+      "auditedRoutes": []
+    },
+    {
+      "file": "src/content/blog/should-you-fill-a-tree-cavity-with-concrete-or-foam.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-you-keep-the-wood-after-tree-removal-or-have-it-hauled-away.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-you-remove-a-leaning-tree-or-monitor-it.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-you-remove-a-tree-before-hurricane-season.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-you-remove-a-tree-before-it-falls-or-wait-for-a-storm.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-you-stake-or-guy-a-leaning-florida-tree.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/should-you-use-pruning-sealer-on-florida-trees.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/signs-a-palm-needs-a-storm-inspection-even-if-its-still-standing.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/signs-of-root-rot-why-your-tree-is-leaning.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/soil-aeration-for-trees-in-florida-when-is-it-worth-it.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/soil-cracks-around-a-leaning-tree-why-that-can-be-a-serious-warning-sign.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/sooty-mold-on-florida-trees-what-causes-it-and-why-it-keeps-coming-back.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/spanish-moss-lichens-or-disease-what-that-growth-really-means.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/spring-tree-care-checklist-for-florida-homeowners.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/st-lucie-county-tree-removal-guide-port-st-lucie-fort-pierce-native-trees-and-storm-cleanup.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/storm-cleanup-vs-full-tree-removal-what-happens-first.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/storm-damaged-tree-florida.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/storm-damaged-tree-removal-what-changes-the-price-and-timeline.md",
+      "internalMarkdownLinkCount": 11,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/stump-grinding-florida.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/stump-grinding-near-pools-in-florida-safety-access-and-cleanup.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/stump-grinding-vs-removal-which-is-best-for-your-property.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/stump-grinding-vs-stump-removal-which-one-do-you-really-need.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/sumter-county-stump-and-root-removal-guide.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tallahassee-tree-removal-permit-guide-for-homeowners.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tampa-bay-tree-care-managing-salt-spray-and-humidity.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/termites-in-a-florida-tree-decay-sign-tree-risk-or-pest-control-problem.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/termites-in-a-tree-stump-should-florida-homeowners-remove-or-grind-it.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/termites-vs-rot-what-is-hollowing-out-your-tree.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/the-dangers-of-diy-tree-removal-in-florida.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/the-right-way-to-prune-trees-before-storm-season.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tiny-rows-of-holes-in-a-florida-tree-trunk-borers-beetles-or-something-else.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/top-10-hurricane-resistant-trees-to-plant-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-and-bush-trimming-before-storm-season-what-florida-homeowners-should-know.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-bark-splitting-in-florida-heat-storm-stress-or-disease.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-cabling-and-bracing-for-florida-oaks-when-can-support-save-a-tree.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-care-tips-for-the-villages-and-senior-communities.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-cavities-in-florida-cosmetic-defect-or-structural-warning.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-clearing-vs-tree-removal-what-florida-property-owners-need-to-know.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-damage-on-rental-properties-who-handles-what.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-disputes-between-neighbors-in-florida-branches-roots-and-property-lines.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-felling-vs-tree-dismantling-why-some-florida-trees-must-come-down-piece-by-piece.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-maintenance-for-vacation-homes-and-seasonal-residents-in-florida.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-preservation-orders-in-florida-cities.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-after-a-lightning-strike-can-it-wait.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 5,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-cleanup-what-should-be-included-in-the-quote.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-estimate-vs-final-invoice-what-can-change-the-price.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-for-new-construction-clearing-your-lot.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-for-pool-projects-additions-and-backyard-renovations.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-for-rental-properties-in-florida-landlord-tenant-and-storm-damage-checklist.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-in-a-backyard-with-no-equipment-access-what-are-the-options.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-near-a-driveway-or-paver-patio-access-protection-and-cleanup.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-near-a-house-what-makes-the-job-more-complicated.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-near-a-pool-cage-what-florida-homeowners-should-know.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-near-pavers-or-a-fence-in-orange-county-what-homeowners-should-check-first.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-near-power-lines-what-florida-homeowners-should-never-do.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-stump-grinding-and-replanting-what-order-makes-sense.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-removal-vs-tree-trimming-how-florida-homeowners-should-decide.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-root-removal-after-tree-removal-what-homeowners-should-expect.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-roots-and-sidewalk-damage-who-is-responsible.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-service-in-the-florida-keys-unique-coastal-challenges.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-service-red-flags-when-to-walk-away-before-the-job-starts.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-surveys-and-tree-assessments-before-removal-when-are-they-required.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-transplant-shock-in-florida-what-recovery-looks-like.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-trimming-near-rooflines-when-cleanup-becomes-risk-reduction.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-trimming-vs-tree-pruning-in-florida-whats-the-difference.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/tree-value-and-appraisal-in-florida-when-does-it-matter.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/trees-that-make-sense-for-hoa-common-areas-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/trees-to-avoid-planting-near-pavers-driveways-and-pool-cages.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/understanding-easements-and-tree-removal-near-utilities.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/underwatered-vs-overwatered-palms-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/underwatered-vs-overwatered-trees-in-florida-how-to-tell-the-difference.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/vacation-rental-tree-cleanup-in-florida-storm-damage-guest-safety-and-rebooking-checklist.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/vegetation-management-vs-tree-service-what-is-the-difference.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/vero-beach-tree-permit-guide-for-homeowners.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/volusia-county-tree-removal-guide-hurricane-season-oaks-stumps-and-yard-access.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/webs-in-trees-in-florida-webworms-tent-caterpillars-or-spider-webs.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-a-healthy-looking-tree-can-still-hide-before-hurricane-season.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-a-tree-root-collar-inspection-can-reveal-before-summer-stress.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-alternatives-are-there-to-cutting-down-a-tree.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 5,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-are-conks-on-a-tree-trunk-and-when-are-they-a-serious-warning-sign.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-are-girdling-roots-and-why-can-they-slowly-weaken-a-florida-tree.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-are-suckers-at-the-base-of-a-florida-tree-and-should-homeowners-remove-them.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-are-water-sprouts-on-florida-trees-and-should-homeowners-remove-them.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-do-orange-dots-on-trees-mean-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-does-an-arborist-do-for-florida-homeowners.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-does-sawdust-at-the-base-of-a-florida-tree-mean.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-florida-homeowners-should-document-before-an-insurance-tree-claim.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-florida-homeowners-should-know-before-digging-near-tree-roots-and-utilities.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-after-a-tree-is-removed-from-a-small-florida-yard.md",
+      "internalMarkdownLinkCount": 13,
+      "auditedRouteLinkCount": 6,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-during-a-tree-removal-estimate-in-florida.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-if-you-cut-a-tree-without-a-permit-in-florida.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-if-you-cut-all-the-branches-off-a-tree.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-if-you-cut-the-leader-branch-of-a-tree.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-to-the-ground-after-a-large-tree-is-removed.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-to-the-hole-after-stump-grinding.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-to-the-roots-after-tree-removal.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-to-the-wood-and-large-logs-after-tree-removal-your-options-explained.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-to-the-wood-and-large-logs-after-tree-removal.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-happens-when-a-tree-is-too-close-to-a-fence-pool-cage-or-screen-enclosure.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-homeowners-should-know-about-consulting-arborists-for-hoa-and-neighbor-disputes.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-homeowners-should-photograph-before-a-tree-crew-starts-work.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-if-a-tree-falls-but-does-not-damage-the-house.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-back-cut-in-tree-removal-and-why-does-it-matter-near-a-florida-home.md",
+      "internalMarkdownLinkCount": 11,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-barber-chair-in-tree-removal-and-why-leaning-trees-are-not-diy-jobs.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-bore-cut-in-tree-removal-and-why-is-it-not-a-diy-technique.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-branch-collar-and-why-do-flush-cuts-hurt-trees.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-crane-pick-in-tree-removal-and-why-does-it-affect-the-quote.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-critical-root-zone-and-why-does-it-matter-before-tree-work.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-drop-zone-in-tree-removal-and-why-does-it-matter-for-florida-homes.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-hung-up-tree-and-why-storm-damaged-trees-are-dangerous-to-touch.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-mulch-volcano-and-why-can-it-slowly-damage-a-tree.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-notch-cut-in-tree-removal-and-why-does-it-matter-near-a-florida-home.md",
+      "internalMarkdownLinkCount": 12,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-retreat-path-in-tree-removal-and-why-does-it-matter-near-a-florida-home.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-rigging-plan-in-tree-removal-and-why-does-it-matter-near-a-florida-home.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-root-plate-and-why-does-it-matter-for-florida-tree-risk.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-spotter-during-tree-removal-and-why-does-a-florida-yard-need-one.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-spring-pole-in-tree-work-and-why-storm-damaged-limbs-can-snap-back.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-a-widowmaker-branch-and-why-florida-homeowners-should-not-ignore-it.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-chainsaw-kickback-and-why-tree-removal-near-a-florida-home-is-not-a-diy-job.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-crown-reduction-and-when-is-it-better-than-tree-topping.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-dead-wooding-and-when-does-a-florida-tree-need-it.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-grapple-truck-tree-cleanup-and-when-does-a-florida-yard-need-it.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-hinge-wood-in-tree-removal-and-why-does-it-matter-near-a-florida-home.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-included-bark-and-why-can-it-make-a-florida-tree-split.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 5,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-lion-tailing-and-why-is-it-risky-before-florida-storm-season.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-the-5-15-90-rule-in-tree-felling.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-the-best-time-of-year-to-remove-a-tree-in-florida.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-the-florida-tree-removal-statute-what-homeowners-should-know.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-tree-compartmentalization-and-why-tree-wounds-do-not-heal-like-skin.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-is-tree-elevation-and-can-it-help-before-florida-storm-season.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-it-means-when-roots-lift-or-soil-moves-around-a-tree.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-kills-tree-roots-quickly-why-fast-root-killing-advice-can-backfire.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-makes-a-tree-removal-quote-more-expensive-than-expected.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-makes-stump-grinding-harder-than-it-looks.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-month-should-you-avoid-cutting-trees-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-part-of-a-tree-should-not-be-cut.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-photos-help-after-a-storm-damaged-tree-claim.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-questions-should-you-ask-before-scheduling-tree-removal.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-rots-a-tree-stump-the-fastest-safe-options-vs-bad-advice.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-should-be-in-a-written-tree-removal-estimate.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-should-be-included-in-a-tree-removal-estimate-in-florida.md",
+      "internalMarkdownLinkCount": 12,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-that-dark-crack-in-a-florida-tree-trunk-may-mean.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-ask-before-grinding-a-stump-near-utilities.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-do-if-a-contractor-cuts-tree-roots-near-your-florida-home.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-do-if-a-tree-blocks-the-road-or-sidewalk-near-your-property.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-do-if-a-tree-blocks-your-driveway-after-a-storm.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-do-if-a-tree-crew-damages-your-tree-or-yard.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-do-if-a-tree-falls-on-a-fence-pool-cage-or-shed.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-do-if-a-tree-is-touching-power-lines-after-a-storm.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-do-when-a-tree-falls-on-your-roof-in-florida.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-do-when-tree-roots-start-lifting-pool-deck-pavers.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-document-before-removing-a-hazardous-tree-in-florida.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-expect-from-a-professional-tree-risk-assessment.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-expect-the-day-after-a-large-tree-removal.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-inspect-on-trees-before-listing-a-florida-home-for-sale.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-move-before-a-tree-crew-arrives-at-your-home.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-photograph-before-emergency-tree-cleanup-for-insurance.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-plant-instead-of-invasive-ficus-or-problematic-fast-growers.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-to-save-before-paying-for-emergency-tree-cleanup.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-tree-recovery-really-looks-like-30-60-and-90-days-after-a-storm.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-trees-are-illegal-or-protected-to-cut-down-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/what-trees-are-protected-in-florida-a-homeowner-guide-to-restricted-and-protected-trees.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/whats-wrong-with-my-palm-tree-a-florida-homeowner-checklist.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-a-climber-is-better-than-a-bucket-truck-for-florida-tree-work.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-a-crack-in-a-tree-trunk-is-cosmetic-and-when-it-is-serious.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-a-florida-tree-has-two-main-trunks-codominant-stem-warning-signs.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-bark-starts-peeling-after-a-storm-stress-sunscald-or-decline.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-crane-assisted-removal-is-the-only-safe-option-near-a-house.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-does-a-dead-tree-become-too-dangerous-to-leave-standing.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call.md",
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-is-oak-tree-trimming-not-enough-anymore.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-is-palm-removal-safer-than-palm-trimming-in-florida.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-is-stump-grinding-worth-paying-for-after-tree-removal.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-should-you-prune-oak-trees-in-florida-timing-storm-risk-and-what-to-avoid.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-should-you-water-trees-in-floridas-dry-season.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-shouldnt-you-cut-down-a-tree-in-florida.md",
+      "internalMarkdownLinkCount": 10,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-to-choose-tree-removal-over-pruning.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-to-hire-an-arborist-instead-of-a-general-tree-crew.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-to-remove-seed-pods-from-palm-trees.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-tree-removal-needs-mats-cranes-or-special-yard-protection.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/when-tree-roots-damage-hardscape-trim-roots-grind-the-stump-or-remove-the-tree.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/white-spots-on-palm-leaves-in-florida-scale-fungus-or-nutrient-issue.md",
+      "internalMarkdownLinkCount": 0,
+      "auditedRouteLinkCount": 0,
+      "auditedRoutes": []
+    },
+    {
+      "file": "src/content/blog/white-stuff-on-mulch-around-florida-trees-mold-fungus-or-a-problem.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/whiteflies-on-florida-trees-sticky-leaves-sooty-mold-and-when-to-worry.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/whitefly-infestations-in-south-florida-protection-strategies.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/who-is-responsible-when-a-neighbors-tree-falls-in-florida.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-a-leaning-tree-changes-the-tree-removal-plan-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-a-palm-crown-looks-smaller-every-year.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-a-stump-sometimes-needs-a-second-grinding-visit.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-a-tree-looks-fine-after-construction-then-declines-a-year-later.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-a-trees-natural-lean-does-not-guarantee-where-it-will-fall.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-adding-soil-around-a-tree-causes-problems-later.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-are-my-oak-tree-leaves-turning-brown-in-florida.md",
+      "internalMarkdownLinkCount": 0,
+      "auditedRouteLinkCount": 0,
+      "auditedRoutes": []
+    },
+    {
+      "file": "src/content/blog/why-are-my-palm-leaves-turning-brown-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-are-my-palm-leaves-turning-yellow-in-florida-nutrients-water-or-disease.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-are-there-webs-in-my-florida-tree-spiders-webworms-or-a-tree-health-issue.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-bucket-truck-access-can-change-a-tree-removal-or-trimming-quote-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-crane-setup-space-can-change-a-tree-removal-quote-in-florida.md",
+      "internalMarkdownLinkCount": 2,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-dead-trees-can-be-more-dangerous-to-remove-than-live-trees-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-hand-carrying-logs-can-change-a-tree-removal-quote-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-insurance-may-ask-for-tree-condition-photos-after-a-storm.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-is-bark-falling-off-a-florida-tree-normal-shedding-vs-decline.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-is-my-oak-tree-losing-leaves-in-spring-or-summer.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-is-my-pine-tree-turning-brown-from-the-top-down.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-is-my-tree-dropping-leaves-in-summer.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-is-my-tree-oozing-sap-florida-homeowner-warning-signs.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-large-oak-removal-needs-a-different-plan-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-one-palm-on-the-property-is-failing-while-the-others-look-fine.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-one-side-of-a-tree-keeps-dying-back.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-palm-removal-is-different-from-removing-an-oak-or-pine-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-pine-tree-removal-needs-a-different-plan-in-florida.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-shouldnt-you-leave-a-tree-stump-in-the-ground.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-some-stumps-are-harder-to-grind-than-others.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-some-tree-jobs-cost-more-because-of-access-not-tree-size.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-some-trees-fail-days-after-a-storm-instead-of-during-it.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-storm-damaged-tree-limbs-can-be-under-tension-even-when-they-look-still.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/emergency-response/",
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-the-cheapest-tree-removal-quote-can-become-the-most-expensive.md",
+      "internalMarkdownLinkCount": 11,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tight-side-yards-make-tree-removal-more-complicated-in-florida.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-beds-stay-mushy-overwatering-drainage-or-mulch-breakdown.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-ask-homeowners-to-stay-out-of-the-work-zone-during-removal.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-cut-a-trunk-into-sections-instead-of-dropping-it-whole.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-may-delay-work-during-high-winds-or-lightning-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-sometimes-leave-a-tall-stump-during-tree-removal.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-use-commands-and-hand-signals-during-tree-removal.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-use-felling-wedges-during-tree-removal-near-florida-homes.md",
+      "internalMarkdownLinkCount": 8,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-use-mini-loaders-during-tree-cleanup-in-florida-yards.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-use-pull-lines-during-tree-removal-near-florida-homes.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-use-ropes-to-lower-limbs-instead-of-dropping-them.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-use-taglines-to-control-branches-near-florida-homes.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-use-traffic-control-near-streets-sidewalks-and-driveways.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-crews-use-wood-chippers-during-tree-removal-and-cleanup.md",
+      "internalMarkdownLinkCount": 7,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-removal-cleanup-can-take-longer-than-the-cutting.md",
+      "internalMarkdownLinkCount": 9,
+      "auditedRouteLinkCount": 4,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/",
+        "/services/stump-grinding/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-tree-removal-over-a-roof-needs-a-different-plan-in-florida.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-trees-decline-after-construction-damage.md",
+      "internalMarkdownLinkCount": 6,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/why-trees-near-retaining-walls-seawalls-and-canal-banks-fail-differently-in-florida.md",
+      "internalMarkdownLinkCount": 4,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-removal/",
+        "/services/tree-trimming/"
+      ]
+    },
+    {
+      "file": "src/content/blog/will-drilling-holes-in-a-stump-make-it-rot-faster-what-to-know-first.md",
+      "internalMarkdownLinkCount": 5,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/stump-grinding/",
+        "/services/tree-removal/",
+        "/services/emergency-response/"
+      ]
+    },
+    {
+      "file": "src/content/blog/winter-tree-care-in-florida-freeze-protection-pruning-timing-and-what-to-watch.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 2,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/"
+      ]
+    },
+    {
+      "file": "src/content/blog/year-end-tree-health-checklist-for-florida-homeowners.md",
+      "internalMarkdownLinkCount": 3,
+      "auditedRouteLinkCount": 3,
+      "auditedRoutes": [
+        "/services/tree-trimming/",
+        "/services/tree-removal/",
+        "/services/stump-grinding/"
+      ]
+    }
+  ]
+}

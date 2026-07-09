@@ -210,6 +210,8 @@ Do not assume stump grinding removes every root. It removes the stump and upper 
 
 ## When to Call ProTreeTrim
 
+When the question is maintenance, start with [tree trimming](/services/tree-trimming/); when the tree is declining or poorly placed, compare the decision with [tree removal](/services/tree-removal/).
+
 If you think you have an ash tree and you are not sure whether the issue is identification, disease, wet soil, pruning, or removal risk, ProTreeTrim can help you think through the next step.
 
 For tree removal, trimming, emergency tree service, or stump grinding in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

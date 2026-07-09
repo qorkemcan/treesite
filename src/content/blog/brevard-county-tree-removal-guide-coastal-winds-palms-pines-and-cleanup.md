@@ -233,6 +233,8 @@ Documentation can help with city/county questions, HOA records, insurance discus
 
 ## When to Call ProTreeTrim
 
+For scope clarity, review [tree removal](/services/tree-removal/) expectations before approving the estimate, cleanup plan, or schedule.
+
 If you are trying to decide whether a Brevard County tree needs pruning, removal, emergency cleanup, or stump grinding, ProTreeTrim can help you think through the next step. Coastal exposure, protected vegetation, access, storm damage, and cleanup rules can all affect the plan.
 
 For tree removal, emergency tree service, palm or pine removal, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

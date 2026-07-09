@@ -248,6 +248,8 @@ These records can help with permit questions, HOA questions, insurance, and futu
 
 ## When to Call ProTreeTrim
 
+When the work is planned, start with [tree removal](/services/tree-removal/) expectations; when storm damage or blocked access is involved, compare the situation with [emergency response](/services/emergency-response/) guidance.
+
 If you are trying to decide whether a Lake County tree needs trimming, planned removal, emergency service, storm cleanup, or stump grinding, ProTreeTrim can help you think through the practical next step. The answer depends on location, tree condition, storm risk, access, and whether city or county rules apply.
 
 For tree removal, emergency tree service, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

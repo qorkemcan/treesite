@@ -242,6 +242,8 @@ These records can help with county questions, HOA records, insurance, and future
 
 ## When to Call ProTreeTrim
 
+Planned removals should be scoped through [tree removal](/services/tree-removal/); storm cleanup or blocked access may require [emergency response](/services/emergency-response/) guidance instead.
+
 If you are trying to decide whether a Manatee County tree can be removed, trimmed, documented as hazardous, ground out, or handled as emergency storm cleanup, ProTreeTrim can help you think through the practical next step. In Manatee County, the location of the tree is often as important as the condition of the tree.
 
 For tree removal, emergency tree service, trimming, palm removal, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

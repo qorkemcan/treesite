@@ -278,6 +278,8 @@ Photos help a tree service understand risk and access before scheduling.
 
 ## When to Call ProTreeTrim
 
+Start with [tree removal](/services/tree-removal/) scope for the near-structure work, then decide whether [stump grinding](/services/stump-grinding/) is needed for cleanup or future use of the area.
+
 If a tree near your house is too close, leaning, decayed, storm-damaged, or difficult to remove safely, ProTreeTrim can help you compare trimming, planned removal, emergency removal, and stump grinding.
 
 For tree removal, emergency tree service, trimming, or stump grinding help in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

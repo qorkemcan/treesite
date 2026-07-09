@@ -192,6 +192,8 @@ Photos help with quotes, permits, HOA questions, and insurance conversations aft
 
 ## When to Call ProTreeTrim
 
+Start with [tree trimming](/services/tree-trimming/) when the concern is canopy or limb clearance; compare [tree removal](/services/tree-removal/) when roots, size, or defects change the decision.
+
 If you are not sure whether your tree is a sycamore, whether the peeling bark is normal, or whether a large limb or root issue is becoming a risk, ProTreeTrim can help you think through the next step.
 
 For tree removal, trimming, storm-risk concerns, or stump grinding in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

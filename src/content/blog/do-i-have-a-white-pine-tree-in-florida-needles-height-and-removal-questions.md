@@ -207,6 +207,8 @@ If the tree may be a protected, regulated, or large specimen tree, check current
 
 ## When to Call ProTreeTrim
 
+If the tree can stay with selective work, review [tree trimming](/services/tree-trimming/); if height, placement, or condition creates a larger issue, compare [tree removal](/services/tree-removal/).
+
 If you are not sure whether your pine is a true white pine, a Florida native pine, or another evergreen, ProTreeTrim can help you think through the practical next step: identify the risk signs, compare trimming vs removal, and plan around access, cleanup, and stump grinding.
 
 For tree removal, pine trimming, emergency tree service, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

@@ -182,6 +182,8 @@ Good photos help a tree service understand whether you need identification, trim
 
 ## When to Call ProTreeTrim
 
+If removal becomes part of the decision, use [tree removal](/services/tree-removal/) expectations to confirm scope, cleanup, and scheduling details.
+
 If you think you have a sassafras tree and are unsure whether to keep it, trim it, remove it, or manage the suckers, ProTreeTrim can help you think through the practical next step. The right answer depends on the tree’s condition, location, access, and how the yard is used.
 
 For tree removal, trimming, stump grinding, or storm-risk questions in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

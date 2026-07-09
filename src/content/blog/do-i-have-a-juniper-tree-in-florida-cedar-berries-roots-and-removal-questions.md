@@ -215,6 +215,8 @@ These photos help a tree service understand whether the job is identification, t
 
 ## When to Call ProTreeTrim
 
+For shape, clearance, or light maintenance, [tree trimming](/services/tree-trimming/) may be enough; for crowding, roots, or decline, review [tree removal](/services/tree-removal/) as well.
+
 If you are unsure whether your evergreen is a juniper, red cedar, pine, cypress, or another landscape tree, ProTreeTrim can help you think through the practical next step. The main decision is whether the tree can be safely pruned and managed where it stands, or whether removal and replacement make more sense.
 
 For tree removal, trimming, storm-risk concerns, or stump grinding help in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

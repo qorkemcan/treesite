@@ -280,6 +280,8 @@ If the tree is near a house, driveway, pool cage, road, or utility line, get adv
 
 ## When to Call ProTreeTrim
 
+If heavy rain leaves a tree unstable, blocking access, or threatening a structure, start with [emergency tree response](/services/emergency-response/) before treating it as routine removal.
+
 If heavy rain left a tree leaning, cracking, hanging over a target, or showing root movement, ProTreeTrim can help you decide whether the next step is emergency cleanup, planned removal, trimming, or stump grinding.
 
 For emergency tree service, tree removal, trimming, or stump grinding help in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

@@ -280,6 +280,8 @@ For true emergencies, safety comes first. But documentation matters. Take photos
 
 ## When to Call ProTreeTrim
 
+When the problem involves a fallen tree, blocked access, roof contact, or immediate safety concern, treat it as an [emergency tree response](/services/emergency-response/) decision first.
+
 Call ProTreeTrim if a tree is leaning, cracked, storm-damaged, hanging over a target, blocking access, or creating a safety concern near your Florida home. The sooner the situation is assessed, the easier it is to decide whether the job is emergency cleanup, trimming, removal, or stump grinding.
 
 For emergency tree service, tree removal, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

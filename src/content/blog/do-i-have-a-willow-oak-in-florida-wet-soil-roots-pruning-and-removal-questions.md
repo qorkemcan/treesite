@@ -182,6 +182,8 @@ Good photos help a tree service understand whether you need identification, prun
 
 ## When to Call ProTreeTrim
 
+For branch clearance or canopy balance, [tree trimming](/services/tree-trimming/) is the first comparison point; for root, decline, or location problems, review [tree removal](/services/tree-removal/).
+
 If you think you have a willow oak and are unsure whether it needs pruning, monitoring, or removal, ProTreeTrim can help you sort through the practical decision. Large oaks deserve careful planning, especially near homes, driveways, pool cages, and tight Florida yards.
 
 For oak trimming, tree removal, storm-risk concerns, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

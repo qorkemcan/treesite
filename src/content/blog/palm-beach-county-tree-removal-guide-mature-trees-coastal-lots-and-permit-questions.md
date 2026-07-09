@@ -247,6 +247,8 @@ This can help with HOA questions, local enforcement questions, insurance convers
 
 ## When to Call ProTreeTrim
 
+For planned county work, begin with [tree removal](/services/tree-removal/) scope; if storm damage or blocked access appears during review, compare it with [emergency response](/services/emergency-response/) guidance.
+
 If you are trying to decide whether a Palm Beach County tree should be pruned, removed, documented as hazardous, or ground out after removal, ProTreeTrim can help you think through the practical next step. Mature trees, coastal lots, HOAs, pool cages, and storm-risk conditions deserve a careful plan.
 
 For tree removal, emergency tree service, trimming, palm removal, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

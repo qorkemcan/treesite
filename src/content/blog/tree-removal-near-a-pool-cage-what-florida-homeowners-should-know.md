@@ -278,6 +278,8 @@ Florida Statute 163.045 may apply to qualifying residential property with proper
 
 ## When to Call ProTreeTrim
 
+For work near a pool cage, confirm the [tree removal](/services/tree-removal/) plan first and then decide whether [stump grinding](/services/stump-grinding/) should be included.
+
 If a tree near your Florida pool cage is touching screens, lifting pavers, leaning, storm-damaged, or difficult to prune safely, ProTreeTrim can help you compare trimming, planned removal, emergency removal, and stump grinding.
 
 For tree removal near pool cages, emergency tree service, trimming, palm removal, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.
