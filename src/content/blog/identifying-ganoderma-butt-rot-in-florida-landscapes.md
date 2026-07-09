@@ -2,7 +2,7 @@
 title: "Identifying Ganoderma Butt Rot in Florida Landscapes"
 description: "A practical Florida guide to what Ganoderma butt rot looks like, why it is so serious for palms, and what homeowners should know about diagnosis and removal."
 pubDate: 2026-04-22
-updatedDate: 2026-04-22
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Health & Disease"
 tags:
@@ -12,6 +12,8 @@ tags:
   - tree health and disease
 draft: false
 ---
+
+# Identifying Ganoderma Butt Rot in Florida Landscapes
 
 Ganoderma butt rot is one of the most serious palm diseases in Florida because by the time many homeowners notice something is wrong, the disease is often already well advanced.
 
@@ -168,10 +170,20 @@ A practical first response looks like this:
 
 The closer the palm is to the home, driveway, or walkway, the less room there is for delay.
 
-## Final takeaway
+## Sources and local checks
 
-Ganoderma butt rot is a lethal fungal trunk disease of palms in Florida caused by Ganoderma zonatum. Its clearest sign is a hard shelf-like conk on the lower trunk, but the disease can also show up first as gradual decline, off-color foliage, and more dead lower leaves than expected.
+For Ganoderma and palm structural-risk context, start with:
 
-There is no cure once a palm is infected. UF/IFAS guidance is clear that palms with confirmed Ganoderma should be removed promptly, with attention also given to the stump and the risks of replanting another palm in the same spot.
+- [UF/IFAS Extension EDIS](https://edis.ifas.ufl.edu/) palm disease and Ganoderma resources.
+- [UF/IFAS Gardening Solutions palm resources](https://gardeningsolutions.ifas.ufl.edu/plants/trees-and-shrubs/palms-and-cycads/).
+- Onsite tree-risk evaluation when a conk, lower-trunk decay, or target exposure is present.
 
-The most important thing homeowners can understand is simple: by the time Ganoderma becomes obvious, it is usually no longer a small palm-health problem. It is a trunk-rot problem with real landscape and safety consequences.
+A conk is a serious warning sign, but written information cannot judge how close a palm is to failure on a specific site.
+
+## What to do next
+
+If you see a hard shelf-like conk low on a palm trunk, do not treat it as a cosmetic fungus. Photograph it, keep people and vehicles away from the target zone if the palm could fail, and get the situation evaluated.
+
+Related service and risk pages include [mushroom growth at the base of a tree](/blog/mushroom-growth-at-the-base-of-a-tree-is-it-dangerous/), [tree removal](/services/tree-removal/), [emergency tree service](/services/emergency-tree-removal/), and [professional tree risk assessment](/blog/what-to-expect-from-a-professional-tree-risk-assessment/).
+
+If a suspected Ganoderma palm is near a house, driveway, walkway, pool, or neighbor’s property, call ProTreeTrim at **(855) 498-2578** so the request can be routed to a local provider for practical next-step guidance.

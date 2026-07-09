@@ -2,7 +2,7 @@
 title: "Lethal Bronzing in Florida Palms: Signs and Treatment"
 description: "A practical Florida guide to lethal bronzing symptoms, how the disease spreads, what treatment can and cannot do, and when removal becomes the realistic next step."
 pubDate: 2026-04-22
-updatedDate: 2026-04-22
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Health & Disease"
 tags:
@@ -12,6 +12,8 @@ tags:
   - tree health and disease
 draft: false
 ---
+
+# Lethal Bronzing in Florida Palms: Signs and Treatment
 
 Lethal bronzing is one of the most unsettling palm diseases Florida homeowners can deal with because it often looks manageable right up until it is not.
 
@@ -150,10 +152,20 @@ Healthy-looking palms nearby can still become part of the problem if the homeown
 
 That means the real property question is often larger than one tree.
 
-## Final takeaway
+## Sources and local checks
 
-Lethal bronzing is a fast-moving, fatal palm disease in Florida that usually begins with early fruit drop or flower necrosis, progresses into bronzing of older leaves, and ends with spear leaf collapse.
+Use official palm-disease guidance before making treatment or removal decisions:
 
-It is spread by sap-feeding insects, not by pruning tools. And while oxytetracycline HCl can play a preventative role for nearby healthy palms that test negative, UF/IFAS guidance makes clear that once a palm is symptomatic and positive, it is generally considered lost and should be removed.
+- [UF/IFAS Extension EDIS](https://edis.ifas.ufl.edu/) lethal bronzing and palm-health resources.
+- [UF/IFAS Gardening Solutions palm resources](https://gardeningsolutions.ifas.ufl.edu/plants/trees-and-shrubs/palms-and-cycads/).
+- County Extension or qualified palm-health testing when lethal bronzing is suspected.
 
-The most important thing homeowners can do is recognize the pattern early, stop treating it like an ordinary palm problem, and act before one diseased palm becomes a bigger landscape problem.
+Treatment language matters. Preventive programs, testing, and removal decisions depend on the palm, timing, symptoms, nearby palms, and professional judgment.
+
+## What to do next
+
+Do not treat lethal bronzing like a cosmetic leaf problem. Early fruit drop, flower necrosis, progressive bronzing, and spear collapse deserve a faster response than ordinary frond discoloration.
+
+If the palm is symptomatic, near structures, or close to other valuable palms, the practical question is whether testing, removal, or protection of nearby palms should happen next. Related decisions may involve [tree removal](/services/tree-removal/), [emergency tree service](/services/emergency-tree-removal/), [palm bud rot warning signs](/blog/palm-bud-rot-in-florida-early-signs-and-what-homeowners-miss/), or [how to tell whether a palm may be recoverable](/blog/how-to-tell-if-a-palm-tree-is-dying-or-recoverable/).
+
+For dispatch help when a Florida palm disease concern is becoming a removal or safety issue, call ProTreeTrim at **(855) 498-2578**.

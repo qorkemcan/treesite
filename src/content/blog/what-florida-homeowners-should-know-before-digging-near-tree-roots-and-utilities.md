@@ -2,7 +2,7 @@
 title: "What Florida Homeowners Should Know Before Digging Near Tree Roots and Utilities"
 description: "A practical Florida guide to digging near tree roots and buried utilities, including when 811 matters, how roots and utility lines create overlapping risk, and what homeowners should think about before planting, trenching, or grinding near established trees."
 pubDate: 2026-05-03
-updatedDate: 2026-05-03
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Florida Laws & Property Risk"
 tags:
@@ -12,6 +12,8 @@ tags:
   - digging near roots and pipes
 draft: false
 ---
+
+# What Florida Homeowners Should Know Before Digging Near Tree Roots and Utilities
 
 Homeowners usually worry about one of these problems first:
 
@@ -222,8 +224,20 @@ Professional help is especially useful when:
 
 If you need help thinking through a Florida digging project near tree roots and buried utilities before the site turns into a repair problem, you can contact ProTreeTrim’s dispatch line at **(855) 498-2578**.
 
-## Final takeaway
+## Sources and local checks
 
-Before digging near tree roots and utilities in Florida, homeowners should think about the site as a shared underground space.
+Use official utility and local guidance before any ground disturbance near trees:
 
-Utilities may be buried exactly where the roots grew, and roots may be most important exactly where the project seems easiest to place. The safest approach is to call 811 first, understand the tree’s root zone second, and only then decide where the digging, grinding, or planting should actually happen.
+- [Sunshine 811 homeowner guidance](https://sunshine811.com/homeowner-lp) before planting, trenching, grinding, pulling stumps, or digging.
+- [Florida Statutes Chapter 556](https://www.leg.state.fl.us/Statutes/) for Florida underground facility damage-prevention rules.
+- Local city, county, HOA, utility, irrigation, septic, and right-of-way requirements for the specific property.
+
+Source notes do not replace an onsite utility locate, arborist evaluation, engineer review, or contractor scope. ProTreeTrim is a referral and dispatch network, not a utility locator or legal advisor.
+
+## What to do next
+
+Treat the site as two overlapping risk zones: the buried-utility zone and the tree-root zone. A marked utility line does not tell you which roots can be cut, and a visible root pattern does not tell you where utilities are buried.
+
+If the project has become a tree-work decision rather than a simple landscape chore, compare the scope carefully. A stump or root conflict may involve [stump grinding](/services/stump-grinding/), [tree removal](/services/tree-removal/), [land clearing](/services/land-clearing/), or a more cautious tree-risk conversation before any digging begins.
+
+For Florida homeowners trying to plan tree work near roots, utilities, hardscape, or buried systems, ProTreeTrim can help route the request to an appropriate local tree-service provider. Call **(855) 498-2578** before the project turns into a utility strike, root-damage dispute, or repair problem.

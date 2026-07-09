@@ -2,7 +2,7 @@
 title: "Mushroom Growth at the Base of a Tree: Is It Dangerous?"
 description: "A practical Florida guide to what mushrooms at the base of a tree may mean, when they are just a sign of nearby decay, and when they may point to a more serious structural risk."
 pubDate: 2026-04-22
-updatedDate: 2026-04-22
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Tree Health & Disease"
 tags:
@@ -12,6 +12,8 @@ tags:
   - tree health and disease
 draft: false
 ---
+
+# Mushroom Growth at the Base of a Tree: Is It Dangerous?
 
 Mushrooms growing at the base of a tree get homeowners’ attention fast—and for good reason.
 
@@ -211,10 +213,20 @@ A strong rule of thumb is this:
 
 That framework helps homeowners avoid both extremes: shrugging it off completely or assuming every mushroom means immediate disaster.
 
-## Final takeaway
+## Sources and local checks
 
-Mushroom growth at the base of a tree in Florida can be harmless site decomposition—or it can be a warning sign of serious root or butt rot.
+For fungal growth, decay, and tree-risk context, start with:
 
-The key is not the mushroom alone. It is where the fungal growth is emerging from and what else the tree is showing at the same time. If mushrooms are tied to the root flare, major roots, or lower trunk and the tree is also leaning, thinning, declining, or changing at the base, the issue may be structural rather than cosmetic.
+- [UF/IFAS Extension EDIS](https://edis.ifas.ufl.edu/) tree disease, decay, and landscape resources.
+- [UF/IFAS Gardening Solutions](https://gardeningsolutions.ifas.ufl.edu/) for Florida tree-care context.
+- Onsite tree-risk evaluation when mushrooms, conks, cavities, lean, or canopy decline appear together.
 
-The smartest response is not just removing the visible fungus. It is figuring out whether the tree’s support system is what the fungus is actually feeding on.
+Mushrooms can be harmless landscape decomposers or signs of serious decay. The exact location and the tree’s condition decide how much concern is reasonable.
+
+## What to do next
+
+Look first at where the mushrooms are growing. Lawn mushrooms away from the trunk are one thing; shelf-like conks, mushrooms at the root flare, or fungal growth on the trunk are another. The concern rises when the tree also has cavities, deadwood, bark damage, canopy thinning, root movement, or a target beneath it.
+
+Useful next links include [Ganoderma butt rot](/blog/identifying-ganoderma-butt-rot-in-florida-landscapes/), [oak tree fungus in Florida](/blog/oak-tree-fungus-in-florida-what-homeowners-should-watch-for/), [tree removal](/services/tree-removal/), and [emergency tree service](/services/emergency-tree-removal/) when a potentially compromised tree is over a structure or active-use area.
+
+If mushrooms at the base of a Florida tree are raising safety concerns, call ProTreeTrim at **(855) 498-2578** for dispatch help to a local provider who can evaluate the next step.
