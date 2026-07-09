@@ -4,7 +4,7 @@ Prepared: 2026-07-09
 
 ## Scope
 
-This package audits Sprint 17 candidates 9-16:
+This package audits Sprint 17 candidates 9-18:
 
 9. Florida insurance tree claim documentation guide,
 10. protected and restricted trees in Florida guide,
@@ -13,7 +13,9 @@ This package audits Sprint 17 candidates 9-16:
 13. Sumter County stump and root removal guide,
 14. stump grinding versus full stump removal guide,
 15. Florida palm tree removal signs guide,
-16. roofline tree trimming risk-reduction guide.
+16. roofline tree trimming risk-reduction guide,
+17. post-hurricane tree assessment guide,
+18. pre-hurricane structural weakness guide.
 
 No article Markdown, sitemap, route, metadata, schema, layout, UI, package, or site code was changed.
 
@@ -41,20 +43,20 @@ Bands:
 
 ## Package summary
 
-- Audited in this package: **8 unique articles**
-- Package average: **80.5/100**
+- Audited in this package: **10 unique articles**
+- Package average: **80.4/100**
 - Minor polish: **0**
-- Needs revision: **8**
+- Needs revision: **10**
 - Major rewrite: **0**
-- Missing title-matching H1 or inconsistent H1: **8/8**
-- Needs source-section or source-link normalization: **8/8**
-- Needs stronger direct service-page routing: **8/8**
-- Needs stronger contextual internal-link network: **8/8**
-- Public citation artifacts present: **0/8**
+- Missing title-matching H1 or inconsistent H1: **10/10**
+- Needs source-section or source-link normalization: **10/10**
+- Needs stronger direct service-page routing: **10/10**
+- Needs stronger contextual internal-link network: **10/10**
+- Public citation artifacts present: **0/10**
 - Sprint 17 candidate pool: **30**
-- Sprint 17 audited after application: **16/30**
+- Sprint 17 audited after application: **18/30**
 - Sprint 17 revised after application: **8/30**
-- Sprint 17 audit remaining: **14**
+- Sprint 17 audit remaining: **12**
 - Sprint 17 revision remaining: **22**
 - Total real blog articles: **564**
 - Total unique site articles revised before this audit package: **488**
@@ -173,6 +175,34 @@ Needed improvements:
 - add pruning standards, storm safety, and roofline clearance source support,
 - link to trimming versus pruning, pruning before hurricane season, tree on roof, roofline risk, and written estimate resources,
 - avoid overpromising risk reduction, recommending unsafe ladder work, or implying a trim can eliminate storm damage risk.
+
+### Post-hurricane tree assessment guide
+
+Strong post-storm risk article with useful guidance on lean, root plate movement, hanging limbs, canopy imbalance, trunk cracks, and target proximity. Needs H1, source section, direct emergency/trimming/removal routes, stronger non-diagnostic boundaries, and contextual links to related storm decision pages.
+
+Needed improvements:
+
+- add H1 matching title,
+- update `updatedDate`,
+- preserve "still standing does not mean still safe" framing,
+- add emergency response, tree removal, and tree trimming routes where natural,
+- add hurricane safety, tree-risk, storm cleanup, and post-disaster documentation sources,
+- link to leaning tree emergency, structural weakness before hurricane season, tree on roof, emergency cleanup, and tree risk assessment pages,
+- avoid formal safety certification, diagnosis, or claims that a homeowner visual check can replace onsite evaluation.
+
+### Pre-hurricane structural weakness guide
+
+Useful storm-prep assessment article with strong explanation of lean, root movement, canopy imbalance, cracks, decay, old storm damage, and target risk. Needs H1, source section, direct service routes, CTA, and clearer professional-evaluation boundary before hurricane season.
+
+Needed improvements:
+
+- add H1 matching title,
+- update `updatedDate`,
+- preserve early planning and calm scheduling logic,
+- add tree trimming, tree removal, emergency response, and arborist/report contextual links where natural,
+- add hurricane preparedness, tree-risk, pruning, and utility/safety sources,
+- link to post-hurricane assessment, pre-hurricane removal, roofline trimming, pruning before hurricane season, and leaning tree emergency pages,
+- avoid diagnostic certainty, storm-proofing promises, or suggesting homeowners perform risky close inspection.
 
 ## Article-by-article audit
 
@@ -312,9 +342,43 @@ Needed improvements:
 - **Recommended revision role:** Trimming/roofline safety editor.
 - **Final action:** Needs revision
 
+### 17. Post-Hurricane Tree Assessment: Is Your Tree Still Safe? - 80/100
+
+- **Filename:** `post-hurricane-tree-assessment-is-your-tree-still-safe.md`
+- **Category:** Emergency Storm
+- **Status:** Needs revision
+- **Scores:** Headline 8 · Intro 9 · Readability 9 · Natural US English 8 · AI-pattern risk 7 · Florida relevance 10 · Decision support 9 · Internal links 5 · CTA 5 · Polish 10
+- **Strengths:** Strong post-hurricane framing, useful structural warning signs, practical homeowner checklist, and good emphasis that trees can remain unsafe while still standing.
+- **Weaknesses:** Missing H1, no source section, no phone CTA, no direct service routes, thin internal links, stale `updatedDate`, and generic final takeaway pattern.
+- **H1/title alignment:** Missing visible H1.
+- **Source-section normalization:** Add hurricane safety, tree-risk, utility, and post-storm assessment sources.
+- **Service-route opportunities:** Emergency response, tree removal, and tree trimming are natural where the article discusses active hazards, removal decisions, or pruning alternatives.
+- **Internal-link opportunities:** Leaning tree emergency, structural weakness before hurricane season, tree on roof, emergency cleanup insurance photos, tree risk assessment, and pre-hurricane removal guidance.
+- **Florida/local verification needs:** Preserve Florida hurricane, saturated-soil, wind exposure, and repeat-storm context; add utility and local access cautions after storms.
+- **Boundary:** Avoid diagnosing safety from visible signs alone, certifying tree stability, or implying homeowner observation replaces onsite professional evaluation.
+- **Recommended revision role:** Storm-risk assessment editor.
+- **Final action:** Needs revision
+
+### 18. How to Identify Structural Weaknesses Before Hurricane Season - 80/100
+
+- **Filename:** `how-to-identify-structural-weaknesses-before-hurricane-season.md`
+- **Category:** Emergency Storm
+- **Status:** Needs revision
+- **Scores:** Headline 8 · Intro 9 · Readability 9 · Natural US English 8 · AI-pattern risk 7 · Florida relevance 10 · Decision support 9 · Internal links 5 · CTA 5 · Polish 10
+- **Strengths:** Strong pre-storm decision support, clear list of structural warning signs, useful target-risk framing, and good reminder that green leaves do not prove mechanical reliability.
+- **Weaknesses:** Missing H1, no source section, no phone CTA, no direct service routes, thin internal links, stale `updatedDate`, and risk-inspection boundaries need stronger language.
+- **H1/title alignment:** Missing visible H1.
+- **Source-section normalization:** Add hurricane preparedness, pruning, tree-risk, storm safety, and utility awareness sources.
+- **Service-route opportunities:** Tree trimming, tree removal, and emergency response are natural; arborist/report resources may fit where professional evaluation is discussed.
+- **Internal-link opportunities:** Post-hurricane assessment, should you remove before hurricane season, roofline trimming, pruning timing, leaning tree emergency, and tree risk assessment pages.
+- **Florida/local verification needs:** Reinforce Florida hurricane timing, saturated soil, old storm damage, nearby site work, species/location variability, and local access considerations.
+- **Boundary:** Avoid diagnostic certainty, storm-proofing claims, unsafe close inspection, or implying a visual checklist is a substitute for professional evaluation.
+- **Recommended revision role:** Storm-prep decision editor.
+- **Final action:** Needs revision
+
 ## Revision Package 2 priority notes
 
-Candidates 9-16 should be revised as a cohesive package because they share the same older article pattern: useful homeowner-first body copy, but no visible H1, no source section, weak service routing, and limited contextual internal links.
+Candidates 9-18 should be revised as a cohesive 10-article package because they share the same older article pattern: useful homeowner-first body copy, but no visible H1, no source section, weak service routing, and limited contextual internal links.
 
 The highest boundary sensitivity in this package is:
 
@@ -323,4 +387,6 @@ The highest boundary sensitivity in this package is:
 - emergency/utility/safety language for candidate 12,
 - utility, excavation, irrigation, and root-work limits for candidates 13-14,
 - diagnostic palm-health boundaries for candidate 15,
-- ladder, roofline, and storm-risk boundaries for candidate 16.
+- ladder, roofline, and storm-risk boundaries for candidate 16,
+- post-hurricane non-diagnostic assessment boundaries for candidate 17,
+- pre-hurricane storm-prep and structural-risk boundaries for candidate 18.
