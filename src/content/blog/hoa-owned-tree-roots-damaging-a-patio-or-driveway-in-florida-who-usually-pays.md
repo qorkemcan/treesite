@@ -2,7 +2,7 @@
 title: "HOA-Owned Tree Roots Damaging a Patio or Driveway in Florida: Who Usually Pays?"
 description: "A Florida homeowner workflow for HOA-controlled tree roots affecting patios or driveways, including ownership, maintenance duties, official records, written notice, hardscape causes, root stability, insurance, and authorized repair."
 pubDate: 2026-05-09
-updatedDate: 2026-07-01
+updatedDate: 2026-07-09
 author: "Gorkem Can"
 category: "Permits & Regulations"
 tags:
@@ -13,7 +13,7 @@ tags:
 draft: false
 ---
 
-# HOA-Owned Tree Roots Damaging a Patio or Driveway: What Should Happen First?
+# HOA-Owned Tree Roots Damaging a Patio or Driveway in Florida: Who Usually Pays?
 
 Do not begin with “the HOA pays” or “the owner pays.”
 
@@ -229,7 +229,7 @@ ProTreeTrim connects Florida homeowners and businesses with independently owned 
 
 Call **(855) 498-2578** after written authority, utility restrictions, local approvals, and the tree-work scope are clear. Use [tree removal services](/services/tree-removal/) for an approved removal or [tree trimming services](/services/tree-trimming/) for an authorized root or canopy-related scope.
 
-For public sidewalks rather than private HOA hardscape, see [Tree Roots and Sidewalk Damage: Who Is Responsible?](/blog/tree-roots-and-sidewalk-damage-who-is-responsible/).
+For the broader HOA approval workflow, see [HOA tree rules](/blog/hoa-tree-rules-navigating-neighborhood-regulations/) and [can you remove a tree in an HOA without approval?](/blog/can-you-remove-a-tree-in-an-hoa-without-approval/). For related root and hardscape issues, compare [tree roots and sidewalk damage](/blog/tree-roots-and-sidewalk-damage-who-is-responsible/), [tree work near pavers, irrigation, or septic lines](/blog/can-tree-work-damage-pavers-irrigation-or-septic-lines/), [tree removal near a driveway or paver patio](/blog/tree-removal-near-a-driveway-or-paver-patio-access-protection-and-cleanup/), and [Florida Statute 163.045](/blog/florida-statute-163-045-what-homeowners-should-understand-before-tree-removal/).
 
 ## Official sources reviewed
 
