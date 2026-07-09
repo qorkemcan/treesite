@@ -267,6 +267,8 @@ This is a decision about both property repair and tree safety.
 
 ## When to Call ProTreeTrim
 
+When roots and hardscape damage are both involved, compare [stump grinding](/services/stump-grinding/) with [tree removal](/services/tree-removal/) so the repair scope matches the actual problem.
+
 If tree roots are lifting pavers, cracking driveway edges, damaging irrigation, or forcing a choice between root cutting, stump grinding, and removal, ProTreeTrim can help you think through the practical next step.
 
 For tree removal, stump grinding, emergency tree service, or trimming help in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

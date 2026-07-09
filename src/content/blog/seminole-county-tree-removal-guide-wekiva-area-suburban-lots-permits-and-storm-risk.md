@@ -228,6 +228,8 @@ This can help with city/county records, HOA questions, insurance, and future pro
 
 ## When to Call ProTreeTrim
 
+For planned work, define [tree removal](/services/tree-removal/) expectations first; if storm damage or blocked access changes the risk, review [emergency response](/services/emergency-response/) next.
+
 If you are trying to decide whether a Seminole County tree needs trimming, planned removal, emergency service, or stump grinding, ProTreeTrim can help you think through the practical next step. The right answer depends on jurisdiction, Wekiva/special-area status, tree condition, access, storm risk, and whether permit or documentation rules apply.
 
 For tree removal, emergency tree service, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

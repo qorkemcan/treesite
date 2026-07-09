@@ -281,6 +281,8 @@ Documentation can help with HOA records, municipal questions, insurance, and fut
 
 ## When to Call ProTreeTrim
 
+For standard scheduling, review [tree removal](/services/tree-removal/) expectations first; if the issue involves storm cleanup or blocked access, check [emergency response](/services/emergency-response/) guidance as well.
+
 If you are trying to decide whether a Martin County tree needs trimming, planned removal, emergency service, storm cleanup, or stump grinding, ProTreeTrim can help you think through the practical next step. In Martin County, the key is to identify whether the tree is a private yard tree, municipal tree, HOA/common-area tree, preserve tree, right-of-way tree, or coastal vegetation issue.
 
 For tree removal, emergency tree service, trimming, palm removal, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

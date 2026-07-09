@@ -290,6 +290,8 @@ Call **(855) 498-2578** after calling 911, the fire department, gas utility, or 
 
 ## Official sources reviewed
 
+Make the area safer first, then use [emergency tree response](/services/emergency-response/) guidance when a fallen or unstable tree creates immediate access or safety concerns.
+
 - [OSHA — Hurricane Tree-Trimming Activity Sheet](https://www.osha.gov/etools/hurricane/activity-sheets/waste-debris-removal/tree-trimming)
 - [FPL — Trees and Power Line Safety](https://www.fpl.com/reliability/trees/power-line-safety.html)
 - [FPL — Safety](https://www.fpl.com/northwest/about/safety.html/1000)

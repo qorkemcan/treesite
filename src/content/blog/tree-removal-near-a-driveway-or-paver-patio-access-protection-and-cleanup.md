@@ -279,6 +279,8 @@ Photos help a tree service estimate risk, access, and equipment needs.
 
 ## When to Call ProTreeTrim
 
+Scope the main job through [tree removal](/services/tree-removal/), then confirm whether driveway access, roots, or leftover wood make [stump grinding](/services/stump-grinding/) part of the same visit.
+
 If a tree is damaging your driveway, lifting pavers, blocking access, dropping limbs, or creating a storm-risk concern near hardscape, ProTreeTrim can help you compare trimming, planned removal, emergency removal, and stump grinding.
 
 For tree removal, emergency tree service, trimming, or stump grinding help in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

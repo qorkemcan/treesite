@@ -249,6 +249,8 @@ Documentation can help with permits, HOA questions, insurance, and future proper
 
 ## When to Call ProTreeTrim
 
+Start with [tree removal](/services/tree-removal/) for planned work; if storm damage or access problems are part of the job, review [emergency response](/services/emergency-response/) expectations too.
+
 If you are trying to decide whether an Osceola County tree needs trimming, planned removal, emergency service, storm cleanup, or stump grinding, ProTreeTrim can help you think through the practical next step. The right answer depends on jurisdiction, tree condition, storm risk, wetland or development context, access, and documentation needs.
 
 For tree removal, emergency tree service, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

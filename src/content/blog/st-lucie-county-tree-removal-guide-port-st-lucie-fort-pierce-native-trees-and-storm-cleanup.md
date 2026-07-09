@@ -254,6 +254,8 @@ This documentation can help with county/city review, HOA records, insurance, and
 
 ## When to Call ProTreeTrim
 
+Storm cleanup still needs clear [tree removal](/services/tree-removal/) scope; when access, roof impact, or safety concerns are active, compare it with [emergency response](/services/emergency-response/) guidance.
+
 If you are trying to decide whether a St. Lucie County tree needs trimming, planned removal, emergency service, storm cleanup, stump grinding, or replacement planning, ProTreeTrim can help you think through the practical next step. The right answer depends on jurisdiction, tree type, risk, permit context, mitigation, and yard access.
 
 For tree removal, emergency tree service, trimming, palm removal, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

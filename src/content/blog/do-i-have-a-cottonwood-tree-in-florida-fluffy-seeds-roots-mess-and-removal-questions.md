@@ -202,6 +202,8 @@ These photos help determine whether the next step is identification, pruning, ri
 
 ## When to Call ProTreeTrim
 
+When the issue is manageable growth or clearance, start with [tree trimming](/services/tree-trimming/); when roots, size, or decline drive the concern, compare it with [tree removal](/services/tree-removal/).
+
 If you think you have a cottonwood and are unsure whether the mess is just maintenance or a sign of a larger tree-risk problem, ProTreeTrim can help you think through the practical options. Large fast-growing trees near Florida homes deserve careful planning before storm season.
 
 For tree removal, trimming, emergency tree service, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

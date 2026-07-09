@@ -223,6 +223,8 @@ These records can help if questions come up later.
 
 ## When to Call ProTreeTrim
 
+For routine scheduling, frame the job around [tree removal](/services/tree-removal/); if cleanup involves storm damage or blocked access, review [emergency response](/services/emergency-response/) expectations too.
+
 If you are trying to decide whether a Collier County tree should be pruned, removed, documented as hazardous, cleaned up after a storm, or ground out after removal, ProTreeTrim can help you think through the practical next step.
 
 For tree removal, emergency tree service, trimming, palm removal, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

@@ -244,6 +244,8 @@ Documentation is helpful for permits, HOA records, insurance discussions, and fu
 
 ## When to Call ProTreeTrim
 
+For rural or large-yard work, define the [tree removal](/services/tree-removal/) scope first; storm-damaged trees or blocked access may also call for [emergency response](/services/emergency-response/) guidance.
+
 If you are trying to decide whether a Polk County tree needs pruning, removal, emergency service, storm cleanup, or stump grinding, ProTreeTrim can help you think through the practical next step. Address-specific rules, storm timing, access, and tree condition matter.
 
 For tree removal, emergency tree service, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

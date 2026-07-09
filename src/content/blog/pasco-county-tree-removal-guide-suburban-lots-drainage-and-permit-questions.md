@@ -215,6 +215,8 @@ This can help with county questions, HOA records, insurance discussions, and fut
 
 ## When to Call ProTreeTrim
 
+For planned removal, start with [tree removal](/services/tree-removal/) expectations; if drainage, storm damage, or blocked access changes the situation, review [emergency response](/services/emergency-response/) guidance.
+
 If you are trying to decide whether a Pasco County tree needs pruning, removal, emergency service, or stump grinding, ProTreeTrim can help you think through the practical next step. The key is to check the permit context, tree condition, drainage risk, access, and whether the work can be safely planned before storm pressure builds.
 
 For tree removal, emergency tree service, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

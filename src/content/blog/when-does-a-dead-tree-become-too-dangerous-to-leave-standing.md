@@ -237,6 +237,8 @@ A dead tree quote should explain risk and method, not just price.
 
 ## When to Call ProTreeTrim
 
+When a dead tree is moving from watch-list to action item, review [tree removal](/services/tree-removal/) expectations before approving the schedule or cleanup plan.
+
 If a dead tree is near your Florida home, driveway, pool cage, walkway, utility line, or neighbor’s property, ProTreeTrim can help you decide whether the job should be scheduled, prioritized, or handled as emergency tree service.
 
 For dead tree removal, emergency tree service, trimming, or stump grinding help in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

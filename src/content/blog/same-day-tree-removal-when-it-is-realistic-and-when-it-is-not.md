@@ -282,6 +282,8 @@ If the situation is dangerous, call. The tree service can tell you whether same-
 
 ## When to Call ProTreeTrim
 
+Same-day work is most realistic when the situation fits [emergency tree response](/services/emergency-response/) criteria such as blocked access, roof impact, or active safety risk.
+
 If you need same-day tree help in Florida, ProTreeTrim can help you sort the job into the right category: emergency mitigation, planned removal, trimming, full cleanup, or stump grinding.
 
 For same-day emergency tree service, tree removal, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

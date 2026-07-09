@@ -222,6 +222,8 @@ This can help with HOA questions, city questions, insurance discussions, or futu
 
 ## When to Call ProTreeTrim
 
+Start with the planned [tree removal](/services/tree-removal/) scope, then shift to [emergency response](/services/emergency-response/) guidance if storm damage, blocked access, or immediate safety concerns are present.
+
 If you are trying to decide whether a Broward County tree needs pruning, removal, emergency service, or stump grinding, ProTreeTrim can help you think through the next step. The most important factors are tree condition, target risk, city/HOA requirements, access, and whether the job can be planned before storm pressure builds.
 
 For tree removal, emergency tree service, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.

@@ -331,6 +331,8 @@ The order prevents the common mistake of planting too quickly into a poor spot.
 
 ## When to Call ProTreeTrim
 
+When the next step involves roots, hardscape, or replanting, compare [stump grinding](/services/stump-grinding/) with [tree removal](/services/tree-removal/) so the order of work is clear.
+
 If you are planning tree removal and want the yard usable afterward, ProTreeTrim can help you think through tree removal, stump grinding, chip cleanup, sod repair, hardscape concerns, and whether replanting in the same spot makes sense.
 
 For tree removal, stump grinding, emergency tree service, or trimming help in Florida, visit ProTreeTrim.com or call **(855) 498-2578**.

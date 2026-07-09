@@ -173,6 +173,8 @@ This article is general information for Florida property owners. It is not legal
 
 ## Final decision: clear only after the site plan is clear
 
+Before clearing begins, review [tree removal](/services/tree-removal/) expectations so access, hauling, and site cleanup are part of the scope.
+
 Tree removal for new construction works best when it is tied to the actual build plan, not a vague goal of “clearing the lot.” The right plan identifies which trees block the project, which trees will become future conflicts, which trees are worth protecting, and what stump or cleanup scope is needed before the next phase begins.
 
 If you are comparing tree removal, trimming, stump grinding, or land-clearing options before a Florida construction project, ProTreeTrim can connect you with local providers who handle residential, commercial, and site-prep tree work. Call **(855) 498-2578** or visit [protreetrim.com](https://www.protreetrim.com/) to get started.

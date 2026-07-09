@@ -250,6 +250,8 @@ This is especially useful after storms, for HOA records, property sale questions
 
 ## When to Call ProTreeTrim
 
+For a county removal plan, begin with [tree removal](/services/tree-removal/) scope and confirm whether hurricane damage, blocked access, or storm cleanup calls for [emergency response](/services/emergency-response/) support.
+
 If you are trying to decide whether a Lee County tree needs emergency removal, planned removal, trimming, cleanup, or stump grinding, ProTreeTrim can help you think through the practical next step. Lee County tree work often depends on storm damage, access, protected-tree concerns, and whether the property is coastal, inland, common-area, or HOA-controlled.
 
 For tree removal, emergency tree service, trimming, or stump grinding help, visit ProTreeTrim.com or call **(855) 498-2578**.
