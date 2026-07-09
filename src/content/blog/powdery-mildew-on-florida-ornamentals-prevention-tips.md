@@ -33,13 +33,13 @@ Depending on the ornamental, it may also show up as:
 - early leaf drop
 - a general gray-white cast over affected tissue
 
-UF/IFAS notes that on crapemyrtle, powdery mildew can cause leaves, stems, and flowers to become distorted and stunted, and severe cases can lead to premature leaf drop and buds failing to open properly. citeturn895722view2
+UF/IFAS notes that on crapemyrtle, powdery mildew can cause leaves, stems, and flowers to become distorted and stunted, and severe cases can lead to premature leaf drop and buds failing to open properly.
 
 That is a useful reminder that powdery mildew is not always just a surface nuisance.
 
 ## Why it shows up so often in Florida landscapes
 
-Florida’s climate creates plenty of opportunities for ornamental diseases, and UF/IFAS notes that powdery mildew is more prevalent in **spring and fall**. On crapemyrtle, UF/IFAS specifically says shady, humid locations and cool nights encourage the disease. citeturn895722view2
+Florida’s climate creates plenty of opportunities for ornamental diseases, and UF/IFAS notes that powdery mildew is more prevalent in **spring and fall**. On crapemyrtle, UF/IFAS specifically says shady, humid locations and cool nights encourage the disease.
 
 That means homeowners are often dealing with a disease that is not random at all. It tends to show up when:
 
@@ -66,7 +66,7 @@ It is:
 
 This is one of the best prevention tools homeowners have.
 
-UF/IFAS specifically recommends planting crapemyrtle cultivars bred and selected for resistance to powdery mildew. That advice matters because resistant plant selection solves part of the problem before it starts. citeturn895722view2
+UF/IFAS specifically recommends planting crapemyrtle cultivars bred and selected for resistance to powdery mildew. That advice matters because resistant plant selection solves part of the problem before it starts.
 
 The broader lesson applies to ornamentals in general:
 
@@ -74,7 +74,7 @@ If you know a plant is frequently prone to mildew in Florida conditions, choosin
 
 ## 2. Give ornamentals enough sun
 
-UF/IFAS says planting crapemyrtle in sunny locations is one of the best ways to help avoid powdery mildew. citeturn895722view2
+UF/IFAS says planting crapemyrtle in sunny locations is one of the best ways to help avoid powdery mildew.
 
 That principle works more broadly too.
 
@@ -91,7 +91,7 @@ A sunnier site is not a magic cure for every mildew issue, but it often makes th
 
 This is one of the most overlooked prevention steps.
 
-UF/IFAS recommends allowing free air movement so foliage dries quickly. citeturn895722view2
+UF/IFAS recommends allowing free air movement so foliage dries quickly.
 
 That means homeowners should pay attention to:
 
@@ -135,7 +135,7 @@ The goal is not harsh cutting. It is keeping the plant from becoming the kind of
 
 ## 7. Use fungicides as a support tool, not as the only plan
 
-UF/IFAS says infected plants can be treated with a fungicide labeled specifically for powdery mildew, and label directions should always be followed. citeturn895722view2turn262421search5
+UF/IFAS says infected plants can be treated with a fungicide labeled specifically for powdery mildew, and label directions should always be followed.
 
 That is useful—but it should not become the whole strategy.
 
@@ -178,7 +178,7 @@ A susceptible ornamental placed in:
 
 is much more likely to keep having the same problem.
 
-Many homeowners think the issue is “this plant keeps getting mildew.”  
+Many homeowners think the issue is “this plant keeps getting mildew.”
 Sometimes the real issue is “this site keeps encouraging mildew.”
 
 ## Another common mistake: overreacting with harsh cutting
@@ -203,11 +203,11 @@ Those questions often get much closer to the real cause.
 
 A strong Florida mildew-prevention approach is:
 
-1. choose resistant varieties when you can  
-2. plant in sunnier, better-ventilated locations  
-3. avoid crowding ornamentals together  
-4. notice mildew early, especially in spring and fall  
-5. use labeled fungicides when needed, but do not rely on them to fix a poor site  
+1. choose resistant varieties when you can
+2. plant in sunnier, better-ventilated locations
+3. avoid crowding ornamentals together
+4. notice mildew early, especially in spring and fall
+5. use labeled fungicides when needed, but do not rely on them to fix a poor site
 
 That is a much better long-term plan than reacting only after the plant looks badly coated.
 
@@ -215,6 +215,6 @@ That is a much better long-term plan than reacting only after the plant looks ba
 
 Powdery mildew on Florida ornamentals is often easier to prevent than to correct once it is well established.
 
-UF/IFAS notes that the disease is more common in spring and fall and that shady, humid locations and cool nights encourage it. UF/IFAS also recommends resistant cultivars, sunny locations, and good air movement, with labeled fungicides used when needed. citeturn895722view2turn262421search5
+UF/IFAS notes that the disease is more common in spring and fall and that shady, humid locations and cool nights encourage it. UF/IFAS also recommends resistant cultivars, sunny locations, and good air movement, with labeled fungicides used when needed.
 
 The most useful mindset is simple: do not just ask how to spray powdery mildew. Ask why your ornamental is giving powdery mildew the exact conditions it wants.
