@@ -52,7 +52,7 @@ The landscape may include:
 - drive entries where every canopy line is noticed
 - properties where pruning quality is as important as pruning necessity
 
-In other words, tree service here is not only functional.  
+In other words, tree service here is not only functional.
 It is aesthetic, structural, and often regulatory at the same time.
 
 ## Salt exposure changes everything
@@ -92,7 +92,7 @@ What matters here is:
 - keeping the tree proportional to the estate landscape
 - maintaining health without sacrificing appearance
 
-Poor work on a specimen tree is expensive in more than one way.  
+Poor work on a specimen tree is expensive in more than one way.
 It costs the property in visual value immediately.
 
 ## Why pruning quality matters more than homeowners first think
@@ -106,7 +106,7 @@ This happens when trees are:
 - stripped too heavily for a “clean” look
 - pruned without respect for their mature habit
 
-Palm Beach County’s public pruning guidance specifically warns against topping and hatracking and emphasizes allowing trees to grow in their natural form. That lines up perfectly with what upscale landscape owners need most: pruning that protects structure instead of destroying it. citeturn667479search2
+Palm Beach County’s public pruning guidance specifically warns against topping and hatracking and emphasizes allowing trees to grow in their natural form. That lines up perfectly with what upscale landscape owners need most: pruning that protects structure instead of destroying it.
 
 The best Palm Beach tree service is often the service you barely notice afterward—because the tree still looks like the right version of itself.
 
@@ -126,7 +126,7 @@ A lot of homeowners assume that because the work is sophisticated, the permit si
 
 That is not always true.
 
-In Palm Beach County and local municipalities, tree removal and alteration rules can matter, especially for common-area, buffer, non-residential, or otherwise regulated trees. Palm Beach County also publishes pruning regulations and tree removal/replacement instructions, which is a reminder that high-end landscape work still lives inside real local rules. citeturn667479search18turn667479search14
+In Palm Beach County and local municipalities, tree removal and alteration rules can matter, especially for common-area, buffer, non-residential, or otherwise regulated trees. Palm Beach County also publishes pruning regulations and tree removal/replacement instructions, which is a reminder that high-end landscape work still lives inside real local rules.
 
 A beautiful landscape plan is not a substitute for knowing what the jurisdiction requires.
 
@@ -158,7 +158,7 @@ A higher-end tree service bill often reflects:
 - knowledge of how to preserve the look of specimen trees
 - better understanding of coastal exposure and tree form
 
-The cheapest crew may complete the physical task.  
+The cheapest crew may complete the physical task.
 That does not mean they preserve the landscape you paid to create.
 
 ## Common Palm Beach tree-service priorities
@@ -224,7 +224,7 @@ That is understandable. But in a luxury landscape, a tree that is:
 - repeatedly storm-damaged
 may be lowering the quality of the landscape more than it is adding to it.
 
-Good tree service is not only about preservation.  
+Good tree service is not only about preservation.
 It is also about knowing when replacement is the more honest move.
 
 ## What Palm Beach homeowners should ask before work begins
@@ -244,11 +244,11 @@ That last question matters a lot in Palm Beach.
 
 A simple local rule works well:
 
-- choose salt-tolerant, site-appropriate trees first  
-- treat specimen trees as assets, not generic landscape material  
-- prune for form and structure, not for overcleaned appearance  
-- respect local pruning and removal rules  
-- pay for precision where the property justifies it  
+- choose salt-tolerant, site-appropriate trees first
+- treat specimen trees as assets, not generic landscape material
+- prune for form and structure, not for overcleaned appearance
+- respect local pruning and removal rules
+- pay for precision where the property justifies it
 
 That mindset usually protects both the trees and the investment around them.
 
