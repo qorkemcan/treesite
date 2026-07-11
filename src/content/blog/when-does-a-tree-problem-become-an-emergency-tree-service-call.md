@@ -223,6 +223,8 @@ Do not:
 
 Tree work hazards include falling limbs, fall hazards, chainsaws, electrical lines, unstable trunks, and shifting loads. After storms, these risks are higher.
 
+For related safety decisions, review [24/7 emergency tree service](/blog/24-7-emergency-tree-service-what-defines-a-tree-emergency/), [night emergency service timing](/blog/emergency-tree-service-at-night-what-can-safely-wait-until-morning/), [making a tree emergency safer before help arrives](/blog/how-to-make-a-florida-tree-emergency-safer-before-help-arrives/), [hung-up trees](/blog/what-is-a-hung-up-tree-and-why-storm-damaged-trees-are-dangerous-to-touch/), and [widowmaker branches](/blog/what-is-a-widowmaker-branch-and-why-florida-homeowners-should-not-ignore-it/).
+
 ## Photos That Help an Emergency Tree Service
 
 If it is safe, take photos from a distance:
@@ -239,6 +241,8 @@ If it is safe, take photos from a distance:
 - roof, pool cage, fence, or vehicle damage
 
 These photos help a tree service understand urgency, equipment needs, and access before arrival.
+
+For storm situations that may not be finished failing, compare [emergency tree removal in Florida](/blog/emergency-tree-removal-florida/) with [delayed storm-damaged tree failure](/blog/can-storm-damaged-trees-fail-days-later/) before treating cleanup as the only next step.
 
 ## Emergency Cleanup vs Full Removal
 

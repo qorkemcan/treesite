@@ -78,6 +78,8 @@ Emergency [tree removal services](/services/tree-removal/) may be appropriate wh
 
 If the tree is stable enough to wait but still damaged, a scheduled removal or [tree trimming services](/services/tree-trimming/) visit may be safer in daylight.
 
+For the broader decision sequence, use [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) to separate immediate response, controlled removal, and scheduled follow-up.
+
 ## What to document before calling
 
 If it is safe, take photos from a distance:

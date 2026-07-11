@@ -256,6 +256,8 @@ Target consequence is part of tree risk.
 
 The first price should identify whether it resolves the hazard or only begins the work.
 
+When delayed failure is possible, use [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) to decide whether the situation is active, near-term, or stable enough to schedule.
+
 ## Requesting post-storm help
 
 ProTreeTrim connects Florida property owners with independently owned local tree-service providers.

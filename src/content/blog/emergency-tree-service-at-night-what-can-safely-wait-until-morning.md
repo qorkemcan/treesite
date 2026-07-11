@@ -50,6 +50,8 @@ Waiting until morning may be safer when the tree is fully down, no line is invol
 
 If the area cannot be isolated, emergency service may be warranted.
 
+For a broader daytime-or-nighttime triage framework, review [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) before deciding whether isolation is enough until morning.
+
 ## What not to do at night
 
 Do not cut a tree from a ladder, pull branches with a vehicle, walk under suspended wood, climb onto a damaged roof, move debris near power lines, or stand near a leaning trunk to take photos.
