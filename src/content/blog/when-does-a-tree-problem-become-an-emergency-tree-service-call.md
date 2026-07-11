@@ -68,6 +68,8 @@ Call for urgent help if you see:
 
 If you are unsure whether it is urgent, take photos from a safe distance and ask for guidance. Do not walk under the hazard to get a better picture.
 
+For situation-specific next steps, review the related guides on [a tree falling on a roof](/blog/what-to-do-when-a-tree-falls-on-your-roof-in-florida/), [a tree touching power lines](/blog/what-to-do-if-a-tree-is-touching-power-lines-after-a-storm/), [blocked road or sidewalk access](/blog/what-to-do-if-a-tree-blocks-the-road-or-sidewalk-near-your-property/), [damage to a fence, pool cage, or shed](/blog/what-to-do-if-a-tree-falls-on-a-fence-pool-cage-or-shed/), [same-day tree removal timing](/blog/same-day-tree-removal-when-it-is-realistic-and-when-it-is-not/), and [insurance photo documentation](/blog/what-to-photograph-before-emergency-tree-cleanup-for-insurance/).
+
 ## Situations That Usually Can Be Scheduled
 
 Some tree problems are important but not emergency calls.

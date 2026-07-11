@@ -221,6 +221,8 @@ For help with a tree on the roof or post-storm tree damage anywhere in Florida, 
 
 Do not access the roof or damaged rooms to confirm conditions. Safety, emergency services, utility control, and qualified evaluation come first. ProTreeTrim is a referral and dispatch network, not a licensed contractor, engineering firm, law firm, insurer, or utility provider. Property owners should verify permits, access, utility, insurance, HOA, and local requirements before work begins.
 
+If you are unsure whether the roof impact is still an active emergency or a controlled removal problem, use [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) as the broader triage guide.
+
 ## Helpful ProTreeTrim service routes
 
 After people are safe and emergency hazards are controlled, these routes may help coordinate the tree side of the recovery:

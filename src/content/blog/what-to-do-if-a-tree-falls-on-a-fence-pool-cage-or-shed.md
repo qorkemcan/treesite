@@ -224,6 +224,8 @@ For help with a tree that has fallen on a fence, pool cage, shed, or similar str
 
 A damaged fence, pool cage, or shed may be unstable and should not be used as a support point for inspection or cleanup. ProTreeTrim is a referral and dispatch network, not a licensed contractor, engineering firm, law firm, insurer, or utility provider. Property owners should verify permits, access, utility, insurance, HOA, and local requirements before work begins.
 
+For broader triage around suspended weight, targets, and changing conditions, see [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/).
+
 ## Helpful ProTreeTrim service routes
 
 After the impact area is safe enough to approach, the tree side of the work may involve:
