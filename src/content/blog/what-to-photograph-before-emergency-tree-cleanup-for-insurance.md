@@ -252,6 +252,8 @@ For related guidance, review [what Florida homeowners should document before an 
 
 Call **(855) 498-2578** after photos are taken from a safe location and any utility, fire, medical, structural, or immediate public-safety issue has been routed to the proper authority.
 
+Before cleanup changes the scene, pair your photo checklist with [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) so documentation follows the actual urgency of the tree condition.
+
 ## Emergency photo documentation bottom line
 
 Before emergency tree cleanup starts, the best photos are the ones that clearly show the full scene, the point of impact, the condition of the tree, the base if visible, and any interior or secondary damage tied to the event.

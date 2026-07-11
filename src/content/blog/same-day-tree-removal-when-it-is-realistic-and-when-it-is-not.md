@@ -280,6 +280,8 @@ Call for urgent help if:
 
 If the situation is dangerous, call. The tree service can tell you whether same-day full removal or same-day hazard reduction is realistic.
 
+For a broader triage framework, compare the situation with [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) before assuming same-day service means full same-day removal.
+
 ## When to Call ProTreeTrim
 
 Same-day work is most realistic when the situation fits [emergency tree response](/services/emergency-response/) criteria such as blocked access, roof impact, or active safety risk.

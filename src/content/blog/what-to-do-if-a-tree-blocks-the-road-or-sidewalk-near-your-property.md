@@ -252,6 +252,8 @@ For help with a fallen or storm-damaged tree blocking access near your property 
 
 Public roads, sidewalks, right-of-way areas, and utility hazards may involve local authorities or utilities before private cleanup can begin. ProTreeTrim is a referral and dispatch network, not a licensed contractor, engineering firm, law firm, insurer, or utility provider. Property owners should verify permits, access, utility, insurance, HOA, and local requirements before work begins.
 
+For broader triage beyond public access, compare the blockage with [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) before deciding whether it can wait.
+
 ## Helpful ProTreeTrim service routes
 
 Once public-access, traffic, and utility boundaries are clear, these service routes may fit the private-property side of the cleanup:

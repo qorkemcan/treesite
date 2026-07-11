@@ -231,6 +231,8 @@ If you need post-storm help with a damaged tree after utility clearance or need 
 
 Never cut, move, pull, test, climb, or approach trees or limbs in contact with power lines. Utility or emergency response must come before tree cleanup. ProTreeTrim is a referral and dispatch network, not a licensed contractor, engineering firm, law firm, insurer, or utility provider. Property owners should verify permits, access, utility, insurance, HOA, and local requirements before work begins.
 
+After the utility hazard is addressed, use [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) to separate urgent tree work from scheduled follow-up.
+
 ## Helpful ProTreeTrim service routes
 
 Use these only after the utility hazard is controlled and the area is safe for tree work:
