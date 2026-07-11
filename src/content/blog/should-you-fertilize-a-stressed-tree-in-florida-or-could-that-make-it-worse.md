@@ -176,6 +176,8 @@ Also call if you see:
 
 A qualified arborist or tree professional can help determine whether the tree needs monitoring, pruning, soil improvement, pest/disease attention, cabling, or removal.
 
+If the concern has shifted from nutrition to safety, use ProTreeTrim's [trust and safety](/trust-safety/) guidance to frame the next conversation before approving pruning, monitoring, or removal work.
+
 ## A Better Decision Path
 
 Instead of starting with fertilizer, use this order:

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T21:59:07.789Z",
+  "generatedAt": "2026-07-11T08:36:13.710Z",
   "blogDir": "src/content/blog",
   "totalMarkdownFiles": 564,
   "auditedRoutes": [
@@ -11,35 +11,28 @@
     "/contact/"
   ],
   "routeTotals": {
-    "/services/tree-removal/": 549,
+    "/services/tree-removal/": 551,
     "/services/tree-trimming/": 352,
     "/services/stump-grinding/": 284,
     "/services/emergency-response/": 329,
-    "/trust-safety/": 2,
+    "/trust-safety/": 3,
     "/contact/": 0
   },
   "groupTotals": {
-    "treeRemoval": 549,
+    "treeRemoval": 551,
     "treeTrimming": 352,
     "stumpGrinding": 284,
     "emergencyResponse": 329,
-    "trustSafety": 2,
+    "trustSafety": 3,
     "contact": 0,
     "county": 3,
     "city": 0
   },
-  "zeroInternalMarkdownLinkCount": 3,
-  "zeroAuditedRouteFileCount": 4,
-  "zeroInternalMarkdownLinkFiles": [
-    "src/content/blog/should-you-fertilize-a-stressed-tree-in-florida-or-could-that-make-it-worse.md",
-    "src/content/blog/white-spots-on-palm-leaves-in-florida-scale-fungus-or-nutrient-issue.md",
-    "src/content/blog/why-are-my-oak-tree-leaves-turning-brown-in-florida.md"
-  ],
+  "zeroInternalMarkdownLinkCount": 0,
+  "zeroAuditedRouteFileCount": 1,
+  "zeroInternalMarkdownLinkFiles": [],
   "zeroAuditedRouteFiles": [
-    "src/content/blog/glen-saint-mary-pine-and-oak-cleanup-rural-access-issues-homeowners-should-expect.md",
-    "src/content/blog/should-you-fertilize-a-stressed-tree-in-florida-or-could-that-make-it-worse.md",
-    "src/content/blog/white-spots-on-palm-leaves-in-florida-scale-fungus-or-nutrient-issue.md",
-    "src/content/blog/why-are-my-oak-tree-leaves-turning-brown-in-florida.md"
+    "src/content/blog/glen-saint-mary-pine-and-oak-cleanup-rural-access-issues-homeowners-should-expect.md"
   ],
   "rows": [
     {
@@ -3183,9 +3176,11 @@
     },
     {
       "file": "src/content/blog/should-you-fertilize-a-stressed-tree-in-florida-or-could-that-make-it-worse.md",
-      "internalMarkdownLinkCount": 0,
-      "auditedRouteLinkCount": 0,
-      "auditedRoutes": []
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/trust-safety/"
+      ]
     },
     {
       "file": "src/content/blog/should-you-fill-a-tree-cavity-with-concrete-or-foam.md",
@@ -4919,9 +4914,11 @@
     },
     {
       "file": "src/content/blog/white-spots-on-palm-leaves-in-florida-scale-fungus-or-nutrient-issue.md",
-      "internalMarkdownLinkCount": 0,
-      "auditedRouteLinkCount": 0,
-      "auditedRoutes": []
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
     },
     {
       "file": "src/content/blog/white-stuff-on-mulch-around-florida-trees-mold-fungus-or-a-problem.md",
@@ -5017,9 +5014,11 @@
     },
     {
       "file": "src/content/blog/why-are-my-oak-tree-leaves-turning-brown-in-florida.md",
-      "internalMarkdownLinkCount": 0,
-      "auditedRouteLinkCount": 0,
-      "auditedRoutes": []
+      "internalMarkdownLinkCount": 1,
+      "auditedRouteLinkCount": 1,
+      "auditedRoutes": [
+        "/services/tree-removal/"
+      ]
     },
     {
       "file": "src/content/blog/why-are-my-palm-leaves-turning-brown-in-florida.md",
