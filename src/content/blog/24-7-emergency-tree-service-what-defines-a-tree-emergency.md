@@ -74,6 +74,8 @@ These may be urgent, but not always 24/7 emergency situations:
 
 [Stump grinding services](/services/stump-grinding/) and final cleanup often happen after the immediate risk is controlled.
 
+For a broader homeowner triage framework, compare the scene with [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) before assuming every urgent-looking tree requires 24/7 dispatch.
+
 ## What to tell the dispatcher
 
 Be ready to explain:

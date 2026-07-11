@@ -83,6 +83,8 @@ This is not because the crew wants to make the job look complicated. It is becau
 
 For method context, see [bucket truck, climber, or crane?](/blog/bucket-truck-climber-or-crane-why-tree-removal-methods-change-the-quote/) and [what is a rigging plan?](/blog/what-is-a-rigging-plan-in-tree-removal-and-why-does-it-matter-near-a-florida-home/).
 
+Because a hung-up tree can change quickly, compare the scene with [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) before treating it as ordinary debris.
+
 ## What to do while waiting
 
 While waiting:

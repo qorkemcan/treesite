@@ -282,6 +282,8 @@ Use [How to Make a Storm-Damaged Yard Safer for Kids and Pets](/blog/how-to-make
 
 Leash pets. Lock gates. Remove toys from the safe side only.
 
+Use [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/) to explain the active hazard clearly before requesting help.
+
 ## Requesting emergency tree help
 
 ProTreeTrim connects Florida homeowners and businesses with independently owned local tree-service providers.

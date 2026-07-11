@@ -62,6 +62,8 @@ For related safety context, see [what is a hung-up tree?](/blog/what-is-a-hung-u
 
 [Tree removal services](/services/tree-removal/) may enter the conversation when the widowmaker branch is part of a larger structural problem, such as trunk decay, splitting, root movement, or repeated storm failure.
 
+For broader triage around suspended limbs, targets, and isolation, review [when a tree problem becomes an emergency tree service call](/blog/when-does-a-tree-problem-become-an-emergency-tree-service-call/).
+
 ## What homeowners should do
 
 Do:
