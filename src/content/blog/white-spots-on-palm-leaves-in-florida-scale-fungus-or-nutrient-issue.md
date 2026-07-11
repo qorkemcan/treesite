@@ -191,6 +191,8 @@ That is more likely when:
 
 A palm does not have to fall as one full trunk to cause damage. A heavy crown or large frond can be enough.
 
+If the palm itself is becoming the risk rather than just the fronds, review [tree removal](/services/tree-removal/) expectations before treating the issue as routine trimming or cosmetic care.
+
 ## Florida Homeowner Decision Guide
 
 **Monitor and improve care** if the white spots are limited, the palm is otherwise vigorous, and the crown looks normal.

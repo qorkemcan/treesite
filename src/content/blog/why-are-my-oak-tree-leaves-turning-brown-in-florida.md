@@ -163,6 +163,8 @@ Brown leaves alone usually are not enough to justify removal. Removal becomes mo
 
 A large oak near a Florida home should be judged carefully. Mature oaks can add real shade and value, but they can also require a careful removal plan when decline or structural weakness becomes serious. The goal is not to remove every stressed tree. The goal is to avoid ignoring the ones that are becoming unsafe.
 
+When removal becomes part of the discussion, compare the situation with [tree removal](/services/tree-removal/) expectations so the decision is based on structure, targets, access, and cleanup—not leaf color alone.
+
 ## When to Call a Professional
 
 Call a qualified tree professional or certified arborist if:

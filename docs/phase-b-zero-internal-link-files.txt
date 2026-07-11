@@ -1,3 +1,0 @@
-src/content/blog/should-you-fertilize-a-stressed-tree-in-florida-or-could-that-make-it-worse.md
-src/content/blog/white-spots-on-palm-leaves-in-florida-scale-fungus-or-nutrient-issue.md
-src/content/blog/why-are-my-oak-tree-leaves-turning-brown-in-florida.md
