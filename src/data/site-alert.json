@@ -1,12 +1,15 @@
 {
   "schemaVersion": 2,
-  "enabled": false,
-  "mode": "normal",
-  "title": "",
-  "message": "",
-  "areas": [],
+  "enabled": true,
+  "mode": "watch",
+  "title": "Severe Weather Tree Safety Notice",
+  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
+  "areas": [
+    "Holmes, FL",
+    "Walton, FL"
+  ],
   "source": "NWS API",
-  "sourceAlertId": null,
-  "updatedAt": null,
-  "expiresAt": null
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6d97d7a9e84c803804f5cd6ff2c6a7003a2a8932.001.1",
+  "updatedAt": "2026-07-12T17:15:00.000Z",
+  "expiresAt": "2026-07-12T18:15:00.000Z"
 }
