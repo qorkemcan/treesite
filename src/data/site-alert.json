@@ -1,12 +1,16 @@
 {
   "schemaVersion": 2,
-  "enabled": false,
-  "mode": "normal",
-  "title": "",
-  "message": "",
-  "areas": [],
+  "enabled": true,
+  "mode": "watch",
+  "title": "Severe Weather Tree Safety Notice",
+  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
+  "areas": [
+    "Franklin, FL",
+    "Gulf, FL",
+    "Liberty, FL"
+  ],
   "source": "NWS API",
-  "sourceAlertId": null,
-  "updatedAt": null,
-  "expiresAt": null
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a7a30e2f548dd59be1472f4c3641ddbfcc1697eb.002.1",
+  "updatedAt": "2026-07-13T15:09:00.000Z",
+  "expiresAt": "2026-07-13T15:30:00.000Z"
 }
