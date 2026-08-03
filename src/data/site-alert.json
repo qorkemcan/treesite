@@ -12,7 +12,7 @@
     "Washington, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5b60411f2a6be359cb1f4054050a74f494cab1ea.001.1",
-  "updatedAt": "2026-08-02T17:48:00.000Z",
-  "expiresAt": "2026-08-02T23:45:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b520c29284cda5ad81d89b2dfb3187a15b399a80.001.1",
+  "updatedAt": "2026-08-02T23:15:00.000Z",
+  "expiresAt": "2026-08-03T04:45:00.000Z"
 }
