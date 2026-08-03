@@ -1,18 +1,12 @@
 {
   "schemaVersion": 2,
-  "enabled": true,
-  "mode": "watch",
-  "title": "Saturated Soil Tree Risk Notice",
-  "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
-  "areas": [
-    "Bay, FL",
-    "Calhoun, FL",
-    "Gulf, FL",
-    "Liberty, FL",
-    "Washington, FL"
-  ],
+  "enabled": false,
+  "mode": "normal",
+  "title": "",
+  "message": "",
+  "areas": [],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b520c29284cda5ad81d89b2dfb3187a15b399a80.001.1",
-  "updatedAt": "2026-08-02T23:15:00.000Z",
-  "expiresAt": "2026-08-03T04:45:00.000Z"
+  "sourceAlertId": null,
+  "updatedAt": null,
+  "expiresAt": null
 }
