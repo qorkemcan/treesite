@@ -1,12 +1,17 @@
 {
   "schemaVersion": 2,
-  "enabled": false,
-  "mode": "normal",
-  "title": "",
-  "message": "",
-  "areas": [],
+  "enabled": true,
+  "mode": "watch",
+  "title": "Severe Weather Tree Safety Notice",
+  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
+  "areas": [
+    "Alachua, FL",
+    "Bradford, FL",
+    "Marion, FL",
+    "Putnam, FL"
+  ],
   "source": "NWS API",
-  "sourceAlertId": null,
-  "updatedAt": null,
-  "expiresAt": null
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2b8d0f4b503bddbbe4549a5bfc09583c94912d97.001.1",
+  "updatedAt": "2026-08-18T22:39:00.000Z",
+  "expiresAt": "2026-08-18T23:00:00.000Z"
 }
