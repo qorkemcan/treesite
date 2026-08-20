@@ -5,11 +5,11 @@
   "title": "Severe Weather Tree Safety Notice",
   "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
   "areas": [
-    "Polk, FL",
-    "Sumter, FL"
+    "Brevard, FL",
+    "Osceola, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f6ea037d529797a433b7b7267bc9b19938d0fb05.001.1",
-  "updatedAt": "2026-08-20T18:57:00.000Z",
-  "expiresAt": "2026-08-20T19:30:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6509c56edd3377aeb4cad69ba9086bd95933b868.001.1",
+  "updatedAt": "2026-08-20T20:39:00.000Z",
+  "expiresAt": "2026-08-20T21:30:00.000Z"
 }
