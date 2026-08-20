@@ -1,12 +1,15 @@
 {
   "schemaVersion": 2,
-  "enabled": false,
-  "mode": "normal",
-  "title": "",
-  "message": "",
-  "areas": [],
+  "enabled": true,
+  "mode": "watch",
+  "title": "Severe Weather Tree Safety Notice",
+  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
+  "areas": [
+    "Polk, FL",
+    "Sumter, FL"
+  ],
   "source": "NWS API",
-  "sourceAlertId": null,
-  "updatedAt": null,
-  "expiresAt": null
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f6ea037d529797a433b7b7267bc9b19938d0fb05.001.1",
+  "updatedAt": "2026-08-20T18:57:00.000Z",
+  "expiresAt": "2026-08-20T19:30:00.000Z"
 }
