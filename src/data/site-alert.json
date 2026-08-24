@@ -2,16 +2,13 @@
   "schemaVersion": 2,
   "enabled": true,
   "mode": "watch",
-  "title": "Severe Weather Tree Safety Notice",
-  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
+  "title": "Saturated Soil Tree Risk Notice",
+  "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Baker, FL",
-    "Clay, FL",
-    "Duval, FL",
-    "Nassau, FL"
+    "Marion, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3c0e07f29eee96550653076467c5c9ae975aca09.001.1",
-  "updatedAt": "2026-08-24T20:47:00.000Z",
-  "expiresAt": "2026-08-24T21:15:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e08b26f70fc40ab2b06bdc9ec1e005445ce913c.001.1",
+  "updatedAt": "2026-08-24T21:53:00.000Z",
+  "expiresAt": "2026-08-24T23:30:00.000Z"
 }
