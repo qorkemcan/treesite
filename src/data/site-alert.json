@@ -1,14 +1,12 @@
 {
   "schemaVersion": 2,
-  "enabled": true,
-  "mode": "watch",
-  "title": "Saturated Soil Tree Risk Notice",
-  "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
-  "areas": [
-    "Marion, FL"
-  ],
+  "enabled": false,
+  "mode": "normal",
+  "title": "",
+  "message": "",
+  "areas": [],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e08b26f70fc40ab2b06bdc9ec1e005445ce913c.001.1",
-  "updatedAt": "2026-08-24T21:53:00.000Z",
-  "expiresAt": "2026-08-24T23:30:00.000Z"
+  "sourceAlertId": null,
+  "updatedAt": null,
+  "expiresAt": null
 }
