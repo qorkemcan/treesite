@@ -1,12 +1,16 @@
 {
   "schemaVersion": 2,
-  "enabled": false,
-  "mode": "normal",
-  "title": "",
-  "message": "",
-  "areas": [],
+  "enabled": true,
+  "mode": "watch",
+  "title": "Severe Weather Tree Safety Notice",
+  "message": "Strong winds can turn weak limbs and damaged trees into hazards. Keep people, pets, and vehicles away from suspicious trees until conditions improve.",
+  "areas": [
+    "Flagler, FL",
+    "Putnam, FL",
+    "St. Johns, FL"
+  ],
   "source": "NWS API",
-  "sourceAlertId": null,
-  "updatedAt": null,
-  "expiresAt": null
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.199bcc63c51c785f00c9b6154ed156ad808ec0c7.001.1",
+  "updatedAt": "2026-09-06T21:59:00.000Z",
+  "expiresAt": "2026-09-06T22:30:00.000Z"
 }
