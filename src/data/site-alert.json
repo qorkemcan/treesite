@@ -1,14 +1,12 @@
 {
   "schemaVersion": 2,
-  "enabled": true,
-  "mode": "watch",
-  "title": "Saturated Soil Tree Risk Notice",
-  "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
-  "areas": [
-    "Orange, FL"
-  ],
+  "enabled": false,
+  "mode": "normal",
+  "title": "",
+  "message": "",
+  "areas": [],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.319a9a149000bf63eaeb7c7a4f65bc7c0dcc8bd6.001.1",
-  "updatedAt": "2026-09-07T21:56:00.000Z",
-  "expiresAt": "2026-09-07T23:30:00.000Z"
+  "sourceAlertId": null,
+  "updatedAt": null,
+  "expiresAt": null
 }
