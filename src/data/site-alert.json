@@ -8,7 +8,7 @@
     "Hillsborough, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.75cca58a9917fcfed96b458f538d59470b94fc78.001.1",
-  "updatedAt": "2026-09-10T02:48:00.000Z",
-  "expiresAt": "2026-09-10T15:15:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f9de9098d487ff68fcf4840273157270b9c76a8.003.1",
+  "updatedAt": "2026-09-10T14:17:00.000Z",
+  "expiresAt": "2026-09-11T15:00:00.000Z"
 }
