@@ -1,12 +1,16 @@
 {
   "schemaVersion": 2,
-  "enabled": false,
-  "mode": "normal",
-  "title": "",
-  "message": "",
-  "areas": [],
+  "enabled": true,
+  "mode": "watch",
+  "title": "Saturated Soil Tree Risk Notice",
+  "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
+  "areas": [
+    "Citrus, FL",
+    "Levy, FL",
+    "Marion, FL"
+  ],
   "source": "NWS API",
-  "sourceAlertId": null,
-  "updatedAt": null,
-  "expiresAt": null
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.adfe1096f92b947f235ff0eb0e1ea1470c9b298c.001.1",
+  "updatedAt": "2026-09-14T17:40:00.000Z",
+  "expiresAt": "2026-09-15T04:00:00.000Z"
 }
