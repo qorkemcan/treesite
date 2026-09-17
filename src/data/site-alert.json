@@ -10,7 +10,7 @@
     "Marion, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.84e31603e00b486644f254aea0f21b021d3e72c7.002.1",
-  "updatedAt": "2026-09-16T13:32:00.000Z",
-  "expiresAt": "2026-09-17T03:45:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6ebc5de05d23ebb1c6951a0fc9f8255c3682f562.001.1",
+  "updatedAt": "2026-09-17T01:14:00.000Z",
+  "expiresAt": "2026-09-17T18:00:00.000Z"
 }
