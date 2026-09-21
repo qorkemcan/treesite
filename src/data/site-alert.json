@@ -8,7 +8,7 @@
     "DeSoto, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.affd7dc767c3d04b8641134a1f1d725a4256bfe2.001.1",
-  "updatedAt": "2026-09-21T00:48:00.000Z",
-  "expiresAt": "2026-09-21T13:00:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bf1f647487ee2696665cb99ede43ee06a44007df.001.1",
+  "updatedAt": "2026-09-21T17:48:00.000Z",
+  "expiresAt": "2026-09-22T06:00:00.000Z"
 }
