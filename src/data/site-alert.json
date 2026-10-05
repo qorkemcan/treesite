@@ -8,7 +8,7 @@
     "Okaloosa, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c404760ddbd73052b1f50d5c78c94e54763baec4.001.1",
-  "updatedAt": "2026-10-04T15:19:00.000Z",
-  "expiresAt": "2026-10-05T03:30:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c0d8234d29422c0326df1ba5f5675fe231be8423.001.1",
+  "updatedAt": "2026-10-05T01:48:00.000Z",
+  "expiresAt": "2026-10-05T14:00:00.000Z"
 }
