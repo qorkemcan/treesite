@@ -5,11 +5,11 @@
   "title": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Lake, FL",
-    "Volusia, FL"
+    "Baker, FL",
+    "Nassau, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36254b6b2cc30b96af78b5ddccf3eecd597d2c5e.001.1",
-  "updatedAt": "2026-10-09T04:09:00.000Z",
-  "expiresAt": "2026-10-09T16:15:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7f8131b94dfb92173184209f64da2653377b6e9e.001.1",
+  "updatedAt": "2026-10-09T14:40:00.000Z",
+  "expiresAt": "2026-10-10T14:45:00.000Z"
 }
