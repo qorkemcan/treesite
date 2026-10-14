@@ -8,7 +8,7 @@
     "Sarasota, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f8602cb920bb0068bb7079dfbb131f6c801596ec.001.1",
-  "updatedAt": "2026-10-14T01:56:00.000Z",
-  "expiresAt": "2026-10-14T15:00:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5b1f3bfba114a88f6db1d351772473620c8a8621.001.1",
+  "updatedAt": "2026-10-14T13:16:00.000Z",
+  "expiresAt": "2026-10-15T01:30:00.000Z"
 }
