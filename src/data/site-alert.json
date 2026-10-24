@@ -9,7 +9,7 @@
     "Volusia, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8a86e36f7665671f8448c151681cfe66cfa60777.001.1",
-  "updatedAt": "2026-10-24T01:27:00.000Z",
-  "expiresAt": "2026-10-24T15:00:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e654399ab6d3d3a1bec50bbcb60034d0ed66f1cf.001.1",
+  "updatedAt": "2026-10-24T13:15:00.000Z",
+  "expiresAt": "2026-10-25T03:00:00.000Z"
 }
