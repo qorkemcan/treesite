@@ -5,11 +5,12 @@
   "title": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Lake, FL",
-    "Volusia, FL"
+    "DeSoto, FL",
+    "Hardee, FL",
+    "Highlands, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53db955f2314fcdb090b663e551509b3021077db.001.1",
-  "updatedAt": "2026-11-02T02:44:00.000Z",
-  "expiresAt": "2026-11-02T16:45:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.44f4e30556181eaba3b035fab4820c2f4ef72a8d.001.1",
+  "updatedAt": "2026-11-02T15:45:00.000Z",
+  "expiresAt": "2026-11-02T18:45:00.000Z"
 }
