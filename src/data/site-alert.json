@@ -5,11 +5,10 @@
   "title": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Lake, FL",
-    "Volusia, FL"
+    "Hillsborough, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.87ac43a33574157b63ede1f130aea45940a46b3c.001.1",
-  "updatedAt": "2026-11-03T15:56:00.000Z",
-  "expiresAt": "2026-11-04T05:00:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c41ab01128298e3f5452596d39ca56666121966d.001.1",
+  "updatedAt": "2026-11-03T19:54:00.000Z",
+  "expiresAt": "2026-11-04T04:00:00.000Z"
 }
