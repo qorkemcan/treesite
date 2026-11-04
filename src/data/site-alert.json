@@ -5,10 +5,10 @@
   "title": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Hillsborough, FL"
+    "Broward, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c41ab01128298e3f5452596d39ca56666121966d.001.1",
-  "updatedAt": "2026-11-03T19:54:00.000Z",
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dedc32417b46668c01a6b6dbf3e78bf8dee6d56d.001.1",
+  "updatedAt": "2026-11-04T01:57:00.000Z",
   "expiresAt": "2026-11-04T04:00:00.000Z"
 }
