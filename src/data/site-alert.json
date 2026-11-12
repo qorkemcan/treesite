@@ -5,10 +5,10 @@
   "title": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "DeSoto, FL"
+    "Seminole, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ab9463c844640ac31b5ba411a025321971a1af45.001.1",
-  "updatedAt": "2026-11-11T17:19:00.000Z",
-  "expiresAt": "2026-11-12T05:30:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.065a9651b2309b6a0d2d51c43465d38a5f378e29.001.1",
+  "updatedAt": "2026-11-12T01:46:00.000Z",
+  "expiresAt": "2026-11-12T17:15:00.000Z"
 }
