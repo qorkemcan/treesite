@@ -5,11 +5,10 @@
   "title": "Saturated Soil Tree Risk Notice",
   "message": "Flooding and saturated soil can reduce root stability. Watch for new leaning, soil lifting, or cracks around large trees after heavy rain.",
   "areas": [
-    "Brevard, FL",
-    "Volusia, FL"
+    "Indian River, FL"
   ],
   "source": "NWS API",
-  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.45e51310733b55074d45241ae91e1f94d2e59f1d.001.1",
-  "updatedAt": "2026-11-19T19:50:00.000Z",
-  "expiresAt": "2026-11-19T22:00:00.000Z"
+  "sourceAlertId": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5031086e93ddbd67ff9105f0fdd484bb2fb3b2e2.001.1",
+  "updatedAt": "2026-11-20T02:09:00.000Z",
+  "expiresAt": "2026-11-20T04:15:00.000Z"
 }
